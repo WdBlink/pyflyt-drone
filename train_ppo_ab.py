@@ -99,7 +99,7 @@ def main() -> None:
         render=False,
     )
 
-    total_timesteps = int(1_000_000)
+    total_timesteps = int(1_000_000_000)
     model.learn(total_timesteps=total_timesteps, callback=eval_callback)
 
     model.save("models/ppo_fixedwing_ab.zip")
