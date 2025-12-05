@@ -1,0 +1,22 @@
+# 项目文件：PPO 超参数配置
+#
+# 作者: wdblink
+#
+# 说明:
+#     并行训练的基础超参，配合 Stable-Baselines3 的 PPO 使用。
+
+
+num_envs: 8
+n_steps: 1024
+batch_size: 256
+learning_rate: 0.0003
+gamma: 0.99
+gae_lambda: 0.95
+clip_range: 0.2
+ent_coef: 0.0
+vf_coef: 0.5
+seed: 42
+
+normalize_obs: true
+normalize_reward: true
+
