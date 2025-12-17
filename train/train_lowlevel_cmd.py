@@ -16,6 +16,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import gymnasium as gym
 import numpy as np
+import torch
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import SubprocVecEnv, VecNormalize
 from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
@@ -26,7 +27,7 @@ import PyFlyt.gym_envs
 # 训练参数配置
 TRAIN_CONFIG = {
     "total_timesteps": 2_000_000,
-    "num_envs": 8,
+    "num_envs": 32,
     "learning_rate": 3e-4,
     "n_steps": 2048,
     "batch_size": 64,
@@ -48,16 +49,7 @@ def make_env(rank: int, seed: int = 0):
     """
     def _init():
         # 创建基础环境，使用欧拉角表示姿态，便于底层控制理解
-        env = gym.make(
-            "PyFlyt/Fixedwing-Waypoints-v3",
-            render_mode=None,
-            angle_representation="euler",
-            flight_dome_size=200.0,
-            max_duration_seconds=120.0,
-            agent_hz=30, # 底层控制通常需要较高的频率，30Hz对于高层指令跟踪可能足够，但对于姿态控制可能偏低，这里保持默认
-        )
-        # 包装为底层控制训练环境
-        env = FixedwingLowLevelEnv(env)
+        env = FixedwingLowLevelEnv(render_mode=None)
         env.reset(seed=seed + rank)
         return env
     return _init
@@ -112,7 +104,7 @@ def train():
         verbose=1,
         tensorboard_log=TRAIN_CONFIG["log_dir"],
         seed=TRAIN_CONFIG["seed"],
-        device="cuda" if os.system("nvidia-smi > /dev/null 2>&1") == 0 else "cpu"
+        device="cuda" if torch.cuda.is_available() else "cpu"
     )
 
     print(f"开始训练底层控制器，目标步数: {TRAIN_CONFIG['total_timesteps']}")
