@@ -179,8 +179,8 @@ class HighLevelCmdEnv(gym.Env):
 
 # 训练参数
 TRAIN_CFG = {
-    "total_timesteps": 200_000,
-    "num_envs": 4,
+    "total_timesteps": 20_000_000,
+    "num_envs": 16,
     "learning_rate": 3e-4,
     "n_steps": 1024,
     "batch_size": 256,
