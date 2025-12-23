@@ -22,10 +22,11 @@ from PyFlyt.gym_envs import FlattenWaypointEnv
 
 # 评估配置（默认值，可通过命令行参数覆盖）
 EVAL_CONFIG = {
-    "model_path": "models/waypoints_ppo/best_model.zip", # 优先使用最佳模型
-    "vecnorm_path": "models/waypoints_ppo/vecnorm.pkl",
+    "model_path": "models/waypoints_ppo_sparse_reward/best_model.zip", # 优先使用最佳模型
+    "vecnorm_path": "models/waypoints_ppo_sparse_reward/vecnorm.pkl",
     "num_episodes": 10,
-    "flight_dome_size": 200.0,
+    "flight_dome_size": 100.0,
+    "goal_reach_distance": 4,
     "max_duration_seconds": 120.0,
     "context_length": 2,
     "render": True,
@@ -39,6 +40,7 @@ def make_eval_env(render_mode="human"):
     env = gym.make(
         "PyFlyt/Fixedwing-Waypoints-v3",
         render_mode=render_mode,
+        goal_reach_distance=EVAL_CONFIG["goal_reach_distance"],
         angle_representation="euler",
         flight_dome_size=EVAL_CONFIG["flight_dome_size"],
         max_duration_seconds=EVAL_CONFIG["max_duration_seconds"],
