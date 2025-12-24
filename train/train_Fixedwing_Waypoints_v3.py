@@ -25,23 +25,23 @@ from PyFlyt.gym_envs import FlattenWaypointEnv
 TRAIN_CONFIG = {
     "total_timesteps": 4_000_000,
     "num_envs": 32,
-    "num_targets": 4,
-    "goal_reach_distance": 10,
-    "sparse_reward": True,
+    "num_targets": 8,
+    "goal_reach_distance": 8,
+    "sparse_reward": False,
     "n_eval_episodes": 20,
     "learning_rate": 3e-4,
     "n_steps": 2048,
-    "batch_size": 64,
-    "n_epochs": 10,
+    "batch_size": 128,
+    "n_epochs": 20,
     "gamma": 0.99,
     "gae_lambda": 0.95,
     "clip_range": 0.2,
-    "ent_coef": 0.0,
+    "ent_coef": 0.001,
     "vf_coef": 0.5,
     "max_grad_norm": 0.5,
     "seed": 42,
-    "log_dir": "logs/waypoints_ppo_v3.1",
-    "model_dir": "models/waypoints_ppo_v3.1",
+    "log_dir": "logs/waypoints_ppo_v3.4",
+    "model_dir": "models/waypoints_ppo_v3.4",
     "flight_dome_size": 100.0,
     "max_duration_seconds": 120.0,
     "context_length": 2,  # 观测中包含当前目标点和下一个目标点
@@ -49,7 +49,7 @@ TRAIN_CONFIG = {
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pretrained_model", type=str, default='models/waypoints_ppo_v3/best_model.zip')
+    parser.add_argument("--pretrained_model", type=str, default='models/waypoints_ppo_v3.3/best_model.zip')
     parser.add_argument("--vecnorm_path", type=str, default=None)
     parser.add_argument("--total_timesteps", type=int, default=None)
     return parser.parse_args()
