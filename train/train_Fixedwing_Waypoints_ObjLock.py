@@ -18,75 +18,19 @@ from stable_baselines3.common.vec_env import SubprocVecEnv, VecNormalize
 from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
 from stable_baselines3.common.utils import set_random_seed
 from PyFlyt.gym_envs.fixedwing_envs.fixedwing_waypoints_env import FixedwingWaypointsEnv
+_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+from envs.models_env import (
+    RandomDuckOnResetWrapper,
+    WaypointThenDuckStrikeWrapper,
+    WaypointThenDuckVisionObsWrapper,
+)
 
 # 确保能导入 PyFlyt
 import PyFlyt.gym_envs
 from PyFlyt.gym_envs import FlattenWaypointEnv
 
-
-class RandomDuckOnResetWrapper(gym.Wrapper):
-    def __init__(
-        self,
-        env: gym.Env,
-        *,
-        urdf_path: str,
-        xy_radius: float,
-        min_origin_distance: float = 5.0,
-        base_z: float = 0.02,
-        global_scaling: float = 0.7,
-    ):
-        super().__init__(env)
-        self.urdf_path = str(urdf_path)
-        self.xy_radius = float(xy_radius)
-        self.min_origin_distance = float(min_origin_distance)
-        self.base_z = float(base_z)
-        self.global_scaling = float(global_scaling)
-        self.duck_body_id: int | None = None
-
-    def reset(self, *, seed: int | None = None, options: dict | None = None):
-        obs, info = self.env.reset(seed=seed, options=options)
-        self._spawn_duck()
-        return obs, info
-
-    def _spawn_duck(self) -> None:
-        base = self.env.unwrapped
-        aviary = getattr(base, "env", None)
-        if aviary is None:
-            return
-
-        if self.duck_body_id is not None:
-            try:
-                existing = {int(aviary.getBodyUniqueId(i)) for i in range(int(aviary.getNumBodies()))}
-                if int(self.duck_body_id) in existing:
-                    aviary.removeBody(int(self.duck_body_id))
-            except Exception:
-                pass
-            self.duck_body_id = None
-
-        rng = getattr(base, "_np_random", None)
-        if rng is None:
-            rng = np.random.default_rng()
-
-        for _ in range(50):
-            x = float(rng.uniform(-self.xy_radius, self.xy_radius))
-            y = float(rng.uniform(-self.xy_radius, self.xy_radius))
-            if (x * x + y * y) ** 0.5 >= self.min_origin_distance:
-                break
-        else:
-            x, y = float(self.min_origin_distance), 0.0
-
-        yaw = float(rng.uniform(-np.pi, np.pi))
-        quat = aviary.getQuaternionFromEuler([0.0, 0.0, yaw])
-
-        self.duck_body_id = int(
-            aviary.loadURDF(
-                self.urdf_path,
-                basePosition=[x, y, self.base_z],
-                baseOrientation=quat,
-                useFixedBase=True,
-                globalScaling=self.global_scaling,
-            )
-        )
 
 # 训练配置
 TRAIN_CONFIG = {
@@ -112,6 +56,18 @@ TRAIN_CONFIG = {
     "flight_dome_size": 100.0,
     "max_duration_seconds": 120.0,
     "context_length": 2,  # 观测中包含当前目标点和下一个目标点
+
+    # 终局目标：完成所有航点后，进入“相机锁定并撞击小黄鸭”阶段
+    "duck_place_at_last_waypoint": True,
+    "duck_camera_capture_interval_steps": 6,
+    "duck_lock_hold_steps": 10,
+    "duck_strike_distance_m": 2.0,
+    "duck_strike_reward": 200.0,
+    "duck_lock_step_reward": 0.1,
+    "duck_approach_reward_scale": 0.05,
+
+    "duck_switch_min_consecutive_seen": 2,
+    "duck_switch_min_area": 0.0005,
 }
 
 def parse_args():
@@ -162,7 +118,7 @@ def make_env(rank: int, seed: int = 0):
             sparse_reward=TRAIN_CONFIG["sparse_reward"],
             num_targets=TRAIN_CONFIG["num_targets"],
             goal_reach_distance=TRAIN_CONFIG["goal_reach_distance"],
-            render_mode=None,
+            render_mode="rgb_array",
             angle_representation="euler", # 使用欧拉角更直观
             flight_dome_size=TRAIN_CONFIG["flight_dome_size"],
             max_duration_seconds=TRAIN_CONFIG["max_duration_seconds"],
@@ -177,12 +133,34 @@ def make_env(rank: int, seed: int = 0):
             xy_radius=duck_xy_radius,
             min_origin_distance=8.0,
             base_z=0.03,
-            global_scaling=0.7,
+            global_scaling=10,
+            place_at_last_waypoint=TRAIN_CONFIG["duck_place_at_last_waypoint"],
+            use_waypoint_altitude=True,
         )
-        
+
+        env = WaypointThenDuckStrikeWrapper(
+            env,
+            num_targets_total=TRAIN_CONFIG["num_targets"],
+            camera_capture_interval_steps=TRAIN_CONFIG["duck_camera_capture_interval_steps"],
+            lock_hold_steps=TRAIN_CONFIG["duck_lock_hold_steps"],
+            strike_distance_m=TRAIN_CONFIG["duck_strike_distance_m"],
+            strike_reward=TRAIN_CONFIG["duck_strike_reward"],
+            lock_step_reward=TRAIN_CONFIG["duck_lock_step_reward"],
+            approach_reward_scale=TRAIN_CONFIG["duck_approach_reward_scale"],
+        )
+
         # 扁平化观测空间，以便 MLP 网络处理
         # FlattenWaypointEnv 会将环境的 Dict 观测转换为 Box 观测
         env = FlattenWaypointEnv(env, context_length=TRAIN_CONFIG["context_length"])
+
+        # 航点阶段保持原观测不变；撞鸭阶段切换为纯视觉特征向量输入
+        env = WaypointThenDuckVisionObsWrapper(
+            env,
+            num_targets_total=TRAIN_CONFIG["num_targets"],
+            camera_capture_interval_steps=TRAIN_CONFIG["duck_camera_capture_interval_steps"],
+            switch_min_consecutive_seen=TRAIN_CONFIG["duck_switch_min_consecutive_seen"],
+            switch_min_area=TRAIN_CONFIG["duck_switch_min_area"],
+        )
         
         env.reset(seed=seed + rank)
         return env
@@ -310,8 +288,8 @@ def train(args):
     os.makedirs(TRAIN_CONFIG["model_dir"], exist_ok=True)
 
     # 检测设备
-    # device = "cuda" if torch.cuda.is_available() else "cpu"
-    device = "cpu"
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    # device = "cpu"
     print(f"Using device: {device}")
 
     # 创建并行训练环境
