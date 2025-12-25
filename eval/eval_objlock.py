@@ -17,21 +17,23 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 from stable_baselines3.common.evaluation import evaluate_policy
 
-# 确保能导入 PyFlyt
+# 确保能导入 PyFlyt 环境
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import PyFlyt.gym_envs
 from PyFlyt.gym_envs import FlattenWaypointEnv
-
-from train.train_Fixedwing_Waypoints_ObjLock import RandomDuckOnResetWrapper, TRAIN_CONFIG as TRAIN_CONFIG_OBJLOCK
+from envs.models_env import RandomDuckOnResetWrapper
+# from train.train_Fixedwing_Waypoints_ObjLock import RandomDuckOnResetWrapper, TRAIN_CONFIG as TRAIN_CONFIG_OBJLOCK
 
 # 评估配置（默认值，可通过命令行参数覆盖）
 EVAL_CONFIG = {
-    "model_path": "models/waypoints_ppo_v3.4/best_model.zip",
+    "model_path": "models/waypoints_ppo_v3.5/best_model.zip",
     "vecnorm_path": None,
     "num_episodes": 10,
-    "flight_dome_size": float(TRAIN_CONFIG_OBJLOCK["flight_dome_size"]),
-    "goal_reach_distance": float(TRAIN_CONFIG_OBJLOCK["goal_reach_distance"]),
-    "max_duration_seconds": float(TRAIN_CONFIG_OBJLOCK["max_duration_seconds"]),
-    "context_length": int(TRAIN_CONFIG_OBJLOCK["context_length"]),
+    "flight_dome_size": 100,
+    "num_targets": 8,
+    "goal_reach_distance": 8,
+    "max_duration_seconds": 120.0,
+    "context_length": 2,
     "render": True,
 }
 
@@ -56,8 +58,7 @@ def make_eval_env(render_mode="human"):
     env = gym.make(
         "PyFlyt/Fixedwing-Waypoints-v3",
         render_mode=render_mode,
-        sparse_reward=bool(TRAIN_CONFIG_OBJLOCK["sparse_reward"]),
-        num_targets=int(TRAIN_CONFIG_OBJLOCK["num_targets"]),
+        num_targets=int(EVAL_CONFIG["num_targets"]),
         goal_reach_distance=float(EVAL_CONFIG["goal_reach_distance"]),
         angle_representation="euler",
         flight_dome_size=float(EVAL_CONFIG["flight_dome_size"]),
@@ -66,14 +67,14 @@ def make_eval_env(render_mode="human"):
     )
 
     duck_urdf = os.path.join(pybullet_data.getDataPath(), "duck_vhacd.urdf")
-    duck_xy_radius = float(TRAIN_CONFIG_OBJLOCK["flight_dome_size"]) * 0.6
+    duck_xy_radius = float(EVAL_CONFIG["flight_dome_size"]) * 0.6
     env = RandomDuckOnResetWrapper(
         env,
         urdf_path=duck_urdf,
         xy_radius=duck_xy_radius,
         min_origin_distance=8.0,
         base_z=0.03,
-        global_scaling=0.7,
+        global_scaling=20.0,
     )
     
     # 扁平化观测空间
