@@ -2,7 +2,8 @@
 
 说明:
     使用 Stable-Baselines3 的 PPO 算法训练 PyFlyt/Fixedwing-Waypoints-v3 环境。
-    该环境的目标是通过控制 roll, pitch, yaw, thrust 来追踪一系列航点。
+    该环境的目标是通过控制 roll, pitch, yaw, thrust 来追踪一系列航点，最终通过摄像头锁定环境中的某个目标，
+    同时避免与环境中的障碍物发生碰撞。
 """
 
 import os
@@ -11,6 +12,7 @@ import argparse
 import gymnasium as gym
 import torch
 import numpy as np
+import pybullet_data
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import SubprocVecEnv, VecNormalize
 from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
@@ -21,12 +23,77 @@ from PyFlyt.gym_envs.fixedwing_envs.fixedwing_waypoints_env import FixedwingWayp
 import PyFlyt.gym_envs
 from PyFlyt.gym_envs import FlattenWaypointEnv
 
+
+class RandomDuckOnResetWrapper(gym.Wrapper):
+    def __init__(
+        self,
+        env: gym.Env,
+        *,
+        urdf_path: str,
+        xy_radius: float,
+        min_origin_distance: float = 5.0,
+        base_z: float = 0.02,
+        global_scaling: float = 0.7,
+    ):
+        super().__init__(env)
+        self.urdf_path = str(urdf_path)
+        self.xy_radius = float(xy_radius)
+        self.min_origin_distance = float(min_origin_distance)
+        self.base_z = float(base_z)
+        self.global_scaling = float(global_scaling)
+        self.duck_body_id: int | None = None
+
+    def reset(self, *, seed: int | None = None, options: dict | None = None):
+        obs, info = self.env.reset(seed=seed, options=options)
+        self._spawn_duck()
+        return obs, info
+
+    def _spawn_duck(self) -> None:
+        base = self.env.unwrapped
+        aviary = getattr(base, "env", None)
+        if aviary is None:
+            return
+
+        if self.duck_body_id is not None:
+            try:
+                existing = {int(aviary.getBodyUniqueId(i)) for i in range(int(aviary.getNumBodies()))}
+                if int(self.duck_body_id) in existing:
+                    aviary.removeBody(int(self.duck_body_id))
+            except Exception:
+                pass
+            self.duck_body_id = None
+
+        rng = getattr(base, "_np_random", None)
+        if rng is None:
+            rng = np.random.default_rng()
+
+        for _ in range(50):
+            x = float(rng.uniform(-self.xy_radius, self.xy_radius))
+            y = float(rng.uniform(-self.xy_radius, self.xy_radius))
+            if (x * x + y * y) ** 0.5 >= self.min_origin_distance:
+                break
+        else:
+            x, y = float(self.min_origin_distance), 0.0
+
+        yaw = float(rng.uniform(-np.pi, np.pi))
+        quat = aviary.getQuaternionFromEuler([0.0, 0.0, yaw])
+
+        self.duck_body_id = int(
+            aviary.loadURDF(
+                self.urdf_path,
+                basePosition=[x, y, self.base_z],
+                baseOrientation=quat,
+                useFixedBase=True,
+                globalScaling=self.global_scaling,
+            )
+        )
+
 # 训练配置
 TRAIN_CONFIG = {
-    "total_timesteps": 10_000_000,
+    "total_timesteps": 4_000_000,
     "num_envs": 32,
     "num_targets": 8,
-    "goal_reach_distance": 6,
+    "goal_reach_distance": 8,
     "sparse_reward": False,
     "n_eval_episodes": 20,
     "learning_rate": 3e-4,
@@ -40,8 +107,8 @@ TRAIN_CONFIG = {
     "vf_coef": 0.5,
     "max_grad_norm": 0.5,
     "seed": 42,
-    "log_dir": "logs/waypoints_ppo_v3.5",
-    "model_dir": "models/waypoints_ppo_v3.5",
+    "log_dir": "logs/waypoints_ppo_v3.4",
+    "model_dir": "models/waypoints_ppo_v3.4",
     "flight_dome_size": 100.0,
     "max_duration_seconds": 120.0,
     "context_length": 2,  # 观测中包含当前目标点和下一个目标点
@@ -49,7 +116,7 @@ TRAIN_CONFIG = {
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pretrained_model", type=str, default='models/waypoints_ppo_v3.4/best_model.zip')
+    parser.add_argument("--pretrained_model", type=str, default='models/waypoints_ppo_v3.3/best_model.zip')
     parser.add_argument("--vecnorm_path", type=str, default=None)
     parser.add_argument("--total_timesteps", type=int, default=None)
     return parser.parse_args()
@@ -100,6 +167,17 @@ def make_env(rank: int, seed: int = 0):
             flight_dome_size=TRAIN_CONFIG["flight_dome_size"],
             max_duration_seconds=TRAIN_CONFIG["max_duration_seconds"],
             agent_hz=30,
+        )
+
+        duck_urdf = os.path.join(pybullet_data.getDataPath(), "duck_vhacd.urdf")
+        duck_xy_radius = float(TRAIN_CONFIG["flight_dome_size"]) * 0.6
+        env = RandomDuckOnResetWrapper(
+            env,
+            urdf_path=duck_urdf,
+            xy_radius=duck_xy_radius,
+            min_origin_distance=8.0,
+            base_z=0.03,
+            global_scaling=0.7,
         )
         
         # 扁平化观测空间，以便 MLP 网络处理
