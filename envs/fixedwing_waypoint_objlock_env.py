@@ -61,6 +61,7 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
         duck_approach_reward_scale: float = 0.05,
         duck_switch_min_consecutive_seen: int = 2,
         duck_switch_min_area: float = 0.0005,
+        duck_global_scaling: float = 20.0,
     ):
         super().__init__(
             start_pos=np.array([[0.0, 0.0, 10.0]]),
@@ -100,6 +101,7 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
         self.duck_approach_reward_scale = duck_approach_reward_scale
         self.duck_switch_min_consecutive_seen = duck_switch_min_consecutive_seen
         self.duck_switch_min_area = duck_switch_min_area
+        self.duck_global_scaling = duck_global_scaling
 
         self.duck_body_id: Optional[int] = None
         self._egl_plugin_id: Optional[int] = None
@@ -254,6 +256,12 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
             self.truncation = False 
             
             if self._duck_phase:
+                # 0. Dense Reward (Distance based, similar to Waypoints)
+                if not self.sparse_reward and self._last_depth_m > 0:
+                     # 模仿 Waypoint 的 1.0 / distance 奖励
+                     # 距离越近奖励越大，但要防止极近距离时数值爆炸
+                     self.reward += 1.0 / max(self._last_depth_m, 2.0)
+
                 # 1. Lock Reward
                 if self._last_cx > 0.0: # Visible
                     dist_to_center = np.sqrt((self._last_cx - 0.5)**2 + (self._last_cy - 0.5)**2)
@@ -265,7 +273,7 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
                 else:
                     self._lock_steps = 0
                 
-                # 2. Approach Reward
+                # 2. Approach Reward (Differential)
                 est_dist = self._last_depth_m
                 if self._prev_est_dist_m is not None and est_dist > 0:
                     diff = self._prev_est_dist_m - est_dist
@@ -332,7 +340,7 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
             basePosition=[x, y, z],
             baseOrientation=quat,
             useFixedBase=True,
-            globalScaling=10.0,
+            globalScaling=self.duck_global_scaling,
         )
 
         # Manual Contact Array Resize (Critical Fix)

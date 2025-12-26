@@ -33,8 +33,8 @@ TRAIN_CONFIG = {
     "total_timesteps": 200_000_000,
     "num_envs": 32,
     "num_targets": 8,
-    "goal_reach_distance": 6,
-    "sparse_reward": True,
+    "goal_reach_distance": 8,
+    "sparse_reward": False,
     "n_eval_episodes": 10,
     "learning_rate": 3e-4,
     "n_steps": 2048,
@@ -57,13 +57,14 @@ TRAIN_CONFIG = {
     "duck_place_at_last_waypoint": True,
     "duck_camera_capture_interval_steps": 6,
     "duck_lock_hold_steps": 10,
-    "duck_strike_distance_m": 2.0,
+    "duck_strike_distance_m": 8,
     "duck_strike_reward": 200.0,
     "duck_lock_step_reward": 0.1,
     "duck_approach_reward_scale": 0.05,
 
     "duck_switch_min_consecutive_seen": 2,
     "duck_switch_min_area": 0.0005,
+    "duck_global_scaling": 30.0,
 }
 
 def parse_args():
@@ -121,6 +122,7 @@ def make_env(rank: int, seed: int = 0, use_egl: bool = False):
             duck_approach_reward_scale=TRAIN_CONFIG["duck_approach_reward_scale"],
             duck_switch_min_consecutive_seen=TRAIN_CONFIG["duck_switch_min_consecutive_seen"],
             duck_switch_min_area=TRAIN_CONFIG["duck_switch_min_area"],
+            duck_global_scaling=TRAIN_CONFIG["duck_global_scaling"],
         )
 
         # 扁平化观测空间，以便 MLP 网络处理
