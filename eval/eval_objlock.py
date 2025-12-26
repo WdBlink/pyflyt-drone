@@ -22,7 +22,11 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import PyFlyt.gym_envs
 from PyFlyt.gym_envs import FlattenWaypointEnv
 from envs.models_env import RandomDuckOnResetWrapper
-# from train.train_Fixedwing_Waypoints_ObjLock import RandomDuckOnResetWrapper, TRAIN_CONFIG as TRAIN_CONFIG_OBJLOCK
+# _PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
+
+from train.train_Fixedwing_Waypoints_ObjLock import RandomDuckOnResetWrapper, TRAIN_CONFIG as TRAIN_CONFIG_OBJLOCK
 
 # 评估配置（默认值，可通过命令行参数覆盖）
 EVAL_CONFIG = {
