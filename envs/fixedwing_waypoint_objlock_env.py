@@ -224,7 +224,7 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
                 
                 if self._seen_consecutive >= self.duck_switch_min_consecutive_seen:
                     self._duck_phase = True
-                    # print("DEBUG: Switched to Duck Phase!")
+                    print("DEBUG: Switched to Duck Phase!")
 
             new_state["duck_vision"] = feature
         else:
@@ -249,10 +249,17 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
                 self.reward = 100.0
                 self.waypoints.advance_targets()
                 self.info["num_targets_reached"] = self.waypoints.num_targets_reached
+                
+                # 如果这是最后一个航点，防止环境终止，确保进入 Duck Phase
+                if self.waypoints.all_targets_reached:
+                    # print("DEBUG: All targets reached! Switching to Duck Phase.")
+                    self.termination = False
+                    self.truncation = False
         
         # --- Duck Phase Reward ---
         else:
             # Override truncation from waypoint completion
+            self.termination = False
             self.truncation = False 
             
             if self._duck_phase:
@@ -322,12 +329,13 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
             if hasattr(self.waypoints, "targets") and len(self.waypoints.targets) > 0:
                 last = self.waypoints.targets[-1]
                 x, y = float(last[0]), float(last[1])
-                z = float(last[2])
+                # z = float(last[2]) # Waypoint altitude is too high
+                z = 0.05 # Place on ground
             else:
-                x, y, z = 10.0, 0.0, 0.03
+                x, y, z = 10.0, 0.0, 0.05
         except Exception:
              # Fallback
-            x, y, z = 10.0, 0.0, 0.03
+            x, y, z = 10.0, 0.0, 0.05
 
         # Add some noise
         # x += rng.uniform(-2.0, 2.0)

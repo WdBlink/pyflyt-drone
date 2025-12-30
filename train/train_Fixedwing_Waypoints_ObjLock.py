@@ -8,12 +8,14 @@
 
 import os
 import sys
+import time
 import argparse
 import gymnasium as gym
 import torch
 import numpy as np
 import pybullet_data
 from stable_baselines3 import PPO
+from stable_baselines3.common.vec_env import SubprocVecEnv, VecNormalize, DummyVecEnv
 from stable_baselines3.common.vec_env import SubprocVecEnv, VecNormalize, DummyVecEnv
 from stable_baselines3.common.callbacks import EvalCallback, CheckpointCallback
 from stable_baselines3.common.utils import set_random_seed
@@ -37,7 +39,7 @@ TRAIN_CONFIG = {
     "sparse_reward": False,
     "n_eval_episodes": 10,
     "learning_rate": 3e-4,
-    "n_steps": 2048,
+    "n_steps": 1024,
     "batch_size": 128,
     "n_epochs": 20,
     "gamma": 0.99,
@@ -47,6 +49,8 @@ TRAIN_CONFIG = {
     "vf_coef": 0.5,
     "max_grad_norm": 0.5,
     "seed": 42,
+    "log_dir": "logs/obj_strick_ppo_v1.0",
+    "model_dir": "models/obj_strick_ppo_v1.0",
     "log_dir": "logs/obj_strick_ppo_v1.0",
     "model_dir": "models/obj_strick_ppo_v1.0",
     "flight_dome_size": 100.0,
@@ -69,6 +73,7 @@ TRAIN_CONFIG = {
 
 def parse_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--pretrained_model", type=str, default='models/waypoints_ppo_v3.5/best_model.zip')
     parser.add_argument("--pretrained_model", type=str, default='models/waypoints_ppo_v3.5/best_model.zip')
     parser.add_argument("--vecnorm_path", type=str, default=None)
     parser.add_argument("--total_timesteps", type=int, default=None)
@@ -284,9 +289,6 @@ def train(args):
         env = VecNormalize(env, norm_obs=True, norm_reward=True, clip_obs=10.0)
 
     # 创建评估环境（独立于训练环境）
-    # 策略：评估环境强制关闭 EGL，使用 CPU 渲染 (TinyRenderer)。
-    # 原因：防止主进程/评估进程与训练进程争夺 EGL 上下文导致死锁。
-    # 评估频率低，CPU 渲染虽然慢但更稳定。
     print("Creating evaluation environments...")
     eval_env = DummyVecEnv([make_env(TRAIN_CONFIG["num_envs"], TRAIN_CONFIG["seed"], use_egl=False)])
     if vecnorm_path:
