@@ -1,5 +1,5 @@
 """项目文件：Fixedwing-Waypoints-v3 PPO 训练脚本
-
+版本：v2.1
 说明:
     使用 Stable-Baselines3 的 PPO 算法训练 PyFlyt/Fixedwing-Waypoints-v3 环境。
     该环境的目标是通过控制 roll, pitch, yaw, thrust 来追踪一系列航点，最终通过摄像头锁定环境中的某个目标，
@@ -27,12 +27,13 @@ from envs.fixedwing_waypoint_objlock_env import FixedwingWaypointObjLockEnv
 
 # 确保能导入 PyFlyt
 import PyFlyt.gym_envs
-from PyFlyt.gym_envs import FlattenWaypointEnv
+# from PyFlyt.gym_envs import FlattenWaypointEnv # Use local patched version
+from envs.flatten_waypoint_env import FlattenWaypointEnv
 
 
 # 训练配置
 TRAIN_CONFIG = {
-    "total_timesteps": 200_000_000,
+    "total_timesteps": 20_000_000,
     "num_envs": 32,
     "num_targets": 8,
     "goal_reach_distance": 8,
@@ -49,16 +50,14 @@ TRAIN_CONFIG = {
     "vf_coef": 0.5,
     "max_grad_norm": 0.5,
     "seed": 42,
-    "log_dir": "logs/obj_strick_ppo_v1.0",
-    "model_dir": "models/obj_strick_ppo_v1.0",
-    "log_dir": "logs/obj_strick_ppo_v1.0",
-    "model_dir": "models/obj_strick_ppo_v1.0",
+    "log_dir": "logs/obj_strick_ppo_v2.1",
+    "model_dir": "models/obj_strick_ppo_v2.1",
     "flight_dome_size": 100.0,
     "max_duration_seconds": 120.0,
     "context_length": 2,  # 观测中包含当前目标点和下一个目标点
 
     # 终局目标：完成所有航点后，进入“相机锁定并撞击小黄鸭”阶段
-    "duck_place_at_last_waypoint": True,
+    "duck_place_at_last_waypoint": False,
     "duck_camera_capture_interval_steps": 6,
     "duck_lock_hold_steps": 10,
     "duck_strike_distance_m": 8,
@@ -69,12 +68,19 @@ TRAIN_CONFIG = {
     "duck_switch_min_consecutive_seen": 2,
     "duck_switch_min_area": 0.0005,
     "duck_global_scaling": 30.0,
+
+    #障碍物参数设置
+    "num_obstacles": 20,
+    "obstacle_radius": 2.0,
+    "obstacle_height_range": (10.0, 30.0),
+    "obstacle_safe_distance_m": 5.0,
+    "obstacle_avoid_reward_scale": 1.0,
+    "obstacle_avoid_max_penalty": 2.0,
 }
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pretrained_model", type=str, default='models/waypoints_ppo_v3.5/best_model.zip')
-    parser.add_argument("--pretrained_model", type=str, default='models/waypoints_ppo_v3.5/best_model.zip')
+    parser.add_argument("--pretrained_model", type=str, default='models/obj_strick_ppo_v2.0/best_model.zip')
     parser.add_argument("--vecnorm_path", type=str, default=None)
     parser.add_argument("--total_timesteps", type=int, default=None)
     return parser.parse_args()
@@ -118,6 +124,12 @@ def make_env(rank: int, seed: int = 0, use_egl: bool = False):
             max_duration_seconds=TRAIN_CONFIG["max_duration_seconds"],
             agent_hz=30,
             use_egl=use_egl,
+            num_obstacles=TRAIN_CONFIG["num_obstacles"],
+            obstacle_radius=TRAIN_CONFIG["obstacle_radius"],
+            obstacle_height_range=TRAIN_CONFIG["obstacle_height_range"],
+            obstacle_safe_distance_m=TRAIN_CONFIG["obstacle_safe_distance_m"],
+            obstacle_avoid_reward_scale=TRAIN_CONFIG["obstacle_avoid_reward_scale"],
+            obstacle_avoid_max_penalty=TRAIN_CONFIG["obstacle_avoid_max_penalty"],
             # Duck Configs
             duck_camera_capture_interval_steps=TRAIN_CONFIG["duck_camera_capture_interval_steps"],
             duck_lock_hold_steps=TRAIN_CONFIG["duck_lock_hold_steps"],
