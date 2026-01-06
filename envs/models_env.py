@@ -12,8 +12,100 @@ from __future__ import annotations
 
 from typing import Any, Optional
 
+import pkgutil
+
 import gymnasium as gym
 import numpy as np
+
+
+class EnableEGLRenderOnResetWrapper(gym.Wrapper):
+    _camera_capture_patched: bool = False
+
+    def __init__(self, env: gym.Env) -> None:
+        super().__init__(env)
+        self._last_client_id: Optional[int] = None
+        self._egl_plugin_id: Optional[int] = None
+
+    def reset(self, *, seed: int | None = None, options: dict | None = None):
+        obs, info = self.env.reset(seed=seed, options=options)
+        self._try_enable_egl()
+        self._try_patch_camera_capture()
+        return obs, info
+
+    def _try_enable_egl(self) -> None:
+        base = self.env.unwrapped
+        aviary = getattr(base, "env", None)
+        if aviary is None:
+            return
+
+        client_id = getattr(aviary, "_client", None)
+        if client_id is None:
+            return
+
+        client_id = int(client_id)
+        if self._last_client_id == client_id and self._egl_plugin_id is not None:
+            return
+
+        self._last_client_id = client_id
+        self._egl_plugin_id = None
+
+        try:
+            # print(f"DEBUG: Loading EGL plugin for client {client_id}...")
+            egl = pkgutil.get_loader("eglRenderer")
+            if egl is not None:
+                self._egl_plugin_id = int(
+                    aviary.loadPlugin(egl.get_filename(), "_eglRendererPlugin")
+                )
+            else:
+                self._egl_plugin_id = int(
+                    aviary.loadPlugin("eglRendererPlugin", "_eglRendererPlugin")
+                )
+            # print(f"DEBUG: EGL plugin loaded, id={self._egl_plugin_id}")
+        except Exception as e:
+            # print(f"DEBUG: EGL load failed: {e}")
+            self._egl_plugin_id = None
+
+    @classmethod
+    def _try_patch_camera_capture(cls) -> None:
+        if cls._camera_capture_patched:
+            return
+
+        try:
+            import pybullet as p
+            from PyFlyt.core.abstractions.camera import Camera
+
+            original_capture = Camera.capture_image
+
+            def capture_image(self):
+                try:
+                    # print("DEBUG: calling getCameraImage with HARDWARE_OPENGL")
+                    _, _, rgbaImg, depthImg, segImg = self.p.getCameraImage(
+                        height=int(self.camera_resolution[0]),
+                        width=int(self.camera_resolution[1]),
+                        viewMatrix=self.view_mat,
+                        projectionMatrix=self.proj_mat,
+                        renderer=p.ER_BULLET_HARDWARE_OPENGL,
+                    )
+                    # print("DEBUG: getCameraImage success")
+                except Exception:
+                    # print("DEBUG: getCameraImage failed, fallback")
+                    return original_capture(self)
+
+                rgbaImg = np.asarray(rgbaImg).reshape(
+                    int(self.camera_resolution[0]), int(self.camera_resolution[1]), -1
+                )
+                depthImg = np.asarray(depthImg).reshape(
+                    int(self.camera_resolution[0]), int(self.camera_resolution[1]), -1
+                )
+                segImg = np.asarray(segImg).reshape(
+                    int(self.camera_resolution[0]), int(self.camera_resolution[1]), -1
+                )
+                return rgbaImg, depthImg, segImg
+
+            Camera.capture_image = capture_image
+            cls._camera_capture_patched = True
+        except Exception:
+            cls._camera_capture_patched = False
 
 
 class RandomDuckOnResetWrapper(gym.Wrapper):
@@ -54,52 +146,82 @@ class RandomDuckOnResetWrapper(gym.Wrapper):
         self.duck_body_id: Optional[int] = None
 
     def reset(self, *, seed: int | None = None, options: dict | None = None):
-        """重置环境并生成小黄鸭。"""
+        """重置环境，并重新加载/移动小黄鸭。"""
         obs, info = self.env.reset(seed=seed, options=options)
-        self._spawn_duck()
-        return obs, info
 
-    def get_duck_body_id(self) -> Optional[int]:
-        """返回小黄鸭的 body id。"""
-        return self.duck_body_id
-
-    def _spawn_duck(self) -> None:
-        """在 PyBullet 中生成/重置小黄鸭。"""
         base = self.env.unwrapped
         aviary = getattr(base, "env", None)
         if aviary is None:
-            return
+            return obs, info
 
+        # 1. 尝试查找当前 aviary 里是否已经有我们的小黄鸭 (通过 body name 验证)
+        # 因为 PyFlyt 每次 reset 都会重建 Aviary，所以这里通常是需要重新加载的
+        # 但如果未来 PyFlyt 优化了复用逻辑，这里的 check 会很有用
+        found_existing = False
         if self.duck_body_id is not None:
             try:
-                existing = {
-                    int(aviary.getBodyUniqueId(i))
-                    for i in range(int(aviary.getNumBodies()))
-                }
-                if int(self.duck_body_id) in existing:
-                    aviary.removeBody(int(self.duck_body_id))
+                # 检查 body id 是否有效且名字匹配
+                body_info = aviary.getBodyInfo(int(self.duck_body_id))
+                # body_info: (base_name, body_name) 都是 bytes
+                if b"duck" in body_info[1].lower():
+                    found_existing = True
             except Exception:
-                pass
-            self.duck_body_id = None
+                self.duck_body_id = None
 
         rng = getattr(base, "_np_random", None)
         if rng is None:
             rng = np.random.default_rng()
 
         x, y, z = self._sample_duck_xyz(base, rng)
-
         yaw = float(rng.uniform(-np.pi, np.pi))
         quat = aviary.getQuaternionFromEuler([np.pi / 2, 0.0, yaw])
+        target_pos = [float(x), float(y), float(z)]
 
-        self.duck_body_id = int(
-            aviary.loadURDF(
-                self.urdf_path,
-                basePosition=[float(x), float(y), float(z)],
-                baseOrientation=quat,
-                useFixedBase=True,
-                globalScaling=self.global_scaling,
+        if found_existing and self.duck_body_id is not None:
+            # 2. 如果已存在，直接移动位置 (更快)
+            aviary.resetBasePositionAndOrientation(
+                int(self.duck_body_id),
+                target_pos,
+                quat
             )
-        )
+        else:
+            # 3. 如果不存在，加载新的
+            try:
+                self.duck_body_id = int(
+                    aviary.loadURDF(
+                        self.urdf_path,
+                        basePosition=target_pos,
+                        baseOrientation=quat,
+                        useFixedBase=True,
+                        globalScaling=self.global_scaling,
+                    )
+                )
+                # 必须通知 aviary 有新物体加入，否则 contact_array 不会扩容
+                aviary.register_all_new_bodies()
+            except Exception:
+                self.duck_body_id = None
+
+        return obs, info
+
+        # 手动扩容 contact_array 避免调用 register_all_new_bodies 可能导致的死锁/性能问题
+        try:
+            # 找到当前最大的 body unique id
+            max_id = -1
+            for i in range(aviary.getNumBodies()):
+                uid = aviary.getBodyUniqueId(i)
+                if uid > max_id:
+                    max_id = uid
+            
+            # 如果 contact_array 不够大，则扩容
+            required_size = max_id + 1
+            if aviary.contact_array.shape[0] < required_size:
+                # print(f"DEBUG: Resizing contact_array from {aviary.contact_array.shape[0]} to {required_size}")
+                new_size = required_size + 5 # 稍微多留点余量
+                new_array = np.zeros((new_size, new_size), dtype=bool)
+                # 不需要复制旧数据，因为 Aviary.step() 开头会重置它
+                aviary.contact_array = new_array
+        except Exception:
+            pass
 
     def _sample_duck_xyz(self, base: Any, rng: Any) -> tuple[float, float, float]:
         """采样小黄鸭的位置。"""
