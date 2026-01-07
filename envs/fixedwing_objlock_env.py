@@ -10,7 +10,8 @@ import pybullet_data
 from gymnasium import spaces
 
 from PyFlyt.core.abstractions.camera import Camera
-from PyFlyt.gym_envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
+# from PyFlyt.gym_envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
+from envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
 
 
 class FixedwingObjLockEnv(FixedwingBaseEnv):
@@ -45,6 +46,11 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         render_resolution: tuple[int, int] = (480, 480),
         duck_urdf_path: str | None = None,
         use_egl: bool = False,
+        camera_profile: Literal["cockpit_fpv", "chase", "default"] = "cockpit_fpv",
+        camera_position_offset: tuple[float, float, float] | None = None,
+        camera_angle_degrees: int | None = None,
+        camera_FOV_degrees: int | None = None,
+        camera_resolution: tuple[int, int] | None = None,
         # Obstacle Configs
         num_obstacles: int = 5,
         obstacle_radius: float = 2.0,
@@ -90,7 +96,17 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         self.duck_body_id: Optional[int] = None
         self._egl_plugin_id: Optional[int] = None
         self._camera_capture_patched = False
-         
+
+        self._camera_profile = camera_profile
+        self._camera_position_offset = (
+            np.asarray(camera_position_offset, dtype=np.float64)
+            if camera_position_offset is not None
+            else None
+        )
+        self._camera_angle_degrees = camera_angle_degrees
+        self._camera_fov_degrees = camera_FOV_degrees
+        self._camera_resolution = camera_resolution
+
         # --- Obstacle Configs ---
         self.num_obstacles = num_obstacles
         self.obstacle_radius = obstacle_radius
@@ -131,7 +147,56 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
     ) -> tuple[dict, dict]:
         """Reset the environment."""
         # 1. Base Reset
-        super().begin_reset(seed, options)
+        drone_options: dict[str, Any] = {"use_camera": True, "use_gimbal": False}
+
+        if self._camera_profile == "cockpit_fpv":
+            default_offset = np.array([0.8, 0.0, 0.12], dtype=np.float64)
+            default_angle = -5
+        elif self._camera_profile == "chase":
+            default_offset = np.array([-3.0, 0.0, 1.0], dtype=np.float64)
+            default_angle = 0
+        else:
+            default_offset = None
+            default_angle = None
+
+        offset = (
+            self._camera_position_offset
+            if self._camera_position_offset is not None
+            else default_offset
+        )
+        if offset is not None:
+            drone_options["camera_position_offset"] = offset
+
+        angle = (
+            int(self._camera_angle_degrees)
+            if self._camera_angle_degrees is not None
+            else default_angle
+        )
+        if angle is not None:
+            drone_options["camera_angle_degrees"] = int(angle)
+
+        fov = 90 if self._camera_fov_degrees is None else int(self._camera_fov_degrees)
+        drone_options["camera_FOV_degrees"] = int(fov)
+
+        if self._camera_resolution is not None:
+            drone_options["camera_resolution"] = tuple(self._camera_resolution)
+        else:
+            drone_options["camera_resolution"] = (
+                self.render_resolution if self.render_mode is not None else (128, 128)
+            )
+
+        super().begin_reset(seed, options, drone_options=drone_options)
+
+        try:
+            drone = self.env.drones[0]
+            cam = getattr(drone, "camera", None)
+            if cam is not None and hasattr(cam, "is_tracking_camera"):
+                if self._camera_profile == "cockpit_fpv":
+                    cam.is_tracking_camera = False
+                elif self._camera_profile == "chase":
+                    cam.is_tracking_camera = True
+        except Exception:
+            pass
         
         self.info["duck_strike"] = False
         self.info["env_complete"] = False
@@ -422,6 +487,7 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
             original_capture = Camera.capture_image
             
             def capture_image(cam_self):
+                print("DEBUG: Patched capture_image called")
                 try:
                     _, _, rgbaImg, depthImg, segImg = cam_self.p.getCameraImage(
                         height=int(cam_self.camera_resolution[0]),
@@ -435,12 +501,17 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
                 
                 # Reshape logic
                 h, w = int(cam_self.camera_resolution[0]), int(cam_self.camera_resolution[1])
-                return (
-                    np.asarray(rgbaImg).reshape(h, w, -1),
-                    np.asarray(depthImg).reshape(h, w, -1),
-                    np.asarray(segImg).reshape(h, w, -1)
-                )
+                rgba = np.asarray(rgbaImg).reshape(h, w, -1)
+                depth = np.asarray(depthImg).reshape(h, w, -1)
+                seg = np.asarray(segImg).reshape(h, w, -1)
+                
+                # Update attributes so they are accessible via drone.rgbaImg etc.
+                cam_self.rgbaImg = rgba
+                cam_self.depthImg = depth
+                cam_self.segImg = seg
 
+                return rgba, depth, seg
+            
             Camera.capture_image = capture_image
             self._camera_capture_patched = True
         except Exception:

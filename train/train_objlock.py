@@ -54,20 +54,23 @@ TRAIN_CONFIG = {
     "duck_strike_reward": 200.0,
     "duck_lock_step_reward": 0.2,
     "duck_approach_reward_scale": 0.1,
-    "duck_global_scaling": 30.0,
+    "duck_global_scaling": 60.0,
     
     # 障碍物参数
-    "num_obstacles": 10,
+    "num_obstacles": 0,
     "obstacle_radius": 2.0,
     "obstacle_height_range": (10.0, 30.0),
     "obstacle_safe_distance_m": 10.0,
     "obstacle_avoid_reward_scale": 1.0,
     "obstacle_avoid_max_penalty": 5.0,
+
+    # 相机参数
+    "camera_profile": "cockpit_fpv",
 }
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pretrained_model", type=str, default=None)
+    parser.add_argument("--pretrained_model", type=str, default="models/obj_lock_only_ppo_v1.0/best_model.zip")
     parser.add_argument("--vecnorm_path", type=str, default=None)
     parser.add_argument("--total_timesteps", type=int, default=None)
     return parser.parse_args()
