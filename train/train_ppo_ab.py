@@ -42,6 +42,7 @@ def _make_env_from_cfg(cfg: dict) -> Callable[[], gym.Env]:
             angle_representation=cfg["angle_representation"],
             agent_hz=cfg["agent_hz"],
             context_length=cfg["context_length"],
+            wind_config=cfg.get("wind", None),
         )
 
     return _thunk
@@ -108,4 +109,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

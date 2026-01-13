@@ -29,6 +29,7 @@ import PyFlyt.gym_envs
 from PyFlyt.gym_envs import FlattenWaypointEnv
 
 from envs.fixedwing_lowlevel_env import FixedwingLowLevelEnv
+from envs.utils import WindOnResetWrapper
 
 
 class HighLevelCmdEnv(gym.Env):
@@ -57,6 +58,7 @@ class HighLevelCmdEnv(gym.Env):
         low_model_path: str = "models/lowlevel_ppo/best_model.zip",
         low_vecnorm_path: str = "models/lowlevel_ppo/vecnorm.pkl",
         deterministic_low: bool = True,
+        wind_config: dict | None = None,
     ):
         """初始化高层环境。
 
@@ -81,6 +83,8 @@ class HighLevelCmdEnv(gym.Env):
             max_duration_seconds=max_duration_seconds,
             agent_hz=agent_hz,
         )
+        if wind_config and bool(wind_config.get("enabled", False)):
+            base_env = WindOnResetWrapper(base_env, wind_config)
         self._base_env = FlattenWaypointEnv(base_env, context_length=context_length)
 
         # 保存范围参数用于动作空间定义
@@ -194,6 +198,11 @@ TRAIN_CFG = {
     "seed": 123,
     "log_dir": "logs/highlevel_ppo",
     "model_dir": "models/highlevel_ppo",
+    "wind": {
+        "enabled": False,
+        "mode": "constant",
+        "wind_enu_mps": [0.0, 0.0, 0.0],
+    },
 }
 
 
@@ -210,6 +219,7 @@ def make_env(rank: int, seed: int = 0):
             low_model_path=os.path.join("models", "lowlevel_ppo", "best_model.zip"),
             low_vecnorm_path=os.path.join("models", "lowlevel_ppo", "vecnorm.pkl"),
             deterministic_low=True,
+            wind_config=TRAIN_CFG.get("wind", None),
         )
         env.reset(seed=seed + rank)
         return env
@@ -262,6 +272,7 @@ def smoke_test_once():
         render_mode=None,
         low_model_path=os.path.join("models", "lowlevel_ppo", "best_model.zip"),
         low_vecnorm_path=os.path.join("models", "lowlevel_ppo", "vecnorm.pkl"),
+        wind_config=TRAIN_CFG.get("wind", None),
     )
     obs, _ = env.reset()
     # 随机高层动作
@@ -276,4 +287,3 @@ if __name__ == "__main__":
     # smoke_test_once()
     # 如需训练，取消下行注释
     train()
-

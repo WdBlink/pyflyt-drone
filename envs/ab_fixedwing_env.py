@@ -17,6 +17,8 @@ from __future__ import annotations
 import gymnasium as gym
 from typing import Optional
 
+from envs.utils import WindOnResetWrapper
+
 try:
     # 官方提供的扁平化封装，兼容 Dict/Sequence 观测到 Box
     from PyFlyt.gym_envs import FlattenWaypointEnv
@@ -35,6 +37,7 @@ def make_fixedwing_ab_env(
     angle_representation: str = "quaternion",
     agent_hz: int = 30,
     context_length: int = 1,
+    wind_config: Optional[dict] = None,
 ):
     """创建固定翼 A→B 训练环境（初版使用官方 Waypoints 环境）。
 
@@ -72,7 +75,9 @@ def make_fixedwing_ab_env(
         render_mode=render_mode,
     )
 
+    if wind_config and bool(wind_config.get("enabled", False)):
+        base_env = WindOnResetWrapper(base_env, wind_config)
+
     # 扁平化以适配主流 RL 算法
     env = FlattenWaypointEnv(base_env, context_length=context_length)
     return env
-

@@ -10,7 +10,8 @@ import pybullet_data
 from gymnasium import spaces
 
 from PyFlyt.core.abstractions.camera import Camera
-from PyFlyt.gym_envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
+# from PyFlyt.gym_envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
+from envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
 
 
 class FixedwingObjLockEnv(FixedwingBaseEnv):
@@ -45,6 +46,11 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         render_resolution: tuple[int, int] = (480, 480),
         duck_urdf_path: str | None = None,
         use_egl: bool = False,
+        camera_profile: Literal["cockpit_fpv", "chase", "default"] = "cockpit_fpv",
+        camera_position_offset: tuple[float, float, float] | None = None,
+        camera_angle_degrees: int | None = None,
+        camera_FOV_degrees: int | None = None,
+        camera_resolution: tuple[int, int] | None = None,
         # Obstacle Configs
         num_obstacles: int = 5,
         obstacle_radius: float = 2.0,
@@ -53,16 +59,28 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         obstacle_avoid_reward_scale: float = 1.0,
         obstacle_avoid_max_penalty: float = 2.0,
         # Duck Phase Configs
-        duck_camera_capture_interval_steps: int = 6,
+        duck_camera_capture_interval_steps: int = 12,
         duck_lock_hold_steps: int = 10,
         duck_strike_distance_m: float = 2.0,
         duck_strike_reward: float = 200.0,
         duck_lock_step_reward: float = 0.1,
         duck_approach_reward_scale: float = 0.05,
         duck_global_scaling: float = 20.0,
+        duck_vision_history_len: int = 3,
+        duck_vision_use_deltas: bool = True,
+        # Visual Shaping Configs
+        duck_distance_reward_scale: float = 1.0,
+        duck_lock_center_radius: float = 0.55,
+        duck_centering_reward_scale: float = 3,
+        duck_visible_step_reward: float = 2,
+        duck_area_reward_scale: float = 5.0,
+        duck_lock_decay_steps: int = 1,
+        duck_lock_lost_penalty: float = 0.5,
+        duck_approach_reward_clip_m: float = 2.0,
+        wind_config: Optional[dict[str, Any]] = None,
     ):
         super().__init__(
-            start_pos=np.array([[0.0, 0.0, 10.0]]),
+            start_pos=np.array([[0.0, 0.0, 100.0]]),
             flight_mode=flight_mode,
             flight_dome_size=flight_dome_size,
             max_duration_seconds=max_duration_seconds,
@@ -70,6 +88,7 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
             agent_hz=agent_hz,
             render_mode=render_mode,
             render_resolution=render_resolution,
+            wind_config=wind_config,
         )
 
         self.sparse_reward = sparse_reward
@@ -86,11 +105,32 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         self.duck_lock_step_reward = duck_lock_step_reward
         self.duck_approach_reward_scale = duck_approach_reward_scale
         self.duck_global_scaling = duck_global_scaling
+        self.duck_vision_history_len = int(max(1, duck_vision_history_len))
+        self.duck_vision_use_deltas = bool(duck_vision_use_deltas)
+
+        self.duck_distance_reward_scale = float(duck_distance_reward_scale)
+        self.duck_lock_center_radius = float(duck_lock_center_radius)
+        self.duck_centering_reward_scale = float(duck_centering_reward_scale)
+        self.duck_visible_step_reward = float(duck_visible_step_reward)
+        self.duck_area_reward_scale = float(duck_area_reward_scale)
+        self.duck_lock_decay_steps = int(max(1, duck_lock_decay_steps))
+        self.duck_lock_lost_penalty = float(duck_lock_lost_penalty)
+        self.duck_approach_reward_clip_m = float(max(0.0, duck_approach_reward_clip_m))
 
         self.duck_body_id: Optional[int] = None
         self._egl_plugin_id: Optional[int] = None
         self._camera_capture_patched = False
-         
+
+        self._camera_profile = camera_profile
+        self._camera_position_offset = (
+            np.asarray(camera_position_offset, dtype=np.float64)
+            if camera_position_offset is not None
+            else None
+        )
+        self._camera_angle_degrees = camera_angle_degrees
+        self._camera_fov_degrees = camera_FOV_degrees
+        self._camera_resolution = camera_resolution
+
         # --- Obstacle Configs ---
         self.num_obstacles = num_obstacles
         self.obstacle_radius = obstacle_radius
@@ -108,12 +148,20 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         self._last_area = 0.0
         self._last_depth_m = 0.0
         self._steps_since_seen = 60  # Default max
+        self._prev_area: Optional[float] = None
+        self._vision_history = np.zeros(
+            (self.duck_vision_history_len, 9), dtype=np.float32
+        )
+        self._vision_history_filled = 0
         self.duck_pos: Optional[np.ndarray] = None # Duck position in global frame
 
         # --- Observation Space ---
         # "attitude": [ang_vel, ang_pos, lin_vel, lin_pos, action, aux_state]
         # "target_vector": [dx, dy, dz] (Body frame vector to duck)
         # "duck_vision": [visible, cx, cy, area, depth, steps_norm, d_left, d_center, d_right]
+        duck_vision_dim = 9 * self.duck_vision_history_len
+        if self.duck_vision_use_deltas:
+            duck_vision_dim += 4
         self.observation_space = spaces.Dict(
             {
                 "attitude": self.combined_space,
@@ -121,7 +169,7 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
                     low=-np.inf, high=np.inf, shape=(3,), dtype=np.float64
                 ),
                 "duck_vision": spaces.Box(
-                    low=-np.inf, high=np.inf, shape=(9,), dtype=np.float32
+                    low=-np.inf, high=np.inf, shape=(duck_vision_dim,), dtype=np.float32
                 ),
             }
         )
@@ -131,10 +179,62 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
     ) -> tuple[dict, dict]:
         """Reset the environment."""
         # 1. Base Reset
-        super().begin_reset(seed, options)
+        drone_options: dict[str, Any] = {"use_camera": True, "use_gimbal": False}
+
+        if self._camera_profile == "cockpit_fpv":
+            default_offset = np.array([0.8, 0.0, 0.12], dtype=np.float64)
+            default_angle = -5
+        elif self._camera_profile == "chase":
+            default_offset = np.array([-3.0, 0.0, 1.0], dtype=np.float64)
+            default_angle = 0
+        else:
+            default_offset = None
+            default_angle = None
+
+        offset = (
+            self._camera_position_offset
+            if self._camera_position_offset is not None
+            else default_offset
+        )
+        if offset is not None:
+            drone_options["camera_position_offset"] = offset
+
+        angle = (
+            int(self._camera_angle_degrees)
+            if self._camera_angle_degrees is not None
+            else default_angle
+        )
+        if angle is not None:
+            drone_options["camera_angle_degrees"] = int(angle)
+
+        fov = 90 if self._camera_fov_degrees is None else int(self._camera_fov_degrees)
+        drone_options["camera_FOV_degrees"] = int(fov)
+
+        if self._camera_resolution is not None:
+            drone_options["camera_resolution"] = tuple(self._camera_resolution)
+        else:
+            drone_options["camera_resolution"] = (
+                self.render_resolution if self.render_mode is not None else (128, 128)
+            )
+
+        super().begin_reset(seed, options, drone_options=drone_options)
+
+        try:
+            drone = self.env.drones[0]
+            cam = getattr(drone, "camera", None)
+            if cam is not None and hasattr(cam, "is_tracking_camera"):
+                if self._camera_profile == "cockpit_fpv":
+                    cam.is_tracking_camera = False
+                elif self._camera_profile == "chase":
+                    cam.is_tracking_camera = True
+        except Exception:
+            pass
         
         self.info["duck_strike"] = False
         self.info["env_complete"] = False
+        self.info["is_success"] = False
+        self.info["is_success"] = False
+        self.info["is_success"] = False
 
         # 2. Duck & EGL Reset
         self._reset_duck_state()
@@ -181,8 +281,8 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         new_state["target_vector"] = target_vector
 
         # --- Duck Vision Features ---
-        feature = self._compute_vision_features()
-        new_state["duck_vision"] = feature
+        base_feature = self._compute_vision_features()
+        new_state["duck_vision"] = self._build_duck_vision_observation(base_feature)
 
         self.state = new_state
 
@@ -198,30 +298,62 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
             
         # --- Dense Reward ---
         if not self.sparse_reward:
-            # 1. Distance Reward (Guide towards duck)
-            # Use real distance (from physics) or visual depth?
-            # Physics distance is more reliable for "normal flight" guidance.
+            # 1) Distance Reward (physics guidance)
             dist_to_duck = np.linalg.norm(self.state["target_vector"])
-            self.reward += 1.0 / max(dist_to_duck, 2.0)
+            self.reward += float(self.duck_distance_reward_scale) / max(float(dist_to_duck), 2.0)
 
-            # 2. Lock Reward (Visual)
-            if self._last_cx > 0.0: # Visible
-                dist_to_center = np.sqrt((self._last_cx - 0.5)**2 + (self._last_cy - 0.5)**2)
-                if dist_to_center < 0.35: # Lock Center Radius
-                    self._lock_steps += 1
-                    self.reward += self.duck_lock_step_reward
+            # 2) Visual Lock/Approach Reward (fast lock, short memory)
+            vis = self.state.get("duck_vision") if isinstance(getattr(self, "state", None), dict) else None
+            vis_arr: Optional[np.ndarray] = None
+            if vis is not None:
+                try:
+                    vis_arr = np.asarray(vis, dtype=np.float32).reshape(-1)
+                except Exception:
+                    vis_arr = None
+
+            visible = bool(vis_arr is not None and vis_arr.shape[0] >= 6 and float(vis_arr[0]) > 0.5)
+
+            if visible:
+                cx = float(vis_arr[1])
+                cy = float(vis_arr[2])
+                area = float(vis_arr[3])
+                est_dist = float(vis_arr[4])
+
+                self.reward += float(self.duck_visible_step_reward)
+                self.reward += float(self.duck_area_reward_scale) * max(0.0, area)
+
+                dist_to_center = float(np.sqrt((cx - 0.5) ** 2 + (cy - 0.5) ** 2))
+                r_lock = float(self.duck_lock_center_radius)
+                r_lock = max(r_lock, 1e-6)
+
+                center_score = max(0.0, (r_lock - dist_to_center) / r_lock)
+                self.reward += float(self.duck_centering_reward_scale) * center_score
+
+                if dist_to_center < r_lock:
+                    self._lock_steps = min(self._lock_steps + 1, int(self.duck_lock_hold_steps))
+                    self.reward += float(self.duck_lock_step_reward)
                 else:
-                    self._lock_steps = 0
+                    self._lock_steps = max(self._lock_steps - int(self.duck_lock_decay_steps), 0)
+
+                if (
+                    self._prev_est_dist_m is not None
+                    and est_dist > 0.0
+                    and np.isfinite(est_dist)
+                ):
+                    diff = float(self._prev_est_dist_m - est_dist)
+                    clip_m = float(self.duck_approach_reward_clip_m)
+                    if clip_m > 0.0:
+                        diff = float(np.clip(diff, -clip_m, clip_m))
+                    self.reward += diff * float(self.duck_approach_reward_scale)
+
+                self._prev_est_dist_m = est_dist if est_dist > 0.0 and np.isfinite(est_dist) else None
+                self._prev_area = area
             else:
-                self._lock_steps = 0
-            
-            # 3. Approach Reward (Differential visual depth)
-            est_dist = self._last_depth_m
-            if self._prev_est_dist_m is not None and est_dist > 0:
-                diff = self._prev_est_dist_m - est_dist
-                if diff > 0:
-                    self.reward += diff * self.duck_approach_reward_scale
-            self._prev_est_dist_m = est_dist
+                if self._lock_steps > 0:
+                    self.reward -= float(self.duck_lock_lost_penalty)
+                self._lock_steps = max(self._lock_steps - int(self.duck_lock_decay_steps), 0)
+                self._prev_est_dist_m = None
+                self._prev_area = None
 
         # --- Sparse Reward (Strike) ---
         # Check strike condition
@@ -237,6 +369,7 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
             self.reward += self.duck_strike_reward
             self.info["env_complete"] = True
             self.info["duck_strike"] = True
+            self.info["is_success"] = True
 
     # --- Helper Methods ---
 
@@ -281,6 +414,49 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         self._last_area = 0.0
         self._last_depth_m = 0.0
         self._steps_since_seen = 60
+        self._prev_area = None
+        self._vision_history[:] = 0.0
+        self._vision_history_filled = 0
+
+    def _build_duck_vision_observation(self, base_feature: np.ndarray) -> np.ndarray:
+        base = np.asarray(base_feature, dtype=np.float32).reshape(-1)
+        if base.shape[0] < 9:
+            padded = np.zeros((9,), dtype=np.float32)
+            n = min(int(base.shape[0]), 9)
+            if n > 0:
+                padded[:n] = base[:n]
+            base = padded
+        elif base.shape[0] > 9:
+            base = base[:9]
+
+        if self._vision_history.shape[0] >= 2:
+            prev = self._vision_history[0].copy()
+        else:
+            prev = np.zeros((9,), dtype=np.float32)
+
+        if self._vision_history.shape[0] > 1:
+            self._vision_history[1:] = self._vision_history[:-1]
+        self._vision_history[0] = base
+        self._vision_history_filled = min(
+            int(self._vision_history_filled) + 1, int(self._vision_history.shape[0])
+        )
+
+        history_flat = self._vision_history.reshape(-1)
+        if not self.duck_vision_use_deltas:
+            return history_flat.astype(np.float32)
+
+        deltas = np.zeros((4,), dtype=np.float32)
+        if (
+            self._vision_history_filled >= 2
+            and float(base[0]) > 0.5
+            and float(prev[0]) > 0.5
+        ):
+            deltas[0] = float(base[1] - prev[1])
+            deltas[1] = float(base[2] - prev[2])
+            deltas[2] = float(base[3] - prev[3])
+            deltas[3] = float(base[4] - prev[4])
+
+        return np.concatenate([history_flat, deltas], axis=0).astype(np.float32)
 
     def _spawn_duck(self):
         """Spawns duck with manual contact array resize to avoid IndexError."""
@@ -422,6 +598,7 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
             original_capture = Camera.capture_image
             
             def capture_image(cam_self):
+                # print("DEBUG: Patched capture_image called")
                 try:
                     _, _, rgbaImg, depthImg, segImg = cam_self.p.getCameraImage(
                         height=int(cam_self.camera_resolution[0]),
@@ -435,12 +612,17 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
                 
                 # Reshape logic
                 h, w = int(cam_self.camera_resolution[0]), int(cam_self.camera_resolution[1])
-                return (
-                    np.asarray(rgbaImg).reshape(h, w, -1),
-                    np.asarray(depthImg).reshape(h, w, -1),
-                    np.asarray(segImg).reshape(h, w, -1)
-                )
+                rgba = np.asarray(rgbaImg).reshape(h, w, -1)
+                depth = np.asarray(depthImg).reshape(h, w, -1)
+                seg = np.asarray(segImg).reshape(h, w, -1)
+                
+                # Update attributes so they are accessible via drone.rgbaImg etc.
+                cam_self.rgbaImg = rgba
+                cam_self.depthImg = depth
+                cam_self.segImg = seg
 
+                return rgba, depth, seg
+            
             Camera.capture_image = capture_image
             self._camera_capture_patched = True
         except Exception:

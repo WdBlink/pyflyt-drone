@@ -1,5 +1,7 @@
 from __future__ import annotations
 import math
+from typing import Any, Optional
+
 import gymnasium as gym
 import numpy as np
 from gymnasium import spaces
@@ -16,9 +18,12 @@ class FixedwingLowLevelEnv(gym.Env):
     
     metadata = {"render_modes": ["human"], "name": "fixedwing_lowlevel_env"}
 
-    def __init__(self, render_mode=None):
+    def __init__(
+        self, render_mode: Optional[str] = None, wind_config: Optional[dict[str, Any]] = None
+    ):
         super().__init__()
         self.render_mode = render_mode
+        self._wind_config = wind_config or {}
         
         # Define simulation parameters
         self.start_height_m = 10.0
@@ -41,6 +46,13 @@ class FixedwingLowLevelEnv(gym.Env):
             physics_hz=240,
             world_scale=1.0,
         )
+
+        if bool(self._wind_config.get("enabled", False)) and not bool(
+            self._wind_config.get("randomize_on_reset", False)
+        ):
+            from envs.utils import _register_wind_field
+
+            _register_wind_field(self.env, self._wind_config, self.env.np_random)
         
         # Set to surface control mode
         self.env.set_mode(-1)
@@ -61,6 +73,13 @@ class FixedwingLowLevelEnv(gym.Env):
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         self.env.reset()
+
+        if bool(self._wind_config.get("enabled", False)) and bool(
+            self._wind_config.get("randomize_on_reset", False)
+        ):
+            from envs.utils import _register_wind_field
+
+            _register_wind_field(self.env, self._wind_config, self.env.np_random)
         self.env.set_mode(-1)
         self._episode_steps = 0
         self.prev_action = np.zeros(6, dtype=np.float64)
@@ -142,4 +161,3 @@ class FixedwingLowLevelEnv(gym.Env):
     def close(self):
         if hasattr(self.env, "disconnect"):
             self.env.disconnect()
-

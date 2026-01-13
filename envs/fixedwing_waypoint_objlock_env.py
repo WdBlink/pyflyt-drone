@@ -10,7 +10,7 @@ import pybullet_data
 from gymnasium import spaces
 
 from PyFlyt.core.abstractions.camera import Camera
-from PyFlyt.gym_envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
+from envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
 from PyFlyt.gym_envs.utils.waypoint_handler import WaypointHandler
 
 
@@ -72,6 +72,7 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
         duck_global_scaling: float = 20.0,
         # Waypoint Spawn Configs
         waypoint_spawn_size: float | None = None,
+        wind_config: Optional[dict[str, Any]] = None,
     ):
         super().__init__(
             start_pos=np.array([[0.0, 0.0, 10.0]]),
@@ -82,6 +83,7 @@ class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
             agent_hz=agent_hz,
             render_mode=render_mode,
             render_resolution=render_resolution,
+            wind_config=wind_config,
         )
 
         # --- Waypoint Configs ---
