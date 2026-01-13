@@ -41,6 +41,12 @@ TRAIN_CONFIG = {
     "seed": 42,
     "log_dir": "logs/lowlevel_ppo",
     "model_dir": "models/lowlevel_ppo",
+
+    "wind": {
+        "enabled": False,
+        "mode": "constant",
+        "wind_enu_mps": [0.0, 0.0, 0.0],
+    },
 }
 
 def make_env(rank: int, seed: int = 0):
@@ -49,7 +55,7 @@ def make_env(rank: int, seed: int = 0):
     """
     def _init():
         # 创建基础环境，使用欧拉角表示姿态，便于底层控制理解
-        env = FixedwingLowLevelEnv(render_mode=None)
+        env = FixedwingLowLevelEnv(render_mode=None, wind_config=TRAIN_CONFIG.get("wind", None))
         env.reset(seed=seed + rank)
         return env
     return _init

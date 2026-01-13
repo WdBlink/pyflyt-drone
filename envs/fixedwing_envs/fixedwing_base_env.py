@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any, Literal
+from typing import Any, Callable, Literal
 
 import gymnasium
 import numpy as np
@@ -29,6 +29,7 @@ class FixedwingBaseEnv(gymnasium.Env):
         agent_hz: int = 30,
         render_mode: None | Literal["human", "rgb_array"] = None,
         render_resolution: tuple[int, int] = (480, 480),
+        wind_config: None | dict[str, Any] = None,
     ):
         """__init__.
 
@@ -57,6 +58,7 @@ class FixedwingBaseEnv(gymnasium.Env):
             )
         self.render_mode = render_mode
         self.render_resolution = render_resolution
+        self.wind_config = wind_config
 
         """GYMNASIUM STUFF"""
         # attitude size increases by 1 for quaternion
@@ -102,6 +104,73 @@ class FixedwingBaseEnv(gymnasium.Env):
             self.angle_representation = 0
         elif angle_representation == "quaternion":
             self.angle_representation = 1
+
+    def _maybe_apply_wind_field(self) -> None:
+        cfg = self.wind_config or {}
+        if not bool(cfg.get("enabled", False)):
+            return
+
+        mode = str(cfg.get("mode", "constant")).lower()
+        if mode not in ("constant", "gust_sine"):
+            raise ValueError(f"Unsupported wind mode: {mode}")
+
+        def _sample_vec3(
+            base_key: str, range_key: str, default: tuple[float, float, float]
+        ) -> np.ndarray:
+            base = np.asarray(cfg.get(base_key, default), dtype=np.float64).reshape(3)
+            if not bool(cfg.get("randomize_on_reset", False)):
+                return base
+
+            ranges = cfg.get(range_key, None)
+            if ranges is None:
+                return base
+
+            if (
+                not isinstance(ranges, (list, tuple))
+                or len(ranges) != 3
+                or not all(isinstance(r, (list, tuple)) and len(r) == 2 for r in ranges)
+            ):
+                raise ValueError(f"Invalid {range_key}: {ranges}")
+
+            lows = np.asarray([r[0] for r in ranges], dtype=np.float64)
+            highs = np.asarray([r[1] for r in ranges], dtype=np.float64)
+            return self.np_random.uniform(lows, highs).astype(np.float64)
+
+        base_wind = _sample_vec3(
+            base_key="wind_enu_mps",
+            range_key="wind_enu_mps_range",
+            default=(0.0, 0.0, 0.0),
+        )
+
+        if mode == "constant":
+            wind_enu = base_wind
+
+            def wind_field(time_s: float, positions_m: np.ndarray) -> np.ndarray:
+                n = int(positions_m.shape[0])
+                return np.repeat(wind_enu.reshape(1, 3), repeats=n, axis=0)
+
+            self.env.register_wind_field_function(wind_field)
+            return
+
+        gust_amp = _sample_vec3(
+            base_key="gust_amp_enu_mps",
+            range_key="gust_amp_enu_mps_range",
+            default=(0.0, 0.0, 0.0),
+        )
+        gust_freq_hz = float(cfg.get("gust_freq_hz", 0.0))
+        gust_phase = float(cfg.get("gust_phase_rad", 0.0))
+        if bool(cfg.get("randomize_on_reset", False)) and bool(
+            cfg.get("randomize_gust_phase", True)
+        ):
+            gust_phase = float(self.np_random.uniform(0.0, 2.0 * np.pi))
+
+        def wind_field(time_s: float, positions_m: np.ndarray) -> np.ndarray:
+            n = int(positions_m.shape[0])
+            gust = gust_amp * np.sin(2.0 * np.pi * gust_freq_hz * time_s + gust_phase)
+            wind_enu = base_wind + gust
+            return np.repeat(wind_enu.reshape(1, 3), repeats=n, axis=0)
+
+        self.env.register_wind_field_function(wind_field)
 
     def reset(
         self, *, seed: None | int = None, options: None | dict[str, Any] = dict()
@@ -166,6 +235,7 @@ class FixedwingBaseEnv(gymnasium.Env):
             drone_options=drone_options,
             np_random=self.np_random,
         )
+        self._maybe_apply_wind_field()
 
         if self.render_mode == "human":
             self.camera_parameters = self.env.getDebugVisualizerCamera()

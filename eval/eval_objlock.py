@@ -25,26 +25,36 @@ import PyFlyt.gym_envs
 
 # 默认评估配置
 EVAL_CONFIG = {
-    "model_path": "models/obj_lock_only_ppo_v1.0/best_model.zip",
+    "model_path": "models/obj_lock_only_ppo_v1.3_hist/best_model.zip",
     "vecnorm_path": None, # Auto-detect
     "num_episodes": 10,
-    "flight_dome_size": 100.0,
-    "max_duration_seconds": 60.0,
+    "flight_dome_size": 200.0,
+    "max_duration_seconds": 120.0,
     
     # Duck Configs
-    "duck_camera_capture_interval_steps": 5,
-    "duck_lock_hold_steps": 10,
-    "duck_strike_distance_m": 8.0,
-    "duck_global_scaling": 30.0,
+    "duck_camera_capture_interval_steps": 24,
+    "duck_lock_hold_steps": 5,
+    "duck_strike_distance_m": 10.0,
+    "duck_global_scaling": 40.0,
     
     # Obstacle Configs
-    "num_obstacles": 10,
+    "num_obstacles": 0,
     "obstacle_radius": 2.0,
     "obstacle_height_range": (10.0, 30.0),
     "obstacle_safe_distance_m": 10.0,
 
     # Evaluation Configs
     "camera_profile": "cockpit_fpv",
+    "wind": {
+        "enabled": True,
+        "mode": "gust_sine", # "gust_sine" or "constant"
+        "wind_enu_mps": [5.0, 0.0, 0.0], #风速向量，坐标系是 ENU（East, North, Up），单位 m/s
+        "gust_amp_enu_mps": [2.0, 0.0, 0.0],
+        "gust_freq_hz": 0.2,
+        "gust_phase_rad": 0.0,
+        "randomize_on_reset": False,
+        "randomize_gust_phase": False,
+    },
 }
 
 def _infer_vecnorm_path(model_path: str, vecnorm_path: str | None) -> str | None:
@@ -182,6 +192,7 @@ def make_eval_env(render_mode="human"):
         max_duration_seconds=float(EVAL_CONFIG["max_duration_seconds"]),
         agent_hz=30,
         camera_profile=str(EVAL_CONFIG.get("camera_profile", "cockpit_fpv")),
+        wind_config=EVAL_CONFIG.get("wind", None),
         
         # Obstacles
         num_obstacles=EVAL_CONFIG["num_obstacles"],
@@ -290,9 +301,9 @@ def evaluate():
                             )
 
                     saved_frames += 1
-
-            if render_mode:
-                time.sleep(1 / 30.0)
+            # 稍微加点延时，避免画面太快（如果环境本身的 render 没有做时钟同步）
+            # PyFlyt 通常不需要手动 sleep，这里仅作备用
+            time.sleep(0.08)
 
         info_dict = info[0]
         is_success = info_dict.get("duck_strike", False)

@@ -1,6 +1,8 @@
 import time
 import numpy as np
-from typing import Optional
+from typing import Any, Optional
+
+import gymnasium as gym
 
 class PyBulletDebugOverlay:
     """在终端控制台和 PyBullet GUI 中显示实时飞行数据。"""
@@ -126,3 +128,91 @@ class PyBulletDebugOverlay:
                 except Exception:
                     pass
         self.text_ids = {}
+
+
+def _find_aviary(env: Any) -> Any | None:
+    base = getattr(env, "unwrapped", env)
+    aviary = getattr(base, "env", None)
+    if aviary is not None and hasattr(aviary, "register_wind_field_function"):
+        return aviary
+    return None
+
+
+def _register_wind_field(aviary: Any, wind_config: dict[str, Any], np_random: Any) -> None:
+    if not bool(wind_config.get("enabled", False)):
+        return
+
+    mode = str(wind_config.get("mode", "constant")).lower()
+    if mode not in ("constant", "gust_sine"):
+        raise ValueError(f"Unsupported wind mode: {mode}")
+
+    def _sample_vec3(
+        base_key: str, range_key: str, default: tuple[float, float, float]
+    ) -> np.ndarray:
+        base = np.asarray(wind_config.get(base_key, default), dtype=np.float64).reshape(3)
+        if not bool(wind_config.get("randomize_on_reset", False)):
+            return base
+
+        ranges = wind_config.get(range_key, None)
+        if ranges is None:
+            return base
+
+        if (
+            not isinstance(ranges, (list, tuple))
+            or len(ranges) != 3
+            or not all(isinstance(r, (list, tuple)) and len(r) == 2 for r in ranges)
+        ):
+            raise ValueError(f"Invalid {range_key}: {ranges}")
+
+        lows = np.asarray([r[0] for r in ranges], dtype=np.float64)
+        highs = np.asarray([r[1] for r in ranges], dtype=np.float64)
+        return np_random.uniform(lows, highs).astype(np.float64)
+
+    base_wind = _sample_vec3(
+        base_key="wind_enu_mps",
+        range_key="wind_enu_mps_range",
+        default=(0.0, 0.0, 0.0),
+    )
+
+    if mode == "constant":
+        wind_enu = base_wind
+
+        def wind_field(time_s: float, positions_m: np.ndarray) -> np.ndarray:
+            n = int(positions_m.shape[0])
+            return np.repeat(wind_enu.reshape(1, 3), repeats=n, axis=0)
+
+        aviary.register_wind_field_function(wind_field)
+        return
+
+    gust_amp = _sample_vec3(
+        base_key="gust_amp_enu_mps",
+        range_key="gust_amp_enu_mps_range",
+        default=(0.0, 0.0, 0.0),
+    )
+    gust_freq_hz = float(wind_config.get("gust_freq_hz", 0.0))
+    gust_phase = float(wind_config.get("gust_phase_rad", 0.0))
+    if bool(wind_config.get("randomize_on_reset", False)) and bool(
+        wind_config.get("randomize_gust_phase", True)
+    ):
+        gust_phase = float(np_random.uniform(0.0, 2.0 * np.pi))
+
+    def wind_field(time_s: float, positions_m: np.ndarray) -> np.ndarray:
+        n = int(positions_m.shape[0])
+        gust = gust_amp * np.sin(2.0 * np.pi * gust_freq_hz * time_s + gust_phase)
+        wind_enu = base_wind + gust
+        return np.repeat(wind_enu.reshape(1, 3), repeats=n, axis=0)
+
+    aviary.register_wind_field_function(wind_field)
+
+
+class WindOnResetWrapper(gym.Wrapper):
+    def __init__(self, env: gym.Env, wind_config: dict[str, Any] | None):
+        super().__init__(env)
+        self._wind_config = wind_config or {}
+
+    def reset(self, **kwargs):
+        obs, info = self.env.reset(**kwargs)
+        aviary = _find_aviary(self.env)
+        if aviary is not None:
+            _register_wind_field(aviary, self._wind_config, getattr(self.env, "np_random", np.random.default_rng()))
+        return obs, info

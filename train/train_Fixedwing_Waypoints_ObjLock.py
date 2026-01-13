@@ -56,6 +56,19 @@ TRAIN_CONFIG = {
     "max_duration_seconds": 120.0,
     "context_length": 2,  # 观测中包含当前目标点和下一个目标点
 
+    "wind": {
+        "enabled": True,
+        "mode": "gust_sine",
+        "wind_enu_mps": [0.0, 0.0, 0.0],
+        "wind_enu_mps_range": [[-5.0, 5.0], [-5.0, 5.0], [-0.5, 0.5]],
+        "gust_amp_enu_mps": [0.0, 0.0, 0.0],
+        "gust_amp_enu_mps_range": [[0.0, 3.0], [0.0, 3.0], [0.0, 0.3]],
+        "gust_freq_hz": 0.2,
+        "gust_phase_rad": 0.0,
+        "randomize_on_reset": True,
+        "randomize_gust_phase": True,
+    },
+
     # 终局目标：完成所有航点后，进入“相机锁定并撞击小黄鸭”阶段
     "duck_place_at_last_waypoint": False,
     "duck_camera_capture_interval_steps": 6,
@@ -124,6 +137,7 @@ def make_env(rank: int, seed: int = 0, use_egl: bool = False):
             max_duration_seconds=TRAIN_CONFIG["max_duration_seconds"],
             agent_hz=30,
             use_egl=use_egl,
+            wind_config=TRAIN_CONFIG.get("wind", None),
             num_obstacles=TRAIN_CONFIG["num_obstacles"],
             obstacle_radius=TRAIN_CONFIG["obstacle_radius"],
             obstacle_height_range=TRAIN_CONFIG["obstacle_height_range"],

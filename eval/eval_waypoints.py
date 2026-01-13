@@ -20,6 +20,8 @@ from stable_baselines3.common.evaluation import evaluate_policy
 import PyFlyt.gym_envs
 from PyFlyt.gym_envs import FlattenWaypointEnv
 
+from envs.utils import WindOnResetWrapper
+
 # 评估配置（默认值，可通过命令行参数覆盖）
 EVAL_CONFIG = {
     "model_path": "models/waypoints_ppo_sparse_reward/best_model.zip", # 优先使用最佳模型
@@ -30,6 +32,11 @@ EVAL_CONFIG = {
     "max_duration_seconds": 120.0,
     "context_length": 2,
     "render": True,
+    "wind": {
+        "enabled": False,
+        "mode": "constant",
+        "wind_enu_mps": [0.0, 0.0, 0.0],
+    },
 }
 
 def make_eval_env(render_mode="human"):
@@ -46,6 +53,8 @@ def make_eval_env(render_mode="human"):
         max_duration_seconds=EVAL_CONFIG["max_duration_seconds"],
         agent_hz=30,
     )
+    if bool(EVAL_CONFIG.get("wind", {}).get("enabled", False)):
+        env = WindOnResetWrapper(env, EVAL_CONFIG.get("wind", None))
     
     # 扁平化观测空间
     env = FlattenWaypointEnv(env, context_length=EVAL_CONFIG["context_length"])

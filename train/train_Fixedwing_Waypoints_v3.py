@@ -21,6 +21,8 @@ from PyFlyt.gym_envs.fixedwing_envs.fixedwing_waypoints_env import FixedwingWayp
 import PyFlyt.gym_envs
 from PyFlyt.gym_envs import FlattenWaypointEnv
 
+from envs.utils import WindOnResetWrapper
+
 # 训练配置
 TRAIN_CONFIG = {
     "total_timesteps": 4_000_000,
@@ -45,6 +47,11 @@ TRAIN_CONFIG = {
     "flight_dome_size": 100.0,
     "max_duration_seconds": 120.0,
     "context_length": 2,  # 观测中包含当前目标点和下一个目标点
+    "wind": {
+        "enabled": False,
+        "mode": "constant",
+        "wind_enu_mps": [0.0, 0.0, 0.0],
+    },
 }
 
 def parse_args():
@@ -101,6 +108,9 @@ def make_env(rank: int, seed: int = 0):
             max_duration_seconds=TRAIN_CONFIG["max_duration_seconds"],
             agent_hz=30,
         )
+
+        if bool(TRAIN_CONFIG.get("wind", {}).get("enabled", False)):
+            env = WindOnResetWrapper(env, TRAIN_CONFIG.get("wind", None))
         
         # 扁平化观测空间，以便 MLP 网络处理
         # FlattenWaypointEnv 会将环境的 Dict 观测转换为 Box 观测

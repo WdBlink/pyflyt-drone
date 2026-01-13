@@ -59,6 +59,16 @@ EVAL_CONFIG = {
     "num_obstacles": 0,
     "obstacle_radius": 2.0,
     "obstacle_height_range": (10.0, 30.0),
+    "wind": {
+        "enabled": True,
+        "mode": "gust_sine",
+        "wind_enu_mps": [5.0, 0.0, 0.0],
+        "gust_amp_enu_mps": [2.0, 0.0, 0.0],
+        "gust_freq_hz": 0.2,
+        "gust_phase_rad": 0.0,
+        "randomize_on_reset": False,
+        "randomize_gust_phase": False,
+    },
 }
 
 def _infer_vecnorm_path(model_path: str, vecnorm_path: str | None) -> str | None:
@@ -136,6 +146,7 @@ def make_eval_env(render_mode="human"):
         angle_representation="euler",
         agent_hz=30,
         render_mode=render_mode,
+        wind_config=EVAL_CONFIG.get("wind", None),
         # 使用默认的小黄鸭配置或根据需要添加
         # Duck Configs
         duck_strike_distance_m=EVAL_CONFIG["duck_strike_distance_m"],
