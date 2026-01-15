@@ -19,13 +19,14 @@ _PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardi
 if _PROJECT_ROOT not in sys.path:
     sys.path.insert(0, _PROJECT_ROOT)
 
-from envs.fixedwing_objlock_env import FixedwingObjLockEnv
+# from envs.fixedwing_objlock_env import FixedwingObjLockEnv
+from envs.fixedwing_envs.objlock_yolo_env import FixedwingObjLockEnv
 from envs.flatten_objlock_env import FlattenObjLockEnv
 import PyFlyt.gym_envs
 
 # 默认评估配置
 EVAL_CONFIG = {
-    "model_path": "models/obj_lock_only_ppo_v1.3_hist/best_model.zip",
+    "model_path": "models/obj_lock_only_ppo_v2.3_hist/best_model.zip",
     "vecnorm_path": None, # Auto-detect
     "num_episodes": 10,
     "flight_dome_size": 200.0,
@@ -180,6 +181,41 @@ def _save_rgb(path: str, rgb: np.ndarray) -> bool:
     except Exception:
         return False
 
+def _seg_to_binary_mask(seg: np.ndarray) -> np.ndarray:
+    seg = np.asarray(seg)
+    if seg.ndim == 3 and seg.shape[-1] == 1:
+        seg = seg[..., 0]
+    mask = seg != -1
+    return (mask.astype(np.uint8) * 255)
+
+
+def _save_mask_png(path: str, mask_u8: np.ndarray) -> bool:
+    try:
+        from PIL import Image
+
+        Image.fromarray(mask_u8).save(path)
+        return True
+    except Exception:
+        return False
+
+
+def _save_overlay_png(path: str, rgb: np.ndarray, mask_u8: np.ndarray) -> bool:
+    try:
+        from PIL import Image
+
+        rgb_u8 = _to_uint8_rgb(rgb)
+        out = rgb_u8.copy()
+        m = mask_u8 > 0
+        if m.ndim == 2 and out.ndim == 3 and out.shape[-1] == 3:
+            red = np.array([255, 0, 0], dtype=np.uint8)
+            out[m] = (0.6 * out[m].astype(np.float32) + 0.4 * red.astype(np.float32)).astype(
+                np.uint8
+            )
+        Image.fromarray(out).save(path)
+        return True
+    except Exception:
+        return False
+
 def make_eval_env(render_mode="human"):
     """
     创建评估环境
@@ -218,7 +254,7 @@ def evaluate():
     parser.add_argument("--episodes", type=int, default=EVAL_CONFIG["num_episodes"], help="Number of episodes to evaluate")
     parser.add_argument("--no-render", action="store_true", help="Disable rendering")
     parser.add_argument("--save-frames", action="store_true", help="Save a few onboard-camera frames during evaluation")
-    parser.add_argument("--frames-outdir", type=str, default="eval_frames/objlock", help="Output directory for saved frames")
+    parser.add_argument("--frames-outdir", type=str, default="eval_frames/objlock/yolo", help="Output directory for saved frames")
     parser.add_argument("--frames-interval", type=int, default=12, help="Save every N steps")
     parser.add_argument("--frames-max-per-episode", type=int, default=40, help="Max frames saved per episode")
     parser.add_argument("--save-depth-seg", action="store_true", help="Also save depth/seg as .npy")
@@ -299,6 +335,16 @@ def evaluate():
                                 os.path.join(episode_dir, f"step_{step_count:06d}_seg.npy"),
                                 seg,
                             )
+                    if seg is not None:
+                        mask_u8 = _seg_to_binary_mask(seg)
+                        mask_path = os.path.join(
+                            episode_dir, f"step_{step_count:06d}_seg_mask.png"
+                        )
+                        overlay_path = os.path.join(
+                            episode_dir, f"step_{step_count:06d}_seg_overlay.png"
+                        )
+                        _save_mask_png(mask_path, mask_u8)
+                        _save_overlay_png(overlay_path, rgb, mask_u8)
 
                     saved_frames += 1
             # 稍微加点延时，避免画面太快（如果环境本身的 render 没有做时钟同步）
