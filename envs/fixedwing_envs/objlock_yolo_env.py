@@ -103,12 +103,12 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         # FastSAM Seg Configs
         self.fastsam_model = None
         self.fastsam_weights_path = self._resolve_default_fastsam_weights_path()
-        self.fastsam_device = "cpu"
+        self.fastsam_device = "cuda"
         self.fastsam_retina_masks = True
         self.fastsam_imgsz = 1024
         self.fastsam_conf = 0.9
         self.fastsam_iou = 0.9
-        self.fastsam_text_prompt: Optional[str] = "a photo of a yellow duck"
+        self.fastsam_text_prompt: Optional[str] = "a yellow thing"
         self.fixed_prompt_path = "/mnt/d/eval_frames/objlock/ep_000/step_000048_annotations.json"
         self.bbox_prompt = None
 
@@ -192,8 +192,8 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
 
     def _resolve_default_fastsam_weights_path(self) -> str:
         repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-        candidate = os.path.join(repo_root, "FastSAM-s.pt")
-        return candidate if os.path.exists(candidate) else "FastSAM-s.pt"
+        candidate = os.path.join(repo_root, "models", "FastSAM-s.pt")
+        return candidate if os.path.exists(candidate) else os.path.join("models", "FastSAM-s.pt")
 
     def _safe_import_ultralytics_fastsam(self):
         from ultralytics import FastSAM  # type: ignore
@@ -578,22 +578,45 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         max_h = float(self.obstacle_height_range[1])
         if max_h < min_h:
             min_h, max_h = max_h, min_h
+        
+        placed_xy: list[np.ndarray] = []
+        duck_xy = self.duck_pos[:2].astype(np.float64) if self.duck_pos is not None else None
+        min_r = float(max(10.0, 2.0 * float(self.obstacle_radius) + 2.0))
+        max_r = float(min(self.flight_dome_size / 2.0, max(min_r + 1.0, float(self.obstacle_safe_distance_m))))
 
         for _ in range(int(self.num_obstacles)):
             h = float(rng.uniform(min_h, max_h))
-
-            x = float(rng.uniform(-self.flight_dome_size / 2, self.flight_dome_size / 2))
-            y = float(rng.uniform(-self.flight_dome_size / 2, self.flight_dome_size / 2))
             z = float(h / 2.0)
 
-            # Avoid spawning near duck
-            if self.duck_pos is not None:
-                d_to_duck = np.linalg.norm(np.array([x, y]) - self.duck_pos[:2])
-                if d_to_duck < 10.0:
-                    continue
+            x = None
+            y = None
+            for _try in range(64):
+                if duck_xy is not None:
+                    theta = float(rng.uniform(0.0, 2.0 * np.pi))
+                    radius = float(np.sqrt(rng.uniform(min_r * min_r, max_r * max_r)))
+                    pos_xy = duck_xy + radius * np.array([np.cos(theta), np.sin(theta)], dtype=np.float64)
+                    if np.any(np.abs(pos_xy) > (self.flight_dome_size / 2.0)):
+                        continue
+                else:
+                    pos_xy = np.array(
+                        [
+                            float(rng.uniform(-self.flight_dome_size / 2.0, self.flight_dome_size / 2.0)),
+                            float(rng.uniform(-self.flight_dome_size / 2.0, self.flight_dome_size / 2.0)),
+                        ],
+                        dtype=np.float64,
+                    )
 
-            # Avoid spawning near center (start pos)
-            if x * x + y * y < 100.0:
+                if placed_xy:
+                    dists = [float(np.linalg.norm(pos_xy - p)) for p in placed_xy]
+                    if min(dists) < float(max(2.0, 2.5 * float(self.obstacle_radius))):
+                        continue
+
+                x = float(pos_xy[0])
+                y = float(pos_xy[1])
+                placed_xy.append(pos_xy)
+                break
+
+            if x is None or y is None:
                 continue
 
             try:

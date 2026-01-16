@@ -26,7 +26,7 @@ import PyFlyt.gym_envs
 
 # 默认评估配置
 EVAL_CONFIG = {
-    "model_path": "models/obj_lock_only_ppo_v2.3_hist/best_model.zip",
+    "model_path": "models/obj_lock_only_ppo_v2.4_hist/best_model.zip",
     "vecnorm_path": None, # Auto-detect
     "num_episodes": 10,
     "flight_dome_size": 200.0,
@@ -39,10 +39,10 @@ EVAL_CONFIG = {
     "duck_global_scaling": 40.0,
     
     # Obstacle Configs
-    "num_obstacles": 0,
-    "obstacle_radius": 2.0,
+    "num_obstacles": 3,
+    "obstacle_radius": 1.0,
     "obstacle_height_range": (10.0, 30.0),
-    "obstacle_safe_distance_m": 10.0,
+    "obstacle_safe_distance_m": 5.0,
 
     # Evaluation Configs
     "camera_profile": "cockpit_fpv",
@@ -254,7 +254,7 @@ def evaluate():
     parser.add_argument("--episodes", type=int, default=EVAL_CONFIG["num_episodes"], help="Number of episodes to evaluate")
     parser.add_argument("--no-render", action="store_true", help="Disable rendering")
     parser.add_argument("--save-frames", action="store_true", help="Save a few onboard-camera frames during evaluation")
-    parser.add_argument("--frames-outdir", type=str, default="eval_frames/objlock/yolo", help="Output directory for saved frames")
+    parser.add_argument("--frames-outdir", type=str, default="eval_frames/objlock/fastsam", help="Output directory for saved frames")
     parser.add_argument("--frames-interval", type=int, default=12, help="Save every N steps")
     parser.add_argument("--frames-max-per-episode", type=int, default=40, help="Max frames saved per episode")
     parser.add_argument("--save-depth-seg", action="store_true", help="Also save depth/seg as .npy")
