@@ -2,7 +2,7 @@ import gymnasium as gym
 import numpy as np
 from gymnasium import spaces
 
-from envs.fixedwing_objlock_env import FixedwingObjLockEnv
+from envs.fixedwing_envs.fixedwing_objlock_env import FixedwingObjLockEnv
 
 
 class FlattenObjLockEnv(gym.Wrapper):

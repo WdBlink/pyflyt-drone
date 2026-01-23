@@ -12,10 +12,11 @@ import pybullet_data
 from gymnasium import spaces
 
 from PyFlyt.core.abstractions.camera import Camera
-from envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
+from envs.fixedwing_envs.base.fixedwing_base_env import FixedwingBaseEnv
+from envs.fixedwing_envs.base.fixedwing_vtail_base_env import FixedwingVtailBaseEnv
 
 
-class FixedwingObjLockEnv(FixedwingBaseEnv):
+class FixedwingObjLockEnv(FixedwingVtailBaseEnv):
     """
     Fixedwing Object Lock Environment (No Waypoints).
 

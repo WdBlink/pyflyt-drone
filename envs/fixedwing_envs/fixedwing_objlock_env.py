@@ -11,10 +11,11 @@ from gymnasium import spaces
 
 from PyFlyt.core.abstractions.camera import Camera
 # from PyFlyt.gym_envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
-from envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
+from envs.fixedwing_envs.base.fixedwing_base_env import FixedwingBaseEnv
+from envs.fixedwing_envs.base.fixedwing_vtail_base_env import FixedwingVtailBaseEnv
 
 
-class FixedwingObjLockEnv(FixedwingBaseEnv):
+class FixedwingObjLockEnv(FixedwingVtailBaseEnv):
     """
     Fixedwing Object Lock Environment (No Waypoints).
 
@@ -77,6 +78,8 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         duck_lock_decay_steps: int = 1,
         duck_lock_lost_penalty: float = 0.5,
         duck_approach_reward_clip_m: float = 2.0,
+        drone_model: str | None = None,
+        drone_model_dir: str | None = None,
         wind_config: Optional[dict[str, Any]] = None,
     ):
         super().__init__(
@@ -116,6 +119,8 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         self.duck_lock_decay_steps = int(max(1, duck_lock_decay_steps))
         self.duck_lock_lost_penalty = float(duck_lock_lost_penalty)
         self.duck_approach_reward_clip_m = float(max(0.0, duck_approach_reward_clip_m))
+        self._drone_model = None if drone_model is None else str(drone_model)
+        self._drone_model_dir = None if drone_model_dir is None else str(drone_model_dir)
 
         self.duck_body_id: Optional[int] = None
         self._egl_plugin_id: Optional[int] = None
@@ -180,6 +185,10 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         """Reset the environment."""
         # 1. Base Reset
         drone_options: dict[str, Any] = {"use_camera": True, "use_gimbal": False}
+        if self._drone_model is not None:
+            drone_options["drone_model"] = self._drone_model
+        if self._drone_model_dir is not None:
+            drone_options["model_dir"] = self._drone_model_dir
 
         if self._camera_profile == "cockpit_fpv":
             default_offset = np.array([0.8, 0.0, 0.12], dtype=np.float64)

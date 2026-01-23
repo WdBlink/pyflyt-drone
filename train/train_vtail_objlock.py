@@ -19,13 +19,13 @@ _ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if _ROOT not in sys.path:
     sys.path.insert(0, _ROOT)
 
-from envs.fixedwing_objlock_env import FixedwingObjLockEnv
-from envs.flatten_objlock_env import FlattenObjLockEnv
+from envs.fixedwing_envs.fixedwing_objlock_env import FixedwingObjLockEnv
+from envs.fixedwing_envs.flatten_objlock_env import FlattenObjLockEnv
 import PyFlyt.gym_envs  # Ensure PyFlyt envs are registered if needed
 
 # 训练配置
 TRAIN_CONFIG = {
-    "total_timesteps": 1_000_000,
+    "total_timesteps": 2_000_000,
     "num_envs": 16,
     "sparse_reward": False,
     "n_eval_episodes": 10,
@@ -89,7 +89,7 @@ TRAIN_CONFIG = {
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pretrained_model", type=str, default="models/obj_lock_only_ppo_v2.3_hist/best_model.zip")
+    parser.add_argument("--pretrained_model", type=str, default="models/vtail_obj_lock_only_ppo_v1_hist/best_model.zip")
     parser.add_argument("--vecnorm_path", type=str, default=None)
     parser.add_argument("--total_timesteps", type=int, default=None)
     return parser.parse_args()
