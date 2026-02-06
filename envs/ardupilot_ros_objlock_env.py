@@ -64,6 +64,21 @@ def _quat_to_euler_xyz(qx: float, qy: float, qz: float, qw: float) -> tuple[floa
     return roll, pitch, yaw
 
 
+def _quat_to_rotmat(qx: float, qy: float, qz: float, qw: float) -> np.ndarray:
+    """Quaternion -> 3x3 rotation matrix (body->world)."""
+    xx, yy, zz = qx * qx, qy * qy, qz * qz
+    xy, xz, yz = qx * qy, qx * qz, qy * qz
+    wx, wy, wz = qw * qx, qw * qy, qw * qz
+    return np.array(
+        [
+            [1.0 - 2.0 * (yy + zz), 2.0 * (xy - wz), 2.0 * (xz + wy)],
+            [2.0 * (xy + wz), 1.0 - 2.0 * (xx + zz), 2.0 * (yz - wx)],
+            [2.0 * (xz - wy), 2.0 * (yz + wx), 1.0 - 2.0 * (xx + yy)],
+        ],
+        dtype=np.float64,
+    )
+
+
 @dataclass
 class _LatestState:
     # ROS time isn't required for the skeleton; we use monotonic arrival time.
@@ -82,7 +97,10 @@ class _LatestState:
     # Position (m) in world frame (ENU) by default.
     lin_pos: Optional[np.ndarray] = None  # (3,)
 
-    # Servo outputs as PWM (microseconds), indexed 1..N (stored 0-based in array).
+    # Prefer SERVO_OUTPUT_RAW (true actuator outputs). Keep RCOut as a fallback.
+    # We also keep a "selected" view (servo_pwm) which prefers servo_output_raw when available.
+    servo_pwm_servo_raw: Optional[np.ndarray] = None  # (N,)
+    servo_pwm_rc_out: Optional[np.ndarray] = None  # (N,)
     servo_pwm: Optional[np.ndarray] = None  # (N,)
 
 
@@ -119,6 +137,26 @@ def _pwm_to_norm(pwm: float, *, pwm_min: int, pwm_trim: int, pwm_max: int) -> fl
     return _clamp(x, -1.0, 1.0)
 
 
+def _select_cuda_if_available(requested: str) -> str:
+    """
+    Best-effort device selection for Ultralytics models.
+    If user requests CUDA but torch/CUDA isn't available, fall back to CPU.
+    """
+    req = str(requested or "").strip()
+    if not req:
+        return "cpu"
+    if req.lower().startswith("cuda"):
+        try:
+            import torch  # type: ignore
+
+            if bool(torch.cuda.is_available()):
+                return req
+        except Exception:
+            pass
+        return "cpu"
+    return req
+
+
 _BaseGymEnv = gym.Env if gym is not None else object
 
 
@@ -129,7 +167,7 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
     Observation (Dict):
       - attitude: [ang_vel(3), ang_pos_euler(3) or quaternion(4), lin_vel(3), lin_pos(3),
                    prev_action(4), aux_state(6)]
-      - target_vector: placeholder (3,) default zeros (no privileged info)
+      - target_vector: optional goal vector (or zeros) depending on goal settings
       - duck_vision: placeholder features (history + deltas), default zeros until you plug vision in
 
     Action (Box):
@@ -146,6 +184,19 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         max_duration_seconds: float = 120.0,
         duck_vision_history_len: int = 3,
         duck_vision_use_deltas: bool = True,
+        # Vision backend (segment RGB -> mask -> duck_vision).
+        vision_backend: Literal["fastsam", "none"] = "fastsam",
+        fastsam_weights_path: Optional[str] = None,
+        fastsam_device: str = "cuda",
+        fastsam_retina_masks: bool = True,
+        fastsam_imgsz: int = 1024,
+        fastsam_conf: float = 0.9,
+        fastsam_iou: float = 0.9,
+        fastsam_text_prompt: Optional[str] = "a photo of a yellow duck",
+        # How often to run segmentation (in env steps). 1 = every step.
+        seg_interval_steps: int = 2,
+        # Depth scaling for 16UC1 images (assume millimeters by default).
+        depth_scale_16u: float = 0.001,
         # Topic names (ROS2 defaults are user-setup dependent; treat these as config knobs)
         mavros_imu_topic: str = "/mavros/imu/data",
         mavros_odom_topic: str = "/mavros/local_position/odom",
@@ -153,8 +204,9 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         mavros_rc_override_topic: str = "/mavros/rc/override",
         mavros_servo_output_topic: str = "/mavros/servo_output/raw",
         mavros_rc_out_topic: str = "/mavros/rc/out",
-        rgb_image_topic: Optional[str] = None,
-        depth_image_topic: Optional[str] = None,
+        # If you use ardupilot_gazebo's run_vtail_with_ros_bridge.sh, these are the defaults.
+        rgb_image_topic: Optional[str] = "/pod_camera/image_raw",
+        depth_image_topic: Optional[str] = "/pod_depth_camera/image_raw",
         # RC mapping (ArduPilot default: 1 roll, 2 pitch, 3 throttle, 4 yaw)
         rc_chan_roll: int = 1,
         rc_chan_pitch: int = 2,
@@ -178,6 +230,13 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         servo_params: Optional[dict[int, tuple[int, int, int]]] = None,
         # Safety: allow disabling control publishing for passive observation tests.
         enable_rc_override: bool = True,
+        # Optional pre-vision goal pursuit settings.
+        goal_position_enu: Optional[tuple[float, float, float]] = None,
+        goal_vector_in_body_frame: bool = True,
+        goal_switch_on_vision: bool = True,
+        goal_visible_hold_steps: int = 3,
+        goal_reacquire_steps: int = 15,
+        goal_reach_distance_m: float = 0.0,
         # Blocking behavior
         reset_timeout_sec: float = 5.0,
         step_wait_timeout_sec: float = 0.5,
@@ -193,6 +252,16 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         self.angle_representation = angle_representation
         self.duck_vision_history_len = int(max(1, duck_vision_history_len))
         self.duck_vision_use_deltas = bool(duck_vision_use_deltas)
+        self.vision_backend = str(vision_backend).lower()
+        self.fastsam_weights_path = fastsam_weights_path
+        self.fastsam_device = _select_cuda_if_available(str(fastsam_device))
+        self.fastsam_retina_masks = bool(fastsam_retina_masks)
+        self.fastsam_imgsz = int(fastsam_imgsz)
+        self.fastsam_conf = float(fastsam_conf)
+        self.fastsam_iou = float(fastsam_iou)
+        self.fastsam_text_prompt = fastsam_text_prompt
+        self.seg_interval_steps = int(max(1, seg_interval_steps))
+        self.depth_scale_16u = float(depth_scale_16u)
 
         # --- Spaces ---
         if self.angle_representation == "euler":
@@ -268,6 +337,16 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
 
         self._servo_params = servo_params or {}
         self._enable_rc_override = bool(enable_rc_override)
+        self._goal_pos_enu = (
+            np.asarray(goal_position_enu, dtype=np.float64).reshape(3)
+            if goal_position_enu is not None
+            else None
+        )
+        self._goal_vector_in_body_frame = bool(goal_vector_in_body_frame)
+        self._goal_switch_on_vision = bool(goal_switch_on_vision)
+        self._goal_visible_hold_steps = int(max(1, goal_visible_hold_steps))
+        self._goal_reacquire_steps = int(max(1, goal_reacquire_steps))
+        self._goal_reach_distance_m = float(max(0.0, goal_reach_distance_m))
 
         self._reset_timeout_sec = float(reset_timeout_sec)
         self._step_wait_timeout_sec = float(step_wait_timeout_sec)
@@ -291,9 +370,27 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         # Latest raw image messages (optional; decode/process externally or extend this class)
         self._latest_rgb_msg = None
         self._latest_depth_msg = None
+        self._latest_rgb = None
+        self._latest_depth = None
+        self._latest_rgb_t = 0.0
+        self._latest_depth_t = 0.0
+
+        self._seg_last_mask = None
+        self._seg_last_step = -1
+        self._seg_last_t = 0.0
+
+        # FastSAM lazy-load
+        self._fastsam_model = None
+        self._fastsam_model_failed = False
 
         self._last_aux_state = np.zeros((6,), dtype=np.float32)
         self._last_servo_pwm_used_for_aux: Optional[np.ndarray] = None
+        self._last_target_vector = np.zeros((3,), dtype=np.float32)
+        self._last_goal_distance_m = 0.0
+        self._goal_suppressed_by_vision = False
+        self._goal_visible_steps = 0
+        self._goal_lost_steps = 0
+        self._tracking_mode = "goal_vector" if self._goal_pos_enu is not None else "vision_only"
 
         self._try_init_ros()
 
@@ -513,9 +610,21 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
 
     def _on_rgb(self, msg) -> None:
         self._latest_rgb_msg = msg
+        rgb = self._ros_image_to_rgb(msg)
+        if rgb is None:
+            return
+        with self._lock:
+            self._latest_rgb = rgb
+            self._latest_rgb_t = time.monotonic()
 
     def _on_depth(self, msg) -> None:
         self._latest_depth_msg = msg
+        depth = self._ros_image_to_depth(msg)
+        if depth is None:
+            return
+        with self._lock:
+            self._latest_depth = depth
+            self._latest_depth_t = time.monotonic()
 
     def _on_servo_output_raw(self, msg) -> None:
         """
@@ -534,7 +643,10 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         if vals:
             with self._lock:
                 self._latest.t_mono = t
-                self._latest.servo_pwm = np.asarray(vals, dtype=np.int32)
+                arr = np.asarray(vals, dtype=np.int32)
+                # SERVO_OUTPUT_RAW is the preferred source for aux_state (actual actuator outputs).
+                self._latest.servo_pwm_servo_raw = arr
+                self._latest.servo_pwm = arr
 
     def _on_rc_out(self, msg) -> None:
         """
@@ -547,7 +659,11 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
             if ch:
                 with self._lock:
                     self._latest.t_mono = t
-                    self._latest.servo_pwm = np.asarray([int(x) for x in ch], dtype=np.int32)
+                    arr = np.asarray([int(x) for x in ch], dtype=np.int32)
+                    self._latest.servo_pwm_rc_out = arr
+                    # Only use RCOut if we don't have SERVO_OUTPUT_RAW.
+                    if self._latest.servo_pwm_servo_raw is None:
+                        self._latest.servo_pwm = arr
         except Exception:
             pass
 
@@ -570,6 +686,12 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         self._vision_history.fill(0.0)
         self._vision_history_filled = 0
         self._last_aux_state[:] = 0.0
+        self._last_target_vector[:] = 0.0
+        self._last_goal_distance_m = 0.0
+        self._goal_suppressed_by_vision = False
+        self._goal_visible_steps = 0
+        self._goal_lost_steps = 0
+        self._tracking_mode = "goal_vector" if self._goal_pos_enu is not None else "vision_only"
 
         if not self._ros_ok:
             raise RuntimeError(
@@ -606,6 +728,8 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
             "duck_strike": False,
             "env_complete": False,
             "is_success": False,
+            "tracking_mode": str(self._tracking_mode),
+            "goal_distance_m": float(self._last_goal_distance_m),
         }
         return obs, info
 
@@ -657,6 +781,8 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
             "duck_strike": False,
             "env_complete": False,
             "is_success": False,
+            "tracking_mode": str(self._tracking_mode),
+            "goal_distance_m": float(self._last_goal_distance_m),
         }
         return obs, reward, terminated, truncated, info
 
@@ -680,6 +806,12 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
             servo = None
             if self._latest.servo_pwm is not None:
                 servo = self._latest.servo_pwm.copy()
+            servo_servo_raw = None
+            if self._latest.servo_pwm_servo_raw is not None:
+                servo_servo_raw = self._latest.servo_pwm_servo_raw.copy()
+            servo_rc_out = None
+            if self._latest.servo_pwm_rc_out is not None:
+                servo_rc_out = self._latest.servo_pwm_rc_out.copy()
             return {
                 "t_mono": float(self._latest.t_mono),
                 "ang_vel": None
@@ -695,12 +827,19 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
                 if self._latest.lin_pos is None
                 else self._latest.lin_pos.copy(),
                 "servo_pwm": servo,
+                "servo_pwm_servo_raw": servo_servo_raw,
+                "servo_pwm_rc_out": servo_rc_out,
                 "servo_pwm_used_for_aux": None
                 if self._last_servo_pwm_used_for_aux is None
                 else self._last_servo_pwm_used_for_aux.copy(),
                 "aux_state": self._last_aux_state.copy(),
                 "mavros_connected": bool(self._mavros_state.connected),
                 "mavros_mode": str(self._mavros_state.mode),
+                "have_rgb": self._latest_rgb is not None,
+                "have_depth": self._latest_depth is not None,
+                "target_vector": self._last_target_vector.copy(),
+                "goal_distance_m": float(self._last_goal_distance_m),
+                "tracking_mode": str(self._tracking_mode),
             }
 
     # ----------------------------
@@ -709,13 +848,78 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
 
     def _build_obs(self) -> dict[str, np.ndarray]:
         attitude = self._build_attitude()
-        target_vector = np.zeros((3,), dtype=np.float32)  # No privileged info by default.
-        duck_vision = self._build_duck_vision_observation(self._compute_vision_features_base())
+        duck_vision = self._build_duck_vision_observation(self._compute_vision_features())
+        visible = bool(duck_vision.shape[0] > 0 and float(duck_vision[0]) > 0.5)
+        target_vector = self._compute_target_vector(vision_visible=visible)
         return {
             "attitude": attitude,
             "target_vector": target_vector,
             "duck_vision": duck_vision,
         }
+
+    def _compute_target_vector(self, vision_visible: bool) -> np.ndarray:
+        """
+        Optional privileged guidance:
+        - Before stable visual lock: vector to fixed ENU goal.
+        - After stable visual lock: suppress goal vector so policy can rely on vision.
+        """
+        if self._goal_pos_enu is None:
+            self._tracking_mode = "vision_only"
+            self._last_goal_distance_m = 0.0
+            self._last_target_vector[:] = 0.0
+            return self._last_target_vector.copy()
+
+        # Hysteresis for vision switch.
+        if self._goal_switch_on_vision:
+            if vision_visible:
+                self._goal_visible_steps += 1
+                self._goal_lost_steps = 0
+                if self._goal_visible_steps >= self._goal_visible_hold_steps:
+                    self._goal_suppressed_by_vision = True
+            else:
+                self._goal_lost_steps += 1
+                self._goal_visible_steps = 0
+                if self._goal_suppressed_by_vision and self._goal_lost_steps >= self._goal_reacquire_steps:
+                    self._goal_suppressed_by_vision = False
+        else:
+            self._goal_suppressed_by_vision = False
+
+        with self._lock:
+            lin_pos = None if self._latest.lin_pos is None else self._latest.lin_pos.copy()
+            quat = None if self._latest.quat_xyzw is None else self._latest.quat_xyzw.copy()
+
+        if lin_pos is None:
+            self._tracking_mode = "goal_wait_pose"
+            self._last_goal_distance_m = 0.0
+            self._last_target_vector[:] = 0.0
+            return self._last_target_vector.copy()
+
+        diff_world = self._goal_pos_enu.astype(np.float64) - lin_pos.astype(np.float64)
+        dist = float(np.linalg.norm(diff_world))
+        self._last_goal_distance_m = dist
+
+        if self._goal_reach_distance_m > 0.0 and dist <= self._goal_reach_distance_m:
+            self._tracking_mode = "goal_reached"
+            self._last_target_vector[:] = 0.0
+            return self._last_target_vector.copy()
+
+        if self._goal_suppressed_by_vision:
+            self._tracking_mode = "vision_target"
+            self._last_target_vector[:] = 0.0
+            return self._last_target_vector.copy()
+
+        if self._goal_vector_in_body_frame and quat is not None and quat.shape[0] == 4:
+            rot_bw = _quat_to_rotmat(
+                float(quat[0]), float(quat[1]), float(quat[2]), float(quat[3])
+            )
+            out = (rot_bw.T @ diff_world).astype(np.float32)
+            self._tracking_mode = "goal_vector_body"
+        else:
+            out = diff_world.astype(np.float32)
+            self._tracking_mode = "goal_vector_world"
+
+        self._last_target_vector[:] = out
+        return self._last_target_vector.copy()
 
     def _build_attitude(self) -> np.ndarray:
         ang_vel = self._latest.ang_vel
@@ -852,31 +1056,72 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         self._last_aux_state[:] = aux
         return aux
 
-    def _compute_vision_features_base(self) -> np.ndarray:
+    def _compute_vision_features(self) -> np.ndarray:
         """
         Returns the base 9D vision feature:
           [visible, cx, cy, area, depth, steps_norm, d_left, d_center, d_right]
 
-        Skeleton behavior:
-        - Always returns "not visible" until you extend this class to run a detector/segmenter.
-        - Keeps a steps_since_seen counter (like the PyFlyt env) to support history.
+        Vision behavior:
+        - If a segmentation backend is available and RGB is received, compute mask.
+        - If depth is available, estimate distance and obstacle ranges.
+        - Otherwise, return "not visible" with a decaying steps_norm.
         """
-        self._steps_since_seen = min(self._steps_since_seen + 1, 60)
-        steps_norm = float(self._steps_since_seen) / 60.0
-        return np.array(
-            [
-                0.0,  # visible
-                float(self._last_cx),
-                float(self._last_cy),
-                float(self._last_area),
-                float(self._last_depth_m),
-                steps_norm,
-                0.0,  # d_left
-                0.0,  # d_center
-                0.0,  # d_right
-            ],
-            dtype=np.float32,
-        )
+        rgb, depth = self._get_latest_images()
+
+        if rgb is None:
+            return self._build_vision_vector(visible=False, obstacle_depths=(0.0, 0.0, 0.0))
+
+        mask = self._segment_duck_mask(rgb)
+        if mask is None or mask.size == 0:
+            obs_d = self._estimate_obstacle_zone_distances_m(depth, None)
+            return self._build_vision_vector(visible=False, obstacle_depths=obs_d)
+
+        if mask.ndim == 3:
+            mask = mask[..., 0]
+        mask = mask.astype(bool)
+
+        mask_for_depth = mask
+        # Bridge outputs RGB (1280x720) and depth (often 641x480) with different sizes.
+        # Align mask to depth shape for depth-based features to avoid boolean index mismatch.
+        if depth is not None:
+            d2 = depth[..., 0] if depth.ndim == 3 else depth
+            if d2 is not None and d2.shape != mask.shape:
+                try:
+                    from PIL import Image
+
+                    mask_for_depth = (
+                        np.asarray(
+                            Image.fromarray(mask.astype(np.uint8)).resize(
+                                (int(d2.shape[1]), int(d2.shape[0])), resample=Image.NEAREST
+                            )
+                        )
+                        > 0
+                    )
+                except Exception:
+                    mask_for_depth = None
+
+        obs_d = self._estimate_obstacle_zone_distances_m(depth, mask_for_depth)
+
+        if not np.any(mask):
+            return self._build_vision_vector(visible=False, obstacle_depths=obs_d)
+
+        # Found target
+        h, w = mask.shape
+        ys, xs = np.nonzero(mask)
+        self._last_cx = float(np.mean(xs)) / float(max(1, w - 1))
+        self._last_cy = float(np.mean(ys)) / float(max(1, h - 1))
+        self._last_area = float(np.count_nonzero(mask)) / float(max(1, h * w))
+
+        if depth is not None and mask_for_depth is not None:
+            depth_m = self._estimate_distance(depth, mask_for_depth)
+            if depth_m is not None and np.isfinite(depth_m):
+                self._last_depth_m = float(depth_m)
+                self._steps_since_seen = 0
+                return self._build_vision_vector(visible=True, obstacle_depths=obs_d)
+
+        # Visible but no depth
+        self._steps_since_seen = 0
+        return self._build_vision_vector(visible=True, obstacle_depths=obs_d)
 
     def _build_duck_vision_observation(self, base_feature: np.ndarray) -> np.ndarray:
         base_feature = np.asarray(base_feature, dtype=np.float32).reshape(9)
@@ -897,9 +1142,259 @@ class ArdupilotGazeboObjLockEnv(_BaseGymEnv):
         if not self.duck_vision_use_deltas:
             return hist_flat.astype(np.float32)
 
-        # Deltas: only meaningful if current and previous are visible; skeleton keeps 0.
+        # Deltas: only meaningful if current and previous are visible.
         deltas = np.zeros((4,), dtype=np.float32)
+        if (
+            self._vision_history_filled >= 2
+            and float(base_feature[0]) > 0.5
+            and float(self._vision_history[1][0]) > 0.5
+        ):
+            prev = self._vision_history[1]
+            deltas[0] = float(base_feature[1] - prev[1])
+            deltas[1] = float(base_feature[2] - prev[2])
+            deltas[2] = float(base_feature[3] - prev[3])
+            deltas[3] = float(base_feature[4] - prev[4])
         return np.concatenate([hist_flat, deltas], axis=0).astype(np.float32)
+
+    # ----------------------------
+    # Vision helpers (ROS Image -> numpy, segmentation, feature extraction)
+    # ----------------------------
+
+    def _get_latest_images(self) -> tuple[Optional[np.ndarray], Optional[np.ndarray]]:
+        with self._lock:
+            rgb = None if self._latest_rgb is None else self._latest_rgb.copy()
+            depth = None if self._latest_depth is None else self._latest_depth.copy()
+        return rgb, depth
+
+    def _ros_image_to_rgb(self, msg) -> Optional[np.ndarray]:
+        try:
+            h = int(msg.height)
+            w = int(msg.width)
+            encoding = str(msg.encoding).lower()
+            data = msg.data
+        except Exception:
+            return None
+
+        if h <= 0 or w <= 0:
+            return None
+
+        # Try cv_bridge if available
+        try:
+            from cv_bridge import CvBridge  # type: ignore
+
+            bridge = CvBridge()
+            cv_img = bridge.imgmsg_to_cv2(msg, desired_encoding="rgb8")
+            return np.asarray(cv_img)
+        except Exception:
+            pass
+
+        # Manual decode
+        if encoding in ("rgb8", "bgr8"):
+            img = np.frombuffer(data, dtype=np.uint8).reshape(h, w, 3)
+            if encoding == "bgr8":
+                img = img[..., ::-1]
+            return img
+        if encoding in ("rgba8", "bgra8"):
+            img = np.frombuffer(data, dtype=np.uint8).reshape(h, w, 4)
+            if encoding == "bgra8":
+                img = img[..., [2, 1, 0, 3]]
+            return img[..., :3]
+        if encoding in ("mono8",):
+            img = np.frombuffer(data, dtype=np.uint8).reshape(h, w)
+            return np.stack([img, img, img], axis=-1)
+        if encoding in ("mono16", "16uc1"):
+            img = np.frombuffer(data, dtype=np.uint16).reshape(h, w)
+            # Scale to 8-bit for segmentation if needed
+            img8 = np.clip(img / 256.0, 0, 255).astype(np.uint8)
+            return np.stack([img8, img8, img8], axis=-1)
+        return None
+
+    def _ros_image_to_depth(self, msg) -> Optional[np.ndarray]:
+        try:
+            h = int(msg.height)
+            w = int(msg.width)
+            encoding = str(msg.encoding).lower()
+            data = msg.data
+            is_be = bool(getattr(msg, "is_bigendian", False))
+        except Exception:
+            return None
+
+        if h <= 0 or w <= 0:
+            return None
+
+        if encoding in ("32fc1", "32f", "float32"):
+            arr = np.frombuffer(data, dtype=np.float32).reshape(h, w)
+        elif encoding in ("16uc1", "mono16"):
+            arr = np.frombuffer(data, dtype=np.uint16).reshape(h, w).astype(np.float32)
+            arr = arr * float(self.depth_scale_16u)
+        else:
+            # Best-effort: try float32
+            try:
+                arr = np.frombuffer(data, dtype=np.float32).reshape(h, w)
+            except Exception:
+                return None
+
+        if is_be:
+            arr = arr.byteswap().newbyteorder()
+        return arr
+
+    def _resolve_default_fastsam_weights_path(self) -> Optional[str]:
+        # Try repo root FastSAM-s.pt if present.
+        try:
+            import os
+
+            repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+            candidate = os.path.join(repo_root, "FastSAM-s.pt")
+            if os.path.exists(candidate):
+                return candidate
+        except Exception:
+            pass
+        return None
+
+    def _ensure_fastsam_loaded(self) -> None:
+        if self._fastsam_model is not None or self._fastsam_model_failed:
+            return
+        weights = self.fastsam_weights_path or self._resolve_default_fastsam_weights_path()
+        if not weights:
+            self._fastsam_model_failed = True
+            return
+        try:
+            from ultralytics import FastSAM  # type: ignore
+
+            self._fastsam_model = FastSAM(weights)
+        except Exception:
+            self._fastsam_model = None
+            self._fastsam_model_failed = True
+
+    def _fastsam_results_to_binary_mask(self, results_obj) -> Optional[np.ndarray]:
+        try:
+            masks = getattr(results_obj, "masks", None)
+            if masks is None or masks.data is None:
+                return None
+            data = masks.data
+            if hasattr(data, "cpu"):
+                data = data.cpu().numpy()
+            if data.ndim == 3:
+                return (data > 0.5).any(axis=0).astype(np.uint8)
+            if data.ndim == 2:
+                return (data > 0.5).astype(np.uint8)
+            return None
+        except Exception:
+            return None
+
+    def _segment_duck_mask(self, rgb: np.ndarray) -> Optional[np.ndarray]:
+        if self.vision_backend == "none":
+            return None
+        if self.vision_backend != "fastsam":
+            return None
+
+        # Cache by step to reduce compute.
+        if self._seg_last_mask is not None and (self._step_count - self._seg_last_step) < self.seg_interval_steps:
+            return self._seg_last_mask
+
+        self._ensure_fastsam_loaded()
+        if self._fastsam_model is None:
+            return None
+
+        try:
+            inference_kwargs = {
+                "device": self.fastsam_device,
+                "retina_masks": bool(self.fastsam_retina_masks),
+                "imgsz": int(self.fastsam_imgsz),
+                "conf": float(self.fastsam_conf),
+                "iou": float(self.fastsam_iou),
+            }
+            if self.fastsam_text_prompt:
+                inference_kwargs["texts"] = str(self.fastsam_text_prompt)
+
+            results = self._fastsam_model(rgb, **inference_kwargs)
+            mask_np = self._fastsam_results_to_binary_mask(results[0]) if results else None
+            if mask_np is None:
+                return None
+            if mask_np.shape[:2] != rgb.shape[:2]:
+                try:
+                    from PIL import Image
+
+                    mask_np = np.asarray(
+                        Image.fromarray(mask_np).resize(
+                            (rgb.shape[1], rgb.shape[0]), resample=Image.NEAREST
+                        )
+                    )
+                except Exception:
+                    return None
+            self._seg_last_mask = mask_np.astype(np.uint8)
+            self._seg_last_step = self._step_count
+            self._seg_last_t = time.monotonic()
+            return self._seg_last_mask
+        except Exception:
+            return None
+
+    def _build_vision_vector(
+        self, visible: bool, obstacle_depths: tuple[float, float, float]
+    ) -> np.ndarray:
+        if not visible:
+            self._steps_since_seen = min(self._steps_since_seen + 1, 60)
+        steps_norm = float(self._steps_since_seen) / 60.0
+        d_left, d_center, d_right = obstacle_depths
+        return np.array(
+            [
+                1.0 if visible else 0.0,
+                float(self._last_cx),
+                float(self._last_cy),
+                float(self._last_area),
+                float(self._last_depth_m),
+                steps_norm,
+                float(d_left),
+                float(d_center),
+                float(d_right),
+            ],
+            dtype=np.float32,
+        )
+
+    def _estimate_obstacle_zone_distances_m(
+        self, depth: Optional[np.ndarray], target_mask: Optional[np.ndarray]
+    ) -> tuple[float, float, float]:
+        if depth is None:
+            return 0.0, 0.0, 0.0
+        if depth.ndim == 3:
+            depth = depth[..., 0]
+
+        h, w = depth.shape
+        y_mid = int(h // 2)
+        x_1 = int(w // 3)
+        x_2 = int(2 * w // 3)
+
+        if target_mask is None:
+            mask = np.ones_like(depth, dtype=bool)
+        else:
+            if target_mask.ndim == 3:
+                target_mask = target_mask[..., 0]
+            mask = ~target_mask.astype(bool)
+
+        def zone_mean_depth(x_start: int, x_end: int) -> float:
+            zone_mask = mask[y_mid, x_start:x_end]
+            if not np.any(zone_mask):
+                return 0.0
+            vals = depth[y_mid, x_start:x_end][zone_mask]
+            vals = vals[np.isfinite(vals) & (vals > 0.0)]
+            if vals.size == 0:
+                return 0.0
+            return float(np.mean(vals))
+
+        d_left = zone_mean_depth(0, x_1)
+        d_center = zone_mean_depth(x_1, x_2)
+        d_right = zone_mean_depth(x_2, w)
+        return d_left, d_center, d_right
+
+    def _estimate_distance(self, depth: np.ndarray, mask: np.ndarray) -> Optional[float]:
+        if depth.ndim == 3:
+            depth = depth[..., 0]
+        vals = depth[mask]
+        vals = vals[np.isfinite(vals) & (vals > 0.0)]
+        if vals.size == 0:
+            return None
+        # Use median for stability
+        return float(np.median(vals))
 
     # ----------------------------
     # Control publishing

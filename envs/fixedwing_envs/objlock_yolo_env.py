@@ -103,7 +103,13 @@ class FixedwingObjLockEnv(FixedwingBaseEnv):
         # FastSAM Seg Configs
         self.fastsam_model = None
         self.fastsam_weights_path = self._resolve_default_fastsam_weights_path()
-        self.fastsam_device = "cpu"
+        # Prefer GPU for FastSAM if available (falls back to CPU if CUDA isn't usable).
+        try:
+            import torch  # type: ignore
+
+            self.fastsam_device = "cuda" if bool(torch.cuda.is_available()) else "cpu"
+        except Exception:
+            self.fastsam_device = "cpu"
         self.fastsam_retina_masks = True
         self.fastsam_imgsz = 1024
         self.fastsam_conf = 0.9
