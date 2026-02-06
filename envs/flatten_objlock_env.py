@@ -4,7 +4,6 @@ from gymnasium import spaces
 
 from envs.fixedwing_objlock_env import FixedwingObjLockEnv
 
-
 class FlattenObjLockEnv(gym.Wrapper):
     """
     Wrapper for FixedwingObjLockEnv that flattens the observation space.
