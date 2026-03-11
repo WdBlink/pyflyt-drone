@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import time
 from typing import Any, Callable, Literal
 
 import gymnasium
@@ -31,6 +32,23 @@ class ArdupilotAdapter:
     """Minimal Aviary-compatible adapter used during the ROS/ArduPilot migration."""
 
     GEOM_CYLINDER = 4
+
+    @staticmethod
+    def _quat_to_euler_xyz(qx: float, qy: float, qz: float, qw: float) -> tuple[float, float, float]:
+        sinr_cosp = 2.0 * (qw * qx + qy * qz)
+        cosr_cosp = 1.0 - 2.0 * (qx * qx + qy * qy)
+        roll = float(np.arctan2(sinr_cosp, cosr_cosp))
+
+        sinp = 2.0 * (qw * qy - qz * qx)
+        if abs(sinp) >= 1.0:
+            pitch = float(np.sign(sinp) * (np.pi / 2.0))
+        else:
+            pitch = float(np.arcsin(sinp))
+
+        siny_cosp = 2.0 * (qw * qz + qx * qy)
+        cosy_cosp = 1.0 - 2.0 * (qy * qy + qz * qz)
+        yaw = float(np.arctan2(siny_cosp, cosy_cosp))
+        return roll, pitch, yaw
 
     def __init__(
         self,
@@ -63,8 +81,143 @@ class ArdupilotAdapter:
         self._next_uid = 1
         self._body_ids: list[int] = []
 
+        self._rclpy = None
+        self._node = None
+        self._executor = None
+        self._owns_rclpy_init = False
+        self._ros_state_ready = False
+        self._state_update_seq = 0
+        self._init_mavros_state_subscribers()
+
     def disconnect(self) -> None:
-        pass
+        try:
+            if self._executor is not None and self._node is not None:
+                self._executor.remove_node(self._node)
+        except Exception:
+            pass
+
+        try:
+            if self._node is not None:
+                self._node.destroy_node()
+        except Exception:
+            pass
+
+        if self._rclpy is not None and self._owns_rclpy_init:
+            try:
+                if self._rclpy.ok():
+                    self._rclpy.shutdown()
+            except Exception:
+                pass
+
+        self._executor = None
+        self._node = None
+        self._rclpy = None
+        self._owns_rclpy_init = False
+        self._ros_state_ready = False
+
+    def _init_mavros_state_subscribers(self) -> None:
+        try:
+            from copy import deepcopy
+            import rclpy
+            from geometry_msgs.msg import TwistStamped
+            from nav_msgs.msg import Odometry
+            from rclpy.executors import SingleThreadedExecutor
+            from rclpy.node import Node
+            from rclpy.qos import qos_profile_sensor_data
+            from sensor_msgs.msg import Imu
+        except Exception:
+            return
+
+        try:
+            if not rclpy.ok():
+                rclpy.init(args=None)
+                self._owns_rclpy_init = True
+
+            self._rclpy = rclpy
+            self._node = Node(f"ardupilot_adapter_{int(time.time() * 1000) % 1000000}")
+            self._executor = SingleThreadedExecutor()
+            self._executor.add_node(self._node)
+
+            _mavros_imu_topic = str(
+                self.drone_options.get("mavros_imu_topic", "/mavros/imu/data")
+            )
+            _mavros_odom_topic = str(
+                self.drone_options.get("mavros_odom_topic", "/mavros/local_position/odom")
+            )
+            _mavros_vel_topic = str(
+                self.drone_options.get("mavros_vel_topic", "/mavros/local_position/velocity_local")
+            )
+            qos_latest = deepcopy(qos_profile_sensor_data)
+            qos_latest.depth = 1
+            self._node.create_subscription(
+                Imu,
+                _mavros_imu_topic,
+                self._on_imu,
+                qos_latest,
+            )
+            self._node.create_subscription(
+                Odometry,
+                _mavros_odom_topic,
+                self._on_odom,
+                qos_latest,
+            )
+            self._node.create_subscription(
+                TwistStamped,
+                _mavros_vel_topic,
+                self._on_vel,
+                qos_latest,
+            )
+            self._ros_state_ready = True
+        except Exception:
+            self._ros_state_ready = False
+
+    def _spin_ros_once(self, timeout_sec: float = 0.0) -> None:
+        if self._executor is None:
+            return
+        try:
+            self._executor.spin_once(timeout_sec=timeout_sec)
+        except TypeError:
+            self._executor.spin_once(timeout_sec)
+        except Exception:
+            pass
+
+    def _on_imu(self, msg: Any) -> None:
+        try:
+            av = msg.angular_velocity
+            q = msg.orientation
+            self._ang_vel = np.array([av.x, av.y, av.z], dtype=np.float64)
+            roll, pitch, yaw = self._quat_to_euler_xyz(
+                float(q.x), float(q.y), float(q.z), float(q.w)
+            )
+            self._ang_pos = np.array([roll, pitch, yaw], dtype=np.float64)
+            self._state_update_seq += 1
+        except Exception:
+            return
+
+    def _on_odom(self, msg: Any) -> None:
+        try:
+            pmsg = msg.pose.pose.position
+            qmsg = msg.pose.pose.orientation
+            vmsg = msg.twist.twist.linear
+
+            self._lin_pos = np.array([pmsg.x, pmsg.y, pmsg.z], dtype=np.float64)
+            self._lin_vel = np.array([vmsg.x, vmsg.y, vmsg.z], dtype=np.float64)
+
+            roll, pitch, yaw = self._quat_to_euler_xyz(
+                float(qmsg.x), float(qmsg.y), float(qmsg.z), float(qmsg.w)
+            )
+            self._ang_pos = np.array([roll, pitch, yaw], dtype=np.float64)
+            self._state_update_seq += 1
+        except Exception:
+            return
+
+    def _on_vel(self, msg: Any) -> None:
+        try:
+            vmsg = msg.twist.linear
+            self._lin_vel = np.array([vmsg.x, vmsg.y, vmsg.z], dtype=np.float64)
+            self._state_update_seq += 1
+        except Exception:
+            return
 
     def register_wind_field_function(self, fn: Callable[[float, np.ndarray], np.ndarray]) -> None:
         self._wind_field_fn = fn
@@ -79,12 +232,19 @@ class ArdupilotAdapter:
         self._mode = int(mode)
 
     def step(self) -> None:
-        pass
+        self._spin_ros_once(timeout_sec=0.0)
 
     def state(
         self, idx: int
     ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
         _ = idx
+        # Drain currently queued state callbacks before returning.
+        # With depth=1 per topic, this effectively syncs to latest queued samples.
+        for _ in range(16):
+            prev_seq = self._state_update_seq
+            self._spin_ros_once(timeout_sec=0.0)
+            if self._state_update_seq == prev_seq:
+                break
         return (
             self._ang_vel.copy(),
             self._ang_pos.copy(),
