@@ -77,6 +77,31 @@ class ArdupilotAdapter:
         self._lin_pos = self.start_pos[0].copy()
         self._aux = np.zeros((6,), dtype=np.float64)
         self._last_setpoint = np.zeros((4,), dtype=np.float64)
+        #rc_surface的接收变量名称或许可以简化
+        self._rc_surface_channel_indices = np.asarray(
+            self.drone_options.get("mavros_surface_channel_indices", [0, 1, 2, 3, 4]),
+            dtype=np.int64,
+        ).reshape(-1)
+        self._rc_throttle_channel_index = int(
+            self.drone_options.get("mavros_throttle_channel_index", 5)
+        )
+        self._rc_pwm_min = float(self.drone_options.get("mavros_rc_pwm_min", 1000.0))
+        self._rc_pwm_max = float(self.drone_options.get("mavros_rc_pwm_max", 2000.0))
+        self._rc_pwm_trim = float(self.drone_options.get("mavros_rc_pwm_trim", 1500.0))
+        self._vision_rgb_topic = str(
+            self.drone_options.get("vision_rgb_topic", "/camera/image_raw")
+        )
+        self._vision_depth_topic = str(
+            self.drone_options.get("vision_depth_topic", "/camera/depth/image_raw")
+        )
+        self._vision_seg_topic = str(
+            self.drone_options.get("vision_seg_topic", "")
+        ).strip()
+        self._vision_depth_is_meters = bool(
+            self.drone_options.get("vision_depth_is_meters", True)
+        )
+        self._has_seg_subscription = False
+
 
         self._next_uid = 1
         self._body_ids: list[int] = []
@@ -124,7 +149,8 @@ class ArdupilotAdapter:
             from rclpy.executors import SingleThreadedExecutor
             from rclpy.node import Node
             from rclpy.qos import qos_profile_sensor_data
-            from sensor_msgs.msg import Imu
+            from sensor_msgs.msg import Image, Imu
+            from mavros_msgs.msg import RCOut
         except Exception:
             return
 
@@ -147,6 +173,9 @@ class ArdupilotAdapter:
             _mavros_vel_topic = str(
                 self.drone_options.get("mavros_vel_topic", "/mavros/local_position/velocity_local")
             )
+            _mavros_rc_out_topic = str(
+                    self.drone_options.get("mavros_rc_out_topic", "/mavros/rc/out")
+                )
             qos_latest = deepcopy(qos_profile_sensor_data)
             qos_latest.depth = 1
             self._node.create_subscription(
@@ -167,6 +196,32 @@ class ArdupilotAdapter:
                 self._on_vel,
                 qos_latest,
             )
+            self._node.create_subscription(
+                    RCOut,
+                    _mavros_rc_out_topic,
+                    self._on_rc_out,
+                    qos_latest,
+                )
+            self._node.create_subscription(
+                Image,
+                self._vision_rgb_topic,
+                self._on_rgb_image,
+                qos_latest,
+            )
+            self._node.create_subscription(
+                Image,
+                self._vision_depth_topic,
+                self._on_depth_image,
+                qos_latest,
+            )
+            if self._vision_seg_topic:
+                self._node.create_subscription(
+                    Image,
+                    self._vision_seg_topic,
+                    self._on_seg_image,
+                    qos_latest,
+                )
+                self._has_seg_subscription = True
             self._ros_state_ready = True
         except Exception:
             self._ros_state_ready = False
@@ -215,6 +270,155 @@ class ArdupilotAdapter:
         try:
             vmsg = msg.twist.linear
             self._lin_vel = np.array([vmsg.x, vmsg.y, vmsg.z], dtype=np.float64)
+            self._state_update_seq += 1
+        except Exception:
+            return
+
+    def _norm_surface_pwm(self, pwm_value: float) -> float:
+        span = max(1.0, 0.5 * (self._rc_pwm_max - self._rc_pwm_min))
+        return float(np.clip((pwm_value - self._rc_pwm_trim) / span, -1.0, 1.0))
+
+    def _norm_throttle_pwm(self, pwm_value: float) -> float:
+        span = max(1.0, self._rc_pwm_max - self._rc_pwm_min)
+        return float(np.clip((pwm_value - self._rc_pwm_min) / span, 0.0, 1.0))
+    def _on_rc_out(self, msg: Any) -> None:
+        try:
+            channels = np.asarray(msg.channels, dtype=np.float64).reshape(-1)
+            if channels.size == 0:
+                return
+
+            n_surfaces = min(5, self._aux.shape[0] - 1)
+            for i in range(n_surfaces):
+                if i >= self._rc_surface_channel_indices.size:
+                    break
+                ch_idx = int(self._rc_surface_channel_indices[i])
+                if 0 <= ch_idx < channels.size:
+                    self._aux[i] = self._norm_surface_pwm(channels[ch_idx])
+
+            if self._aux.shape[0] >= 6:
+                t_idx = self._rc_throttle_channel_index
+                if 0 <= t_idx < channels.size:
+                    self._aux[5] = self._norm_throttle_pwm(channels[t_idx])
+
+            self._state_update_seq += 1
+        except Exception:
+            return
+
+    @staticmethod
+    def _ros_image_to_array(msg: Any) -> None | np.ndarray:
+        h = int(getattr(msg, "height", 0))
+        w = int(getattr(msg, "width", 0))
+        step = int(getattr(msg, "step", 0))
+        enc = str(getattr(msg, "encoding", "")).lower()
+        data = getattr(msg, "data", None)
+        if h <= 0 or w <= 0 or step <= 0 or data is None:
+            return None
+
+        enc_map: dict[str, tuple[Any, int]] = {
+            "mono8": (np.uint8, 1),
+            "8uc1": (np.uint8, 1),
+            "8sc1": (np.int8, 1),
+            "16uc1": (np.uint16, 1),
+            "16sc1": (np.int16, 1),
+            "32sc1": (np.int32, 1),
+            "32fc1": (np.float32, 1),
+            "rgb8": (np.uint8, 3),
+            "bgr8": (np.uint8, 3),
+            "rgba8": (np.uint8, 4),
+            "bgra8": (np.uint8, 4),
+        }
+        if enc not in enc_map:
+            return None
+
+        dtype, channels = enc_map[enc]
+        itemsize = np.dtype(dtype).itemsize
+        row_elems = step // itemsize
+        needed = w * channels
+        if row_elems < needed:
+            return None
+
+        arr = np.frombuffer(data, dtype=dtype)
+        expected = h * row_elems
+        if arr.size < expected:
+            return None
+        arr = arr[:expected].reshape(h, row_elems)
+        arr = arr[:, :needed]
+        if channels == 1:
+            arr = arr.reshape(h, w, 1)
+        else:
+            arr = arr.reshape(h, w, channels)
+        return np.ascontiguousarray(arr)
+
+    @staticmethod
+    def _depth_meters_to_buffer(depth_m: np.ndarray) -> np.ndarray:
+        near = 0.1
+        far = 255.0
+        z = np.asarray(depth_m, dtype=np.float32)
+        out = np.zeros_like(z, dtype=np.float32)
+        valid = np.isfinite(z) & (z > 0.0)
+        denom = np.maximum(z[valid] * (far - near), 1e-9)
+        out[valid] = (far * (z[valid] - near)) / denom
+        return np.clip(out, 0.0, 1.0)
+
+    def _on_rgb_image(self, msg: Any) -> None:
+        try:
+            arr = self._ros_image_to_array(msg)
+            if arr is None:
+                return
+
+            enc = str(getattr(msg, "encoding", "")).lower()
+            if enc == "bgr8":
+                arr = arr[..., ::-1]
+            elif enc == "bgra8":
+                arr = arr[..., [2, 1, 0, 3]]
+
+            if arr.shape[-1] == 3:
+                alpha = np.full((arr.shape[0], arr.shape[1], 1), 255, dtype=np.uint8)
+                rgba = np.concatenate([arr.astype(np.uint8, copy=False), alpha], axis=-1)
+            elif arr.shape[-1] == 4:
+                rgba = arr.astype(np.uint8, copy=False)
+            else:
+                gray = arr[..., 0].astype(np.uint8, copy=False)
+                rgba = np.repeat(gray[..., None], 4, axis=-1)
+                rgba[..., 3] = 255
+
+            drone = self.drones[0]
+            drone.rgbaImg = np.ascontiguousarray(rgba)
+            if not self._has_seg_subscription:
+                drone.segImg = np.ascontiguousarray(rgba[..., :1])
+            self._state_update_seq += 1
+        except Exception:
+            return
+
+    def _on_depth_image(self, msg: Any) -> None:
+        try:
+            arr = self._ros_image_to_array(msg)
+            if arr is None:
+                return
+
+            depth = arr[..., 0]
+            enc = str(getattr(msg, "encoding", "")).lower()
+            if enc == "16uc1":
+                depth_m = depth.astype(np.float32) * 0.001
+            else:
+                depth_m = depth.astype(np.float32)
+
+            if self._vision_depth_is_meters:
+                depth_img = self._depth_meters_to_buffer(depth_m)
+            else:
+                depth_img = np.clip(depth_m, 0.0, 1.0)
+
+            self.drones[0].depthImg = np.ascontiguousarray(depth_img[..., None])
+            self._state_update_seq += 1
+        except Exception:
+            return
+
+    def _on_seg_image(self, msg: Any) -> None:
+        try:
+            arr = self._ros_image_to_array(msg)
+            if arr is None:
+                return
+            self.drones[0].segImg = np.ascontiguousarray(arr[..., :1])
             self._state_update_seq += 1
         except Exception:
             return

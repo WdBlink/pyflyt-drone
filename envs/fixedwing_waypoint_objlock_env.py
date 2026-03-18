@@ -10,8 +10,10 @@ import pybullet_data
 from gymnasium import spaces
 
 from PyFlyt.core.abstractions.camera import Camera
-from envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
-from PyFlyt.gym_envs.utils.waypoint_handler import WaypointHandler
+# from envs.fixedwing_envs.fixedwing_base_env import FixedwingBaseEnv
+from envs.fixedwing_envs.ardupilot_base_env import FixedwingBaseEnv
+# from PyFlyt.gym_envs.utils.waypoint_handler import WaypointHandler
+from envs.fixedwing_envs.ardupilot_base_waypoint import WaypointHandler
 
 
 class FixedwingWaypointObjLockEnv(FixedwingBaseEnv):
