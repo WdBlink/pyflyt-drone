@@ -88,6 +88,25 @@ class ArdupilotAdapter:
         self._rc_pwm_min = float(self.drone_options.get("mavros_rc_pwm_min", 1000.0))
         self._rc_pwm_max = float(self.drone_options.get("mavros_rc_pwm_max", 2000.0))
         self._rc_pwm_trim = float(self.drone_options.get("mavros_rc_pwm_trim", 1500.0))
+        self._control_mode = str(
+            self.drone_options.get("control_mode", "rc_override")
+        ).strip().lower()
+        self._mavros_rc_override_topic = str(
+            self.drone_options.get("mavros_rc_override_topic", "/mavros/rc/override")
+        )
+        self._rc_override_roll_channel = int(
+            self.drone_options.get("mavros_rc_roll_channel", 0)
+        )  # RC1
+        self._rc_override_pitch_channel = int(
+            self.drone_options.get("mavros_rc_pitch_channel", 1)
+        )  # RC2
+        self._rc_override_yaw_channel = int(
+            self.drone_options.get("mavros_rc_yaw_channel", 3)
+        )  # RC4
+        self._rc_override_throttle_channel = int(
+            self.drone_options.get("mavros_rc_throttle_channel", 2)
+        )  # RC3
+
         self._vision_rgb_topic = str(
             self.drone_options.get("vision_rgb_topic", "/camera/image_raw")
         )
@@ -105,6 +124,10 @@ class ArdupilotAdapter:
         self._rclpy = None
         self._node = None
         self._executor = None
+        self._rc_override_pub = None
+        self._OverrideRCIn = None
+        self._rc_chan_nochange = 65535
+        self._rc_channel_count = 18
         self._owns_rclpy_init = False
         self._ros_state_ready = False
         self._state_update_seq = 0
@@ -146,7 +169,7 @@ class ArdupilotAdapter:
             from rclpy.node import Node
             from rclpy.qos import qos_profile_sensor_data
             from sensor_msgs.msg import Image, Imu
-            from mavros_msgs.msg import RCOut
+            from mavros_msgs.msg import RCOut, OverrideRCIn
         except Exception:
             return
 
@@ -197,6 +220,19 @@ class ArdupilotAdapter:
                     _mavros_rc_out_topic,
                     self._on_rc_out,
                     qos_latest,
+                )
+            if self._control_mode == "rc_override":
+                self._rc_override_pub = self._node.create_publisher(
+                    OverrideRCIn,
+                    self._mavros_rc_override_topic,
+                    qos_latest,
+                )
+                self._OverrideRCIn = OverrideRCIn
+                self._rc_chan_nochange = int(
+                    getattr(OverrideRCIn, "CHAN_NOCHANGE", 65535)
+                )
+                self._rc_channel_count = int(
+                    len(getattr(OverrideRCIn(), "channels", [0] * 18))
                 )
             self._node.create_subscription(
                 Image,
@@ -269,6 +305,21 @@ class ArdupilotAdapter:
     def _norm_throttle_pwm(self, pwm_value: float) -> float:
         span = max(1.0, self._rc_pwm_max - self._rc_pwm_min)
         return float(np.clip((pwm_value - self._rc_pwm_min) / span, 0.0, 1.0))
+
+    def _surface_norm_to_pwm(self, value: float) -> int:
+        v = float(np.clip(value, -1.0, 1.0))
+        span = max(1.0, 0.5 * (self._rc_pwm_max - self._rc_pwm_min))
+        pwm = self._rc_pwm_trim + (v * span)
+        return int(np.clip(np.round(pwm), self._rc_pwm_min, self._rc_pwm_max))
+
+    def _throttle_norm_to_pwm(self, value: float) -> int:
+        v = float(value)
+        # Support both [-1, 1] and [0, 1] throttle conventions.
+        if v < 0.0:
+            v = (v + 1.0) * 0.5
+        v = float(np.clip(v, 0.0, 1.0))
+        pwm = self._rc_pwm_min + v * (self._rc_pwm_max - self._rc_pwm_min)
+        return int(np.clip(np.round(pwm), self._rc_pwm_min, self._rc_pwm_max))
     def _on_rc_out(self, msg: Any) -> None:
         try:
             channels = np.asarray(msg.channels, dtype=np.float64).reshape(-1)
@@ -406,6 +457,81 @@ class ArdupilotAdapter:
     def getDebugVisualizerCamera(self):
         return ()
 
+    @staticmethod
+    def _resize_image_nearest(img: np.ndarray, out_h: int, out_w: int) -> np.ndarray:
+        arr = np.asarray(img)
+        if arr.ndim < 2:
+            return arr
+        in_h, in_w = int(arr.shape[0]), int(arr.shape[1])
+        if in_h == out_h and in_w == out_w:
+            return arr
+        if in_h <= 0 or in_w <= 0 or out_h <= 0 or out_w <= 0:
+            return arr
+        y_idx = np.clip(
+            np.round(np.linspace(0, in_h - 1, out_h)).astype(np.int64), 0, in_h - 1
+        )
+        x_idx = np.clip(
+            np.round(np.linspace(0, in_w - 1, out_w)).astype(np.int64), 0, in_w - 1
+        )
+        if arr.ndim == 2:
+            return arr[y_idx][:, x_idx]
+        return arr[y_idx][:, x_idx, ...]
+
+    def getCameraImage(self, *args: Any, **kwargs: Any):
+        width = int(kwargs.get("width", 0) or 0)
+        height = int(kwargs.get("height", 0) or 0)
+        if width <= 0 and len(args) >= 1:
+            width = int(args[0])
+        if height <= 0 and len(args) >= 2:
+            height = int(args[1])
+        if width <= 0:
+            width = 640
+        if height <= 0:
+            height = 480
+
+        drone = self.drones[0]
+
+        rgba = getattr(drone, "rgbaImg", None)
+        if rgba is None:
+            rgba_arr = np.zeros((height, width, 4), dtype=np.uint8)
+        else:
+            rgba_arr = np.asarray(rgba)
+            if rgba_arr.ndim == 2:
+                rgba_arr = np.repeat(rgba_arr[..., None], 4, axis=-1)
+            elif rgba_arr.ndim == 3 and rgba_arr.shape[-1] == 3:
+                alpha = np.full((rgba_arr.shape[0], rgba_arr.shape[1], 1), 255, dtype=np.uint8)
+                rgba_arr = np.concatenate([rgba_arr, alpha], axis=-1)
+            elif rgba_arr.ndim == 3 and rgba_arr.shape[-1] == 1:
+                rgba_arr = np.repeat(rgba_arr, 4, axis=-1)
+                rgba_arr[..., 3] = 255
+            elif rgba_arr.ndim != 3 or rgba_arr.shape[-1] < 4:
+                rgba_arr = np.zeros((height, width, 4), dtype=np.uint8)
+            rgba_arr = self._resize_image_nearest(rgba_arr, height, width).astype(np.uint8, copy=False)
+
+        depth = getattr(drone, "depthImg", None)
+        if depth is None:
+            depth_arr = np.zeros((height, width, 1), dtype=np.float32)
+        else:
+            depth_arr = np.asarray(depth)
+            if depth_arr.ndim == 2:
+                depth_arr = depth_arr[..., None]
+            elif depth_arr.ndim == 3 and depth_arr.shape[-1] > 1:
+                depth_arr = depth_arr[..., :1]
+            depth_arr = self._resize_image_nearest(depth_arr, height, width).astype(np.float32, copy=False)
+
+        seg = getattr(drone, "segImg", None)
+        if seg is None:
+            seg_arr = np.full((height, width, 1), -1, dtype=np.int32)
+        else:
+            seg_arr = np.asarray(seg)
+            if seg_arr.ndim == 2:
+                seg_arr = seg_arr[..., None]
+            elif seg_arr.ndim == 3 and seg_arr.shape[-1] > 1:
+                seg_arr = seg_arr[..., :1]
+            seg_arr = self._resize_image_nearest(seg_arr, height, width).astype(np.int32, copy=False)
+
+        return width, height, rgba_arr, depth_arr, seg_arr
+
     def register_all_new_bodies(self) -> None:
         pass
 
@@ -439,7 +565,39 @@ class ArdupilotAdapter:
 
     def set_setpoint(self, idx: int, action: np.ndarray) -> None:
         _ = idx
-        self._last_setpoint = np.asarray(action, dtype=np.float64).copy()
+        act = np.asarray(action, dtype=np.float64).reshape(-1)
+        self._last_setpoint = act.copy()
+
+        if (
+            self._control_mode != "rc_override"
+            or self._rc_override_pub is None
+            or self._OverrideRCIn is None
+            or act.size < 4
+        ):
+            return
+
+        try:
+            msg = self._OverrideRCIn()
+            channels = [int(self._rc_chan_nochange)] * int(self._rc_channel_count)
+
+            roll_pwm = self._surface_norm_to_pwm(act[0])
+            pitch_pwm = self._surface_norm_to_pwm(act[1])
+            yaw_pwm = self._surface_norm_to_pwm(act[2])
+            throttle_pwm = self._throttle_norm_to_pwm(act[3])
+
+            if 0 <= self._rc_override_roll_channel < len(channels):
+                channels[self._rc_override_roll_channel] = roll_pwm
+            if 0 <= self._rc_override_pitch_channel < len(channels):
+                channels[self._rc_override_pitch_channel] = pitch_pwm
+            if 0 <= self._rc_override_yaw_channel < len(channels):
+                channels[self._rc_override_yaw_channel] = yaw_pwm
+            if 0 <= self._rc_override_throttle_channel < len(channels):
+                channels[self._rc_override_throttle_channel] = throttle_pwm
+
+            msg.channels = channels
+            self._rc_override_pub.publish(msg)
+        except Exception:
+            return
 
     def getQuaternionFromEuler(self, euler_xyz: list[float]) -> tuple[float, float, float, float]:
         return p.getQuaternionFromEuler(euler_xyz)
