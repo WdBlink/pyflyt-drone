@@ -94,13 +94,9 @@ class ArdupilotAdapter:
         self._vision_depth_topic = str(
             self.drone_options.get("vision_depth_topic", "/camera/depth/image_raw")
         )
-        self._vision_seg_topic = str(
-            self.drone_options.get("vision_seg_topic", "")
-        ).strip()
         self._vision_depth_is_meters = bool(
             self.drone_options.get("vision_depth_is_meters", True)
         )
-        self._has_seg_subscription = False
 
 
         self._next_uid = 1
@@ -214,14 +210,6 @@ class ArdupilotAdapter:
                 self._on_depth_image,
                 qos_latest,
             )
-            if self._vision_seg_topic:
-                self._node.create_subscription(
-                    Image,
-                    self._vision_seg_topic,
-                    self._on_seg_image,
-                    qos_latest,
-                )
-                self._has_seg_subscription = True
             self._ros_state_ready = True
         except Exception:
             self._ros_state_ready = False
@@ -384,8 +372,7 @@ class ArdupilotAdapter:
 
             drone = self.drones[0]
             drone.rgbaImg = np.ascontiguousarray(rgba)
-            if not self._has_seg_subscription:
-                drone.segImg = np.ascontiguousarray(rgba[..., :1])
+
             self._state_update_seq += 1
         except Exception:
             return
@@ -409,16 +396,6 @@ class ArdupilotAdapter:
                 depth_img = np.clip(depth_m, 0.0, 1.0)
 
             self.drones[0].depthImg = np.ascontiguousarray(depth_img[..., None])
-            self._state_update_seq += 1
-        except Exception:
-            return
-
-    def _on_seg_image(self, msg: Any) -> None:
-        try:
-            arr = self._ros_image_to_array(msg)
-            if arr is None:
-                return
-            self.drones[0].segImg = np.ascontiguousarray(arr[..., :1])
             self._state_update_seq += 1
         except Exception:
             return
