@@ -81,6 +81,7 @@ class FixedwingObjLockEnv(FixedwingVtailBaseEnv):
         drone_model: str | None = None,
         drone_model_dir: str | None = None,
         wind_config: Optional[dict[str, Any]] = None,
+        spawn_exclude_center: bool = True,
     ):
         super().__init__(
             start_pos=np.array([[0.0, 0.0, 100.0]]),
@@ -144,6 +145,7 @@ class FixedwingObjLockEnv(FixedwingVtailBaseEnv):
         self.obstacle_safe_distance_m = obstacle_safe_distance_m
         self.obstacle_avoid_reward_scale = obstacle_avoid_reward_scale
         self.obstacle_avoid_max_penalty = obstacle_avoid_max_penalty
+        self.spawn_exclude_center = bool(spawn_exclude_center)
  
         # --- State Variables ---
         self._lock_steps = 0
@@ -397,23 +399,28 @@ class FixedwingObjLockEnv(FixedwingVtailBaseEnv):
         d_left = float(vis[6])
         d_center = float(vis[7])
         d_right = float(vis[8])
-        depths = [d for d in (d_left, d_center, d_right) if d > 0.0 and np.isfinite(d)]
-        if not depths:
-            return
 
-        d_obs = min(depths)
         d_safe = float(self.obstacle_safe_distance_m)
         if d_safe <= 0.0:
             return
 
-        if d_obs >= d_safe:
-            return
+        scale = float(self.obstacle_avoid_reward_scale) * 0.5  # Reduced scale for duck phase (always on)
 
-        scale = float(self.obstacle_avoid_reward_scale) * 0.5 # Reduced scale for duck phase (always on)
+        # Per-zone penalty: left, center, right
+        for d_obs in (d_left, d_center, d_right):
+            if d_obs <= 0.0 or not np.isfinite(d_obs):
+                continue
+            if d_obs >= d_safe:
+                # Comfort zone reward: when distance is between 50%-80% of safe distance
+                if d_obs >= d_safe * 0.5 and d_obs <= d_safe * 0.8:
+                    self.reward += 0.1 * scale
+                continue
 
-        penalty = scale * (d_safe - d_obs) / d_safe
-        penalty = min(penalty, float(self.obstacle_avoid_max_penalty))
-        self.reward -= penalty
+            # Squared penalty for violations
+            violation = (d_safe - d_obs) / d_safe
+            penalty = scale * (violation ** 2)
+            penalty = min(penalty, float(self.obstacle_avoid_max_penalty))
+            self.reward -= penalty
 
     def _reset_duck_state(self):
         self._lock_steps = 0
@@ -548,7 +555,7 @@ class FixedwingObjLockEnv(FixedwingVtailBaseEnv):
                     continue
 
             # Avoid spawning near center (start pos)
-            if x * x + y * y < 100.0:
+            if self.spawn_exclude_center and x * x + y * y < 100.0:
                 continue
 
             try:
@@ -715,22 +722,28 @@ class FixedwingObjLockEnv(FixedwingVtailBaseEnv):
             mask = seg_int != duck_id
 
         h, w = mask.shape
-        y_mid = int(h // 2)
+        # Sample at 3 row positions: 25%, 50%, 75% of image height
+        y_rows = [int(h * p) for p in (0.25, 0.5, 0.75)]
         x_1 = int(w // 3)
         x_2 = int(2 * w // 3)
 
-        def zone_mean_depth_buffer(x_start: int, x_end: int) -> float:
-            zone_mask = mask[y_mid, x_start:x_end]
-            if not np.any(zone_mask):
+        def zone_robust_depth_buffer(x_start: int, x_end: int) -> float:
+            # Collect depth values across all 3 rows for this zone
+            all_vals = []
+            for y_row in y_rows:
+                zone_mask = mask[y_row, x_start:x_end]
+                if np.any(zone_mask):
+                    vals = depth[y_row, x_start:x_end][zone_mask]
+                    if vals.size > 0:
+                        all_vals.extend(vals.tolist())
+            if not all_vals:
                 return 0.0
-            vals = depth[y_mid, x_start:x_end][zone_mask]
-            if vals.size == 0:
-                return 0.0
-            return float(np.mean(vals))
+            # Use 5th percentile for robustness (ignores closest outlier pixels)
+            return float(np.percentile(all_vals, 5))
 
-        d_left_buf = zone_mean_depth_buffer(0, x_1)
-        d_center_buf = zone_mean_depth_buffer(x_1, x_2)
-        d_right_buf = zone_mean_depth_buffer(x_2, w)
+        d_left_buf = zone_robust_depth_buffer(0, x_1)
+        d_center_buf = zone_robust_depth_buffer(x_1, x_2)
+        d_right_buf = zone_robust_depth_buffer(x_2, w)
 
         d_left = self._depth_buffer_to_meters(d_left_buf) if d_left_buf > 0.0 else 0.0
         d_center = self._depth_buffer_to_meters(d_center_buf) if d_center_buf > 0.0 else 0.0

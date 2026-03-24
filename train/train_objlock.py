@@ -87,6 +87,30 @@ TRAIN_CONFIG = {
     },
 }
 
+TRAIN_PHASES = {
+    "phase1": {
+        "num_obstacles": 3,
+        "obstacle_safe_distance_m": 20.0,
+        "obstacle_avoid_reward_scale": 2.0,
+        "duck_strike_reward": 0.0,
+        "duck_visible_step_reward": 0.5,  # 25% of normal
+        "duck_area_reward_scale": 1.0,   # 20% of normal
+        "spawn_exclude_center": True,
+        "total_timesteps": 4_000_000,
+    },
+    "phase2": {
+        "num_obstacles": 5,
+        "obstacle_safe_distance_m": 15.0,
+        "obstacle_avoid_reward_scale": 1.5,
+        "duck_strike_reward": 400.0,
+        "duck_visible_step_reward": 2.0,
+        "duck_area_reward_scale": 5.0,
+        "spawn_exclude_center": True,
+        "total_timesteps": 8_000_000,
+    },
+    # Phase 3 can be added later with increasing difficulty
+}
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pretrained_model", type=str, default="models/obj_lock_only_ppo_v2.3_hist/best_model.zip")
@@ -156,19 +180,57 @@ def make_env(rank: int, seed: int = 0, use_egl: bool = False):
         return env
     return _init
 
-class ObjLockEvalCallback(EvalCallback):
-    def _log_success_callback(self, locals_: dict, globals_: dict) -> None:
-        info = locals_.get("info")
-        if not locals_.get("done"):
-            return
-        if not isinstance(info, dict):
-            return
+class ObjLockAvoidanceEvalCallback(EvalCallback):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._collision_buffer = []
+        self._out_of_bounds_buffer = []
+        self._duck_strike_buffer = []
+        self._timeout_buffer = []
+        self._reward_buffer = []
+        self._step_count_buffer = []
 
-        strike = info.get("duck_strike")
-        if strike is None:
-            strike = info.get("is_success")
-        if strike is not None:
-            self._is_success_buffer.append(bool(strike))
+    def _on_step(self) -> bool:
+        result = super()._on_step()
+        # Buffer info from infos (VecEnv returns list of infos)
+        for info in self.locals.get("infos", []):
+            if info.get("done"):
+                self._collision_buffer.append(1 if info.get("collision") else 0)
+                self._out_of_bounds_buffer.append(1 if info.get("out_of_bounds") else 0)
+                self._duck_strike_buffer.append(1 if info.get("duck_strike") else 0)
+                self._timeout_buffer.append(1 if info.get("env_complete") else 0)
+        return result
+
+    def _on_eval_end(self):
+        n = max(len(self._collision_buffer), 1)
+
+        collision_rate = sum(self._collision_buffer) / n
+        out_of_bounds = sum(self._out_of_bounds_buffer) / n
+        duck_strike_rate = sum(self._duck_strike_buffer) / n
+        success_with_avoidance = sum(
+            c == 0 and d == 1
+            for c, d in zip(self._collision_buffer, self._duck_strike_buffer)
+        ) / n
+        timeout_rate = sum(self._timeout_buffer) / n
+
+        self.logger.record("eval/collision_rate", collision_rate)
+        self.logger.record("eval/out_of_bounds_rate", out_of_bounds)
+        self.logger.record("eval/duck_strike_rate", duck_strike_rate)
+        self.logger.record("eval/success_with_avoidance", success_with_avoidance)
+        self.logger.record("eval/timeout_rate", timeout_rate)
+
+        # Hack detection
+        if timeout_rate > 0.9 and collision_rate < 0.01:
+            print("[WARNING] Possible orbit/freeze hack detected")
+            self.logger.record("eval/hack_detected", 1.0)
+
+        # Reset buffers
+        self._collision_buffer = []
+        self._out_of_bounds_buffer = []
+        self._duck_strike_buffer = []
+        self._timeout_buffer = []
+
+        super()._on_eval_end()
 
 def main():
     args = parse_args()
@@ -217,7 +279,7 @@ def main():
     eval_env = VecNormalize(eval_env, norm_obs=True, norm_reward=False, clip_obs=10.0)
     
     # Callbacks
-    eval_callback = ObjLockEvalCallback(
+    eval_callback = ObjLockAvoidanceEvalCallback(
         eval_env,
         best_model_save_path=TRAIN_CONFIG["model_dir"],
         log_path=TRAIN_CONFIG["log_dir"],
