@@ -36,6 +36,10 @@ ENV/
 # Project specific
 models/
 logs/
+/ctx
+/.claude/
+/.harness/
+/.harness-fix-opc/
 *.log
 *.png
 *.jpg

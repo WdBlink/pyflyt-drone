@@ -71,7 +71,7 @@ TRAIN_CONFIG = {
     "duck_vision_history_len": 3,
     "duck_vision_use_deltas": True,
     "drone_model": "fixedwing_vtail",
-    "drone_model_dir": "/home/wdblink/Project/pyflyt-drone/my_models",
+    "drone_model_dir": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "my_models")),
 
     "wind": {
         "enabled": True,

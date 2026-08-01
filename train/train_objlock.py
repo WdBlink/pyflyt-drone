@@ -71,7 +71,7 @@ TRAIN_CONFIG = {
     "duck_vision_history_len": 3,
     "duck_vision_use_deltas": True,
     "drone_model": "fixedwing_vtail",
-    "drone_model_dir": "/home/wdblink/Project/pyflyt-drone/my_models",
+    "drone_model_dir": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "my_models")),
 
     "wind": {
         "enabled": True,
@@ -183,25 +183,43 @@ def make_env(rank: int, seed: int = 0, use_egl: bool = False):
 class ObjLockAvoidanceEvalCallback(EvalCallback):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self._reset_eval_metric_buffers()
+
+    def _reset_eval_metric_buffers(self) -> None:
         self._collision_buffer = []
         self._out_of_bounds_buffer = []
         self._duck_strike_buffer = []
         self._timeout_buffer = []
-        self._reward_buffer = []
-        self._step_count_buffer = []
 
-    def _on_step(self) -> bool:
-        result = super()._on_step()
-        # Buffer info from infos (VecEnv returns list of infos)
-        for info in self.locals.get("infos", []):
-            if info.get("done"):
-                self._collision_buffer.append(1 if info.get("collision") else 0)
-                self._out_of_bounds_buffer.append(1 if info.get("out_of_bounds") else 0)
-                self._duck_strike_buffer.append(1 if info.get("duck_strike") else 0)
-                self._timeout_buffer.append(1 if info.get("env_complete") else 0)
-        return result
+    def _log_success_callback(self, locals_: dict, globals_: dict) -> None:
+        info = locals_.get("info")
+        if isinstance(info, (list, tuple)) and len(info) > 0:
+            info = info[0]
 
-    def _on_eval_end(self):
+        if not locals_.get("done") or not isinstance(info, dict):
+            return
+
+        duck_strike = bool(info.get("duck_strike", info.get("is_success", False)))
+        collision = bool(info.get("collision", False))
+        out_of_bounds = bool(info.get("out_of_bounds", False))
+        timeout = bool(
+            info.get("TimeLimit.truncated", False)
+            or info.get("truncated", False)
+            or (
+                not duck_strike
+                and not collision
+                and not out_of_bounds
+                and not bool(info.get("env_complete", False))
+            )
+        )
+
+        self._collision_buffer.append(1 if collision else 0)
+        self._out_of_bounds_buffer.append(1 if out_of_bounds else 0)
+        self._duck_strike_buffer.append(1 if duck_strike else 0)
+        self._timeout_buffer.append(1 if timeout else 0)
+        self._is_success_buffer.append(duck_strike)
+
+    def _record_eval_metrics(self) -> None:
         n = max(len(self._collision_buffer), 1)
 
         collision_rate = sum(self._collision_buffer) / n
@@ -224,13 +242,92 @@ class ObjLockAvoidanceEvalCallback(EvalCallback):
             print("[WARNING] Possible orbit/freeze hack detected")
             self.logger.record("eval/hack_detected", 1.0)
 
-        # Reset buffers
-        self._collision_buffer = []
-        self._out_of_bounds_buffer = []
-        self._duck_strike_buffer = []
-        self._timeout_buffer = []
+    def _on_step(self) -> bool:
+        continue_training = True
 
-        super()._on_eval_end()
+        if self.eval_freq > 0 and self.n_calls % self.eval_freq == 0:
+            if self.model.get_vec_normalize_env() is not None:
+                from stable_baselines3.common.vec_env import sync_envs_normalization
+
+                try:
+                    sync_envs_normalization(self.training_env, self.eval_env)
+                except AttributeError as e:
+                    raise AssertionError(
+                        "Training and eval env are not wrapped the same way, "
+                        "see https://stable-baselines3.readthedocs.io/en/master/guide/callbacks.html#evalcallback "
+                        "and warning above."
+                    ) from e
+
+            from stable_baselines3.common.evaluation import evaluate_policy
+
+            self._is_success_buffer = []
+            self._reset_eval_metric_buffers()
+
+            episode_rewards, episode_lengths = evaluate_policy(
+                self.model,
+                self.eval_env,
+                n_eval_episodes=self.n_eval_episodes,
+                render=self.render,
+                deterministic=self.deterministic,
+                return_episode_rewards=True,
+                warn=self.warn,
+                callback=self._log_success_callback,
+            )
+
+            if self.log_path is not None:
+                assert isinstance(episode_rewards, list)
+                assert isinstance(episode_lengths, list)
+                self.evaluations_timesteps.append(self.num_timesteps)
+                self.evaluations_results.append(episode_rewards)
+                self.evaluations_length.append(episode_lengths)
+
+                kwargs = {}
+                if len(self._is_success_buffer) > 0:
+                    self.evaluations_successes.append(self._is_success_buffer)
+                    kwargs = dict(successes=self.evaluations_successes)
+
+                np.savez(
+                    self.log_path,
+                    timesteps=self.evaluations_timesteps,
+                    results=self.evaluations_results,
+                    ep_lengths=self.evaluations_length,
+                    **kwargs,
+                )
+
+            mean_reward, std_reward = np.mean(episode_rewards), np.std(episode_rewards)
+            mean_ep_length, std_ep_length = np.mean(episode_lengths), np.std(episode_lengths)
+            self.last_mean_reward = float(mean_reward)
+
+            if self.verbose >= 1:
+                print(f"Eval num_timesteps={self.num_timesteps}, " f"episode_reward={mean_reward:.2f} +/- {std_reward:.2f}")
+                print(f"Episode length: {mean_ep_length:.2f} +/- {std_ep_length:.2f}")
+
+            self.logger.record("eval/mean_reward", float(mean_reward))
+            self.logger.record("eval/mean_ep_length", mean_ep_length)
+            self._record_eval_metrics()
+
+            if len(self._is_success_buffer) > 0:
+                success_rate = np.mean(self._is_success_buffer)
+                if self.verbose >= 1:
+                    print(f"Success rate: {100 * success_rate:.2f}%")
+                self.logger.record("eval/success_rate", success_rate)
+
+            self.logger.record("time/total_timesteps", self.num_timesteps, exclude="tensorboard")
+            self.logger.dump(self.num_timesteps)
+
+            if mean_reward > self.best_mean_reward:
+                if self.verbose >= 1:
+                    print("New best mean reward!")
+                if self.best_model_save_path is not None:
+                    self.model.save(os.path.join(self.best_model_save_path, "best_model"))
+                self.best_mean_reward = float(mean_reward)
+                if self.callback_on_new_best is not None:
+                    continue_training = self.callback_on_new_best.on_step()
+
+            if self.callback is not None:
+                continue_training = continue_training and self._on_event()
+
+        return continue_training
 
 def main():
     args = parse_args()

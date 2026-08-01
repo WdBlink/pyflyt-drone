@@ -15,10 +15,23 @@ import numpy as np
 # 导入 3D 绘图支持
 from mpl_toolkits.mplot3d import Axes3D
 
-# 在非 GUI 环境下使用 Agg 后端
+# 根据平台选择合适的 matplotlib 后端。
+# - WSL: 默认 Agg（WSLg 未启用时没有 X server）
+# - macOS: DISPLAY 通常未设置，但系统使用 Quartz/Aqua，应优先 macosx 后端
+# - 其他: 有 DISPLAY 则使用默认后端，否则 Agg
 import os
-if "WSL_DISTRO_NAME" in os.environ or os.environ.get("DISPLAY") is None:
-    plt.switch_backend('Agg')
+import sys
+
+if "WSL_DISTRO_NAME" in os.environ:
+    plt.switch_backend("Agg")
+elif sys.platform == "darwin":
+    try:
+        plt.switch_backend("macosx")
+    except Exception:
+        plt.switch_backend("Agg")
+elif os.environ.get("DISPLAY") is None:
+    plt.switch_backend("Agg")
+# else: keep matplotlib's default backend (Qt/GTK/etc.)
 
 
 def plot_xy_trajectory(points: List[Tuple[float, float]], a: Tuple[float, float], b: Tuple[float, float]) -> None:
