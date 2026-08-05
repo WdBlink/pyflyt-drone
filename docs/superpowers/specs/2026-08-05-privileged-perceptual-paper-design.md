@@ -9,35 +9,48 @@ The accepted scope decision is
 This document records the implementation-facing architecture and does not
 replace either source.
 
+The executable identities and mutable enumerations are defined only by
+`paper/protocol/method-matrix.json`,
+`paper/protocol/evaluation-protocol.json`, and
+`paper/protocol/loop-guard.json`.
+
 ## Design
 
 The work is organized around one strict information boundary. A deployment
-policy consumes only onboard proprioception and a detector-tracklet contract.
+policy consumes only synchronized onboard RGB-D, proprioception, and their
+actor-visible causal measurement contract.
 Exact target geometry, dense obstacle clearance, realized wind, and detector
 error are training-only fields. Environment termination and evaluator metrics
 may use ground truth, but those channels never enter the deployed action path.
 
-The proposed policy has three independently removable mechanisms:
+The proposed policy has five independently removable mechanisms:
 
 1. a recurrent deployment belief built from proprioception and detector
    tracklets;
-2. training-only privileged belief supervision plus a privileged critic;
-3. a constraint-aware self-paced sampler that concentrates training near the
+2. a training-only privileged critic;
+3. auxiliary privileged belief supervision;
+4. a constrained safety objective;
+5. a boundary curriculum sampler that concentrates training near the
    visibility-safety conflict boundary without changing the frozen evaluation
    distribution.
+
+Each mechanism has a semantic switch and leave-one-out cell. The protocol also
+requires the critic-privilege×belief-supervision and
+constraint×curriculum factorials; other cross-interactions are limitations
+unless separately declared.
 
 The evaluator owns scenario generation. It materializes a seeded scenario
 manifest before an episode and passes the same manifest to ground-truth,
 degraded-ground-truth, and FastSAM perception adapters. Adapters return the
-same typed tracklet. FastSAM must associate a mask with the target; a union of
-all masks is not a valid target detection. Missing weights, association
-failure, and detector exceptions are typed outcomes, never silent ground-truth
-fallbacks.
+same actor measurement while evaluator-only telemetry retains failure types.
+FastSAM uses frozen appearance/template and temporal evidence; ambiguity is
+actor-visible missing, never a mask union or truth fallback.
 
 Training and evaluation write content-addressed manifests. Small aggregate
 evidence belongs under `paper/`; large checkpoints and raw trajectories remain
-ignored. Confirmatory evaluation uses a predeclared method/cell/seed matrix.
-Missing runs stay in the ledger and cannot be dropped from statistics.
+ignored. Confirmatory evaluation uses the paired episode-level manifest and
+estimator defined by the evaluation protocol. Any required non-completed or
+corrupt record makes the primary analysis NONPASS.
 
 ## Error handling
 

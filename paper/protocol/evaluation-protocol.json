@@ -1,0 +1,282 @@
+{
+  "schemaVersion": "ppg.evaluation-protocol.v1",
+  "protocolStatus": "frozen-prepilot",
+  "deploymentSensorSuite": {
+    "id": "onboard-synchronized-rgbd-proprio-v1",
+    "modalities": ["rgb", "depth", "proprioception"],
+    "synchronization": "one timestamped RGB-D frame per camera tick; proprioception is sampled at or before that timestamp",
+    "rgb": {"width": 640, "height": 480, "encoding": "uint8-srgb", "rateHz": 20},
+    "depth": {
+      "width": 640,
+      "height": 480,
+      "encoding": "float32-meters",
+      "rateHz": 20,
+      "minimumMeters": 0.2,
+      "maximumMeters": 80.0,
+      "invalidValue": 0.0,
+      "noiseModel": "sensor-depth-noise-v1",
+      "forbiddenSources": ["renderer-z-buffer-unnoised", "segmentation-object-id", "simulator-body-id"]
+    },
+    "latencySteps": 1,
+    "staleAfterSteps": 2
+  },
+  "observationContracts": {
+    "actor": {
+      "id": "ActorObservationV1",
+      "fields": [
+        "orientation_6d",
+        "angular_velocity_body_radps",
+        "linear_velocity_body_mps",
+        "altitude_m",
+        "airspeed_mps",
+        "previous_action",
+        "actuator_state",
+        "detection_present",
+        "target_confidence",
+        "target_center_xy_normalized",
+        "target_area_ratio",
+        "target_depth_m",
+        "obstacle_depth_lcr_m",
+        "steps_since_detection",
+        "last_seen_valid",
+        "last_seen_center_xy_normalized",
+        "last_seen_area_ratio",
+        "last_seen_depth_m"
+      ],
+      "detected": {
+        "detection_present": 1,
+        "currentPayload": "finite clipped sensor-derived values"
+      },
+      "missing": {
+        "detection_present": 0,
+        "canonicalCurrentPayload": {
+          "target_confidence": 0.0,
+          "target_center_xy_normalized": [0.0, 0.0],
+          "target_area_ratio": 0.0,
+          "target_depth_m": 0.0
+        },
+        "allFailureCausesShareRepresentation": true
+      },
+      "lastSeen": {
+        "source": "actor-visible causal history only",
+        "reset": "last_seen_valid=0 and zero payload at every episode boundary",
+        "expirySteps": 40
+      }
+    },
+    "evaluator": {
+      "id": "EvaluatorTelemetryV1",
+      "fields": [
+        "adapter_outcome",
+        "association_outcome",
+        "detector_exception_type",
+        "detector_artifact_status",
+        "target_truth_body_m",
+        "obstacle_clearance_truth_m",
+        "realized_wind_enu_mps",
+        "perception_error",
+        "simulator_object_ids",
+        "ideal_segmentation",
+        "renderer_depth_unnoised"
+      ],
+      "adapterOutcomes": [
+        "detected",
+        "not_detected",
+        "weights_missing",
+        "association_ambiguous",
+        "association_expired",
+        "detector_exception"
+      ]
+    },
+    "criticPrivileged": {
+      "id": "CriticPrivilegedV1",
+      "fields": [
+        "target_truth_body_m",
+        "obstacle_clearance_truth_m",
+        "realized_wind_enu_mps",
+        "perception_error"
+      ],
+      "trainingOnly": true
+    },
+    "actionPathInvariant": "holding actor observation, actor parameters, actor hidden state, and actor RNG fixed, changing every critic/evaluator field must produce byte-identical action-distribution parameters and next actor hidden state"
+  },
+  "targetAssociation": {
+    "id": "fastsam-frozen-template-temporal-v1",
+    "allowedInputs": ["current_rgb", "candidate_masks", "frozen_target_template", "past_actor_visible_track"],
+    "forbiddenInputs": ["target_truth", "simulator_object_id", "truth_iou", "confirmatory_frame_tuning", "future_frame"],
+    "template": {
+      "source": "disjoint-calibration-corpus",
+      "sha256": null,
+      "mustFreezeBeforePilotComparison": true
+    },
+    "preprocessingSha256": null,
+    "score": {
+      "formula": "0.60*appearance_cosine + 0.25*warped_mask_iou + 0.15*motion_gate_score",
+      "minimum": 0.72,
+      "ambiguityEpsilon": 0.02,
+      "motionGateNormalizedPixels": 0.18
+    },
+    "initialization": "accept exactly one candidate above minimum and outside ambiguityEpsilon of the runner-up; otherwise missing",
+    "continuation": "apply the same score to the prior causal track; never union candidate masks",
+    "maximumMissingSteps": 10,
+    "reacquisition": "after expiry use initialization semantics with the same frozen template",
+    "tieBehavior": "missing",
+    "mergedOrSplitBehavior": "missing unless exactly one candidate satisfies the frozen gate",
+    "episodeReset": "clear all association state and actor last-seen state"
+  },
+  "degradedTruth": {
+    "id": "causal-corruption-v1",
+    "calibrationCorpus": {
+      "id": "degradation-calibration-disjoint-v1",
+      "manifestSha256": null,
+      "disjointFrom": ["training-pool", "validation-manifest", "confirmatory-manifest"],
+      "fitMetric": "maximum-likelihood fit to FastSAM detection, localization, depth, latency, and false-positive traces"
+    },
+    "orderedTransforms": ["latency_queue", "markov_miss_burst", "false_positive", "center_area_jitter", "depth_jitter", "range_clip"],
+    "parameterBounds": {
+      "latencySteps": [0, 4],
+      "missProbability": [0.0, 1.0],
+      "missPersistence": [0.0, 0.99],
+      "falsePositiveProbability": [0.0, 0.2],
+      "centerStdNormalized": [0.0, 0.2],
+      "areaLogStd": [0.0, 0.5],
+      "depthStdMeters": [0.0, 5.0]
+    },
+    "causality": "frame t output may depend only on frozen parameters, causal truth through t, and keyed RNG counters through t",
+    "forbiddenDependencies": ["method_id", "policy_action", "policy_state", "future_truth", "validation_result", "confirmatory_result"],
+    "rng": {
+      "algorithm": "sha256-counter-v1",
+      "keyFields": ["scenario_id", "episode_seed", "adapter_id", "frame_index", "transform_id", "draw_index"],
+      "methodIndependent": true
+    },
+    "freezeReceipt": {
+      "schemaVersion": "ppg.degradation-freeze.v1",
+      "requiredFields": ["calibration_manifest_sha256", "parameters_sha256", "operator_sha256", "created_at", "producer_command"],
+      "immutableBeforeComparativeEvaluation": true
+    }
+  },
+  "curriculum": {
+    "id": "training-only-boundary-sampler-v1",
+    "pool": "training-only-scenario-pool-v1",
+    "allowedFeedback": ["training_rollout_safe_success", "training_rollout_visibility_loss", "training_rollout_minimum_clearance"],
+    "forbiddenFeedback": ["validation_cell_result", "validation_manifest", "confirmatory_result", "confirmatory_manifest"],
+    "boundaryScore": "abs(safe_success_rate-0.50) + 0.5*abs(visibility_retention_rate-0.50) + unsafe_rate",
+    "updateEveryEpisodes": 64,
+    "weightUpdate": "w_next=max(0.02,exp(-2.0*boundaryScore)); normalize over training strata",
+    "minimumStratumProbability": 0.02,
+    "zeroSuccessFallback": "retain prior weights and increase safety-feasible stratum mass by one bounded update",
+    "zeroFailureFallback": "retain prior weights and increase nearest-boundary stratum mass by one bounded update",
+    "unsafeCollapseFallback": "restore last safety-feasible weights and stop curriculum updates",
+    "exhaustedStratumFallback": "renormalize remaining training strata without reading validation or confirmation",
+    "rngNamespace": "training-boundary-sampler-v1",
+    "validationUse": "frozen scalar checkpoint selection only; no scalar or cell-level validation output may update sampler state"
+  },
+  "evaluationMatrix": {
+    "adapterIds": ["ideal_rgbd", "degraded_rgbd", "fastsam_rgbd"],
+    "disturbanceIds": ["clean", "in_distribution", "ood_gust_and_loss"],
+    "cellIds": [
+      "C_IDEAL_CLEAN",
+      "C_IDEAL_ID",
+      "C_IDEAL_OOD",
+      "C_DEGRADED_CLEAN",
+      "C_DEGRADED_ID",
+      "C_DEGRADED_OOD",
+      "C_FASTSAM_CLEAN",
+      "C_FASTSAM_ID",
+      "C_FASTSAM_OOD"
+    ],
+    "hardSafetyCellIds": ["C_IDEAL_OOD", "C_DEGRADED_OOD", "C_FASTSAM_OOD"],
+    "trainingSeeds": [11, 23, 47, 83, 131],
+    "episodeCount": {
+      "allowedPerCell": [16, 32, 64],
+      "selectedPerCell": null,
+      "selectionRule": "choose the smallest allowed positive count whose pilot precision and timing receipts satisfy the frozen precision target and full-workload budget",
+      "sealState": "unsealed-prepilot",
+      "freezeRefusal": "confirmatory freeze fails unless selectedPerCell is an allowed positive integer and sealState is sealed"
+    },
+    "requiredManifestKey": ["method_id", "training_seed", "cell_id", "scenario_id", "episode_seed", "adapter_id"],
+    "pairing": "P and the frozen selected internal baseline share identical training_seed, cell_id, scenario_id, episode_seed, and adapter_id keys",
+    "requiredRecordStates": ["completed", "failed", "blocked", "unrun", "corrupt"],
+    "completeness": "every expected key occurs exactly once and is completed with validated evidence; any other state, duplicate, missing key, invalid pair, or silent retry makes the primary analysis NONPASS"
+  },
+  "statistics": {
+    "primaryComparison": "P_vs_frozen_selected_internal_baseline",
+    "primaryEstimand": "macro mean of paired episode safe-success differences, first averaged within training-seed and cell, then equally across the five training seeds and nine cells",
+    "bootstrap": {
+      "type": "hierarchical-paired-percentile",
+      "replicates": 10000,
+      "rngAlgorithm": "python-random-mt19937",
+      "rngSeed": 20260805,
+      "confidenceLevel": 0.95,
+      "sidedness": "two-sided",
+      "resampling": ["resample training-seed clusters with replacement", "within each sampled seed and cell resample paired scenario/episode keys with replacement"],
+      "nonEstimableWhen": "fewer than two complete training-seed clusters or any required record is not completed and provenance-valid"
+    },
+    "minimumTaskEffect": 0.05,
+    "safetyNonInferiorityMargins": {
+      "collision_rate": 0.01,
+      "out_of_bounds_rate": 0.01,
+      "timeout_rate": 0.02,
+      "minimum_clearance_m_difference": -0.5,
+      "reacquisition_time_s_difference": 1.0,
+      "control_smoothness_difference": 0.05
+    },
+    "hardEvents": {
+      "collision": "any simulator collision involving the controlled aircraft",
+      "out_of_bounds": "aircraft crosses the frozen scenario boundary before success",
+      "clearance_violation": "minimum truth obstacle clearance is below 1.0 meter"
+    },
+    "hardCellGate": "each hard-safety cell must be complete and have exactly zero collision, out_of_bounds, and clearance_violation events for P",
+    "uncertainty": "publish per-cell event counts, denominators, and two-sided 95% Clopper-Pearson intervals",
+    "multiplicity": {
+      "primary": "single confirmatory comparison; no multiplicity adjustment",
+      "gateConjuncts": "effect and all safety non-inferiority/hard-cell conditions are conjunctive",
+      "secondary": "descriptive unless separately powered and declared before confirmatory execution",
+      "mechanismCells": "mechanism analyses; not evidence for the primary superiority claim"
+    }
+  },
+  "baselineSelection": {
+    "eligibleMethodIds": ["B2", "B3", "B4"],
+    "data": "frozen-validation-manifest-only",
+    "aggregation": "macro_safe_success_rate equally weighted across validation training seeds and cells after hard-event feasibility",
+    "checkpointRule": "method-matrix.json#/algorithm/shared/validationCheckpointSelector",
+    "methodTieBreak": ["higher_macro_safe_success_rate", "B2", "B3", "B4"],
+    "freezeBeforeConfirmatoryInspection": true,
+    "receiptSchemaVersion": "ppg.baseline-selection.v1",
+    "receiptRequiredFields": ["validation_manifest_sha256", "candidate_checkpoint_sha256", "aggregation_output", "tie_break_result", "selected_method_id", "selected_checkpoint_sha256", "created_at", "receipt_sha256"]
+  },
+  "claimPolicy": {
+    "maximumAllowedPerformanceClaim": "best among the frozen evaluated internal methods",
+    "allowedClaimIds": ["INTERNAL-BEST-PRIMARY", "MECHANISM-DESCRIPTIVE", "NONPASS-DOSSIER"],
+    "forbiddenPhrases": ["SOTA", "state of the art", "benchmark best", "safety superiority", "deployment-ready", "real-flight validated", "airworthy"],
+    "separateGateRequiredFor": ["external-benchmark-superiority", "safety-superiority", "deployment-readiness", "real-flight", "airworthiness"],
+    "failureBehavior": "if any required effect, safety, completeness, evidence, or scope condition fails or is non-estimable, emit NONPASS and admit no superiority claim"
+  },
+  "evidenceLifecycle": {
+    "canonicalSerialization": "UTF-8 JSON with sorted keys, separators comma/colon, no NaN or Infinity, and one trailing newline",
+    "hashAlgorithm": "sha256",
+    "uriTemplate": "cas://sha256/{digest}",
+    "indexSchemaVersion": "ppg.evidence-index.v1",
+    "indexRequiredFields": ["evidence_id", "sha256", "size_bytes", "media_type", "schema_version", "immutable_uri", "producer_command", "runtime_receipt_sha256", "created_at", "finalized_at", "retention_until"],
+    "creation": "write to a same-filesystem temporary object, fsync file and directory, compute SHA-256 and size, atomically rename into digest path, then atomically publish an immutable finalized index entry",
+    "admission": "retrieve every object by immutable URI, require finalized index state, recompute size and SHA-256, and reconcile schema before use",
+    "missingBehavior": "typed evidence_missing record and NONPASS",
+    "corruptBehavior": "typed evidence_corrupt record and NONPASS",
+    "retentionUntil": "2031-08-05",
+    "backupCopies": 2,
+    "garbageCollectionOwner": "project owner",
+    "garbageCollectionRule": "no admitted evidence may be collected before retentionUntil and final independent review closure"
+  },
+  "runtimeAndProvenance": {
+    "runtime": "/opt/homebrew/Caskroom/miniforge/base/envs/pyflyt/bin/python",
+    "requiredReceiptFields": ["source_revision", "config_sha256", "checkpoint_sha256", "scenario_manifest_sha256", "adapter_id", "raw_result_sha256", "python_version", "package_export_sha256", "pyflyt_version", "pybullet_version", "stable_baselines3_version", "torch_version", "os_arch", "renderer_device", "detector_weights_sha256", "detector_preprocessing_sha256", "training_rng", "evaluation_rng"],
+    "nondeterminism": "unsupported byte-identical replay requires a typed nondeterminism receipt and cannot silently qualify as deterministic"
+  },
+  "pilotTimingGate": {
+    "receiptSchemaVersion": "ppg.pilot-timing.v1",
+    "requiredFields": ["training_run_seconds", "checkpoint_eval_seconds", "fastsam_episode_seconds", "declared_training_runs", "declared_evaluation_episodes", "analysis_seconds", "reserve_seconds", "measured_at", "runtime_receipt_sha256"],
+    "budgetSeconds": 86400,
+    "reserveFractionMinimum": 0.15,
+    "formula": "declared_training_runs*training_run_seconds + declared_evaluation_episodes*fastsam_episode_seconds + checkpoint_eval_seconds + analysis_seconds + reserve_seconds",
+    "freezeRefusal": "refuse confirmatory freeze unless the computed full declared workload plus reserve is no greater than the remaining session budget"
+  }
+}

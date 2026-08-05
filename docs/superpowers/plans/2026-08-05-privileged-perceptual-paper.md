@@ -20,6 +20,8 @@ Stable-Baselines3/torch, pytest, NumPy/SciPy, FastSAM/Ultralytics, LaTeX.
 
 - Normative behavior follows
   `ctx/spec/02-privileged-perceptual-guidance.md`.
+- Machine execution follows the three JSON contracts under `paper/protocol/`;
+  prose does not duplicate their mutable identities or enumerations.
 - Generated checkpoints, logs, weights, raw frames, and large trajectories are
   never committed.
 - An implementation agent never reviews its own output.
@@ -44,18 +46,24 @@ Stable-Baselines3/torch, pytest, NumPy/SciPy, FastSAM/Ultralytics, LaTeX.
 
 **Files:**
 - Modify: `ctx/spec/02-privileged-perceptual-guidance.md`
-- Create: `paper/protocol/literature-matrix.csv`
-- Create: `paper/protocol/evaluator.yaml`
+- Create: `paper/protocol/literature-matrix.md`
+- Create: `paper/protocol/method-matrix.json`
+- Create: `paper/protocol/evaluation-protocol.json`
+- Create: `paper/protocol/loop-guard.json`
+- Create: `scripts/validate_paper_protocol.py`
+- Create: `tests/test_paper_protocol.py`
 
 **Interfaces:**
-- Produces: immutable method identities, comparator admission rules, scenario
-  cells, metric definitions, seeds, claim gates, and primary-source anchors.
+- Produces: immutable method identities, five separable mechanisms, comparator
+  admission rules, episode-level pairing/statistics, causal perception,
+  evidence lifecycle, loop guards, and conservative primary-source anchors.
 
 - [ ] Verify every comparator from a primary source and classify it as matched,
   diagnostic, or contextual.
 - [ ] Freeze the validation rule that selects the strongest deployment-comparable
   baseline before held-out evaluation.
-- [ ] Validate the protocol schema and commit it.
+- [ ] Validate contracts and positive/negative/boundary loop guards before fresh
+  R1.4 review.
 
 ### Task 2: Write negative contract tests
 
@@ -126,7 +134,9 @@ Stable-Baselines3/torch, pytest, NumPy/SciPy, FastSAM/Ultralytics, LaTeX.
 - Produces: recurrent actor belief, training-only privileged belief losses,
   privileged value path, constraint costs, and frozen-test-independent sampler.
 
-- [ ] Implement each mechanism behind an ablation flag.
+- [ ] Implement recurrence, critic privilege, belief supervision, constrained
+  objective, and boundary curriculum behind separate semantic switches.
+- [ ] Run every leave-one-out cell plus the two targeted factorial interactions.
 - [ ] Prove by test that privileged tensors cannot reach action inference.
 - [ ] Prove that curriculum updates training sampling only.
 - [ ] Run checkpoint round-trip and short simulator smoke tests.
@@ -136,7 +146,7 @@ Stable-Baselines3/torch, pytest, NumPy/SciPy, FastSAM/Ultralytics, LaTeX.
 
 **Files:**
 - Create: `paper/protocol/pilot-report.md`
-- Modify: `paper/protocol/evaluator.yaml`
+- Modify: `paper/protocol/evaluation-protocol.json`
 - Create: `paper/protocol/confirmatory-manifest.json`
 
 **Interfaces:**
