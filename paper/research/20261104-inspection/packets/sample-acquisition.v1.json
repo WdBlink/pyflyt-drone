@@ -1,0 +1,70 @@
+{
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2503.01471v1",
+      "path": "venue/samples/S01-aerial-gym.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://www.takatohorii.jp/en/publications/lip-llm2025/",
+      "path": "venue/sources/lip-author.html",
+      "kind": "html",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://arxiv.org/pdf/2410.21040v1",
+      "path": "venue/samples/S02-lip-preprint.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://arxiv.org/pdf/2408.08188v4",
+      "path": "venue/samples/S03-nl2hltl-preprint.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://arxiv.org/pdf/2503.04798",
+      "path": "venue/samples/S04-smart.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://openreview.net/pdf/b07662974ac339cf558d7e27364f66d21f6ada28.pdf",
+      "path": "venue/samples/S05-mripp.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://marmotlab.org/publications/73-RAL2025-HetMRTA.pdf",
+      "path": "venue/samples/S06-hetmrta.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://arxiv.org/pdf/2409.15866v4",
+      "path": "venue/samples/S07-pursuit.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://smart-mapf.github.io/smart/",
+      "path": "venue/sources/smart-project.html",
+      "kind": "html",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://www.marmotlab.org/blog/2025/01/10/RAL2025.html",
+      "path": "venue/sources/hetmrta-acceptance.html",
+      "kind": "html",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://ras.papercept.net/journals/ral/ieeeconf.zip",
+      "path": "venue/official/ieeeconf.zip",
+      "kind": "zip",
+      "max_bytes": 30000000
+    }
+  ]
+}

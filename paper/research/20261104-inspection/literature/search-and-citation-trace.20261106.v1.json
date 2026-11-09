@@ -1,0 +1,69 @@
+{
+  "searched_at": "2026-11-06T15:37:27.763712+00:00",
+  "role": "Actual bounded keyword/primary-reference trace, not exhaustive novelty or evidence of absence",
+  "queries": [
+    "\"2503.04798\" \"references\"",
+    "\"GRaD-Nav\" \"asynchronous\"",
+    "\"UAV\" \"LLM\" \"benchmark\" \"asynchronous\" continuous",
+    "Hoeffding 1963 Probability inequalities sums bounded random variables",
+    "\"Advancing MAPF Toward the Real World\" SMART",
+    "\"GRaD-Nav++\" drone navigation",
+    "\"A Simple Sequentially Rejective Multiple Test Procedure\" Holm 1979",
+    "\"Persistent and Robust Execution of MAPF Schedules in Warehouses\""
+  ],
+  "raw_tool_observations": [
+    {
+      "path": "literature/searches/inspection-literature-forward-backward-20261106.v1.json",
+      "sha256": "a0692863229cfbae8cd394dd556e4bc74f65ef5efc903b3f4a20e36436c76868"
+    },
+    {
+      "path": "literature/searches/inspection-literature-forward-backward-20261106.v2.json",
+      "sha256": "9f30f8eb949f82e113eeef11ae1a78b90afde7ddc6458b1b9f8fa664e401416b"
+    }
+  ],
+  "backward_edges": [
+    {
+      "from": "GRaDNav2025/2506.14009v2",
+      "reference": 11,
+      "to_work": "2312.14950",
+      "read_version": "2312.14950v2",
+      "evidence": "literature/primary/gradnav-v2.html"
+    },
+    {
+      "from": "GRaDNav2025/2506.14009v2",
+      "reference": 16,
+      "to_work": "2503.02572",
+      "read_version": "2503.02572v1",
+      "evidence": "literature/primary/gradnav-v2.html"
+    },
+    {
+      "from": "GRaDNav2025/2506.14009v2",
+      "reference": 17,
+      "to_work": "2503.01378",
+      "read_version": "2503.01378v1",
+      "evidence": "literature/primary/gradnav-v2.html"
+    }
+  ],
+  "forward_observation": "The same three work-level citation edges establish GRaD-Nav++v2 as a known citing paper; no complete cited-by graph was returned or claimed. Read versions were selected here, not claimed as the unspecified exact version cited by the source bibliography.",
+  "registered_unverified_backward_candidates": [
+    {
+      "from": "SMART/2503.04798v3",
+      "reference": 3,
+      "title": "Persistent and robust execution of MAPF schedules in warehouses",
+      "year": 2019,
+      "status": "registered; own primary text not yet acquired"
+    },
+    {
+      "from": "SMART/2503.04798v3",
+      "reference": 10,
+      "title": "A benchmark for multi-robot planning in realistic, complex and cluttered environments",
+      "year": 2023,
+      "status": "registered; own primary text not yet acquired"
+    }
+  ],
+  "access_limits": [
+    "Some exact/domain-limited searches returned no locatable results; direct versioned arXiv pages succeeded. Search silence is not absence.",
+    "Hoeffding publisher open returned403; Holm JSTOR detail exposed only a tag-manager shell, while journal issue metadata was readable. No full-text access or complete theorem reading claimed."
+  ],
+  "scientific_effect": "New3neighbors bound existing streaming execution/dual-frequency reasoning/VLA control prior art. Experimental arms/sample sizes/metrics unchanged."
+}

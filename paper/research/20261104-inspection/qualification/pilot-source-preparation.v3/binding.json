@@ -1,0 +1,40 @@
+{
+  "role": "actual prepare-only source/order/sampler intent; no SDK callbacks, physical flights or model dispatch",
+  "prepared": {
+    "role": "prospective development intent only; no SDK callbacks or dispatch",
+    "episode_denominator": 108,
+    "conditions": {
+      "B0": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3-M1": 3,
+      "B3-M2": 3,
+      "B3-M3": 3,
+      "B4-M1": 3,
+      "B4-M2": 3
+    },
+    "original_classic_selection_sha256": "75f57580f0f5371d91a741fd4f9573e52192d019e9730335123a7ae67897a32e",
+    "classic_best": "B1",
+    "actual_model_generation_calls": 0,
+    "actual_physical_flights": 0
+  },
+  "source_count": 103,
+  "owner_sources": 37,
+  "compatibility_entry_sources": 1,
+  "bound_transport_included": true,
+  "schedule_seed": 2026110621,
+  "sampler_master_seed": 2026110622,
+  "original_files": {
+    "logs/inspection-eight-condition-pilot-preparation.v3/dependency-hashes.json": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+    "logs/inspection-eight-condition-pilot-preparation.v3/input-hashes.json": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+    "logs/inspection-eight-condition-pilot-preparation.v3/preparation.json": "6a78f25b6179eb5032f2ec7bb632f53f14a3ca2652229dc70adefe1ab29cea33",
+    "logs/inspection-eight-condition-pilot-preparation.v3/prepared-episode-order.json": "27f3c27b9aace5c706ec701c749b737ffebaf06254f3abb4a170eaad23048ce6",
+    "logs/inspection-eight-condition-pilot-preparation.v3/sampler-seeds.json": "44e4003829123f7e4de8ce62c06ea48bab7c270e631ceebec358e92aa445442d",
+    "logs/inspection-eight-condition-pilot-preparation.v3/source-files.json": "24fa5c1d5c8620eb30afcfeb393aac72c0e535f2a16a57ca4bb309140cc09c2d",
+    "logs/inspection-eight-condition-pilot-preparation.v3/source-hashes.json": "78ab9221ad5293a5a4aed06069aa04f0f2a6140aabfe4bdf0d747e5cc3e9eac2"
+  },
+  "archive": {
+    "path": "qualification/pilot-source-preparation.v3/prepared-source-order-only.zip",
+    "sha256": "0587ebda0ae141173254b6dd0486304c58acfd9370875cc7865b0e89d614ec0b"
+  }
+}

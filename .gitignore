@@ -26,6 +26,7 @@ env/
 ENV/
 .env
 .venv
+.venv-inspection-llm/
 
 # IDEs
 .idea/
@@ -36,6 +37,10 @@ ENV/
 # Project specific
 models/
 logs/
+/ctx
+/.claude/
+/.harness/
+/.harness-fix-opc/
 *.log
 *.png
 *.jpg

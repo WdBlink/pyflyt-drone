@@ -1,0 +1,21 @@
+{
+  "role": "Actual failed wrapper-adoption attempts, not source/citation-check failures or accepted stages",
+  "attempts": [
+    {
+      "attempt": 1,
+      "response": {
+        "status": "refused",
+        "reason": "[Errno 2] No such file or directory: '/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/literature/packet.sixteen.v2.json'"
+      },
+      "response_sha256": "264b75ebf8633f959201b1db30917c982e7b7212d5bbbfa16b1ae2836d6534df"
+    },
+    {
+      "attempt": 2,
+      "response": {
+        "status": "refused",
+        "reason": "Invalid identifier: None"
+      },
+      "response_sha256": "7e7bfcd604a1525e083611228fede904ab7d9fb2db38a5b7922b75765d3f4c14"
+    }
+  ]
+}

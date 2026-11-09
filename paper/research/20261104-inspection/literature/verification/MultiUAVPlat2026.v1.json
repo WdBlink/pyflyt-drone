@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-05T23:59:08.283563+00:00",
+  "identity": {
+    "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+    "authors": [
+      "Zhang, Sheng",
+      "Li, Qinglin",
+      "Zang, Yuechao",
+      "Huang, Xueqin",
+      "Fu, Yijia",
+      "Zhu, Cheng"
+    ],
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2606.31073v1"
+  },
+  "url": "https://arxiv.org/abs/2606.31073v1",
+  "metadata_path": "literature/primary/multiuav-plat-v1-metadata.html",
+  "metadata_sha256": "b7078cad181b7de4d6b894c67c8cf00ab1153aeb801f66a046fbf042f075435e",
+  "read_path": "literature/text/multiuav-plat-v1.txt",
+  "read_sha256": "3443de6bde899626582a8710d0b247e13851a49a9d1d0214bff474f91c3112d6",
+  "read_extent": "targeted task/interface/method sections plus earlier six-file code audit; not full independent reproduction",
+  "acceptance": "not claimed; this record is the pinned arXiv version",
+  "claim": "Uses a role-scoped multi-UAV tool platform with hidden validation; this does not establish inference-wait physical clock semantics.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/multiuav-plat-v1.txt",
+      "quote": "role-based information access, hidden validation logic"
+    }
+  ],
+  "unknowns": "No blanket claim that other systems pause all physics. No cross-benchmark score comparison."
+}

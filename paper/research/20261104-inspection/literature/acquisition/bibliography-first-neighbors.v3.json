@@ -1,0 +1,140 @@
+{
+  "target": "literature/references.first-neighbors.v4.bib",
+  "entries": [
+    {
+      "key": "MultiUAVPlat2026",
+      "kind": "misc",
+      "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+      "year": 2026,
+      "authors": [
+        "Zhang, Sheng",
+        "Li, Qinglin",
+        "Zang, Yuechao",
+        "Huang, Xueqin",
+        "Fu, Yijia",
+        "Zhu, Cheng"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2606.31073v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/MultiUAVPlat2026.v1.json",
+        "version": "2606.31073v1"
+      }
+    },
+    {
+      "key": "MissionBench2026",
+      "kind": "misc",
+      "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+      "year": 2026,
+      "authors": [
+        "Navaratnarajah, Suman",
+        "Kim, Taehyoung",
+        "Ruthardt, Jona",
+        "Bhimwal, Ishaan",
+        "Yamada, Ryousuke",
+        "Blei, Yannik",
+        "Burgard, Wolfram",
+        "Asano, Yuki M"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2607.22014v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/MissionBench2026.v1.json",
+        "version": "2607.22014v1"
+      }
+    },
+    {
+      "key": "ESARBench2026",
+      "kind": "misc",
+      "title": "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue",
+      "year": 2026,
+      "authors": [
+        "Zhang, Daoxuan",
+        "Chen, Ping",
+        "Zhou, Jianyi",
+        "Yang, Shuo"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2605.01371v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/ESARBench2026.v1.json",
+        "version": "2605.01371v1"
+      }
+    },
+    {
+      "key": "Retriever2026",
+      "kind": "misc",
+      "title": "Retriever: Composing the Perception-Reasoning-Action Loop for Long-Horizon Manipulation",
+      "year": 2026,
+      "authors": [
+        "Zhao, Linfeng",
+        "Huang, Haojie",
+        "Mao, Jiayuan",
+        "Liu, Weiyu",
+        "Kochenderfer, Mykel",
+        "Wong, Lawson L. S."
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2607.17213v2",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/Retriever2026.v1.json",
+        "version": "2607.17213v2"
+      }
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "kind": "misc",
+      "title": "α³-Bench: A Unified Benchmark of Safety, Robustness, and Efficiency for LLM-Based UAV Agents over 6G Networks",
+      "year": 2026,
+      "authors": [
+        "Ferrag, Mohamed Amine",
+        "Lakas, Abderrahmane",
+        "Debbah, Merouane"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2601.03281v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/Alpha3Bench2026.v2.json",
+        "version": "2601.03281v1"
+      }
+    },
+    {
+      "key": "PhysAIBench2026",
+      "kind": "misc",
+      "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+      "year": 2026,
+      "authors": [
+        "Ferrag, Mohamed Amine",
+        "Debbah, Merouane",
+        "Lakas, Abderrahmane",
+        "Perumkunnil, Manu",
+        "Tihanyi, Norbert"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2609.23695v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/PhysAIBench2026.v1.json",
+        "version": "2609.23695v1"
+      }
+    },
+    {
+      "key": "AERIAL2026",
+      "kind": "misc",
+      "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
+      "year": 2026,
+      "authors": [
+        "Nunes, Diana",
+        "Amorim, Ricardo",
+        "Ribeiro, Pedro",
+        "Coelho, André",
+        "Campos, Rui"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2610.31029v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/AERIAL2026.v1.json",
+        "version": "2610.31029v1"
+      }
+    }
+  ]
+}

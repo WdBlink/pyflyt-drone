@@ -1,0 +1,81 @@
+{
+  "schema": "independent-namespace-proof-review-v3",
+  "reviewer": "/root/control_review",
+  "freeze_binding_sha256": "513f0c3cab0d124ae03528e5a27c8172de7a40abbccd6c4b11738cf12251e332",
+  "frozen_files": {
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/contract.json": "3e54d8e878467c222ae79f32994fc317501ea040b1623b7e40541b3d047b91d5",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/inspection_namespace_admission.py": "2ebd0e4b710457691a4d93f69ef9e204e30cd1a7aa3f0cd5a3856f28e229b7f9",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/namespace-tests.log": "b8b21c21693fa9a05b240c86c958532e9fa7861fb7d423ac20a44b185c363bd7",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/test_formal_phase_layout.py": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/test_namespace_admission.py": "3eda5705abb1febc716c68afdf1e9a034787a671023f0dcd4df36f7b8d654ee7"
+  },
+  "working_inputs": {
+    "namespace": {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_namespace_admission.py",
+      "sha256": "2ebd0e4b710457691a4d93f69ef9e204e30cd1a7aa3f0cd5a3856f28e229b7f9"
+    },
+    "namespace_test": {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_namespace_admission.py",
+      "sha256": "3eda5705abb1febc716c68afdf1e9a034787a671023f0dcd4df36f7b8d654ee7"
+    },
+    "phase": {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_namespace.py",
+      "sha256": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321"
+    },
+    "phase_test": {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_formal_phase_layout.py",
+      "sha256": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb"
+    },
+    "g4_proof": {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_admission.py",
+      "sha256": "c981449425a835fad40eda9bbdc47dc76d2aa0e473a26bde8312743739a1779d"
+    },
+    "g4_fixture": {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_g4_proof_boundary.py",
+      "sha256": "191d7af54bee6062053897d40fbd5f6e81f2c639a1f455004951a073ee94dc53"
+    }
+  },
+  "prior_review_sha256": "e7d0e5f51a7f92e2d86b66cb91a701b48f64302be6987e93f72bbc301e3ef5bb",
+  "tests": {
+    "namespace": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_namespace_admission.py",
+      "result": "37 passed in 0.83s",
+      "log_path": "/tmp/inspection-namespace-review-v3/namespace-tests.log",
+      "log_sha256": "26ac2231e6474b11526e15d16adc25325913d3f2cd5fcd495c88f8d078b97ddb"
+    },
+    "phase": "not rerun; source/test byte-identical to previously independently reviewed v2 with 23 passed",
+    "independent": {
+      "script_path": "/tmp/inspection-namespace-review-v3/test_repair.py",
+      "script_sha256": "6f024d29891810f0ab25427a2c5ea4f44360f0f122f2314dac6cdd2ef28332fa",
+      "result": "7 passed in 0.22s",
+      "log_sha256": "9de5301c27ae23532fb97beb653d0ae02ede7ede4e205624027a3e6ca2a77a20"
+    }
+  },
+  "independent_findings": {
+    "valid_holdout": {
+      "roots": 12,
+      "raw_owner_reader_calls": 3,
+      "main_ancestor_snapshot_identity": "exact same second and third validated snapshot objects; no additional raw reader"
+    },
+    "before_holdout_intent_read_rejected": [
+      "revoked main finding",
+      "changed main intent bytes",
+      "missing canonical main evidence with native request rehashed",
+      "main intent semantic dev collision with every artifact/native digest updated",
+      "main/dataset applied order reversed"
+    ],
+    "final_snapshot_revocation": "rejected at third original owner read"
+  },
+  "disposition": {
+    "v2_P2_main_ancestor_revocation": "closed",
+    "new_blockers_in_bounded_scope": []
+  },
+  "limits": [
+    "uninstalled read-only proof component only",
+    "no namespace writer/dataset/raw/statistical completion certification",
+    "no model/physics/RNG/formal geometry/actual owner mutation",
+    "returned proof requires revalidation at a later side-effect boundary",
+    "no G4/main/full formal GO"
+  ]
+}

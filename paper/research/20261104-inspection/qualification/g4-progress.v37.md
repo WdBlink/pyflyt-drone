@@ -1,0 +1,13 @@
+# G4 开发继续点 v37
+
+G4仍needs_work；同一v4队列的新SDK视图现已实际返回25/108 callback（24严格cache+1限定reconciled cache），没有新飞行或模型生成。原中止视图24completed/1failed/83stopped与原unknown terminal仍保持，不把两份视图当216个episode。仅首L1 root完整，第二L3 root为7/18。
+
+round49真实应用request afb193b959203b71d0eca6ffd9e7ea33a3127295806071d01f2b9e3913ce275d，finding g4-dev-v4-slot024-late-cleanup-disposition-v1；stale0、plan_diff三项空。一次prepare因分母审查binding路径拼写错误被拒绝，修正实际路径后正常prepare/apply；拒绝没有恢复或新effect。限定acceptance SHA e4cd3a90e0ecbade0f01d7430e98e9583a4bcdafc6f9bfa9e69a87c34b77b39e，真实只读verify重新核到同一applied request与原Y=0.368353660488492。
+
+新supervisor exec99187在UTC2026-11-06T23:12:06.301738Z实际确认order25/dev-L3-01/B4-M2预约/spawn之前暂停。实际assert检查通过：新raw恰25个completed/attempted/cache_reused，order0–24身份完整；旧24份数值及原证据字段（除cache_reused）逐项相同。第25份仅增加已native接受的cleanup_disposition，仍引用原unknown terminal SHA86f0189e000815abc250df4092bc264bbb7fa79dcca65a032edec88d68c3f6cd，原分数与原attempt00不变。
+
+新旧source-hashes/source-files/dependency-hashes/input-hashes/episode-order/sampler-seeds全部逐字节相同，当前104source/61deps/10inputs逐SHA一致。原物理attempt目录恰25个且全部attempt00；无order25资源请求或model-operation目录。三次classic wrapper CLI仅读取既有物理cache、return0且各自cleanup closed，不计作新episode。资源账本仍1045calls/6778111tokens、reserved0、unknown/unresolved=[]。追加helper的来源通过recovery-adapter单独声明，不伪称在原104source中。
+
+证据和实际断言脚本见 qualification/pilot-v4-cache-prefix.v1/binding.json 与 recovery/pilot-v4-cleanup-024.v1/source/check_cache_prefix.py。该binding是上述barrier时点的SHA清单；checkpoint.request和pause日志是以后会清除/追加的运行文件，对应原字节均已复制到证据目录sdk/，stdout与native状态也已复制，历史时点不依赖未来运行文件保持不变。普通callback/clock摘要不扩称完整72000-phase trace；费用/Codex/主机/能源仍未计量。
+
+下一步在同一supervisor清除marker，继续原order25起剩余83槽（15classic、68LLM），不重抽order/sampler、不第三次retry、不按策略分数选择性重跑。formal44source/27tests仍未安装；完整pilot、actualclean/20s、最终冻结/容量与组合范围以及独立G4接受仍待。原科学协议、RA-L、budget={}、19项义务和G1–G3/human_review_pending边界保持；无实际formal数据、主分析锁或论文结果。

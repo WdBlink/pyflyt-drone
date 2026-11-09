@@ -1,0 +1,13 @@
+{
+  "unchanged": {
+    "_inventory": true,
+    "stop_worker_tree": true,
+    "SubprocessTree.__init__": true,
+    "SubprocessTree.attach": true,
+    "SubprocessTree.wait": true,
+    "SubprocessTree.close": true
+  },
+  "original_sha256": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+  "candidate_sha256": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+  "changed_existing_method": "observe: choose scoped native reader only after current root is bound; unbound/explicit snapshots keep original global behavior"
+}

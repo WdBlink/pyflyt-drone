@@ -1,0 +1,65 @@
+{
+  "limits": {},
+  "known_usage": {
+    "calls": 286,
+    "tokens": 1813213,
+    "cost": {}
+  },
+  "reserved": {
+    "calls": 0,
+    "tokens": 0,
+    "cost": {}
+  },
+  "remaining": {},
+  "unresolved_usage": [],
+  "unknown_usage": [],
+  "unreported_fields": {
+    "dev-all8-pilot-v1-000-a0": [
+      "cost"
+    ],
+    "dev-all8-pilot-v1-001-a0": [
+      "cost"
+    ],
+    "dev-all8-pilot-v2-000-a0": [
+      "cost"
+    ],
+    "dev-all8-pilot-v2-000-a1": [
+      "cost"
+    ],
+    "dev-all8-pilot-v2-001-a0": [
+      "cost"
+    ],
+    "dev-all8-pilot-v2-002-a0": [
+      "cost"
+    ],
+    "dev-all8-pilot-v2-003-a0": [
+      "cost"
+    ],
+    "dev-all8-pilot-v2-004-a0": [
+      "cost"
+    ],
+    "dev-all8-pilot-v2-006-a0": [
+      "cost"
+    ],
+    "dev-all8-pilot-v2-007-a0": [
+      "cost"
+    ],
+    "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+      "cost"
+    ],
+    "dev-model-smoke-M1-v1-20261106": [
+      "cost"
+    ],
+    "dev-model-smoke-M2-v1-20261106": [
+      "cost"
+    ],
+    "dev-model-smoke-M3-v1-20261106": [
+      "cost"
+    ]
+  },
+  "incomplete_capped_usage": {},
+  "exhausted": [],
+  "elapsed_task_minutes": 2245.5092851,
+  "new_local_work_allowed": true,
+  "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+}

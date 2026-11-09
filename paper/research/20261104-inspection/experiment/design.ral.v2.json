@@ -1,0 +1,688 @@
+{
+  "schema": "inspection-research-design-v2",
+  "experiment_id": "continuous-inspection-main-root-means-v1",
+  "claim_id": "C-rq1",
+  "hypothesis": "Shared continuous execution permits measuring bounded root-level quality differences. No LLM winner is assumed; null/adverse results satisfy the research question.",
+  "independent_variable": "eight declared mission policies; identical model artifacts for within-model B3/B4 pairs",
+  "dependent_variable": "Y=H*E*Q at the full 600-second deadline, with root-repeat means before domain/level aggregation",
+  "control_variables": [
+    "shared qualified 240Hz PyFlyt physics and 120Hz control",
+    "same causal structured sensor model and public tools",
+    "same private root within paired methods",
+    "fixed full report/target/bin denominators",
+    "same 600s wallclock 1x; compute and link delays consume flight time",
+    "same infrastructure retry cap; policy failure stays a completed scored trace",
+    "no cross-root learning, memory, cache or prompt changes after G4"
+  ],
+  "metric": {
+    "name": "Y",
+    "unit": "bounded quality [0,1]",
+    "direction": "higher"
+  },
+  "statistical_unit": "case",
+  "cases": [
+    "main-ID-L1-00",
+    "main-ID-L1-01",
+    "main-ID-L1-02",
+    "main-ID-L1-03",
+    "main-ID-L1-04",
+    "main-ID-L1-05",
+    "main-ID-L1-06",
+    "main-ID-L1-07",
+    "main-ID-L1-08",
+    "main-ID-L1-09",
+    "main-ID-L1-10",
+    "main-ID-L1-11",
+    "main-ID-L1-12",
+    "main-ID-L1-13",
+    "main-ID-L1-14",
+    "main-ID-L1-15",
+    "main-ID-L2-00",
+    "main-ID-L2-01",
+    "main-ID-L2-02",
+    "main-ID-L2-03",
+    "main-ID-L2-04",
+    "main-ID-L2-05",
+    "main-ID-L2-06",
+    "main-ID-L2-07",
+    "main-ID-L2-08",
+    "main-ID-L2-09",
+    "main-ID-L2-10",
+    "main-ID-L2-11",
+    "main-ID-L2-12",
+    "main-ID-L2-13",
+    "main-ID-L2-14",
+    "main-ID-L2-15",
+    "main-ID-L3-00",
+    "main-ID-L3-01",
+    "main-ID-L3-02",
+    "main-ID-L3-03",
+    "main-ID-L3-04",
+    "main-ID-L3-05",
+    "main-ID-L3-06",
+    "main-ID-L3-07",
+    "main-ID-L3-08",
+    "main-ID-L3-09",
+    "main-ID-L3-10",
+    "main-ID-L3-11",
+    "main-ID-L3-12",
+    "main-ID-L3-13",
+    "main-ID-L3-14",
+    "main-ID-L3-15",
+    "main-OOD-L2-00",
+    "main-OOD-L2-01",
+    "main-OOD-L2-02",
+    "main-OOD-L2-03",
+    "main-OOD-L2-04",
+    "main-OOD-L2-05",
+    "main-OOD-L2-06",
+    "main-OOD-L2-07",
+    "main-OOD-L2-08",
+    "main-OOD-L2-09",
+    "main-OOD-L2-10",
+    "main-OOD-L2-11",
+    "main-OOD-L3-00",
+    "main-OOD-L3-01",
+    "main-OOD-L3-02",
+    "main-OOD-L3-03",
+    "main-OOD-L3-04",
+    "main-OOD-L3-05",
+    "main-OOD-L3-06",
+    "main-OOD-L3-07",
+    "main-OOD-L3-08",
+    "main-OOD-L3-09",
+    "main-OOD-L3-10",
+    "main-OOD-L3-11"
+  ],
+  "seeds": [
+    0
+  ],
+  "conditions": [
+    "B0",
+    "B1",
+    "B2",
+    "B3-M1",
+    "B3-M2",
+    "B3-M3",
+    "B4-M1",
+    "B4-M2"
+  ],
+  "failure_policy": "penalty",
+  "failure_value": 0.0,
+  "statistics": {
+    "estimator": "mean",
+    "interval": "none",
+    "paired": true,
+    "contrasts": [
+      {
+        "id": "architecture-M1",
+        "minuend": "B4-M1",
+        "subtrahend": "B3-M1"
+      },
+      {
+        "id": "architecture-M2",
+        "minuend": "B4-M2",
+        "subtrahend": "B3-M2"
+      },
+      {
+        "id": "classic-option-B1",
+        "minuend": "B4-M1",
+        "subtrahend": "B1"
+      },
+      {
+        "id": "classic-option-B2",
+        "minuend": "B4-M1",
+        "subtrahend": "B2"
+      }
+    ]
+  },
+  "data_roles": [
+    {
+      "id": "development-24-six-preselected-pilot",
+      "role": "development",
+      "used_for_selection": true
+    },
+    {
+      "id": "main-ID48-OOD24",
+      "role": "test",
+      "used_for_selection": false
+    },
+    {
+      "id": "holdout-ID12",
+      "role": "holdout",
+      "used_for_selection": false
+    }
+  ],
+  "evaluator": {
+    "path": "experiment/evaluator.v1.py",
+    "sha256": "1716592abd6a7ea317aebb90e41367f338e7f32ac7ab3f0a69a9d2bd4ff02a3d"
+  },
+  "planned_at": "2026-11-05T18:47:30.237163+00:00",
+  "recording_semantics": {
+    "seed_0": "one root mean, not an extra flight, random seed or inferential replicate",
+    "root_denominator": 72,
+    "actual_episode_denominator": 1296,
+    "condition_repeats": {
+      "B0": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3-M1": 3,
+      "B3-M2": 3,
+      "B3-M3": 3,
+      "B4-M1": 3,
+      "B4-M2": 3
+    },
+    "inner_sdk": "separate complete classic and LLM rectangles, then complete outer root means; operational failures block aggregation",
+    "root_metadata": [
+      {
+        "case_id": "main-ID-L1-00",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-01",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-02",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-03",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-04",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-05",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-06",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-07",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-08",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-09",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-10",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-11",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-12",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-13",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-14",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L1-15",
+        "domain": "ID",
+        "level": 1
+      },
+      {
+        "case_id": "main-ID-L2-00",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-01",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-02",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-03",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-04",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-05",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-06",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-07",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-08",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-09",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-10",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-11",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-12",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-13",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-14",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L2-15",
+        "domain": "ID",
+        "level": 2
+      },
+      {
+        "case_id": "main-ID-L3-00",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-01",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-02",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-03",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-04",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-05",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-06",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-07",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-08",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-09",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-10",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-11",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-12",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-13",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-14",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-ID-L3-15",
+        "domain": "ID",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L2-00",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-01",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-02",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-03",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-04",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-05",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-06",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-07",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-08",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-09",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-10",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L2-11",
+        "domain": "OOD",
+        "level": 2
+      },
+      {
+        "case_id": "main-OOD-L3-00",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-01",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-02",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-03",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-04",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-05",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-06",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-07",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-08",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-09",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-10",
+        "domain": "OOD",
+        "level": 3
+      },
+      {
+        "case_id": "main-OOD-L3-11",
+        "domain": "OOD",
+        "level": 3
+      }
+    ]
+  },
+  "primary_inference": {
+    "protocol": "planning/statistical-protocol.ral.v1.md",
+    "sha256": "b18123390584f3f260d9bcc80b0455402ccc68f606ad428fe06804e04d2e795f",
+    "primary_family": "architecture-M1, architecture-M2, selected-classic-M1, each in ID and OOD: global Holm6",
+    "classic_selection": "All18 six-root B0/B1/B2 development slots must complete. Select B1 or B2 by equal-level macro Y; tie within1e-12 goes B1. Freeze signed result before main. Both classic-option contrasts above are descriptive SDK records; exactly one selected option enters primary six; the other never increases or replaces that family.",
+    "bootstrap": "nominal pointwise diagnostic only; conservative finite bounded test is primary; no assumed power to detect .05"
+  },
+  "development_and_freeze": {
+    "status": "G1-G3 qualified in declared envelope; G4 unresolved; this research plan does not grant main/test access",
+    "route": [
+      "finish fixed six-root classical pilot",
+      "admit bounded local model generation only via sole-owner reservations after plan acceptance",
+      "qualify prompts, B3/B4 public boundary, actual all-eight SDK, request accounting, clock contention and response semantics on development only",
+      "complete six-root all-eight clock/cost pilot with full failed/not_started slots and retain diagnostic generations",
+      "freeze final G4 source/model/prompt/generator/split/retry/source manifests with independent evidence review",
+      "generate main instances and run fixed schedule; no outcome-driven method changes",
+      "open holdout once with separate pre-open manifest; write evidence-bound paper only after accepted evidence and figures"
+    ],
+    "model_registry": "planning/local-model-registry.v1.json",
+    "candidate_registry_sha256": "6d8547cb0597113d5411a771e1c75f807e43d769ecdfe4d92d32d41633e0fda6",
+    "selection_limits": "Models are prospective families, not validated capabilities. Development failures are retained. Any unavailable or incompatible family blocks G4 until an explicit source-bound pre-test revision; no silent replacement or reduced condition matrix.",
+    "implementation_contract": "Frozen grader, endpoints, prospective population, counts and primary family are immutable. Prospective actors/runner/generator must implement this contract; G4 freezes only their qualified source/model/prompt manifests. Failure blocks G4. Material protocol changes require explicit owner-governed revision and do not overwrite this plan."
+  },
+  "split_contract": {
+    "root_identities_only": "Listed IDs are planned slots, not generated instances or observed data. No main or holdout input exists yet.",
+    "development_roots": 24,
+    "preselected_pilot": [
+      "dev-L1-00",
+      "dev-L1-01",
+      "dev-L2-00",
+      "dev-L2-01",
+      "dev-L3-00",
+      "dev-L3-01"
+    ],
+    "main_counts": {
+      "ID": {
+        "L1": 16,
+        "L2": 16,
+        "L3": 16
+      },
+      "OOD": {
+        "L2": 12,
+        "L3": 12
+      }
+    },
+    "holdout_ids": [
+      "holdout-ID-L2-00",
+      "holdout-ID-L2-01",
+      "holdout-ID-L2-02",
+      "holdout-ID-L2-03",
+      "holdout-ID-L2-04",
+      "holdout-ID-L2-05",
+      "holdout-ID-L3-00",
+      "holdout-ID-L3-01",
+      "holdout-ID-L3-02",
+      "holdout-ID-L3-03",
+      "holdout-ID-L3-04",
+      "holdout-ID-L3-05"
+    ],
+    "holdout_episode_denominator": 216,
+    "generation": "Exactly the source-bound prospective population artifact. G4 qualifies an implementation of these rules, not selection of unspecified populations.",
+    "holdout_inference": "Single descriptive replication of effect direction/size with complete bounded/nominal root-cluster intervals, no seventh confirmatory test and no method selection. Open only after main primary analysis is locked.",
+    "population": {
+      "path": "planning/population.ral.v1.json",
+      "sha256": "307fbd5e77f841bf4a1b431a478527fa3aa85905694fd0242068d26c729a434c"
+    }
+  },
+  "secondary_contract": {
+    "SR": "same root-repeat aggregation, level macro, cluster percentile intervals; never flattened Wilson",
+    "events": {
+      "roots": "main-ID-L3-00..05 andmain-OOD-L3-00..05; exactly12originalroots",
+      "conditions": {
+        "B0": 1,
+        "B1": 1,
+        "B2": 1,
+        "B3-M1": 3,
+        "B3-M2": 3,
+        "B3-M3": 3,
+        "B4-M1": 3,
+        "B4-M2": 3
+      },
+      "clean_sibling": "remove link/camera/retire/priority interventions only; preserve actualroot geometry/entities/motion/exogenous noise seed; same actor config and repeatseed. Eachcondition repeat is an additionalactual600sflight, not offlineimaginedflight. Allsiblings same lineage.",
+      "analysis": "original event score staysprimary; offline event and clean scores recomputed under event demand calendar beforeY_event-Y_clean; fixed12root denominator with rootrepeatmean thenequalID/OODlevelmacro; descriptive rootcluster intervals, no additionalconfirmatoryp. Commoncalendar repricing is not a new rollout."
+    },
+    "ablation": {
+      "roots": "main-ID-L3-00..05 andmain-OOD-L3-00..05; exactly12originalroots",
+      "condition": "B4-M1 only,3 independent repeats perroot/removal;108extraactualflights",
+      "factors": [
+        {
+          "id": "periodic",
+          "change": "replace eventtrigger schedule with fixed20simsecond decisionperiod; same32requestcap,soft60sdeadline,input8192/output1024 andtotal180000tokens; no extra request afterinflightwait; allotherB4memory/planning unchanged"
+        },
+        {
+          "id": "no-cross-aircraft-memory",
+          "change": "remove cross-aircraft candidatealias/dedup andpersistent plan/note from modelcontext; keep same aircraft-local received history andsame publictask/job/toolpermissions andbudgets; no truthbased merge; graderunchanged"
+        },
+        {
+          "id": "no-progressive-confirmation-guidance",
+          "change": "remove progressive two-view confirmation guidance andactor-side confirmationplanning; retain originalreceived evidence/tools andsame graderadmission. Invalid/lowqualityreports remainrejected orzero; no oracle/provenance bypass"
+        }
+      ],
+      "implementation_guard": "actor must implement andtest these named singlefactor toggles beforeG4. If baseline has no effective mechanism removed, ablation isinvalid andG4blocked; no success-only substitution."
+    },
+    "latency": {
+      "roots": "main-ID-L3-00..05 andmain-OOD-L3-00..05; exactly12originalroots",
+      "condition": "B4-M1 x3 repeats perdelay arm0,2,5,10,20s",
+      "semantics": "after an actual modelreply, wait an additionalfixedwallclockdelay before releasing its commands; same 1x worker continuesphysics/sensing. This is total effect of this injected-wait policy, not an estimate of model-speed replacement. Record rawservice wall, parentend-to-end wall, extra injection anddispatchage separately. Soft60sdeadline still applies to servicecomputation; commands arriving aftert600 discarded. No frozen reply cache or acceleratedclock in thistrack. Allarms have independentactualflights andsame root/repeat exogenousnoise andsamplerseed policy; no bestofrepeat. Zero-delay may reuse only an exact source/input/seed-compatible primarytrace."
+    },
+    "response_recovery": {
+      "event_list": "priority update, linkstart/end, cameradegrade/end andretirement; frozen actual privatecalendar, not actorfutureknowledge",
+      "decision_eligibility": "at eventtime, offline mark active/delivered business obligations affected by changedrule or affected aircraft. Priority requires newaction only if updatedrule has unmet required staticquality .6 or dynamictimelyquality .5 under current receivedreports; already-satisfied case isNA. Link/camera/retirement requires action only if affected aircraft is currently serving an inspect/observe/survey job and a still-required static target or remaining dynamicwindow exists. Noaffected workload isNA; no job response is not itselfNA.",
+      "response": "first postevent job withcorrectcard/rule and connectednonretired eligibleaircraft that actuallyproduces a new qualified sensorpacket (quality>=.8, measurementafterevent) for an affected obligation; timestamp isthatpacket measured_at, not ACK/queued/running. A successful same-ID static report revision delivering new positivequality under updatedrule can also be a response. Retained local job completion withno new packet isnot aresponse.",
+      "recovery": "for dynamicaffectedtargets: firstcompletion of10consecutive required3sbins, each aggregate weighted timelyquality>=.5 for affected targets whose fixedwindow includes thatbin; all affectedtargets still in denominator while required. Forstatic-onlyaffectedrules: firstpostevent receivedreportledger with ruleweightedquality>=.6, sustainedthrough30seconds by versionhistory. Hardwareoutage end doesnot itself imply businessrecovery. Evaluate from eventtime; dynamicwindows/qualitythresholds are originalfrozen windows.",
+      "censoring": "ifresponse/recovery not achieved bymin(600,last affected full demandend+6s) seconds, rightcensored at that endpoint, with exactduration and censorflag. Dynamicremainingwindow<30s isstill eligible and may be structurally censored, never excluded asNA. Report denominatorseligible/NA/censored separately per eventtype andmethod; show empiricalsurvival/restrictedmean tofixedavailable horizon, never success-onlymean.",
+      "ambiguity_guard": "eventanalysisloader must validate eligibility/endpoints on handfixtures andcomplete actualclean/eventdevelopmentsiblings beforeG4; inabilityto implementthese rules blocksG4 ratherthan allowing posttestendpointchoice."
+    },
+    "failure_traces": "Select median-Y SR0 trace per method then lexicographic case/repeat tie, and lowest-Y shared-hard-violation trace; explicitly unavailable if stratum empty. No aesthetic/cherry-picked replacement."
+  },
+  "attempt_policy": {
+    "max_attempts_per_slot": 2,
+    "operational_retry": "at most one retry for documented infrastructure process/service failure or clock lag>.1; identical frozen case/config and fresh method state, retain both; source/input/evaluator mismatch and unknown dispatch block, never auto-rerun",
+    "policy_failure": "malformed model reply, timeout under functioning request budget, rejected tool, missed target or unsafe execution retain original completed flight and actual Y, no resampling; no imputation of unstarted/unknown toY0",
+    "late_model_result": "actual wall wait recorded; after soft deadline ignore all late commands; physics continues during waiting; backend inability to cancel is disclosed and measured",
+    "symmetry": "same failure classes/cap for all conditions; no best-of-repeat or extra roots replacing failed ones"
+  },
+  "scope_and_cost": {
+    "budget": {},
+    "candidate_main_plus_holdout_episodes": 1512,
+    "serial_flight_hours_only": 252,
+    "excluded_from_that_estimate": [
+      "development and G1-G4 qualification",
+      "event-clean siblings",
+      "ablation",
+      "delay intervention",
+      "finite infrastructure retries",
+      "model loading, analysis, rendering and waiting"
+    ],
+    "authorized_resources": "existing local Mac, pinned downloaded local models, no paid API inference, no purchased compute, no submission/publication",
+    "metering": "sole controller reservation/settlement with actual local request/input/generated tokens and unknown reconciliation; native Codex usage and local capital/energy unmetered; no false API price for local inference",
+    "estimated_secondary_additional_flight_denominators": {
+      "clean_siblings": 216,
+      "three_ablations": 108,
+      "delay_arms_including_zero": 180,
+      "delay_zero_reuse_max": 36,
+      "note": "not in1512; retries/development/qualificationstilladditional. These local serialresources are prospectiveresearchscope, not paidAPI or purchasedcomputeauthorization."
+    }
+  },
+  "stop_rule": "No optional early stopping for significance. Any G4 failure or unresolved operational row blocks formal data/statistics. No reduction of19 obligations or8 methods without actual scope revision.",
+  "provenance": "Initial prospective protocol; all earlier flight outcomes are development, never retroactively main data."
+}

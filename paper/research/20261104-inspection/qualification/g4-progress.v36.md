@@ -1,0 +1,15 @@
+# G4 开发继续点 v36
+
+G4仍needs_work。原v4 supervisor已以exit1结束：24份有效callback，第25次实际飞行order24/dev-L3-01/B3-M1/repeat2/attempt00的物理与模型运行完成，但terminal为unknown_process_cleanup，未向原SDK返回有效callback。原108槽SDK视图保留24completed、1failed、83stopped；outer48全stopped，不回改成已完成。没有order25新预约、attempt01或新增独立重复。
+
+该次实际600s/144000步、maxlag0.01017320800019661s、0超100ms；冻结评分Y=0.368353660488492，C=0.9939498703543648、S=0.1111111111111111、D=0、H/E=1、SR=0。25calls/166000tokens已known结算。唯一owner当前累计1045calls/6778111tokens、reserved0、unknown/unresolved/stale=[]；费用、Codex、主机与能源仍未计量，不写作0。原terminal/tree/archive及所有分数、失败分母和已知结算原字节保留。
+
+原cleanup的五个owned PID已退出，但当时另有未认领Python orphan PID26337，缺少原birth/归属证据。后续观察原PID均不存在且同uid Python orphan为空，只支持追加late-cleanup disposition，不能证明26337属于或不属于本任务，也不能倒填原close为closed。本次没有发送进程信号。事件与候选契约见 recovery/pilot-v4-cleanup-024.v1/{incident.v1.md,CONTRACT.md}。
+
+新增development-only continuation adapter单独绑定，不混入原104source。v1/v2及负例完整保留；v2作者16绿灯未覆盖独立发现的archive/acceptance返回窗口漂移、新空目录和FIFO四反例。v3在owner可观察窗口前后重核所有固定引用与递归目录/文件/entry类型，并返回初读acceptance SHA；20软件检查通过，真实prepare只重核原证据，无新模型、物理或资源操作。v3源SHA bb196f6c6939d9c050eb56f1b435eee68264347093b1cf85f0556cae12101c54，proposal.v3 SHA c59a4e15439da55708acb84127ed02b9c7c2a0a7d962eb837a4f3c67cd742aac；作者冻结binding SHA c6ce4e0f56b65de2b813bbe2506c7a9767eb30378db9841e2c8f84ddb5588251。
+
+独立control_review实际复放四个文件I/O反例，v3均拒绝，正常正控仍通过；另重核实际原记录Y、25calls/166000tokens、25causal joins及103引用/31目录96文件闭包一致。结构化决定仅accept_late_cleanup_only：review/evidence/pilot-v4-cleanup-024-implementation-v2/review.json SHA4de3ed06b80b9d8a46650739f6a3f37745bf335390ccaa49976b6c2a412fcaa9；报告SHA56fce024d8e8a79bd30120196feeaeb636cbce7df275ac06917446811d5d4fee。审查者已停止CPU检查及R写入。此时尚未实际native applied finding、生成acceptance或运行continuation，不把独立限定接受写成已经恢复。
+
+分母审查另确认同cohort新SDK视图可重建24份严格cache和1份经实际native接受的reconciled cache，再从order25继续剩余83次原飞行（15classic、68LLM）；原abort视图和新视图合计仍是108个slot，不是216，也不新建root/sampler。仅在正常native finding实际应用、运行前104source/61deps/10inputs一致后启动；helper将自动在首次新effect前暂停，届时核对25份callback、原order/sampler字节及累计用量完全不变，再继续队列。独立分母审查不代替实现/事实审查，软件绿灯不代替实际25-cache重建。
+
+原RA-L、budget={}、19项义务、八配置、600s/144000步、100ms/两attempt、B1选择、grader/global6及科学分母不变。生产104source/61deps/10inputs未改；formal44source/27tests仍未安装。完整108槽、actualclean/20s、最终来源/硬件/容量与组合范围、独立G4接受仍待；G1–G3既有仿真资格/human_review_pending边界保留。无实际main/holdout抽样、主分析锁或论文结果。

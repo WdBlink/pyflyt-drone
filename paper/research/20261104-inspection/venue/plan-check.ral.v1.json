@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "figure": 6,
+    "table": 4
+  },
+  "errors": [],
+  "status": "warn",
+  "warnings": [
+    "plan.items[1]: must-have item still points at pending data",
+    "plan.items[2]: must-have item still points at pending data",
+    "plan.items[3]: must-have item still points at pending data",
+    "plan.items[4]: must-have item still points at pending data",
+    "plan.items[5]: must-have item still points at pending data",
+    "plan.items[7]: must-have item still points at pending data",
+    "plan.items[8]: must-have item still points at pending data",
+    "plan.items[9]: must-have item still points at pending data",
+    "venue pattern 'teaser' appears in 62% of sampled papers but no planned figure covers it; deviation_reason was supplied",
+    "venue pattern 'qualitative_comparison' appears in 88% of sampled papers but no planned figure covers it; deviation_reason was supplied"
+  ]
+}

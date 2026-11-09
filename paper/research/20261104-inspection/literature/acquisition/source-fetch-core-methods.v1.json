@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2304.01305v1",
+      "path": "literature/primary/pyflyt-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/abs/2210.03629v3",
+      "path": "literature/primary/react-v3-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/pdf/2304.01305v1",
+      "path": "literature/primary/pyflyt-v1.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://arxiv.org/pdf/2210.03629v3",
+      "path": "literature/primary/react-v3.pdf",
+      "kind": "pdf",
+      "max_bytes": 10000000
+    },
+    {
+      "url": "https://api.openreview.net/notes?id=WE_vluYUL-X",
+      "path": "literature/primary/react-openreview-submission.json",
+      "kind": "json",
+      "max_bytes": 3000000
+    },
+    {
+      "url": "https://api.openreview.net/notes?forum=WE_vluYUL-X&invitation=ICLR.cc%2F2023%2FConference%2F-%2FDecision",
+      "path": "literature/primary/react-openreview-decision.json",
+      "kind": "json",
+      "max_bytes": 3000000
+    }
+  ]
+}

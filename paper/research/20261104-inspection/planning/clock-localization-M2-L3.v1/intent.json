@@ -1,0 +1,49 @@
+{
+  "schema": "inspection-M2-L3-clock-diagnostic-intent-v1",
+  "role": "instrumented_adaptive_B3_M2_existing_development_L3_not_pilot_retry",
+  "architecture": "B3",
+  "model": "M2",
+  "case": {
+    "path": "qualification/dev-cases.v2/dev-L3-00.json",
+    "sha256": "ae583cf527b4db9e0768231bdeaf595a20e6a344db07aabe31f0858a1a5275f3"
+  },
+  "sampler_seed": 1096691202,
+  "sampler_role": "exact previously frozen failed-v3-order0 seed for engineering localization; no new draw or slot admission",
+  "output": "logs/inspection-clock-localization-M2-L3.v1",
+  "reservation": "dev-clock-adaptive-M2-L3-v1-20261106",
+  "request_budget": {
+    "max_input_tokens": 8192,
+    "max_output_tokens": 1024,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "enable_thinking": false,
+    "max_request_seconds": 60,
+    "max_calls": 32,
+    "max_total_tokens": 180000
+  },
+  "physics": "600s continuous1x 144000physics/72000control; original epoch/pacer/control/defaultGC retained",
+  "telemetry": "existing reviewed RusageClockProfile/ClockProfile: full72000 clock+rusage, bounded GC pairs and supervision timings",
+  "differences_from_failed_pilot": [
+    "explicit instrumented worker/profile factory",
+    "bounded supervision timing telemetry",
+    "existing diagnostic harness caffeinate -i -w assertion; pilot had no such assertion",
+    "new diagnostic source/provenance/output; model/architecture/case/sampler retained"
+  ],
+  "inference_scope": "Engineering localization, not a strict isolated causal A/B, G4 qualification or scientific policy score. Never fills/retries failed SDK slots; no automatic diagnostic retry.",
+  "failed_pilot": {
+    "path": "qualification/eight-condition-pilot-terminated.v3/binding.json",
+    "sha256": "ea78536750d84959f8ecf9f6afa5a3745bb87268d4a6abb68e732355e9d0c011"
+  },
+  "extra_sources": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/planning/clock-localization-M2-L3.v1/probe.py": "d9c26adc44fbcd7cb1e119499fe93568228c64128482497d58e9fb0079b89e3a",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_diagnostic_worker.py": "eb1c8bc91f2bedeee159066f50ec5ada037ec40ac199c5b8cd3b176290f43207",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile.py": "aa4ff3be49bd744e19ffa7e58b03c220b34a137c1fbfc13c4374f298c0b7dd7e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile_rusage.py": "43cc8ee2ddc196c01584fa0b2c079ed7871520f225dfff30a2b07e2ba3bbbe00",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_process_cleanup.py": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_darwin_inventory.py": "f1870d92317d5f482d5d5cc19f791fffecb23ac0fb7c777028be5e1060c59ab9"
+  },
+  "production_unchanged": true,
+  "paid_API_used": false,
+  "new_purchased_compute": false,
+  "during_flight": "No own CPU-intensive tests, native checkpoints, source edits to consumed production or parallel physical/model work; leave independent read-only reasoning available."
+}

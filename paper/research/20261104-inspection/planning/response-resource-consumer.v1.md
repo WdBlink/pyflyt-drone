@@ -1,0 +1,17 @@
+# Response/resource reader：正式数据前实施契约 v1
+
+当前为未安装、尚未测试/独立接受的候选接线，不是实际formal结果或F5/G4完成。保留原19义务、主global6、矩阵、评分、sampler与预算。输入只能来自fresh admission/measure_completed_episode已验证的episode及验证前原闭合文件/目录快照；reader不生成模型/飞行，不调用native reserve/settle，不创建任何main/holdout数据或锁。
+
+已有LLM receipt validator负责完整服务计量、actor public request→response→decoder→命令、原请求seed、原生成结果、注入wait与物理进度核验。新reader复用其fresh causal_request_joins，按原始decision ordinal、transport submitted ordinal与admitted call ordinal关联，严格保留context rejection、not_started、policy timeout、格式失败及deadline后忽略。不得从未绑定actor文件或自报分数补造因果关系；读取同一原快照内bytes并复核SHA，发布前继续比较原树。
+
+时长分列：service response.wall_seconds是stream generation及token journaling区间，含该区间内prefill/生成等实际工作，非纯GPU kernel，不含计时器之前的prompt格式化/编码或模型冷加载；client parent_end_to_end_wall_seconds从submit前计时到poll消费响应，含管道/服务/轮询等待，在注入wait之前；injected_delay_wall_seconds是实际额外等待。原dispatch_age_sim使用response处理前的进度快照减源公开sim时间，该快照随后被producer复用于enqueue，可能早于解码/入队的实际物理时刻；原dispatch_age_wall是client roundtrip加consume区间，未包含两段之间未采样的poll→consume空隙，也不是源公开信息的wall年龄。新字段分别名recorded_dispatch_age_sim_seconds、client_roundtrip_plus_consume_wall_seconds，并保留before-request/before-wait/after-response的三份实际sim进度。它们都不是tool接受/job采用时刻，不能相互替代或冒称精确端到端物理生效时延。
+
+requested arm为0/2/5/10/20秒，不等于每次实际wait：最后flight已结束或not_started/runtime-failure响应不再注入。not_started没有model生成时长，使用None和明确计数，client控制响应区间仍可观测；无模型/无响应不能以0伪造生成时延。deadline后真实服务仍计calls/tokens，最终回复不再派发命令，不倒改600秒内的质量或原计分。
+
+资源分别报告：末次admitted valid-flight attempts的usage、全部known attempts的usage和每attempt服务response。基础设施失败重试资源不丢弃，也不当额外planned repeat/root。失败attempt只保留独立已计量的service区间，不混入有效flight的actor/物理计时分布。calls/tokens来自原计量与settlement，money/energy/capital未计量仍为None/显式标注；经典无model服务的calls/tokens=0是调用事实，不代表主机或货币成本0。
+
+先在每个原root/method内按完整计划repeat平均usage，保留全部known attempt数量。每请求时长仅作描述记录，不当独立试验或额外确认检验；后续成本—质量图从绑定的root资源行与同一root质量行连接，坐标明确为tokens/calls或实际观测区间，不冒称已计量货币Pareto或统计支配保证。main/holdout保持原各自范围，secondary主对照引用不重复计作新flight或新root。
+
+主分析逐episode response records另存ZIP/index，secondary放入已有逐episode diagnostic ZIP；摘要只存root usage行与分母，防止大单JSON超过16MiB。subject显式绑定摘要，index绑定每个detail member。原SDK/原score/原world不改，完整raw source和闭合metadata索引可达。
+
+必须验证：非零服务与客户端/注入/分发年龄分离；context失败导致decision序号空洞仍正确连接；重试全部usage与原repeat分母；declined/final响应的0实际wait及None生成时长；unknown、错kind/call id/token sum、改动bytes拒绝；经典0调用；原SDK完整main/secondary流程与只读无新effects。现已写相应软件fixture和接线，尚未运行，不将任何旧测试/审查升级为本模块接受。

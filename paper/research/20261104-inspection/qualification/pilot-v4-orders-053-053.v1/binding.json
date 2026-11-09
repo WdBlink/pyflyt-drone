@@ -1,0 +1,295 @@
+{
+  "role": "actual original v4 development batch; no new statistical replication or formal qualification",
+  "pause": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 54,
+    "case_id": "dev-L1-00",
+    "condition": "B0",
+    "at": "2026-11-07T06:54:05.095817+00:00"
+  },
+  "completed_callbacks": 54,
+  "denominator": 108,
+  "slots": [
+    {
+      "order_index": 53,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B2",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9190751445086706,
+        "S": 0.8,
+        "D": 0.022222222222222223,
+        "Q": 0.5804324555769642,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5804324555769642,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.01041629200335592,
+      "p95_lag_seconds": 0.0034050413382828992,
+      "report_audit_entries": 479,
+      "accepted_unique_ids": 9,
+      "usage": null,
+      "passive_close_observations": []
+    }
+  ],
+  "native_budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 1625,
+      "tokens": 10472696,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-002-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-008-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-011-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-013-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-014-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-015-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-016-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-017-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-018-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-019-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-020-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-021-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-022-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-023-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-024-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-025-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-027-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-028-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-030-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-031-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-032-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-033-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-034-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-036-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-037-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-038-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-039-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-042-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-043-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-044-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-045-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-046-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-047-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-048-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-049-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-050-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-051-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-052-a0": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-postinventory-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-fixed-M1-load-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-runtime-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 3938.599799666667,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "files": {
+    "logs/inspection-eight-condition-pilot.v4/source-hashes.json": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560",
+    "logs/inspection-eight-condition-pilot.v4/dependency-hashes.json": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+    "logs/inspection-eight-condition-pilot.v4/input-hashes.json": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+    "logs/inspection-eight-condition-pilot.v4/source-files.json": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/recovery-adapter.json": "d2132fda7042106ed765bac5d07a8604262b1e217235471cdcef46f0a228068f",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/plan.json": "df57bb14ca2aa68287b1ac5fe758a465895a83d4b5c29c9401e4339d71b9fecc",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000053.json": "b3b779587fcf65f9709cdafa9904ae1598dda84f17798ee1770b645a46210d25",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/classic/raw/dev-L2-00-B2-0.json": "de70d8b1b3b414fa2c58770c7046f8dbd03aa00170d7cdd5d7d5c5e8ce66def5",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/attempt-00/terminal.json": "dabd8a8caf9e56d4545a313f226470117560ce763094605e618f92d48877f4f0",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/invocations/053.json": "04c05ff34dcf5f66cd25c91f92309ef0b00cbd072a3cd7f134c2d8cf4f993c8f",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/attempt-00/flight/world.json": "7fa1f6ed71f14311653b2165e17f83b566106aed5f9d764a2fbfc2860bae2339",
+    "paper/research/20261104-inspection/experiment/evaluator.v2.py": "de826d2488b5a8ad366ccec9ead8b81bebf6b794a533a38ac55338916848611b",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/attempt-00/flight/progress.jsonl": "c09ccacebd80beeabe769802c1ea19bc46ea28ed9c417472b91f9d365c6b10bd",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/attempt-00/flight/run.json": "bf5f1597842d6f35fd63d516089c72817a5f7f6c4811524d4b4c5f5d4b662d8d",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/attempt-00/flight/private-case.json": "fb011f0b3960c0a730ba7e4f68c644b63aeb3c6cce0b01be2caf5c0f76ab68d3",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/checkpoint.request": "1d80a5f87726d7a17dc2d3a25513fe4ae5596d103a5eedbb7a091dd593b03e05",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/checkpoint-pauses.jsonl": "fb7bd8f0686dad45710cfed1407c7832719e071be9a49a2f0a6707adb2e066a4",
+    "paper/research/20261104-inspection/qualification/capture-pilot-v4-new-batch.py": "4592c8655c46ef80372e91ca471bf61c711290452e4f3fd0293484f52459cf9a",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-053-053.v1/native-status.json": "9ed6fbd9bb533e0ed7fcdae1331ebb881085dc855d3bfc013879962372c464ae",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-053-053.v1/checkpoint-pauses.jsonl": "fb7bd8f0686dad45710cfed1407c7832719e071be9a49a2f0a6707adb2e066a4",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-053-053.v1/supervisor.stdout": "129f38ed4546ef86ae2a0b5fe4295c1fcabac9ede5855c20cd718a19f0ce4fb0",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-053-053.v1/order053-classic-recount.json": "4b10dd709631e4f29175d6df2bcf0c96582b90ec2e5811e7b02578806b5d5de2"
+  }
+}

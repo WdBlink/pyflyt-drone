@@ -1,0 +1,1154 @@
+{
+  "contract_sha256": "6723955a0efe68801af57fd3adf1a1b94c5c8cdaea0e7d0437fc84862a7b37de",
+  "contract": {
+    "version": "inspection-platform-dev-v3",
+    "created_at": "2026-11-05T04:45:12.861506+00:00",
+    "role": "prospective_platform_qualification_not_formal_model_evaluation",
+    "source_plan_sha256": "dd01e21442950abccc543bb2ba4d53d1901fb2669dba21cbfe9aad7f13e591b0",
+    "G1": {
+      "roots_per_family": 20,
+      "families": {
+        "straight": 60,
+        "heading_changes": 120,
+        "loiter": 180,
+        "survey": 180,
+        "sortie_exit": 240
+      },
+      "root_role": "control parameter roots, not independent scientific road/terrain evaluation roots",
+      "success_fraction_per_family": 0.95,
+      "altitude_m": [
+        60,
+        100
+      ],
+      "airspeed_m_s": [
+        15,
+        25
+      ],
+      "bank_abs_degrees": 45,
+      "minimum_separation_m": 15,
+      "wind_max_m_s": 2,
+      "physics_hz": 240,
+      "control_hz": 120,
+      "tracking_rmse_m_after_settle": 15,
+      "tracking_max_m_after_settle": 40,
+      "settle_seconds": 20,
+      "exit_radius_error_m": 10,
+      "exit_course_error_degrees": 25,
+      "exit_dwell_seconds": 20,
+      "hard_safety_checked_each_physics_step": true,
+      "settled_course_error_degrees": 10,
+      "heading_schedule": [
+        {
+          "from": 0,
+          "degrees": 0
+        },
+        {
+          "from": 20,
+          "degrees": 45
+        },
+        {
+          "from": 60,
+          "degrees": -45
+        },
+        {
+          "from": 100,
+          "degrees": 0
+        }
+      ],
+      "flight_bounds_xy_m": {
+        "straight": 5000,
+        "heading_changes": 5000,
+        "loiter": 550,
+        "survey": 550,
+        "sortie_exit": 550
+      },
+      "sortie_exit_switch_fraction": 0.5,
+      "radius_range_m": [
+        80,
+        90
+      ],
+      "survey_half_length_range_m": [
+        220,
+        250
+      ],
+      "wind_sampling": "even roots calm; odd roots max magnitude with direction root radians",
+      "aircraft_sampling": "straight even roots 1 aircraft; all other slots 4 aircraft",
+      "root_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "G2": {
+      "checks": [
+        "coordinate and flat terrain AGL",
+        "synchronous aircraft and moving proxies",
+        "actor RPC allowlist excludes truth/seed/future/grader",
+        "immutable minted evidence and causal arrival",
+        "queued/running/terminal jobs, stale version and cancellation",
+        "nonrefundable report slots and fixed first association",
+        "static last legal received version; all hidden targets in denominator",
+        "dynamic same-measurement-time truth; prefilter then latest then correctness",
+        "late/store-forward observations; priority effective at bin start",
+        "safe exit and exogenous retirement qualification; self-caused failures not exempt"
+      ],
+      "positive_negative_fixtures_required": true
+    },
+    "G3": {
+      "reference_seconds": 600,
+      "aircraft_count": 4,
+      "main_clock": "monotonic wallclock 1x",
+      "maximum_clock_lag_seconds": 0.1,
+      "maximum_wait_advance_error_seconds": 0.1,
+      "sensor_hz": 2,
+      "trace_hz": 10,
+      "reference_minimum_Y": 0.2,
+      "reference_minimum_static_recall": 0.5,
+      "normal_sensor_inspect_position_rmse_max_m": 3,
+      "normal_sensor_confirmed_class_accuracy_min": 0.9,
+      "distractor_or_background_false_candidates_required": true,
+      "method_call_count_independent_noise": true,
+      "real_pose_fov_and_ray_occlusion": true,
+      "parallel_worlds_for_formal_run": 1,
+      "calibration_dev_only": true,
+      "actual_model_latency_not_claimed_by_sleep_probe": true
+    },
+    "G4": {
+      "freeze_required": [
+        "platform sources and assets",
+        "generator and dev/test/holdout family protocol",
+        "qualified physical/sensor/clock envelope",
+        "scorer, thresholds, weights, failure/retry rules",
+        "classic baselines",
+        "LLM tool/prompt/memory/budget/model versions",
+        "recording and root-paired statistical adapter",
+        "pilot evidence and concrete formal resource authorization"
+      ],
+      "no_test_exposure_before_freeze": true,
+      "no_paid_API_or_extra_compute_authorization_inferred": true
+    },
+    "reference_spec": {
+      "deadline_seconds": 600,
+      "flight_area_xy_m": [
+        -550,
+        550
+      ],
+      "roi_extent_m": 800,
+      "report_budget": 10,
+      "survey_capsule_radius_m": 80,
+      "survey_half_length_m": 250,
+      "static_anomaly_classes": 3,
+      "sensor_type": "shared structured synthetic sensor with ideal stabilized nadir gimbal; not real vision",
+      "terrain": "flat z=0; AGL explicitly computed against this terrain",
+      "candidate_counts_role": "hidden generator quantities; not actor task-card fields"
+    },
+    "completion_rule": "All gates need corresponding executed evidence and independent engineering review. Human domain review remains pending unless actually supplied. Missing checks are not pass.",
+    "supersedes": "gate-contract.v2.json",
+    "change_reason": "Complete explicit control sampling configuration and dependency/source binding before full qualification."
+  },
+  "sources": {
+    "envs/inspection/control.py": "\"\"\"Conventional fixedwing guidance using only own-aircraft navigation state.\n\nPyFlyt uses an ENU world and body x forward, y left, z up. Positive pitch is\nnose down; positive roll banks right. Commands address mode -1 surfaces\nexplicitly, avoiding the upstream mode 0 tail-surface coupling.\n\"\"\"\n\nfrom __future__ import annotations\n\nfrom dataclasses import dataclass\nimport math\n\nimport numpy as np\n\n\ndef wrap_angle(angle: float) -> float:\n    return (angle + math.pi) % (2.0 * math.pi) - math.pi\n\n\n@dataclass(frozen=True)\nclass FlightTarget:\n    heading: float\n    altitude: float = 80.0\n    airspeed: float = 20.0\n    bank_feedforward: float = 0.0\n\n    def __post_init__(self) -> None:\n        if not all(math.isfinite(x) for x in (\n            self.heading, self.altitude, self.airspeed, self.bank_feedforward\n        )) or self.altitude <= 0.0 or self.airspeed <= 0.0:\n            raise ValueError(\"flight target must be finite with positive altitude and airspeed\")\n\n\n@dataclass(frozen=True)\nclass ControlGains:\n    heading_p: float = 0.8\n    roll_p: float = 1.5\n    roll_d: float = 0.3\n    pitch_p: float = 1.5\n    pitch_d: float = 0.4\n    altitude_p: float = 0.3\n    altitude_i: float = 0.015\n    speed_p: float = 0.08\n    speed_i: float = 0.015\n    pitch_trim: float = -0.04\n    elevator_trim: float = -0.03\n    throttle_trim: float = 0.4\n    max_bank: float = math.radians(30.0)\n    max_pitch: float = math.radians(12.0)\n\n\nclass FixedwingAutopilot:\n    \"\"\"Nested PI/PD loops, shared by every prospective mission policy.\"\"\"\n\n    def __init__(self, gains: ControlGains | None = None):\n        self.gains = gains or ControlGains()\n        self.altitude_integral = 0.0\n        self.speed_integral = 0.0\n\n    def step(self, state: np.ndarray, target: FlightTarget, dt: float,\n             measured_airspeed: float | None = None) -> np.ndarray:\n        if state.shape != (4, 3) or not np.isfinite(state).all():\n            raise ValueError(\"navigation state must be a finite (4, 3) array\")\n        if not math.isfinite(dt) or dt <= 0.0:\n            raise ValueError(\"dt must be finite and positive\")\n        rates, attitude, velocity, position = state\n        roll, pitch, heading = attitude\n        g = self.gains\n        speed = float(np.linalg.norm(velocity)) if measured_airspeed is None else measured_airspeed\n        if not math.isfinite(speed) or speed < 0:\n            raise ValueError(\"measured airspeed must be finite and nonnegative\")\n        height_error = target.altitude - position[2]\n        speed_error = target.airspeed - speed\n        self.altitude_integral = float(np.clip(self.altitude_integral + height_error * dt, -20.0, 20.0))\n        self.speed_integral = float(np.clip(self.speed_integral + speed_error * dt, -15.0, 15.0))\n        bank = float(np.clip(\n            -g.heading_p * wrap_angle(target.heading - heading) + target.bank_feedforward,\n            -g.max_bank, g.max_bank,\n        ))\n        pitch_target = float(np.clip(\n            g.pitch_trim - math.atan2(g.altitude_p * height_error + g.altitude_i * self.altitude_integral, max(speed, 5.0)),\n            -g.max_pitch, g.max_pitch,\n        ))\n        aileron = float(np.clip(g.roll_p * (bank - roll) - g.roll_d * rates[0], -1.0, 1.0))\n        elevator = float(np.clip(g.elevator_trim + g.pitch_p * (pitch_target - pitch) - g.pitch_d * rates[1], -1.0, 1.0))\n        turn_rate = -9.81 * math.tan(bank) / max(speed, 5.0)\n        rudder = float(np.clip(0.4 * (rates[2] - turn_rate * math.cos(roll)), -0.5, 0.5))\n        throttle = float(np.clip(g.throttle_trim + g.speed_p * speed_error + g.speed_i * self.speed_integral, 0.0, 1.0))\n        return np.array([aileron, -aileron, elevator, rudder, 0.0, throttle])\n\n\ndef orbit_target(position: np.ndarray, center: np.ndarray, radius: float, altitude: float = 80.0,\n                 airspeed: float = 20.0, direction: int = 1) -> FlightTarget:\n    \"\"\"Tangent vector field; direction +1 is counterclockwise in ENU.\"\"\"\n    if radius <= 0.0 or not math.isfinite(radius) or direction not in (-1, 1):\n        raise ValueError(\"radius must be positive and direction must be +/-1\")\n    offset = position[:2] - center[:2]\n    distance = float(np.linalg.norm(offset))\n    radial = math.atan2(offset[1], offset[0])\n    heading = radial + direction * (math.pi / 2.0 + math.atan(2.0 * (distance - radius) / radius))\n    feedforward = -direction * math.atan2(airspeed ** 2, 9.81 * radius)\n    return FlightTarget(heading, altitude, airspeed, feedforward)\n\n\ndef air_heading_for_course(course: float, wind_xy: np.ndarray, airspeed: float) -> float:\n    \"\"\"Crab correction from shared ideal local airdata; no mission truth input.\"\"\"\n    if wind_xy.shape != (2,) or not np.isfinite(wind_xy).all() or not math.isfinite(airspeed) or airspeed <= 0:\n        raise ValueError(\"finite planar wind and positive airspeed required\")\n    crosswind = -wind_xy[0] * math.sin(course) + wind_xy[1] * math.cos(course)\n    if abs(crosswind) >= airspeed:\n        raise ValueError(\"requested course is infeasible in this crosswind\")\n    return wrap_angle(course - math.asin(crosswind / airspeed))\n\n\nclass SurveyRoute:\n    \"\"\"Counterclockwise capsule with physical semicircle transitions.\"\"\"\n\n    def __init__(self, center_y: float, half_length: float = 250.0, radius: float = 80.0):\n        self.center_y, self.half_length, self.radius = center_y, half_length, radius\n        self.leg = \"bottom\"\n        self.laps = 0\n\n    def target(self, position: np.ndarray, altitude: float) -> FlightTarget:\n        x, y = position[:2]\n        if self.leg == \"bottom\" and x >= self.half_length:\n            self.leg = \"right\"\n        elif self.leg == \"right\" and x <= self.half_length + 5 and y > self.center_y + 20:\n            self.leg = \"top\"\n        elif self.leg == \"top\" and x <= -self.half_length:\n            self.leg = \"left\"\n        elif self.leg == \"left\" and x >= -self.half_length - 5 and y < self.center_y - 20:\n            self.leg = \"bottom\"\n            self.laps += 1\n        if self.leg in (\"right\", \"left\"):\n            center = np.array([self.half_length if self.leg == \"right\" else -self.half_length, self.center_y])\n            return orbit_target(position, center, self.radius, altitude)\n        desired_y = self.center_y + (self.radius if self.leg == \"top\" else -self.radius)\n        return FlightTarget(math.atan2(desired_y-y, -80 if self.leg == \"top\" else 80), altitude)\n\n    def cross_track_error(self, position: np.ndarray) -> float:\n        x, y = position[:2]\n        if abs(x) <= self.half_length:\n            return min(abs(y-self.center_y-self.radius), abs(y-self.center_y+self.radius))\n        return abs(math.hypot(abs(x)-self.half_length, y-self.center_y)-self.radius)\n",
+    "envs/inspection/flight.py": "\"\"\"Shared PyFlyt execution with a safety audit after every physics integration.\"\"\"\n\nfrom __future__ import annotations\n\nfrom dataclasses import dataclass, replace\nimport math\nfrom typing import Callable\n\nimport numpy as np\nimport pybullet\nfrom PyFlyt.core import Aviary\n\nfrom envs.inspection.control import (\n    FixedwingAutopilot, FlightTarget, SurveyRoute, air_heading_for_course,\n    orbit_target, wrap_angle,\n)\n\n\nclass AuditedAviary(Aviary):\n    def __init__(self, **kwargs):\n        self.before_physics: Callable[[float], None] | None = None\n        self.after_physics: Callable[[float], None] | None = None\n        super().__init__(**kwargs)\n\n    def stepSimulation(self):\n        t = (self.physics_steps + 1) / self.physics_hz\n        if self.before_physics is not None:\n            self.before_physics(t)\n        pybullet.stepSimulation(physicsClientId=self._client)\n        if self.after_physics is not None:\n            self.after_physics(t)\n\n\n@dataclass(frozen=True)\nclass FlightLimits:\n    min_altitude: float = 60.0\n    max_altitude: float = 100.0\n    min_airspeed: float = 15.0\n    max_airspeed: float = 25.0\n    max_bank_degrees: float = 45.0\n    min_separation: float = 15.0\n    max_wind: float = 2.0\n    exit_radius_error: float = 10.0\n    exit_course_error_degrees: float = 25.0\n\n    @classmethod\n    def from_contract(cls, contract):\n        return cls(*contract[\"altitude_m\"], *contract[\"airspeed_m_s\"], contract[\"bank_abs_degrees\"],\n                   contract[\"minimum_separation_m\"], contract[\"wind_max_m_s\"], contract[\"exit_radius_error_m\"],\n                   contract[\"exit_course_error_degrees\"])\n\n\nclass FlightWorld:\n    \"\"\"Own-aircraft navigation/airdata only; no target information in control.\"\"\"\n\n    def __init__(self, seed: int, count: int = 4, wind_xy=(0.0, 0.0),\n                 task=\"survey\", half_length=250.0, radius=80.0, jitter=True, limits=None, bound=None):\n        rng = np.random.default_rng(seed)\n        self.count, self.radius, self.half_length = count, radius, half_length\n        self.limits = limits or FlightLimits()\n        self.centers = np.array([-300.0, -100.0, 100.0, 300.0])[:count] if count > 1 else np.array([0.0])\n        self.altitudes = np.array([72.0, 80.0, 88.0, 96.0])[:count] if count > 1 else np.array([80.0])\n        self.wind = np.array([*wind_xy, 0.0], dtype=float)\n        if not np.isfinite(self.wind).all() or np.linalg.norm(self.wind) > self.limits.max_wind+1e-6:\n            raise ValueError(\"wind must be within the prospective 2 m/s qualification envelope\")\n        yaw = rng.uniform(-.05, .05, count) if jitter else np.zeros(count)\n        starts = np.array([[-half_length if task in (\"survey\", \"sortie_exit\") else 0.0,\n                            center-radius, altitude]\n                           for center, altitude in zip(self.centers, self.altitudes)])\n        if jitter:\n            starts[:, :2] += rng.uniform(-1.0, 1.0, (count, 2))\n        options = [{\"starting_velocity\": np.array([20*math.cos(a), 20*math.sin(a), 0.0])+self.wind}\n                   for a in yaw]\n        self.world = AuditedAviary(start_pos=starts, start_orn=np.column_stack((np.zeros((count, 2)), yaw)),\n                                  drone_type=\"fixedwing\", drone_options=options,\n                                  np_random=np.random.default_rng(seed))\n        if np.any(self.wind):\n            self.world.register_wind_field_function(lambda t, pos: np.broadcast_to(self.wind, pos.shape).copy())\n            for drone in self.world.drones:\n                drone.update_state()\n        self.world.set_mode(-1)\n        self.controllers = [FixedwingAutopilot() for _ in range(count)]\n        self.routes = [SurveyRoute(center, half_length, radius) for center in self.centers]\n        self.modes = [\"survey\" if task in (\"survey\", \"sortie_exit\") else task] * count\n        self.headings = np.zeros(count)\n        self.exit_dwell = np.zeros(count)\n        self.physics_audits = 0\n        self.violations: dict[str, dict] = {}\n        self.min_separation = None\n        self.min_altitude, self.max_altitude = float(starts[:, 2].min()), float(starts[:, 2].max())\n        self.min_airspeed, self.max_airspeed = 20.0, 20.0\n        self.max_bank = 0.0\n        self.bound = 550.0 if task in (\"survey\", \"sortie_exit\", \"loiter\") else 5000.0\n        if bound is not None:\n            self.bound = bound\n        self.last_targets = [FlightTarget(0, float(a)) for a in self.altitudes]\n        self.world.after_physics = self._audit\n\n    @property\n    def t(self):\n        return self.world.elapsed_time\n\n    def _violation(self, reason, t, drone_ids):\n        item = self.violations.setdefault(reason, {\"first_at\": t, \"physics_steps\": 0, \"drone_ids\": []})\n        item[\"physics_steps\"] += 1\n        item[\"drone_ids\"] = sorted(set(item[\"drone_ids\"]) | set(drone_ids))\n\n    def _audit(self, t):\n        positions, velocities, rolls = [], [], []\n        for drone in self.world.drones:\n            position, quaternion = self.world.getBasePositionAndOrientation(drone.Id)\n            velocity, _ = self.world.getBaseVelocity(drone.Id)\n            positions.append(position)\n            velocities.append(velocity)\n            rolls.append(self.world.getEulerFromQuaternion(quaternion)[0])\n        positions, velocities, rolls = np.array(positions), np.array(velocities), np.abs(rolls)\n        if not all(np.isfinite(x).all() for x in (positions, velocities, rolls)):\n            raise RuntimeError(\"nonfinite physics state\")\n        speed = np.linalg.norm(velocities-self.wind, axis=1)\n        altitude = positions[:, 2] - 0.0  # explicit flat terrain elevation\n        self.physics_audits += 1\n        self.min_altitude = min(self.min_altitude, float(altitude.min()))\n        self.max_altitude = max(self.max_altitude, float(altitude.max()))\n        self.min_airspeed = min(self.min_airspeed, float(speed.min()))\n        self.max_airspeed = max(self.max_airspeed, float(speed.max()))\n        self.max_bank = max(self.max_bank, float(rolls.max()))\n        for reason, mask in [\n            (\"altitude\", (altitude < self.limits.min_altitude) | (altitude > self.limits.max_altitude)),\n            (\"airspeed\", (speed < self.limits.min_airspeed) | (speed > self.limits.max_airspeed)),\n            (\"bank\", rolls > math.radians(self.limits.max_bank_degrees)),\n            (\"flight_boundary\", (np.abs(positions[:, :2]) > self.bound).any(axis=1)),\n        ]:\n            if mask.any():\n                self._violation(reason, t, np.flatnonzero(mask).tolist())\n        for i in range(self.count):\n            for j in range(i+1, self.count):\n                distance = float(np.linalg.norm(positions[i]-positions[j]))\n                self.min_separation = distance if self.min_separation is None else min(self.min_separation, distance)\n                if distance < self.limits.min_separation:\n                    self._violation(\"separation\", t, [i, j])\n        aircraft_ids = {drone.Id for drone in self.world.drones}\n        if any(contact[1] in aircraft_ids or contact[2] in aircraft_ids for contact in self.world.getContactPoints()):\n            self._violation(\"collision\", t, list(range(self.count)))\n        for i in range(self.count):\n            offset = positions[i, :2]-np.array([0.0, self.centers[i]])\n            tangent = math.atan2(offset[1], offset[0])+math.pi/2\n            course = math.atan2(velocities[i, 1], velocities[i, 0])\n            inside = (self.modes[i] == \"exit\" and abs(np.linalg.norm(offset)-self.radius) <= self.limits.exit_radius_error\n                      and abs(wrap_angle(course-tangent)) <= math.radians(self.limits.exit_course_error_degrees))\n            self.exit_dwell[i] = self.exit_dwell[i]+1/240 if inside else 0.0\n\n    def target(self, i):\n        state = self.world.state(i)\n        mode = self.modes[i]\n        if mode in (\"exit\", \"loiter\"):\n            return orbit_target(state[3], np.array([0.0, self.centers[i]]), self.radius, float(self.altitudes[i]))\n        if mode == \"survey\":\n            return self.routes[i].target(state[3], float(self.altitudes[i]))\n        return FlightTarget(float(self.headings[i]), float(self.altitudes[i]))\n\n    def step(self):\n        for i, controller in enumerate(self.controllers):\n            target = self.target(i)\n            self.last_targets[i] = target\n            air_heading = air_heading_for_course(target.heading, self.wind[:2], target.airspeed)\n            velocity, _ = self.world.getBaseVelocity(self.world.drones[i].Id)\n            airspeed = float(np.linalg.norm(np.array(velocity)-self.wind))\n            command = controller.step(self.world.state(i), replace(target, heading=air_heading),\n                                      self.world.step_period, measured_airspeed=airspeed)\n            self.world.set_setpoint(i, command)\n        self.world.step()\n\n    def summary(self):\n        return {\"physics_audits\": self.physics_audits, \"physics_steps\": self.world.physics_steps,\n                \"violations\": self.violations, \"min_separation_m\": self.min_separation,\n                \"altitude_m\": [self.min_altitude, self.max_altitude],\n                \"airspeed_m_s\": [self.min_airspeed, self.max_airspeed],\n                \"max_bank_rad\": self.max_bank, \"exit_dwell_seconds\": self.exit_dwell.tolist()}\n\n    def close(self):\n        self.world.disconnect()\n",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/qualify_inspection_g1.py": "\"\"\"Execute the prospective G1 development grid, preserving every slot.\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport datetime\nimport hashlib\nimport importlib.metadata\nimport json\nimport math\nfrom pathlib import Path\nimport sys\nimport time\nimport traceback\n\nimport numpy as np\nimport PyFlyt\nimport pybullet\n\nsys.path.insert(0, str(Path(__file__).resolve().parents[1]))\n_source_paths = [Path(__file__).resolve().parents[1]/\"envs/inspection/control.py\",\n                 Path(__file__).resolve().parents[1]/\"envs/inspection/flight.py\", Path(__file__).resolve()]\n_import_sources = {str(p): p.read_text() for p in _source_paths}\nfrom envs.inspection.control import wrap_angle\nfrom envs.inspection.flight import FlightLimits, FlightWorld\n\n\ndef write_json_atomic(path, value):\n    temporary = path.with_name(\".\"+path.name+\".tmp\")\n    try:\n        temporary.write_text(json.dumps(value, indent=2, allow_nan=False)+\"\\n\")\n        temporary.replace(path)\n    finally:\n        temporary.unlink(missing_ok=True)\n\n\ndef run_case(task, root, duration, contract):\n    rng = np.random.default_rng(root)\n    count = 1 if root % 2 == 0 and task == \"straight\" else 4\n    wind = contract[\"wind_max_m_s\"]*np.array([math.cos(root), math.sin(root)]) if root % 2 else np.zeros(2)\n    radius = float(rng.uniform(*contract[\"radius_range_m\"]))\n    flight = FlightWorld(root, count=count, wind_xy=wind, task=task, radius=radius,\n                         half_length=float(rng.uniform(*contract[\"survey_half_length_range_m\"])), limits=FlightLimits.from_contract(contract),\n                         bound=contract[\"flight_bounds_xy_m\"][task])\n    trace, errors, heading_errors = [], [], []\n    operational_error = None\n    phase_start = 0\n    requested_heading = 0.0\n    switch_at = duration*contract[\"sortie_exit_switch_fraction\"]\n    started = time.monotonic()\n    try:\n        while flight.t < duration-1e-8:\n            if task == \"heading_changes\":\n                phase = max((x for x in contract[\"heading_schedule\"] if flight.t >= x[\"from\"]), key=lambda x: x[\"from\"])\n                phase_start, requested_heading = phase[\"from\"], math.radians(phase[\"degrees\"])\n                flight.headings[:] = requested_heading\n            if task == \"sortie_exit\" and flight.t >= switch_at:\n                flight.modes = [\"exit\"] * count\n            flight.step()\n            if flight.world.aviary_steps % 12 == 0:\n                states = np.array(flight.world.all_states)\n                current_errors, current_heading = [], []\n                for i, state in enumerate(states):\n                    if flight.modes[i] in (\"exit\", \"loiter\"):\n                        error = abs(np.linalg.norm(state[3, :2]-[0, flight.centers[i]])-radius)\n                    elif task in (\"survey\", \"sortie_exit\"):\n                        error = flight.routes[i].cross_track_error(state[3])\n                    else:\n                        error = abs(state[3, 1]-(flight.centers[i]-radius)) if task == \"straight\" else 0\n                    velocity, _ = flight.world.getBaseVelocity(flight.world.drones[i].Id)\n                    course = math.atan2(velocity[1], velocity[0])\n                    current_errors.append(float(error))\n                    # The acceptance schedule is independent of target()/last_targets.\n                    current_heading.append(abs(wrap_angle(course-requested_heading)))\n                phase_time = flight.t-switch_at if task == \"sortie_exit\" and flight.t >= switch_at else flight.t\n                if phase_time >= contract[\"settle_seconds\"]:\n                    errors.extend(current_errors)\n                if task in (\"straight\", \"heading_changes\") and flight.t-phase_start >= contract[\"settle_seconds\"]:\n                    heading_errors.extend(current_heading)\n                trace.append({\"t\": flight.t, \"positions\": states[:, 3].tolist(),\n                              \"tracking_error_m\": current_errors, \"course_error_rad\": current_heading})\n        summary = flight.summary()\n        rmse = float(np.sqrt(np.mean(np.square(errors)))) if errors else None\n        maximum = max(errors, default=None)\n        heading_max = max(heading_errors, default=0)\n        tracking_pass = rmse is not None and rmse <= contract[\"tracking_rmse_m_after_settle\"] and maximum <= contract[\"tracking_max_m_after_settle\"]\n        if task == \"heading_changes\":\n            tracking_pass = bool(heading_errors) and heading_max <= math.radians(contract[\"settled_course_error_degrees\"])\n        if task == \"straight\":\n            tracking_pass = tracking_pass and bool(heading_errors) and heading_max <= math.radians(contract[\"settled_course_error_degrees\"])\n        exit_pass = task != \"sortie_exit\" or all(x >= contract[\"exit_dwell_seconds\"]-1e-6 for x in flight.exit_dwell)\n        passed = not summary[\"violations\"] and tracking_pass and exit_pass and summary[\"physics_audits\"] == summary[\"physics_steps\"]\n    except Exception:\n        operational_error = traceback.format_exc()\n        summary = flight.summary()\n        passed, rmse, maximum, heading_max = False, None, None, None\n    finally:\n        simulated = flight.t\n        try:\n            flight.close()\n        except Exception:\n            operational_error = (operational_error or \"\")+\"\\nCleanup failure:\\n\"+traceback.format_exc()\n            passed = False\n    return {\"task\": task, \"root\": root, \"role\": \"control_development_qualification\",\n            \"aircraft_count\": count, \"wind_xy_m_s\": wind.tolist(), \"radius_m\": radius,\n            \"requested_seconds\": duration, \"simulated_seconds\": simulated,\n            \"wall_seconds\": time.monotonic()-started, \"passed\": bool(passed),\n            \"tracking_rmse_m\": rmse, \"tracking_max_m\": maximum,\n            \"settled_max_course_error_rad\": heading_max,\n            \"operational_error\": operational_error, \"safety\": summary, \"trace\": trace}\n\n\ndef main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument(\"--contract\", type=Path, required=True)\n    parser.add_argument(\"--out\", type=Path, required=True)\n    parser.add_argument(\"--roots\", type=int, default=None, help=\"development diagnostic subset, not full qualification\")\n    parser.add_argument(\"--families\", nargs=\"+\", default=None)\n    args = parser.parse_args()\n    if args.out.exists() or (args.roots is not None and args.roots <= 0):\n        parser.error(\"choose a new output directory and positive roots\")\n    args.out.mkdir(parents=True)\n    contract_bytes = args.contract.read_bytes()\n    contract = json.loads(contract_bytes)\n    sources = [Path(\"envs/inspection/control.py\"), Path(\"envs/inspection/flight.py\"), Path(__file__)]\n    frozen = {str(p): p.read_text() for p in sources}\n    if any(p.read_text() != _import_sources[str(p)] for p in _source_paths):\n        raise RuntimeError(\"source changed since module import\")\n    families = args.families or list(contract[\"G1\"][\"families\"])\n    roots = args.roots or contract[\"G1\"][\"roots_per_family\"]\n    root_ids = contract[\"G1\"][\"root_ids\"][:roots]\n    grid = [{\"task\": family, \"root\": root, \"status\": \"unstarted\"} for family in families for root in root_ids]\n    package = Path(PyFlyt.__file__).resolve().parent\n    dependencies = [p for p in package.rglob(\"*\") if p.suffix.lower() in (\".py\", \".yaml\", \".urdf\", \".obj\", \".stl\", \".dae\")]\n    dependencies.append(Path(pybullet.__file__))\n    dependency_hashes = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in dependencies}\n    manifest = {\"contract_sha256\": hashlib.sha256(contract_bytes).hexdigest(),\n                \"contract\": contract, \"sources\": frozen, \"grid\": grid,\n                \"dependency_hashes\": dependency_hashes,\n                \"versions\": {p: importlib.metadata.version(p) for p in (\"PyFlyt\", \"pybullet\", \"numpy\", \"numba\")},\n                \"full_grid\": args.roots is None and args.families is None}\n    def save():\n        write_json_atomic(args.out/\"manifest.json\", manifest)\n    save()\n    for slot in grid:\n        slot[\"status\"] = \"running\"\n        slot[\"started_at\"] = datetime.datetime.now(datetime.timezone.utc).isoformat()\n        save()\n        try:\n            result = run_case(slot[\"task\"], slot[\"root\"], contract[\"G1\"][\"families\"][slot[\"task\"]], contract[\"G1\"])\n            slot[\"status\"] = \"completed\" if not result[\"operational_error\"] else \"operational_failure\"\n            slot[\"passed\"] = result[\"passed\"]\n        except Exception:\n            result = {\"passed\": False, \"operational_error\": traceback.format_exc()}\n            slot[\"status\"], slot[\"passed\"] = \"operational_failure\", False\n        path = args.out/f\"{slot['task']}-{slot['root']:02d}.json\"\n        write_json_atomic(path, result)\n        slot[\"file\"] = path.name\n        slot[\"sha256\"] = hashlib.sha256(path.read_bytes()).hexdigest()\n        save()\n        print(slot[\"task\"], slot[\"root\"], slot[\"status\"], slot[\"passed\"], flush=True)\n    manifest[\"sources_unchanged\"] = all(Path(p).read_text() == source for p, source in frozen.items())\n    manifest[\"contract_unchanged\"] = args.contract.read_bytes() == contract_bytes\n    manifest[\"dependencies_unchanged\"] = all(hashlib.sha256(Path(p).read_bytes()).hexdigest() == sha for p, sha in dependency_hashes.items())\n    manifest[\"family_rates\"] = {f: sum(s[\"passed\"] for s in grid if s[\"task\"] == f)/roots for f in families}\n    manifest[\"qualified\"] = (manifest[\"full_grid\"] and manifest[\"sources_unchanged\"] and manifest[\"dependencies_unchanged\"] and manifest[\"contract_unchanged\"]\n                             and all(r >= contract[\"G1\"][\"success_fraction_per_family\"] for r in manifest[\"family_rates\"].values())\n                             and all(s[\"status\"] == \"completed\" for s in grid))\n    save()\n    return 0 if (manifest[\"qualified\"] if manifest[\"full_grid\"] else all(s[\"passed\"] for s in grid)) else 1\n\n\nif __name__ == \"__main__\":\n    sys.exit(main())\n"
+  },
+  "grid": [
+    {
+      "task": "straight",
+      "root": 0,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:00.196723+00:00",
+      "passed": true,
+      "file": "straight-00.json",
+      "sha256": "3be02c94b0f2878bd42917708f7d72460740967ef28fce8b42f1092e8362ba55"
+    },
+    {
+      "task": "straight",
+      "root": 1,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:02.143004+00:00",
+      "passed": true,
+      "file": "straight-01.json",
+      "sha256": "f70a9eeeb5212028ccc7dffbefec5f08909200e74e2bc89f94c8899ffcff9cd7"
+    },
+    {
+      "task": "straight",
+      "root": 2,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:05.714557+00:00",
+      "passed": true,
+      "file": "straight-02.json",
+      "sha256": "5737652e24de6abcb9f6f50a4413ec47fee45a47b98fe601e0332e32cb783d06"
+    },
+    {
+      "task": "straight",
+      "root": 3,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:06.756660+00:00",
+      "passed": true,
+      "file": "straight-03.json",
+      "sha256": "b1c4e97d5652292eb31b69684a3c46d04b21411b58ef4e425868c42c8b1f3020"
+    },
+    {
+      "task": "straight",
+      "root": 4,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:10.360182+00:00",
+      "passed": true,
+      "file": "straight-04.json",
+      "sha256": "ede40ff3b5fe5a3da3e4b54cfcd4286560c93d81bae864495338fade2aa49b89"
+    },
+    {
+      "task": "straight",
+      "root": 5,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:11.398024+00:00",
+      "passed": true,
+      "file": "straight-05.json",
+      "sha256": "35392a908400f36de7ea44fa88b7a3ee277befaa6c937ddc2f9c506350d60953"
+    },
+    {
+      "task": "straight",
+      "root": 6,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:15.048634+00:00",
+      "passed": true,
+      "file": "straight-06.json",
+      "sha256": "40b5badc27b01d24999d3c34d4bdbbd128fd883f7729d545cc1aac2e93dda7d3"
+    },
+    {
+      "task": "straight",
+      "root": 7,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:16.126457+00:00",
+      "passed": true,
+      "file": "straight-07.json",
+      "sha256": "d089a4f195447271bcf14349170ab09646dc185364c88b887b9bb092088c0985"
+    },
+    {
+      "task": "straight",
+      "root": 8,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:19.770918+00:00",
+      "passed": true,
+      "file": "straight-08.json",
+      "sha256": "e670581ec1e92162c70bdd195aa4ddd89b7c0850b896237f810e480b60c40ba5"
+    },
+    {
+      "task": "straight",
+      "root": 9,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:20.816241+00:00",
+      "passed": true,
+      "file": "straight-09.json",
+      "sha256": "0623050ebee454a1478f9f8c640497f4c4df68026484e2937f23759449f117e6"
+    },
+    {
+      "task": "straight",
+      "root": 10,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:24.444689+00:00",
+      "passed": true,
+      "file": "straight-10.json",
+      "sha256": "ec150bdd95f0d9df0398e7f424c9cf2117f9f7723437625586da4e8496126580"
+    },
+    {
+      "task": "straight",
+      "root": 11,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:25.487682+00:00",
+      "passed": true,
+      "file": "straight-11.json",
+      "sha256": "e465c6644492fd5d51720c91e151e9b754b24585f812f1b7d5b338fcff5a79b6"
+    },
+    {
+      "task": "straight",
+      "root": 12,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:29.099609+00:00",
+      "passed": true,
+      "file": "straight-12.json",
+      "sha256": "fe08bf5a15c6a7d678f682689df94a10198cc087dd3634aacedd6b3ad74de99b"
+    },
+    {
+      "task": "straight",
+      "root": 13,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:30.148889+00:00",
+      "passed": true,
+      "file": "straight-13.json",
+      "sha256": "2b42242bf987f86e0d2b59ef8f70c9f6abbb8907c9831274b10545f13b9a708a"
+    },
+    {
+      "task": "straight",
+      "root": 14,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:33.767882+00:00",
+      "passed": true,
+      "file": "straight-14.json",
+      "sha256": "aca3a35bd22aa993109fdf16f14ed117b42b59446ccab6a2465ce583c2cc0058"
+    },
+    {
+      "task": "straight",
+      "root": 15,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:34.834312+00:00",
+      "passed": true,
+      "file": "straight-15.json",
+      "sha256": "5cd2a0c084b5718d0b1da91dfe95fd8d8386e12b2804e4beed85e6c67ca1cbe0"
+    },
+    {
+      "task": "straight",
+      "root": 16,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:38.495980+00:00",
+      "passed": true,
+      "file": "straight-16.json",
+      "sha256": "ac4a25d3ca6a42abf420d86a96d5b77fbc9b2552328ac9e3f313644f55d98150"
+    },
+    {
+      "task": "straight",
+      "root": 17,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:39.667455+00:00",
+      "passed": true,
+      "file": "straight-17.json",
+      "sha256": "5fd87ab13e43815cb655c58598577c4d8e792deb7c4c6634a1101c32d30e1d32"
+    },
+    {
+      "task": "straight",
+      "root": 18,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:43.365496+00:00",
+      "passed": true,
+      "file": "straight-18.json",
+      "sha256": "bff66dea2bb3270b03bb8c062d79b1b65f2885eee0afaf32136fc558acebf599"
+    },
+    {
+      "task": "straight",
+      "root": 19,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:44.436147+00:00",
+      "passed": true,
+      "file": "straight-19.json",
+      "sha256": "ce9ce23adf5764f03330c54d9f71084f93633203bfeec3ba1957870ec67ae30e"
+    },
+    {
+      "task": "heading_changes",
+      "root": 0,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:48.099347+00:00",
+      "passed": true,
+      "file": "heading_changes-00.json",
+      "sha256": "068c229c1bf4f9b66b6481e3dbc8a6d3b277355e1d4a47f1b1f968833daf7e56"
+    },
+    {
+      "task": "heading_changes",
+      "root": 1,
+      "status": "completed",
+      "started_at": "2026-11-05T04:50:55.155771+00:00",
+      "passed": true,
+      "file": "heading_changes-01.json",
+      "sha256": "13aa7276bf3fe685bf68a418d4621123b73e6e93826379464ffe112c155a39ac"
+    },
+    {
+      "task": "heading_changes",
+      "root": 2,
+      "status": "completed",
+      "started_at": "2026-11-05T04:51:02.951063+00:00",
+      "passed": true,
+      "file": "heading_changes-02.json",
+      "sha256": "f7d29395c9bb4368387b555286f5142cc5c85946bfa312de6ce84698956b9e10"
+    },
+    {
+      "task": "heading_changes",
+      "root": 3,
+      "status": "completed",
+      "started_at": "2026-11-05T04:51:10.169547+00:00",
+      "passed": true,
+      "file": "heading_changes-03.json",
+      "sha256": "2f5912e6eddfc402506778fbb560d91af9ae4db034506b8c73473f4f65ef92ba"
+    },
+    {
+      "task": "heading_changes",
+      "root": 4,
+      "status": "completed",
+      "started_at": "2026-11-05T04:51:17.737766+00:00",
+      "passed": true,
+      "file": "heading_changes-04.json",
+      "sha256": "757f4c0941b4df844a9ba8ad8d65314a5c5db93c936b0701fbcd3dae4b55b55a"
+    },
+    {
+      "task": "heading_changes",
+      "root": 5,
+      "status": "completed",
+      "started_at": "2026-11-05T04:51:24.994263+00:00",
+      "passed": true,
+      "file": "heading_changes-05.json",
+      "sha256": "0b63df444566a562334e70f3401858de6144459c6c5d2f0d1bea6eb76fc3f155"
+    },
+    {
+      "task": "heading_changes",
+      "root": 6,
+      "status": "completed",
+      "started_at": "2026-11-05T04:51:32.627461+00:00",
+      "passed": true,
+      "file": "heading_changes-06.json",
+      "sha256": "99c2060bfe3ea80457f0aa8dc243bc18ea9ac8740496c126d62ff77f3b74344a"
+    },
+    {
+      "task": "heading_changes",
+      "root": 7,
+      "status": "completed",
+      "started_at": "2026-11-05T04:51:39.849120+00:00",
+      "passed": true,
+      "file": "heading_changes-07.json",
+      "sha256": "95551f26401d2c539b59a08eb4df18f3025e52772f9f9abc1ab8de263f972f68"
+    },
+    {
+      "task": "heading_changes",
+      "root": 8,
+      "status": "completed",
+      "started_at": "2026-11-05T04:51:47.390793+00:00",
+      "passed": true,
+      "file": "heading_changes-08.json",
+      "sha256": "b26e67546813547bff905f130b9b8350bcd0f3cc55b9943e442e3d0b2f5054df"
+    },
+    {
+      "task": "heading_changes",
+      "root": 9,
+      "status": "completed",
+      "started_at": "2026-11-05T04:51:55.088964+00:00",
+      "passed": true,
+      "file": "heading_changes-09.json",
+      "sha256": "fe2a88060b7d438644572a958d6e7c4b52fc3f46aeb4fb338c9ae2ad57023461"
+    },
+    {
+      "task": "heading_changes",
+      "root": 10,
+      "status": "completed",
+      "started_at": "2026-11-05T04:52:02.561234+00:00",
+      "passed": true,
+      "file": "heading_changes-10.json",
+      "sha256": "96e5e59d39c20331a2d8c7805d1e91834fa080809bd446fd9aaa931144f4cfab"
+    },
+    {
+      "task": "heading_changes",
+      "root": 11,
+      "status": "completed",
+      "started_at": "2026-11-05T04:52:09.663545+00:00",
+      "passed": true,
+      "file": "heading_changes-11.json",
+      "sha256": "097b4e957741463903226e2aab8f181bec63886530ebde2859767943b9f59ac1"
+    },
+    {
+      "task": "heading_changes",
+      "root": 12,
+      "status": "completed",
+      "started_at": "2026-11-05T04:52:17.108450+00:00",
+      "passed": true,
+      "file": "heading_changes-12.json",
+      "sha256": "86f1a13a1f10a814611c82d4c9dd539b56276af31f47fead1b81beebf7e384b1"
+    },
+    {
+      "task": "heading_changes",
+      "root": 13,
+      "status": "completed",
+      "started_at": "2026-11-05T04:52:24.219388+00:00",
+      "passed": true,
+      "file": "heading_changes-13.json",
+      "sha256": "6c8288a09d3db13e50a0298958af1179f4c2fd0f7ee8049fa489efad88a95a7c"
+    },
+    {
+      "task": "heading_changes",
+      "root": 14,
+      "status": "completed",
+      "started_at": "2026-11-05T04:52:31.627102+00:00",
+      "passed": true,
+      "file": "heading_changes-14.json",
+      "sha256": "1d8b881e74727cca10bd4d604270f54e06ed7a53994b585f2f365bbe8d5aec6d"
+    },
+    {
+      "task": "heading_changes",
+      "root": 15,
+      "status": "completed",
+      "started_at": "2026-11-05T04:52:38.685206+00:00",
+      "passed": true,
+      "file": "heading_changes-15.json",
+      "sha256": "068da176c22d6436e8f5ab79d8a2e91ee1639c2cbd80fd4dac7de0b67038c808"
+    },
+    {
+      "task": "heading_changes",
+      "root": 16,
+      "status": "completed",
+      "started_at": "2026-11-05T04:52:46.134913+00:00",
+      "passed": true,
+      "file": "heading_changes-16.json",
+      "sha256": "7abca8f3a94e301233aa6ee42fb308745ca8741c0cd73bef3d402066dbf46cc4"
+    },
+    {
+      "task": "heading_changes",
+      "root": 17,
+      "status": "completed",
+      "started_at": "2026-11-05T04:52:53.196053+00:00",
+      "passed": true,
+      "file": "heading_changes-17.json",
+      "sha256": "d812ffddf07031672a255bbbb3b32f43b5a412a0be8b9e7484edcb60c105c380"
+    },
+    {
+      "task": "heading_changes",
+      "root": 18,
+      "status": "completed",
+      "started_at": "2026-11-05T04:53:00.595316+00:00",
+      "passed": true,
+      "file": "heading_changes-18.json",
+      "sha256": "1790a961cc2f352449ad4d49bcd66a7447379c81aca8fa2c0873be798702e116"
+    },
+    {
+      "task": "heading_changes",
+      "root": 19,
+      "status": "completed",
+      "started_at": "2026-11-05T04:53:07.652635+00:00",
+      "passed": true,
+      "file": "heading_changes-19.json",
+      "sha256": "ff293d7964d946f949bbbf668bd5c8754540392944e823a1c1e6c70e9584762f"
+    },
+    {
+      "task": "loiter",
+      "root": 0,
+      "status": "completed",
+      "started_at": "2026-11-05T04:53:15.038887+00:00",
+      "passed": true,
+      "file": "loiter-00.json",
+      "sha256": "33ccc035d9d0ace4e190b30d0b12fc02ab6c495cf541c79a503ac4706580c798"
+    },
+    {
+      "task": "loiter",
+      "root": 1,
+      "status": "completed",
+      "started_at": "2026-11-05T04:53:25.777140+00:00",
+      "passed": true,
+      "file": "loiter-01.json",
+      "sha256": "dfbd33fea5c5d6a292881a233b1c66232f25b0dd8e28f7b272ee60aa499a4ea1"
+    },
+    {
+      "task": "loiter",
+      "root": 2,
+      "status": "completed",
+      "started_at": "2026-11-05T04:53:36.974353+00:00",
+      "passed": true,
+      "file": "loiter-02.json",
+      "sha256": "6d547b0d001cb9fc30f6a5fdd5d8edf788daf15aecc0e6868440420c87cba2a1"
+    },
+    {
+      "task": "loiter",
+      "root": 3,
+      "status": "completed",
+      "started_at": "2026-11-05T04:53:47.711752+00:00",
+      "passed": true,
+      "file": "loiter-03.json",
+      "sha256": "a4e2ec0602749ad6e833c10805ed746be2d691d75b6e488807e08c6c4f491224"
+    },
+    {
+      "task": "loiter",
+      "root": 4,
+      "status": "completed",
+      "started_at": "2026-11-05T04:53:59.026154+00:00",
+      "passed": true,
+      "file": "loiter-04.json",
+      "sha256": "e09f447ffd57455f35abedaa5756cbcf5f216aa61923b16b68c6ee7867031a03"
+    },
+    {
+      "task": "loiter",
+      "root": 5,
+      "status": "completed",
+      "started_at": "2026-11-05T04:54:09.750327+00:00",
+      "passed": true,
+      "file": "loiter-05.json",
+      "sha256": "d618b80c6325a79e3e0ece9d815b7708dc61c65636ccd803dfc137343b3cd91e"
+    },
+    {
+      "task": "loiter",
+      "root": 6,
+      "status": "completed",
+      "started_at": "2026-11-05T04:54:21.001196+00:00",
+      "passed": true,
+      "file": "loiter-06.json",
+      "sha256": "e87324b779ed67a3820830429e9d8a39605a24115e59c7594f99a120b54fc4cd"
+    },
+    {
+      "task": "loiter",
+      "root": 7,
+      "status": "completed",
+      "started_at": "2026-11-05T04:54:31.853961+00:00",
+      "passed": true,
+      "file": "loiter-07.json",
+      "sha256": "05e78743b60bcabe108e4ec511d354b1ec92fcdcd8d693f8e43a789ac91d9ad4"
+    },
+    {
+      "task": "loiter",
+      "root": 8,
+      "status": "completed",
+      "started_at": "2026-11-05T04:54:43.092567+00:00",
+      "passed": true,
+      "file": "loiter-08.json",
+      "sha256": "f970fb3d506501988ea45ceaf51d4a9e5df0c7b7abeac7e514c89fcd5d16db21"
+    },
+    {
+      "task": "loiter",
+      "root": 9,
+      "status": "completed",
+      "started_at": "2026-11-05T04:54:53.791630+00:00",
+      "passed": true,
+      "file": "loiter-09.json",
+      "sha256": "d7fcd235575fa61f1639da71a57c7661c6f62ad81d591e65453d4d9c86a1667c"
+    },
+    {
+      "task": "loiter",
+      "root": 10,
+      "status": "completed",
+      "started_at": "2026-11-05T04:55:05.660324+00:00",
+      "passed": true,
+      "file": "loiter-10.json",
+      "sha256": "6d50eebc7daa91aff358cbca9817b2aabdf7f0cc3a157715d13bae3ad47406bc"
+    },
+    {
+      "task": "loiter",
+      "root": 11,
+      "status": "completed",
+      "started_at": "2026-11-05T04:55:16.703019+00:00",
+      "passed": true,
+      "file": "loiter-11.json",
+      "sha256": "189a94de67e7b369b11d019779e996c3d3858936937c87480d0951ae3e53f271"
+    },
+    {
+      "task": "loiter",
+      "root": 12,
+      "status": "completed",
+      "started_at": "2026-11-05T04:55:28.129104+00:00",
+      "passed": true,
+      "file": "loiter-12.json",
+      "sha256": "3359968044f1579167bff9c62955cfe5ff9b4a1befc59ad5b93b193f8a51c0dd"
+    },
+    {
+      "task": "loiter",
+      "root": 13,
+      "status": "completed",
+      "started_at": "2026-11-05T04:55:39.047686+00:00",
+      "passed": true,
+      "file": "loiter-13.json",
+      "sha256": "32ec8348d1e9fcf3b0e42343d70a5211fe4004e94c3e98ae0c278b5d2fbbb3fd"
+    },
+    {
+      "task": "loiter",
+      "root": 14,
+      "status": "completed",
+      "started_at": "2026-11-05T04:55:50.385881+00:00",
+      "passed": true,
+      "file": "loiter-14.json",
+      "sha256": "494a2f18555d9e718049f634ea9203ce524938f87c735879708d5e00ad3856c7"
+    },
+    {
+      "task": "loiter",
+      "root": 15,
+      "status": "completed",
+      "started_at": "2026-11-05T04:56:01.481052+00:00",
+      "passed": true,
+      "file": "loiter-15.json",
+      "sha256": "836e3ccba10e9e85c6386208df0a4473eb9bfd0d57662122068d3cb57492a477"
+    },
+    {
+      "task": "loiter",
+      "root": 16,
+      "status": "completed",
+      "started_at": "2026-11-05T04:56:12.774756+00:00",
+      "passed": true,
+      "file": "loiter-16.json",
+      "sha256": "48e67f4f4c6323538c2ca0f3c4b601b47b216dc166fbdf1f9f97b2322cd0e294"
+    },
+    {
+      "task": "loiter",
+      "root": 17,
+      "status": "completed",
+      "started_at": "2026-11-05T04:56:23.546163+00:00",
+      "passed": true,
+      "file": "loiter-17.json",
+      "sha256": "8a680e6cde4819e168697c64b350f200d4a2ddf68b70650f8b6a85aa55e95d7a"
+    },
+    {
+      "task": "loiter",
+      "root": 18,
+      "status": "completed",
+      "started_at": "2026-11-05T04:56:34.939161+00:00",
+      "passed": true,
+      "file": "loiter-18.json",
+      "sha256": "599535c37200a05c888cd01149c9f30c3de6c592ed0e9083c0993f6531414799"
+    },
+    {
+      "task": "loiter",
+      "root": 19,
+      "status": "completed",
+      "started_at": "2026-11-05T04:56:45.679963+00:00",
+      "passed": true,
+      "file": "loiter-19.json",
+      "sha256": "8f783fa30c871f44edbf698a8e96022159adf1b4adb0f80454cf8085c762ccb5"
+    },
+    {
+      "task": "survey",
+      "root": 0,
+      "status": "completed",
+      "started_at": "2026-11-05T04:56:56.929442+00:00",
+      "passed": true,
+      "file": "survey-00.json",
+      "sha256": "37b365a684a3e4c2315c12256c11324e82328618835a2151808bcb677abf48b7"
+    },
+    {
+      "task": "survey",
+      "root": 1,
+      "status": "completed",
+      "started_at": "2026-11-05T04:57:07.678471+00:00",
+      "passed": true,
+      "file": "survey-01.json",
+      "sha256": "6fb9a2d573e17908949cf2207b3b63831a4c10f8d2b65511dcfc9b355bf20935"
+    },
+    {
+      "task": "survey",
+      "root": 2,
+      "status": "completed",
+      "started_at": "2026-11-05T04:57:18.876759+00:00",
+      "passed": true,
+      "file": "survey-02.json",
+      "sha256": "a93137af10a6e9a35b678c0c0e40596fff59bccea963a3781020253704bad772"
+    },
+    {
+      "task": "survey",
+      "root": 3,
+      "status": "completed",
+      "started_at": "2026-11-05T04:57:29.590444+00:00",
+      "passed": true,
+      "file": "survey-03.json",
+      "sha256": "a221136bf073a4223e998dfd88941e2c648561252419c364b9976f5b0cf1e7bb"
+    },
+    {
+      "task": "survey",
+      "root": 4,
+      "status": "completed",
+      "started_at": "2026-11-05T04:57:40.820761+00:00",
+      "passed": true,
+      "file": "survey-04.json",
+      "sha256": "02f95d39e38350dfdf96599a86121c016eda9cc4f8124016b36461e5e11cfcb6"
+    },
+    {
+      "task": "survey",
+      "root": 5,
+      "status": "completed",
+      "started_at": "2026-11-05T04:57:51.488379+00:00",
+      "passed": true,
+      "file": "survey-05.json",
+      "sha256": "95c131cbd2b460c32a7c6d18f948b45871989d4553b07bd7499469a8af0e8aca"
+    },
+    {
+      "task": "survey",
+      "root": 6,
+      "status": "completed",
+      "started_at": "2026-11-05T04:58:02.696554+00:00",
+      "passed": true,
+      "file": "survey-06.json",
+      "sha256": "d4c2c922c7f4dabab82bfe5f9289fa200ca823e175fa72c5bbce2c42857cb3df"
+    },
+    {
+      "task": "survey",
+      "root": 7,
+      "status": "completed",
+      "started_at": "2026-11-05T04:58:13.308512+00:00",
+      "passed": true,
+      "file": "survey-07.json",
+      "sha256": "ff1299d383dd920c3a1c0f78f2290fcc0056c08b5a38cda5e9b5858043bc7c15"
+    },
+    {
+      "task": "survey",
+      "root": 8,
+      "status": "completed",
+      "started_at": "2026-11-05T04:58:24.460756+00:00",
+      "passed": true,
+      "file": "survey-08.json",
+      "sha256": "5a5d074b6eb71edfb076ae85c1a27be28f97f820565842e4e84eb708b4604a78"
+    },
+    {
+      "task": "survey",
+      "root": 9,
+      "status": "completed",
+      "started_at": "2026-11-05T04:58:35.174509+00:00",
+      "passed": true,
+      "file": "survey-09.json",
+      "sha256": "af42776322f027da9e317ab2626affbb8fe90f0459001b8d7cfb8a1d595dbda9"
+    },
+    {
+      "task": "survey",
+      "root": 10,
+      "status": "completed",
+      "started_at": "2026-11-05T04:58:46.353362+00:00",
+      "passed": true,
+      "file": "survey-10.json",
+      "sha256": "8b37c8df7eaf976ed994053e012eb033ac514b712b8ee91193a9f89bed7019dd"
+    },
+    {
+      "task": "survey",
+      "root": 11,
+      "status": "completed",
+      "started_at": "2026-11-05T04:58:56.996412+00:00",
+      "passed": true,
+      "file": "survey-11.json",
+      "sha256": "e3a95d06fb08cfc0b183014bb64194e66caae1794eb258f70555b40d41ec0109"
+    },
+    {
+      "task": "survey",
+      "root": 12,
+      "status": "completed",
+      "started_at": "2026-11-05T04:59:08.130495+00:00",
+      "passed": true,
+      "file": "survey-12.json",
+      "sha256": "834e93850111bd62493cac3875b9ee5220e46edefc435c258d6770a6d583c69d"
+    },
+    {
+      "task": "survey",
+      "root": 13,
+      "status": "completed",
+      "started_at": "2026-11-05T04:59:18.767304+00:00",
+      "passed": true,
+      "file": "survey-13.json",
+      "sha256": "ddcf2876d5cef6e884ac666eb2ec52c95121d0b85880aae82f20f9ddcaa0074d"
+    },
+    {
+      "task": "survey",
+      "root": 14,
+      "status": "completed",
+      "started_at": "2026-11-05T04:59:30.545821+00:00",
+      "passed": true,
+      "file": "survey-14.json",
+      "sha256": "9f211054b9605f114772089c3bc8328dd54dd51b23c2ec4f51c2788ff41f4663"
+    },
+    {
+      "task": "survey",
+      "root": 15,
+      "status": "completed",
+      "started_at": "2026-11-05T04:59:41.395300+00:00",
+      "passed": true,
+      "file": "survey-15.json",
+      "sha256": "accbd05ce00d98e259b27df501ef19164588f34f0a1491556106cb12128beede"
+    },
+    {
+      "task": "survey",
+      "root": 16,
+      "status": "completed",
+      "started_at": "2026-11-05T04:59:52.889390+00:00",
+      "passed": true,
+      "file": "survey-16.json",
+      "sha256": "18c557e1716ef5afaae5c5c7baeea6d6c329eb3fc124830ce4a164ab18ca91a5"
+    },
+    {
+      "task": "survey",
+      "root": 17,
+      "status": "completed",
+      "started_at": "2026-11-05T05:00:03.799534+00:00",
+      "passed": true,
+      "file": "survey-17.json",
+      "sha256": "efd34c0f1e137e00cec753898e82eec5e2035aaf4f2e6ac3d8421dfda25599f5"
+    },
+    {
+      "task": "survey",
+      "root": 18,
+      "status": "completed",
+      "started_at": "2026-11-05T05:00:15.091370+00:00",
+      "passed": true,
+      "file": "survey-18.json",
+      "sha256": "c58c5d3a31c91a0261ef8dff2e04da3b42738f967c4d981a71141ee4c051deb1"
+    },
+    {
+      "task": "survey",
+      "root": 19,
+      "status": "completed",
+      "started_at": "2026-11-05T05:00:25.924204+00:00",
+      "passed": true,
+      "file": "survey-19.json",
+      "sha256": "0195727665eef45b18a35832418b9e89f0a42acd4fc78bbce0349b3b6a1dcd31"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 0,
+      "status": "completed",
+      "started_at": "2026-11-05T05:00:37.444687+00:00",
+      "passed": true,
+      "file": "sortie_exit-00.json",
+      "sha256": "8671e6ec2d84ab19aa75a3540c8092903da0aaefec589b9fd54df6d3baafc6ff"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 1,
+      "status": "completed",
+      "started_at": "2026-11-05T05:00:51.979467+00:00",
+      "passed": true,
+      "file": "sortie_exit-01.json",
+      "sha256": "fc5c08daf62eb810f6c3eb0ada695971fb3115f5a34eecf9f17cefd4eb555cce"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 2,
+      "status": "completed",
+      "started_at": "2026-11-05T05:01:07.155780+00:00",
+      "passed": true,
+      "file": "sortie_exit-02.json",
+      "sha256": "37613cbed84b833b02863735a1b2ce50654d76074b1a0415ccb5da4cd244b48b"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 3,
+      "status": "completed",
+      "started_at": "2026-11-05T05:01:21.638748+00:00",
+      "passed": true,
+      "file": "sortie_exit-03.json",
+      "sha256": "099b034a477196243490bfc5b3c66c55323493fae5bfcc51f39c160a3c021e39"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 4,
+      "status": "completed",
+      "started_at": "2026-11-05T05:01:36.766387+00:00",
+      "passed": true,
+      "file": "sortie_exit-04.json",
+      "sha256": "2aad7fad555523978bf8ee6df633386b92c724fd8148ff04101788d1cfd382db"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 5,
+      "status": "completed",
+      "started_at": "2026-11-05T05:01:51.323008+00:00",
+      "passed": true,
+      "file": "sortie_exit-05.json",
+      "sha256": "be94430469980e7a8deb21db1182ae544108a490663b3eb664771c369b3ae999"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 6,
+      "status": "completed",
+      "started_at": "2026-11-05T05:02:06.361754+00:00",
+      "passed": true,
+      "file": "sortie_exit-06.json",
+      "sha256": "bc4ecb6ebcb9034b88d622dc86c7d0653fdc9e300f5758c92ef5bf940bd4b548"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 7,
+      "status": "completed",
+      "started_at": "2026-11-05T05:02:21.197925+00:00",
+      "passed": true,
+      "file": "sortie_exit-07.json",
+      "sha256": "cf8b38648404d8b4f7ec89a09a0fa7bd0db54e5b74fcabaed7b733b721c54953"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 8,
+      "status": "completed",
+      "started_at": "2026-11-05T05:02:36.372522+00:00",
+      "passed": true,
+      "file": "sortie_exit-08.json",
+      "sha256": "ead06bc09e4c0088197b4377fd131f6737ff41bd87744cc7013c9100ece30f8f"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 9,
+      "status": "completed",
+      "started_at": "2026-11-05T05:02:50.960163+00:00",
+      "passed": true,
+      "file": "sortie_exit-09.json",
+      "sha256": "d9a675cbe316d59d8d148eb03aeb814db4754a7ac6db65d9e634e748a9dfa57c"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 10,
+      "status": "completed",
+      "started_at": "2026-11-05T05:03:06.344737+00:00",
+      "passed": true,
+      "file": "sortie_exit-10.json",
+      "sha256": "f44fdfe37e6e52178173062d2b2718eaaf1b914fd2d4f09e531d4a6d29f1e7c4"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 11,
+      "status": "completed",
+      "started_at": "2026-11-05T05:03:20.769330+00:00",
+      "passed": true,
+      "file": "sortie_exit-11.json",
+      "sha256": "c666a7eec813c173f24b85539525fa21f8f7cb99fbc687df3aadf5355b3e8327"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 12,
+      "status": "completed",
+      "started_at": "2026-11-05T05:03:35.890855+00:00",
+      "passed": true,
+      "file": "sortie_exit-12.json",
+      "sha256": "afa39d5dba6bed0ec616a44a5fb141de9ae26c509093956f0b96f8227a509320"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 13,
+      "status": "completed",
+      "started_at": "2026-11-05T05:03:50.323265+00:00",
+      "passed": true,
+      "file": "sortie_exit-13.json",
+      "sha256": "f4cd017380fe19411421bec7e705be1b186d2f9f95f16201d4304b49b0517edc"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 14,
+      "status": "completed",
+      "started_at": "2026-11-05T05:04:05.384206+00:00",
+      "passed": true,
+      "file": "sortie_exit-14.json",
+      "sha256": "dfb84c2e1dfc5d70e42b0405376aa5771fd8b43c0d181beb6283bcef6be630f2"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 15,
+      "status": "completed",
+      "started_at": "2026-11-05T05:04:19.718150+00:00",
+      "passed": true,
+      "file": "sortie_exit-15.json",
+      "sha256": "cc6c103be4af7e5ab9b9f9bdd85bd39676070f3d9acb1403f6abecd2f9d2124c"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 16,
+      "status": "completed",
+      "started_at": "2026-11-05T05:04:34.942838+00:00",
+      "passed": true,
+      "file": "sortie_exit-16.json",
+      "sha256": "2c9f4df8084cce9530cd00a8f02add3abd6064e082eeff86a65a0a062dc04e86"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 17,
+      "status": "completed",
+      "started_at": "2026-11-05T05:04:49.361551+00:00",
+      "passed": true,
+      "file": "sortie_exit-17.json",
+      "sha256": "832ed0f421b6306b97ff18926986143f17d40525a1fef01a5913fb753add5428"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 18,
+      "status": "completed",
+      "started_at": "2026-11-05T05:05:04.452698+00:00",
+      "passed": true,
+      "file": "sortie_exit-18.json",
+      "sha256": "a7b43b16433ec1783724ac96c8d727a7e218a011ecd36e21bed28e738bae13c1"
+    },
+    {
+      "task": "sortie_exit",
+      "root": 19,
+      "status": "completed",
+      "started_at": "2026-11-05T05:05:18.880588+00:00",
+      "passed": true,
+      "file": "sortie_exit-19.json",
+      "sha256": "af46ea67c8bfca1212407e3152c3bf28da77ebb843df7d3c32714bcf76b39f87"
+    }
+  ],
+  "dependency_hashes": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/__init__.py": "5d8f83ca93017cac833e9697c49a6e07c69ea304dbabe3a9be636a6bd31f2645",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/__init__.py": "645a905775531324acf51485d23011744656d74e7952a7828b37357a49b59552",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/aviary.py": "ec47b50a22dc532d2a4aba616b9d0c784d58740a79d7b0d806acb3564558fa83",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/wind/__init__.py": "d640b8805fafc939187fa93d3a7b7280cd28ed710b5719ebff5443a1246b1796",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/utils/load_objs.py": "a455a34a9684f7920c0c3c4029329b0bb11f3f6a9dd0b7ffecc2c8e42b332037",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/utils/compile_helpers.py": "0be561c104b1e2b61b68cb53ac06ff7f06eab02ddb881ac13d98b0361fed0320",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/drones/fixedwing.py": "9fac18544da32628b5bf25a4ce75718c0702b6b09f45c42075d6cc2b033c8066",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/drones/__init__.py": "9275ae73b196f0170e6eaa226f3ef41eeefaa49edbe02cb5420ff50e65456885",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/drones/quadx.py": "c90fda2f205250ed4d2864b350b4028831656f3cf17d86d28457483d46e1806f",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/drones/rocket.py": "744f7b5380853ba3511f18a62a3520a24f82ffcd45c81e62f69ee42b7ee32943",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/boosters.py": "9f63987768da5ad9eceee41876aef653418e66190e46bc61169b7fc45bf60ee3",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/lifting_surfaces.py": "b05127d71abc4fa801ab59af3fc8318a8be4a8c46d5d889264bc6e0fc6fa34a9",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/boring_bodies.py": "5c183f692405c3ba609dd4644aff3bcdaece52dbc219d4a8c683da93f142db6e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/motors.py": "329ef83b83efa79b0f627b28ff473490cbf52e84538413cec77af2afb455ef17",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/pid.py": "5f18a15ac539d4bc70279c3f6975a01c3909bd70e810cd643ab6daa1940fb5e6",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/__init__.py": "4490cf4a0f40988f4609fc711e1fba87614c3b74c119cb5c7cfb848081cab323",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/base_wind_field.py": "e38f27d6511308671590370a282f0455d5f08a5f2412b1f437a55bd81269fd71",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/camera.py": "6f9d5532d88eaa3b32614cf26d3cd03cd94e18fb98e0d858a14cd73553b4deae",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/gimbals.py": "e938897cf455efcf14001a2d1d44b8d2b61a7f8e972b63c1556c8b32d9a8f878",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/base_drone.py": "8ac6df239b4dd7e230d72e9fae689b00f71accd6af95c1763457527220781ab3",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/core/abstractions/base_controller.py": "0010d15c326001f26b8bd502d5998a30e041407fb52a680701ec3661535aa013",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/__init__.py": "27c5a6228ec2cfffc62158448f5b4ed017bcb61d98a3acc9f03eda0aa663641c",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/rocket_envs/rocket_landing_env.py": "3789e2d63d8e44013bd5c9ad69cffff97f074947310bd432bd06a2557c9323c7",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/rocket_envs/rocket_base_env.py": "882103b066662c6b7b1f9fa148d976ef7d4872e7e235a0d9ab0f97836b215492",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/utils/pole_handler.py": "e060e5e5cbad30bd192e8a716b4679fdec053de823639d2028596df23789b6e3",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/utils/waypoint_handler.py": "62bf9708aa5e3f7aa9cefe480c9f91f5761c22667c00682d0afe480fa256afc5",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/utils/flatten_waypoint_env.py": "56f6bec6bba293e10880ecd24e27cf7ef34fac12a37d978c7fd8003eb4905cd2",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/fixedwing_envs/fixedwing_waypoints_env.py": "cb2be1c398cd57832520dda8dfbfa09c27f5737c79c2ddbb803f21c7cd02d299",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/fixedwing_envs/fixedwing_base_env.py": "34b3d53745ccdcfb7a11a8ad0f4e658b086576a66f397a9c19cf30fdbadfd332",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/quadx_envs/quadx_ball_in_cup_env.py": "abfd71acbbe22d61ea21bc3f4cb086e7a3e6d73c2ba5f7dc3b4dd2db983f3b2b",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/quadx_envs/quadx_gates_env.py": "f16a9f383df14fda631bd62e84da9bc322abe717ce389b904200a679da469d1e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/quadx_envs/quadx_waypoints_env.py": "6f959ff66304297d8945fb102382c20ba4ecf4e88f6f32d1027b7f49208134d1",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/quadx_envs/quadx_pole_waypoints_env.py": "a929a31a91ab081fa7cefaaf6a826924095031c1cfac713be8fa48fdf067be83",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/quadx_envs/quadx_hover_env.py": "c4063c1cd39c7de0e4c70617c6823abcf63894fe4bc45f0b46e3a365850b649a",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/quadx_envs/quadx_pole_balance_env.py": "9b46691453cad43335396e738f53203709bbd4e345f6ea2e37a1a7901fb78b66",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/gym_envs/quadx_envs/quadx_base_env.py": "d9495b22f96ca0d84cd0b1558c72e00902f5baf256161811873036d4c5cfb5f3",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/landing_pad.urdf": "308ac094625ca627a07c8ca9575b7c56b5bc618aa86e1c4dfa6e377c991d7787",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/pole.urdf": "5a43136170c4e31568b28e41dfc058ce38d2518fe55dfcc36b25ffe4ced5484e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/cup.urdf": "f4c22569bea9c940e2919fd57818c98ef5ea55b145d5c3b0fff7cec62e2215af",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/ball_and_string.urdf": "5e761dece50317ec10ae17762fba7679a7b549e5e998659188b264d536711e41",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/race_gate.urdf": "d2253b6d78a9c30c9bd7353bf1629e60adaa67f831e84b8184eac8177c10947c",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/target.urdf": "4b0a4e358c5849c25c760f1f258e60547e2825cdc0648bcbd85c8e95eeb54cb5",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/acrowing/acrowing.urdf": "53ec9c8072c3f3ceae3a5091b82e859bf0dc0916ccc0bec8f82e7c27b4df52be",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/acrowing/acrowing.yaml": "45f733b4e907f986c9e2bc87703e76f695fcd205182b2b01c67f58c404f17223",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/fixedwing/fixedwing.yaml": "7ed3d1c13fb417b6a426940fb2c1c078b49b72c7de408b7d15f8384520b7446c",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/fixedwing/fixedwing.urdf": "b0b79cd3a19ca5b3bb4bceb9f1a2724bdfa16f63d512b871d7f5914608ec431e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/primitive_drone/primitive_drone.urdf": "c6b4a51556e82c24091dd3252272c672e3dcd8e31077dab389bf7bcce8327b17",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/primitive_drone/primitive_drone.yaml": "116b02220b990e63aaa533fa0bf70ee60dbdce885b18a278a6214bda20c252c1",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/cf2x/cf2x.urdf": "08d4b7c2cc6e92d7f1e7e9f5a5287c4c59ffe730620e560a5df52d9779598248",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/cf2x/cf2.dae": "f0ffba569473497ce8a72a5ae6ff8e07b2f2954507ca693199ada0317b95de1b",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/cf2x/cf2x.yaml": "c66163fdfdbb79cdef4a6f35762e16aa0cbd99008673836eaaf11dac5cd89e8e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/quadplane/quadplane.urdf": "ca47cdba4145b9c22d7b410b757a32271fc98a061c788a7a3a3659bc5f2bcf01",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/quadplane/quadplane.yaml": "5cea138d43887ae8faa77e28349066c358b09cd7fc5a4a4497cf22cbf058608f",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/rocket/rocket.yaml": "321724ba783037a699b598323c1edebd145d8ab189b65fdfb2d0c9eb2368258d",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/models/vehicles/rocket/rocket.urdf": "402e0ef7b31dbc4f1ad5d5490e76e95505bf9aa01f337e21bf55804d9b0bcb4e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/pz_envs/__init__.py": "acfab014a3f2f2c5fe502a68a07836236a018af9d1897359cc39d0c9e46f7438",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/pz_envs/fixedwing_envs/ma_fixedwing_base_env.py": "b0fc432288d65507f60e242ce7b73829f2c9e5900cebe78e093040ca49d9f961",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/pz_envs/fixedwing_envs/ma_fixedwing_dogfight_env.py": "90f9fed4cfee53d9e7e2659c5e4275d3c4568ba1b39dbbec588cf3f98875c5f0",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/pz_envs/quadx_envs/ma_quadx_hover_env.py": "4c624cfc57c9901bfbc63d7864c4b1313d6769fd3d6f135644484045f1e039ac",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/PyFlyt/pz_envs/quadx_envs/ma_quadx_base_env.py": "f0b9bd07e446226203911a5e5a33b12cecec888a548a43275f262f3e2ff518b4",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/lib/python3.11/site-packages/pybullet.cpython-311-darwin.so": "91401b0dbd82e21455cbb98d45017a5b7b13d29c5e6d848ea5abbfac6a3d9289"
+  },
+  "versions": {
+    "PyFlyt": "0.29.0",
+    "pybullet": "3.2.7",
+    "numpy": "1.26.4",
+    "numba": "0.68.1"
+  },
+  "full_grid": true,
+  "sources_unchanged": true,
+  "contract_unchanged": true,
+  "dependencies_unchanged": true,
+  "family_rates": {
+    "straight": 1.0,
+    "heading_changes": 1.0,
+    "loiter": 1.0,
+    "survey": 1.0,
+    "sortie_exit": 1.0
+  },
+  "qualified": true
+}

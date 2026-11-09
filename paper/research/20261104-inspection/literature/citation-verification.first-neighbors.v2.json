@@ -1,0 +1,245 @@
+{
+  "records": [
+    {
+      "key": "MultiUAVPlat2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+        "authors": [
+          "Zhang, Sheng",
+          "Li, Qinglin",
+          "Zang, Yuechao",
+          "Huang, Xueqin",
+          "Fu, Yijia",
+          "Zhu, Cheng"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2606.31073v1"
+      },
+      "source_sha256": "3443de6bde899626582a8710d0b247e13851a49a9d1d0214bff474f91c3112d6",
+      "evidence": [
+        "literature/verification/MultiUAVPlat2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-MultiUAVPlat2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/multiuav-plat-v1.txt",
+              "quote": "role-based information access, hidden validation logic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "MissionBench2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+        "authors": [
+          "Navaratnarajah, Suman",
+          "Kim, Taehyoung",
+          "Ruthardt, Jona",
+          "Bhimwal, Ishaan",
+          "Yamada, Ryousuke",
+          "Blei, Yannik",
+          "Burgard, Wolfram",
+          "Asano, Yuki M"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2607.22014v1"
+      },
+      "source_sha256": "b4a50b1db4de3e43b56a9cdb4b50c906ab36388d132e410303072a54653d0cd4",
+      "evidence": [
+        "literature/verification/MissionBench2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-MissionBench2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/missionbench-v1.txt",
+              "quote": "continuous 4-DoF control, mission-level success criteria, and explicit reporting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ESARBench2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue",
+        "authors": [
+          "Zhang, Daoxuan",
+          "Chen, Ping",
+          "Zhou, Jianyi",
+          "Yang, Shuo"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2605.01371v1"
+      },
+      "source_sha256": "8fd52d6c0d23c74f5a0fd46890e0897d9fc087d865ed77d751ef4b5f0974239d",
+      "evidence": [
+        "literature/verification/ESARBench2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-ESARBench2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/esarbench-v1.txt",
+              "quote": "Within any given snapshot, the spatial distribution of the victims and clues remains stationary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Retriever2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "Retriever: Composing the Perception-Reasoning-Action Loop for Long-Horizon Manipulation",
+        "authors": [
+          "Zhao, Linfeng",
+          "Huang, Haojie",
+          "Mao, Jiayuan",
+          "Liu, Weiyu",
+          "Kochenderfer, Mykel",
+          "Wong, Lawson L. S."
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2607.17213v2"
+      },
+      "source_sha256": "1033222c15628b386fe1d759da92941d45edef64a56b82406d79b20f60820aa9",
+      "evidence": [
+        "literature/verification/Retriever2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-Retriever2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/retriever-v2.txt",
+              "quote": "Exact replay requires logging each step’s event time"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "α³-Bench: A Unified Benchmark of Safety, Robustness, and Efficiency for LLM-Based UAV Agents over 6G Networks",
+        "authors": [
+          "Ferrag, Mohamed Amine",
+          "Lakas, Abderrahmane",
+          "Debbah, Merouane"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2601.03281v1"
+      },
+      "source_sha256": "f4f723a904832a9dff1793785aa7f630c9149fdf35a70e0cb09a44a08b044a08",
+      "evidence": [
+        "literature/verification/Alpha3Bench2026.v2.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-Alpha3Bench2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/alpha3-v1.txt",
+              "quote": "A2A interactions are asynchronous and logically instantaneous at the dialogue level"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PhysAIBench2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+        "authors": [
+          "Ferrag, Mohamed Amine",
+          "Debbah, Merouane",
+          "Lakas, Abderrahmane",
+          "Perumkunnil, Manu",
+          "Tihanyi, Norbert"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2609.23695v1"
+      },
+      "source_sha256": "e4e4f16d0a14060e59ac874b3fac852d522b85ee19b608d0d8edcc68d9e86bdf",
+      "evidence": [
+        "literature/verification/PhysAIBench2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-PhysAIBench2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/physai-v1.txt",
+              "quote": "converts autonomous UAV mission traces into multiple-choice action-selection tasks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "AERIAL2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
+        "authors": [
+          "Nunes, Diana",
+          "Amorim, Ricardo",
+          "Ribeiro, Pedro",
+          "Coelho, André",
+          "Campos, Rui"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2610.31029v1"
+      },
+      "source_sha256": "1dbf8055cf50d263a8e886d014f6d3fd5969d2685ea084b6012efe528942f1c7",
+      "evidence": [
+        "literature/verification/AERIAL2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-AERIAL2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/aerial-v1.txt",
+              "quote": "excludes code parsing, validation, and UAV mission execution in SITL"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "batches": []
+}

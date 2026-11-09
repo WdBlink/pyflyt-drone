@@ -1,0 +1,80 @@
+{
+  "role": "Same previously reviewed bounded bibliography-output identity repair; no runtime/plan change",
+  "source": "literature/references.core-and-backward.v1.bib",
+  "source_sha256": "3f91c77c46e3e19c872b36a6641ea158ac48471614f6956ce9870427e9ccd1c3",
+  "target": "literature/references.core-and-backward.v2.bib",
+  "target_sha256": "16ce5cb15ba8ad5ab9877047784ab3b075db20f0c84f3979dd09fb64198d233c",
+  "changes": [
+    {
+      "key": "MultiUAVPlat2026",
+      "eprint": "2606.31073v1",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "MissionBench2026",
+      "eprint": "2607.22014v1",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "ESARBench2026",
+      "eprint": "2605.01371v1",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "Retriever2026",
+      "eprint": "2607.17213v2",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "eprint": "2601.03281v1",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "PhysAIBench2026",
+      "eprint": "2609.23695v1",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "AERIAL2026",
+      "eprint": "2610.31029v1",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "SMART2025",
+      "eprint": "2503.04798v3",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "GRaDNav2025",
+      "eprint": "2506.14009v2",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "PyFlyt2023",
+      "eprint": "2304.01305v1",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "ReAct2022",
+      "eprint": "2210.03629v3",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "TypeFly2023",
+      "eprint": "2312.14950v2",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "CognitiveDrone2025",
+      "eprint": "2503.01378v1",
+      "venue": "arXiv preprint"
+    },
+    {
+      "key": "RaceVLA2025",
+      "eprint": "2503.02572v1",
+      "venue": "arXiv preprint"
+    }
+  ],
+  "reason": "Provided formatter omits eprint; venue stays arXiv preprint and the exact independently tracked version is retained in eprint. No conference/journal upgrade."
+}

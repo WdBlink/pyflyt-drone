@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2606.31073v1",
+      "path": "literature/primary/multiuav-plat-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.22014v1",
+      "path": "literature/primary/missionbench-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.01371v1",
+      "path": "literature/primary/esarbench-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/html/2607.17213v2",
+      "path": "literature/primary/retriever-v2.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/html/2601.03281v1",
+      "path": "literature/primary/alpha3-v1.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/html/2609.23695v1",
+      "path": "literature/primary/physai-v1.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/html/2610.31029v1",
+      "path": "literature/primary/aerial-v1.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    }
+  ]
+}

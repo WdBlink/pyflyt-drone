@@ -1,0 +1,98 @@
+{
+  "artifacts": [
+    "literature/references.first-neighbors.v4.bib"
+  ],
+  "hashes": {
+    "literature/references.first-neighbors.v4.bib": "59ac26fe3fa99c650a86415ebbd1cc0ee6d7fa05bed0b3fec7cb54d2a1a77384"
+  },
+  "identities": [
+    {
+      "authors": [
+        "Zhang, Sheng",
+        "Li, Qinglin",
+        "Zang, Yuechao",
+        "Huang, Xueqin",
+        "Fu, Yijia",
+        "Zhu, Cheng"
+      ],
+      "key": "MultiUAVPlat2026",
+      "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+      "year": 2026
+    },
+    {
+      "authors": [
+        "Navaratnarajah, Suman",
+        "Kim, Taehyoung",
+        "Ruthardt, Jona",
+        "Bhimwal, Ishaan",
+        "Yamada, Ryousuke",
+        "Blei, Yannik",
+        "Burgard, Wolfram",
+        "Asano, Yuki M"
+      ],
+      "key": "MissionBench2026",
+      "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+      "year": 2026
+    },
+    {
+      "authors": [
+        "Zhang, Daoxuan",
+        "Chen, Ping",
+        "Zhou, Jianyi",
+        "Yang, Shuo"
+      ],
+      "key": "ESARBench2026",
+      "title": "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue",
+      "year": 2026
+    },
+    {
+      "authors": [
+        "Zhao, Linfeng",
+        "Huang, Haojie",
+        "Mao, Jiayuan",
+        "Liu, Weiyu",
+        "Kochenderfer, Mykel",
+        "Wong, Lawson L. S."
+      ],
+      "key": "Retriever2026",
+      "title": "Retriever: Composing the Perception-Reasoning-Action Loop for Long-Horizon Manipulation",
+      "year": 2026
+    },
+    {
+      "authors": [
+        "Ferrag, Mohamed Amine",
+        "Lakas, Abderrahmane",
+        "Debbah, Merouane"
+      ],
+      "key": "Alpha3Bench2026",
+      "title": "\u03b1\u00b3-Bench: A Unified Benchmark of Safety, Robustness, and Efficiency for LLM-Based UAV Agents over 6G Networks",
+      "year": 2026
+    },
+    {
+      "authors": [
+        "Ferrag, Mohamed Amine",
+        "Debbah, Merouane",
+        "Lakas, Abderrahmane",
+        "Perumkunnil, Manu",
+        "Tihanyi, Norbert"
+      ],
+      "key": "PhysAIBench2026",
+      "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+      "year": 2026
+    },
+    {
+      "authors": [
+        "Nunes, Diana",
+        "Amorim, Ricardo",
+        "Ribeiro, Pedro",
+        "Coelho, Andr\u00e9",
+        "Campos, Rui"
+      ],
+      "key": "AERIAL2026",
+      "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
+      "year": 2026
+    }
+  ],
+  "meaning": "Formatting and explicit name components only; source verification and citation support remain separate",
+  "source_hashes": {}
+}

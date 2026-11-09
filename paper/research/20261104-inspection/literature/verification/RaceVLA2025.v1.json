@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-11-06T15:30:07.648272+00:00",
+  "identity": {
+    "title": "RaceVLA: VLA-based Racing Drone Navigation with Human-like Behaviour",
+    "authors": [
+      "Serpiva, Valerii",
+      "Lykov, Artem",
+      "Myshlyaev, Artyom",
+      "Khan, Muhammad Haris",
+      "Abdulkarim, Ali Alridha",
+      "Sautenkov, Oleg",
+      "Tsetserukou, Dzmitry"
+    ],
+    "year": 2025,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2503.02572v1"
+  },
+  "url": "https://arxiv.org/abs/2503.02572v1",
+  "metadata_path": "literature/primary/racevla-v1-metadata.html",
+  "metadata_sha256": "a5f37f5f511abdfccfc7d1801e1c4b0aa5821b292b44f835fe0c506df9d1b0ae",
+  "read_path": "literature/text/racevla-v1.txt",
+  "read_sha256": "3402122472cc616c926ffe46b9dadfa4bdfc3936f6071ee27e57921d0d3c7041",
+  "primary_html": {
+    "path": "literature/primary/racevla-v1.html",
+    "sha256": "e50e3b88b3a2a65e50be301011b6dbbc615ef2fd7a7b4857a3ca37f17ba25054"
+  },
+  "first_publication_date": "2025/03/04",
+  "read_extent": "Abstract and introduction; task/interface scope only, no full-method/latency/code/acceptance verification.",
+  "acceptance": "Pinned arXiv version only; no conference/journal upgrade or independent reproduction.",
+  "claim": "RaceVLA produces velocity and yaw-rate controls from FPV and language for racing. It supplies background on action granularity; its published task scores are not measurements under our inspection protocol.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/racevla-v1.txt",
+      "quote": "generate a four-component control signal"
+    }
+  ],
+  "metadata_components": "family,given come from the primary citation_author comma ordering, not surname guessing."
+}

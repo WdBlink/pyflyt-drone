@@ -1,0 +1,32 @@
+{
+  "role": "uninstalled read-only artifact/owner/phase/seed-intent binding component; not full admission or data preparation",
+  "parent": "G4Proof v3 accepted-grader repair already bounded-reviewed; same actual proof functions used in isolated fixtures",
+  "promises": [
+    "G4 and latest active owner before reading any seed intent; holdout main-lock/opening parent before holdout intent bytes.",
+    "Fixed namespace paths/nativefinding IDs, accepted72/12public identities/full8condition denominators, exact source/pop/catalog parent and bounded unique literal root seeds.",
+    "Known development seed collisions from the G4-qualified catalog rejected; no replacement namespace or namespacefinding alias.",
+    "Holdout is once_only_descriptive_direction_and_size, canonical main primary lock with separate subject+independentreview and native-applied evidence.",
+    "No RNG/model/physics, writing actual .paper or real datasets, filesystem writer or dispatch."
+  ],
+  "not_yet_implemented": [
+    "catalog producer/source provenance completion; SeedSequence rederivation in the NumPy1.26.4 producer",
+    "main dataset proof and independent raw/recording/statistics completion validation before lock producer mints this typed acceptance",
+    "cross-main/holdout dataset/config/sensor-seed collision guard in preparation",
+    "actual namespace writer/native preparation transaction, dataset generator/reader/worker/runner/service/receipt wiring",
+    "final G4 source inventory extension to every new production consumer; these components not installed"
+  ],
+  "test_results": [
+    "namespace33pass",
+    "phase23pass",
+    "Synthetic literals only; no actual formal generation or dispatch"
+  ],
+  "repair_of": {
+    "path": "review/namespace-proof-component-review.v1.md",
+    "sha256": "1265e37fb06dc5ec1b0992c4cfa0e001192c368b4c68d8e5de8ce7da1fec12cd"
+  },
+  "repairs": [
+    "Reuses full original read_g4_proof on each already native-validated snapshot via dataclasses.replace of trusted reader; checks actual plan/source, not identity subset. No additional unvalidated raw reader or copied G4 algorithm.",
+    "Outer conditions exact8 ordered names and seeds exact integer[0] before denominator derivation.",
+    "Adds strict native parent-before-child chain G4/main namespace/main dataset binding/main primary lock/once opening/holdout namespace. Main dataset must canonicalmanifest and native bound; full dataset/raw completion remains producer/next-component responsibility."
+  ]
+}

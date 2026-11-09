@@ -1,0 +1,9 @@
+{
+  "python": "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/bin/python",
+  "dependencies": [
+    "PyFlyt",
+    "pybullet",
+    "numpy",
+    "pytest"
+  ]
+}

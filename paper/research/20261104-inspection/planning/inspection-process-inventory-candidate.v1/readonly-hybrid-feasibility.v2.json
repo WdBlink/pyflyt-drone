@@ -1,0 +1,261 @@
+{
+  "role": "idle alternating full-inventory equivalence/performance probe, not clock repair qualification",
+  "summary": {
+    "legacy": {
+      "wall": 0.10149902099510655,
+      "self_cpu": 0.007053500000000011,
+      "child_cpu": 0.09434199999999995,
+      "count": 2220.0
+    },
+    "hybrid": {
+      "wall": 0.06193485402036458,
+      "self_cpu": 0.0148755,
+      "child_cpu": 0.04603350000000009,
+      "count": 2207.0
+    }
+  },
+  "metrics": [
+    {
+      "kind": "legacy",
+      "iteration": 0,
+      "wall": 0.09888529195450246,
+      "self_cpu": 0.007943999999999996,
+      "child_cpu": 0.08890799999999999,
+      "count": 2220
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 0,
+      "wall": 0.06978320807684213,
+      "self_cpu": 0.016524999999999995,
+      "child_cpu": 0.05046700000000001,
+      "count": 2211
+    },
+    {
+      "kind": "legacy",
+      "iteration": 1,
+      "wall": 0.1041952499654144,
+      "self_cpu": 0.008455999999999998,
+      "child_cpu": 0.09603999999999999,
+      "count": 2223
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 1,
+      "wall": 0.059424292063340545,
+      "self_cpu": 0.014102000000000003,
+      "child_cpu": 0.04457899999999995,
+      "count": 2207
+    },
+    {
+      "kind": "legacy",
+      "iteration": 2,
+      "wall": 0.09951283305417746,
+      "self_cpu": 0.006300000000000007,
+      "child_cpu": 0.09227099999999996,
+      "count": 2220
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 2,
+      "wall": 0.059268082957714796,
+      "self_cpu": 0.013777000000000005,
+      "child_cpu": 0.04458100000000004,
+      "count": 2206
+    },
+    {
+      "kind": "legacy",
+      "iteration": 3,
+      "wall": 0.1022669579833746,
+      "self_cpu": 0.006545999999999989,
+      "child_cpu": 0.09513099999999991,
+      "count": 2221
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 3,
+      "wall": 0.061861291993409395,
+      "self_cpu": 0.014880000000000018,
+      "child_cpu": 0.04596499999999998,
+      "count": 2207
+    },
+    {
+      "kind": "legacy",
+      "iteration": 4,
+      "wall": 0.09959954104851931,
+      "self_cpu": 0.006628999999999996,
+      "child_cpu": 0.09248699999999993,
+      "count": 2220
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 4,
+      "wall": 0.062007749918848276,
+      "self_cpu": 0.014757000000000006,
+      "child_cpu": 0.04623100000000002,
+      "count": 2206
+    },
+    {
+      "kind": "legacy",
+      "iteration": 5,
+      "wall": 0.10604295798111707,
+      "self_cpu": 0.007435999999999998,
+      "child_cpu": 0.09736900000000004,
+      "count": 2219
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 5,
+      "wall": 0.06113724992610514,
+      "self_cpu": 0.014631000000000005,
+      "child_cpu": 0.04593499999999995,
+      "count": 2207
+    },
+    {
+      "kind": "legacy",
+      "iteration": 6,
+      "wall": 0.10329250001814216,
+      "self_cpu": 0.007442000000000004,
+      "child_cpu": 0.09517500000000001,
+      "count": 2220
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 6,
+      "wall": 0.06188195804134011,
+      "self_cpu": 0.01515000000000001,
+      "child_cpu": 0.045911000000000035,
+      "count": 2208
+    },
+    {
+      "kind": "legacy",
+      "iteration": 7,
+      "wall": 0.10051104193553329,
+      "self_cpu": 0.006671000000000024,
+      "child_cpu": 0.09322300000000017,
+      "count": 2219
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 7,
+      "wall": 0.06198774999938905,
+      "self_cpu": 0.014870999999999981,
+      "child_cpu": 0.0461020000000002,
+      "count": 2207
+    },
+    {
+      "kind": "legacy",
+      "iteration": 8,
+      "wall": 0.1007310840068385,
+      "self_cpu": 0.00658499999999998,
+      "child_cpu": 0.093553,
+      "count": 2220
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 8,
+      "wall": 0.0670792079763487,
+      "self_cpu": 0.015036000000000022,
+      "child_cpu": 0.05031700000000017,
+      "count": 2209
+    },
+    {
+      "kind": "legacy",
+      "iteration": 9,
+      "wall": 0.11541820899583399,
+      "self_cpu": 0.007789000000000032,
+      "child_cpu": 0.10602499999999981,
+      "count": 2218
+    },
+    {
+      "kind": "hybrid",
+      "iteration": 9,
+      "wall": 0.06663879205007106,
+      "self_cpu": 0.016111000000000028,
+      "child_cpu": 0.049587999999999965,
+      "count": 2209
+    }
+  ],
+  "comparisons": [
+    {
+      "iteration": 0,
+      "common": 2207,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 1,
+      "common": 2207,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 2,
+      "common": 2206,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 3,
+      "common": 2206,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 4,
+      "common": 2206,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 5,
+      "common": 2206,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 6,
+      "common": 2206,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 7,
+      "common": 2206,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 8,
+      "common": 2206,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    },
+    {
+      "iteration": 9,
+      "common": 2206,
+      "mismatches": [],
+      "self_metadata_equal": true,
+      "own_python_detection_equal": true
+    }
+  ],
+  "backend_counts": {
+    "native": 0,
+    "hybrid": 10,
+    "legacy": 0,
+    "fallback_reasons": {}
+  },
+  "source_sha256s": {
+    "paper/research/20261104-inspection/planning/inspection-process-inventory-candidate.v1/source/eval/inspection_darwin_inventory.py": "92d20c188f1df5cbe40c62d36f3fca8e88109f7d0f078206bc6cf76bea47242e",
+    "paper/research/20261104-inspection/planning/inspection-process-inventory-candidate.v1/source/eval/inspection_process_cleanup.py": "02ff61b0dcfc2d925bfe2fb1e80612c142b49b11b6585b4f730dd7447e9e9f95"
+  }
+}

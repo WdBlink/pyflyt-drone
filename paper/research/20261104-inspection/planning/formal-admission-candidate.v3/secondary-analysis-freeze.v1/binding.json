@@ -1,0 +1,48 @@
+{
+  "role": "First untested uninstalled secondary receipt/event consumer subject; no actual formal data",
+  "at": "2026-11-06T19:02:53.329339+00:00",
+  "baseline": {
+    "path": "planning/formal-admission-candidate.v3/primary-analysis-integration.v2/binding.json",
+    "sha256": "b5fd1b40ff901807860547b36dfd4705a45b3a4c053c7b930edb379855985622"
+  },
+  "members": {
+    "source/eval/analyze_inspection_formal_secondary.py": {
+      "sha256": "3756da21c9d338d415dcff4034121e81c736a6dc3966d83e4d5661d6ddde54d6",
+      "bytes": 23386
+    },
+    "source/eval/inspection_event_endpoints.py": {
+      "sha256": "988c1b25c2c792a8e184fa21f34ac40246d1b1e7805e94efc4dd692ceb9a0af3",
+      "bytes": 30084
+    },
+    "source/eval/inspection_formal_admission.py": {
+      "sha256": "508026b4d3ac69f5bd7de8cfc7e53f3343dca88e64a4cfc79c00335104f37c20",
+      "bytes": 18806
+    },
+    "source/eval/inspection_intervention_statistics.py": {
+      "sha256": "b26803c5ed4ee82927703660b8b63c949963f8aa6f60503a820487905bc5b3ce",
+      "bytes": 7490
+    },
+    "tests/test_formal_secondary_analysis.py": {
+      "sha256": "b407a7a10a389548cee1874be55da66eea0b5ddc605173dd6ae4da5289b7557f",
+      "bytes": 14577
+    },
+    "tests/test_event_endpoints.py": {
+      "sha256": "d321f1d65e0d7f7b44dd9bc669ca8e788febd9fd0f8fc41c2308ccdc820e02e8",
+      "bytes": 10878
+    },
+    "tests/test_formal_event_endpoints.py": {
+      "sha256": "fec722a132e7aabd12d9b49740b8cc13f71925e886e5f1726a5fb88eeddc39d2",
+      "bytes": 14874
+    },
+    "tests/test_intervention_statistics.py": {
+      "sha256": "278f5feba0b660b5ccf4a83b7e2f49292f30231077ab3c3b5b6c9ca9ec076395",
+      "bytes": 4593
+    }
+  },
+  "protocol": {
+    "path": "planning/secondary-analysis-consumer.v4.md",
+    "sha256": "f4be91e78f692698fda07373e7e6d0a693d2dd17f2b0f80c3d57d1f91830aa72"
+  },
+  "scope": "Same locked main comparator216/36 slots, exact complete SDK/physical closed bytes, descriptive scalar/common-calendar plus dual-path adoption and original-window information/recovery records. ZIP metadata/detail layout and explicit NA/censor/trace-gap. Required-source additions; pure numeric body unchanged.",
+  "pending": "All new connector/event tests and independent implementation review; response/resource diagnostics not yet wired. No G4/formal admission or actual namespace/seed/order/data effects."
+}

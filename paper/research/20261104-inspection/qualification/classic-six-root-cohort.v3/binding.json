@@ -1,0 +1,28 @@
+{
+  "role": "complete six-root classical development SDK snapshot, not main/G4",
+  "source_directory": "logs/inspection-classic-dev-recording.v3",
+  "completed_slots": 18,
+  "native_flight_directory": "logs/inspection-classic-dev-flights.v1",
+  "selection": {
+    "role": "development_selection_not_formal_result_or_G4_GO",
+    "planned_episode_denominator": 18,
+    "completed_slots": 18,
+    "root_count": 6,
+    "level_macro_means": {
+      "B0": 0.9060895302670936,
+      "B1": 0.7659332720006325,
+      "B2": 0.7381647224577993
+    },
+    "classic_best": "B1",
+    "results_sha256": "63274c6f88b42de993e46c29e930e7425d274766b9c9d2e167867e7d0ff47c49"
+  },
+  "files": {
+    "source-hashes.json": "712615c31abcc659b25d84e0230f1876ef652e41c29a026dec36eb79dcd48c2e",
+    "results.json": "63274c6f88b42de993e46c29e930e7425d274766b9c9d2e167867e7d0ff47c49",
+    "dependency-hashes.json": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+    "selection.json": "75f57580f0f5371d91a741fd4f9573e52192d019e9730335123a7ae67897a32e",
+    "schedule.json": "413cb00aef766135d634959a9deed7d8823e2b5d6e7433efa9d088ffbb02331b",
+    "design.json": "3fd0b4c1be631ffd8f8bb538b656930900f0fd6da2aa2bd0f67d772d26c438b3"
+  },
+  "independent_review": "review/classic-six-root-cohort-review.v1.md"
+}

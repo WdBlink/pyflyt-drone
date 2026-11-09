@@ -1,0 +1,205 @@
+{
+  "stage": "plan",
+  "producer": "codex-research",
+  "artifacts": [
+    "planning/figure-table-plan.ral.v1.json",
+    "planning/plan-snapshot.ral.v1.json",
+    "experiment/design.ral.v2.json",
+    "experiment/evaluator.v1.py",
+    "experiment/evaluator-source-manifest.v1.json",
+    "planning/local-model-registry.v1.json",
+    "planning/statistical-protocol.ral.v1.md",
+    "qualification/evaluator-actual-recount.v1.json",
+    "experiment/evaluator-source.v1/envs/__init__.py",
+    "experiment/evaluator-source.v1/envs/inspection/__init__.py",
+    "experiment/evaluator-source.v1/envs/inspection/control.py",
+    "experiment/evaluator-source.v1/envs/inspection/execution.py",
+    "experiment/evaluator-source.v1/envs/inspection/flight.py",
+    "experiment/evaluator-source.v1/envs/inspection/guidance.py",
+    "experiment/evaluator-source.v1/envs/inspection/mission.py",
+    "experiment/evaluator-source.v1/envs/inspection/paths.py",
+    "experiment/evaluator-source.v1/envs/inspection/planning.py",
+    "experiment/evaluator-source.v1/envs/inspection/protocol.py",
+    "experiment/evaluator-source.v1/envs/inspection/reference.py",
+    "experiment/evaluator-source.v1/envs/inspection/scenario.py",
+    "experiment/evaluator-source.v1/envs/inspection/scoring.py",
+    "experiment/evaluator-source.v1/eval/__init__.py",
+    "experiment/evaluator-source.v1/eval/inspection_cases.py",
+    "experiment/evaluator-source.v1/eval/inspection_common_calendar.py",
+    "experiment/evaluator-source.v1/eval/inspection_scenarios.py",
+    "planning/population.ral.v1.json",
+    "review/initial-research-plan-review.v1.md"
+  ],
+  "figure_table_plan": "planning/figure-table-plan.ral.v1.json",
+  "plan_snapshot": "planning/plan-snapshot.ral.v1.json",
+  "experiment_design": "experiment/design.ral.v2.json",
+  "experiment_design_sha256": "286bac703c48301789a55511382ec2d5cf4fcf7dd731c2a047e051de6fea40b2",
+  "work_orders": [
+    {
+      "id": "W-development-G4",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "F1",
+        "F2",
+        "T2"
+      ],
+      "actions": [
+        {
+          "type": "validate_packet",
+          "packet": "packets/qualification-g4.v1.json"
+        }
+      ],
+      "scope": "Produce only the assigned evidence/figure/section obligations; no publication or paid effect.",
+      "inputs": [
+        "inputs/brief.ral.v1.json",
+        "experiment/design.ral.v2.json",
+        "planning/figure-table-plan.ral.v1.json"
+      ],
+      "outputs": [
+        "packets/qualification-g4.v1.json"
+      ],
+      "dependencies": [
+        "G1-G3 exact source-bound evidence and complete six-root development pilot"
+      ],
+      "acceptance": "Original19obligations anddeclared denominators preserved; actualsource-bound independentreview andstagepacket acceptance; missing/unknown remainsincomplete, not fabricated."
+    },
+    {
+      "id": "W-literature",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "T1",
+        "S2"
+      ],
+      "actions": [
+        {
+          "type": "validate_packet",
+          "packet": "packets/literature.v1.json"
+        }
+      ],
+      "scope": "Produce only the assigned evidence/figure/section obligations; no publication or paid effect.",
+      "inputs": [
+        "inputs/brief.ral.v1.json",
+        "experiment/design.ral.v2.json",
+        "planning/figure-table-plan.ral.v1.json"
+      ],
+      "outputs": [
+        "packets/literature.v1.json"
+      ],
+      "dependencies": [
+        "accepted venue and matched primary sources"
+      ],
+      "acceptance": "Original19obligations anddeclared denominators preserved; actualsource-bound independentreview andstagepacket acceptance; missing/unknown remainsincomplete, not fabricated."
+    },
+    {
+      "id": "W-qualified-evidence",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "actions": [
+        {
+          "type": "validate_packet",
+          "packet": "packets/experiment.v1.json"
+        }
+      ],
+      "scope": "Produce only the assigned evidence/figure/section obligations; no publication or paid effect.",
+      "inputs": [
+        "inputs/brief.ral.v1.json",
+        "experiment/design.ral.v2.json",
+        "planning/figure-table-plan.ral.v1.json"
+      ],
+      "outputs": [
+        "packets/experiment.v1.json"
+      ],
+      "dependencies": [
+        "accepted literature",
+        "qualified G4 manifest",
+        "complete source-bound main/holdout and secondary runs"
+      ],
+      "acceptance": "Original19obligations anddeclared denominators preserved; actualsource-bound independentreview andstagepacket acceptance; missing/unknown remainsincomplete, not fabricated."
+    },
+    {
+      "id": "W-figures",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "actions": [
+        {
+          "type": "validate_packet",
+          "packet": "packets/figures.v1.json"
+        }
+      ],
+      "scope": "Produce only the assigned evidence/figure/section obligations; no publication or paid effect.",
+      "inputs": [
+        "inputs/brief.ral.v1.json",
+        "experiment/design.ral.v2.json",
+        "planning/figure-table-plan.ral.v1.json"
+      ],
+      "outputs": [
+        "packets/figures.v1.json"
+      ],
+      "dependencies": [
+        "accepted complete experimental evidence",
+        "source-bound numerical and causal trace analysis"
+      ],
+      "acceptance": "Original19obligations anddeclared denominators preserved; actualsource-bound independentreview andstagepacket acceptance; missing/unknown remainsincomplete, not fabricated."
+    },
+    {
+      "id": "W-writing",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "M1"
+      ],
+      "actions": [
+        {
+          "type": "compile_tex",
+          "source": "manuscript/main.tex",
+          "pdf": "manuscript/main.pdf"
+        }
+      ],
+      "scope": "Produce only the assigned evidence/figure/section obligations; no publication or paid effect.",
+      "inputs": [
+        "inputs/brief.ral.v1.json",
+        "experiment/design.ral.v2.json",
+        "planning/figure-table-plan.ral.v1.json"
+      ],
+      "outputs": [
+        "manuscript/main.pdf"
+      ],
+      "dependencies": [
+        "accepted literature/experiment/figures",
+        "all10 promised visuals and source checks"
+      ],
+      "acceptance": "Original19obligations anddeclared denominators preserved; actualsource-bound independentreview andstagepacket acceptance; missing/unknown remainsincomplete, not fabricated."
+    }
+  ],
+  "local_model_registry": "planning/local-model-registry.v1.json",
+  "local_model_registry_sha256": "6d8547cb0597113d5411a771e1c75f807e43d769ecdfe4d92d32d41633e0fda6",
+  "scientific_gate": "initial plan only; development resource admission follows native reservation, G4 still blocks main/holdout, figures and writing"
+}

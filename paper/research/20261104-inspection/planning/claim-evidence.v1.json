@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "as_of": "2026-11-04",
+  "status": "writing_preparation_not_frozen",
+  "source_plan_sha256": "dd01e21442950abccc543bb2ba4d53d1901fb2669dba21cbfe9aad7f13e591b0",
+  "claims": [
+    {
+      "id": "C-protocol",
+      "kind": "design",
+      "candidate_statement": "因果观测、有限报告、连续执行和共享低层可以构成该巡检评测的协议。",
+      "status": "设计已提出；实现与资格未通过",
+      "visual_ids": [
+        "Fig1",
+        "Fig2",
+        "Table2"
+      ],
+      "required_evidence": [
+        "G1–G4资格记录",
+        "版本化task/tool/grader实现",
+        "信息隔离与时间公平fixture"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-neighbors",
+      "kind": "literature",
+      "candidate_statement": "最近工作已涵盖多机任务规划、任务报告和递进搜索；差异须按具体机制论证。",
+      "status": "三篇主来源部分复核；时钟等未知格保留",
+      "visual_ids": [
+        "Table1"
+      ],
+      "required_evidence": [
+        "逐机制主来源定位",
+        "目标期刊匹配样本校准"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-rq1",
+      "kind": "empirical",
+      "candidate_statement": "共享执行条件下，不同方法的可信巡检交付质量和安全表现存在可测差异。",
+      "status": "待正式数据；不预判方法排序",
+      "visual_ids": [
+        "Fig3",
+        "Table3"
+      ],
+      "required_evidence": [
+        "完整八配置ID/OOD原始attempt",
+        "root内repeat聚合",
+        "C/S/D/Q/H/E/Y/SR与成本"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-h1-m1",
+      "kind": "empirical",
+      "candidate_statement": "同模型M1，B4相对B3在事件条件下改善Y或配对事件差值。",
+      "status": "可反驳假设；阴性同样有效",
+      "visual_ids": [
+        "Fig3",
+        "Fig4",
+        "Table3"
+      ],
+      "required_evidence": [
+        "M1版本冻结",
+        "B4-M1/B3-M1配对root与事件兄弟trace",
+        "预声明配对区间与多重比较处理"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-h1-m2",
+      "kind": "empirical",
+      "candidate_statement": "同模型M2，B4相对B3的编排效应可以被独立估计。",
+      "status": "可反驳假设；不能用换模型增益代替",
+      "visual_ids": [
+        "Fig3",
+        "Table3"
+      ],
+      "required_evidence": [
+        "M2版本冻结",
+        "B4-M2/B3-M2完整配对数据",
+        "相同prompt/tool/感知边界"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-classic",
+      "kind": "empirical",
+      "candidate_statement": "B4相对开发集预选强经典策略的差异应单独报告。",
+      "status": "待数据；不声称LLM优于强经典",
+      "visual_ids": [
+        "Fig3",
+        "Table3"
+      ],
+      "required_evidence": [
+        "B1/B2完整业务闭环",
+        "dev-only选择规则",
+        "正式test配对结果"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-h2",
+      "kind": "empirical",
+      "candidate_statement": "递进核查可能提高报告precision并损失覆盖或动态交付。",
+      "status": "待数据；核查并非预设越多越好",
+      "visual_ids": [
+        "Fig4",
+        "Table4"
+      ],
+      "required_evidence": [
+        "预选roots的单因素核查消融",
+        "完整名额、误报和观测日志",
+        "C/D/precision/Y并列"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-h3",
+      "kind": "empirical",
+      "candidate_statement": "持续飞行中的推理与通信时延可能降低及时动态交付。",
+      "status": "待实际和受控数据；两类结论分开",
+      "visual_ids": [
+        "Fig5",
+        "Table3"
+      ],
+      "required_evidence": [
+        "实际延迟p50/p95与失败receipt",
+        "固定注入时延配对trace",
+        "观测时刻误差与及时格分母"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-failure",
+      "kind": "empirical",
+      "candidate_statement": "任务损失可由合法包、job状态与物理/报告后果的因果trace解释。",
+      "status": "没有新benchmark失败trace",
+      "visual_ids": [
+        "Fig6",
+        "Table4"
+      ],
+      "required_evidence": [
+        "预声明失败案例选择规则",
+        "源观测/job/报告时间戳",
+        "裁判原因与基础设施失败归因"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    },
+    {
+      "id": "C-scope",
+      "kind": "scope",
+      "candidate_statement": "合成异常与结构化感知、空中退出、有限资格不证明真实救灾/实机/落地安全。",
+      "status": "设计边界可登记；执行后的限制仍需补充",
+      "visual_ids": [],
+      "required_evidence": [
+        "冻结协议范围",
+        "实际资格覆盖",
+        "未验证条件清单"
+      ],
+      "raw_runs": [],
+      "empirical_claim_admitted": false,
+      "source_plan": "inputs/BENCHMARK_RESEARCH_PLAN.original.md"
+    }
+  ],
+  "forbidden_substitutions": [
+    "旧64-trial RTA数据不能填入新benchmark",
+    "目标期刊相关预印本不能无录用证据地充当已录用样本",
+    "ACK不能替代job真实执行与任务交付",
+    "D_observed-D_delivered不能无条件当纯通信损失",
+    "seed/repeat/bin/drone不能充当独立root",
+    "描述性正态区间不能替代预注册bootstrap/Holm"
+  ],
+  "formal_requirement_contract": null
+}

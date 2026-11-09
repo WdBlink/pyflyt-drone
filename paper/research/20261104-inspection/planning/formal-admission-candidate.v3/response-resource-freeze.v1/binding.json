@@ -1,0 +1,44 @@
+{
+  "role": "First untested uninstalled response/resource reader and main/secondary output wiring; no formal data",
+  "at": "2026-11-06T19:59:31.442631+00:00",
+  "baseline": {
+    "path": "planning/formal-admission-candidate.v3/secondary-analysis-integration.v1/binding.json",
+    "sha256": "6e72718a1c6fb7c529dd54a7de065300bc02e037d51e995b0c65841a7e844e82"
+  },
+  "members": {
+    "source/eval/inspection_response_diagnostics.py": {
+      "sha256": "0ae4487c8dcf9904afbb83d6860ae9c961ea97a745d18753e7f26eeec0114ee2",
+      "bytes": 13354
+    },
+    "source/eval/analyze_inspection_formal.py": {
+      "sha256": "aca945d84a661b07164922eca525e207074d9bdfc2a938e516c7447c9678d52f",
+      "bytes": 27413
+    },
+    "source/eval/analyze_inspection_formal_secondary.py": {
+      "sha256": "480e897a8ed634b93aae67f139c18652871e3ecb4127f684470929f79e488452",
+      "bytes": 24099
+    },
+    "source/eval/inspection_formal_admission.py": {
+      "sha256": "3272e19e4ec4d3ad4802ff5a939feea8cf0a258f6777ee60a5b21ef2d758c5fa",
+      "bytes": 18853
+    },
+    "tests/test_response_diagnostics.py": {
+      "sha256": "3af86370d037462a558472f38f36209b638af398f81e64fec4d562cefc37e5f5",
+      "bytes": 9948
+    },
+    "tests/test_formal_analysis.py": {
+      "sha256": "6bde369fdae4c29704f41e44f8cda4aa42e1ed0fd7a2af68669376d33da49e14",
+      "bytes": 18070
+    },
+    "tests/test_formal_secondary_analysis.py": {
+      "sha256": "18a9cdb483794f39b93f099167b5c2b857974c36de25a6cedd59054eefe9a85e",
+      "bytes": 14863
+    }
+  },
+  "protocol": {
+    "path": "planning/response-resource-consumer.v1.md",
+    "sha256": "65f11b1d8119bb0c832338d05ee08b813c5a1be9b6d0b0e3c5607f26d42c5e47"
+  },
+  "scope": "Reuse fresh completed receipt/native/actor causal joins and original closed bytes. Separate service, client, injected wait, original sim-progress age and recorded roundtrip+consume sum; no false exact enqueue/adoption or source-wall-age claim. Valid/allknown attempt usage, None unmetered money/energy, complete repeat means, per-episode ZIP/index and bound summaries.",
+  "pending": "All new tests and independent review, real formal data and G4; no actual dispatch/model/physics/native effects. Source numeric algorithms and eventv5 body unchanged; protected production104/deps61/input10 unchanged."
+}

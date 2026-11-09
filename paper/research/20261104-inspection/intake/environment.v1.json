@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-04T13:18:37.229554+00:00",
+  "executable": "/opt/homebrew/opt/python@3.14/bin/python3.14",
+  "missing": [
+    "PyFlyt",
+    "pybullet"
+  ],
+  "packages": {
+    "gymnasium": "1.3.0",
+    "matplotlib": "3.11.0",
+    "numpy": "2.5.2",
+    "pymupdf": "1.28.2"
+  },
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "status": "missing_dependencies"
+}

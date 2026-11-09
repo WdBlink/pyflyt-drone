@@ -1,0 +1,11 @@
+{
+  "question_sha256": "b54f5186b9278a4f00a8db08bd6e97d00321a964d30ea8f98da22be19816d7ff",
+  "answer": {
+    "candidate_id": "ral"
+  },
+  "human_response": {
+    "path": "inputs/user-venue-answer-20261105.json",
+    "sha256": "286534f621ebd266774418c15a1f853de24c64d345d276401e3383ec47cb6a4a",
+    "quote": "RA-L：聚焦连续飞行与时延评测（推荐）"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "role": "staged proof-validator component only;26synthetictests, not installed or full phase admission",
+  "files": {
+    "source/eval/inspection_formal_admission.py": "3656097e2bd431c616e07ef2e8619c7c8d30892f946972b8ba30983e338d14f5",
+    "tests/test_g4_proof_boundary.py": "b7a42277841ed858ad5a99d165cf731ba958e7423bacd718bee5b793906c338b",
+    "contract.json": "dac4251375411f0454f056bca28133e2632a2af2ca2f0cf976a60962d92bdd82",
+    "tests.log": "6f7ac328809138dbbdacb9c79771235b743272a61d38f55e254d016b211fadb3"
+  }
+}

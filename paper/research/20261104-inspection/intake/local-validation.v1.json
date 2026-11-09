@@ -1,0 +1,25 @@
+{
+  "as_of": "2026-11-04",
+  "kind": "local_document_integrity_check_not_scientific_acceptance",
+  "checks": {
+    "original_plan_unchanged": true,
+    "snapshot_matches_original": true,
+    "all_json_parses": true,
+    "new_markdown_links_resolve": true,
+    "acquired_source_hashes_match": true,
+    "no_empirical_result_admitted": true,
+    "venue_quotes_and_hashes_match": true,
+    "planned_episode_arithmetic": true,
+    "no_manuscript_or_result_pdf_created": true
+  },
+  "missing_links": [],
+  "all_passed": true,
+  "not_performed": [
+    "simulation episode",
+    "training",
+    "formal benchmark",
+    "accepted-paper venue calibration",
+    "manuscript compilation",
+    "independent manuscript review"
+  ]
+}

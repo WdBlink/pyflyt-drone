@@ -1,0 +1,41 @@
+{
+  "role": "Closed model-output diagnostic evidence only, not a backend-cause/G4 acceptance",
+  "at": "2026-11-06T20:50:00.128663+00:00",
+  "files": [
+    {
+      "path": "qualification/local-model-output-diagnostic.v1/M2-B4-first-request.json",
+      "sha256": "0117ecb02416099118210f46fcd1919bde5d8ca20a3b46a2dae01b11d2707f79",
+      "bytes": 10266,
+      "original": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-015-a0/call-0001/request.json"
+    },
+    {
+      "path": "qualification/local-model-output-diagnostic.v1/M2-B4-first-response.json",
+      "sha256": "c903bc138cf90fa56580f0757c201e439bce205472e7f94a85497878ac1a5091",
+      "bytes": 3487,
+      "original": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-015-a0/call-0001/response.json"
+    },
+    {
+      "path": "qualification/local-model-output-diagnostic.v1/M2-short-smoke.json",
+      "sha256": "80feaced35ed3c7e44ce89eaf4e478b6f3eb1bdc08421afa2e10526c8518f402",
+      "bytes": 3870,
+      "original": "paper/research/20261104-inspection/qualification/local-model-generation/M2-smoke.v1/probe.json"
+    },
+    {
+      "path": "qualification/local-model-output-diagnostic.v1/pinned-chat-template.jinja",
+      "sha256": "d63ad536c3c81880043e22ec7fd08db42b4d8fb7c89c7138bc562bfa25281375",
+      "bytes": 3120,
+      "original": "models/inspection-local/GLM-4.7-Flash-4bit-1454cffb/chat_template.jinja"
+    },
+    {
+      "path": "qualification/pilot-v4-first-root.v1/binding.json",
+      "sha256": "34ea02afc84e4cdff84adcf420c2f10ad9cb06bc39fc4c286ba9b51341d627f0",
+      "bytes": 63712
+    },
+    {
+      "path": "planning/local-model-output-diagnostic.v1.md",
+      "sha256": "418be95c258945153db9d79bc0066abd304bbdcb890d4a81443065225300874b",
+      "bytes": 4158
+    }
+  ],
+  "new_model_requests": 0
+}

@@ -1,0 +1,34 @@
+{
+  "role": "unapproved exact030case+dual-cache continuation candidate; notnativeacceptance/actualSDKreplay/G4",
+  "tests": "52 passed in 0.80s/exit0",
+  "actual_prepare": "new030 original validators/sourcepins/nativeknown purpose + old024 accepted proof; combined closed trees; no new resource/model/physics",
+  "integration_scope": "real observer fileIO with fakeSDK/worker; exact024/030 caches do not delegate; next31marker; missingrecords/IO failure block before callback; actual providedSDK still pending",
+  "prior_variants": "continuation-author.v1 retains original4e-source/proposal1; caller-tests.failure.v1 retains four fixture failures and source; only fixture paths corrected afterfailure",
+  "files": [
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v2/continue_pilot.py",
+      "sha256": "722eedd58a0ed0f2f47e7db916047ef6391e24677f527fe06d9d0a8be305c098",
+      "bytes": 23772
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v2/test_continue_pilot.py",
+      "sha256": "179e89b6998375ba9ccdbe7c2a12808f0b64cd770cc08b864c0a2414bb0444bd",
+      "bytes": 15600
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v2/proposal.json",
+      "sha256": "a4307b9ade56c82ddd60dc3af6d116be8b4525f8146545f43b17ce862ee09ced",
+      "bytes": 61731
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v2/prepare.stdout",
+      "sha256": "faf03654c1d769b62063dc19b7eea1b245e5cdaa59a1b40bbad29dcfcf926d6d",
+      "bytes": 210
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v2/tests.log",
+      "sha256": "22c06ccb22d593f25152f581d481dc562e36e25a44b56614ebd2b20cfc9906b7",
+      "bytes": 99
+    }
+  ]
+}

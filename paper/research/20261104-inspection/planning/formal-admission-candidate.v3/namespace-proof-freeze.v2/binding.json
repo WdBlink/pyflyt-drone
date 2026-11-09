@@ -1,0 +1,12 @@
+{
+  "role": "uninstalled read-only artifact/owner/phase/seed-intent binding component; not full admission or data preparation",
+  "files": {
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/contract.json": "7ffa1fcf94bff2f216e91082910caccc3359a41e814ff818a4800c12f9e2c593",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/inspection_namespace_admission.py": "74aa46e67e77d591beb2b6fbe61895742ff8d70b9c8050bcd9fe32bb5944cf5c",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/namespace-tests.log": "1c242b7cc0a6913a9574e86031ac6bac86df145b2bd0c63b3758e7038b2591fb",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/phase-tests.log": "c492c41580448240d0cd071f0c665f8548d9931c41518b75e86f2e55f4694f2a",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/test_formal_phase_layout.py": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/test_namespace_admission.py": "21711b47b1c320de82b33ec4591c4f933e4e34adf4c64c20590fe357c6dd2bbd"
+  }
+}

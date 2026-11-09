@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-05T23:59:08.283563+00:00",
+  "identity": {
+    "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+    "authors": [
+      "Navaratnarajah, Suman",
+      "Kim, Taehyoung",
+      "Ruthardt, Jona",
+      "Bhimwal, Ishaan",
+      "Yamada, Ryousuke",
+      "Blei, Yannik",
+      "Burgard, Wolfram",
+      "Asano, Yuki M"
+    ],
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2607.22014v1"
+  },
+  "url": "https://arxiv.org/abs/2607.22014v1",
+  "metadata_path": "literature/primary/missionbench-v1-metadata.html",
+  "metadata_sha256": "237de5667b97ff4915400e9209e0872f3669e4d7e2f03f488be8b34c998399fe",
+  "read_path": "literature/text/missionbench-v1.txt",
+  "read_sha256": "b4a50b1db4de3e43b56a9cdb4b50c906ab36388d132e410303072a54653d0cd4",
+  "read_extent": "targeted task/control/evaluation sections, not a simulator runtime reproduction",
+  "acceptance": "not claimed; this record is the pinned arXiv version",
+  "claim": "Combines mission-level aerial control with explicit reporting; real-time wording alone does not resolve environment progress during inference.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/missionbench-v1.txt",
+      "quote": "continuous 4-DoF control, mission-level success criteria, and explicit reporting"
+    }
+  ],
+  "unknowns": "No blanket claim that other systems pause all physics. No cross-benchmark score comparison."
+}

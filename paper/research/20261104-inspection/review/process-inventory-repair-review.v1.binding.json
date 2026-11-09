@@ -1,0 +1,99 @@
+{
+  "schema": "independent-process-inventory-repair-review-v1",
+  "reviewer": "/root/control_review",
+  "freeze_binding_sha256": "d7ba805cba454170cab1ed653277ed52544b0e2e0f0ed5e076cad66b1b3aefd2",
+  "frozen_files": {
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/abi-probe.c": "5e945a8331d291f3ae0b75a3cbc4a72fd583ca3498d320f7425241bfcdf38a4a",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/abi-probe.v1.json": "3dcaeb3cf111b5e9f5b0269d759d6e4ea60f37d58a9f19827ea05159dbb51657",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/combined-compat-tests.log": "53cde2beaf9dd35a41088c976dcf0745cfa3f4b370e8861dc008e44123f58dc5",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/contract.v1.json": "f8bbfa67fd8d4a9fd6a7eb5f09f3f2d6002d49a18e4ad835f50c880f369444c2",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/new-unit-tests.log": "6227871cf31a887b65e83c86e081a997535ca71ed246132a51319b93a85a3a8f",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/probe_forest_inventory.py": "62962cad123b514415950537da95da158e221434ca406b38167fb6fc6d252ac7",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/readonly-forest-performance.v5.json": "85d1e32f015648d1b227ed561decc36b3c4624f98a87799ebf45b417f92651cf",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/source/eval/inspection_darwin_inventory.py": "275efffae9fd7889daaba1c81457bc3e1dca49d1563ec30a4fa994c1eaa31198",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/source/eval/inspection_process_cleanup.py": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/tests/test_native_inventory.py": "92633aaf04236dfd835159e46f62fdfe20cdee0caad66b68344e98371f833b2f",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/unchanged-cleanup-algorithms.v2.json": "47240587e1ae930ca105b7001602a8b9da508baf22a29474fd30f9ccf0b740d4",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v1/verify_staged_cleanup.py": "2a8a8fb51de56b51bb19de484f02a7a4e0401920f8320466955f76ecfce0474a"
+  },
+  "production_cleanup_sha256": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+  "unchanged_algorithm_AST_independently_verified": [
+    "_inventory",
+    "stop_worker_tree",
+    "SubprocessTree.__init__",
+    "SubprocessTree.attach",
+    "SubprocessTree.wait",
+    "SubprocessTree.close"
+  ],
+  "compatibility_test": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python paper/research/20261104-inspection/planning/inspection-process-inventory-candidate.v1/verify_staged_cleanup.py",
+    "working_verifier_and_candidate_match_freeze_before_run": true,
+    "result": "39 passed in 9.96s; includes all13 new tests and actual sleeping-child dynamic discovery/cleanup/failed-attach recovery",
+    "log_path": "/tmp/inspection-process-inventory-review-v1/compat-tests.log",
+    "log_sha256": "f6c1b6f3baba7581270b41862651b7f7825ac5ca1334ff964012d340f16b67af"
+  },
+  "counterexample": {
+    "test_path": "/tmp/inspection-process-inventory-review-v1/test_foreign_fallback.py",
+    "test_sha256": "278cdaa1a316e21e036f45fdc631730c7c960d8e2e694ed4f11fa682ddc61d17",
+    "log_sha256": "bea5a77cc68582c0c66ca0fc860c9b8f449e679bec8d6a9178605ee7b7dc69a3",
+    "result": "1 passed proving current mismatch: foreign live owned root+child returned by native, no path read, no full fallback, short command name retained"
+  },
+  "ABI": {
+    "ctypes_matches_C_probe_layout": {
+      "size": 136,
+      "comm": 48,
+      "name": 64,
+      "nice": 116,
+      "start_seconds": 120,
+      "start_microseconds": 128
+    },
+    "current_local_SDK_header_hashes_match": true,
+    "primary_wrapper_source": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/libsyscall/wrappers/libproc/libproc.c",
+    "source_scope": "Apple wrapper proc_listchildpids lines80-90 returns PID count; buffer argument remains byte count; online main is supporting source, not installed OS version attestation"
+  },
+  "retained_microprobe_recount": {
+    "pairs": 20,
+    "metrics": 40,
+    "all_expected_forest_identity_python_checks": true,
+    "backend_counts": {
+      "hot_native": 22,
+      "hot_legacy": 0,
+      "fallback_reasons": {}
+    },
+    "medians_seconds": {
+      "legacy_full": {
+        "wall": 0.08617520850384608,
+        "self_cpu": 0.0032264999999999933,
+        "child_cpu": 0.08241050000000005,
+        "self_plus_child_cpu": 0.08563800000000005
+      },
+      "native_forest": {
+        "wall": 0.0004360839957371354,
+        "self_cpu": 0.0004355000000000088,
+        "child_cpu": 0.0,
+        "self_plus_child_cpu": 0.0004354999999998978
+      }
+    },
+    "not_rerun": true
+  },
+  "calling_scope": "existing eval callers use wait/close or timing wrapper; no production caller consumes unrelated full-table rows from hot observe return",
+  "open_findings": [
+    {
+      "priority": "P2",
+      "file": "source/eval/inspection_darwin_inventory.py",
+      "line": 110,
+      "finding": "foreign UID active owned nodes skip full path read and are accepted as native rather than falling back, contrary to declared conservative foreign/unreadable boundary",
+      "safety_limit": "no actual wrong signal or lost orphan demonstrated; shutdown full global unknown-orphan scan remains unchanged"
+    }
+  ],
+  "decision": "keep_uninstalled_pending_foreign_fallback_closure",
+  "not_run": [
+    "model",
+    "physics",
+    "formal RNG/data",
+    "actual owner mutation",
+    "new benchmark/performance microprobe",
+    "load clock qualification",
+    "installation"
+  ]
+}

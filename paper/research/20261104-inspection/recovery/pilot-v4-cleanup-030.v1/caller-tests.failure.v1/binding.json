@@ -1,0 +1,19 @@
+{
+  "role": "author test failure, no real effects/acceptance",
+  "result": "4failed48passed0.85s",
+  "cause": "wrapper fixture PROJECT moved to temporary namespace but PILOT remained outside it; relative-path guard rejects before delegate; negative tests also assert delegate reached and thus expose false failure point",
+  "files": [
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/caller-tests.failure.v1/test_continue_pilot.py",
+      "sha256": "386a002dc4af6c803875fd1e7eff0e9052a28f9ca4b017d6135e0160769bb4df"
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/caller-tests.failure.v1/continue_pilot.py",
+      "sha256": "722eedd58a0ed0f2f47e7db916047ef6391e24677f527fe06d9d0a8be305c098"
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/caller-tests.failure.v1/tests.log",
+      "sha256": "cd6c0c91e07e220e7c6573ce0ccfea25f96ccf534ef68a3523fa7b9e2b7dd49d"
+    }
+  ]
+}

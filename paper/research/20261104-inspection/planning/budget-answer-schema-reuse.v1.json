@@ -1,0 +1,17 @@
+{
+  "role": "rebind unchanged real prior answer after lossless schema normalization; no new user response claimed",
+  "prior_answer": "inputs/budget-answer.v1.json",
+  "actual_source": {
+    "path": "inputs/user-budget-answer-20261105.json",
+    "sha256": "7afb340c5f18e7cbad4eda93d58d87cce1d0185e27c8adc1c7ead1d01f418cac",
+    "quote": "保留默认预算，无隐含总量上限（推荐）"
+  },
+  "current_question_sha256": "d03d73b9f7b2485c3fbe2dd4d72cc094611d01ebf2e3e440b2e08e2a7da43d7a",
+  "same_budget": {},
+  "same_visual_plan": {
+    "path": "planning/figure-table-plan.ral.v1.json",
+    "sha256": "553c47c76cd9d8a9c1229db7f63a582295ab1e261b5a0f9572af33fc57aa0930"
+  },
+  "authorization_and_no_paid_scope_unchanged": true,
+  "review": "review/brief-schema-repair-review.v1.md"
+}

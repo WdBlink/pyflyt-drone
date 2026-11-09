@@ -1,0 +1,119 @@
+{
+  "stage": "plan",
+  "producer": "codex-research",
+  "artifacts": [
+    "planning/figure-table-plan.ral.v1.json",
+    "planning/plan-snapshot.ral.v1.json",
+    "experiment/design.ral.v1.json",
+    "experiment/evaluator.v1.py",
+    "experiment/evaluator-source-manifest.v1.json",
+    "planning/local-model-registry.v1.json",
+    "planning/statistical-protocol.ral.v1.md",
+    "qualification/evaluator-actual-recount.v1.json",
+    "experiment/evaluator-source.v1/envs/__init__.py",
+    "experiment/evaluator-source.v1/envs/inspection/__init__.py",
+    "experiment/evaluator-source.v1/envs/inspection/control.py",
+    "experiment/evaluator-source.v1/envs/inspection/execution.py",
+    "experiment/evaluator-source.v1/envs/inspection/flight.py",
+    "experiment/evaluator-source.v1/envs/inspection/guidance.py",
+    "experiment/evaluator-source.v1/envs/inspection/mission.py",
+    "experiment/evaluator-source.v1/envs/inspection/paths.py",
+    "experiment/evaluator-source.v1/envs/inspection/planning.py",
+    "experiment/evaluator-source.v1/envs/inspection/protocol.py",
+    "experiment/evaluator-source.v1/envs/inspection/reference.py",
+    "experiment/evaluator-source.v1/envs/inspection/scenario.py",
+    "experiment/evaluator-source.v1/envs/inspection/scoring.py",
+    "experiment/evaluator-source.v1/eval/__init__.py",
+    "experiment/evaluator-source.v1/eval/inspection_cases.py",
+    "experiment/evaluator-source.v1/eval/inspection_common_calendar.py",
+    "experiment/evaluator-source.v1/eval/inspection_scenarios.py"
+  ],
+  "figure_table_plan": "planning/figure-table-plan.ral.v1.json",
+  "plan_snapshot": "planning/plan-snapshot.ral.v1.json",
+  "experiment_design": "experiment/design.ral.v1.json",
+  "experiment_design_sha256": "2195c892d83302a2908f0a8041fd6b5b54e757ecff494b701411c324f58dbf51",
+  "work_orders": [
+    {
+      "id": "W-literature",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "T1",
+        "S2"
+      ],
+      "actions": [
+        {
+          "type": "validate_packet",
+          "packet": "packets/literature.v1.json"
+        }
+      ]
+    },
+    {
+      "id": "W-qualified-evidence",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "actions": [
+        {
+          "type": "validate_packet",
+          "packet": "packets/experiment.v1.json"
+        }
+      ]
+    },
+    {
+      "id": "W-figures",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "actions": [
+        {
+          "type": "validate_packet",
+          "packet": "packets/figures.v1.json"
+        }
+      ]
+    },
+    {
+      "id": "W-writing",
+      "producer": "codex-research",
+      "requirement_ids": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "M1"
+      ],
+      "actions": [
+        {
+          "type": "compile_tex",
+          "source": "manuscript/main.tex",
+          "pdf": "manuscript/main.pdf"
+        }
+      ]
+    }
+  ],
+  "local_model_registry": "planning/local-model-registry.v1.json",
+  "local_model_registry_sha256": "6d8547cb0597113d5411a771e1c75f807e43d769ecdfe4d92d32d41633e0fda6",
+  "scientific_gate": "initial plan only; development resource admission follows native reservation, G4 still blocks main/holdout, figures and writing"
+}

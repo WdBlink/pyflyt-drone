@@ -1,0 +1,49 @@
+{
+  "role": "uninstalled DatasetProof final-window repair including recursive locked-main closure; await independent recheck; no G4/data/dispatch",
+  "changes": "DatasetProof carries same-version report and immutable optional main DatasetProof; after last native/source/namespace snapshot rehash manifest/review/report/all case-audit and exact tree recursively. No private content deserialization or changed-SHA acceptance.",
+  "validation": "18 added final-window tests on old source17failed1passed; repaired47dataset pass; all staged208combined pass (including17writerFake). No actual formal RNG/data/model/physics.",
+  "files": {
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/combined208-green.log": "a6e994f5918c60fd5a0373f5fc4d723a57d3cd7a206daf34c54d6b2aaee6d995",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/dataset47-green.log": "027f15cf3b90fcd5e157fa7f79be72a47188aec079a5803c95a6a68d83902323",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/final-window-red17fail1pass.log": "075fbdf958f5ac775cf3ef5e953c564f1670db2ddcc5790a30d410e4050f9452",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/inspection_dataset_admission.py": "890ae2432ac6453c3f8c13ff95112703f858c43e35a50d24a6ab6abe65de1f93",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/inspection_development_catalog.py": "b3a2d91f3589b0b1bc3f7da8518637b99620e0c3099f4bd8d2542b4ff0a5fe08",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/inspection_formal_admission.py": "b6643f98f7a719cb7017eeca3d5fc91f92c91afd1ec97c9bfe1022e1d83d0ec1",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/inspection_formal_population.py": "5e231f1856c586fdfc2a3b8dca32b2599a71d9f009ea5a3d6daca33231a543eb",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/inspection_namespace_admission.py": "0a8ab3868d0c5b1970a8f777d843b1977072a7080c47e65632639d71833aee37",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/inspection_population.py": "afa5f70650b230fe8eff826b409e28d8d9e41a96b82435b2c92aed7fd38797fd",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/test_dataset_admission.py": "54d8efe49319067526578c8945cef314f11034870d81abbfd4a33a855f2e75b9",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/test_development_catalog.py": "98de52d0a8677891e2de5077e40f4a3d2797f91edd22b45148d923fbcac3aeca",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/test_formal_phase_layout.py": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/test_formal_population_gate.py": "137732cc40ee6f211f05031bb9220f7b099032aef49ca73c6143f0be3625aff1",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/test_g4_proof_boundary.py": "191d7af54bee6062053897d40fbd5f6e81f2c639a1f455004951a073ee94dc53",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/test_namespace_admission.py": "d9785bafc2145808488751ee7fbdda523b4b4c7ff7283de6b9509d288ddcd0a2",
+    "planning/formal-admission-candidate.v3/dataset-component-freeze.v2/test_population_shared_law.py": "5f63344c76c3a7e8e78ff6530bfa30b5e40a80823816f90d00bbf67b521bd3e7"
+  },
+  "working_sources": {
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_dataset_admission.py": "890ae2432ac6453c3f8c13ff95112703f858c43e35a50d24a6ab6abe65de1f93",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_development_catalog.py": "b3a2d91f3589b0b1bc3f7da8518637b99620e0c3099f4bd8d2542b4ff0a5fe08",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_admission.py": "b6643f98f7a719cb7017eeca3d5fc91f92c91afd1ec97c9bfe1022e1d83d0ec1",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_population.py": "5e231f1856c586fdfc2a3b8dca32b2599a71d9f009ea5a3d6daca33231a543eb",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_namespace_admission.py": "0a8ab3868d0c5b1970a8f777d843b1977072a7080c47e65632639d71833aee37",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_population.py": "afa5f70650b230fe8eff826b409e28d8d9e41a96b82435b2c92aed7fd38797fd",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_dataset_admission.py": "54d8efe49319067526578c8945cef314f11034870d81abbfd4a33a855f2e75b9",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_development_catalog.py": "98de52d0a8677891e2de5077e40f4a3d2797f91edd22b45148d923fbcac3aeca",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_formal_phase_layout.py": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_formal_population_gate.py": "137732cc40ee6f211f05031bb9220f7b099032aef49ca73c6143f0be3625aff1",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_g4_proof_boundary.py": "191d7af54bee6062053897d40fbd5f6e81f2c639a1f455004951a073ee94dc53",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_namespace_admission.py": "d9785bafc2145808488751ee7fbdda523b4b4c7ff7283de6b9509d288ddcd0a2",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_population_shared_law.py": "5f63344c76c3a7e8e78ff6530bfa30b5e40a80823816f90d00bbf67b521bd3e7"
+  },
+  "prior_defect": {
+    "path": "review/dataset-admission-component-review.v1.md",
+    "sha256": "2a638f151252489f334f488f3b45db4e3add40411169047d438e622bc55976be"
+  },
+  "prior_freeze": {
+    "path": "planning/formal-admission-candidate.v3/dataset-component-freeze.v1/binding.json",
+    "sha256": "409dc5addc3d214f8f463ee472da3141ecf4e13a8fc7c24c74c9d8fc16e3a138"
+  },
+  "no_actual_formal_datasets": true
+}

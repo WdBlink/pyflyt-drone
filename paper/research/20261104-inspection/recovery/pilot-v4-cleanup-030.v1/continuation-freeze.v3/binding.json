@@ -1,0 +1,34 @@
+{
+  "role": "unapproved exact030candidatev3; no native acceptance or new effects",
+  "tests": "55 passed in 0.84s/exit0",
+  "actual_prepare": "same030 quality/resource/actor/native+accepted024 proof, combined closed inputs; readonly",
+  "repair": "observer review33ed SHA pinned; all callback return paths recheck initial observer refs and companion ref read before validation; newdelegate rechecks sidecars after source/ref checks",
+  "prior": "source722/proposal a430 and independent caller P2 remain archived; metadata-only observer83ff unchanged",
+  "files": [
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v3/continue_pilot.py",
+      "sha256": "4c78d5b130f27f15f34483f7f88bf5a7c348cef2399d272faae3c63ba3502a8f",
+      "bytes": 24291
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v3/test_continue_pilot.py",
+      "sha256": "8bec4884180baf1f59cf9bc79e15d45f3dca89a720c45115efca19e3ba9cc1a7",
+      "bytes": 17294
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v3/proposal.json",
+      "sha256": "cffa9a073ce7819b087fdfe84c33d13ca29a643f18107bcf855bbf1fbc2cc7ae",
+      "bytes": 61731
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v3/prepare.stdout",
+      "sha256": "603a429e9b2daf15e6a7c7d28cc287e46f8d8fc414ecb49079d9d9f74cf02051",
+      "bytes": 210
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-freeze.v3/tests.log",
+      "sha256": "7494d7d1b34dda38804496bfee0257c5240c14ba11f95954cfb71df1046ec702",
+      "bytes": 99
+    }
+  ]
+}

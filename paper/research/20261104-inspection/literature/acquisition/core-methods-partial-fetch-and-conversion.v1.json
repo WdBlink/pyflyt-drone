@@ -1,0 +1,43 @@
+{
+  "role": "four successful arXiv sources retained despite later official OpenReview API403; no conference-version upgrade",
+  "successful_sources": [
+    {
+      "path": "literature/primary/pyflyt-v1-metadata.html",
+      "sha256": "b2a4bf09051ff3ec8ccf46077b6459524a3eb7ac6c047a9dc489b200feea8570",
+      "provenance": "literature/primary/pyflyt-v1-metadata.html.source.json"
+    },
+    {
+      "path": "literature/primary/pyflyt-v1.pdf",
+      "sha256": "fb6a9a04c8d96082515274edf2cf735df1680af0f76b2ad3921046381d826b46",
+      "provenance": "literature/primary/pyflyt-v1.pdf.source.json"
+    },
+    {
+      "path": "literature/primary/react-v3-metadata.html",
+      "sha256": "3d7a181ef5863f25e1ebcefaa67d1a3b6beb08634fd0bae926fb61de90cbad79",
+      "provenance": "literature/primary/react-v3-metadata.html.source.json"
+    },
+    {
+      "path": "literature/primary/react-v3.pdf",
+      "sha256": "f285b0971ae4a790e402fb93966bed3adde2cf0a04977d08b2b40d6ab0cace69",
+      "provenance": "literature/primary/react-v3.pdf.source.json"
+    }
+  ],
+  "failed_source": "https://api.openreview.net/notes?id=WE_vluYUL-X",
+  "failure": "HTTP403 observed by provided source-fetch; browser forum earlier returned verification challenge",
+  "failure_log": "/tmp/inspection-literature-core-methods-fetch.v1.log",
+  "decision_endpoint": "no successful artifact; no decision or acceptance claimed from it",
+  "conversion": [
+    {
+      "pdf": "literature/primary/pyflyt-v1.pdf",
+      "text": "literature/text/pyflyt-v1.txt",
+      "text_sha256": "15a8222d3119de5c5d59f1450e445780af80dcd8b25efd99bb21bb5595167132",
+      "tool": "/opt/homebrew/bin/pdftotext -layout"
+    },
+    {
+      "pdf": "literature/primary/react-v3.pdf",
+      "text": "literature/text/react-v3.txt",
+      "text_sha256": "0bdbef2564106889c48ecff9f3ce107cdd4dd225064d3dcd4bee0acd56be72d9",
+      "tool": "/opt/homebrew/bin/pdftotext -layout"
+    }
+  ]
+}

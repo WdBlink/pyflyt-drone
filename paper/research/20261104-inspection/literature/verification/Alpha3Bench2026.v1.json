@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-05T23:59:08.283563+00:00",
+  "identity": {
+    "title": "$\\alpha^3$-Bench: A Unified Benchmark of Safety, Robustness, and Efficiency for LLM-Based UAV Agents over 6G Networks",
+    "authors": [
+      "Ferrag, Mohamed Amine",
+      "Lakas, Abderrahmane",
+      "Debbah, Merouane"
+    ],
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2601.03281v1"
+  },
+  "url": "https://arxiv.org/abs/2601.03281v1",
+  "metadata_path": "literature/primary/alpha3-v1-metadata.html",
+  "metadata_sha256": "020372dc3b2fb5ab8e3a349f7966db3fbe781d183f22bad15e81375a0a1b1d4f",
+  "read_path": "literature/text/alpha3-v1.txt",
+  "read_sha256": "f4f723a904832a9dff1793785aa7f630c9149fdf35a70e0cb09a44a08b044a08",
+  "read_extent": "abstract and section III-B4 tool operational semantics; broader experiments remain outside this claim",
+  "acceptance": "not claimed; this record is the pinned arXiv version",
+  "claim": "Defines asynchronous A2A interactions as logically instantaneous at dialogue level; this passage alone does not certify wall-clock continuous-flight evaluation.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/alpha3-v1.txt",
+      "quote": "A2A interactions are asynchronous and logically instantaneous at the dialogue level"
+    }
+  ],
+  "unknowns": "No blanket claim that other systems pause all physics. No cross-benchmark score comparison."
+}

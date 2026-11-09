@@ -1,0 +1,677 @@
+{
+  "schema": "independent-readonly-clock-source-audit-v1",
+  "reviewer": "/root/control_review",
+  "created_utc": "2026-11-06T04:02:13.980791+00:00",
+  "scope": "two retained actual failed clock attempts; no replay, physics, MLX, owner mutation, grading or full dependency closure recertification",
+  "attempts": {
+    "attempt-00": {
+      "inputs": {
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-00/flight/world.json": {
+          "sha256": "0c0cddc3cdff7a88985bd022cebce618fe418d7d76b3f348f508bcb1d2800d91",
+          "bytes": 24353686
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-00/flight/run.json": {
+          "sha256": "a7760ec90dea6a85d35bb21821907b946389f41c78aeca28554f8a82bfc6a142",
+          "bytes": 288781
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-00/flight/progress.jsonl": {
+          "sha256": "c26c16272ae5eb09e034c666d19a0bb4c2a555452f17fd363bf41e49a13036b1",
+          "bytes": 233545
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-00/flight/actor.jsonl": {
+          "sha256": "457c5cddf8360664c06889e252a1861157dcbba11e6a028a476b34a1d28f7051",
+          "bytes": 849238
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-00/started.json": {
+          "sha256": "4c76357c4787a87049f6ed85d729ee76d0602229e9588c7bf1348920802c5d7a",
+          "bytes": 148
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-00/terminal.json": {
+          "sha256": "94cd10a5a26cfe78de4234da11c9043143584d73b4bd8f7303fea31a416b9650",
+          "bytes": 23292
+        }
+      },
+      "sources": {
+        "eval/run_inspection_reference.py": {
+          "recorded": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+          "embedded": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+          "current": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+          "match": true
+        },
+        "envs/inspection/mission.py": {
+          "recorded": "715fce4a99325b6d26fbb1e9ffc20896603bfbd4d48396f0513a46f5ad14aec7",
+          "embedded": "715fce4a99325b6d26fbb1e9ffc20896603bfbd4d48396f0513a46f5ad14aec7",
+          "current": "715fce4a99325b6d26fbb1e9ffc20896603bfbd4d48396f0513a46f5ad14aec7",
+          "match": true
+        },
+        "envs/inspection/execution.py": {
+          "recorded": "dc301939ea1d55f08f01c69af5561c75f762ac45bdd0d144d677514387425ea4",
+          "embedded": "dc301939ea1d55f08f01c69af5561c75f762ac45bdd0d144d677514387425ea4",
+          "current": "dc301939ea1d55f08f01c69af5561c75f762ac45bdd0d144d677514387425ea4",
+          "match": true
+        },
+        "envs/inspection/planning.py": {
+          "recorded": "b87fcdedf3aa26a46560056376fb69f9ff969270149c9cae429b4a9e294df6ab",
+          "embedded": "b87fcdedf3aa26a46560056376fb69f9ff969270149c9cae429b4a9e294df6ab",
+          "current": "b87fcdedf3aa26a46560056376fb69f9ff969270149c9cae429b4a9e294df6ab",
+          "match": true
+        },
+        "eval/run_inspection_llm_development.py": {
+          "recorded": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+          "embedded": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+          "current": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+          "read_scope": "only manifest creation, queue setup, shared_progress and update loop"
+        }
+      },
+      "started_at": "2026-11-06T03:05:58.427279+00:00",
+      "status": "completed",
+      "clock_mode": "wallclock_1x",
+      "physics_steps_executed": 144000,
+      "physics_hz": 240,
+      "control_hz": 120.0,
+      "simulated_seconds": 600.0,
+      "wall_seconds": 600.0039131670492,
+      "max_clock_lag_seconds": 1.768018833322742,
+      "clock_lag_p95_seconds": 0.00961920793633908,
+      "maximum_clock_lag_witness": {
+        "sim_time": 316.5416666666667,
+        "lag_seconds": 1.768018833322742,
+        "current_step_work_seconds": 0.015310917049646378,
+        "sensor_tick": false,
+        "previous_publication_work_seconds": 8.33999365568161e-07
+      },
+      "clock_lag_over_0p1_seconds_ticks": 1629,
+      "progress_rows": 600,
+      "sampled_1hz_max": {
+        "t": 317.0,
+        "lag_1hz": 1.68080304202158,
+        "reports": 0,
+        "coverage_cells": 1167,
+        "lag_change_from_previous_1hz": 0.2583433750551194
+      },
+      "sampled_1hz_over_0p1_intervals": [
+        {
+          "first": 98.0,
+          "last": 98.0,
+          "count": 1,
+          "max": {
+            "t": 98.0,
+            "lag_1hz": 0.12622104201000184,
+            "reports": 0,
+            "coverage_cells": 1166,
+            "lag_change_from_previous_1hz": 0.10939341702032834
+          }
+        },
+        {
+          "first": 314.0,
+          "last": 324.0,
+          "count": 11,
+          "max": {
+            "t": 317.0,
+            "lag_1hz": 1.68080304202158,
+            "reports": 0,
+            "coverage_cells": 1167,
+            "lag_change_from_previous_1hz": 0.2583433750551194
+          }
+        },
+        {
+          "first": 441.0,
+          "last": 441.0,
+          "count": 1,
+          "max": {
+            "t": 441.0,
+            "lag_1hz": 0.26524033304303885,
+            "reports": 2,
+            "coverage_cells": 1167,
+            "lag_change_from_previous_1hz": 0.2482915410073474
+          }
+        },
+        {
+          "first": 443.0,
+          "last": 443.0,
+          "count": 1,
+          "max": {
+            "t": 443.0,
+            "lag_1hz": 0.17149404203519225,
+            "reports": 2,
+            "coverage_cells": 1167,
+            "lag_change_from_previous_1hz": 0.11667333403602242
+          }
+        }
+      ],
+      "largest_positive_1hz_lag_changes": [
+        {
+          "t": 316.0,
+          "lag_1hz": 1.4224596669664606,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.7674937919946387
+        },
+        {
+          "t": 314.0,
+          "lag_1hz": 0.581063958001323,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.5596672079991549
+        },
+        {
+          "t": 317.0,
+          "lag_1hz": 1.68080304202158,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.2583433750551194
+        }
+      ],
+      "execution_audit_type_counts": {
+        "plan_request": 27,
+        "plan_response": 27,
+        "program_committed": 12,
+        "physical_program_seam": 20,
+        "planner_capture_expired": 2
+      },
+      "planner_compute_wall_max": 0.8830758749973029,
+      "tool_count": 26,
+      "job_count": 16,
+      "sources_unchanged": true,
+      "dependencies_unchanged": true,
+      "planner_responses": {
+        "count": 27,
+        "fresh_false": 3,
+        "program_absent": 15,
+        "compute_over_capture_lead_0p5": 2,
+        "reason_counts": {
+          "candidate admitted by development geometry screen": 12,
+          "continuous concatenation required": 1,
+          "deadline/range/fence screen": 14
+        }
+      },
+      "terminal_physical_validation": {
+        "run_sha256": "a7760ec90dea6a85d35bb21821907b946389f41c78aeca28554f8a82bfc6a142",
+        "world_sha256": "0c0cddc3cdff7a88985bd022cebce618fe418d7d76b3f348f508bcb1d2800d91",
+        "copied_case_sha256": "5600888c8cc583edadbb1e1d43f8f0dcd928b9b4e44c2dc93296a1788c62b422",
+        "returncode": 0,
+        "max_clock_lag_seconds": 1.768018833322742,
+        "failure_reasons": [
+          "clock_lag_exceeded"
+        ]
+      },
+      "progress_peak_window": [
+        {
+          "t": 309.0,
+          "lag_1hz": 0.010052166995592415,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.001352334045805037
+        },
+        {
+          "t": 310.0,
+          "lag_1hz": 0.011873041978105903,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.0018208749825134873
+        },
+        {
+          "t": 311.0,
+          "lag_1hz": 0.017039041966199875,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.005165999988093972
+        },
+        {
+          "t": 312.0,
+          "lag_1hz": 0.016564917052164674,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.00047412491403520107
+        },
+        {
+          "t": 313.0,
+          "lag_1hz": 0.02139675000216812,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.004831832950003445
+        },
+        {
+          "t": 314.0,
+          "lag_1hz": 0.581063958001323,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.5596672079991549
+        },
+        {
+          "t": 315.0,
+          "lag_1hz": 0.6549658749718219,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.07390191697049886
+        },
+        {
+          "t": 316.0,
+          "lag_1hz": 1.4224596669664606,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.7674937919946387
+        },
+        {
+          "t": 317.0,
+          "lag_1hz": 1.68080304202158,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.2583433750551194
+        },
+        {
+          "t": 318.0,
+          "lag_1hz": 1.4010393329663202,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.2797637090552598
+        },
+        {
+          "t": 319.0,
+          "lag_1hz": 1.3234199580037966,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.07761937496252358
+        },
+        {
+          "t": 320.0,
+          "lag_1hz": 1.5795005420222878,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.2560805840184912
+        },
+        {
+          "t": 321.0,
+          "lag_1hz": 1.1876579170348123,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.3918426249874756
+        },
+        {
+          "t": 322.0,
+          "lag_1hz": 0.7716003749519587,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.4160575420828536
+        },
+        {
+          "t": 323.0,
+          "lag_1hz": 0.49689629196655005,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.2747040829854086
+        },
+        {
+          "t": 324.0,
+          "lag_1hz": 0.1005667500430718,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.39632954192347825
+        },
+        {
+          "t": 325.0,
+          "lag_1hz": 0.013146374956704676,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.08742037508636713
+        },
+        {
+          "t": 326.0,
+          "lag_1hz": 0.016952167032286525,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.0038057920755818486
+        },
+        {
+          "t": 327.0,
+          "lag_1hz": 0.01793058298062533,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.0009784159483388066
+        },
+        {
+          "t": 328.0,
+          "lag_1hz": 0.01373462495394051,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.004195958026684821
+        }
+      ],
+      "clock_tick_denominator_from_duration_and_control_hz": 72000
+    },
+    "attempt-01": {
+      "inputs": {
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-01/flight/world.json": {
+          "sha256": "44cd9de740a8f46f7ef1bcbf3bba19b8dcda4041b4700bde16f46111112434f2",
+          "bytes": 24525174
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-01/flight/run.json": {
+          "sha256": "77aa41b30352e0899733a4f3cb2e183588db4c3b1250fe6680f2c0f9b635a3e5",
+          "bytes": 288781
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-01/flight/progress.jsonl": {
+          "sha256": "69345e86a444d56a868bfde9755529be3099ac78b79b6b99cc450156d2e4a0c9",
+          "bytes": 234978
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-01/flight/actor.jsonl": {
+          "sha256": "71fc3afe876c52602b71af5ec7c257e17f1c6ef2d7a6061219f8e02981c402a7",
+          "bytes": 732182
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-01/started.json": {
+          "sha256": "d77d10f79564cf4a4c97af620aad45202ea7ce10fa649593ec91853e8877e555",
+          "bytes": 148
+        },
+        "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/attempt-01/terminal.json": {
+          "sha256": "219a0a2c4f696c3775ce415d31709e197272219f93810dfc38118800e5d5ad81",
+          "bytes": 20625
+        }
+      },
+      "sources": {
+        "eval/run_inspection_reference.py": {
+          "recorded": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+          "embedded": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+          "current": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+          "match": true
+        },
+        "envs/inspection/mission.py": {
+          "recorded": "715fce4a99325b6d26fbb1e9ffc20896603bfbd4d48396f0513a46f5ad14aec7",
+          "embedded": "715fce4a99325b6d26fbb1e9ffc20896603bfbd4d48396f0513a46f5ad14aec7",
+          "current": "715fce4a99325b6d26fbb1e9ffc20896603bfbd4d48396f0513a46f5ad14aec7",
+          "match": true
+        },
+        "envs/inspection/execution.py": {
+          "recorded": "dc301939ea1d55f08f01c69af5561c75f762ac45bdd0d144d677514387425ea4",
+          "embedded": "dc301939ea1d55f08f01c69af5561c75f762ac45bdd0d144d677514387425ea4",
+          "current": "dc301939ea1d55f08f01c69af5561c75f762ac45bdd0d144d677514387425ea4",
+          "match": true
+        },
+        "envs/inspection/planning.py": {
+          "recorded": "b87fcdedf3aa26a46560056376fb69f9ff969270149c9cae429b4a9e294df6ab",
+          "embedded": "b87fcdedf3aa26a46560056376fb69f9ff969270149c9cae429b4a9e294df6ab",
+          "current": "b87fcdedf3aa26a46560056376fb69f9ff969270149c9cae429b4a9e294df6ab",
+          "match": true
+        },
+        "eval/run_inspection_llm_development.py": {
+          "recorded": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+          "embedded": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+          "current": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+          "read_scope": "only manifest creation, queue setup, shared_progress and update loop"
+        }
+      },
+      "started_at": "2026-11-06T03:16:22.106375+00:00",
+      "status": "completed",
+      "clock_mode": "wallclock_1x",
+      "physics_steps_executed": 144000,
+      "physics_hz": 240,
+      "control_hz": 120.0,
+      "simulated_seconds": 600.0,
+      "wall_seconds": 600.0036945829634,
+      "max_clock_lag_seconds": 0.3529511250322912,
+      "clock_lag_p95_seconds": 0.00873329199384898,
+      "maximum_clock_lag_witness": {
+        "sim_time": 531.15,
+        "lag_seconds": 0.3529511250322912,
+        "current_step_work_seconds": 0.012125000008381903,
+        "sensor_tick": false,
+        "previous_publication_work_seconds": 1.0409858077764511e-06
+      },
+      "clock_lag_over_0p1_seconds_ticks": 588,
+      "progress_rows": 600,
+      "sampled_1hz_max": {
+        "t": 531.0,
+        "lag_1hz": 0.2710969999898225,
+        "reports": 0,
+        "coverage_cells": 1167,
+        "lag_change_from_previous_1hz": 0.2626420829910785
+      },
+      "sampled_1hz_over_0p1_intervals": [
+        {
+          "first": 281.0,
+          "last": 281.0,
+          "count": 1,
+          "max": {
+            "t": 281.0,
+            "lag_1hz": 0.16306375002022833,
+            "reports": 0,
+            "coverage_cells": 1167,
+            "lag_change_from_previous_1hz": 0.14344879204872996
+          }
+        },
+        {
+          "first": 426.0,
+          "last": 427.0,
+          "count": 2,
+          "max": {
+            "t": 426.0,
+            "lag_1hz": 0.16127841698471457,
+            "reports": 0,
+            "coverage_cells": 1167,
+            "lag_change_from_previous_1hz": 0.15208379202522337
+          }
+        },
+        {
+          "first": 457.0,
+          "last": 457.0,
+          "count": 1,
+          "max": {
+            "t": 457.0,
+            "lag_1hz": 0.14722666703164577,
+            "reports": 0,
+            "coverage_cells": 1167,
+            "lag_change_from_previous_1hz": 0.11931216705124825
+          }
+        },
+        {
+          "first": 531.0,
+          "last": 532.0,
+          "count": 2,
+          "max": {
+            "t": 531.0,
+            "lag_1hz": 0.2710969999898225,
+            "reports": 0,
+            "coverage_cells": 1167,
+            "lag_change_from_previous_1hz": 0.2626420829910785
+          }
+        }
+      ],
+      "largest_positive_1hz_lag_changes": [
+        {
+          "t": 531.0,
+          "lag_1hz": 0.2710969999898225,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.2626420829910785
+        },
+        {
+          "t": 426.0,
+          "lag_1hz": 0.16127841698471457,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.15208379202522337
+        },
+        {
+          "t": 281.0,
+          "lag_1hz": 0.16306375002022833,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.14344879204872996
+        }
+      ],
+      "execution_audit_type_counts": {
+        "plan_request": 110,
+        "plan_response": 109,
+        "program_committed": 8,
+        "planner_capture_expired": 65,
+        "physical_program_seam": 8
+      },
+      "planner_compute_wall_max": 1.366626458009705,
+      "tool_count": 27,
+      "job_count": 16,
+      "sources_unchanged": true,
+      "dependencies_unchanged": true,
+      "planner_responses": {
+        "count": 109,
+        "fresh_false": 66,
+        "program_absent": 101,
+        "compute_over_capture_lead_0p5": 65,
+        "reason_counts": {
+          "candidate admitted by development geometry screen": 8,
+          "deadline/range/fence screen": 40,
+          "bounded finite strictly timed samples required": 31,
+          "continuous concatenation required": 30
+        }
+      },
+      "terminal_physical_validation": {
+        "run_sha256": "77aa41b30352e0899733a4f3cb2e183588db4c3b1250fe6680f2c0f9b635a3e5",
+        "world_sha256": "44cd9de740a8f46f7ef1bcbf3bba19b8dcda4041b4700bde16f46111112434f2",
+        "copied_case_sha256": "5600888c8cc583edadbb1e1d43f8f0dcd928b9b4e44c2dc93296a1788c62b422",
+        "returncode": 0,
+        "max_clock_lag_seconds": 0.3529511250322912,
+        "failure_reasons": [
+          "clock_lag_exceeded"
+        ]
+      },
+      "progress_peak_window": [
+        {
+          "t": 525.0,
+          "lag_1hz": 0.008572292048484087,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.0012084998888894916
+        },
+        {
+          "t": 526.0,
+          "lag_1hz": 0.055368624976836145,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.04679633292835206
+        },
+        {
+          "t": 527.0,
+          "lag_1hz": 0.03597754205111414,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.019391082925722003
+        },
+        {
+          "t": 528.0,
+          "lag_1hz": 0.006928125047124922,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.02904941700398922
+        },
+        {
+          "t": 529.0,
+          "lag_1hz": 0.007502874941565096,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.0005747498944401741
+        },
+        {
+          "t": 530.0,
+          "lag_1hz": 0.008454916998744011,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.0009520420571789145
+        },
+        {
+          "t": 531.0,
+          "lag_1hz": 0.2710969999898225,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.2626420829910785
+        },
+        {
+          "t": 532.0,
+          "lag_1hz": 0.12605704204179347,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.14503995794802904
+        },
+        {
+          "t": 533.0,
+          "lag_1hz": 0.04455979203339666,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.0814972500083968
+        },
+        {
+          "t": 534.0,
+          "lag_1hz": 0.007411457947455347,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.037148334085941315
+        },
+        {
+          "t": 535.0,
+          "lag_1hz": 0.004620457999408245,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.0027909999480471015
+        },
+        {
+          "t": 536.0,
+          "lag_1hz": 0.004005583003163338,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": -0.0006148749962449074
+        },
+        {
+          "t": 537.0,
+          "lag_1hz": 0.004734667018055916,
+          "reports": 0,
+          "coverage_cells": 1167,
+          "lag_change_from_previous_1hz": 0.0007290840148925781
+        }
+      ],
+      "clock_tick_denominator_from_duration_and_control_hz": 72000
+    }
+  },
+  "plan_json": {
+    "path": "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B4-M1-2/plan.json",
+    "sha256": "dfa86fdbc0d24f3d119e8a247bd1a9762ada28035cfd3b7e82256e33d9a951c9"
+  },
+  "local_stdlib_source_inspection": {
+    "python": "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/.venv/bin/python",
+    "version": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "methods": {
+      "Queue.get": {
+        "path": "/opt/homebrew/Cellar/python@3.11/3.11.15_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/queues.py",
+        "line": 98,
+        "sha256": "c6a5e3d6918de807074142eb4257746093ca78ffd897d828d559b7ea711c71a8"
+      },
+      "Queue.get_nowait": {
+        "path": "/opt/homebrew/Cellar/python@3.11/3.11.15_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/queues.py",
+        "line": 134,
+        "sha256": "c6a5e3d6918de807074142eb4257746093ca78ffd897d828d559b7ea711c71a8"
+      },
+      "Queue.put": {
+        "path": "/opt/homebrew/Cellar/python@3.11/3.11.15_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/queues.py",
+        "line": 86,
+        "sha256": "c6a5e3d6918de807074142eb4257746093ca78ffd897d828d559b7ea711c71a8"
+      },
+      "Queue._feed": {
+        "path": "/opt/homebrew/Cellar/python@3.11/3.11.15_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/queues.py",
+        "line": 211,
+        "sha256": "c6a5e3d6918de807074142eb4257746093ca78ffd897d828d559b7ea711c71a8"
+      },
+      "Connection._recv_bytes": {
+        "path": "/opt/homebrew/Cellar/python@3.11/3.11.15_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/connection.py",
+        "line": 429,
+        "sha256": "4fd122a7695ffa1429461e3e8f241cbac6361dc9aebf06bc94483545e3bf73d5"
+      },
+      "Connection._recv": {
+        "path": "/opt/homebrew/Cellar/python@3.11/3.11.15_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/connection.py",
+        "line": 390,
+        "sha256": "4fd122a7695ffa1429461e3e8f241cbac6361dc9aebf06bc94483545e3bf73d5"
+      }
+    }
+  },
+  "analysis_method": "stdlib json only: lag_1hz=wall_elapsed-t; consecutive t separated by 1 s grouped when lag_1hz>0.1; event time is t/at/now/received_at; actor metadata only, not response text. Max/p95/overcount are source-produced raw values, not recoverable per-tick independent recount.",
+  "limitations": [
+    "No per-control-tick wallclock series is persisted. Raw 240Hz tracking errors are not a wallclock trace.",
+    "run.started_at precedes service load and worker warmup; no exact mapping to worker monotonic epoch is persisted.",
+    "No unique CPU/GIL/OS/GPU/IPC cause established.",
+    "Native accounting figures supplied by root not independently audited here."
+  ]
+}

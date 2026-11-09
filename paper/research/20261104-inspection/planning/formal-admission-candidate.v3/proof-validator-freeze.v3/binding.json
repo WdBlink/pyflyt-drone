@@ -1,0 +1,9 @@
+{
+  "role": "uninstalled component; not G4 or phase permission",
+  "files": {
+    "planning/formal-admission-candidate.v3/proof-validator-freeze.v3/contract.json": "758cce9b5a45e5fe99df8f5411a49c6381615d80d21d509a50cdb0a943095b4d",
+    "planning/formal-admission-candidate.v3/proof-validator-freeze.v3/inspection_formal_admission.py": "c981449425a835fad40eda9bbdc47dc76d2aa0e473a26bde8312743739a1779d",
+    "planning/formal-admission-candidate.v3/proof-validator-freeze.v3/test_g4_proof_boundary.py": "191d7af54bee6062053897d40fbd5f6e81f2c639a1f455004951a073ee94dc53",
+    "planning/formal-admission-candidate.v3/proof-validator-freeze.v3/tests.log": "bbc250a7c5eb48dfc490b00cfce75e959d5279b61cbb73b729dbce7b36fa7280"
+  }
+}

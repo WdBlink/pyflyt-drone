@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "ppg.method-matrix.v1",
+  "protocolStatus": "frozen-preimplementation",
+  "algorithm": {
+    "family": "clipped-ppo",
+    "implementationId": "ppg-ppo-v1",
+    "implementationEntryPoint": "train/objlock_experiment.py",
+    "implementationSha256": null,
+    "freezeRequirement": "implementationSha256 must be a 64-character lowercase SHA-256 before comparative training",
+    "shared": {
+      "actorVisibleContract": "ActorObservationV1",
+      "actionSpace": "normalized-fixedwing-four-control-v1",
+      "rewardContract": "objlock-common-reward-v1",
+      "terminationContract": "objlock-common-termination-v1",
+      "trainingEnvSteps": 1000000,
+      "rolloutSteps": 2048,
+      "batchSize": 256,
+      "updateEpochs": 10,
+      "learningRate": 0.0003,
+      "gamma": 0.99,
+      "gaeLambda": 0.95,
+      "clipRange": 0.2,
+      "entropyCoefficient": 0.0,
+      "valueCoefficient": 0.5,
+      "maxGradientNorm": 0.5,
+      "optimizer": "Adam",
+      "optimizerSearchTrials": 0,
+      "wallClockCapSecondsPerTrainingRun": 5400,
+      "trainingSeeds": [11, 23, 47, 83, 131],
+      "checkpointEveryEnvSteps": 50000,
+      "validationCheckpointSelector": {
+        "feasibilityFirst": "zero frozen hard-event violations",
+        "score": "macro_safe_success_rate",
+        "tieBreak": [
+          "earliest_checkpoint_step",
+          "lexicographically_smallest_checkpoint_sha256"
+        ]
+      },
+      "actorNormalization": {
+        "scope": "actor-fields-only",
+        "state": "separate-running-mean-variance",
+        "freezeAtEvaluation": true
+      },
+      "criticNormalization": {
+        "scope": "critic-fields-only",
+        "state": "separate-running-mean-variance",
+        "sharedWithActor": false
+      },
+      "parameterBudgetRule": "actor hidden width and action head are identical across B2-B4/P and mechanism cells; critic-only and auxiliary heads are reported separately",
+      "recurrent": {
+        "cell": "GRU",
+        "hiddenSize": 128,
+        "tbpttSteps": 64,
+        "burnInSteps": 16,
+        "initialActorState": "all-zero",
+        "resetOnTermination": true,
+        "resetOnTruncation": true,
+        "saveLoadIncludesActorState": false,
+        "deploymentResetRequired": true
+      },
+      "deploymentExport": {
+        "artifact": "actor-only",
+        "forwardSignature": "(actor_observation, actor_hidden_state, actor_rng) -> (action_distribution, next_actor_hidden_state)",
+        "forbiddenInputs": [
+          "critic_privileged",
+          "evaluator_telemetry",
+          "critic_normalizer_state",
+          "cached_critic_features"
+        ]
+      }
+    }
+  },
+  "mechanisms": [
+    {
+      "id": "recurrence",
+      "switch": "actor.recurrence.enabled",
+      "offSemantics": "replace GRU with the matched feed-forward identity and remove hidden state without changing observation history, budgets, reward, or selector",
+      "claimContrast": "P vs P-minus-recurrence supports only a recurrence-necessity claim in the full bundle"
+    },
+    {
+      "id": "critic_privilege",
+      "switch": "critic.privileged_inputs.enabled",
+      "offSemantics": "critic receives actor-visible fields only; actor graph, auxiliary supervision, sampler, and constraint remain unchanged",
+      "claimContrast": "targeted critic-privilege by belief-supervision factorial estimates critic privilege and its interaction"
+    },
+    {
+      "id": "belief_supervision",
+      "switch": "loss.belief_supervision.enabled",
+      "offSemantics": "set the auxiliary belief coefficient to exactly zero and remove its gradient while leaving critic inputs unchanged",
+      "claimContrast": "targeted critic-privilege by belief-supervision factorial estimates supervision and its interaction"
+    },
+    {
+      "id": "constrained_objective",
+      "switch": "objective.constraint.enabled",
+      "offSemantics": "set the constraint dual contribution to exactly zero while retaining the identical logged cost signal",
+      "claimContrast": "targeted constraint by curriculum factorial estimates the constrained objective and its interaction"
+    },
+    {
+      "id": "boundary_curriculum",
+      "switch": "sampler.boundary_curriculum.enabled",
+      "offSemantics": "use the frozen uniform training-pool sampler with the same pool and RNG namespace",
+      "claimContrast": "targeted constraint by curriculum factorial estimates curriculum and its interaction"
+    }
+  ],
+  "methods": [
+    {
+      "id": "B0",
+      "role": "diagnostic-only",
+      "actorInput": "state-oracle",
+      "eligibleForInternalBaselineSelection": false,
+      "mechanisms": {
+        "recurrence": false,
+        "critic_privilege": false,
+        "belief_supervision": false,
+        "constrained_objective": false,
+        "boundary_curriculum": false
+      }
+    },
+    {
+      "id": "B1",
+      "role": "diagnostic-only",
+      "actorInput": "published-style-target-state",
+      "eligibleForInternalBaselineSelection": false,
+      "mechanisms": {
+        "recurrence": false,
+        "critic_privilege": false,
+        "belief_supervision": false,
+        "constrained_objective": false,
+        "boundary_curriculum": false
+      }
+    },
+    {
+      "id": "B2",
+      "role": "deployment-comparable",
+      "actorInput": "ActorObservationV1",
+      "eligibleForInternalBaselineSelection": true,
+      "mechanisms": {
+        "recurrence": false,
+        "critic_privilege": false,
+        "belief_supervision": false,
+        "constrained_objective": false,
+        "boundary_curriculum": false
+      }
+    },
+    {
+      "id": "B3",
+      "role": "deployment-comparable",
+      "actorInput": "ActorObservationV1",
+      "eligibleForInternalBaselineSelection": true,
+      "mechanisms": {
+        "recurrence": true,
+        "critic_privilege": false,
+        "belief_supervision": false,
+        "constrained_objective": false,
+        "boundary_curriculum": false
+      }
+    },
+    {
+      "id": "B4",
+      "role": "deployment-comparable-critic-reference",
+      "actorInput": "ActorObservationV1",
+      "eligibleForInternalBaselineSelection": true,
+      "mechanisms": {
+        "recurrence": true,
+        "critic_privilege": true,
+        "belief_supervision": false,
+        "constrained_objective": false,
+        "boundary_curriculum": false
+      }
+    },
+    {
+      "id": "P",
+      "role": "primary-proposed",
+      "actorInput": "ActorObservationV1",
+      "eligibleForInternalBaselineSelection": false,
+      "mechanisms": {
+        "recurrence": true,
+        "critic_privilege": true,
+        "belief_supervision": true,
+        "constrained_objective": true,
+        "boundary_curriculum": true
+      }
+    }
+  ],
+  "mechanismCells": [
+    {"id": "P_FULL", "base": "P", "overrides": {}},
+    {"id": "P_MINUS_RECURRENCE", "base": "P", "overrides": {"recurrence": false}},
+    {"id": "P_MINUS_CRITIC_PRIVILEGE", "base": "P", "overrides": {"critic_privilege": false}},
+    {"id": "P_MINUS_BELIEF_SUPERVISION", "base": "P", "overrides": {"belief_supervision": false}},
+    {"id": "P_MINUS_CONSTRAINED_OBJECTIVE", "base": "P", "overrides": {"constrained_objective": false}},
+    {"id": "P_MINUS_BOUNDARY_CURRICULUM", "base": "P", "overrides": {"boundary_curriculum": false}},
+    {"id": "CP0_BS0", "base": "P", "overrides": {"critic_privilege": false, "belief_supervision": false}},
+    {"id": "CO0_BC0", "base": "P", "overrides": {"constrained_objective": false, "boundary_curriculum": false}}
+  ],
+  "requiredFactorials": [
+    {
+      "id": "critic_privilege_x_belief_supervision",
+      "factors": ["critic_privilege", "belief_supervision"],
+      "cells": ["P_FULL", "P_MINUS_CRITIC_PRIVILEGE", "P_MINUS_BELIEF_SUPERVISION", "CP0_BS0"]
+    },
+    {
+      "id": "constrained_objective_x_boundary_curriculum",
+      "factors": ["constrained_objective", "boundary_curriculum"],
+      "cells": ["P_FULL", "P_MINUS_CONSTRAINED_OBJECTIVE", "P_MINUS_BOUNDARY_CURRICULUM", "CO0_BC0"]
+    }
+  ],
+  "configDiffAllowlists": {
+    "B2_to_B3": ["actor.recurrence.enabled"],
+    "B3_to_B4": ["critic.privileged_inputs.enabled"],
+    "B4_to_P": [
+      "loss.belief_supervision.enabled",
+      "objective.constraint.enabled",
+      "sampler.boundary_curriculum.enabled"
+    ],
+    "leaveOneOut": [
+      "actor.recurrence.enabled",
+      "critic.privileged_inputs.enabled",
+      "loss.belief_supervision.enabled",
+      "objective.constraint.enabled",
+      "sampler.boundary_curriculum.enabled"
+    ]
+  },
+  "comparisonPolicy": {
+    "primary": "P_vs_frozen_selected_internal_baseline",
+    "baselineCandidates": ["B2", "B3", "B4"],
+    "baselineTieBreak": ["higher_macro_safe_success_rate", "B2", "B3", "B4"],
+    "otherMethodsAndCells": "mechanism-analysis-unless-separately-powered-and-declared",
+    "diagnosticTransfer": "forbidden unless assigned a new method identity and predeclared"
+  }
+}

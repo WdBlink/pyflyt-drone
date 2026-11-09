@@ -1,0 +1,21 @@
+{
+  "role": "completed actual M2/L3 diagnostic, clock invalid; not G4 or primary data",
+  "captured_at": "2026-11-06T13:33:15.187200+00:00",
+  "archive": {
+    "path": "qualification/clock-localization-M2-L3.v1/complete-diagnostic-and-model-operation.zip",
+    "sha256": "ce6f65637a989b01ce35eefa707f5fe009cc0af0209a41cab72a871c7b39e852",
+    "bytes": 25802040,
+    "members": 106
+  },
+  "envelope_sha256": "db1a5b107d22681badea9162db112d96518ca3935d2f8df1e6216fe1f05dd4fd",
+  "usage_receipt_sha256": "7561cf8cef500335090a70e5910e6275b62503bae4b56ff150d4dfc3790e24f1",
+  "phase_recount_sha256": "4f35f6ad453113f023426960e9b4ccd38afd4d3a557a88e98b2a63a53e802371",
+  "known_usage": {
+    "calls": 30,
+    "tokens": 165378
+  },
+  "full_clock_rows": 72000,
+  "full_rusage_rows": 72000,
+  "worker_variant_source_unchanged": true,
+  "scope": "instrumented source/caffeinate conditions differ from failed pilot; current profile can locate its own delays, not uniquely attribute previous uninstrumented attempts"
+}

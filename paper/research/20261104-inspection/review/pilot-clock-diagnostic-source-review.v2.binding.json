@@ -1,0 +1,56 @@
+{
+  "schema": "independent-clock-diagnostic-source-review-v2",
+  "reviewer": "/root/control_review",
+  "freeze_binding_sha256": "7acbab10b21b2644543efcaae9e6de7fdf4d0f32ef9021f4a567d8acc12ecdf9",
+  "frozen_inputs": {
+    "qualification/clock-localization-fixed-load.v1/freeze.v2/intent.json": "fb1acb459e604595e8b7583ed06fff676b3e9a97bbf1285c2ec34e984d0b21cd",
+    "qualification/clock-localization-fixed-load.v1/freeze.v2/source/eval/inspection_clock_profile.py": "aa4ff3be49bd744e19ffa7e58b03c220b34a137c1fbfc13c4374f298c0b7dd7e",
+    "qualification/clock-localization-fixed-load.v1/freeze.v2/source/eval/inspection_diagnostic_worker.py": "304fd96297f19a958f189bac03f7628894645e9b8107de5fb309039884884cb1",
+    "qualification/clock-localization-fixed-load.v1/freeze.v2/source/eval/probe_inspection_clock_load.py": "2d41a68e11bb2bcb191bed4be808b5d31415c579c3f741d4140de5d36e1a1a4b",
+    "qualification/clock-localization-fixed-load.v1/freeze.v2/source/tests/test_inspection_clock_profile.py": "5029fb1ddc1868a40f454e20489e246ae53517d73aa637265b9ad6bca73d36bf",
+    "qualification/clock-localization-fixed-load.v1/freeze.v2/tape.json": "1ce4b730a025317d03eb139b3a7e092e6b4b89786128c8d351a77af84499f6c4",
+    "qualification/clock-localization-fixed-load.v1/freeze.v2/tests.log": "2517e9eae50646d7bbe12680a6b4bab62b845ea0743476059c8b765356d3b1f7"
+  },
+  "prior_review_sha256": "d4d2d47a0b6db85fa3ab9922773b46016af94399bf041546f8fe739591c0aec3",
+  "changes_reviewed": [
+    "request intent append before submit",
+    "explicit waiting/unknown/received states",
+    "workload counts distinguish dispatch attempts and client pipe dispatch from actual durable service admission",
+    "two new exception tests"
+  ],
+  "unchanged": [
+    "clock recorder bytes",
+    "instrumented worker bytes",
+    "fixed20-prompt tape bytes",
+    "clock/pacing/threshold/retry/physics/B0/model workload protocol"
+  ],
+  "unit_tests": {
+    "working_matches_freeze": true,
+    "result": "13 passed in 0.02s",
+    "log_sha256": "89e850eba122fef55881fd11b456f2eaf45390e14f6b2ad74c07bedc3c3a46e3"
+  },
+  "independent_probes": {
+    "test_path": "/tmp/inspection-clock-diagnostic-source-review-v1/test_retained_submit_v2.py",
+    "test_sha256": "14007f8a30f260165fe6a0baf9537497b78428cc0748f762e676bba9fecbd11f",
+    "log_sha256": "fcd476841e8af121ff907e81a92a59579b64c007b70cb79f9d096806f703fc7e",
+    "result": "2 passed in 0.01s; submit failure and successful-submit/poll-failure both retain intent and explicit unknown; client count0/1 does not erase dispatch attempt"
+  },
+  "finding_disposition": {
+    "v1_P2_dispatch_record_loss": "closed"
+  },
+  "open_findings": [],
+  "decision": "no_open_blockers_for_one_unscored_engineering_diagnostic_only",
+  "conditions": [
+    "actual sufficient live native reservation and existing service preflight must pass",
+    "use frozen bytes and fixed tape; fresh output and one diagnostic operation",
+    "owner must recount durable actual usage or retain unknown; no zero imputation",
+    "retain both original clock failures and retry exhaustion; no G4 or main qualification"
+  ],
+  "not_run": [
+    "model forward",
+    "physics",
+    "replay",
+    "owner mutation",
+    "formal seed generation"
+  ]
+}

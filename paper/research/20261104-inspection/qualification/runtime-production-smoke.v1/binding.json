@@ -1,0 +1,115 @@
+{
+  "role": "20s actual nonLLM production integration smoke; not complete mission/root/pilot/G4",
+  "observed_cli_exit": {
+    "code": 0,
+    "witness": "root observed unified exec session46562 terminal; reviewer did not attach OS session"
+  },
+  "simulated_seconds": 20.0,
+  "physics_steps": 4800,
+  "max_lag_seconds": 0.008421249999628344,
+  "p95_lag_seconds": 0.0034560409996631236,
+  "over_0p1": 0,
+  "physics_runtime": {
+    "schema": "inspection-physics-runtime-window-v1",
+    "errors": [],
+    "scope": "current physics main thread only; GC deferral covers its process, not model/coordinator processes",
+    "requested_ns": {
+      "period": 8333333,
+      "computation": 4000000,
+      "constraint": 8000000
+    },
+    "soft_realtime_not_a_guarantee": true,
+    "before": {
+      "values": [
+        1
+      ],
+      "default": false
+    },
+    "prior_rt": {
+      "values": [
+        0,
+        120000,
+        240000,
+        1
+      ],
+      "default": true
+    },
+    "mach_timebase": {
+      "numer": 125,
+      "denom": 3
+    },
+    "requested_ticks": [
+      200000,
+      96000,
+      192000,
+      1
+    ],
+    "gc_enabled_before": true,
+    "gc_threshold_before": [
+      700,
+      10,
+      10
+    ],
+    "pre_epoch_collected": 14,
+    "active_start": {
+      "values": [
+        200000,
+        96000,
+        192000,
+        1
+      ],
+      "default": false
+    },
+    "gc_enabled_at_epoch": false,
+    "window_wall_seconds": 20.008086541999546,
+    "active_end": {
+      "values": [
+        200000,
+        96000,
+        192000,
+        1
+      ],
+      "default": false
+    },
+    "restored": {
+      "values": [
+        1
+      ],
+      "default": false
+    },
+    "rt_after_restore": {
+      "values": [
+        0,
+        120000,
+        240000,
+        1
+      ],
+      "default": true
+    },
+    "post_loop_collected": 14,
+    "gc_enabled_after": true
+  },
+  "full600s_admission_correctly_refused": [
+    "incomplete_or_wrong_clock"
+  ],
+  "source_count": 18,
+  "dependency_count": 61,
+  "sources_dependencies_private_unchanged": true,
+  "run_sha256": "73cf10bcdc2c72954b20c3feae0b7a6f7b4f0e06d052dcf98ab045bb65b3b571",
+  "world_sha256": "c3397dd9ba7101929cea8c9264be27981a947b6c38002cc84402418ad0ccbb12",
+  "archive": {
+    "path": "qualification/runtime-production-smoke.v1/complete-smoke.zip",
+    "sha256": "f449afce57925b4752547a5bdc1297bfb9d4122a1d897c58317e483806b6b414",
+    "members": 7,
+    "bytes": 458187
+  },
+  "member_sha256": {
+    "flight/private-case.json": "ae583cf527b4db9e0768231bdeaf595a20e6a344db07aabe31f0858a1a5275f3",
+    "flight/progress.jsonl": "f6c5ec04f5c437863c5a05bc9341a605e208b189d11eafa2d8889b11eb23d242",
+    "flight/world.json": "c3397dd9ba7101929cea8c9264be27981a947b6c38002cc84402418ad0ccbb12",
+    "flight/run.json": "73cf10bcdc2c72954b20c3feae0b7a6f7b4f0e06d052dcf98ab045bb65b3b571",
+    "supervisor.stdout-stderr.log": "97b4e233af693294c72bcda7e6f7038e540e05f8437296b8251d28e043c27c98",
+    "host-concurrency-before.txt": "0a56bea7797ade232f013a91cc30fa6d248f5ae2dce42dfb1007a3f9843f6e62"
+  },
+  "limitations": "Ordinary production clock maxima/one-Hz progress, not complete72000 diagnostic phase vector; no model load or controlled A/B; other host tasks retained."
+}

@@ -1,0 +1,9 @@
+{
+  "role": "uninstalled read-only development identity catalog producer; no actual catalog or formal generation",
+  "files": {
+    "planning/formal-admission-candidate.v3/catalog-component-freeze.v1/contract.json": "e19d17177f4c1c72e7720fdb220f69f2d4206109cca1c47d7aab2748193a3bed",
+    "planning/formal-admission-candidate.v3/catalog-component-freeze.v1/inspection_development_catalog.py": "d8b3f209f91aca933cb5965478b67d56a85ab845130c796ab6f0522b0f7ea002",
+    "planning/formal-admission-candidate.v3/catalog-component-freeze.v1/test_development_catalog.py": "83a23b155c76e60ff8562851e37652ae172278ee631f74982536ece5407cfa03",
+    "planning/formal-admission-candidate.v3/catalog-component-freeze.v1/tests.log": "cdca5a4d886b36c762885cfd80f6ad55eec92751443cd0550637696a14219632"
+  }
+}

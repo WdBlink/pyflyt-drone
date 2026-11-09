@@ -1,0 +1,60 @@
+{
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review",
+  "sources": [
+    {
+      "bytes": 119307,
+      "content_type": "text/html; charset=UTF-8",
+      "fetched_at": "2026-11-05T02:44:02.671974+00:00",
+      "kind": "html",
+      "path": "venue/sources/nl2hltl-lab.html",
+      "resolved_url": "https://icontrol.ri.cmu.edu/research/hierarchical_specifications.html",
+      "reused": false,
+      "sha256": "38bd7525169caf742d5aac69a839fc2d9ff43c5dd797c2846899deeb249d45b5",
+      "url": "https://icontrol.ri.cmu.edu/research/hierarchical_specifications.html"
+    },
+    {
+      "bytes": 8315,
+      "content_type": "application/json",
+      "fetched_at": "2026-11-05T02:44:03.774973+00:00",
+      "kind": "json",
+      "path": "venue/sources/lip-publisher-metadata.json",
+      "resolved_url": "https://api.crossref.org/works/10.1109%2FLRA.2024.3518105",
+      "reused": false,
+      "sha256": "0bfd92d5a222cd835691dc607b448a07e9f046b13aee83f15d83db1699e4ef67",
+      "url": "https://api.crossref.org/works/10.1109%2FLRA.2024.3518105"
+    },
+    {
+      "bytes": 263461,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T02:44:12.120436+00:00",
+      "kind": "html",
+      "path": "venue/sources/mripp-author-repository.html",
+      "resolved_url": "https://github.com/AccGen99/marl_ipp",
+      "reused": false,
+      "sha256": "0867bfda589ac099d93c7219e94dd74509611bf9be3175f89ec91003ae210714",
+      "url": "https://github.com/AccGen99/marl_ipp"
+    },
+    {
+      "bytes": 12233,
+      "content_type": "application/json",
+      "fetched_at": "2026-11-05T02:44:13.262368+00:00",
+      "kind": "json",
+      "path": "venue/sources/mripp-registry.json",
+      "resolved_url": "https://api.crossref.org/works?query.bibliographic=Scalable+Multi-Robot+Informative+Path+Planning+for+Target+Mapping+via+Deep+Reinforcement+Learning&rows=2",
+      "reused": false,
+      "sha256": "da8699364092e54fd27222ff3f586166b85e3f2030c11ba626a0afda60b457f4",
+      "url": "https://api.crossref.org/works?query.bibliographic=Scalable+Multi-Robot+Informative+Path+Planning+for+Target+Mapping+via+Deep+Reinforcement+Learning&rows=2"
+    },
+    {
+      "bytes": 12110,
+      "content_type": "application/json",
+      "fetched_at": "2026-11-05T02:44:14.457016+00:00",
+      "kind": "json",
+      "path": "venue/sources/nl2hltl-registry.json",
+      "resolved_url": "https://api.crossref.org/works?query.bibliographic=NL2HLTL2Plan+Scaling+Up+Natural+Language+Understanding+for+Multi-Robots+Through+Hierarchical+Temporal+Logic+Task+Specifications&rows=2",
+      "reused": false,
+      "sha256": "14c673c3e22087cca473880e57db5275991b39034dbb12d7a06fdbf32c277149",
+      "url": "https://api.crossref.org/works?query.bibliographic=NL2HLTL2Plan+Scaling+Up+Natural+Language+Understanding+for+Multi-Robots+Through+Hierarchical+Temporal+Logic+Task+Specifications&rows=2"
+    }
+  ]
+}

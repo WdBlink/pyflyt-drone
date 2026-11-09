@@ -1,0 +1,46 @@
+{
+  "samples": [
+    {
+      "id": "S01",
+      "pdf": "venue/samples/S01-aerial-gym.pdf"
+    },
+    {
+      "id": "S02",
+      "pdf": "venue/samples/S02-lip-preprint.pdf"
+    },
+    {
+      "id": "S03",
+      "pdf": "venue/samples/S03-nl2hltl-preprint.pdf"
+    },
+    {
+      "id": "S04",
+      "pdf": "venue/samples/S04-smart.pdf"
+    },
+    {
+      "id": "S05",
+      "pdf": "venue/samples/S05-mripp.pdf"
+    },
+    {
+      "id": "S06",
+      "pdf": "venue/samples/S06-hetmrta.pdf"
+    },
+    {
+      "id": "S07",
+      "pdf": "venue/samples/S07-pursuit.pdf"
+    },
+    {
+      "id": "S08",
+      "pdf": "venue/samples/S08-gradnav.pdf"
+    }
+  ],
+  "artifacts": [
+    "venue/samples/S01-aerial-gym.pdf",
+    "venue/samples/S02-lip-preprint.pdf",
+    "venue/samples/S03-nl2hltl-preprint.pdf",
+    "venue/samples/S04-smart.pdf",
+    "venue/samples/S05-mripp.pdf",
+    "venue/samples/S06-hetmrta.pdf",
+    "venue/samples/S07-pursuit.pdf",
+    "venue/samples/S08-gradnav.pdf"
+  ]
+}

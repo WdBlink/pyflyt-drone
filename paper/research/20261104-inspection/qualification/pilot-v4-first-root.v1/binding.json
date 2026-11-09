@@ -1,0 +1,1716 @@
+{
+  "role": "Complete first development root, actual closed callbacks; not G4 or formal data",
+  "at": "2026-11-06T20:46:17.676260+00:00",
+  "completed_callbacks": 18,
+  "planned_callbacks": 108,
+  "complete_physical_root_blocks": 1,
+  "provided_sdk_final_outer_recording_complete": false,
+  "barrier": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 18,
+    "case_id": "dev-L3-01",
+    "condition": "B4-M1",
+    "at": "2026-11-06T20:44:18.795973+00:00"
+  },
+  "slots": [
+    {
+      "order_index": 0,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M2",
+      "repeat_ordinal": 1,
+      "name": "dev-L1-01-B4-M2-1",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.047306791666528625,
+        "clock_lag_p95_seconds": 0.0028497083332013062,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 0,
+      "usage": {
+        "calls": 21,
+        "tokens": 137950
+      },
+      "decision_attempts": 21,
+      "commands_enqueued": 0,
+      "causal_join_dispositions": {
+        "policy_format_failure": 20,
+        "ignored_after_episode_deadline": 1
+      }
+    },
+    {
+      "order_index": 1,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M2",
+      "repeat_ordinal": 0,
+      "name": "dev-L1-01-B3-M2-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.08571254166625408,
+        "clock_lag_p95_seconds": 0.0031797090003351514,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 0,
+      "usage": {
+        "calls": 29,
+        "tokens": 160422
+      },
+      "decision_attempts": 29,
+      "commands_enqueued": 32,
+      "causal_join_dispositions": {
+        "policy_format_failure": 1,
+        "decoded_not_tool_acceptance": 27,
+        "ignored_after_episode_deadline": 1
+      }
+    },
+    {
+      "order_index": 2,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B2",
+      "repeat_ordinal": 0,
+      "name": "classic/dev-L1-01-B2-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.010033665999799268,
+        "clock_lag_p95_seconds": 0.003515749667229784,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9754701553556827,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9877350776778413,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9877350776778413,
+        "SR": 1
+      },
+      "reports_count": 4
+    },
+    {
+      "order_index": 3,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M1",
+      "repeat_ordinal": 1,
+      "name": "dev-L1-01-B4-M1-1",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.012864000000263331,
+        "clock_lag_p95_seconds": 0.003563583333139775,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.16666666666666666,
+        "D": null,
+        "Q": 0.5804715181248297,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5804715181248297,
+        "SR": 0
+      },
+      "reports_count": 1,
+      "usage": {
+        "calls": 13,
+        "tokens": 93287
+      },
+      "decision_attempts": 13,
+      "commands_enqueued": 14,
+      "causal_join_dispositions": {
+        "ignored_noncompleted_or_late": 2,
+        "decoded_not_tool_acceptance": 10,
+        "ignored_after_episode_deadline": 1
+      }
+    },
+    {
+      "order_index": 4,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M2",
+      "repeat_ordinal": 2,
+      "name": "dev-L1-01-B3-M2-2",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.009214166000674595,
+        "clock_lag_p95_seconds": 0.0030161250007978424,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 2,
+      "usage": {
+        "calls": 30,
+        "tokens": 163566
+      },
+      "decision_attempts": 30,
+      "commands_enqueued": 30,
+      "causal_join_dispositions": {
+        "decoded_not_tool_acceptance": 30
+      }
+    },
+    {
+      "order_index": 5,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B0",
+      "repeat_ordinal": 0,
+      "name": "classic/dev-L1-01-B0-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.009544874999846797,
+        "clock_lag_p95_seconds": 0.0031780836665689094,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9971381847914963,
+        "SR": 1
+      },
+      "reports_count": 4
+    },
+    {
+      "order_index": 6,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M3",
+      "repeat_ordinal": 0,
+      "name": "dev-L1-01-B3-M3-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.010406791001514648,
+        "clock_lag_p95_seconds": 0.004563583333379029,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 25,
+      "usage": {
+        "calls": 19,
+        "tokens": 138779
+      },
+      "decision_attempts": 19,
+      "commands_enqueued": 62,
+      "causal_join_dispositions": {
+        "decoded_not_tool_acceptance": 17,
+        "policy_format_failure": 1,
+        "ignored_after_episode_deadline": 1
+      }
+    },
+    {
+      "order_index": 7,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M1",
+      "repeat_ordinal": 2,
+      "name": "dev-L1-01-B3-M1-2",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.014954500000385451,
+        "clock_lag_p95_seconds": 0.004564125332876756,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 3,
+      "usage": {
+        "calls": 23,
+        "tokens": 152340
+      },
+      "decision_attempts": 23,
+      "commands_enqueued": 19,
+      "causal_join_dispositions": {
+        "decoded_not_tool_acceptance": 19,
+        "policy_format_failure": 4
+      }
+    },
+    {
+      "order_index": 8,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M3",
+      "repeat_ordinal": 1,
+      "name": "dev-L1-01-B3-M3-1",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.014680457998110796,
+        "clock_lag_p95_seconds": 0.004746500000692322,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9934587080948487,
+        "S": 0.08333333333333333,
+        "D": null,
+        "Q": 0.538396020714091,
+        "H": 1,
+        "E": 1,
+        "Y": 0.538396020714091,
+        "SR": 0
+      },
+      "reports_count": 100,
+      "usage": {
+        "calls": 17,
+        "tokens": 126461
+      },
+      "decision_attempts": 17,
+      "commands_enqueued": 66,
+      "causal_join_dispositions": {
+        "decoded_not_tool_acceptance": 15,
+        "policy_format_failure": 1,
+        "ignored_after_episode_deadline": 1
+      }
+    },
+    {
+      "order_index": 9,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M1",
+      "repeat_ordinal": 0,
+      "name": "dev-L1-01-B3-M1-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.013702042000659276,
+        "clock_lag_p95_seconds": 0.0039033333353586386,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 3,
+      "usage": {
+        "calls": 22,
+        "tokens": 146917
+      },
+      "decision_attempts": 22,
+      "commands_enqueued": 20,
+      "causal_join_dispositions": {
+        "decoded_not_tool_acceptance": 18,
+        "policy_format_failure": 4
+      }
+    },
+    {
+      "order_index": 10,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M2",
+      "repeat_ordinal": 1,
+      "name": "dev-L1-01-B3-M2-1",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.00970483400305966,
+        "clock_lag_p95_seconds": 0.003065750000700973,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 1,
+      "usage": {
+        "calls": 30,
+        "tokens": 178072
+      },
+      "decision_attempts": 30,
+      "commands_enqueued": 44,
+      "causal_join_dispositions": {
+        "decoded_not_tool_acceptance": 26,
+        "policy_format_failure": 4
+      }
+    },
+    {
+      "order_index": 11,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M1",
+      "repeat_ordinal": 0,
+      "name": "dev-L1-01-B4-M1-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.014017124998645158,
+        "clock_lag_p95_seconds": 0.003874541665823017,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.08333333333333333,
+        "D": null,
+        "Q": 0.5388048514581629,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5388048514581629,
+        "SR": 0
+      },
+      "reports_count": 2,
+      "usage": {
+        "calls": 24,
+        "tokens": 172337
+      },
+      "decision_attempts": 24,
+      "commands_enqueued": 27,
+      "causal_join_dispositions": {
+        "policy_format_failure": 1,
+        "decoded_not_tool_acceptance": 22,
+        "ignored_after_episode_deadline": 1
+      }
+    },
+    {
+      "order_index": 12,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B1",
+      "repeat_ordinal": 0,
+      "name": "classic/dev-L1-01-B1-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.009932540997397155,
+        "clock_lag_p95_seconds": 0.002707666000105746,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9934587080948487,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9967293540474244,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9967293540474244,
+        "SR": 1
+      },
+      "reports_count": 4
+    },
+    {
+      "order_index": 13,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M2",
+      "repeat_ordinal": 0,
+      "name": "dev-L1-01-B4-M2-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.012547708000056446,
+        "clock_lag_p95_seconds": 0.003727791330788932,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 0,
+      "usage": {
+        "calls": 25,
+        "tokens": 164407
+      },
+      "decision_attempts": 25,
+      "commands_enqueued": 0,
+      "causal_join_dispositions": {
+        "policy_format_failure": 25
+      }
+    },
+    {
+      "order_index": 14,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M3",
+      "repeat_ordinal": 2,
+      "name": "dev-L1-01-B3-M3-2",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.01463920800233609,
+        "clock_lag_p95_seconds": 0.004379666333761634,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 20,
+      "usage": {
+        "calls": 19,
+        "tokens": 141919
+      },
+      "decision_attempts": 19,
+      "commands_enqueued": 55,
+      "causal_join_dispositions": {
+        "decoded_not_tool_acceptance": 18,
+        "ignored_after_episode_deadline": 1
+      }
+    },
+    {
+      "order_index": 15,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M2",
+      "repeat_ordinal": 2,
+      "name": "dev-L1-01-B4-M2-2",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.0118115420009417,
+        "clock_lag_p95_seconds": 0.0035612916677791873,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 0,
+      "usage": {
+        "calls": 27,
+        "tokens": 177098
+      },
+      "decision_attempts": 29,
+      "commands_enqueued": 12,
+      "causal_join_dispositions": {
+        "policy_format_failure": 25,
+        "decoded_not_tool_acceptance": 2,
+        "ignored_noncompleted_or_late": 2
+      }
+    },
+    {
+      "order_index": 16,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M1",
+      "repeat_ordinal": 1,
+      "name": "dev-L1-01-B3-M1-1",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.012330584002484102,
+        "clock_lag_p95_seconds": 0.002634958333260329,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 0,
+      "usage": {
+        "calls": 26,
+        "tokens": 173671
+      },
+      "decision_attempts": 26,
+      "commands_enqueued": 14,
+      "causal_join_dispositions": {
+        "decoded_not_tool_acceptance": 23,
+        "policy_format_failure": 2,
+        "ignored_after_episode_deadline": 1
+      }
+    },
+    {
+      "order_index": 17,
+      "root_block_index": 0,
+      "case_id": "dev-L1-01",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M1",
+      "repeat_ordinal": 2,
+      "name": "dev-L1-01-B4-M1-2",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.013777959000435658,
+        "clock_lag_p95_seconds": 0.003005667000252288,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9942763695829926,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.4971381847914963,
+        "H": 1,
+        "E": 1,
+        "Y": 0.4971381847914963,
+        "SR": 0
+      },
+      "reports_count": 0,
+      "usage": {
+        "calls": 24,
+        "tokens": 172076
+      },
+      "decision_attempts": 24,
+      "commands_enqueued": 16,
+      "causal_join_dispositions": {
+        "policy_format_failure": 2,
+        "decoded_not_tool_acceptance": 22
+      }
+    }
+  ],
+  "root_component_means": [
+    {
+      "case_id": "dev-L1-01",
+      "condition": "B0",
+      "original_repeats": 1,
+      "components": {
+        "C": 0.9942763695829926,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9971381847914963,
+        "H": 1.0,
+        "E": 1.0,
+        "Y": 0.9971381847914963,
+        "SR": 1.0
+      },
+      "scope": "one complete development root, descriptive only; not a formal SDK outer recording or population comparison"
+    },
+    {
+      "case_id": "dev-L1-01",
+      "condition": "B1",
+      "original_repeats": 1,
+      "components": {
+        "C": 0.9934587080948487,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9967293540474244,
+        "H": 1.0,
+        "E": 1.0,
+        "Y": 0.9967293540474244,
+        "SR": 1.0
+      },
+      "scope": "one complete development root, descriptive only; not a formal SDK outer recording or population comparison"
+    },
+    {
+      "case_id": "dev-L1-01",
+      "condition": "B2",
+      "original_repeats": 1,
+      "components": {
+        "C": 0.9754701553556827,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9877350776778413,
+        "H": 1.0,
+        "E": 1.0,
+        "Y": 0.9877350776778413,
+        "SR": 1.0
+      },
+      "scope": "one complete development root, descriptive only; not a formal SDK outer recording or population comparison"
+    },
+    {
+      "case_id": "dev-L1-01",
+      "condition": "B3-M1",
+      "original_repeats": 3,
+      "components": {
+        "C": 0.9942763695829925,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49713818479149624,
+        "H": 1.0,
+        "E": 1.0,
+        "Y": 0.49713818479149624,
+        "SR": 0.0
+      },
+      "scope": "one complete development root, descriptive only; not a formal SDK outer recording or population comparison"
+    },
+    {
+      "case_id": "dev-L1-01",
+      "condition": "B3-M2",
+      "original_repeats": 3,
+      "components": {
+        "C": 0.9942763695829925,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49713818479149624,
+        "H": 1.0,
+        "E": 1.0,
+        "Y": 0.49713818479149624,
+        "SR": 0.0
+      },
+      "scope": "one complete development root, descriptive only; not a formal SDK outer recording or population comparison"
+    },
+    {
+      "case_id": "dev-L1-01",
+      "condition": "B3-M3",
+      "original_repeats": 3,
+      "components": {
+        "C": 0.9940038157536112,
+        "S": 0.027777777777777776,
+        "D": null,
+        "Q": 0.5108907967656946,
+        "H": 1.0,
+        "E": 1.0,
+        "Y": 0.5108907967656946,
+        "SR": 0.0
+      },
+      "scope": "one complete development root, descriptive only; not a formal SDK outer recording or population comparison"
+    },
+    {
+      "case_id": "dev-L1-01",
+      "condition": "B4-M1",
+      "original_repeats": 3,
+      "components": {
+        "C": 0.9942763695829925,
+        "S": 0.08333333333333333,
+        "D": null,
+        "Q": 0.5388048514581629,
+        "H": 1.0,
+        "E": 1.0,
+        "Y": 0.5388048514581629,
+        "SR": 0.0
+      },
+      "scope": "one complete development root, descriptive only; not a formal SDK outer recording or population comparison"
+    },
+    {
+      "case_id": "dev-L1-01",
+      "condition": "B4-M2",
+      "original_repeats": 3,
+      "components": {
+        "C": 0.9942763695829925,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49713818479149624,
+        "H": 1.0,
+        "E": 1.0,
+        "Y": 0.49713818479149624,
+        "SR": 0.0
+      },
+      "scope": "one complete development root, descriptive only; not a formal SDK outer recording or population comparison"
+    }
+  ],
+  "native_budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 883,
+      "tokens": 5634314,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-002-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-008-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-011-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-013-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-014-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-015-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-016-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-017-a0": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-postinventory-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-fixed-M1-load-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-runtime-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 3328.5226916333336,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "bound_files": {
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/plan.json": {
+      "sha256": "32ce81572b996515424e4f5cd6fa6867edc1d55c3a6474e9b7ce277e694efcd1",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/terminal.json": {
+      "sha256": "074baa6a27ae6a40def5d6542e8c9638c4fe21482e3b91f0c04ae65d9cc989e9",
+      "bytes": 23964
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/flight/run.json": {
+      "sha256": "57b917ded2b4a7f661302522813d54879f97c78281f4541968cc03c4b2fd3fe7",
+      "bytes": 297358
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/flight/world.json": {
+      "sha256": "46855aecc353790cad6c01e7372dcc002a94761c0cf70550b154659a15336eec",
+      "bytes": 24260580
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000000.json": {
+      "sha256": "1f9f53086d11b73db7f6df7609481b17c124e1cf80b2fb8b2ba96f9a63e95f76",
+      "bytes": 359
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B4-M2-1.json": {
+      "sha256": "1623392057371aed70c9a81eaccf55fc37a417665920113e0f6224fdb099703f",
+      "bytes": 982
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-000-a0/complete-attempt.zip": {
+      "sha256": "ac969742b438a928d8be2fe3963417a244b850ec6d069216b41534df4c1d7c39",
+      "bytes": 10299721
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-000-a0/usage-receipt.json": {
+      "sha256": "10b441c5cd558012466961bdccda23be6270cc9735041d3986a98846dc119d7c",
+      "bytes": 9455
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-000-a0.settle.json": {
+      "sha256": "3547514ba9e99d5f9f4aa8eab1442239ab95bb86c6392b41a966daf84ba49edc",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-0/plan.json": {
+      "sha256": "d1381e45fb190ad50fb248795e3dd558dae2839fe043541bcdf6aeda2fbd741e",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-0/attempt-00/terminal.json": {
+      "sha256": "e7dc52fd8a524d8b03bebf656a57b97b720d623758b61df0473f2d3dd154f18f",
+      "bytes": 31115
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-0/attempt-00/flight/run.json": {
+      "sha256": "59b1d84e666dd2abc78d9c222cbda50b922894451b9ab4b372534e1e7f72ca4e",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-0/attempt-00/flight/world.json": {
+      "sha256": "55b9adce6dd1f0c73226bc7f1cfe0574b280f300289e6afa00d256e44e25bab9",
+      "bytes": 24272144
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-0/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000001.json": {
+      "sha256": "84d169d7162595ef1e8b67c0b7d1f495ebb85b23cf0ae87a109e3b5f72ceeb2d",
+      "bytes": 359
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M2-0.json": {
+      "sha256": "1ab1aa2c53d34a0be4138c68108ecaede18a4c155bf6a229df344c06c9148d62",
+      "bytes": 982
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-001-a0/complete-attempt.zip": {
+      "sha256": "126e8bac21da9cb20469aa8cb37a3d4d82aba3b0513a81aecaa97665b4d4047b",
+      "bytes": 10320047
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-001-a0/usage-receipt.json": {
+      "sha256": "af02c0881e4a2abe93e6ec4edc9e9b5e06f66989ee026ac28c86d03e2653e3d6",
+      "bytes": 12653
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-001-a0.settle.json": {
+      "sha256": "3e41e5ce04c9e0e7efa60861074e96976479e532c65a5a618ef671bd43e2fd00",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B2-0/plan.json": {
+      "sha256": "97e3ade79495f6fd262c0a4b28fb62f4c9f39da9061e225763b35ff50b3de855",
+      "bytes": 15988
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B2-0/attempt-00/terminal.json": {
+      "sha256": "99ee0213edc2ce547d91ffb4db7fe510ff13166fa4dc92342aefe9732e436d46",
+      "bytes": 1296
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B2-0/attempt-00/flight/run.json": {
+      "sha256": "5374f2858fbb3a152bfbaa88b340e5327fdbf36cdd330fed2b7609be758ec03f",
+      "bytes": 277763
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B2-0/attempt-00/flight/world.json": {
+      "sha256": "80b5d010de51f7cf34316b46afa6e4a4460be31d35c7f5d818283db30d33e04f",
+      "bytes": 25280893
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B2-0/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000002.json": {
+      "sha256": "e1bfe9d0dfcf4f6effa42988a5f92655d035acb2e3ee5b6425cc4b88b1a39760",
+      "bytes": 357
+    },
+    "logs/inspection-eight-condition-pilot.v4/classic/raw/dev-L1-01-B2-0.json": {
+      "sha256": "915811d5cb58e66a1049a7b8b6563922a7ba496275ee413593ebd2b45b668c6b",
+      "bytes": 963
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/plan.json": {
+      "sha256": "10d3f9e71468351128762a4e93e17862ab73a4158520051478bc1d2dd804091b",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/terminal.json": {
+      "sha256": "98dd2a4df9eec6a15787cf2da4b161f60268812f8a5b0000a07708ad7b287fbc",
+      "bytes": 17082
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/flight/run.json": {
+      "sha256": "aa88cd92c3ff7b4ec336ba90c601f54cb968655db1091b3ea92e94a3327bbae2",
+      "bytes": 297358
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/flight/world.json": {
+      "sha256": "b575bd507c1f2b680400f8a6cb07ce88c3afa87b0783272f1a8fdef1dcda1c7a",
+      "bytes": 23611268
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000003.json": {
+      "sha256": "07b4429f64638b42ddd280221c3a90be38aa927b26e3d42f844850b664596d6d",
+      "bytes": 359
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B4-M1-1.json": {
+      "sha256": "a4f2b14e9dbff269ac53c971b87e0528f64f84f2ed0bd0fde2468530b349f6ba",
+      "bytes": 982
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-003-a0/complete-attempt.zip": {
+      "sha256": "f0a3f3c602f8f104b2948774501e228b3c472a540ecb6f1e258dacf0910758aa",
+      "bytes": 10407207
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-003-a0/usage-receipt.json": {
+      "sha256": "58addd191216d3863c86f10d1284916376dcc750e460f75b56227939bc6ec026",
+      "bytes": 6256
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-003-a0.settle.json": {
+      "sha256": "1b3f1de39080afc58a446b10d1f9e2cfa57d2ec4b9f67a23afce18da73a34552",
+      "bytes": 174
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/plan.json": {
+      "sha256": "10cde77f4aa7c28bdb1e81bc392fc00f33d075769be4d80c5e005e7176a27bda",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/terminal.json": {
+      "sha256": "5459fa4d78018a9b0aed453bafa0ab6e9ac7486b816ed414bfa347b78f4d005a",
+      "bytes": 32000
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/flight/run.json": {
+      "sha256": "d083b812b6f41557545810cf543284de7820b8f8bbc30ad095e1e87004e82011",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/flight/world.json": {
+      "sha256": "79ad88a145857671ad5ba02107b4734ef0de8f4e09d83b936b6e6c108e13c8cb",
+      "bytes": 24272876
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000004.json": {
+      "sha256": "1dbc39ee719ed760718336a5e72d2ef4912cb2cb86122175f504589f7fc280b5",
+      "bytes": 359
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M2-2.json": {
+      "sha256": "4d8ea4d39171f0127abb70e1aef93cf9cbf164a1fba1fe1ffce8aec13ce3d311",
+      "bytes": 982
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-004-a0/complete-attempt.zip": {
+      "sha256": "d89eba74481727c4d897ead611929c7b4d1d4adaf36241fb82c220de9a31daab",
+      "bytes": 10322364
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-004-a0/usage-receipt.json": {
+      "sha256": "43d7b6fdd9a30865f71e74b5fc8f901b1347f6239f4990073c7426ab170869a0",
+      "bytes": 13053
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-004-a0.settle.json": {
+      "sha256": "ac205d39fb78cda6274f453428364ffe49241e5d3d79d5c55d8c530b652dfd7c",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/plan.json": {
+      "sha256": "533476f0c8d5c3ba9588e91c966b42dd8b043f09022b04fb795aca27ad45b027",
+      "bytes": 15836
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/terminal.json": {
+      "sha256": "b2d80bc195b160aa7bede5e6f78fa2ec1a5bfdebfaf1916dcefd793b9c379ee8",
+      "bytes": 1300
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/flight/run.json": {
+      "sha256": "b7a49ef62c9dea1cd8ee885e89b0d5ee1db8cf65886a23307b899bf5a9fce890",
+      "bytes": 262272
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/flight/world.json": {
+      "sha256": "6522fb0f77ee74590e32592b1e4b16d351a19dc2bcbe363e088c8c540c150f88",
+      "bytes": 26001566
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000005.json": {
+      "sha256": "ffb6be8f6f516078fc12a31a897f337ab9ff913d1af3765a999c6ad2632b16c8",
+      "bytes": 357
+    },
+    "logs/inspection-eight-condition-pilot.v4/classic/raw/dev-L1-01-B0-0.json": {
+      "sha256": "4b0b432dad02d05b93d0e02f757c5a0ab5f5603f3bac18609f8aa73c77ae708c",
+      "bytes": 963
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-0/plan.json": {
+      "sha256": "40cfd1a89e4603d59d9916919bbab6c44ad065953bff308e804d8c98baddbe5a",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-0/attempt-00/terminal.json": {
+      "sha256": "c8bda72d01030cdf0bcd2656ae0c4392f114499b707a0ed687b4f1aae9e10154",
+      "bytes": 22318
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-0/attempt-00/flight/run.json": {
+      "sha256": "6696b405cede346012297b3e5e9a2c66a8c15eb3b9871af2ce1dd17e11f1b7b5",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-0/attempt-00/flight/world.json": {
+      "sha256": "1fe13f40c12a34feab2ab60bda459bef8e9ba40185e7f9cd79f185706d981b7e",
+      "bytes": 21366832
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-0/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000006.json": {
+      "sha256": "439e2df8c06f52a00ff9214ccd90376ce3ccf65aebe4e6d9d98ac333b9502207",
+      "bytes": 359
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M3-0.json": {
+      "sha256": "6fcde37222039ea4daebed4530bb802db7030a56b04a969b40704d631d2b49bc",
+      "bytes": 982
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-006-a0/complete-attempt.zip": {
+      "sha256": "7cffb8e424437bd8c5e329c32d4019bd1a37a149415b78508529a34194fe3247",
+      "bytes": 10310255
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-006-a0/usage-receipt.json": {
+      "sha256": "b8810519c7aa1d7f6813b4a399a84ef48efae972f84f0a1a9409c9ad5a819062",
+      "bytes": 8653
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-006-a0.settle.json": {
+      "sha256": "840e58978e14b28edf83993e5f6f4d20185abd5261290f3c4462d834cfa337a8",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-2/plan.json": {
+      "sha256": "782ed9286be872659f14a05b1c530f8b6c52835ebef0a9b470e466e3f8e132f4",
+      "bytes": 17822
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-2/attempt-00/terminal.json": {
+      "sha256": "e94ef4b9275bce9ebe78fbd7284241cbc9295ae6e8f9048d8cebb2fbaee402b2",
+      "bytes": 25818
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-2/attempt-00/flight/run.json": {
+      "sha256": "2ab385ff52452d8b2807b24393f9134238f9d865898e8172af46fa21acc4f5a5",
+      "bytes": 297358
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-2/attempt-00/flight/world.json": {
+      "sha256": "ea2a9b17a99e9132e0e401626ee5ee6a544971c978870fa4ed9441779437f4f3",
+      "bytes": 24535973
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-2/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000007.json": {
+      "sha256": "590264f756a807eccf1e4fecfe4d7557b373e8fc2c9658afe6ab5f99c8e9264b",
+      "bytes": 359
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M1-2.json": {
+      "sha256": "a4d271a9bd825bea22cd0ade84645882e351bffb83581ace1d3ce682997ecb1c",
+      "bytes": 982
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-007-a0/complete-attempt.zip": {
+      "sha256": "14e5173380161814fc1cfc670c42e4c1b3ea1ac6ef2bc4a903af759bdebdec8a",
+      "bytes": 10462471
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-007-a0/usage-receipt.json": {
+      "sha256": "ef2ba41d594d682719ad1e3e4831259f2f1907e7da4e3b7b0b158d174fd2b015",
+      "bytes": 10253
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-007-a0.settle.json": {
+      "sha256": "eeda7432b3f3c60fafcd0601d9566895dcb75d677349c018791d37d1e83b9242",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-1/plan.json": {
+      "sha256": "1e9425ed608232585e6035ff5825eff7843f3efac1f6b1689878d936e2e6c6c3",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-1/attempt-00/terminal.json": {
+      "sha256": "7e64a195720a97510108cdbb2856b031f5d061d72fd15ea1b16e6d3167bff2a9",
+      "bytes": 20586
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-1/attempt-00/flight/run.json": {
+      "sha256": "f82d0d019a1fc143676d7b7b89475cc92acfd798eb143d6ba12c63b461ce78df",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-1/attempt-00/flight/world.json": {
+      "sha256": "f5affaf0e9f988d74537fe440d538b5abb62ad2ae0f8927a0f82aad36a0245a8",
+      "bytes": 22277362
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-1/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000008.json": {
+      "sha256": "069824adac67e620de4049f0a63bd3e0bd3c2ecade74c053f73b35056417ef75",
+      "bytes": 359
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M3-1.json": {
+      "sha256": "5ea66a756619091331993e1b798f5771a9495fee92a61e94839f2e2dfb75db47",
+      "bytes": 981
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-008-a0/complete-attempt.zip": {
+      "sha256": "d071316c055e8c0230781ed68933aca9ef790d7af502ea68e2252b42cb806835",
+      "bytes": 10384487
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-008-a0/usage-receipt.json": {
+      "sha256": "6badd0ce121b2de2ba5caa70371376e1abaff7288b776296eadbcaf36c768232",
+      "bytes": 7853
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-008-a0.settle.json": {
+      "sha256": "3ff6de7e41cf25616d48747ced4a6e4638b3c68a548d7b2656f12eb3f4524d59",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/plan.json": {
+      "sha256": "06c2ef2b35f9d3b1907184562c4a45f49311ff9dfe2a0a9d87b3be381f9d0d7f",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/terminal.json": {
+      "sha256": "94514b9ae5fb75dbcd91d5e4de558c6553f9895a014eea0d0f8669b9490e93a6",
+      "bytes": 24937
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/flight/run.json": {
+      "sha256": "faa59d95459db3f94550587320749df3d9eda53437caecc83c66b1a955aeb3c9",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/flight/world.json": {
+      "sha256": "26c847a857818bb0631996d3ceee23c9a314703e7791a6ec3228d94d0d4b12c2",
+      "bytes": 24583546
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000009.json": {
+      "sha256": "77c3ad3a7f5f3268c176bf22e845e2069002c81dff5302986507f549bee2d79d",
+      "bytes": 359
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M1-0.json": {
+      "sha256": "dc9e360f37ce9f90961a85d7fc64fa70ea908e5f12837dcd70f8013f79eebc24",
+      "bytes": 982
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-009-a0/complete-attempt.zip": {
+      "sha256": "f303665bd186fbd9f733b33fa03c19be4db4a63d02bc7d68683060135b9b9d57",
+      "bytes": 10480955
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-009-a0/usage-receipt.json": {
+      "sha256": "b1f8a5cc29d718003010d3e2c671868beab3b7544af85deae3d0c6c7c9ccdfcb",
+      "bytes": 9853
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-009-a0.settle.json": {
+      "sha256": "2731e348ca71a414e3b6fd687fc6ac257fa2f6ae625324b8a3cfa0b387e546ef",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/plan.json": {
+      "sha256": "2124f82cfedf6298e07c242cc670836e69c2f321daad28cdf71f9a6705497649",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/terminal.json": {
+      "sha256": "e83687b2dd74503f8d18fd58bf4311ac1167b75b46bc0f57cf06537b40081ad3",
+      "bytes": 31976
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/flight/run.json": {
+      "sha256": "76ff50c5702bd3e14b59b190a3423ce4c05e6e361afd479fdb219800c34f1428",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/flight/world.json": {
+      "sha256": "5e69e472fab0a8a7b55d39e2a6010ed21ec9d0b68f1c362fa88be2e07ba426df",
+      "bytes": 24274674
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000010.json": {
+      "sha256": "5a63c57d47de6ec458da0eb82c28a6d93e9276fc7e57c0eb1adce7879e85ae9a",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M2-1.json": {
+      "sha256": "8af05760c9238c1affc27c367a53f73a3d891f9dc3a708a364322dcd3c0d85fc",
+      "bytes": 983
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-010-a0/complete-attempt.zip": {
+      "sha256": "1638e7fec8d41dd0618561c588b5f136bda33e420e9cb5441abfbfed00185de9",
+      "bytes": 10352622
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-010-a0/usage-receipt.json": {
+      "sha256": "43e3c113a1cb4305d44bd5bd52b0573235b529f80b6119224b1ae4e51277e40e",
+      "bytes": 13055
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-010-a0.settle.json": {
+      "sha256": "eb1ebd310581ede9822e022679e58b2aa6339faf4c0842c9f52eb9dfb0911aa0",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/plan.json": {
+      "sha256": "199705944a1e06a7bc834a27367716d29e85e36ba58ab669dfe7fc2e3149f96d",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/terminal.json": {
+      "sha256": "5381314c1c68f0f3df6c81cd44a23ecd5654f2b2df8a398fa4daeb7508722a70",
+      "bytes": 26750
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/flight/run.json": {
+      "sha256": "3fbfbfda47c820b92ebdcd3270a3140a78384b41f11120b37a36a15339687c17",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/flight/world.json": {
+      "sha256": "26b5ffc3b0f4d35c65c5e39b501b240fa9de7478da15cbc0d55f04992123afc7",
+      "bytes": 24473512
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000011.json": {
+      "sha256": "8f88291a6af590389263030f081a724ba6f82ad53aedb75499f69174f0cda63a",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B4-M1-0.json": {
+      "sha256": "046b7b77aca588bf83196be87dd47e66b9bf409e3f3135d0d8d41ca3126a882b",
+      "bytes": 983
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-011-a0/complete-attempt.zip": {
+      "sha256": "e064048fff85cfda7181f505a7213e8e1861a13f85b6cbc07af0ed40d3cd3634",
+      "bytes": 10507127
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-011-a0/usage-receipt.json": {
+      "sha256": "c115b314005756aad3d9941c45e4db63cd96ebd26907d6ca23400e06ec62f920",
+      "bytes": 10653
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-011-a0.settle.json": {
+      "sha256": "27aa0ce18110ff0fe971655f2086361f11d74ff042079696690320db98d9921a",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B1-0/plan.json": {
+      "sha256": "115bc0ef428fbdf988e9e974c85a0ac0184f47792de10e275726a36c7a75fe08",
+      "bytes": 15988
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B1-0/attempt-00/terminal.json": {
+      "sha256": "151f45e536d715efe71e2525cb4958df975c84175fd64e29124970f91202ebdf",
+      "bytes": 1300
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B1-0/attempt-00/flight/run.json": {
+      "sha256": "550a8befbbde2606a744c47933dfb15348805612626c11db371b52b82554aecd",
+      "bytes": 277778
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B1-0/attempt-00/flight/world.json": {
+      "sha256": "f2900b620a7c12101d2aa3dd62217bebdb8778fc7227ec600a5e9f08e25b281c",
+      "bytes": 26065764
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B1-0/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000012.json": {
+      "sha256": "b64d29738c05160989e524eafd24019161092799668d38e8f2d5f9bb33cc770d",
+      "bytes": 358
+    },
+    "logs/inspection-eight-condition-pilot.v4/classic/raw/dev-L1-01-B1-0.json": {
+      "sha256": "29855b0c9ac7d924ee30e0a5d22911bedb6a13de3972d69224244dad7132b5ac",
+      "bytes": 964
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-0/plan.json": {
+      "sha256": "09aa75f7453072d392e11d67e8457421b216fe8bad807bd2ceaf3294dcfbf3c9",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-0/attempt-00/terminal.json": {
+      "sha256": "e856d6e3bfed41dd48b6fc529ca3ba42a2cd17cbab99cb7fbbe6779c8b2cb3f7",
+      "bytes": 27451
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-0/attempt-00/flight/run.json": {
+      "sha256": "da7628d7a2808325cefe0aadfa59da52233213120591eaa6cfd20fe233ee355e",
+      "bytes": 297358
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-0/attempt-00/flight/world.json": {
+      "sha256": "21c25499bcc78a9616becbc7dac93c1b00c013bcce6de97d7c1cb66cd16e7ae5",
+      "bytes": 24260568
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-0/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000013.json": {
+      "sha256": "1cfe95bae7f505eb80f1347f380ba755e10a7fd195ecfd9dd5efe2040ccdf3f4",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B4-M2-0.json": {
+      "sha256": "f5ca8d8633168fa75ac7c507f473a4d218d5190de5f5eae7bfa174ee2c16eac8",
+      "bytes": 983
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-013-a0/complete-attempt.zip": {
+      "sha256": "991806df1c218ad4f2ffa8593b70f93259e3902f0b7bc8c7c96d2ecbc8179b38",
+      "bytes": 10364776
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-013-a0/usage-receipt.json": {
+      "sha256": "24a53e32ab24f354733dfd80538fc8b9f21b9c1684302e7b1238dd3552b97273",
+      "bytes": 11055
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-013-a0.settle.json": {
+      "sha256": "32970eed29a7fe79d49f6b4b0fc47a956e3aa7f1ab7f62311e9627b18c7e2f47",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-2/plan.json": {
+      "sha256": "fb65e8f1f84d6ae28109ae81d972d60e137beee30daae8c6b90d84c8ff5c8578",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-2/attempt-00/terminal.json": {
+      "sha256": "f9fa38e079ac6c412b204c4e1f7f6fd65585f2e487f853ef79f5cc6360b99065",
+      "bytes": 22322
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-2/attempt-00/flight/run.json": {
+      "sha256": "307360d81708a1b663840740b49085b944a1f79f81ac5370e43ae1067cca52fa",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-2/attempt-00/flight/world.json": {
+      "sha256": "ee680ed594fcab9c4dedf03c99e25cccecfbf45d53ee1a62694efdd760687f1c",
+      "bytes": 20568651
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-2/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000014.json": {
+      "sha256": "383abad4abc69d042df3ec75afe0f1ccbf58cd76ffcaa3600e58446874a56731",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M3-2.json": {
+      "sha256": "266cc1c529b7839fad13d91fe77c252062d17a5831e0797df4cc9ee7ebec97f3",
+      "bytes": 983
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-014-a0/complete-attempt.zip": {
+      "sha256": "d1c3ba2d9d98ef3663cece51ba93c30e065c4a82ec70268cb096ddd1e87959b5",
+      "bytes": 10248388
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-014-a0/usage-receipt.json": {
+      "sha256": "c7211f7f5b7d0b0662f2da31916f2c16c3e61e7a9875cf02ee5f321c764373c0",
+      "bytes": 8653
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-014-a0.settle.json": {
+      "sha256": "ebc6db9ae8ad6a85de5de670f7bebc9516776f749f6ed1742ea80d409a08282b",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-2/plan.json": {
+      "sha256": "11b1c48ec701b73e568b180cadef4dd6d20113972dcc7972f2d04f18d8082665",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-2/attempt-00/terminal.json": {
+      "sha256": "0ee9b806531afa0a813d7e3e237598884f8aea7a592fa6fd1d17dc97b108eae8",
+      "bytes": 29558
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-2/attempt-00/flight/run.json": {
+      "sha256": "06277fa1420fd061dad36aa747171d34ec422c56f197db1733a3d2866373a99e",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-2/attempt-00/flight/world.json": {
+      "sha256": "db007e55ca27442ae2d00668ac167f93afb6c89f7e9f55eceeb47f910bce397a",
+      "bytes": 24264984
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-2/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000015.json": {
+      "sha256": "8864280d51f66ad169b2e3db127b67137c8af54728bbf1fd9ed2c92c9a32a4e5",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B4-M2-2.json": {
+      "sha256": "d266239dd925e305279f1cfb67ede07c02872eb1ab2182cadd2a2220a8c57211",
+      "bytes": 983
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-015-a0/complete-attempt.zip": {
+      "sha256": "72041b25add08779eb97a3a333b233277596fa189f0efcbc585161d4a8e7f544",
+      "bytes": 10393710
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-015-a0/usage-receipt.json": {
+      "sha256": "28498786ed8cc6ee3832ce316d47680cd6fe9e49492f26b28909c381fa8bdd6c",
+      "bytes": 11855
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-015-a0.settle.json": {
+      "sha256": "7d48c146cf7bf99b065e00333abb215a5d2a158cef271ee6edcbe8990e9b9dc1",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-1/plan.json": {
+      "sha256": "8b0b83e735bbdc0b74af972843e9812e82c2e5db0e341957fd238deefd59b4f9",
+      "bytes": 17822
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-1/attempt-00/terminal.json": {
+      "sha256": "402cfea57d400f6bd95f5ee6293369c3985dfb64dd70a43c7e891f22de5b443c",
+      "bytes": 28472
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-1/attempt-00/flight/run.json": {
+      "sha256": "8fee21bbae4e0da45110749a2390e838f524c90aeb43c9aef3c9c52c338e1f99",
+      "bytes": 297358
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-1/attempt-00/flight/world.json": {
+      "sha256": "c164c1f6735c9f365e0ddc2b462b7e1a7c4b43f35fbeba445539439dc1971764",
+      "bytes": 24264063
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-1/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000016.json": {
+      "sha256": "8b9bc5ccad0cf1cc32aca51b6b24223e5ebffa5c50939525e6f4fc97be1fa267",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B3-M1-1.json": {
+      "sha256": "5f9416c8933ad9f923f1fb2fc15d1e5a73a52375c9939b6765a672d169b0489e",
+      "bytes": 983
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-016-a0/complete-attempt.zip": {
+      "sha256": "6e889d68b7705599581b634dda9784a48944d8d67c911acf39c5491794128d5e",
+      "bytes": 10433552
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-016-a0/usage-receipt.json": {
+      "sha256": "17604b1f57c8f0de1ee222f1b738999b48c5dee1e8a23784027aca66141da557",
+      "bytes": 11453
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-016-a0.settle.json": {
+      "sha256": "63252e253f22ee1d39060030d7698268c13d3ad41f9a90fee5c8c9d45bb5c457",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-2/plan.json": {
+      "sha256": "58d00b3a004eaf240f8309b1555e6ec27db7af8d70dac9ab9a5fdafda195d8ff",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-2/attempt-00/terminal.json": {
+      "sha256": "629cd6e0e81f059cb98546a968c02cda805d61c05e9b878f1510d810d160a6b7",
+      "bytes": 26709
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-2/attempt-00/flight/run.json": {
+      "sha256": "60200523991455ac34bb99037379d8716d8254577e8224af309d7d267fbe03d5",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-2/attempt-00/flight/world.json": {
+      "sha256": "b9df1188e2cf58de040f130b02ae54c960cc404ced95b58d3b869179d336c123",
+      "bytes": 26167915
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-2/attempt-00/flight/private-case.json": {
+      "sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "bytes": 4600
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000017.json": {
+      "sha256": "09d27b9382f67c145848b4035b23e852bb743e088ef13c82439fc37b19184028",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B4-M1-2.json": {
+      "sha256": "de5f7aca91bf153f6800e359f09fd0c939ad7ca5010bf55e00338ed4b38f828d",
+      "bytes": 983
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-017-a0/complete-attempt.zip": {
+      "sha256": "42c1aa84784d480a83359d2681ba76a68ddeae1e6476e8c0f8891e6077debcbf",
+      "bytes": 10567091
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-017-a0/usage-receipt.json": {
+      "sha256": "6cba0f58e6b52515b66952978cfd17a065ea61eeb289ade294c1741c57566587",
+      "bytes": 10653
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-017-a0.settle.json": {
+      "sha256": "fb62f935a4f13280ff754b202fb1edf1e48272cb83cbf889c80abc4f4f590410",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-pilot.v4/episode-order.json": {
+      "sha256": "4e9fe5e86c0621bc7cdc2876391498432c594beddc99f26a2fbc7cecd64636cb",
+      "bytes": 21228
+    },
+    "logs/inspection-eight-condition-pilot.v4/sampler-seeds.json": {
+      "sha256": "e8c27d85ea56dc0e950c0bfc0dfc4e4747d9eb84ed9d8bb30136614bc05a97c1",
+      "bytes": 2118
+    },
+    "logs/inspection-eight-condition-pilot.v4/source-hashes.json": {
+      "sha256": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560",
+      "bytes": 20719
+    },
+    "logs/inspection-eight-condition-pilot.v4/dependency-hashes.json": {
+      "sha256": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+      "bytes": 12093
+    },
+    "logs/inspection-eight-condition-pilot.v4/input-hashes.json": {
+      "sha256": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+      "bytes": 2000
+    }
+  },
+  "immutable_captures": {
+    "qualification/pilot-v4-first-root.v1/supervisor.at-eighteen.stdout": "fe55332005a27027c102fdf915690f5b6846172088ed915ae464da4f54b227b0",
+    "qualification/pilot-v4-first-root.v1/checkpoint-pauses.at-eighteen.jsonl": "309d805a3c69f4b88c07d3f334870d0be89d9a5c57f09ac3e7efee5f0ea45d83",
+    "qualification/pilot-v4-first-root.v1/native-status.at-eighteen.json": "6f3478f5cfc45c49a1ac7aa657efd8a42dee92606b0f547e1d89e3663a76b2e1"
+  },
+  "limits": [
+    "Ordinary clock summary/witness, not full72000-phase vectors.",
+    "Cost, capital, energy and host/Codex usage remain unmetered.",
+    "No new root, model request, seed, flight, SDK result or formal lock created."
+  ]
+}

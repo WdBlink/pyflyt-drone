@@ -1,0 +1,13 @@
+{
+  "role": "post-diagnostic development framing implementation, not new flight or G4",
+  "source_hashes": {
+    "eval/inspection_llm_protocol.py": "11a4e86348dad6fa94849f20a1086c21c24a09307d3e9f9c4fd8d642c14bcd91",
+    "eval/inspection_llm_actor.py": "49047b98d1f6f9c4d09c28f65e66f431e86a8275195a1f017fd22ffe4cf2204d",
+    "tests/test_inspection_llm_protocol.py": "9c695cab9c9ac2905c833eb5648925a54288b4e78925ad81ae4ed728ed6922be",
+    "tests/test_inspection_llm_actor.py": "f4f1b3dbb8d9a149085a4c06b49ee3dae4d99f082124e817121ecbe4dcf96ee0"
+  },
+  "tests": 87,
+  "old_flight_score_unchanged": true,
+  "candidate_sha256": "d27f8e7aa0116afc042c9f02fda9e1d26b5e6c253b92788df581e5666841b59f",
+  "independent_candidate_review_sha256": "f8765cbbd0beb21c46626e39a2dfe46bf0959b8bdcdd27ecb811f8ba0ed3ee9d"
+}

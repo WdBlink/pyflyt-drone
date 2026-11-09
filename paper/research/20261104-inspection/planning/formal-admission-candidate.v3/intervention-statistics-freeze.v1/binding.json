@@ -1,0 +1,20 @@
+{
+  "role": "Uninstalled pure descriptive paired-root implementation subject, not actual study results",
+  "at": "2026-11-06T18:23:42.699091+00:00",
+  "members": {
+    "source/eval/inspection_intervention_statistics.py": {
+      "sha256": "b26803c5ed4ee82927703660b8b63c949963f8aa6f60503a820487905bc5b3ce",
+      "bytes": 7490
+    },
+    "tests/test_intervention_statistics.py": {
+      "sha256": "278f5feba0b660b5ccf4a83b7e2f49292f30231077ab3c3b5b6c9ca9ec076395",
+      "bytes": 4593
+    }
+  },
+  "protocol": {
+    "path": "planning/secondary-analysis-consumer.v3.md",
+    "sha256": "d4b3738a659a51736d2e38bacdea2f08a6e222f992744b8480d18a274c5ee69a"
+  },
+  "scope": "Twelve fixed L3 parents ID/OOD6, complete repeats and comparator grid, original/common shared vectors, fixed99999 NumPy1.26.4 PCG64/SeedSequence/domain-seeds/salts101/102/103, little-endian index SHA, signed fixed contrasts and equal-domain descriptive macro. No new p or family; no actual population draws or flight/model/native.",
+  "verification": "Root actual complete candidate tests running; outputs are literal software fixture computations only, not study data."
+}

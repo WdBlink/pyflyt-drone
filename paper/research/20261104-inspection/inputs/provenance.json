@@ -1,0 +1,37 @@
+{
+  "source": "/Users/wdblink/Code/my_repo/pyflyt-drone/BENCHMARK_RESEARCH_PLAN.md",
+  "sha256": "dd01e21442950abccc543bb2ba4d53d1901fb2669dba21cbfe9aad7f13e591b0",
+  "bytes": 156235,
+  "chars": 95780,
+  "source_project_head": "270c6f0946b3be59527b2b77982f75a70da7ef77",
+  "workspace_head": "2efbd1a0b6ab072a952ca5a9307809ab4a5ed5ab",
+  "extracts": [
+    {
+      "start": 847,
+      "end": 886,
+      "quote": "本次交付的是完整研究与论文方案，尚不是已运行 benchmark 或实验结果。"
+    },
+    {
+      "start": 2075,
+      "end": 2158,
+      "quote": "本研究据此提出三个问题：共享执行条件下，Agent 能否完成空间分工与可信信息交付；事件发生后，编排方式能否减少任务损失；真实推理和通信延迟如何改变质量、安全与成本。"
+    },
+    {
+      "start": 23229,
+      "end": 23287,
+      "quote": "当前完成的是这些要素的研究方案与取证边界；控制器、同步任务世界、job、传感器与新 grader 都仍待实现和验证。"
+    },
+    {
+      "start": 13595,
+      "end": 13620,
+      "quote": "主连续 endpoint 为 `Y=H×E×Q`。"
+    },
+    {
+      "start": 22473,
+      "end": 22539,
+      "quote": "每条结果主张建立 `claim → figure/table → raw run → version/root/method` 映射"
+    }
+  ],
+  "full_appendix_read_this_round": false,
+  "historical_results_eligible_for_new_benchmark": false
+}

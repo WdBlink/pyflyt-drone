@@ -1,0 +1,269 @@
+{
+  "angle": "Deadline-bound information delivery with finite reports, continuous flight and auditable causal evidence; negative LLM results are valid.",
+  "audience": "Robotics and embodied-agent benchmark researchers",
+  "budget": {},
+  "contract_status": "concrete",
+  "deliverable_plan": [
+    {
+      "id": "F1",
+      "kind": "figure",
+      "title": "权限与持续执行架构",
+      "purpose": "哪些信息、控制和裁判由各层掌握？",
+      "claim": "设计命题：Actor只使用合法因果信息，共享低层隔离任务编排。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "版本化工具/权限协议与合格控制证据"
+      ]
+    },
+    {
+      "id": "F2",
+      "kind": "figure",
+      "title": "参考episode时间线",
+      "purpose": "真实任务变化怎样经过观测、job和报告形成后果？",
+      "claim": "待参考episode验证：时戳与job状态构成完整因果链。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "TODO: 合格非LLM参考episode原始trace，示意与实测分标"
+      ]
+    },
+    {
+      "id": "F3",
+      "kind": "figure",
+      "title": "主质量与安全分量",
+      "purpose": "ID/OOD各等级下方法怎样权衡交付与安全？",
+      "claim": "待检验：完整分母下的Y/Q与C/S/D/H/E存在可估计差异。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "TODO: 八配置完整root配对原始结果、区间及分量"
+      ]
+    },
+    {
+      "id": "F4",
+      "kind": "figure",
+      "title": "事件与交接",
+      "purpose": "事件改派何时真实生效，交付损失如何变化？",
+      "claim": "待检验H1/H2：同模型编排、确认与记忆影响事件损失。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "TODO: 事件兄弟trace、统一需求日历、删失标记"
+      ]
+    },
+    {
+      "id": "F5",
+      "kind": "figure",
+      "title": "时延—质量—成本",
+      "purpose": "实际与注入时延分别如何改变及时交付？",
+      "claim": "待检验H3：持续飞行下推理/链路等待影响有效动态格。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "TODO: 实际延迟/费用receipt与受控注入对照"
+      ]
+    },
+    {
+      "id": "F6",
+      "kind": "figure",
+      "title": "代表失败因果链",
+      "purpose": "哪些合法包、job行为导致任务损失？",
+      "claim": "待trace验证：失败原因可与观测、执行和裁判后果对应。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "TODO: 两类预声明选择规则下的实际失败trace"
+      ]
+    },
+    {
+      "id": "T1",
+      "kind": "table",
+      "title": "机制近邻矩阵",
+      "purpose": "与既有UAV任务和持续执行评测差别在哪？",
+      "claim": "有据机制差别与未知格决定贡献边界。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "主文/代码机制定位，包含SMART与GRaD-Nav++边界"
+      ]
+    },
+    {
+      "id": "T2",
+      "kind": "table",
+      "title": "生成器与资格",
+      "purpose": "哪些参数和控制/感知/时间条件已被冻结？",
+      "claim": "待资格证据：仅合格包线与dev冻结参数进入test。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "TODO: G1–G4资格记录、split manifest与阈值版本"
+      ]
+    },
+    {
+      "id": "T3",
+      "kind": "table",
+      "title": "主基线与完整结果",
+      "purpose": "强经典、统一ReAct和同模型编排的完整成绩是什么？",
+      "claim": "待检验：不预设LLM优胜，C/S/D/Q/H/E/Y/SR及成本同时可见。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "TODO: 完整root×repeat×condition分母、ID/OOD和等级分层"
+      ]
+    },
+    {
+      "id": "T4",
+      "kind": "table",
+      "title": "消融与失败类型",
+      "purpose": "移除单一机制会怎样，失败是否改变结论？",
+      "claim": "待检验：事件、去重记忆、递进确认分别解释机制差异。",
+      "acceptance_criteria": [
+        "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+      ],
+      "evidence_requirements": [
+        "TODO: 预选L3 roots三项消融与失败归因"
+      ]
+    },
+    {
+      "id": "S0",
+      "kind": "section",
+      "title": "Abstract",
+      "purpose": "真实研究问题、方法、已观察结果和适用范围；不预写性能。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "acceptance_criteria": [
+        "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+      ],
+      "evidence_requirements": [
+        "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+      ]
+    },
+    {
+      "id": "S1",
+      "kind": "section",
+      "title": "Introduction",
+      "purpose": "民用交付、持续执行、最近工作机制差别与三个RQ。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "acceptance_criteria": [
+        "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+      ],
+      "evidence_requirements": [
+        "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+      ]
+    },
+    {
+      "id": "S2",
+      "kind": "section",
+      "title": "Related Work",
+      "purpose": "用逐机制主来源限定贡献；承认SMART执行评测、GRaD-Nav++飞行任务更新/推理开销先例。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "acceptance_criteria": [
+        "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+      ],
+      "evidence_requirements": [
+        "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+      ]
+    },
+    {
+      "id": "S3",
+      "kind": "section",
+      "title": "Benchmark",
+      "purpose": "任务、公开信息/隐藏truth、异步job、时钟、固定窗口报告、评分与G1–G4资格。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "acceptance_criteria": [
+        "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+      ],
+      "evidence_requirements": [
+        "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+      ]
+    },
+    {
+      "id": "S4",
+      "kind": "section",
+      "title": "Baselines and Protocol",
+      "purpose": "强经典基线、统一ReAct与同模型编排，独立root、ID/OOD、holdout、完整失败分母及统计。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "acceptance_criteria": [
+        "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+      ],
+      "evidence_requirements": [
+        "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+      ]
+    },
+    {
+      "id": "S5",
+      "kind": "section",
+      "title": "Results",
+      "purpose": "按三个RQ呈现正式结果；真实/注入时延分开；保留阴性结果与删失。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "acceptance_criteria": [
+        "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+      ],
+      "evidence_requirements": [
+        "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+      ]
+    },
+    {
+      "id": "S6",
+      "kind": "section",
+      "title": "Limitations",
+      "purpose": "合成代理/结构化传感器、空中退出、有限包线、无实机/真实电池、版本与小样本外推。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "acceptance_criteria": [
+        "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+      ],
+      "evidence_requirements": [
+        "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+      ]
+    },
+    {
+      "id": "S7",
+      "kind": "section",
+      "title": "Conclusion",
+      "purpose": "只总结实际证据与边界，不把可复现协议等同真实救灾有效性。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "acceptance_criteria": [
+        "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+      ],
+      "evidence_requirements": [
+        "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+      ]
+    },
+    {
+      "id": "M1",
+      "kind": "manuscript",
+      "title": "RA-L manuscript and reproducible source",
+      "purpose": "可审阅、可重建的完整实证论文。",
+      "claim": "仅对冻结任务与证据范围作结论。",
+      "acceptance_criteria": [
+        "官方ieeeconf US Letter 10pt双栏，正文+图表+参考文献+附录共≤8页；实际PDF视觉核验、来源和引用核验、独立审查、完整源/证据映射；不含原赛事文件。"
+      ],
+      "evidence_requirements": [
+        "全部F1–F6/T1–T4/S0–S7义务、模板/源码/PDF/版本manifest与真实独立审查。"
+      ]
+    }
+  ],
+  "direction": "Mission-level agents for continuous fixed-wing multi-UAV inspection",
+  "paper_type": "empirical",
+  "question": "Under shared qualified execution and causal sensing, how do mission agents trade inspection quality, safety, event recovery and latency during continuous multi-UAV fixed-wing flight?",
+  "resources": {
+    "access": "Local project materials and public primary literature",
+    "authorization": "User requested starting paper writing according to the existing plan; prepare local artifacts and verify evidence. Paid calls and expanded compute require concrete authorization.",
+    "cost_basis": "No paid external calls or simulation experiments initiated; native host cost is unreported by this controller.",
+    "hardware": "Current local Mac; simulation and TeX dependencies not yet probed"
+  },
+  "reviewers": [
+    "Codex independent reviewer (separate context; assignment pending)"
+  ],
+  "scope": "Begin the empirical benchmark paper specified by BENCHMARK_RESEARCH_PLAN.md. Current authorization covers read-only evidence intake, official venue comparison, literature preparation and local writing preparation. Qualification and formal results are missing. No paid API use, long simulation campaign, publication or submission is inferred.",
+  "venue": "IEEE Robotics and Automation Letters"
+}

@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-05T23:59:08.283563+00:00",
+  "identity": {
+    "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+    "authors": [
+      "Ferrag, Mohamed Amine",
+      "Debbah, Merouane",
+      "Lakas, Abderrahmane",
+      "Perumkunnil, Manu",
+      "Tihanyi, Norbert"
+    ],
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2609.23695v1"
+  },
+  "url": "https://arxiv.org/abs/2609.23695v1",
+  "metadata_path": "literature/primary/physai-v1-metadata.html",
+  "metadata_sha256": "cc9167fe4fe60ec4a51b2fb2dcd6880eff56fca0d022ddc327562f1efce8169e",
+  "read_path": "literature/text/physai-v1.txt",
+  "read_sha256": "e4e4f16d0a14060e59ac874b3fac852d522b85ee19b608d0d8edcc68d9e86bdf",
+  "read_extent": "abstract/introduction and declared construction/evaluation protocol; no adoption of reported model score rankings",
+  "acceptance": "not claimed; this record is the pinned arXiv version",
+  "claim": "Evaluates trace-derived multiple-choice action selection rather than new closed-loop policy rollouts; it is a relevant boundary comparator.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/physai-v1.txt",
+      "quote": "converts autonomous UAV mission traces into multiple-choice action-selection tasks"
+    }
+  ],
+  "unknowns": "No blanket claim that other systems pause all physics. No cross-benchmark score comparison."
+}

@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-06T16:10:04.814973+00:00",
+  "identity": {
+    "title": "Probability Inequalities for Sums of Bounded Random Variables",
+    "authors": [
+      "Hoeffding, Wassily"
+    ],
+    "year": 1963,
+    "venue": "Journal of the American Statistical Association",
+    "identifier": "doi:10.1080/01621459.1963.10500830"
+  },
+  "url": "https://doi.org/10.1080/01621459.1963.10500830",
+  "metadata_path": "literature/primary/hoeffding-1963-crossref.json",
+  "metadata_sha256": "6a0e700d79e8e120de6d470dc505721c6bacef41035bc4d97b4566e285e230d9",
+  "read_path": "literature/text/hoeffding-1963-directed-transcription.v1.txt",
+  "read_sha256": "997328ff915cdd0eaf6dac0793d63b439d399fec494f92d7743193cd6b6d9e27",
+  "primary_source": {
+    "path": "literature/primary/hoeffding-1963-original-scan.pdf",
+    "sha256": "3021bcc097ef23a99a84d0eef8dcce2fd835c71df79a105727d3e03f8f0b8930"
+  },
+  "read_extent": "Original printed pp14-16 visually inspected. Theorem2/Eq2.6 used; independent-two-sample corollary not used. This ASCII directed transcript is not OCR/fulltext.",
+  "claim": "Hoeffding gives a concentration inequality for sums of independent random variables with possibly different bounded ranges. We apply it to weighted paired-root differences, with the root-independence and fixed-design assumptions stated explicitly.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/hoeffding-1963-directed-transcription.v1.txt",
+      "quote": "Theorem 2."
+    }
+  ],
+  "limits": "Directed source reading only, no formal measurements or unconditional cross-root dependence guarantee. Independent review pending.",
+  "first_publication_date": "1963-03",
+  "online_date_not_publication_year": "2012-04-10",
+  "metadata_components": "Crossref explicit family=Hoeffding,given=Wassily.",
+  "source_authority": "Crossref original DOI metadata plus university-hosted original journal scan."
+}

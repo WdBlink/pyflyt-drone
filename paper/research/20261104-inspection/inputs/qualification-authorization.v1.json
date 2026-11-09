@@ -1,0 +1,10 @@
+{
+  "source": "actual user message in this chat, preserved during continuation",
+  "quote": "继续按计划推进，先跑通“搜索—观测—确认/报告—安全退出”的非 LLM 参考任务并完成 G1–G4 验证，再进入正式实验和论文写作。",
+  "scope": "Continue authorized local implementation, non-LLM physical reference tasks and G1–G4 verification before formal experiments and manuscript writing.",
+  "interpretation": "This later instruction expands the original read-only preparation scope to local qualification and repair; it does not change the nineteen paper obligations or imply paid model API, purchased compute, external messages, publication or submission authorization.",
+  "venue_answer": "RA-L：聚焦连续飞行与时延评测（推荐）",
+  "budget_answer": "保留默认预算，无隐含总量上限（推荐）",
+  "budget": {},
+  "status": "actual instruction and answers, not a newly fabricated approval"
+}

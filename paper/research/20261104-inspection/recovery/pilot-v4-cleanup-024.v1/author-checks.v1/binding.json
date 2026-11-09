@@ -1,0 +1,93 @@
+{
+  "role": "Author software/prepare-only checks, not native acceptance or new flight",
+  "actual_tests": {
+    "v1": "15 passed,1 failed; fixture used nested output contrary to unchanged direct-log constraint",
+    "v2": "16 passed in10.58s,exit0; only fixture location corrected"
+  },
+  "prepared_context": {
+    "source-hashes.json": {
+      "sha256": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560",
+      "identical": true
+    },
+    "source-files.json": {
+      "sha256": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91",
+      "identical": true
+    },
+    "dependency-hashes.json": {
+      "sha256": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+      "identical": true
+    },
+    "input-hashes.json": {
+      "sha256": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+      "identical": true
+    },
+    "sampler-seeds.json": {
+      "sha256": "e8c27d85ea56dc0e950c0bfc0dfc4e4747d9eb84ed9d8bb30136614bc05a97c1",
+      "identical": true
+    },
+    "episode-order.json": {
+      "sha256": "4e9fe5e86c0621bc7cdc2876391498432c594beddc99f26a2fbc7cecd64636cb",
+      "identical": true
+    }
+  },
+  "no_new_resource_or_physics_in_preparation": {
+    "role": "prospective development intent only; no SDK callbacks or dispatch",
+    "episode_denominator": 108,
+    "conditions": {
+      "B0": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3-M1": 3,
+      "B3-M2": 3,
+      "B3-M3": 3,
+      "B4-M1": 3,
+      "B4-M2": 3
+    },
+    "original_classic_selection_sha256": "75f57580f0f5371d91a741fd4f9573e52192d019e9730335123a7ae67897a32e",
+    "classic_best": "B1",
+    "actual_model_generation_calls": 0,
+    "actual_physical_flights": 0
+  },
+  "files": [
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/author-checks.v1/proposal.v1.stdout",
+      "sha256": "35739d51256aec5286034b070f8ab27c0d415e3d4a54153acd6fae08dc4fe444",
+      "bytes": 209
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/author-checks.v1/proposal.v2.stdout",
+      "sha256": "65a5c824c987e3ce870ef35840d079804655647a2174dee47b06f66c2bb4fec7",
+      "bytes": 209
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/author-checks.v1/test-source.before-fixture-fix.py",
+      "sha256": "c92c7f3dc3d677200223b7d4bbf23437b48a9087205e5f0a891635b4d5148ba3",
+      "bytes": 8319
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/author-checks.v1/tests.v1.failure.log",
+      "sha256": "a4cd8e8f5bd0db1c9e951bfb99c04dffd9b8001b7315b3d14ce72ce3e3c1d1aa",
+      "bytes": 3513
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/author-checks.v1/tests.v2.log",
+      "sha256": "b851993d417027b9f3fc0ddbeb40ff76fb3a543031c2ca043e0c698f6f0173e3",
+      "bytes": 100
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/source/continue_pilot.py",
+      "sha256": "72cb11b3cde95756fcf661a103e6042a3fcdd5b941c963a88a9438c24f5ce023",
+      "bytes": 17742
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/source/test_continue_pilot.py",
+      "sha256": "1073a1baaec2631f04cfd91a51949ac094fa8d2ad6cc5848bf4745609d9e8da3",
+      "bytes": 8328
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/proposal.v2.json",
+      "sha256": "f81f4500466d5793636626afbb335564ecf5460fcc82305a9168f89af11ef52b",
+      "bytes": 22466
+    }
+  ]
+}

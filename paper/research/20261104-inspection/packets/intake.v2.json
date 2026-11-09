@@ -1,0 +1,144 @@
+{
+  "stage": "intake",
+  "producer": "codex-primary",
+  "artifacts": [
+    "inputs/plan-excerpts.md",
+    "inputs/BENCHMARK_RESEARCH_PLAN.original.md",
+    "inputs/provenance.json",
+    "intake/feasibility.v1.md",
+    "intake/feasibility.v2.md",
+    "qualification/g4-round16-evidence.v1.json",
+    "review/development-resource-sequencing-review.v1.md",
+    "qualification/g4-progress.v1.md",
+    "inputs/qualification-authorization.v1.json"
+  ],
+  "materials": [
+    {
+      "id": "plan-extract",
+      "path": "inputs/plan-excerpts.md",
+      "sha256": "d428747fcc1e26af7eae37d036ee10453333fb95c46e7c1e718ad1f3275ebc01",
+      "availability": "readable",
+      "read_spans": [
+        [
+          0,
+          472
+        ]
+      ]
+    },
+    {
+      "id": "full-plan",
+      "path": "inputs/BENCHMARK_RESEARCH_PLAN.original.md",
+      "sha256": "dd01e21442950abccc543bb2ba4d53d1901fb2669dba21cbfe9aad7f13e591b0",
+      "availability": "metadata_only",
+      "read_spans": [],
+      "limitation": "Main scientific plan sections 1–11 were read outside the controller; appended historical code/source excerpts were not fully re-audited this turn. Only the explicitly read extract supplies controller span evidence."
+    },
+    {
+      "id": "feasibility-update",
+      "path": "intake/feasibility.v2.md",
+      "sha256": "57d8ccb71928c240cfe8747cb961460616169fc30ea6ebefc843e79996e4dc0d",
+      "availability": "readable",
+      "read_spans": [
+        [
+          0,
+          2760
+        ]
+      ]
+    },
+    {
+      "id": "qualification-progress",
+      "path": "qualification/g4-progress.v1.md",
+      "sha256": "2341ee9ba3ed9efa7c3d2bae81848b6a333eaa84d971cd75efe9950def420a18",
+      "availability": "readable",
+      "read_spans": [
+        [
+          0,
+          3710
+        ]
+      ]
+    },
+    {
+      "id": "current-scope",
+      "path": "inputs/qualification-authorization.v1.json",
+      "sha256": "dfa0dec75486794b0c45cee0d8526e02f68f125d763048a158708ff7a8754df2",
+      "availability": "readable",
+      "read_spans": [
+        [
+          0,
+          787
+        ]
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "material_id": "plan-extract",
+      "start": 101,
+      "end": 124,
+      "quote": "尚不是已运行 benchmark 或实验结果。"
+    },
+    {
+      "material_id": "feasibility-update",
+      "start": 34,
+      "end": 74,
+      "quote": "在已授权的既有本机资源内，可以继续实施这项实证benchmark研究及开发校准。"
+    }
+  ],
+  "feasibility": {
+    "status": "feasible",
+    "selected_option": "empirical-benchmark",
+    "options": [
+      {
+        "id": "empirical-benchmark",
+        "implementation": "Pursue the full empirical benchmark on the existing Mac through prospective dev calibration, with G4 blocking all actual main/holdout creation and formal runs.",
+        "selection_reason": "Actual scoped G1–G3 and dev-flight/source/receipt evidence plus pinned local-model structural feasibility make the research/development route executable; final G4 and empirical outcomes remain future hard-gated work.",
+        "evidence": [
+          {
+            "material_id": "plan-extract",
+            "start": 101,
+            "end": 124,
+            "quote": "尚不是已运行 benchmark 或实验结果。"
+          },
+          {
+            "material_id": "feasibility-update",
+            "start": 34,
+            "end": 74,
+            "quote": "在已授权的既有本机资源内，可以继续实施这项实证benchmark研究及开发校准。"
+          }
+        ]
+      },
+      {
+        "id": "protocol-only",
+        "implementation": "Write a protocol or perspective without benchmark performance claims.",
+        "selection_reason": "Would require an explicit change in paper type and target, since the supplied goal is an empirical benchmark paper.",
+        "basis": "assumption",
+        "evidence": []
+      }
+    ],
+    "resources": {
+      "authorization": "Latest exact user request in inputs/qualification-authorization.v1.json authorizes local non-LLM reference and G1–G4 work before formal experiments/writing. RA-L and same uncapped budget answer persist. Existing Mac only; no paid API, purchased compute, messages/publication/submission. Model generation still requires accepted complete initial plan and prior controller reservation.",
+      "cost_basis": "Three actual full dev flights and pinned model load/tokenize only, generation_calls=0. Existing64GiB Mac separately loads each candidate at13.3–16.9GB; inference contention, token/latency and full pilot remain. Main+holdout candidate1512episodes/252serial flight hours before extras. Capital/energy/native host billing unmetered; no claim of free compute."
+    },
+    "experiments": [
+      {
+        "claim": "Same-model event-aware orchestration may improve deadline-bound inspection delivery, without assuming LLM superiority.",
+        "metric": "Root-mean Y=H×E×Q; C/S/D, safety, terminal state and costs remain visible.",
+        "comparison": "B4 vs B3 for a fixed model, and a dev-selected strong classical policy.",
+        "protocol": "Qualification then dev pilot; freeze independent-root ID/OOD splits, model manifest, report semantics and paired contrasts before test.",
+        "completion": "Complete retained root×repeat×method denominator with prospective raw traces and a compatible validated recording/statistics adapter.",
+        "failure_route": "Preserve policy failures; diagnose infrastructure failures separately. Missing qualification or operational errors block performance claims; do not reuse the old 64 short RTA trials."
+      }
+    ],
+    "prior_conditional_prerequisites": [
+      "Actual user venue choice and 8–15 matched accepted-paper calibration",
+      "Concrete plan-budget answer",
+      "G1–G4 qualified control, causal tools/sensing, grader and timing",
+      "Prospective root-paired evidence and figures before manuscript result writing"
+    ],
+    "formal_evaluation_gates": [
+      "G4 still needs_work; no main/holdout generation/exposure or formal results before explicit freeze",
+      "Complete original19 obligations/eight conditions; retained policy failures/full denominator; independent source-bound review",
+      "No result prose before actual formal evidence/figures/review; no unreserved model generation"
+    ]
+  }
+}

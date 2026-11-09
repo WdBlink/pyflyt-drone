@@ -1,0 +1,49 @@
+{
+  "role": "Native program identity/token repair over independently bounded event fixes; uninstalled",
+  "at": "2026-11-06T19:19:36.660841+00:00",
+  "baseline": {
+    "path": "secondary-analysis-freeze.v4/binding.json",
+    "sha256": "80bef7386ac2aa1ee64307f4c6eae237d4ddcd5712df947b597602d34e54e1c2"
+  },
+  "members": {
+    "source/eval/analyze_inspection_formal_secondary.py": {
+      "sha256": "3756da21c9d338d415dcff4034121e81c736a6dc3966d83e4d5661d6ddde54d6",
+      "bytes": 23386
+    },
+    "source/eval/inspection_event_endpoints.py": {
+      "sha256": "d12ca95432645aa05da534303d17dde69e4fd0620b06ead4d31176860f819f59",
+      "bytes": 31968
+    },
+    "source/eval/inspection_formal_admission.py": {
+      "sha256": "508026b4d3ac69f5bd7de8cfc7e53f3343dca88e64a4cfc79c00335104f37c20",
+      "bytes": 18806
+    },
+    "source/eval/inspection_intervention_statistics.py": {
+      "sha256": "b26803c5ed4ee82927703660b8b63c949963f8aa6f60503a820487905bc5b3ce",
+      "bytes": 7490
+    },
+    "tests/test_formal_secondary_analysis.py": {
+      "sha256": "bc31fec84d014b733b89c16e12171dbbf93339f62120b4fed54bd0192c75f68c",
+      "bytes": 14658
+    },
+    "tests/test_event_endpoints.py": {
+      "sha256": "d321f1d65e0d7f7b44dd9bc669ca8e788febd9fd0f8fc41c2308ccdc820e02e8",
+      "bytes": 10878
+    },
+    "tests/test_formal_event_endpoints.py": {
+      "sha256": "6a6d6362514de67d8625dce2539b266e444d9c12568b19b67ec3a6d83efa4d35",
+      "bytes": 17691
+    },
+    "tests/test_intervention_statistics.py": {
+      "sha256": "278f5feba0b660b5ccf4a83b7e2f49292f30231077ab3c3b5b6c9ca9ec076395",
+      "bytes": 4593
+    }
+  },
+  "protocol": {
+    "path": "planning/secondary-analysis-consumer.v4.md",
+    "sha256": "f4be91e78f692698fda07373e7e6d0a693d2dd17f2b0f80c3d57d1f91830aa72"
+  },
+  "scope": "Same locked main comparator216/36 slots, exact complete SDK/physical closed bytes, descriptive scalar/common-calendar plus dual-path adoption and original-window information/recovery records. ZIP metadata/detail layout and explicit NA/censor/trace-gap. Required-source additions; pure numeric body unchanged.",
+  "pending": "All new connector/event tests and independent implementation review; response/resource diagnostics not yet wired. No G4/formal admission or actual namespace/seed/order/data effects.",
+  "verification": "v4 whole499passed124.28s yet independent8 variants showed residualF3 bool identities inrequest/response/commit serial/drone/revision/selftoken. v5 requires nativeinteger fields and typedfour version/job tokens, retaining exact data without numeric casting. Eight retained regression cases added. Consumer/REQ/purestats unchanged; targeted final tests/compile and independent limited repair review pending."
+}

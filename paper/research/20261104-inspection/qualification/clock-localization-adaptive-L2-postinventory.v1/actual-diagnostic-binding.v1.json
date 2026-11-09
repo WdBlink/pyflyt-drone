@@ -1,0 +1,35 @@
+{
+  "role": "actual completed unscored post-inventory-repair L2 engineering run, full clock within limit; no SDK slot or overall G4 admission",
+  "captured_at": "2026-11-06T08:43:55.008172+00:00",
+  "clock": {
+    "max_lag": 0.055215666621620585,
+    "p95_lag": 0.005578458247100571,
+    "ticks_over_0p1": 0
+  },
+  "physics_seconds": 600,
+  "physics_steps": 144000,
+  "clock_rows": 72000,
+  "rusage_rows": 72000,
+  "model_usage": {
+    "calls": 23,
+    "tokens": 163524
+  },
+  "supervision_status": "closed",
+  "supervisor_inventory": {
+    "hot_native": 5775,
+    "hot_legacy": 0,
+    "fallback_reasons": {}
+  },
+  "source_scope": "111 frozen files/107 live sources verified before dispatch; all107 live sources reverified after terminal exit; six diagnostic source guards and original run/dependency/case guards retained",
+  "original_pilot_v2_remains_failed": true,
+  "files": {
+    "qualification/clock-localization-adaptive-L2-postinventory.v1/complete-diagnostic-and-model-operation.zip": "f50c9eff10bdc1be30f09d89a884a921a15c73c850229bc1efb329d56b9f304b",
+    "qualification/clock-localization-adaptive-L2-postinventory.v1/archive-members.v1.json": "e964542ac7dc97c450cdfa93a0d3f4545ab1b99359532fee52cccc2bedd5dbbb",
+    "qualification/clock-localization-adaptive-L2-postinventory.v1/usage-receipt.v1.json": "18ecfbaaef8251cc12ef5a7ea6d4e29926f8b3a1b650b2fef613d985ccc5b41c",
+    "qualification/clock-localization-adaptive-L2-postinventory.v1/native-reservation.v1.json": "563c2f5087090d61b9e8276329265f28f00ac74844e95fbb394332dd0a1e186a",
+    "qualification/clock-localization-adaptive-L2-postinventory.v1/native-settlement.v1.json": "24844a3df9ccf8ffabe416da5e1410105f24912a1139ed3df3eee005390d826d",
+    "qualification/clock-localization-adaptive-L2-postinventory.v1/freeze.v1/binding.json": "3d7f26115c117565bd475bafe14927567d04ef4191b056ba552cd12e1ac0f931",
+    "qualification/clock-localization-adaptive-L2-postinventory.v1/phase-recount.v1.json": "8cb6b7b3c5a7f5a8dbdf777dce1068f63dd53f75b4a98048bce02bc6e58dcf60",
+    "qualification/clock-localization-adaptive-L2-postinventory.v1/analysis-source/analyze_inspection_clock_profile.py": "0905f35673d2c6a1e398040ac30cbb4818993e0a01b722de8ea72735db798810"
+  }
+}

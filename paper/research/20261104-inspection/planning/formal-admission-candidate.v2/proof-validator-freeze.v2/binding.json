@@ -1,0 +1,9 @@
+{
+  "role": "uninstalled component candidate; synthetic tests are not G4 or formal permission",
+  "files": {
+    "planning/formal-admission-candidate.v2/proof-validator-freeze.v2/contract.json": "60a87d6e8dad88e46a8406d5167f1c27cdbfa6ca2e0a620d5e1cf8b27d0934b6",
+    "planning/formal-admission-candidate.v2/proof-validator-freeze.v2/inspection_formal_admission.py": "91bd91d1ac5346508cecdc66584b67a72dbe421959cda276b8e6c533550fb512",
+    "planning/formal-admission-candidate.v2/proof-validator-freeze.v2/test_g4_proof_boundary.py": "d76673ed496febea615bc828ec460291b8482a3870800b4bf64f0c55fcb19c2f",
+    "planning/formal-admission-candidate.v2/proof-validator-freeze.v2/tests.log": "084ed09db0c90ccb63dd5e3d7698a143dc9019e36f7cb1b56f11e9db2714fabf"
+  }
+}

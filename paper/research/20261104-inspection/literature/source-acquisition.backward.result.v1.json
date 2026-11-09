@@ -1,0 +1,93 @@
+{
+  "sources": [
+    {
+      "path": "literature/primary/typefly-v2-metadata.html",
+      "url": "https://arxiv.org/abs/2312.14950v2",
+      "resolved_url": "https://arxiv.org/abs/2312.14950v2",
+      "kind": "html",
+      "sha256": "d11694a6cdb92b46309a14114c032c300c5efdb10dd658da9bf4b2c97b96e471",
+      "fetched_at": "2026-11-06T15:05:32.925964+00:00",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 41986,
+      "reused": false
+    },
+    {
+      "path": "literature/primary/typefly-v2.html",
+      "url": "https://arxiv.org/html/2312.14950v2",
+      "resolved_url": "https://arxiv.org/html/2312.14950v2",
+      "kind": "html",
+      "sha256": "9df13a4cd58d424793c4c99ecab8f99f3ac7e4d4a4ab137b631e89673c28801d",
+      "fetched_at": "2026-11-06T15:05:33.857251+00:00",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 303902,
+      "reused": false
+    },
+    {
+      "path": "literature/primary/cognitivedrone-v1-metadata.html",
+      "url": "https://arxiv.org/abs/2503.01378v1",
+      "resolved_url": "https://arxiv.org/abs/2503.01378v1",
+      "kind": "html",
+      "sha256": "3ffbe598150fcfbfdf14c6bc4a160573cba5e676b6699b1f86339dd6d670660c",
+      "fetched_at": "2026-11-06T15:05:34.621485+00:00",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 42610,
+      "reused": false
+    },
+    {
+      "path": "literature/primary/cognitivedrone-v1.html",
+      "url": "https://arxiv.org/html/2503.01378v1",
+      "resolved_url": "https://arxiv.org/html/2503.01378v1",
+      "kind": "html",
+      "sha256": "ea64a139f0fc9f5b6371870784f146e678acbb85792a63860f80ad40e433fa54",
+      "fetched_at": "2026-11-06T15:05:35.328687+00:00",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 76653,
+      "reused": false
+    },
+    {
+      "path": "literature/primary/racevla-v1-metadata.html",
+      "url": "https://arxiv.org/abs/2503.02572v1",
+      "resolved_url": "https://arxiv.org/abs/2503.02572v1",
+      "kind": "html",
+      "sha256": "a5f37f5f511abdfccfc7d1801e1c4b0aa5821b292b44f835fe0c506df9d1b0ae",
+      "fetched_at": "2026-11-06T15:05:36.206887+00:00",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 43720,
+      "reused": false
+    },
+    {
+      "path": "literature/primary/racevla-v1.html",
+      "url": "https://arxiv.org/html/2503.02572v1",
+      "resolved_url": "https://arxiv.org/html/2503.02572v1",
+      "kind": "html",
+      "sha256": "e50e3b88b3a2a65e50be301011b6dbbc615ef2fd7a7b4857a3ca37f17ba25054",
+      "fetched_at": "2026-11-06T15:05:36.667126+00:00",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 77892,
+      "reused": false
+    },
+    {
+      "path": "literature/primary/smart-v3.html",
+      "url": "https://arxiv.org/html/2503.04798v3",
+      "resolved_url": "https://arxiv.org/html/2503.04798v3",
+      "kind": "html",
+      "sha256": "b65f9501e6921653eeaeaf97ba2df9e5c4876bb2316c8abc0357044a4fec77e5",
+      "fetched_at": "2026-11-06T15:05:37.548753+00:00",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 186033,
+      "reused": false
+    },
+    {
+      "path": "literature/primary/gradnav-v2.html",
+      "url": "https://arxiv.org/html/2506.14009v2",
+      "resolved_url": "https://arxiv.org/html/2506.14009v2",
+      "kind": "html",
+      "sha256": "79a13fdbc79bf78e4821353b9c1770acb41b747086c6d097c709db46110563f9",
+      "fetched_at": "2026-11-06T15:05:38.386486+00:00",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 217271,
+      "reused": false
+    }
+  ],
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review"
+}

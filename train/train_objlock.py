@@ -40,8 +40,8 @@ TRAIN_CONFIG = {
     "vf_coef": 0.5,
     "max_grad_norm": 0.5,
     "seed": 42,
-    "log_dir": "logs/obj_lock_only_ppo_v2.3_hist",
-    "model_dir": "models/obj_lock_only_ppo_v2.3_hist",
+    "log_dir": "logs/vtail_obj_lock_only_ppo_v1_hist",
+    "model_dir": "models/vtail_obj_lock_only_ppo_v1_hist",
     
     # 环境参数
     "flight_dome_size": 200.0,
@@ -70,6 +70,8 @@ TRAIN_CONFIG = {
     # 视觉历史观测参数
     "duck_vision_history_len": 3,
     "duck_vision_use_deltas": True,
+    "drone_model": "fixedwing_vtail",
+    "drone_model_dir": os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "my_models")),
 
     "wind": {
         "enabled": True,
@@ -83,6 +85,30 @@ TRAIN_CONFIG = {
         "randomize_on_reset": True,
         "randomize_gust_phase": True,
     },
+}
+
+TRAIN_PHASES = {
+    "phase1": {
+        "num_obstacles": 3,
+        "obstacle_safe_distance_m": 20.0,
+        "obstacle_avoid_reward_scale": 2.0,
+        "duck_strike_reward": 0.0,
+        "duck_visible_step_reward": 0.5,  # 25% of normal
+        "duck_area_reward_scale": 1.0,   # 20% of normal
+        "spawn_exclude_center": True,
+        "total_timesteps": 4_000_000,
+    },
+    "phase2": {
+        "num_obstacles": 5,
+        "obstacle_safe_distance_m": 15.0,
+        "obstacle_avoid_reward_scale": 1.5,
+        "duck_strike_reward": 400.0,
+        "duck_visible_step_reward": 2.0,
+        "duck_area_reward_scale": 5.0,
+        "spawn_exclude_center": True,
+        "total_timesteps": 8_000_000,
+    },
+    # Phase 3 can be added later with increasing difficulty
 }
 
 def parse_args():
@@ -143,6 +169,8 @@ def make_env(rank: int, seed: int = 0, use_egl: bool = False):
             duck_global_scaling=TRAIN_CONFIG["duck_global_scaling"],
             duck_vision_history_len=TRAIN_CONFIG["duck_vision_history_len"],
             duck_vision_use_deltas=TRAIN_CONFIG["duck_vision_use_deltas"],
+            drone_model=TRAIN_CONFIG["drone_model"],
+            drone_model_dir=TRAIN_CONFIG["drone_model_dir"],
         )
 
         # 扁平化观测空间
@@ -152,19 +180,154 @@ def make_env(rank: int, seed: int = 0, use_egl: bool = False):
         return env
     return _init
 
-class ObjLockEvalCallback(EvalCallback):
+class ObjLockAvoidanceEvalCallback(EvalCallback):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._reset_eval_metric_buffers()
+
+    def _reset_eval_metric_buffers(self) -> None:
+        self._collision_buffer = []
+        self._out_of_bounds_buffer = []
+        self._duck_strike_buffer = []
+        self._timeout_buffer = []
+
     def _log_success_callback(self, locals_: dict, globals_: dict) -> None:
         info = locals_.get("info")
-        if not locals_.get("done"):
-            return
-        if not isinstance(info, dict):
+        if isinstance(info, (list, tuple)) and len(info) > 0:
+            info = info[0]
+
+        if not locals_.get("done") or not isinstance(info, dict):
             return
 
-        strike = info.get("duck_strike")
-        if strike is None:
-            strike = info.get("is_success")
-        if strike is not None:
-            self._is_success_buffer.append(bool(strike))
+        duck_strike = bool(info.get("duck_strike", info.get("is_success", False)))
+        collision = bool(info.get("collision", False))
+        out_of_bounds = bool(info.get("out_of_bounds", False))
+        timeout = bool(
+            info.get("TimeLimit.truncated", False)
+            or info.get("truncated", False)
+            or (
+                not duck_strike
+                and not collision
+                and not out_of_bounds
+                and not bool(info.get("env_complete", False))
+            )
+        )
+
+        self._collision_buffer.append(1 if collision else 0)
+        self._out_of_bounds_buffer.append(1 if out_of_bounds else 0)
+        self._duck_strike_buffer.append(1 if duck_strike else 0)
+        self._timeout_buffer.append(1 if timeout else 0)
+        self._is_success_buffer.append(duck_strike)
+
+    def _record_eval_metrics(self) -> None:
+        n = max(len(self._collision_buffer), 1)
+
+        collision_rate = sum(self._collision_buffer) / n
+        out_of_bounds = sum(self._out_of_bounds_buffer) / n
+        duck_strike_rate = sum(self._duck_strike_buffer) / n
+        success_with_avoidance = sum(
+            c == 0 and d == 1
+            for c, d in zip(self._collision_buffer, self._duck_strike_buffer)
+        ) / n
+        timeout_rate = sum(self._timeout_buffer) / n
+
+        self.logger.record("eval/collision_rate", collision_rate)
+        self.logger.record("eval/out_of_bounds_rate", out_of_bounds)
+        self.logger.record("eval/duck_strike_rate", duck_strike_rate)
+        self.logger.record("eval/success_with_avoidance", success_with_avoidance)
+        self.logger.record("eval/timeout_rate", timeout_rate)
+
+        # Hack detection
+        if timeout_rate > 0.9 and collision_rate < 0.01:
+            print("[WARNING] Possible orbit/freeze hack detected")
+            self.logger.record("eval/hack_detected", 1.0)
+
+    def _on_step(self) -> bool:
+        continue_training = True
+
+        if self.eval_freq > 0 and self.n_calls % self.eval_freq == 0:
+            if self.model.get_vec_normalize_env() is not None:
+                from stable_baselines3.common.vec_env import sync_envs_normalization
+
+                try:
+                    sync_envs_normalization(self.training_env, self.eval_env)
+                except AttributeError as e:
+                    raise AssertionError(
+                        "Training and eval env are not wrapped the same way, "
+                        "see https://stable-baselines3.readthedocs.io/en/master/guide/callbacks.html#evalcallback "
+                        "and warning above."
+                    ) from e
+
+            from stable_baselines3.common.evaluation import evaluate_policy
+
+            self._is_success_buffer = []
+            self._reset_eval_metric_buffers()
+
+            episode_rewards, episode_lengths = evaluate_policy(
+                self.model,
+                self.eval_env,
+                n_eval_episodes=self.n_eval_episodes,
+                render=self.render,
+                deterministic=self.deterministic,
+                return_episode_rewards=True,
+                warn=self.warn,
+                callback=self._log_success_callback,
+            )
+
+            if self.log_path is not None:
+                assert isinstance(episode_rewards, list)
+                assert isinstance(episode_lengths, list)
+                self.evaluations_timesteps.append(self.num_timesteps)
+                self.evaluations_results.append(episode_rewards)
+                self.evaluations_length.append(episode_lengths)
+
+                kwargs = {}
+                if len(self._is_success_buffer) > 0:
+                    self.evaluations_successes.append(self._is_success_buffer)
+                    kwargs = dict(successes=self.evaluations_successes)
+
+                np.savez(
+                    self.log_path,
+                    timesteps=self.evaluations_timesteps,
+                    results=self.evaluations_results,
+                    ep_lengths=self.evaluations_length,
+                    **kwargs,
+                )
+
+            mean_reward, std_reward = np.mean(episode_rewards), np.std(episode_rewards)
+            mean_ep_length, std_ep_length = np.mean(episode_lengths), np.std(episode_lengths)
+            self.last_mean_reward = float(mean_reward)
+
+            if self.verbose >= 1:
+                print(f"Eval num_timesteps={self.num_timesteps}, " f"episode_reward={mean_reward:.2f} +/- {std_reward:.2f}")
+                print(f"Episode length: {mean_ep_length:.2f} +/- {std_ep_length:.2f}")
+
+            self.logger.record("eval/mean_reward", float(mean_reward))
+            self.logger.record("eval/mean_ep_length", mean_ep_length)
+            self._record_eval_metrics()
+
+            if len(self._is_success_buffer) > 0:
+                success_rate = np.mean(self._is_success_buffer)
+                if self.verbose >= 1:
+                    print(f"Success rate: {100 * success_rate:.2f}%")
+                self.logger.record("eval/success_rate", success_rate)
+
+            self.logger.record("time/total_timesteps", self.num_timesteps, exclude="tensorboard")
+            self.logger.dump(self.num_timesteps)
+
+            if mean_reward > self.best_mean_reward:
+                if self.verbose >= 1:
+                    print("New best mean reward!")
+                if self.best_model_save_path is not None:
+                    self.model.save(os.path.join(self.best_model_save_path, "best_model"))
+                self.best_mean_reward = float(mean_reward)
+                if self.callback_on_new_best is not None:
+                    continue_training = self.callback_on_new_best.on_step()
+
+            if self.callback is not None:
+                continue_training = continue_training and self._on_event()
+
+        return continue_training
 
 def main():
     args = parse_args()
@@ -213,7 +376,7 @@ def main():
     eval_env = VecNormalize(eval_env, norm_obs=True, norm_reward=False, clip_obs=10.0)
     
     # Callbacks
-    eval_callback = ObjLockEvalCallback(
+    eval_callback = ObjLockAvoidanceEvalCallback(
         eval_env,
         best_model_save_path=TRAIN_CONFIG["model_dir"],
         log_path=TRAIN_CONFIG["log_dir"],

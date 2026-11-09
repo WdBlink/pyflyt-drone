@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-11-06T16:10:04.814973+00:00",
+  "identity": {
+    "title": "A Simple Sequentially Rejective Multiple Test Procedure",
+    "authors": [
+      "Holm, Sture"
+    ],
+    "year": 1979,
+    "venue": "Scandinavian Journal of Statistics",
+    "identifier": "JSTOR:4615733"
+  },
+  "url": "https://www.jstor.org/stable/4615733",
+  "metadata_path": "literature/searches/holm-primary-identity-reading.20261107.v1.txt",
+  "metadata_sha256": "d7b697f0102ed4b364df1d7fc931ea153130deb0b643f07c3e084a238aa58806",
+  "read_path": "literature/searches/holm-original-mirror-reading.20261106.v1.txt",
+  "read_sha256": "1f73d52e8605aee037f0806f20b8ae8e2d4c2d814ed0f5ea4caf4c7ddd55a66a",
+  "primary_source": {
+    "path": "literature/searches/holm-original-mirror-reading.20261106.v1.txt",
+    "sha256": "1f73d52e8605aee037f0806f20b8ae8e2d4c2d814ed0f5ea4caf4c7ddd55a66a"
+  },
+  "read_extent": "Original journal text via mirror, printed pp66-67/Section2, Scheme1/Theorem1/Boole proof. OCR damaged formula typography; local original PDF unavailable. Official publisher/JSTOR issue records verify publication identity.",
+  "claim": "Holm presents a sequentially rejective Bonferroni multiple-test procedure with familywise type-I error protection over arbitrary true-null subsets. Its Boole-inequality argument requires valid marginal tests; it does not require independence among the six contrast p-values and cannot repair invalid single-test p-values.",
+  "evidence_spans": [
+    {
+      "path": "literature/searches/holm-original-mirror-reading.20261106.v1.txt",
+      "quote": "The sequentiallyrejectiveBonferronitest"
+    }
+  ],
+  "limits": "Directed source reading only, no formal measurements or unconditional cross-root dependence guarantee. Independent review pending.",
+  "first_publication_date": "1979",
+  "metadata_components": "Official publisher citation Holm,S. establishes family; original article/JSTOR issue give full Sture Holm.",
+  "source_authority": "Official JSTOR issue/Wiley retrospective bibliography for identity; original journal article text read through mirrored OCR. No DOI asserted because attempted Crossref lookup404."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "independent-clock-diagnostic-source-review-v1",
+  "reviewer": "/root/control_review",
+  "freeze_binding_sha256": "8b6449535a54f3b00cbf4a8e11a7ce6d6e3a2f5fe0c18004158a7b4e080b3b4e",
+  "frozen_inputs": {
+    "qualification/clock-localization-fixed-load.v1/freeze.v1/intent.json": "dbffd0e46735a6dd1ae6d065b280a6dc2cce177047832c0728a835620277b6f6",
+    "qualification/clock-localization-fixed-load.v1/freeze.v1/source/eval/inspection_clock_profile.py": "aa4ff3be49bd744e19ffa7e58b03c220b34a137c1fbfc13c4374f298c0b7dd7e",
+    "qualification/clock-localization-fixed-load.v1/freeze.v1/source/eval/inspection_diagnostic_worker.py": "304fd96297f19a958f189bac03f7628894645e9b8107de5fb309039884884cb1",
+    "qualification/clock-localization-fixed-load.v1/freeze.v1/source/eval/probe_inspection_clock_load.py": "f17ca0a0a59a2b4a022f6c1c3f210ad146256eb892c8339ea0a65922085b3366",
+    "qualification/clock-localization-fixed-load.v1/freeze.v1/source/tests/test_inspection_clock_profile.py": "8b5f25a88e182d460c371208d6cac38dfd8d552a53fd95665fc504d5e0d2c687",
+    "qualification/clock-localization-fixed-load.v1/freeze.v1/tape.json": "1ce4b730a025317d03eb139b3a7e092e6b4b89786128c8d351a77af84499f6c4",
+    "qualification/clock-localization-fixed-load.v1/freeze.v1/tests.log": "bb694b324b4319c91905d69899df9d978b64574c7f7a4facbb9d0c4f432e021b"
+  },
+  "adjacent_read_sources": {
+    "eval/run_inspection_reference.py": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+    "eval/inspection_model_client.py": "40ccd5f5f4100e4ed42a6ac22ecf35f3bc24a9db4e2b57f1826625b78afcb158",
+    "eval/inspection_model_service.py": "64e8307ece55b1d6928e91607a269dfb082926265f1d98a2bde90a5931eb2e8f",
+    "eval/inspection_model_receipts.py": "922372548ceb972e9f95d1c52923cfe7d9dd6ce12dba2feec3b2d44a99167683",
+    "eval/inspection_process_cleanup.py": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+    "envs/inspection/reference.py": "85f97b6cb632c7f178c20ad9f53097510cab1dca0cd56aec15a5fe222b9365c3",
+    "paper/research/20261104-inspection/planning/local-model-registry.v1.json": "6d8547cb0597113d5411a771e1c75f807e43d769ecdfe4d92d32d41633e0fda6"
+  },
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/test_inspection_clock_profile.py",
+    "working_test_and_three_sources_matched_freeze_before_test": true,
+    "result": "11 passed in 0.02s",
+    "model_or_physics_started": false
+  },
+  "independent_counterexample": {
+    "path": "/tmp/inspection-clock-diagnostic-source-review-v1/test_retained_submit.py",
+    "sha256": "43bc99d0aa7341068717bc618f64192c62c5c4566de2d4a20e65c34346b8e7b6",
+    "log_sha256": "4bcefcc9f6c645923b9993ccf73ad92e6b400ca25458ea14e095857fc2131342",
+    "result": "1 passed: successful submit + poll failure leaves records empty and submitted count 0"
+  },
+  "tape_checks": {
+    "requests": 20,
+    "source_files_verified": 22,
+    "actor_messages_seed_target_exact_match": true,
+    "case_sha256": "5600888c8cc583edadbb1e1d43f8f0dcd928b9b4e44c2dc93296a1788c62b422"
+  },
+  "decision": "blocked_one_P2_request_record_loss",
+  "open_findings": [
+    "P2 retain a dispatched request before waiting for its response; distinguish attempted/pipe dispatch from service admission and unknown response"
+  ],
+  "scope": "source and unit tests only; no actual budget reservation certified, model forward, physics, live owner mutation or G4 permission"
+}

@@ -1,0 +1,15 @@
+{
+  "split": "dev",
+  "main_and_holdout_instantiated": false,
+  "role": "one explicit clean intervention sibling, not development root replacement",
+  "records": [
+    {
+      "case_id": "devext-OOD-L3-00",
+      "lineage_group": "devext-OOD-L3-00",
+      "file": "devext-OOD-L3-00-clean.json",
+      "file_sha256": "4147fa80caa0e343bd0dcdb149aaad48156e8f19a456eaf2a1e8d0952840c4dc",
+      "case_sha256": "1fe8a277ddb2b466da4146a2910cc826d30ce85fd128ec6e83328fd37305bf79",
+      "first_pilot": false
+    }
+  ]
+}

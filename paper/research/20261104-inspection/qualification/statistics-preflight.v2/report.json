@@ -1,0 +1,26 @@
+{
+  "role": "synthetic_numeric_preflight_not_method_or_test_evidence",
+  "passed": true,
+  "roots": 72,
+  "main_shape_validated": true,
+  "hand_macro_effects": [
+    0.11,
+    -0.035,
+    0.08
+  ],
+  "input_and_batch_order_invariant": true,
+  "degenerate_null_conservative": true,
+  "source_sha256": {
+    "eval/preflight_inspection_statistics.py": "be41dff720aeb237d1f26c7401befe946f680ea0cc5a3c700236f49a6980b52d",
+    "eval/inspection_statistics.py": "4a6610e45a23ceed2e4e27ed2b96162837ae3c45bc223555ac70b430a1ed8c44",
+    "eval/inspection_recording.py": "9613a8e800d470110dbf86890837ba853c3f50834ae29f0722994927d27cb352"
+  },
+  "primary_test": "bounded independent-root Hoeffding p with globalHolm6",
+  "bootstrap_role": "nominal descriptive interval and diagnostic p; not confirmatory",
+  "limitations": [
+    "no real episode/split/lineage/model/cost verification",
+    "revised statistics await independent implementation review",
+    "finite-sample skew/rare-failure stress tests and SR/censoring/event adapter still pending",
+    "bounded guarantee requires independent roots and fixed complete weights; low power at the planned n"
+  ]
+}

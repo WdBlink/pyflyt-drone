@@ -1,0 +1,48 @@
+{
+  "role": "Small source/closed-raw identities for a source-only SDK capacity readthrough; not a load or formal-data test",
+  "files": [
+    {
+      "path": "paper/research/20261104-inspection/planning/sdk-recording-capacity-readthrough.v1.md",
+      "sha256": "fcf82edab3a4f753220a629457080ff6a00bc0b493df83c07c85a4865fe08f6d",
+      "bytes": 1947
+    },
+    {
+      "path": "paper/research/20261104-inspection/runtime/autoresearch-state-reader-v1/lib/experiments.py",
+      "sha256": "4dffd762966ef27d78fd521341aefb2145895b26ad9d382d16f04f1bab6eec02",
+      "bytes": 8277
+    },
+    {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_recording.py",
+      "sha256": "115ecd64a3e451e7b3ad1990215f780f6fc4939bd1c5a24eb0a642f12ea59ce9",
+      "bytes": 11383
+    },
+    {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/run_inspection_formal.py",
+      "sha256": "0ea0b2882ab095aede6a1aa41c3880dd81da9538aa16036e36cd680f83518f48",
+      "bytes": 12709
+    },
+    {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_measurement_loader.py",
+      "sha256": "4e5677a60166e92031aca2bc48d4944954ecaeb9c20cbc7c79edd7b014c0bf52",
+      "bytes": 10233
+    },
+    {
+      "path": "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/analyze_inspection_formal.py",
+      "sha256": "aca945d84a661b07164922eca525e207074d9bdfc2a938e516c7447c9678d52f",
+      "bytes": 27413
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L1-01-B4-M1-2.json",
+      "sha256": "de5f7aca91bf153f6800e359f09fd0c939ad7ca5010bf55e00338ed4b38f828d",
+      "bytes": 983
+    }
+  ],
+  "native_round47_document_map": {
+    "path": ".paper/round-documents/ab0cea7029783bdfa6572fdffcf4f1b5e5c954e8f66841d890e8b311ee9b0d83.json",
+    "sha256": "ab0cea7029783bdfa6572fdffcf4f1b5e5c954e8f66841d890e8b311ee9b0d83",
+    "observed_stat_bytes": 5068311,
+    "declared_count": 27926,
+    "not_rehashed_in_flight": true
+  },
+  "new_effects": []
+}

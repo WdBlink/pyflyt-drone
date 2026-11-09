@@ -1,0 +1,1149 @@
+{
+  "role": "one full development root, original repeats; no formal or population inference",
+  "case_id": "dev-L1-00",
+  "completed_callbacks": 72,
+  "complete_root_blocks": 4,
+  "denominator": 108,
+  "pause": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 72,
+    "case_id": "dev-L3-00",
+    "condition": "B3-M3",
+    "at": "2026-11-07T10:15:21.063736+00:00"
+  },
+  "rows": [
+    {
+      "order_index": 54,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B0",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9970187393526406,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9970187393526406,
+        "SR": 1
+      },
+      "max_lag_seconds": 0.009983417003240902,
+      "p95_lag_seconds": 0.0035039583342211245,
+      "report_audit_entries": 4,
+      "accepted_unique_ids": 4,
+      "usage": null,
+      "passive_close_observations": []
+    },
+    {
+      "order_index": 55,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M2",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.008912541998142842,
+      "p95_lag_seconds": 0.003337249667197284,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 28,
+        "tokens": 178909
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-57948-64392208416791.json",
+          "sha256": "bc6bb1b38ce84dcc376ea0ebba853060ddcecc748664d5430b09831639c9717b",
+          "write_wall_ns": 3021875,
+          "post_close_metadata_wall_ns": 3456834
+        }
+      ]
+    },
+    {
+      "order_index": 56,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M2",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009083874996576924,
+      "p95_lag_seconds": 0.0033897499990445112,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 30,
+        "tokens": 163202
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-67276-65014641154541.json",
+          "sha256": "52b9e40067215ab9f10b14ec5a2fbfd9271f6ee8bb118e3a86b6413b55e64937",
+          "write_wall_ns": 516416,
+          "post_close_metadata_wall_ns": 955333
+        }
+      ]
+    },
+    {
+      "order_index": 57,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B1",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9970187393526406,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9970187393526406,
+        "SR": 1
+      },
+      "max_lag_seconds": 0.009954500004823785,
+      "p95_lag_seconds": 0.0034504163330666415,
+      "report_audit_entries": 4,
+      "accepted_unique_ids": 4,
+      "usage": null,
+      "passive_close_observations": []
+    },
+    {
+      "order_index": 58,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M1",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.16666666666666666,
+        "D": null,
+        "Q": 0.5803520726859739,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5803520726859739,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.008360000007087365,
+      "p95_lag_seconds": 0.0022778753414627317,
+      "report_audit_entries": 2,
+      "accepted_unique_ids": 2,
+      "usage": {
+        "calls": 18,
+        "tokens": 128330
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-83030-66399096077916.json",
+          "sha256": "a3114464d7316d1ef887b214878a0a2f3e2354f3370a86b1c2d87abb94cdcfe3",
+          "write_wall_ns": 853375,
+          "post_close_metadata_wall_ns": 1274667
+        }
+      ]
+    },
+    {
+      "order_index": 59,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M1",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.00771474999783095,
+      "p95_lag_seconds": 0.0022018336613314204,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 16,
+        "tokens": 110743
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-89139-67032428995458.json",
+          "sha256": "d2dfd54301990bb43ef25dfbee445cebd65e78cf6a6c1bd921bdcca45507a32e",
+          "write_wall_ns": 564541,
+          "post_close_metadata_wall_ns": 1021375
+        }
+      ]
+    },
+    {
+      "order_index": 60,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M1",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.16666666666666666,
+        "D": null,
+        "Q": 0.5803520726859739,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5803520726859739,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.02239183266743794,
+      "p95_lag_seconds": 0.0022870826661005594,
+      "report_audit_entries": 1,
+      "accepted_unique_ids": 1,
+      "usage": {
+        "calls": 20,
+        "tokens": 143406
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-96790-67775989601333.json",
+          "sha256": "8668d3bb780d540eb908110b96467652ac692adc9a4e7205f00b35601ead37cd",
+          "write_wall_ns": 788333,
+          "post_close_metadata_wall_ns": 1210000
+        }
+      ]
+    },
+    {
+      "order_index": 61,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M1",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.08333333333333333,
+        "D": null,
+        "Q": 0.5386854060193073,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5386854060193073,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.008139665995258838,
+      "p95_lag_seconds": 0.002362707659926855,
+      "report_audit_entries": 1,
+      "accepted_unique_ids": 1,
+      "usage": {
+        "calls": 19,
+        "tokens": 135329
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-7097-68416041877375.json",
+          "sha256": "3ea2618342f57e6aa8efc4fdba90e4abe70d21f9507c954b0f18ba1cd13606cd",
+          "write_wall_ns": 813792,
+          "post_close_metadata_wall_ns": 1454792
+        }
+      ]
+    },
+    {
+      "order_index": 62,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M2",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.007858584009227343,
+      "p95_lag_seconds": 0.0028107500053238255,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 28,
+        "tokens": 179237
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-13464-69038306606750.json",
+          "sha256": "523370dac3b591a68d5a8422e8d64385e39efb539af5c61e0c549d412f6d7a2c",
+          "write_wall_ns": 509042,
+          "post_close_metadata_wall_ns": 942416
+        }
+      ]
+    },
+    {
+      "order_index": 63,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M3",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.08333333333333333,
+        "D": null,
+        "Q": 0.5386854060193073,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5386854060193073,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.008057875005761161,
+      "p95_lag_seconds": 0.0025844996659145636,
+      "report_audit_entries": 7,
+      "accepted_unique_ids": 4,
+      "usage": {
+        "calls": 15,
+        "tokens": 110709
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-20820-69789439324541.json",
+          "sha256": "0046ead459c7135083559fff12d2c02622fe655d2bf0ba2b3f02311777acb173",
+          "write_wall_ns": 1008542,
+          "post_close_metadata_wall_ns": 1669458
+        }
+      ]
+    },
+    {
+      "order_index": 64,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B4-M2",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.03538537498968708,
+      "p95_lag_seconds": 0.0028262919892085847,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 25,
+        "tokens": 163167
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-26911-70412740370083.json",
+          "sha256": "28b41955cec99e4ec93240e7a1f7b540db997f478ad21316f35c44ed3c975fde",
+          "write_wall_ns": 526041,
+          "post_close_metadata_wall_ns": 920417
+        }
+      ]
+    },
+    {
+      "order_index": 65,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M2",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.008581999994930811,
+      "p95_lag_seconds": 0.0031772916593411082,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 30,
+        "tokens": 164614
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-33243-71035896924125.json",
+          "sha256": "66d2d95317c37416536807a6138da1b9c1a246d568788b71789f170494a381bd",
+          "write_wall_ns": 809291,
+          "post_close_metadata_wall_ns": 1246250
+        }
+      ]
+    },
+    {
+      "order_index": 66,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M1",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.012079166668499397,
+      "p95_lag_seconds": 0.0023752076619416584,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 15,
+        "tokens": 105459
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-41902-71836715268000.json",
+          "sha256": "bee2e0447b5a9980ebe072d7b372e75f28f646de6bc9b879c4f05cadca890fa7",
+          "write_wall_ns": 1111958,
+          "post_close_metadata_wall_ns": 1797792
+        }
+      ]
+    },
+    {
+      "order_index": 67,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M3",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.25,
+        "D": null,
+        "Q": 0.6220187393526406,
+        "H": 1,
+        "E": 1,
+        "Y": 0.6220187393526406,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.02636645833749185,
+      "p95_lag_seconds": 0.004690916340535978,
+      "report_audit_entries": 42,
+      "accepted_unique_ids": 4,
+      "usage": {
+        "calls": 14,
+        "tokens": 101752
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-56348-72481346012250.json",
+          "sha256": "480e81c48bd44723aa230afcff42524eb5ba521730266d11ffdb1210987b0900",
+          "write_wall_ns": 1162125,
+          "post_close_metadata_wall_ns": 2141792
+        }
+      ]
+    },
+    {
+      "order_index": 68,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M3",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.16666666666666666,
+        "D": null,
+        "Q": 0.5803520726859739,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5803520726859739,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.014332874998217449,
+      "p95_lag_seconds": 0.0035942079964996765,
+      "report_audit_entries": 37,
+      "accepted_unique_ids": 9,
+      "usage": {
+        "calls": 16,
+        "tokens": 115906
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-73236-73109562870208.json",
+          "sha256": "d2cbd068347291a30f9c671087c42c231794c2f0a2933926f097fbf0a137e578",
+          "write_wall_ns": 698709,
+          "post_close_metadata_wall_ns": 1101708
+        }
+      ]
+    },
+    {
+      "order_index": 69,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B2",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9625212947189097,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9812606473594548,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9812606473594548,
+        "SR": 1
+      },
+      "max_lag_seconds": 0.009408917001564987,
+      "p95_lag_seconds": 0.003252041660985583,
+      "report_audit_entries": 4,
+      "accepted_unique_ids": 4,
+      "usage": null,
+      "passive_close_observations": []
+    },
+    {
+      "order_index": 70,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M1",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.0649544586757429,
+      "p95_lag_seconds": 0.004203042328782658,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 14,
+        "tokens": 94646
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-97829-74456018775000.json",
+          "sha256": "9c697f736b7983d6d471a3c836328be8398a413e04b642a9bee14d3a2ff12d6e",
+          "write_wall_ns": 1094417,
+          "post_close_metadata_wall_ns": 1546334
+        }
+      ]
+    },
+    {
+      "order_index": 71,
+      "root_block_index": 3,
+      "case_id": "dev-L1-00",
+      "domain": "ID",
+      "level": 1,
+      "condition": "B3-M2",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009523916989564896,
+      "p95_lag_seconds": 0.003374124993570149,
+      "report_audit_entries": 1,
+      "accepted_unique_ids": 1,
+      "usage": {
+        "calls": 30,
+        "tokens": 163719
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-5399-75076978257000.json",
+          "sha256": "db37c6f1a3fb5307f3b736d93067d0ed17277cf67322fd8fbc4cf24dbe47a84b",
+          "write_wall_ns": 544875,
+          "post_close_metadata_wall_ns": 1015375
+        }
+      ]
+    }
+  ],
+  "within_root_means": {
+    "B0": {
+      "repeat_count": 1,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9970187393526406,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9970187393526406,
+        "SR": 1
+      }
+    },
+    "B4-M2": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      }
+    },
+    "B3-M2": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      }
+    },
+    "B1": {
+      "repeat_count": 1,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9970187393526406,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9970187393526406,
+        "SR": 1
+      }
+    },
+    "B4-M1": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.1388888888888889,
+        "D": null,
+        "Q": 0.566463183797085,
+        "H": 1,
+        "E": 1,
+        "Y": 0.566463183797085,
+        "SR": 0
+      }
+    },
+    "B3-M1": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.0,
+        "D": null,
+        "Q": 0.49701873935264057,
+        "H": 1,
+        "E": 1,
+        "Y": 0.49701873935264057,
+        "SR": 0
+      }
+    },
+    "B3-M3": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9940374787052811,
+        "S": 0.16666666666666666,
+        "D": null,
+        "Q": 0.5803520726859739,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5803520726859739,
+        "SR": 0
+      }
+    },
+    "B2": {
+      "repeat_count": 1,
+      "score": {
+        "C": 0.9625212947189097,
+        "S": 1.0,
+        "D": null,
+        "Q": 0.9812606473594548,
+        "H": 1,
+        "E": 1,
+        "Y": 0.9812606473594548,
+        "SR": 1
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "paper/research/20261104-inspection/qualification/capture-pilot-v4-root-from-batches.py",
+      "sha256": "b43668bf8426ec17a2b30204d0cde92c31d84d106f52093bf6e139aa68d96bd1"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-054-056.v1/binding.json",
+      "sha256": "1ceee983410d709f70d1cfe640ce1d5ad9d361b44bc4ad851a50427a2b0cb28a"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-057-059.v1/binding.json",
+      "sha256": "58b23479ffd1bd94142109909c0a05c718a29668d9f218fd7d4ce417b6b7264f"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-060-062.v1/binding.json",
+      "sha256": "5cc9d8a195aecd75b45de7a207917f0ce60298b1ec0f4794b49c04caf93d89c1"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-063-065.v1/binding.json",
+      "sha256": "f2e406eae38cb6b21bdb4014d8e3959fc8bc3a1cc2badf0fa07dc40291f8bcd4"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-066-068.v1/binding.json",
+      "sha256": "e5995262f5a369b8e951f91d49d60cedae41dea36bd4a5aa7bebeca7d72ffc3c"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-069-071.v1/binding.json",
+      "sha256": "303f0788b4a842f023918301765657b672e9d2c7f7ca68f158e703495a0dc042"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000054.json",
+      "sha256": "aa7135773819bfa6c47ff03a3fda3199c90ec679a17137946a975f037b17b76b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/classic/raw/dev-L1-00-B0-0.json",
+      "sha256": "47f3b42f401bf92be4c8c94153910e27f277998e075272ad4dcde262694ecd10"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B0-0/attempt-00/terminal.json",
+      "sha256": "559c2783ad78da5f9e673c8dcdd21a12a0f26ed756036c88d12d9169fd0f76ed"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B0-0/attempt-00/flight/world.json",
+      "sha256": "814816f14ca776e44cf6faedce43186734b2d96a7f728a68b612db1d7f8f6dc7"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B0-0/plan.json",
+      "sha256": "62f60764f0894d9961d50a47da09eec7428a225f6e7df4971c21ad070d30af0b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000055.json",
+      "sha256": "992627f2986a9c546059218a749bd60eeaf8e63576c9c4798bd25b59a910a2e1"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B4-M2-1.json",
+      "sha256": "97a7f57b416ba0fc23ca40e52ce62b99f4362a1a51c7fb12963a619df9187173"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-1/attempt-00/terminal.json",
+      "sha256": "6d0a6107765b40aa0c33c99a54871f607e6aa911ab3b9f187a1f0a9289b04210"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-1/attempt-00/flight/world.json",
+      "sha256": "a563594943ea8b2c577f6222d9aef8a46cdbcb37f1e805b128fa3d2ffaef6f7f"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-1/plan.json",
+      "sha256": "de2a28c9665852d1a7e4e0f275c5872d49c936edf8f8716c90c7280038d46724"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000056.json",
+      "sha256": "663ce73fff28a2e1e1bf830c25a01658bdbe9a6ec44542402593574f1c60ca40"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M2-2.json",
+      "sha256": "0793f0a51903179eecd52aec0e13351d5bee0ef8d2dd0a3b665635dc33f6bf81"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-2/attempt-00/terminal.json",
+      "sha256": "b41f261707927e8b6492767b3b0429a07206f9f97a2503967356396abdc456ad"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-2/attempt-00/flight/world.json",
+      "sha256": "ec4bb08375dcd69fea9ad44593416a86a5f354c78d28ead9030bcf4e44cb8a6e"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-2/plan.json",
+      "sha256": "45e19308311de5982bcd3c3137162fb5c99fe2b8477cb71a3acab76e01115065"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000057.json",
+      "sha256": "52b4697974d6d974952a2cc974acc21ac51c7c7fa0eadc12c3eaee2e6396ef51"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/classic/raw/dev-L1-00-B1-0.json",
+      "sha256": "ce89571af99afd4dd828fc00e777ceaff862f97435e7033a1edbd10c8b5d3eca"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B1-0/attempt-00/terminal.json",
+      "sha256": "bf38581fb3254cfa261954c481e98d73da02d6ad0bf5d72adcba1c0d82c9974b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B1-0/attempt-00/flight/world.json",
+      "sha256": "272bac29118a91b3e9d69bf86b7412f5cc5431efc7de56a8cddb5153601aa835"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B1-0/plan.json",
+      "sha256": "6541dab4960ba0c3ee51be318d8b88ea6dcf945ca6637d6dbd73fc5cff82dd78"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000058.json",
+      "sha256": "abf2173e3eb0448c46d8d4debeb60edb65c677db895e2ed9d6419c569b1d511a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B4-M1-0.json",
+      "sha256": "0a6d4c0bb8febac33466bca11fd3eebc766fd06c96f210c47e475acabc0df419"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-0/attempt-00/terminal.json",
+      "sha256": "6545c9b231d1c8e31d74689092bb8618d8bb01096f5a7e8e6201d212b6cebe8e"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-0/attempt-00/flight/world.json",
+      "sha256": "1755c78b768367645863887e6c0f2697d54121c6a763098e1a0214fd6715aff1"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-0/plan.json",
+      "sha256": "abaab56d07046b35a63749f43c5cf29019a8a00afb9c745c5b5d0799c57eacb2"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000059.json",
+      "sha256": "b52b2d8404b700493bfb28f3c7868a1701805387fb9645f57032aef06f84caf7"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M1-0.json",
+      "sha256": "08be0c6e267b991a31a045962eef348620c5c84725ead1eed08582a43f22dcf8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-0/attempt-00/terminal.json",
+      "sha256": "b362927bda23dbde544a89410843b29eae280961147bdbd0a854bfbc048b6acb"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-0/attempt-00/flight/world.json",
+      "sha256": "6f5097e3f279870e435bb496d6eaaf80ea5551b23b390ef4e7f518e0a58bd21a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-0/plan.json",
+      "sha256": "712eafd258b872576e706d0afb79cfa2f0e17917696f232394ad869c1c8f00ac"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000060.json",
+      "sha256": "f3df43d818b078f15e8f11e4bcf78762ebc19d81c5453a20b55aa68f18cd66cf"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B4-M1-1.json",
+      "sha256": "c8e613ceebef3c083fa6e9eda14f13c88fafdde2bc5a9f1a44ab2342929acb4d"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-1/attempt-00/terminal.json",
+      "sha256": "126579d77f17c48162d7835074c23a3aa07151f8446b817bdbdf817e34153423"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-1/attempt-00/flight/world.json",
+      "sha256": "17a6100bf9caa53d3b46b97d958dfbc8c8c6db65712fa42acd485dba71971935"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-1/plan.json",
+      "sha256": "8fde43ecd5a534e7dffa70c2866180a47025ac635228aef89fa8829af877f6fe"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000061.json",
+      "sha256": "918d79604b87285a3f447c71eae6af879d5e3a9250e1eb31c6c144df58f61330"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B4-M1-2.json",
+      "sha256": "a777131358fe2dd80130eac7ce71de64ca410caf601ffce604ebeac9c3c30237"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-2/attempt-00/terminal.json",
+      "sha256": "75f641ec4f3a8a9d08e175f006a493fcfbe1e195fde26352d4f7c278e2a4d5b8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-2/attempt-00/flight/world.json",
+      "sha256": "27861c5854dc6901e7c07472b8f720c50977e7fde71ed130ae31948117180d74"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M1-2/plan.json",
+      "sha256": "a525757197d2a27d616d3c13b3e5dd3704f0463c20c61b89c4f09b285e07fe93"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000062.json",
+      "sha256": "68d76d64c9c610ca3d0d4eae1852a49f778fcc9fd5fa59359b680ffaf4dd2e30"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B4-M2-0.json",
+      "sha256": "50aafe3009bec2eb9308154f7701f06ab5fc3d0ce16eabb124e2c071f3566eb3"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-0/attempt-00/terminal.json",
+      "sha256": "bad5824a517a3402afda3315b90e5afcf4b5e8e1b644c97f9f76137dd1ea3f16"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-0/attempt-00/flight/world.json",
+      "sha256": "560209784699956c2d2cc56c65f72276db0db64634a533cf5ae0a2301ef46b32"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-0/plan.json",
+      "sha256": "0b674a3b5f87138aaeebaba4f516c9bb92c18285bcb5857afb4c97665b2c2427"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000063.json",
+      "sha256": "8c2c86c5a6793c7d4c22c7b55d446729947b8acca01f78f6a81ea351b3d68da5"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M3-2.json",
+      "sha256": "1473c54372be18a2c58989ffa13ce43488141ae0f891b484bbb5b699b6a38984"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-2/attempt-00/terminal.json",
+      "sha256": "2a8a346a0696c9b97bcd465acd61a9b025f14015bfe3e18d58738e840c768cdd"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-2/attempt-00/flight/world.json",
+      "sha256": "7dcc08d8fcdfa951f927ee133b5cd679655d741a12d23dfe7052d65bdc35294c"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-2/plan.json",
+      "sha256": "348d1951526e29c3b954a8078a51d7ea1741ead1a1300c4d08ca3e5cb4835c5e"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000064.json",
+      "sha256": "0a4672ac397c9bb16bdb667cbdc704d86ec3565ed76583d88cefe3f3277c6eb0"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B4-M2-2.json",
+      "sha256": "89eea6fb68d6bbb926b482d1400f8d01d8f4aa7784577190dafd45275aea38f1"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-2/attempt-00/terminal.json",
+      "sha256": "16d93f7a53762d1605c6a0260448ccbdbba79e6103e2d14049d37b22df448b23"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-2/attempt-00/flight/world.json",
+      "sha256": "77c796e29e8cbe43299502c5bd0632c5ea6d80599680d8f9ca242afed7a2d22f"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B4-M2-2/plan.json",
+      "sha256": "03c50971fbbdafe6720c6978c5994665c20f05cde4e68f9d25d71c584d7f71d0"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000065.json",
+      "sha256": "330372fb5c88d1ef21115bed218db489b40ad8d35da722c8281e582f1cbc536b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M2-1.json",
+      "sha256": "a752a035da869b267ae4fa64ada58724975c4e9411d22479dca0756014fa24d9"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-1/attempt-00/terminal.json",
+      "sha256": "851ea81f79e3c98aaf2e3de89ec922c33af72df1bb67fbccb488402eda075730"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-1/attempt-00/flight/world.json",
+      "sha256": "3eefbfbc157b23d09c99e7828c73c286e3fe67af6a00ec96f811b76f8ffa55e8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-1/plan.json",
+      "sha256": "eaa3f4299ed2751aaabb13136b37d4893c648e8384330a6a36e934ac9db7c821"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000066.json",
+      "sha256": "4acc1695c1d162c226808a7c918ee693dabc3579b46bdae1142f75dd91817b8d"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M1-1.json",
+      "sha256": "aba3de6e99a4f31e688c719846fa917ea940e0b6a85063d4eef37f274abebd27"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-1/attempt-00/terminal.json",
+      "sha256": "4a2fe45dd5e44343b577f384c59dc0a72538601576b6ee869f7ff17d1f748edf"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-1/attempt-00/flight/world.json",
+      "sha256": "3f48e503aff6888bb5e4c527c63c5a04dd4b3dd4228e39dde0eae976607d8d10"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-1/plan.json",
+      "sha256": "1965ca8c807894f1ac759ea7d8710918d9fda7330521fc6207065586d5fbfe32"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000067.json",
+      "sha256": "b9a082d693032225e77d1d4d6f6e3cc6d386a8da2f7a90939adc54a593500007"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M3-1.json",
+      "sha256": "f79d0e35c429a6c5f3050d408ec76124d1d7b4d287b97fa537661a9bfd98e999"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-1/attempt-00/terminal.json",
+      "sha256": "da717627abfeffa27c31027eb4492662e449d498379fd0f19c2ab16cb8ce01e2"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-1/attempt-00/flight/world.json",
+      "sha256": "b2b69f1484ed9e6f3082f4f0968c18737f829f51662303b47eb03c26b7cf7209"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-1/plan.json",
+      "sha256": "8de8653da1f05527a53a630411d54e6641affdd6ece480cb40c3403698bd8432"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000068.json",
+      "sha256": "e85667bc788e8c31a88e4bc438ad68611fcbf19fd56f3e307970019aaf8af84d"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M3-0.json",
+      "sha256": "90645a5c722ade5bcc4c3bd6245d2af350d93e7562ec399cdbf3514c73037693"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-0/attempt-00/terminal.json",
+      "sha256": "72609c2eac4536efc082e4fa4bd4c63619662e12c9a2269feebff8433e75f047"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-0/attempt-00/flight/world.json",
+      "sha256": "c2045d8f0293e6e1e7edf1fef9cdae2254cb53a7c293262db6a4f5bf5764aa11"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M3-0/plan.json",
+      "sha256": "5cd9911260b609c87e74f9d85dfcf8a2c7a93940ee431461a6294a62b83358be"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000069.json",
+      "sha256": "506c2b84225773a28f41ccd043c24d55e30a0fca34d19085a0f44a8181a803a2"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/classic/raw/dev-L1-00-B2-0.json",
+      "sha256": "64f41408828a604a24c7b6f416887f1a53504d79c6af7243f3294a5e450dc644"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B2-0/attempt-00/terminal.json",
+      "sha256": "7de635c3769d75e9e842bb98656331512a92508a403903eb8fd7a6bacb7777b3"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B2-0/attempt-00/flight/world.json",
+      "sha256": "12d87440547d7b99fc8cd42f4cbafba4366cad8c8b9a8cb178e46e00845654cd"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-00-B2-0/plan.json",
+      "sha256": "60f909828d2c9db69a082aff084497c2206d64ab18aed7ce0d5f785c30506bfc"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000070.json",
+      "sha256": "122f50f2d2b856192e1a75cd73e4e025574afb1315d4872df8f48fc0bb0e03f7"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M1-2.json",
+      "sha256": "f9ac2a98c6a3ccf0fb4dba9485badd509d3eccc6035f5089c113c4166b410e52"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-2/attempt-00/terminal.json",
+      "sha256": "d78b174a3229b2ac2acd9dbb8e3e61356dbc3dd1498e83a7b0e6c88d6e86107e"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-2/attempt-00/flight/world.json",
+      "sha256": "5b7d282a5b97604bd6d11d6fc4e60f051c2f05cbae3572e6dcae0f14314877a6"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M1-2/plan.json",
+      "sha256": "8b2812f8e5bc649f815995f9de500899036d6d26d12c861b461152059bb74e65"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000071.json",
+      "sha256": "bf25687413aad78bcbed2fe7e992c7596cafbcfc70a6c21c618c44d762f1b3c6"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L1-00-B3-M2-0.json",
+      "sha256": "fe2e5262b867465ce79c97ec7ea6f93b6ac79589a2ca02207abd60398209cf69"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-0/attempt-00/terminal.json",
+      "sha256": "d1107105ae083846967dc21ec3fce4811ae9144cce7db565e3ea393d3468ca2a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-0/attempt-00/flight/world.json",
+      "sha256": "8adfcc5a6446298ee177e35c5beec862b6f6362289846fdf354134396c9b4c61"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-00-B3-M2-0/plan.json",
+      "sha256": "7648055c081ea27cb33101790ee25a3d3ddd136a96b430abafebcc053569ff00"
+    }
+  ],
+  "sdk_final_outer_complete": false
+}

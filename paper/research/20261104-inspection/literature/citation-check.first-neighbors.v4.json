@@ -1,0 +1,7 @@
+{
+  "issues": [
+    "literature: BibTeX venue identity mismatch"
+  ],
+  "status": "fail",
+  "validation": "record_integrity_not_external_truth"
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "ppg.loop-guard.v1",
+  "knownUnitTypes": ["spec", "review", "fix", "test-design", "implement-evaluator", "e2e-verify", "implement-baselines", "implement-method", "experiment-pilot", "experiment-confirmatory", "implement-paper", "acceptance"],
+  "units": [
+    {"id": "R1.1", "type": "spec"},
+    {"id": "R1.2", "type": "review"},
+    {"id": "R1.3", "type": "fix"},
+    {"id": "R1.4", "type": "review"},
+    {"id": "R2.1", "type": "test-design", "requiresReview": "R1.4"},
+    {"id": "R2.2", "type": "implement-evaluator"},
+    {"id": "R2.3", "type": "review"},
+    {"id": "R2.4", "type": "fix"},
+    {"id": "R2.5", "type": "e2e-verify", "requiresReview": "R2.3"},
+    {"id": "R3.1", "type": "implement-baselines"},
+    {"id": "R3.2", "type": "review"},
+    {"id": "R3.3", "type": "e2e-verify", "requiresReview": "R3.2"},
+    {"id": "R4.1", "type": "implement-method", "requiresReview": "R3.2"},
+    {"id": "R4.2", "type": "review"},
+    {"id": "R4.3", "type": "fix"},
+    {"id": "R4.4", "type": "e2e-verify", "requiresReview": "R4.2"},
+    {"id": "R5.1", "type": "experiment-pilot", "requiresReview": "R4.2"},
+    {"id": "R5.2", "type": "review"},
+    {"id": "R5.3", "type": "experiment-confirmatory", "requiresReview": "R5.2"},
+    {"id": "R5.4", "type": "review"},
+    {"id": "R5.5", "type": "fix"},
+    {"id": "R6.1", "type": "implement-paper", "requiresReview": "R5.4"},
+    {"id": "R6.2", "type": "review"},
+    {"id": "R6.3", "type": "e2e-verify", "requiresReview": "R6.2"},
+    {"id": "R6.4", "type": "acceptance", "requiresReview": "R6.2"}
+  ],
+  "protectedReview": {
+    "acceptedVerdict": "PASS",
+    "requireZeroCritical": true,
+    "requireZeroWarning": true,
+    "handshakePathTemplate": "nodes/{review}/handshake.json"
+  },
+  "fixClosure": [
+    {"unit": "R1.3", "review": "R1.2", "ledger": "nodes/R1.2/finding-ledger.md", "disposition": "nodes/R1.3/run_1/disposition.md"},
+    {"unit": "R2.4", "review": "R2.3", "ledger": "nodes/R2.3/finding-ledger.md", "disposition": "nodes/R2.4/run_1/disposition.md"},
+    {"unit": "R4.3", "review": "R4.2", "ledger": "nodes/R4.2/finding-ledger.md", "disposition": "nodes/R4.3/run_1/disposition.md"},
+    {"unit": "R5.5", "review": "R5.4", "ledger": "nodes/R5.4/finding-ledger.md", "disposition": "nodes/R5.5/run_1/disposition.md"}
+  ],
+  "evidenceRequirements": [
+    {"unit": "R5.1", "artifacts": [{"scope": "repo", "path": "paper/protocol/pilot-report.md", "kind": "nonempty"}, {"scope": "repo", "path": "paper/protocol/pilot-timing-receipt.json", "kind": "pilot-timing"}]},
+    {"unit": "R5.3", "artifacts": [{"scope": "repo", "path": "paper/protocol/confirmatory-manifest.json", "kind": "confirmatory-manifest"}, {"scope": "repo", "path": "paper/results/research-gate.json", "kind": "research-gate"}]},
+    {"unit": "R6.3", "artifacts": [{"scope": "repo", "path": "paper/evidence/final-verification.json", "kind": "final-evidence"}]},
+    {"unit": "R6.4", "artifacts": [{"scope": "repo", "path": "paper/FINAL.md", "kind": "nonempty"}, {"scope": "repo", "path": "paper/evidence/final-verification.json", "kind": "final-evidence"}]}
+  ],
+  "artifactPolicy": {
+    "allDeclaredArtifactsMustExist": true,
+    "allDeclaredArtifactsMustBeNonempty": true,
+    "jsonMustBeWellFormed": true,
+    "unknownUnitOrType": "reject",
+    "malformedSessionState": "reject"
+  },
+  "dispositionPolicy": {
+    "criticalAndWarningStatus": "addressed",
+    "suggestionStatus": "retained",
+    "exactlyOneRowPerFinding": true,
+    "evidencePathRequired": true,
+    "evidenceTargetMustExist": true
+  }
+}

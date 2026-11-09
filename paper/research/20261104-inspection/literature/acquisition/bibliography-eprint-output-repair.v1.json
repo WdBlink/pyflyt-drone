@@ -1,0 +1,45 @@
+{
+  "reason": "Provided bibliography emitter production.py permits no eprint field while provided citation validator requires it for arXiv identities. Preserve native v2 unchanged; this literal output augmentation adds only seven versioned eprint identifiers from verified primary records. No new author/title/year/venue or formatting algorithm, controller implementation unchanged.",
+  "source": "literature/references.first-neighbors.v2.bib",
+  "source_sha256": "473b72db642b2ad61654946647530ccbfb0fc51cc4ae22d060c7210599b51016",
+  "target": "literature/references.first-neighbors.v3.bib",
+  "target_sha256": "82b337a4f37fb81382288d869478349840ac525f05c7909cb747d5aa0cc7eadc",
+  "changes": [
+    {
+      "key": "MultiUAVPlat2026",
+      "eprint": "2606.31073v1",
+      "source_url": "https://arxiv.org/abs/2606.31073v1"
+    },
+    {
+      "key": "MissionBench2026",
+      "eprint": "2607.22014v1",
+      "source_url": "https://arxiv.org/abs/2607.22014v1"
+    },
+    {
+      "key": "ESARBench2026",
+      "eprint": "2605.01371v1",
+      "source_url": "https://arxiv.org/abs/2605.01371v1"
+    },
+    {
+      "key": "Retriever2026",
+      "eprint": "2607.17213v2",
+      "source_url": "https://arxiv.org/abs/2607.17213v2"
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "eprint": "2601.03281v1",
+      "source_url": "https://arxiv.org/abs/2601.03281v1"
+    },
+    {
+      "key": "PhysAIBench2026",
+      "eprint": "2609.23695v1",
+      "source_url": "https://arxiv.org/abs/2609.23695v1"
+    },
+    {
+      "key": "AERIAL2026",
+      "eprint": "2610.31029v1",
+      "source_url": "https://arxiv.org/abs/2610.31029v1"
+    }
+  ],
+  "inverse_restores_native": true
+}

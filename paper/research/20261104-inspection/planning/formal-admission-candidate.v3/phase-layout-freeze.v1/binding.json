@@ -1,0 +1,8 @@
+{
+  "role": "pure public identity/denominator/path check only, no seed draw/preparation/opening/dispatch",
+  "files": {
+    "planning/formal-admission-candidate.v3/phase-layout-freeze.v1/inspection_formal_namespace.py": "ddafaf5322f4b40d63925e0c2ad37b440b942ac7c1fd2c5ff6445f9ebb4fa818",
+    "planning/formal-admission-candidate.v3/phase-layout-freeze.v1/test_formal_phase_layout.py": "faf73f716277eb03bfe4bf86fa723a6797c55db4c35088dc0dc1ede9da972a1b",
+    "planning/formal-admission-candidate.v3/phase-layout-freeze.v1/tests.log": "44d83ad137613939263c06a94cfab265f730215f63d49278ebe4449ac0d33999"
+  }
+}

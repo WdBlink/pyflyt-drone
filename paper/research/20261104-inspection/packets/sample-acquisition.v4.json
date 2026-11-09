@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "url": "https://icontrol.ri.cmu.edu/research/hierarchical_specifications.html",
+      "path": "venue/sources/nl2hltl-lab.html",
+      "kind": "html",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FLRA.2024.3518105",
+      "path": "venue/sources/lip-publisher-metadata.json",
+      "kind": "json",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://github.com/AccGen99/marl_ipp",
+      "path": "venue/sources/mripp-author-repository.html",
+      "kind": "html",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://api.crossref.org/works?query.bibliographic=Scalable+Multi-Robot+Informative+Path+Planning+for+Target+Mapping+via+Deep+Reinforcement+Learning&rows=2",
+      "path": "venue/sources/mripp-registry.json",
+      "kind": "json",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://api.crossref.org/works?query.bibliographic=NL2HLTL2Plan+Scaling+Up+Natural+Language+Understanding+for+Multi-Robots+Through+Hierarchical+Temporal+Logic+Task+Specifications&rows=2",
+      "path": "venue/sources/nl2hltl-registry.json",
+      "kind": "json",
+      "max_bytes": 30000000
+    }
+  ]
+}

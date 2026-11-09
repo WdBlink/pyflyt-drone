@@ -1,0 +1,905 @@
+{
+  "role": "one complete L2 development root, all original repeats; no formal or population inference",
+  "at": "2026-11-07T06:54:43.029354+00:00",
+  "case_id": "dev-L2-00",
+  "completed_callbacks": 54,
+  "complete_root_blocks": 3,
+  "denominator": 108,
+  "pause": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 54,
+    "case_id": "dev-L1-00",
+    "condition": "B0",
+    "at": "2026-11-07T06:54:05.095817+00:00"
+  },
+  "rows": [
+    {
+      "order_index": 36,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M1",
+      "repeat_ordinal": 2,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009676834000856616,
+      "usage": {
+        "calls": 25,
+        "tokens": 165249
+      },
+      "accepted_unique_ids": 0,
+      "report_audit_entries": 0,
+      "original_terminal_status": "completed",
+      "disposition": null
+    },
+    {
+      "order_index": 37,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M3",
+      "repeat_ordinal": 1,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009353917004773393,
+      "usage": {
+        "calls": 22,
+        "tokens": 160664
+      },
+      "accepted_unique_ids": 7,
+      "report_audit_entries": 38,
+      "original_terminal_status": "unknown_process_cleanup",
+      "disposition": {
+        "acceptance": {
+          "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/acceptance.v1.json",
+          "sha256": "03a7f2c84a9560afad7e47d4cbfaadadd900faf9141fc8766e7272a10be87f22"
+        },
+        "proposal": {
+          "path": "recovery/pilot-v4-cleanup-037.v1/proposal.v2.json",
+          "sha256": "4f94dbf6ed55fe748368b9d58dd74e7de2cc89c2bbcdc0cb36fa0a104143f238"
+        },
+        "review": {
+          "path": "review/evidence/pilot-v4-cleanup037-v2/review.json",
+          "sha256": "3cbcdb5ac07dd26fe61daf8715d227e19d8753a2c7caa5625b77c9ab63d1f656"
+        },
+        "native_request_sha256": "fbc4e4cd8a7776be56f66a73b56f0bb16f2e4ae97fb4c13573c4ac2d9b21d9f0",
+        "original_status_retained": "unknown_process_cleanup",
+        "external_attribution": {
+          "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/evidence.v1/binding.json",
+          "sha256": "1d69331ce39b41a92d73d39808449439c5761c21b3fa48b9010eb70110379406"
+        }
+      }
+    },
+    {
+      "order_index": 38,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B4-M2",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009953166998457164,
+      "p95_lag_seconds": 0.0034332923333977305,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 27,
+        "tokens": 173109
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-97269-53013953144000.json",
+          "sha256": "ecba9436f7b6a8af43574a786fd9fb568156a5a0d2b1ae18a75012b0527cf958",
+          "write_wall_ns": 390292,
+          "post_close_metadata_wall_ns": 831000
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 39,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B4-M1",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.13333333333333333,
+        "D": 0.0,
+        "Q": 0.37585099550417467,
+        "H": 1,
+        "E": 1,
+        "Y": 0.37585099550417467,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.00968125000508735,
+      "p95_lag_seconds": 0.0019946670042827463,
+      "report_audit_entries": 3,
+      "accepted_unique_ids": 3,
+      "usage": {
+        "calls": 24,
+        "tokens": 170079
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-2550-53633509204416.json",
+          "sha256": "a9017466cdb8e35430d1060c60fa85b33b1025fd629abe755f20df424888c6df",
+          "write_wall_ns": 650542,
+          "post_close_metadata_wall_ns": 1030417
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 40,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B1",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.916597853014038,
+        "S": 0.7333333333333333,
+        "D": 0.08333333333333333,
+        "Q": 0.5777548398935682,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5777548398935682,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.010559957998339087,
+      "p95_lag_seconds": 0.0034823329944657644,
+      "report_audit_entries": 710,
+      "accepted_unique_ids": 9,
+      "usage": null,
+      "passive_close_observations": [],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 41,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B0",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9925681255161024,
+        "S": 1.0,
+        "D": 0.38703703703703696,
+        "Q": 0.7932017208510463,
+        "H": 1,
+        "E": 1,
+        "Y": 0.7932017208510463,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.01028795800084481,
+      "p95_lag_seconds": 0.003467874995862985,
+      "report_audit_entries": 899,
+      "accepted_unique_ids": 9,
+      "usage": null,
+      "passive_close_observations": [],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 42,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B4-M2",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.008942874999775086,
+      "p95_lag_seconds": 0.0031328336650631172,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 28,
+        "tokens": 174316
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-18465-55605312198250.json",
+          "sha256": "33410e7e97c8504f63cc263eb0b41a304be61ead0c384692d6e9179022a62785",
+          "write_wall_ns": 447167,
+          "post_close_metadata_wall_ns": 833000
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 43,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M2",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.008906333001505118,
+      "p95_lag_seconds": 0.003418499996769242,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 30,
+        "tokens": 163797
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-23386-56225896922541.json",
+          "sha256": "ec97b20684543476b9bc84d7b6f47edb86545e4822c9dad00b58b38184329932",
+          "write_wall_ns": 404708,
+          "post_close_metadata_wall_ns": 795584
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 44,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M1",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009389584003656637,
+      "p95_lag_seconds": 0.0019772083329030465,
+      "report_audit_entries": 2,
+      "accepted_unique_ids": 2,
+      "usage": {
+        "calls": 24,
+        "tokens": 160022
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-29448-56987397503666.json",
+          "sha256": "7e855a978ec80021f6e4e311325d93a29d970dd9fc8eb70b24722c87be143ddd",
+          "write_wall_ns": 360333,
+          "post_close_metadata_wall_ns": 731667
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 45,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B4-M1",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.06666666666666667,
+        "D": 0.0,
+        "Q": 0.35362877328195247,
+        "H": 1,
+        "E": 1,
+        "Y": 0.35362877328195247,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009035832998051774,
+      "p95_lag_seconds": 0.002324290997080425,
+      "report_audit_entries": 2,
+      "accepted_unique_ids": 2,
+      "usage": {
+        "calls": 22,
+        "tokens": 158281
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-34301-57606511266291.json",
+          "sha256": "f6edd15b08cc882c09e61dd9bdd3079a8ed3860f19b8b27b3a74da3e371b93bb",
+          "write_wall_ns": 3226084,
+          "post_close_metadata_wall_ns": 3667334
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 46,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M1",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.014788084001338575,
+      "p95_lag_seconds": 0.0032642923314938344,
+      "report_audit_entries": 3,
+      "accepted_unique_ids": 3,
+      "usage": {
+        "calls": 18,
+        "tokens": 121641
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-39217-58233464048208.json",
+          "sha256": "0f10cb38aa319976040acad174de6f7d58349ccb40dea46f89cf3365ccc57f5f",
+          "write_wall_ns": 810458,
+          "post_close_metadata_wall_ns": 1357208
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 47,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B4-M2",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.012002750001556706,
+      "p95_lag_seconds": 0.0033698339975671843,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 27,
+        "tokens": 174527
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-45506-58994297350291.json",
+          "sha256": "1d8f5f263c6ca7174c2dd0fd639d02780b79d67e803acd0cb813da218d1c1430",
+          "write_wall_ns": 667875,
+          "post_close_metadata_wall_ns": 1035500
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 48,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M3",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009491583005001303,
+      "p95_lag_seconds": 0.0023007083354400493,
+      "report_audit_entries": 24,
+      "accepted_unique_ids": 10,
+      "usage": {
+        "calls": 21,
+        "tokens": 152351
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-50246-59616892018958.json",
+          "sha256": "88caa06abfb14e3960205f4ce5afe997cfd3dd36ca96543906e057031e053a3d",
+          "write_wall_ns": 425917,
+          "post_close_metadata_wall_ns": 807334
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 49,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M3",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.990916597853014,
+        "S": 0.06666666666666667,
+        "D": 0.0,
+        "Q": 0.35252775483989357,
+        "H": 1,
+        "E": 1,
+        "Y": 0.35252775483989357,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.012262208998436108,
+      "p95_lag_seconds": 0.002994583664531092,
+      "report_audit_entries": 12,
+      "accepted_unique_ids": 8,
+      "usage": {
+        "calls": 16,
+        "tokens": 115264
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-55212-60235331282750.json",
+          "sha256": "1513722fe09082f3c4ca71fd328ab59b30a7e7c4ebddf54f601abc5fafc51606",
+          "write_wall_ns": 392875,
+          "post_close_metadata_wall_ns": 780250
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 50,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M2",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009496459002548363,
+      "p95_lag_seconds": 0.0031162923322654024,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 30,
+        "tokens": 163832
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-62430-60999556483625.json",
+          "sha256": "358bfe725370739bd811b01c2257e7b7c9bd76c755c7b7036996a36bcdd50dba",
+          "write_wall_ns": 369709,
+          "post_close_metadata_wall_ns": 736250
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 51,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M2",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.010529291997954715,
+      "p95_lag_seconds": 0.003101416997381534,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 30,
+        "tokens": 166788
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-69385-61620920326583.json",
+          "sha256": "40980a8d96afb551a510c0b329507cc9d21faa6cfa271a2ebd5dd6bf40e8e63d",
+          "write_wall_ns": 493250,
+          "post_close_metadata_wall_ns": 951208
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 52,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B4-M1",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.13333333333333333,
+        "D": 0.0,
+        "Q": 0.37585099550417467,
+        "H": 1,
+        "E": 1,
+        "Y": 0.37585099550417467,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.031980832662753755,
+      "p95_lag_seconds": 0.00451954133069421,
+      "report_audit_entries": 4,
+      "accepted_unique_ids": 4,
+      "usage": {
+        "calls": 14,
+        "tokens": 98625
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-6048-62242297953333.json",
+          "sha256": "4c7829365eea8ddede9d3343cfefb330a271a24a8f7ac88bc39006e07915ad03",
+          "write_wall_ns": 779083,
+          "post_close_metadata_wall_ns": 1288292
+        }
+      ],
+      "original_terminal_status": "completed"
+    },
+    {
+      "order_index": 53,
+      "root_block_index": 2,
+      "case_id": "dev-L2-00",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B2",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9190751445086706,
+        "S": 0.8,
+        "D": 0.022222222222222223,
+        "Q": 0.5804324555769642,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5804324555769642,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.01041629200335592,
+      "p95_lag_seconds": 0.0034050413382828992,
+      "report_audit_entries": 479,
+      "accepted_unique_ids": 9,
+      "usage": null,
+      "passive_close_observations": [],
+      "original_terminal_status": "completed"
+    }
+  ],
+  "within_root_means": {
+    "B3-M1": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      }
+    },
+    "B3-M3": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9931186347371318,
+        "S": 0.022222222222222223,
+        "D": 0.0,
+        "Q": 0.33844695231978467,
+        "H": 1,
+        "E": 1,
+        "Y": 0.33844695231978467,
+        "SR": 0
+      }
+    },
+    "B4-M2": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      }
+    },
+    "B4-M1": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.1111111111111111,
+        "D": 0.0,
+        "Q": 0.36844358809676725,
+        "H": 1,
+        "E": 1,
+        "Y": 0.36844358809676725,
+        "SR": 0
+      }
+    },
+    "B1": {
+      "repeat_count": 1,
+      "score": {
+        "C": 0.916597853014038,
+        "S": 0.7333333333333333,
+        "D": 0.08333333333333333,
+        "Q": 0.5777548398935682,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5777548398935682,
+        "SR": 0
+      }
+    },
+    "B0": {
+      "repeat_count": 1,
+      "score": {
+        "C": 0.9925681255161024,
+        "S": 1.0,
+        "D": 0.38703703703703696,
+        "Q": 0.7932017208510463,
+        "H": 1,
+        "E": 1,
+        "Y": 0.7932017208510463,
+        "SR": 0
+      }
+    },
+    "B3-M2": {
+      "repeat_count": 3,
+      "score": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0
+      }
+    },
+    "B2": {
+      "repeat_count": 1,
+      "score": {
+        "C": 0.9190751445086706,
+        "S": 0.8,
+        "D": 0.022222222222222223,
+        "Q": 0.5804324555769642,
+        "H": 1,
+        "E": 1,
+        "Y": 0.5804324555769642,
+        "SR": 0
+      }
+    }
+  },
+  "frozen_batches": [
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-038-040.v1/binding.json",
+      "sha256": "8aac11cfaf09d80efe68c84ab307f8702ce4dadbeb2fdc17b0e86a653b014cc5"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-041-043.v1/binding.json",
+      "sha256": "62bd2130ea7ccdfcc4f338396bad847bc60682f076edd9246cd8db72117d41bb"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-044-046.v1/binding.json",
+      "sha256": "28eb8d79162b683b04c20af124e92c1336c39a963d82cbe7c4205243a449bbcd"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-047-049.v1/binding.json",
+      "sha256": "c7909529be9e5d3189921d8e284c9cdb8279c49e2264853167512776b8b1019c"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-050-052.v1/binding.json",
+      "sha256": "8a9281f6b54d5277fe9c80750a252f0abf528cbe9f8b925284f46f5ef42c28d8"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-orders-053-053.v1/binding.json",
+      "sha256": "ada42bdb4d0de9d7c1c3e1b6e1d21ce6ed55190ed8cca48c73c1fc625b14e824"
+    }
+  ],
+  "bound_files": {
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-038-040.v1/binding.json": "8aac11cfaf09d80efe68c84ab307f8702ce4dadbeb2fdc17b0e86a653b014cc5",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-041-043.v1/binding.json": "62bd2130ea7ccdfcc4f338396bad847bc60682f076edd9246cd8db72117d41bb",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-044-046.v1/binding.json": "28eb8d79162b683b04c20af124e92c1336c39a963d82cbe7c4205243a449bbcd",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-047-049.v1/binding.json": "c7909529be9e5d3189921d8e284c9cdb8279c49e2264853167512776b8b1019c",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-050-052.v1/binding.json": "8a9281f6b54d5277fe9c80750a252f0abf528cbe9f8b925284f46f5ef42c28d8",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-053-053.v1/binding.json": "ada42bdb4d0de9d7c1c3e1b6e1d21ce6ed55190ed8cca48c73c1fc625b14e824",
+    "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/evidence.v1/binding.json": "1d69331ce39b41a92d73d39808449439c5761c21b3fa48b9010eb70110379406",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/terminal.json": "a2ae72197c6e8866e695c2bb410c32f1fff4452bebea6c4523564acd5b9c62bc",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/world.json": "4234583d45c8aa03a8fab6fbd7989332534bc9bb2723e15bb8348a0cef8fbfd5",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/run.json": "aa4fd3dac3dc830f9b587dfaaa51fc8e3fdd8af0d52eee3f24a8c01b237f566f",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/private-case.json": "fb011f0b3960c0a730ba7e4f68c644b63aeb3c6cce0b01be2caf5c0f76ab68d3",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M1-2.json": "310d1a0b2e4c0338ddad5beeda1ec99620b7b7519f6089d010a9b892e40576a3",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000036.json": "c8a34eee72440b69c4e9c66f3eac7e9362d256d411e2c0c2f26764e0ecb80483",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/terminal.json": "2183b93170d7362349bcfe33e452809d989ab8f0a212d9848436e0e4c4a6aaf0",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/world.json": "8f2419b42cdcc2affa06ace7ec70139a33c71b95c9deaa4cce41795fdd1ec526",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/run.json": "04d9225b2d03dedfe485012a175a387dcade3eb3b928b03c64f0a925eb4680b0",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/private-case.json": "fb011f0b3960c0a730ba7e4f68c644b63aeb3c6cce0b01be2caf5c0f76ab68d3",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M3-1.json": "78c0b845944b4301cc6ca0b778f284da4db24b3f47aa3d10cc3460d90da25dca",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000037.json": "c1e1ea1d3b145a3c2c9a92b7cd513e99538cd3b147fd4694b6508e556638d0f6",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-2/attempt-00/terminal.json": "927b10430e850e5417e8d78be077a5bb3c75dd72d669a5b6afe3f4cc5d71dbee",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B4-M2-2.json": "6a31d5198482606c3ad6e1b25d51055807041afb542d5721a6397545f288fb70",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000038.json": "c9e047fe7484711ab89e1cf401846da88c727a472a58dc80d141468cd8b0a3fb",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-2/plan.json": "5429588e9f1492071415c65d139c18737f114f0bc706a3dfad1198c253f7fa18",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-2/attempt-00/flight/world.json": "150b92d30f79c3c532ca8e6e004c3a46ef09dc99c440935326133be95c9a3a30",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-1/attempt-00/terminal.json": "dbcc967c1b9e17af7bc9152ee198b925ed1385f3c1380372360ae6810599e1ef",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B4-M1-1.json": "7ac828418c08b276fac171730d243711e0eb868e2f68996032592311bdf6fd49",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000039.json": "7babe309a31e34e56700fc8c616e359e3e8b69cfdb1238c51320e3e282331bbb",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-1/plan.json": "993b572681bdd78b9927d9a00d827c39de23aaa4fbc77f020e9499254164e27f",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-1/attempt-00/flight/world.json": "c10757845bf7b74e797c4177628fcbbe5d9a288fdbca91eeb8d2657ad8965b18",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B1-0/attempt-00/terminal.json": "b294719e9882a1b7e5c13427c2a0545a7321c966ed0976afcb9a25b785ddc06f",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/classic/raw/dev-L2-00-B1-0.json": "e20c65b3f94b1aa1257ccdfb41ae9c8f7bd35bcde399ddecc612cd8601986c89",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000040.json": "4d1a0c740887c0d668dbac386fb1474dd37fd357b9e26e85eebbefef4a041993",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B1-0/plan.json": "3a7b7c586729f79bdd30a3e6cdfbf26b04dff2f7746f9d2d60091fb76a743817",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B1-0/attempt-00/flight/world.json": "b40f1f6453831283348f707ef2d295df3e1d3b920ab7bff01435919e6e6016bf",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B0-0/attempt-00/terminal.json": "13fe53cce3a5bc8ef521450548174437b0ef5153856b4c704b7f8997af066d9c",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/classic/raw/dev-L2-00-B0-0.json": "ad7c50365987f4e06628153ecbe0b29ca903a84691fa356f9f103bae73629573",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000041.json": "8076e7784aba0971330d6a261f6b4e88eb3aa5144878a42503a1696c875b2438",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B0-0/plan.json": "7a28ddd7fff1192a6d7b9e86aa96ec9c25f06d84a278cc054ac7f22a05b582c5",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B0-0/attempt-00/flight/world.json": "b4f9513e4e5b9a60ee589462c7812f44d6557b3d3aaec2ec8e156e9fd15ac36e",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-1/attempt-00/terminal.json": "4ac0755bf430806113889a055a9de86ab99e204eac0661fbec0be0c2e7931c5e",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B4-M2-1.json": "99b85cebd3f967dc22f7a8bd502ad1e66d963794014b5ac18ffbf0ed6a776f1b",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000042.json": "74d7af04b656f2f0cafa485f1d4e0bc96c4e49b97651630aa05a1e2db7ca845e",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-1/plan.json": "f3a0a674d7426ad817738c40528bb0c148f8cad7ade731f5880e843137fb7419",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-1/attempt-00/flight/world.json": "2c171bf1965d292ad30e6348cbb5fc5af0d7b2366426bd1f7a07f6dabda28be3",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-2/attempt-00/terminal.json": "29cf8bc7c59b0e44b2f7940abe8d7cf44d7f503617f1be3d84ee1d5786612c5a",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M2-2.json": "98f756def4fd2e1730e0439c38194a242bdff2373d3adda913ec50f349e82ca7",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000043.json": "30c2bb9e8882beb64fccf8d5f744f07c6e56650c1606f47e96e454b4b9e56803",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-2/plan.json": "6d6dbd768ff5a7361cc4264b1cc03a6dbacd9821d613bb97cfd0555aeb999806",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-2/attempt-00/flight/world.json": "3d1c9665aba4686f768dfecf45fe668757d55aafed1ee02d02219f69054cec16",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-0/attempt-00/terminal.json": "45d6c647d77287b9ca398e77bd108337eaa9271500bacba4d243f16057c87c7e",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M1-0.json": "19d0ce512041dbb482aecf70339400ed47dc2072c27dfbb1a4d0772bd04ff3cb",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000044.json": "5c4aaccaa9278cedf86cd6165ab8a180c518095b92ae0fe91d544caf2b98778e",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-0/plan.json": "03c9226a0caf45d707840e1871667fbe41b84e9da3acf001a33551d6b12b59ea",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-0/attempt-00/flight/world.json": "ff6492772058b7cc05d2c5850085b49da3c1f7a91d23b0404e16b101f46fee37",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-0/attempt-00/terminal.json": "62006b0b7605e4dae9bd731dcec47c1bf73d04d9235b9f8852184a99ddb5d3de",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B4-M1-0.json": "dc1e256d40ff6b2de0f82504318661d0656b884f420c1e33dd00c3fb7bd6ba1e",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000045.json": "1c4126f9c468da8aa9e88610f1ffd20f9a513c4789a4e6a0e66b2e1b5bbcb44e",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-0/plan.json": "8b8d0afb22bf9a4db3c091f4e3ecfbbf14435f332a4c311938bae9713fb10719",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-0/attempt-00/flight/world.json": "ee4f52ce3329af06bbd63f2dc4137a1c8e70950893452fc551c58de7f7dc3399",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-1/attempt-00/terminal.json": "befa1d172b1b378c388090db7fd3bce460672650a9bfdc8216917322b02d85e4",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M1-1.json": "e3b01a4358696a19a4ca031cc4f07fd93810ac9a89d7cd9f0deb4a167ffd5536",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000046.json": "1111fd9e80b52e228fe9f3299de4db4891eaf5e70b280cf172e52deee859b860",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-1/plan.json": "376068ece4ec1927708b53881ab70f1a291fa69a8a6bfb04a6bb6d71a2aa15f0",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-1/attempt-00/flight/world.json": "b9526ff1971b120ac811ee46183c889491ae12cd55ab83720c6bc4a0f2426680",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-0/attempt-00/terminal.json": "75e5c65d028e77dfc9e2d5cb88a33efcf448652a60718a45d4307e315062e83d",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B4-M2-0.json": "65b7f5959ef7e4ac0c2d33fe9ab47bbe9dafd7774e42e1a0ff2f03fda71ca01d",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000047.json": "4a8a64292c43c6ad997b25b4cedeb24f6033957a1183e86830a528794a3efcc5",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-0/plan.json": "f58f25e8364dcd56d222623a5321061b2a191b5e02177cc801e3e96d0a82670d",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M2-0/attempt-00/flight/world.json": "6b239eaa8ee5d4ca564faf45485601c9b2e8568d3bac37c9f9454e20bd1f8888",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-2/attempt-00/terminal.json": "d383f9860643d1a5705822f18eb116a5452774d04bbbcaa951b5b2a4d74ff7f5",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M3-2.json": "1625ef3bfc92dc5148a6e8d0e1a6e80ed6f91e385fc4d18d8e7db0c8ef970e3f",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000048.json": "61e26ca2652f9dc6616de4c71699fccdbc8c3fe9aa9c4e6726d33d0e2d14109b",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-2/plan.json": "4f8b85394af9ce857a058b475e1429e51852549491472652d29501be96a8a121",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-2/attempt-00/flight/world.json": "7f1cef4f90d32e5bf5aeab7ca275ddf49d9111655cdc750a3020295f23f6126f",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-0/attempt-00/terminal.json": "4c1a81ab92e0c6b83403875ed2562f6c51791b14bc9294707d8090c5ae331071",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M3-0.json": "b4336f15d93f7576243324b63a4e1cc38f3d793c5ad72b22cce37cee997d8757",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000049.json": "dea36c16921e4c314fe32bc576407bff6e79b83493543f02fbf89192ab4fcb85",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-0/plan.json": "783b54099dd3f608ce33611cc631f234aaa13d3f6fb5f5475888a943571be8c7",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-0/attempt-00/flight/world.json": "c70ca8bb1db251150ef2ab94fa9500414033d4f84ab91a1c916c6dca225c2ca5",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-1/attempt-00/terminal.json": "9cfc0f129e32e586faa8a5df88897fa0594dcc75ef7388e3d236583c6d96ad04",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M2-1.json": "c77689577b2095dd661ace8d90d6b8c4b5a7da80ad45d21e5ddedbddec47e91b",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000050.json": "c87e20484a68a0d7d5daf1bd4c2577ea57d068ec17b60a8bffec87556484adb9",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-1/plan.json": "722ca8612607437bcde0e2351eda6a34880461a5aab5d7a131d68f2b494db3c1",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-1/attempt-00/flight/world.json": "b6712db6d9676e1d7ec0ee25a9663ec8d8ff9ac4625c7a6b92bade9e62cef6ad",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-0/attempt-00/terminal.json": "bd3e894c9aaa6041ce4f4ac6a6705f8b2d3b5bc6c946fa8827848547cb52006f",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B3-M2-0.json": "38b0e6fb81162b2db6e2e80c8f863dcf4e8178b43de62789fa7a97855a3d62c4",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000051.json": "3a820cb81b5aa692dfbe3fc4e1d29d3038f51d5843a35a439a42c1400c9022ed",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-0/plan.json": "2ba04711cf7f7a5c3e685795a4255fe019b23ca38af30f709d8142f9645b2a3f",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M2-0/attempt-00/flight/world.json": "d37d6c517a279d6774b7623cd320a2a33f0c7edc8f07fe0abf430ede025a7561",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-2/attempt-00/terminal.json": "216e7047f18a265db4ade66ffcfad39938d644ad513487aa1d41f734c0f0ceb4",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-00-B4-M1-2.json": "992298ac411601ed76d105bdff51b39ad342d5256157cb9ed8c0fbd2660ffc2b",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000052.json": "14e0af8eec4fe351f1ee7b78b1fbf3e20da9861a8b88972f20f5bad0e2d91b70",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-2/plan.json": "a85c4e00f13e4b6b4fc3699fc01c3d76feeb5570e9d0e390526dc2a39f49c410",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B4-M1-2/attempt-00/flight/world.json": "4c566e69ec82eeab3df7ae18ad95ebd96d1ead63346e577b5cc0964af7ba8afc",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/attempt-00/terminal.json": "dabd8a8caf9e56d4545a313f226470117560ce763094605e618f92d48877f4f0",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/classic/raw/dev-L2-00-B2-0.json": "de70d8b1b3b414fa2c58770c7046f8dbd03aa00170d7cdd5d7d5c5e8ce66def5",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000053.json": "b3b779587fcf65f9709cdafa9904ae1598dda84f17798ee1770b645a46210d25",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/plan.json": "df57bb14ca2aa68287b1ac5fe758a465895a83d4b5c29c9401e4339d71b9fecc",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L2-00-B2-0/attempt-00/flight/world.json": "7fa1f6ed71f14311653b2165e17f83b566106aed5f9d764a2fbfc2860bae2339",
+    "paper/research/20261104-inspection/qualification/capture-pilot-v4-third-root.py": "c10c67e27a3ce39342f65b233202b32a3a67f13883f6d49e02b84d5e2685af96"
+  },
+  "sdk_final_outer_complete": false
+}

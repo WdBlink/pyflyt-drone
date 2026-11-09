@@ -1,0 +1,7 @@
+# 正式主实验三十二回调与容量复验
+
+主回调累计32/1296，完整场景1/72，33次实际600s尝试，早期一个时钟超限原样保留。新增 main-OOD-L3-06 order30 B3-M2/r1 与 order31 B3-M3/r0 均首尝试600s/144000步、H/E1、峰值55.844/74.282ms（均<100ms），动态评分与 SDK/终态/用量闭合，分别实测29calls/158556tokens和11calls/78015tokens。原生 round108 已登记通过 order29 的真实证据（request `59b730da546fb9224dd2a1adfdb94b600491d980e85d3479756204ea0f9b36ed`）。
+
+实际检查点 `qualification/formal-main-checkpoints.v1/after-0032.json` SHA `85ff6da515a0b44a493f3f665c60c51193d51d85d06a761cd5af66e20a49627d`，order32 B3-M2/r2未 dispatch、未预约、未飞行。观测同卷free 155103645696 B 低于冻结样本形状，保持安全 barrier。清理四份本研究已闭可重建测试scratch，实测+777768960B（`qualification/formal-main-checkpoints.v1/after-0032-scratch-cleanup.v1.json`）；冻结v4已闭开发SDK及原始终态、逐slot锁和文件SHA核对后，105份原dev world以同字节APFS压缩（历史3异常原样排除），实测+1424629760B、105份原SHA与SDK字节再次核对（`qualification/formal-main-checkpoints.v1/closed-development-world-pack.v1.json`）。未变更任何正式数据。
+
+再准入 `qualification/formal-main-checkpoints.v1/after-0032-capacity-rebase.v1.json` SHA `9fa14e6dd87497df91fbd12ee2b720355debc3603a9ae585e1bd6af9a9aeb53e`：完成4classic/28LLM不再重复占用未来cap2，33个实际attempt在归档/用量/请求packet的正偏差57,273B/LLM attempt分别加入剩余未压缩和压缩投影，保留原导出、其它开销和10GiB头部。剩余样本形状156017544308B，仍由导出峰控制。独立复验 `qualification/formal-main-checkpoints.v1/after-0032-capacity-review.v1.json` SHA `17aff76ad5a503f35871b5a7e8e7cc841e2ee4cf6e4f811eed826853dc4b9728`，封存free157066502144B且无阻断；正式准入读取实际通过，144项用量均known。需实际原生登记及放行时重测；余量较小，先逐槽复测再放行。不改阈值、数据、样本或正式阶段全关闭后压缩规则。holdout未开启，统计、图表与论文正文未开始。

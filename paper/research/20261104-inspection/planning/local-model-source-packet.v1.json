@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "url": "https://huggingface.co/api/models/mlx-community/Qwen3.8-27B-4bit?blobs=true",
+      "path": "planning/model-sources/local-candidate-1.metadata.v1.json",
+      "kind": "json",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://huggingface.co/mlx-community/Qwen3.8-27B-4bit/raw/main/README.md",
+      "path": "planning/model-sources/local-candidate-1.card.v1.md",
+      "kind": "text",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://huggingface.co/api/models/mlx-community/GLM-4.7-Flash-4bit?blobs=true",
+      "path": "planning/model-sources/local-candidate-2.metadata.v1.json",
+      "kind": "json",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://huggingface.co/mlx-community/GLM-4.7-Flash-4bit/raw/main/README.md",
+      "path": "planning/model-sources/local-candidate-2.card.v1.md",
+      "kind": "text",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://huggingface.co/api/models/mlx-community/Mistral-Small-24B-Instruct-2501-4bit?blobs=true",
+      "path": "planning/model-sources/local-candidate-3.metadata.v1.json",
+      "kind": "json",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://huggingface.co/mlx-community/Mistral-Small-24B-Instruct-2501-4bit/raw/main/README.md",
+      "path": "planning/model-sources/local-candidate-3.card.v1.md",
+      "kind": "text",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ml-explore/mlx-lm/main/README.md",
+      "path": "planning/model-sources/mlx-lm.readme.v1.md",
+      "kind": "text",
+      "max_bytes": 2000000
+    }
+  ]
+}

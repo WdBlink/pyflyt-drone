@@ -1,0 +1,3731 @@
+{
+  "writing_guidance": null,
+  "stage": "plan",
+  "brief": {
+    "angle": "Deadline-bound information delivery with finite reports, continuous flight and auditable causal evidence; negative LLM results are valid.",
+    "audience": "Robotics and embodied-agent benchmark researchers",
+    "budget": {},
+    "contract_status": "concrete",
+    "deliverable_plan": [
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "设计命题：Actor只使用合法因果信息，共享低层隔离任务编排。",
+        "evidence_requirements": "版本化工具/权限协议与合格控制证据",
+        "id": "F1",
+        "kind": "figure",
+        "purpose": "哪些信息、控制和裁判由各层掌握？",
+        "title": "权限与持续执行架构"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "待参考episode验证：时戳与job状态构成完整因果链。",
+        "evidence_requirements": "TODO: 合格非LLM参考episode原始trace，示意与实测分标",
+        "id": "F2",
+        "kind": "figure",
+        "purpose": "真实任务变化怎样经过观测、job和报告形成后果？",
+        "title": "参考episode时间线"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "待检验：完整分母下的Y/Q与C/S/D/H/E存在可估计差异。",
+        "evidence_requirements": "TODO: 八配置完整root配对原始结果、区间及分量",
+        "id": "F3",
+        "kind": "figure",
+        "purpose": "ID/OOD各等级下方法怎样权衡交付与安全？",
+        "title": "主质量与安全分量"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "待检验H1/H2：同模型编排、确认与记忆影响事件损失。",
+        "evidence_requirements": "TODO: 事件兄弟trace、统一需求日历、删失标记",
+        "id": "F4",
+        "kind": "figure",
+        "purpose": "事件改派何时真实生效，交付损失如何变化？",
+        "title": "事件与交接"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "待检验H3：持续飞行下推理/链路等待影响有效动态格。",
+        "evidence_requirements": "TODO: 实际延迟/费用receipt与受控注入对照",
+        "id": "F5",
+        "kind": "figure",
+        "purpose": "实际与注入时延分别如何改变及时交付？",
+        "title": "时延—质量—成本"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "待trace验证：失败原因可与观测、执行和裁判后果对应。",
+        "evidence_requirements": "TODO: 两类预声明选择规则下的实际失败trace",
+        "id": "F6",
+        "kind": "figure",
+        "purpose": "哪些合法包、job行为导致任务损失？",
+        "title": "代表失败因果链"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "有据机制差别与未知格决定贡献边界。",
+        "evidence_requirements": "主文/代码机制定位，包含SMART与GRaD-Nav++边界",
+        "id": "T1",
+        "kind": "table",
+        "purpose": "与既有UAV任务和持续执行评测差别在哪？",
+        "title": "机制近邻矩阵"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "待资格证据：仅合格包线与dev冻结参数进入test。",
+        "evidence_requirements": "TODO: G1–G4资格记录、split manifest与阈值版本",
+        "id": "T2",
+        "kind": "table",
+        "purpose": "哪些参数和控制/感知/时间条件已被冻结？",
+        "title": "生成器与资格"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "待检验：不预设LLM优胜，C/S/D/Q/H/E/Y/SR及成本同时可见。",
+        "evidence_requirements": "TODO: 完整root×repeat×condition分母、ID/OOD和等级分层",
+        "id": "T3",
+        "kind": "table",
+        "purpose": "强经典、统一ReAct和同模型编排的完整成绩是什么？",
+        "title": "主基线与完整结果"
+      },
+      {
+        "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+        "claim": "待检验：事件、去重记忆、递进确认分别解释机制差异。",
+        "evidence_requirements": "TODO: 预选L3 roots三项消融与失败归因",
+        "id": "T4",
+        "kind": "table",
+        "purpose": "移除单一机制会怎样，失败是否改变结论？",
+        "title": "消融与失败类型"
+      },
+      {
+        "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+        "claim": "证据约束下的章节论证；实证结论需正式数据。",
+        "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+        "id": "S0",
+        "kind": "section",
+        "purpose": "真实研究问题、方法、已观察结果和适用范围；不预写性能。",
+        "title": "Abstract"
+      },
+      {
+        "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+        "claim": "证据约束下的章节论证；实证结论需正式数据。",
+        "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+        "id": "S1",
+        "kind": "section",
+        "purpose": "民用交付、持续执行、最近工作机制差别与三个RQ。",
+        "title": "Introduction"
+      },
+      {
+        "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+        "claim": "证据约束下的章节论证；实证结论需正式数据。",
+        "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+        "id": "S2",
+        "kind": "section",
+        "purpose": "用逐机制主来源限定贡献；承认SMART执行评测、GRaD-Nav++飞行任务更新/推理开销先例。",
+        "title": "Related Work"
+      },
+      {
+        "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+        "claim": "证据约束下的章节论证；实证结论需正式数据。",
+        "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+        "id": "S3",
+        "kind": "section",
+        "purpose": "任务、公开信息/隐藏truth、异步job、时钟、固定窗口报告、评分与G1–G4资格。",
+        "title": "Benchmark"
+      },
+      {
+        "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+        "claim": "证据约束下的章节论证；实证结论需正式数据。",
+        "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+        "id": "S4",
+        "kind": "section",
+        "purpose": "强经典基线、统一ReAct与同模型编排，独立root、ID/OOD、holdout、完整失败分母及统计。",
+        "title": "Baselines and Protocol"
+      },
+      {
+        "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+        "claim": "证据约束下的章节论证；实证结论需正式数据。",
+        "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+        "id": "S5",
+        "kind": "section",
+        "purpose": "按三个RQ呈现正式结果；真实/注入时延分开；保留阴性结果与删失。",
+        "title": "Results"
+      },
+      {
+        "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+        "claim": "证据约束下的章节论证；实证结论需正式数据。",
+        "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+        "id": "S6",
+        "kind": "section",
+        "purpose": "合成代理/结构化传感器、空中退出、有限包线、无实机/真实电池、版本与小样本外推。",
+        "title": "Limitations"
+      },
+      {
+        "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+        "claim": "证据约束下的章节论证；实证结论需正式数据。",
+        "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+        "id": "S7",
+        "kind": "section",
+        "purpose": "只总结实际证据与边界，不把可复现协议等同真实救灾有效性。",
+        "title": "Conclusion"
+      },
+      {
+        "acceptance_criteria": "官方ieeeconf US Letter 10pt双栏，正文+图表+参考文献+附录共≤8页；实际PDF视觉核验、来源和引用核验、独立审查、完整源/证据映射；不含原赛事文件。",
+        "claim": "仅对冻结任务与证据范围作结论。",
+        "evidence_requirements": "全部F1–F6/T1–T4/S0–S7义务、模板/源码/PDF/版本manifest与真实独立审查。",
+        "id": "M1",
+        "kind": "manuscript",
+        "purpose": "可审阅、可重建的完整实证论文。",
+        "title": "RA-L manuscript and reproducible source"
+      }
+    ],
+    "direction": "Mission-level agents for continuous fixed-wing multi-UAV inspection",
+    "paper_type": "empirical",
+    "question": "Under shared qualified execution and causal sensing, how do mission agents trade inspection quality, safety, event recovery and latency during continuous multi-UAV fixed-wing flight?",
+    "resources": {
+      "access": "Local project materials and public primary literature",
+      "authorization": "User requested starting paper writing according to the existing plan; prepare local artifacts and verify evidence. Paid calls and expanded compute require concrete authorization.",
+      "cost_basis": "No paid external calls or simulation experiments initiated; native host cost is unreported by this controller.",
+      "hardware": "Current local Mac; simulation and TeX dependencies not yet probed"
+    },
+    "reviewers": [
+      "Codex independent reviewer (separate context; assignment pending)"
+    ],
+    "scope": "Begin the empirical benchmark paper specified by BENCHMARK_RESEARCH_PLAN.md. Current authorization covers read-only evidence intake, official venue comparison, literature preparation and local writing preparation. Qualification and formal results are missing. No paid API use, long simulation campaign, publication or submission is inferred.",
+    "venue": "IEEE Robotics and Automation Letters"
+  },
+  "approval": {
+    "actor": "codex-primary",
+    "at": "2026-11-05T03:03:14.730268+00:00",
+    "authorization": {
+      "mode": "delegated",
+      "path": "inputs/user-request.txt",
+      "quote": "按照这个计划，开始论文写作",
+      "scope": "Prepare and pursue the paper specified by the existing research plan through local evidence verification and writing preparation; do not infer paid services, expanded compute, formal simulation campaigns or publication authorization. The actual venue answer is recorded separately; the concrete budget still requires an actual answer.",
+      "sha256": "cf0a0d75d4e81786bf14f22fab0fe6137e891b5283808691042d04012c812960"
+    },
+    "basis": "delegated user instruction",
+    "brief_sha256": "a4cf4597fe0bc584c95f1277717c34e026c82bfa6cca8daa566584c5b48c9bd6"
+  },
+  "inputs": [
+    {
+      "stage": "intake",
+      "packet": {
+        "artifacts": [
+          "inputs/plan-excerpts.md",
+          "inputs/BENCHMARK_RESEARCH_PLAN.original.md",
+          "inputs/provenance.json",
+          "intake/feasibility.v1.md"
+        ],
+        "evidence": [
+          {
+            "end": 124,
+            "material_id": "plan-extract",
+            "quote": "尚不是已运行 benchmark 或实验结果。",
+            "start": 101
+          }
+        ],
+        "feasibility": {
+          "experiments": [
+            {
+              "claim": "Same-model event-aware orchestration may improve deadline-bound inspection delivery, without assuming LLM superiority.",
+              "comparison": "B4 vs B3 for a fixed model, and a dev-selected strong classical policy.",
+              "completion": "Complete retained root×repeat×method denominator with prospective raw traces and a compatible validated recording/statistics adapter.",
+              "failure_route": "Preserve policy failures; diagnose infrastructure failures separately. Missing qualification or operational errors block performance claims; do not reuse the old 64 short RTA trials.",
+              "metric": "Root-mean Y=H×E×Q; C/S/D, safety, terminal state and costs remain visible.",
+              "protocol": "Qualification then dev pilot; freeze independent-root ID/OOD splits, model manifest, report semantics and paired contrasts before test."
+            }
+          ],
+          "options": [
+            {
+              "evidence": [
+                {
+                  "end": 124,
+                  "material_id": "plan-extract",
+                  "quote": "尚不是已运行 benchmark 或实验结果。",
+                  "start": 101
+                }
+              ],
+              "id": "empirical-benchmark",
+              "implementation": "Retain the supplied continuous-flight multi-UAV inspection benchmark; acquire qualified platform and prospective evidence before result prose.",
+              "selection_reason": "Matches the user-provided research plan and preserves falsifiable empirical questions."
+            },
+            {
+              "basis": "assumption",
+              "evidence": [],
+              "id": "protocol-only",
+              "implementation": "Write a protocol or perspective without benchmark performance claims.",
+              "selection_reason": "Would require an explicit change in paper type and target, since the supplied goal is an empirical benchmark paper."
+            }
+          ],
+          "prerequisites": [
+            "Actual user venue choice and 8–15 matched accepted-paper calibration",
+            "Concrete plan-budget answer",
+            "G1–G4 qualified control, causal tools/sensing, grader and timing",
+            "Prospective root-paired evidence and figures before manuscript result writing"
+          ],
+          "resources": {
+            "authorization": "User authorized beginning paper writing from this plan. Local intake/source verification and writing preparation proceed; paid model calls, long campaigns and publication have not been authorized.",
+            "cost_basis": "No paid external service initiated; native host usage is unreported. Plan estimates 1296 main and 216 holdout episodes, 252 serial flight hours before extras, subject to pilot."
+          },
+          "selected_option": "empirical-benchmark",
+          "status": "conditional"
+        },
+        "materials": [
+          {
+            "availability": "readable",
+            "id": "plan-extract",
+            "path": "inputs/plan-excerpts.md",
+            "read_spans": [
+              [
+                0,
+                472
+              ]
+            ],
+            "sha256": "d428747fcc1e26af7eae37d036ee10453333fb95c46e7c1e718ad1f3275ebc01"
+          },
+          {
+            "availability": "metadata_only",
+            "id": "full-plan",
+            "limitation": "Main scientific plan sections 1–11 were read outside the controller; appended historical code/source excerpts were not fully re-audited this turn. Only the explicitly read extract supplies controller span evidence.",
+            "path": "inputs/BENCHMARK_RESEARCH_PLAN.original.md",
+            "read_spans": [],
+            "sha256": "dd01e21442950abccc543bb2ba4d53d1901fb2669dba21cbfe9aad7f13e591b0"
+          }
+        ],
+        "producer": "codex-primary",
+        "stage": "intake"
+      },
+      "hashes": {
+        "inputs/BENCHMARK_RESEARCH_PLAN.original.md": "dd01e21442950abccc543bb2ba4d53d1901fb2669dba21cbfe9aad7f13e591b0",
+        "inputs/plan-excerpts.md": "d428747fcc1e26af7eae37d036ee10453333fb95c46e7c1e718ad1f3275ebc01",
+        "inputs/provenance.json": "a573f86d3d293630fa7fcb8c783f251f9cb7364e2e59eb91932e2ef100e4f507",
+        "intake/feasibility.v1.md": "2f0272334f37f18600a8e33c98956b1f4058fb8101379472d8dae26ed802cdee"
+      }
+    },
+    {
+      "stage": "venue",
+      "packet": {
+        "artifacts": [
+          "planning/figure-table-plan.ral.v1.json",
+          "venue/analysis/S01.v1.json",
+          "venue/analysis/S02.v1.json",
+          "venue/analysis/S03.v1.json",
+          "venue/analysis/S04.v1.json",
+          "venue/analysis/S05.v1.json",
+          "venue/analysis/S06.v1.json",
+          "venue/analysis/S07.v1.json",
+          "venue/analysis/S08.v1.json",
+          "venue/analysis/manual-visuals.v1.json",
+          "venue/analysis/manual-visuals.v1.md",
+          "venue/analysis/panel-corrections.v1.json",
+          "venue/analysis/sample-version-audit.v1.md",
+          "venue/candidates.v1.json",
+          "venue/comparison.ral-confirmed.v1.json",
+          "venue/comparison.ral-confirmed.v2.json",
+          "venue/comparison.v1.json",
+          "venue/comparison.v1.md",
+          "venue/design-template.v1.json",
+          "venue/measurement-input.v1.json",
+          "venue/measurements.ral.v1.json",
+          "venue/measurements.ral.v2.json",
+          "venue/official/ieeeconf-macroman-utf8/ieeeconf.cls",
+          "venue/official/ieeeconf-macroman-utf8/root.tex",
+          "venue/official/ieeeconf.zip",
+          "venue/official/ieeeconf.zip.source.json",
+          "venue/official/ieeeconf/ieeeconf.cls",
+          "venue/official/ieeeconf/root.tex",
+          "venue/official/template-encoding-record.v2.json",
+          "venue/official/template-smoke-v3/process-output.txt",
+          "venue/official/template-smoke-v3/root.log",
+          "venue/official/template-smoke-v3/root.pdf",
+          "venue/plan-check.ral.v1.json",
+          "venue/plan-check.ral.v2.json",
+          "venue/profile.ral.v1.json",
+          "venue/profile.ral.v2.json",
+          "venue/reading-index.ral.v1.md",
+          "venue/reading-index.ral.v2.md",
+          "venue/sample-acquisition.v2.json",
+          "venue/sample-acquisition.v4.json",
+          "venue/samples/S01-aerial-gym.pdf",
+          "venue/samples/S01-aerial-gym.pdf.source.json",
+          "venue/samples/S02-lip-preprint.pdf",
+          "venue/samples/S02-lip-preprint.pdf.source.json",
+          "venue/samples/S03-nl2hltl-preprint.pdf",
+          "venue/samples/S03-nl2hltl-preprint.pdf.source.json",
+          "venue/samples/S04-smart.pdf",
+          "venue/samples/S04-smart.pdf.source.json",
+          "venue/samples/S05-mripp.pdf",
+          "venue/samples/S05-mripp.pdf.source.json",
+          "venue/samples/S06-hetmrta.pdf",
+          "venue/samples/S06-hetmrta.pdf.source.json",
+          "venue/samples/S07-pursuit.pdf",
+          "venue/samples/S07-pursuit.pdf.source.json",
+          "venue/samples/S08-gradnav.pdf",
+          "venue/samples/S08-gradnav.pdf.source.json",
+          "venue/sources/gradnav-metadata.html",
+          "venue/sources/gradnav-metadata.html.source.json",
+          "venue/sources/hetmrta-acceptance.html",
+          "venue/sources/hetmrta-acceptance.html.source.json",
+          "venue/sources/lip-author.html",
+          "venue/sources/lip-author.html.source.json",
+          "venue/sources/lip-publisher-metadata.json",
+          "venue/sources/lip-publisher-metadata.json.source.json",
+          "venue/sources/marmot-publications.html",
+          "venue/sources/marmot-publications.html.source.json",
+          "venue/sources/mripp-author-repository.html",
+          "venue/sources/mripp-author-repository.html.source.json",
+          "venue/sources/mripp-registry.json",
+          "venue/sources/mripp-registry.json.source.json",
+          "venue/sources/nl2hltl-author-repository.html",
+          "venue/sources/nl2hltl-author-repository.html.source.json",
+          "venue/sources/nl2hltl-lab.html",
+          "venue/sources/nl2hltl-lab.html.source.json",
+          "venue/sources/nl2hltl-registry.json",
+          "venue/sources/nl2hltl-registry.json.source.json",
+          "venue/sources/ral-authors.html",
+          "venue/sources/ral-authors.html.source.json",
+          "venue/sources/smart-project.html",
+          "venue/sources/smart-project.html.source.json",
+          "venue/sources/tro-authors.html",
+          "venue/sources/tro-authors.html.source.json"
+        ],
+        "direction": "Mission-level agents for continuous fixed-wing multi-UAV inspection",
+        "figure_table_plan": "planning/figure-table-plan.ral.v1.json",
+        "measurements": "venue/measurements.ral.v2.json",
+        "official_rules": {
+          "basis": "official_requirement",
+          "path": "venue/sources/ral-authors.html",
+          "sha256": "c1a9b2ceaa5604aa9dbfcc58f38ac863b3c1e514bf306a4f6cb2449a38c3a9b9",
+          "url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/"
+        },
+        "page_budget": {
+          "basis": "official_requirement",
+          "includes_appendix": true,
+          "includes_references": true,
+          "limit_type": "hard_limit",
+          "reason": "RA-L全部内容总计最多8页；不使用外加文字/图表补充材料规避上限。常规6页，超页费用仅在将来投稿时另行确定，未采购。",
+          "source": {
+            "basis": "official_requirement",
+            "path": "venue/sources/ral-authors.html",
+            "quote": "Letters are six pages long in two-column IEEE format (see below for details), including figures and references, with up to two extra pages with extra page charges, for a maximum of eight pages.",
+            "sha256": "c1a9b2ceaa5604aa9dbfcc58f38ac863b3c1e514bf306a4f6cb2449a38c3a9b9",
+            "url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/"
+          },
+          "target": 8
+        },
+        "paper_type": "empirical",
+        "producer": "codex-primary",
+        "reading_index": "venue/reading-index.ral.v2.md",
+        "samples": [
+          {
+            "acceptance_evidence": {
+              "path": "venue/samples/S01-aerial-gym.pdf",
+              "sha256": "5c73cafa8c22f042be02a8fc6729f3cb6de510c054e3646a2aade76e60b5ecd0",
+              "url": "https://arxiv.org/pdf/2503.01471v1"
+            },
+            "design": {
+              "figures": [
+                {
+                  "caption": "Fig. 1: Salient features of the Aerial Gym Simulator. exteroception-driven autonomous (e.g., depth cameras-based) navigation is concerned. Accordingly, the field of aerial robotics shall greatly benefit",
+                  "caption_measurement_note": "机械caption可能拼入邻近正文；原测量字符串保留，语义判断仅依据已实际查看的图/表区域与真实图注。",
+                  "claim": "场景、传感器和控制部署形成一条功能链。",
+                  "design_takeaway": "首图同时交代输入、执行和验证",
+                  "evidence": "首图的机型、传感器输出与实机走廊拼图",
+                  "id": "S01-F1",
+                  "limitations": "功能展示不是任务成功率",
+                  "number": 1,
+                  "page": 1,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：多种机体与环境。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "首图同时交代输入、执行和验证",
+                      "evidence": "实际查看PDF第1页：多种机体与环境。",
+                      "label": "top",
+                      "limitations": "功能展示不是任务成功率",
+                      "question": "多种机体与环境揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：自定义几何/语义传感器输出。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "首图同时交代输入、执行和验证",
+                      "evidence": "实际查看PDF第1页：自定义几何/语义传感器输出。",
+                      "label": "bottom-left",
+                      "limitations": "功能展示不是任务成功率",
+                      "question": "自定义几何/语义传感器输出揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：深度导航实机展示。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "首图同时交代输入、执行和验证",
+                      "evidence": "实际查看PDF第1页：深度导航实机展示。",
+                      "label": "bottom-right",
+                      "limitations": "功能展示不是任务成功率",
+                      "question": "深度导航实机展示揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "平台提供哪些可验证能力？",
+                  "type": "teaser"
+                },
+                {
+                  "caption": "Fig. 2: Core components for the Aerial Gym Simulator include the physics engine (Isaac Gym), Warp and Isaac Gym-based rendering solutions, robot control suite and tools for environment generation and randomization.",
+                  "claim": "共享张量字典连接各管理模块与任务接口。",
+                  "design_takeaway": "把共享执行器与Agent接口分层",
+                  "evidence": "横跨两栏的模块图及双向箭头",
+                  "id": "S01-F2",
+                  "limitations": "该全局训练数据通路不能照搬为Actor权限",
+                  "number": 2,
+                  "page": 3,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "仿真、控制、任务与学习如何衔接？",
+                  "type": "system_architecture"
+                },
+                {
+                  "caption": "Fig. 3: Various airframes provided with the Aerial Gym Simulator. Rigid quad- (a) and octa-rotors (b and c), alongside a compliant robot Morphy (d) based on [28] and reconfigurable robot (e) inspired by [5].",
+                  "claim": "图示包含刚性、柔性与可重构多旋翼。",
+                  "design_takeaway": "明确已验证机型集合",
+                  "evidence": "a–e五种机体渲染",
+                  "id": "S01-F3",
+                  "limitations": "不支持固定翼资格结论",
+                  "number": 3,
+                  "page": 3,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：刚性四旋翼。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "明确已验证机型集合",
+                      "evidence": "实际查看PDF第3页：刚性四旋翼。",
+                      "label": "a",
+                      "limitations": "不支持固定翼资格结论",
+                      "question": "刚性四旋翼揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：平面八旋翼。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "明确已验证机型集合",
+                      "evidence": "实际查看PDF第3页：平面八旋翼。",
+                      "label": "b",
+                      "limitations": "不支持固定翼资格结论",
+                      "question": "平面八旋翼揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：非平面八旋翼。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "明确已验证机型集合",
+                      "evidence": "实际查看PDF第3页：非平面八旋翼。",
+                      "label": "c",
+                      "limitations": "不支持固定翼资格结论",
+                      "question": "非平面八旋翼揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：柔性Morphy。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "明确已验证机型集合",
+                      "evidence": "实际查看PDF第3页：柔性Morphy。",
+                      "label": "d",
+                      "limitations": "不支持固定翼资格结论",
+                      "question": "柔性Morphy揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：可重构机体。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "明确已验证机型集合",
+                      "evidence": "实际查看PDF第3页：可重构机体。",
+                      "label": "e",
+                      "limitations": "不支持固定翼资格结论",
+                      "question": "可重构机体揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "机体支持范围是什么？",
+                  "type": "dataset_example"
+                },
+                {
+                  "caption": "Fig. 4: Sensor measurements using the proposed rendering framework. Fig. 4a shows depth, segmentation, surface-normal and face-index images captured by a simulated camera sensor. Fig. 4b shows the data captured using a standard 3-D LiDAR and a hemispherical dome LiDAR sensor. ameas,t = atrue,t + ba,t + na ;",
+                  "claim": "相机与两类激光雷达输出不同几何/语义通道。",
+                  "design_takeaway": "示例输出须与接口字段对应",
+                  "evidence": "a、b及各四个子视图",
+                  "id": "S01-F4",
+                  "limitations": "可视化不等于感知误差校准",
+                  "number": 4,
+                  "page": 5,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：相机四种通道。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：相机四种通道。",
+                      "label": "a",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "相机四种通道揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：深度图。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：深度图。",
+                      "label": "a.i",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "深度图揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：表面法向图。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：表面法向图。",
+                      "label": "a.ii",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "表面法向图揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：分割图。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：分割图。",
+                      "label": "a.iii",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "分割图揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：面片索引。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：面片索引。",
+                      "label": "a.iv",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "面片索引揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：两类LiDAR通道。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：两类LiDAR通道。",
+                      "label": "b",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "两类LiDAR通道揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：OS0分割。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：OS0分割。",
+                      "label": "b.i",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "OS0分割揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：OS0距离。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：OS0距离。",
+                      "label": "b.ii",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "OS0距离揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：Dome分割。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：Dome分割。",
+                      "label": "b.iii",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "Dome分割揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：Dome距离。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "示例输出须与接口字段对应",
+                      "evidence": "实际查看PDF第5页：Dome距离。",
+                      "label": "b.iv",
+                      "limitations": "可视化不等于感知误差校准",
+                      "question": "Dome距离揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "合成传感器实际输出哪些量？",
+                  "type": "dataset_example"
+                },
+                {
+                  "caption": "Fig. 5: Real-world testing of position-setpoint tracking policies with velocity (left) and acceleration (right) commands.",
+                  "claim": "位置误差、指令与速度被联合比较。",
+                  "design_takeaway": "控制资格图并列误差与控制行为",
+                  "evidence": "速度/加速度两列，实线实机与仿真统计带",
+                  "id": "S01-F5",
+                  "limitations": "两列任务不是独立场景样本",
+                  "number": 5,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "位置误差在展示轨迹中逐步趋近零。",
+                      "design_takeaway": "控制资格图并列误差与控制行为",
+                      "evidence": "实际查看PDF第7页：速度控制位置误差。",
+                      "label": "velocity.error",
+                      "limitations": "两列任务不是独立场景样本",
+                      "question": "速度控制位置误差揭示什么？"
+                    },
+                    {
+                      "claim": "速度/偏航命令经历瞬态后回落。",
+                      "design_takeaway": "控制资格图并列误差与控制行为",
+                      "evidence": "实际查看PDF第7页：速度控制策略指令。",
+                      "label": "velocity.command",
+                      "limitations": "两列任务不是独立场景样本",
+                      "question": "速度控制策略指令揭示什么？"
+                    },
+                    {
+                      "claim": "测得速度随闭环指令趋于稳定。",
+                      "design_takeaway": "控制资格图并列误差与控制行为",
+                      "evidence": "实际查看PDF第7页：速度控制实际速度。",
+                      "label": "velocity.state",
+                      "limitations": "两列任务不是独立场景样本",
+                      "question": "速度控制实际速度揭示什么？"
+                    },
+                    {
+                      "claim": "加速度抽象也表现出误差收敛。",
+                      "design_takeaway": "控制资格图并列误差与控制行为",
+                      "evidence": "实际查看PDF第7页：加速度控制位置误差。",
+                      "label": "acceleration.error",
+                      "limitations": "两列任务不是独立场景样本",
+                      "question": "加速度控制位置误差揭示什么？"
+                    },
+                    {
+                      "claim": "加速度命令的瞬态形式与左列不同。",
+                      "design_takeaway": "控制资格图并列误差与控制行为",
+                      "evidence": "实际查看PDF第7页：加速度控制策略指令。",
+                      "label": "acceleration.command",
+                      "limitations": "两列任务不是独立场景样本",
+                      "question": "加速度控制策略指令揭示什么？"
+                    },
+                    {
+                      "claim": "该示例最终速度回落，不能由此证明全部包线合格。",
+                      "design_takeaway": "控制资格图并列误差与控制行为",
+                      "evidence": "实际查看PDF第7页：加速度控制实际速度。",
+                      "label": "acceleration.state",
+                      "limitations": "两列任务不是独立场景样本",
+                      "question": "加速度控制实际速度揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "不同控制抽象的跟踪能否与仿真相符？",
+                  "type": "quantitative_results"
+                },
+                {
+                  "caption": "Fig. 6: Real-world deployment of the depth-image based, map-free navigation policy in a cluttered corridor. The policy provides commands to navigate the environment safely despite sensor noise.",
+                  "claim": "例子连接机载深度、指令与实机轨迹。",
+                  "design_takeaway": "合法感知到实际轨迹须可追溯",
+                  "evidence": "左侧深度嵌图及右侧轨迹叠图",
+                  "id": "S01-F6",
+                  "limitations": "单次展示不能给出安全率",
+                  "number": 6,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：传感器深度嵌图。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "合法感知到实际轨迹须可追溯",
+                      "evidence": "实际查看PDF第7页：传感器深度嵌图。",
+                      "label": "depth",
+                      "limitations": "单次展示不能给出安全率",
+                      "question": "传感器深度嵌图揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：目标及当前控制方向。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "合法感知到实际轨迹须可追溯",
+                      "evidence": "实际查看PDF第7页：目标及当前控制方向。",
+                      "label": "onboard",
+                      "limitations": "单次展示不能给出安全率",
+                      "question": "目标及当前控制方向揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：完整走廊航迹。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "合法感知到实际轨迹须可追溯",
+                      "evidence": "实际查看PDF第7页：完整走廊航迹。",
+                      "label": "trajectory",
+                      "limitations": "单次展示不能给出安全率",
+                      "question": "完整走廊航迹揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "深度策略能否在走廊执行？",
+                  "type": "qualitative_comparison"
+                },
+                {
+                  "caption": "Fig. 7: Mean and standard deviation (shaded) of state observations and commanded actions across motor-control policies trained with 5 different seeds. Experiments with identical setpoint sequences are evaluated in both simulation and the real-world.",
+                  "claim": "误差和速度较接近，推力仍存在域差异。",
+                  "design_takeaway": "同时保留接近和偏离的状态量",
+                  "evidence": "实机/仿真两列各三行",
+                  "id": "S01-F7",
+                  "limitations": "五训练seed不等于五独立任务root",
+                  "number": 7,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "真实跟踪存在瞬态，但整体贴近所示仿真范围。",
+                      "design_takeaway": "同时保留接近和偏离的状态量",
+                      "evidence": "实际查看PDF第7页：实机位置误差。",
+                      "label": "real.error",
+                      "limitations": "五训练seed不等于五独立任务root",
+                      "question": "实机位置误差揭示什么？"
+                    },
+                    {
+                      "claim": "仿真对设定点变化产生规律瞬态。",
+                      "design_takeaway": "同时保留接近和偏离的状态量",
+                      "evidence": "实际查看PDF第7页：仿真位置误差。",
+                      "label": "sim.error",
+                      "limitations": "五训练seed不等于五独立任务root",
+                      "question": "仿真位置误差揭示什么？"
+                    },
+                    {
+                      "claim": "实机各电机推力存在持续不均衡。",
+                      "design_takeaway": "同时保留接近和偏离的状态量",
+                      "evidence": "实际查看PDF第7页：实机各电机推力。",
+                      "label": "real.thrust",
+                      "limitations": "五训练seed不等于五独立任务root",
+                      "question": "实机各电机推力揭示什么？"
+                    },
+                    {
+                      "claim": "仿真电机推力较对称，显示未完全覆盖硬件差异。",
+                      "design_takeaway": "同时保留接近和偏离的状态量",
+                      "evidence": "实际查看PDF第7页：仿真各电机推力。",
+                      "label": "sim.thrust",
+                      "limitations": "五训练seed不等于五独立任务root",
+                      "question": "仿真各电机推力揭示什么？"
+                    },
+                    {
+                      "claim": "真实速度响应包含可见峰值与恢复。",
+                      "design_takeaway": "同时保留接近和偏离的状态量",
+                      "evidence": "实际查看PDF第7页：实机速度。",
+                      "label": "real.velocity",
+                      "limitations": "五训练seed不等于五独立任务root",
+                      "question": "实机速度揭示什么？"
+                    },
+                    {
+                      "claim": "仿真速度峰值与实机相近但并非逐点一致。",
+                      "design_takeaway": "同时保留接近和偏离的状态量",
+                      "evidence": "实际查看PDF第7页：仿真速度。",
+                      "label": "sim.velocity",
+                      "limitations": "五训练seed不等于五独立任务root",
+                      "question": "仿真速度揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "仿真和实机状态/动作分布哪里不同？",
+                  "type": "analysis_plot"
+                }
+              ],
+              "tables": [
+                {
+                  "caption": "TABLE I: Simulation Throughput (samples per second (SPS) & frames per second (FPS)) and Feature Comparison Instances / Features gym-pybullet-drones [20] L2F [33]∗",
+                  "claim": "高吞吐伴随不同传感器和碰撞建模能力。",
+                  "design_takeaway": "吞吐必须与任务能力共同报告",
+                  "evidence": "按实例规模和传感器功能分列",
+                  "id": "S01-T1",
+                  "limitations": "硬件与仿真语义不同限制直接排名",
+                  "number": 1,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "吞吐比较是否同时保留功能差别？",
+                  "type": "comparison_related_work"
+                },
+                {
+                  "caption": "TABLE II: Rendering Throughput Comparison",
+                  "claim": "速度随分辨率与环境数变化，保留崩溃格。",
+                  "design_takeaway": "失败格不删；报告RTF与积压",
+                  "evidence": "两套渲染器的分辨率×实例矩阵",
+                  "id": "S01-T2",
+                  "limitations": "该FPS不等于端到端Agent实时性",
+                  "number": 2,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "分辨率和并行规模如何影响渲染？",
+                  "type": "cost_breakdown"
+                }
+              ]
+            },
+            "direction_match": "航空仿真平台与执行/感知吞吐benchmark；对应共享低层与1×资格。",
+            "id": "S01",
+            "pdf": "venue/samples/S01-aerial-gym.pdf",
+            "sample_version_limitation": "录用后作者版8页，首面明确RA-L接受信息。",
+            "title": "Aerial Gym Simulator",
+            "venue_label": "IEEE Robotics and Automation Letters",
+            "visual_read": {
+              "method": "rendered_pdf",
+              "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。",
+              "pages": [
+                1,
+                3,
+                5,
+                6,
+                7
+              ]
+            },
+            "year": 2025
+          },
+          {
+            "acceptance_evidence": {
+              "path": "venue/sources/lip-publisher-metadata.json",
+              "sha256": "0bfd92d5a222cd835691dc607b448a07e9f046b13aee83f15d83db1699e4ef67",
+              "url": "https://api.crossref.org/works/10.1109%2FLRA.2024.3518105"
+            },
+            "design": {
+              "figures": [
+                {
+                  "caption": "Fig. 1: LiP-LLM generates a dependency graph from a skill list and allocates the actions to multiple robots using linear programming. In the skill list generation phase, it creates a skill list from a predefined skill set to accomplish the given instructions. Next, it analyzes the skills in the skill list for precedence dependencies and generates a dependency graph. Finally, it allocates the tasks to each robot using linear programming and executes them.",
+                  "claim": "技能、依赖图与线性分配被显式分开。",
+                  "design_takeaway": "画清LLM与经典调度职责",
+                  "evidence": "三列技能生成→依赖→任务分配",
+                  "id": "S02-F1",
+                  "limitations": "此图没有持续飞行时钟",
+                  "number": 1,
+                  "page": 2,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：LLM选择可用技能。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "画清LLM与经典调度职责",
+                      "evidence": "实际查看PDF第2页：LLM选择可用技能。",
+                      "label": "skills",
+                      "limitations": "此图没有持续飞行时钟",
+                      "question": "LLM选择可用技能揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：显式先后依赖图。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "画清LLM与经典调度职责",
+                      "evidence": "实际查看PDF第2页：显式先后依赖图。",
+                      "label": "dependencies",
+                      "limitations": "此图没有持续飞行时钟",
+                      "question": "显式先后依赖图揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：优化分配与执行。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "画清LLM与经典调度职责",
+                      "evidence": "实际查看PDF第2页：优化分配与执行。",
+                      "label": "allocation",
+                      "limitations": "此图没有持续飞行时钟",
+                      "question": "优化分配与执行揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "语言推理与优化各承担什么？",
+                  "type": "method_overview"
+                },
+                {
+                  "caption": "Fig. 2: Experiment environments : (a)Environment A includes two arm robots. (b)Environment B includes two arm robots and one mobile robot. (c)Environment C includes three arm robots (two in the living room and one in the kitchen) and two mobile robots.",
+                  "claim": "三个场景改变机械臂、移动机器人与房间配置。",
+                  "design_takeaway": "场景变化必须对应受控因素",
+                  "evidence": "a双臂、b双臂加移动、c多房间",
+                  "id": "S02-F2",
+                  "limitations": "室内操控不等于机群巡检",
+                  "number": 2,
+                  "page": 5,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：双臂单桌。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "场景变化必须对应受控因素",
+                      "evidence": "实际查看PDF第5页：双臂单桌。",
+                      "label": "a",
+                      "limitations": "室内操控不等于机群巡检",
+                      "question": "双臂单桌揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：双臂加移动机器人。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "场景变化必须对应受控因素",
+                      "evidence": "实际查看PDF第5页：双臂加移动机器人。",
+                      "label": "b",
+                      "limitations": "室内操控不等于机群巡检",
+                      "question": "双臂加移动机器人揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：多房间、多臂、多移动机器人。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "场景变化必须对应受控因素",
+                      "evidence": "实际查看PDF第5页：多房间、多臂、多移动机器人。",
+                      "label": "c",
+                      "limitations": "室内操控不等于机群巡检",
+                      "question": "多房间、多臂、多移动机器人揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "实验复杂度如何改变？",
+                  "type": "dataset_example"
+                }
+              ],
+              "tables": [
+                {
+                  "caption": "TABLE I. L ANGUAGE I NSTRUCTION ’G ROUP NAME ’ REPRESENTS THE INSTRUCTION GROUP. ’D ETAIL’ PROVIDES DETAILS ABOUT EACH INSTRUCTION GROUP. ’E XAMPLE ’ SHOWS EXAMPLE OF THE INSTRUCTIONS . ’T RIAL’ IS THE NUMBER OF INSTRUCTIONS IN EACH GROUP.",
+                  "claim": "四组包含基本、命名、歧义与新增对象。",
+                  "design_takeaway": "预先定义任务变化与数量",
+                  "evidence": "组别/细节/例子/trial列",
+                  "id": "S02-T1",
+                  "limitations": "语言改写不是独立物理root",
+                  "number": 1,
+                  "page": 5,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "指令扰动的内容与分母是什么？",
+                  "type": "dataset_statistics"
+                },
+                {
+                  "caption": "TABLE II.",
+                  "claim": "方法优势依赖组别，指标并列。",
+                  "design_takeaway": "展示质量与时间而非单个优点",
+                  "evidence": "G1–G4与A/B环境的SR/SPL/Time",
+                  "id": "S02-T2",
+                  "limitations": "文中时间只对成功实例统计，不用于本研究主分母",
+                  "number": 2,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "不同指令组的成功、效率、时间如何权衡？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE III.",
+                  "claim": "约束分层后保留各方法三个指标。",
+                  "design_takeaway": "对硬约束分层汇报",
+                  "evidence": "C1–C3与A/B环境的结果块",
+                  "id": "S02-T3",
+                  "limitations": "不能把SPL当真实飞行航程",
+                  "number": 3,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "机器人约束是否改变结论？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE IV.",
+                  "claim": "成功率与过程时间的优势并不一致。",
+                  "design_takeaway": "明确保留速度与成功的相反排序",
+                  "evidence": "C场景L1–L3中SMART-LLM有更短过程时间",
+                  "id": "S02-T4",
+                  "limitations": "不能只用成功案例时间支持部署结论",
+                  "number": 4,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "更复杂指令下是否仍全面占优？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE V.",
+                  "claim": "成功和效率提升与更高过程时间并存。",
+                  "design_takeaway": "主表应同时给质量和资源代价",
+                  "evidence": "C场景C1–C3表",
+                  "id": "S02-T5",
+                  "limitations": "预印本9页，不能视为RA-L最终页数惯例",
+                  "number": 5,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "复杂场景约束增加后表现如何？",
+                  "type": "main_results"
+                }
+              ]
+            },
+            "direction_match": "LLM与经典优化的多机器人任务编排；对应强基线与同条件公平比较。",
+            "id": "S02",
+            "pdf": "venue/samples/S02-lip-preprint.pdf",
+            "sample_version_limitation": "公开v1早于录用且9页；出版记录为8页。只作为机制/图表设计参考，不能据此批准9页稿。",
+            "title": "LiP-LLM",
+            "venue_label": "IEEE Robotics and Automation Letters",
+            "visual_read": {
+              "method": "rendered_pdf",
+              "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。",
+              "pages": [
+                2,
+                5,
+                6,
+                7
+              ]
+            },
+            "year": 2025
+          },
+          {
+            "acceptance_evidence": {
+              "path": "venue/sources/nl2hltl-lab.html",
+              "sha256": "38bd7525169caf742d5aac69a839fc2d9ff43c5dd797c2846899deeb249d45b5",
+              "url": "https://icontrol.ri.cmu.edu/research/hierarchical_specifications.html"
+            },
+            "design": {
+              "figures": [
+                {
+                  "caption": "Fig. 1: A sequence of images, arranged from left to right and top to bottom, depicts the task “First, put a set of keychains on the armchair. Retrieve a pencil and put it on the side table. Move the phone and the bat to the bed in any order”, objects and their trajectories are marked with different colors",
+                  "claim": "离散时间快照对应多对象并行执行。",
+                  "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                  "evidence": "九帧地图、对象颜色和t标签",
+                  "id": "S03-F1",
+                  "limitations": "离散步数不是墙钟推理时延",
+                  "number": 1,
+                  "page": 1,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：初态。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：初态。",
+                      "label": "t1",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "初态揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：机器人3拾取钥匙。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：机器人3拾取钥匙。",
+                      "label": "t16",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "机器人3拾取钥匙揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：机器人3放置钥匙。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：机器人3放置钥匙。",
+                      "label": "t18",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "机器人3放置钥匙揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：机器人1拾取棒球棒、机器人4接近铅笔。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：机器人1拾取棒球棒、机器人4接近铅笔。",
+                      "label": "t31",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "机器人1拾取棒球棒、机器人4接近铅笔揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：机器人1接近床、机器人4拾取铅笔。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：机器人1接近床、机器人4拾取铅笔。",
+                      "label": "t33",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "机器人1接近床、机器人4拾取铅笔揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：棒球棒放床、机器人4接近边桌。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：棒球棒放床、机器人4接近边桌。",
+                      "label": "t37",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "棒球棒放床、机器人4接近边桌揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：机器人1拾取手机、机器人4接近边桌。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：机器人1拾取手机、机器人4接近边桌。",
+                      "label": "t47",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "机器人1拾取手机、机器人4接近边桌揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：机器人1接近扶手椅、机器人4放置铅笔。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：机器人1接近扶手椅、机器人4放置铅笔。",
+                      "label": "t50",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "机器人1接近扶手椅、机器人4放置铅笔揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：手机放扶手椅、机器人4接近边桌。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用事件/观察时间串联可审计轨迹",
+                      "evidence": "实际查看PDF第1页：手机放扶手椅、机器人4接近边桌。",
+                      "label": "t57",
+                      "limitations": "离散步数不是墙钟推理时延",
+                      "question": "手机放扶手椅、机器人4接近边桌揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "多机器人时序依赖如何可视化？",
+                  "type": "teaser"
+                },
+                {
+                  "caption": "Fig. 2: Overview of the framework N L 2H LTL 2P LAN. The non-leaf nodes in the Hierarchical Task Tree (see Section IV-A), the language descriptions of subtasks, and the flat specifications are color-coded to indicate one-to-one correspondence. Summary snippets of the prompts are provided, with more information accessible on the project page nl2hltl2plan.github.io.",
+                  "claim": "任务树、逐层指令与LTL一一对应。",
+                  "design_takeaway": "表示转换须标出可核验中间产物",
+                  "evidence": "提示列与输出树/层次公式列",
+                  "id": "S03-F2",
+                  "limitations": "形式规格不自动保证物理执行",
+                  "number": 2,
+                  "page": 2,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "层次任务表示如何连接语言和规划？",
+                  "type": "method_overview"
+                },
+                {
+                  "caption": "Fig. 3: Comparison of pipelines from natural language to plans between S MART-L LM and N L 2H LTL 2P LAN.",
+                  "claim": "直接代码生成与翻译器加规划器被并列。",
+                  "design_takeaway": "比较架构必须明确共享输入",
+                  "evidence": "上下两条共享状态/技能输入的通路",
+                  "id": "S03-F3",
+                  "limitations": "不能由结构图证明性能增益",
+                  "number": 3,
+                  "page": 5,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：SMART-LLM直接代码计划。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "比较架构必须明确共享输入",
+                      "evidence": "实际查看PDF第5页：SMART-LLM直接代码计划。",
+                      "label": "top",
+                      "limitations": "不能由结构图证明性能增益",
+                      "question": "SMART-LLM直接代码计划揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：翻译器/LTL/规划器分离。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "比较架构必须明确共享输入",
+                      "evidence": "实际查看PDF第5页：翻译器/LTL/规划器分离。",
+                      "label": "bottom",
+                      "limitations": "不能由结构图证明性能增益",
+                      "question": "翻译器/LTL/规划器分离揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "对比方法的结构差别是什么？",
+                  "type": "qualitative_comparison"
+                },
+                {
+                  "caption": "Fig. 4: Comparative snapshots between N L 2H LTL 2P LAN and an LLM for task 6. N L 2H LTL 2P LAN generates an optimal trajectory, whereas the LLM follows the sequence in which the fruits are mentioned in the instructions.",
+                  "claim": "两个行序列显示不同取放顺序。",
+                  "design_takeaway": "同输入并列展示取舍",
+                  "evidence": "上行本文方法、下行LLM的四帧",
+                  "id": "S03-F4",
+                  "limitations": "选择案例不能代表平均效应",
+                  "number": 4,
+                  "page": 6,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：先处理绿苹果。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "同输入并列展示取舍",
+                      "evidence": "实际查看PDF第6页：先处理绿苹果。",
+                      "label": "ours-1",
+                      "limitations": "选择案例不能代表平均效应",
+                      "question": "先处理绿苹果揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：接续放置绿苹果。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "同输入并列展示取舍",
+                      "evidence": "实际查看PDF第6页：接续放置绿苹果。",
+                      "label": "ours-2",
+                      "limitations": "选择案例不能代表平均效应",
+                      "question": "接续放置绿苹果揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：处理红苹果。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "同输入并列展示取舍",
+                      "evidence": "实际查看PDF第6页：处理红苹果。",
+                      "label": "ours-3",
+                      "limitations": "选择案例不能代表平均效应",
+                      "question": "处理红苹果揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：处理橙子。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "同输入并列展示取舍",
+                      "evidence": "实际查看PDF第6页：处理橙子。",
+                      "label": "ours-4",
+                      "limitations": "选择案例不能代表平均效应",
+                      "question": "处理橙子揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：先处理绿苹果。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "同输入并列展示取舍",
+                      "evidence": "实际查看PDF第6页：先处理绿苹果。",
+                      "label": "llm-1",
+                      "limitations": "选择案例不能代表平均效应",
+                      "question": "先处理绿苹果揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：随后处理橙子。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "同输入并列展示取舍",
+                      "evidence": "实际查看PDF第6页：随后处理橙子。",
+                      "label": "llm-2",
+                      "limitations": "选择案例不能代表平均效应",
+                      "question": "随后处理橙子揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：最后处理红苹果。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "同输入并列展示取舍",
+                      "evidence": "实际查看PDF第6页：最后处理红苹果。",
+                      "label": "llm-3",
+                      "limitations": "选择案例不能代表平均效应",
+                      "question": "最后处理红苹果揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：完成红苹果放置。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "同输入并列展示取舍",
+                      "evidence": "实际查看PDF第6页：完成红苹果放置。",
+                      "label": "llm-4",
+                      "limitations": "选择案例不能代表平均效应",
+                      "question": "完成红苹果放置揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "同一任务的动作顺序如何不同？",
+                  "type": "qualitative_comparison"
+                },
+                {
+                  "caption": "Fig. 5: Four robot arms in straight line or square configurations, where symbols E, F and G represent source locations and H, I and J denote target locations.",
+                  "claim": "直线和方形布局有不同可交接关系。",
+                  "design_takeaway": "交接拓扑需要显式展示",
+                  "evidence": "a直线、b方形及源/目标标识",
+                  "id": "S03-F5",
+                  "limitations": "臂间交接不等同空中观测交接",
+                  "number": 5,
+                  "page": 6,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：直线协作臂。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "交接拓扑需要显式展示",
+                      "evidence": "实际查看PDF第6页：直线协作臂。",
+                      "label": "a",
+                      "limitations": "臂间交接不等同空中观测交接",
+                      "question": "直线协作臂揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：方形协作臂。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "交接拓扑需要显式展示",
+                      "evidence": "实际查看PDF第6页：方形协作臂。",
+                      "label": "b",
+                      "limitations": "臂间交接不等同空中观测交接",
+                      "question": "方形协作臂揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "交接任务的几何配置有哪些？",
+                  "type": "dataset_example"
+                },
+                {
+                  "caption": "Fig. 6: Snapshots depict four arms performing real-world tasks of picking and placing objects via handover. The instruction given is, “Please move the blue, green, and multi-colored blocks to the two opposite boxes, place the colored ones after the green ones.” Target areas are colored in magenta. The",
+                  "claim": "四幅真实机械臂图连接对象、目标区和轨迹。",
+                  "design_takeaway": "用源对象身份追踪实际后果",
+                  "evidence": "a–d带彩色轨迹与头对头箭头",
+                  "id": "S03-F6",
+                  "limitations": "不是统一长期任务成功证据",
+                  "number": 6,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：首轮对象和目标区。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用源对象身份追踪实际后果",
+                      "evidence": "实际查看PDF第7页：首轮对象和目标区。",
+                      "label": "a",
+                      "limitations": "不是统一长期任务成功证据",
+                      "question": "首轮对象和目标区揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：绿色轨迹及臂间交接。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用源对象身份追踪实际后果",
+                      "evidence": "实际查看PDF第7页：绿色轨迹及臂间交接。",
+                      "label": "b",
+                      "limitations": "不是统一长期任务成功证据",
+                      "question": "绿色轨迹及臂间交接揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：后续对象移动。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用源对象身份追踪实际后果",
+                      "evidence": "实际查看PDF第7页：后续对象移动。",
+                      "label": "c",
+                      "limitations": "不是统一长期任务成功证据",
+                      "question": "后续对象移动揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：蓝色交接轨迹与终点。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用源对象身份追踪实际后果",
+                      "evidence": "实际查看PDF第7页：蓝色交接轨迹与终点。",
+                      "label": "d",
+                      "limitations": "不是统一长期任务成功证据",
+                      "question": "蓝色交接轨迹与终点揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "时序指令如何落到真实交接？",
+                  "type": "qualitative_comparison"
+                }
+              ],
+              "tables": [
+                {
+                  "caption": "TABLE I: Performance comparison. The success rate column first presents the overall success rate, with the success rates for conversion and planning in parentheses.",
+                  "claim": "成功、路程和完成步数分开呈现。",
+                  "design_takeaway": "主表应拆解失败阶段",
+                  "evidence": "任务数×机器人数组合；括号拆解转换/规划成功",
+                  "id": "S03-T1",
+                  "limitations": "本文只记录成功实例路程/时间，不能照搬为全分母主分析",
+                  "number": 1,
+                  "page": 5,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "任务/机器人数量变化如何影响规划？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE II: Statistical results from tabletop experiments. Success rate (%)",
+                  "claim": "双方均能成功，优化质量与运行时有取舍。",
+                  "design_takeaway": "对相反排序保持解释",
+                  "evidence": "四任务的成功、成本和Runtime",
+                  "id": "S03-T2",
+                  "limitations": "小样本台面不能证明真实灾害外推",
+                  "number": 2,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "真实用户改写下质量和运行时如何权衡？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE III: Statistical results for multi-robot handover. The first five tasks involve scenarios where four arms are arranged in a square formation, while the last three tasks involve scenarios where the four arms are aligned in a straight line.",
+                  "claim": "逐任务成功率揭示协作规划差别。",
+                  "design_takeaway": "约束与结果同表便于复查",
+                  "evidence": "八任务及具体约束说明",
+                  "id": "S03-T3",
+                  "limitations": "任务数不等于独立用户/场景数",
+                  "number": 3,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "协作交接约束是否导致失败？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE IV: Statistics of failure cases. The results derive from scenarios in Sections V-A and V-C, encompassing 208 task descriptions altogether. The rate is determined across the total instances in the HTT. An HTT comprising n non-leaf nodes and m leaf nodes accounts for m instances in action",
+                  "claim": "任务分解、时序提取、LTL和动作补全分别计数。",
+                  "design_takeaway": "错误率必须连同各自分母报告",
+                  "evidence": "四类失败率及节点分母说明",
+                  "id": "S03-T4",
+                  "limitations": "不同节点分母不能直接相加成episode失败率",
+                  "number": 4,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "失败发生在哪个表示转换阶段？",
+                  "type": "taxonomy"
+                }
+              ]
+            },
+            "direction_match": "多机器人语言任务表示、执行顺序和失败分解；对应任务语义与过程审计。",
+            "id": "S03",
+            "pdf": "venue/samples/S03-nl2hltl-preprint.pdf",
+            "sample_version_limitation": "公开v4为2024年8页，早于2025出版；最终标题由Representation变为Specifications。未证明所有面板与最终版逐字相同。",
+            "title": "NL2HLTL2Plan",
+            "venue_label": "IEEE Robotics and Automation Letters",
+            "visual_read": {
+              "method": "rendered_pdf",
+              "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。",
+              "pages": [
+                1,
+                2,
+                5,
+                6,
+                7
+              ]
+            },
+            "year": 2025
+          },
+          {
+            "acceptance_evidence": {
+              "path": "venue/sources/smart-project.html",
+              "sha256": "0a37ffe9215dea911220eafa6e6803a757d6c24aff83d3fb47941e476123f03e",
+              "url": "https://smart-mapf.github.io/smart/"
+            },
+            "design": {
+              "figures": [
+                {
+                  "caption": "Fig. 1. (a) A simulation environment in SMART. (b) The original 2-D grid map from the MovingAI benchmark. (c, d) Robot models used in the environment. (e) A 3D view of the environment.",
+                  "claim": "同一地图连接二维基准、两机型与三维仿真。",
+                  "design_takeaway": "首图交代抽象与执行的差距",
+                  "evidence": "a–e地图/机型/3D场景",
+                  "id": "S04-F1",
+                  "limitations": "不是航空动力学验证",
+                  "number": 1,
+                  "page": 1,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：物理引擎地图。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "首图交代抽象与执行的差距",
+                      "evidence": "实际查看PDF第1页：物理引擎地图。",
+                      "label": "a",
+                      "limitations": "不是航空动力学验证",
+                      "question": "物理引擎地图揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：原始2D栅格。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "首图交代抽象与执行的差距",
+                      "evidence": "实际查看PDF第1页：原始2D栅格。",
+                      "label": "b",
+                      "limitations": "不是航空动力学验证",
+                      "question": "原始2D栅格揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：foot-bot模型。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "首图交代抽象与执行的差距",
+                      "evidence": "实际查看PDF第1页：foot-bot模型。",
+                      "label": "c",
+                      "limitations": "不是航空动力学验证",
+                      "question": "foot-bot模型揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：JetBot模型。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "首图交代抽象与执行的差距",
+                      "evidence": "实际查看PDF第1页：JetBot模型。",
+                      "label": "d",
+                      "limitations": "不是航空动力学验证",
+                      "question": "JetBot模型揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：三维环境。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "首图交代抽象与执行的差距",
+                      "evidence": "实际查看PDF第1页：三维环境。",
+                      "label": "e",
+                      "limitations": "不是航空动力学验证",
+                      "question": "三维环境揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "栅格计划如何落到物理多机器人场景？",
+                  "type": "teaser"
+                },
+                {
+                  "caption": "Fig. 2. (a) MAPF problem. (b) Associated MAPF plan. (c) ADG from the MAPF plan. Green ovals are actions, with the first element as the reference time from the plan, the second as the action type (e.g., rotation or forward movement), and the last two as start and goal locations. Horizontal edges are",
+                  "claim": "动作图明确机器人内顺序与跨机约束。",
+                  "design_takeaway": "用状态变迁解释异步执行",
+                  "evidence": "a问题、b计划、c依赖图",
+                  "id": "S04-F2",
+                  "limitations": "依赖安全仍受模型假设约束",
+                  "number": 2,
+                  "page": 2,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：两机器人网格任务。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用状态变迁解释异步执行",
+                      "evidence": "实际查看PDF第2页：两机器人网格任务。",
+                      "label": "a",
+                      "limitations": "依赖安全仍受模型假设约束",
+                      "question": "两机器人网格任务揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：离散计划。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用状态变迁解释异步执行",
+                      "evidence": "实际查看PDF第2页：离散计划。",
+                      "label": "b",
+                      "limitations": "依赖安全仍受模型假设约束",
+                      "question": "离散计划揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：动作依赖图。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用状态变迁解释异步执行",
+                      "evidence": "实际查看PDF第2页：动作依赖图。",
+                      "label": "c",
+                      "limitations": "依赖安全仍受模型假设约束",
+                      "question": "动作依赖图揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "时序计划怎样转成执行依赖？",
+                  "type": "pipeline_detail"
+                },
+                {
+                  "caption": "Fig. 3. System overview of SMART.",
+                  "claim": "中央监控和逐机器人执行器共同推进状态。",
+                  "design_takeaway": "Agent与持久执行器分层；延迟已有研究先例",
+                  "evidence": "planner→plan→server→queue/PID→simulator",
+                  "id": "S04-F3",
+                  "limitations": "架构不能单独证明时钟公平",
+                  "number": 3,
+                  "page": 4,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "规划、监控、执行、仿真如何解耦？",
+                  "type": "system_architecture"
+                },
+                {
+                  "caption": "Fig. 4. (a) Cycle in the ADG causing all robots to be stalled. (b) Adding safe stops between vertices to make the ADG acyclic. Robot diameter must be at most half the cell size to prevent collisions at safe stops between vertices.",
+                  "claim": "加入满足几何限制的safe stop可打断图中环。",
+                  "design_takeaway": "失败例应连到可检查后验条件",
+                  "evidence": "a环式等待、b中间停点",
+                  "id": "S04-F4",
+                  "limitations": "网格停点几何不能直接移植固定翼",
+                  "number": 4,
+                  "page": 4,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：环形等待死锁。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "失败例应连到可检查后验条件",
+                      "evidence": "实际查看PDF第4页：环形等待死锁。",
+                      "label": "a",
+                      "limitations": "网格停点几何不能直接移植固定翼",
+                      "question": "环形等待死锁揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：加入安全中间停点。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "失败例应连到可检查后验条件",
+                      "evidence": "实际查看PDF第4页：加入安全中间停点。",
+                      "label": "b",
+                      "limitations": "网格停点几何不能直接移植固定翼",
+                      "question": "加入安全中间停点揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "环依赖何时导致停滞，怎样修复？",
+                  "type": "failure_case"
+                },
+                {
+                  "caption": "Fig. 5. The SMART web interface visualizing a multi-robot simulation on a grid map. In the viewport, users interact with individual robots to inspect paths and inter-robot constraints. On the side panel, users can configure the environment, robot kinematic limits, control playback, and see execution",
+                  "claim": "界面同时显示路径、机器人状态和依赖。",
+                  "design_takeaway": "为本研究保留可审计trace视图",
+                  "evidence": "3D视口与控制/状态侧栏",
+                  "id": "S04-F5",
+                  "limitations": "截图不是功能测试",
+                  "number": 5,
+                  "page": 5,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "用户能否观察任务与约束？",
+                  "type": "dataset_example"
+                },
+                {
+                  "caption": "Fig. 6. Simulation environments. (a) empty (b) maze (c) random (d) game (e) warehouse (f) sortation-center.",
+                  "claim": "六类地图覆盖不同障碍与通道结构。",
+                  "design_takeaway": "OOD需按生成族定义",
+                  "evidence": "a–f六地图及原始栅格插图",
+                  "id": "S04-F6",
+                  "limitations": "地图渲染不是独立实验分母",
+                  "number": 6,
+                  "page": 6,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：empty。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "OOD需按生成族定义",
+                      "evidence": "实际查看PDF第6页：empty。",
+                      "label": "a",
+                      "limitations": "地图渲染不是独立实验分母",
+                      "question": "empty揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：maze。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "OOD需按生成族定义",
+                      "evidence": "实际查看PDF第6页：maze。",
+                      "label": "b",
+                      "limitations": "地图渲染不是独立实验分母",
+                      "question": "maze揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：random。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "OOD需按生成族定义",
+                      "evidence": "实际查看PDF第6页：random。",
+                      "label": "c",
+                      "limitations": "地图渲染不是独立实验分母",
+                      "question": "random揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：game。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "OOD需按生成族定义",
+                      "evidence": "实际查看PDF第6页：game。",
+                      "label": "d",
+                      "limitations": "地图渲染不是独立实验分母",
+                      "question": "game揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：warehouse。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "OOD需按生成族定义",
+                      "evidence": "实际查看PDF第6页：warehouse。",
+                      "label": "e",
+                      "limitations": "地图渲染不是独立实验分母",
+                      "question": "warehouse揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：sortation-center。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "OOD需按生成族定义",
+                      "evidence": "实际查看PDF第6页：sortation-center。",
+                      "label": "f",
+                      "limitations": "地图渲染不是独立实验分母",
+                      "question": "sortation-center揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "规模测试使用哪些地图族？",
+                  "type": "dataset_example"
+                },
+                {
+                  "caption": "Fig. 7. Simulation speed in all environments.",
+                  "claim": "各场景随规模增大出现不同吞吐下降。",
+                  "design_takeaway": "实时因子、硬件和规模同时报告",
+                  "evidence": "六子图比较两物理引擎，纵轴对数",
+                  "id": "S04-F7",
+                  "limitations": "吞吐图不能替代模型真实API等待实验",
+                  "number": 7,
+                  "page": 6,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "在该地图和所示硬件上，增加机器人数量降低仿真速度；两引擎的可实时运行范围不同。",
+                      "design_takeaway": "实时因子、硬件和规模同时报告",
+                      "evidence": "实际查看PDF第6页：随机障碍的规模/速度。",
+                      "label": "random",
+                      "limitations": "吞吐图不能替代模型真实API等待实验",
+                      "question": "随机障碍的规模/速度揭示什么？"
+                    },
+                    {
+                      "claim": "在该地图和所示硬件上，增加机器人数量降低仿真速度；两引擎的可实时运行范围不同。",
+                      "design_takeaway": "实时因子、硬件和规模同时报告",
+                      "evidence": "实际查看PDF第6页：游戏地图的规模/速度。",
+                      "label": "game",
+                      "limitations": "吞吐图不能替代模型真实API等待实验",
+                      "question": "游戏地图的规模/速度揭示什么？"
+                    },
+                    {
+                      "claim": "在该地图和所示硬件上，增加机器人数量降低仿真速度；两引擎的可实时运行范围不同。",
+                      "design_takeaway": "实时因子、硬件和规模同时报告",
+                      "evidence": "实际查看PDF第6页：分拣中心的规模/速度。",
+                      "label": "sortation",
+                      "limitations": "吞吐图不能替代模型真实API等待实验",
+                      "question": "分拣中心的规模/速度揭示什么？"
+                    },
+                    {
+                      "claim": "在该地图和所示硬件上，增加机器人数量降低仿真速度；两引擎的可实时运行范围不同。",
+                      "design_takeaway": "实时因子、硬件和规模同时报告",
+                      "evidence": "实际查看PDF第6页：空地的规模/速度。",
+                      "label": "empty",
+                      "limitations": "吞吐图不能替代模型真实API等待实验",
+                      "question": "空地的规模/速度揭示什么？"
+                    },
+                    {
+                      "claim": "在该地图和所示硬件上，增加机器人数量降低仿真速度；两引擎的可实时运行范围不同。",
+                      "design_takeaway": "实时因子、硬件和规模同时报告",
+                      "evidence": "实际查看PDF第6页：仓库的规模/速度。",
+                      "label": "warehouse",
+                      "limitations": "吞吐图不能替代模型真实API等待实验",
+                      "question": "仓库的规模/速度揭示什么？"
+                    },
+                    {
+                      "claim": "在该地图和所示硬件上，增加机器人数量降低仿真速度；两引擎的可实时运行范围不同。",
+                      "design_takeaway": "实时因子、硬件和规模同时报告",
+                      "evidence": "实际查看PDF第6页：迷宫的规模/速度。",
+                      "label": "maze",
+                      "limitations": "吞吐图不能替代模型真实API等待实验",
+                      "question": "迷宫的规模/速度揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "不同地图/机器人数量如何影响实时因子？",
+                  "type": "quantitative_results"
+                },
+                {
+                  "caption": "Fig. 8. (a) Experimental setup in Isaac Sim. (b) Experimental setup with real robots.",
+                  "claim": "相似布局分别用于仿真和小规模物理机器人。",
+                  "design_takeaway": "分清仿真规模与实机规模",
+                  "evidence": "a Isaac Sim、b实机",
+                  "id": "S04-F8",
+                  "limitations": "不能把数千仿真机声称为实机数量",
+                  "number": 8,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：仿真验证布置。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "分清仿真规模与实机规模",
+                      "evidence": "实际查看PDF第7页：仿真验证布置。",
+                      "label": "a",
+                      "limitations": "不能把数千仿真机声称为实机数量",
+                      "question": "仿真验证布置揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：七台实机布置。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "分清仿真规模与实机规模",
+                      "evidence": "实际查看PDF第7页：七台实机布置。",
+                      "label": "b",
+                      "limitations": "不能把数千仿真机声称为实机数量",
+                      "question": "七台实机布置揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "仿真与实机验证规模如何区分？",
+                  "type": "qualitative_comparison"
+                }
+              ],
+              "tables": []
+            },
+            "direction_match": "多机器人持续物理执行、通信/执行不确定性与平台评测。",
+            "id": "S04",
+            "pdf": "venue/samples/S04-smart.pdf",
+            "sample_version_limitation": "v3为8页；文章出版由作者项目页确认，PDF还保留LaTeX样稿页眉，不把页眉当年份依据。",
+            "title": "SMART",
+            "venue_label": "IEEE Robotics and Automation Letters",
+            "visual_read": {
+              "method": "rendered_pdf",
+              "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。",
+              "pages": [
+                1,
+                2,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "year": 2026
+          },
+          {
+            "acceptance_evidence": {
+              "path": "venue/sources/mripp-registry.json",
+              "sha256": "da8699364092e54fd27222ff3f586166b85e3f2030c11ba626a0afda60b457f4",
+              "url": "https://api.crossref.org/works?query.bibliographic=Scalable+Multi-Robot+Informative+Path+Planning+for+Target+Mapping+via+Deep+Reinforcement+Learning&rows=2"
+            },
+            "design": {
+              "figures": [
+                {
+                  "caption": "Fig. 1: Our approach was implemented on Ryze Tello drones in a real-world urban monitoring scenario. We use Aruco tags as the targets to be discovered. Our approach successfully plans collision-free paths online for maximizing the number",
+                  "claim": "无人机与标记目标在物理场景中被标出。",
+                  "design_takeaway": "业务对象和感知代理应可辨认",
+                  "evidence": "Tello与Aruco标记照片",
+                  "id": "S05-F1",
+                  "limitations": "标记发现不等于自然灾害诊断",
+                  "number": 1,
+                  "page": 1,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "实际信息采集任务是什么？",
+                  "type": "teaser"
+                },
+                {
+                  "caption": "Fig. 2: Overview of our deep reinforcement learning approach for the MRIPP problem. At each time-step, our approach samples collision-free candidate actions in the robot’s local region. Our coordination graph associates each candidate action with a utility value, the uncertainty of the utility value, and the exploration features modeling the regions visited by other robots. Our policy network relies on these features to output the robot’s state value and the next action to execute, leading",
+                  "claim": "占据/目标/已探索信息构成协调图并驱动策略。",
+                  "design_takeaway": "画清部署信息与训练特权",
+                  "evidence": "黑色执行回路与绿色训练缓存通路",
+                  "id": "S05-F2",
+                  "limitations": "不可把全局训练量泄露Actor",
+                  "number": 2,
+                  "page": 3,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "采集、协调和策略训练如何闭合？",
+                  "type": "method_overview"
+                },
+                {
+                  "caption": "Fig. 3: Comparison of our approach with other baselines in an urban environment. Our performance metric is the percentage of targets discovered during the episode. The solid lines represent the mean values across 250 trials, while",
+                  "claim": "曲线同时比较多个策略和通信条件。",
+                  "design_takeaway": "展示资源—收益整条轨迹",
+                  "evidence": "预算横轴、发现比例及均值/SD带",
+                  "id": "S05-F3",
+                  "limitations": "250次含重复，不可直接当250独立地图",
+                  "number": 3,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "给定资源预算下发现收益如何变化？",
+                  "type": "quantitative_results"
+                },
+                {
+                  "caption": "Fig. 4: Our approach outperforms other baselines in terms of percentage discovered targets in a 3×, 8×, and 16× larger environments. The x-axis indicates the number of robots in the multi-robot system during the test. The solid lines",
+                  "claim": "最大环境中CAtNIPP超过本文方法；图注概括过强。",
+                  "design_takeaway": "结论须服从实际曲线，保留逆转",
+                  "evidence": "3×/8×/16×三子图与机器人数量",
+                  "id": "S05-F4",
+                  "limitations": "不同通信设定影响可比性；不照抄图注胜负",
+                  "number": 4,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "三倍场景中本方法曲线高于所列对照。",
+                      "design_takeaway": "结论须服从实际曲线，保留逆转",
+                      "evidence": "实际查看PDF第7页：三倍场景的机器人规模曲线。",
+                      "label": "3x",
+                      "limitations": "不同通信设定影响可比性；不照抄图注胜负",
+                      "question": "三倍场景的机器人规模曲线揭示什么？"
+                    },
+                    {
+                      "claim": "八倍场景中本方法与CAtNIPP差距较小。",
+                      "design_takeaway": "结论须服从实际曲线，保留逆转",
+                      "evidence": "实际查看PDF第7页：八倍场景的机器人规模曲线。",
+                      "label": "8x",
+                      "limitations": "不同通信设定影响可比性；不照抄图注胜负",
+                      "question": "八倍场景的机器人规模曲线揭示什么？"
+                    },
+                    {
+                      "claim": "十六倍场景中CAtNIPP曲线高于本方法，限制图注的泛化表述。",
+                      "design_takeaway": "结论须服从实际曲线，保留逆转",
+                      "evidence": "实际查看PDF第7页：十六倍场景中CAtNIPP领先。",
+                      "label": "16x",
+                      "limitations": "不同通信设定影响可比性；不照抄图注胜负",
+                      "question": "十六倍场景中CAtNIPP领先揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "规模外推是否始终优于基线？",
+                  "type": "quantitative_results"
+                },
+                {
+                  "caption": "Fig. 5: Our approach implemented in an urban simulation environment. We place 3 UAVs and 161 targets in the environment and trace each UAV’s path with colored tracelines. We compare the performance of our approach with a random planner that reflects the performance lower bound. We do not implement other baselines considered in Section VB as modifying these approaches for avoiding inter-robot",
+                  "claim": "三机轨迹覆盖城市模型的不同部分。",
+                  "design_takeaway": "典型轨迹解释主指标",
+                  "evidence": "彩色航迹与城市对象",
+                  "id": "S05-F5",
+                  "limitations": "单条轨迹不证明安全/泛化",
+                  "number": 5,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "任务路径的空间结果是什么？",
+                  "type": "qualitative_comparison"
+                }
+              ],
+              "tables": [
+                {
+                  "caption": "TABLE I: Results of our approach compared with other learning and non-learning baselines in an urban monitoring scenario.",
+                  "claim": "多种学习/经典方法给出不同收益与时间。",
+                  "design_takeaway": "强经典与简单策略都保留",
+                  "evidence": "发现比例±波动及Time(s)",
+                  "id": "S05-T1",
+                  "limitations": "此对比设置暂忽略机间碰撞；不能支持本研究安全结论",
+                  "number": 1,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "发现比例与规划时间如何权衡？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE II: Ablation study for modeling of explored regions.",
+                  "claim": "含/不含记忆的发现比例有差异。",
+                  "design_takeaway": "记忆消融保持其他条件一致",
+                  "evidence": "两行相同任务指标",
+                  "id": "S05-T2",
+                  "limitations": "文中普通t检验不能移植为root配对分析",
+                  "number": 2,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "已探索区域记忆是否有作用？",
+                  "type": "ablation"
+                },
+                {
+                  "caption": "TABLE III: Ablation study for reward structure.",
+                  "claim": "是否使用奖励改变采集收益。",
+                  "design_takeaway": "区分机制与模型更换",
+                  "evidence": "两行通信奖励消融",
+                  "id": "S05-T3",
+                  "limitations": "同一环境重复不创造独立root",
+                  "number": 3,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "通信奖励是否有作用？",
+                  "type": "ablation"
+                },
+                {
+                  "caption": "TABLE IV: Comparison of our deep reinforcement learningbased approach against baselines in an urban environment.",
+                  "claim": "模拟城市场景中与随机下界比较。",
+                  "design_takeaway": "平台可行性参照与强主比较应区分",
+                  "evidence": "本方法与随机策略两行",
+                  "id": "S05-T4",
+                  "limitations": "弱下界不能替代本研究B1/B2",
+                  "number": 4,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "带物理场景的参考收益是多少？",
+                  "type": "main_results"
+                }
+              ]
+            },
+            "direction_match": "部分观测多无人机信息获取、资源约束、扩展性和强基线。",
+            "id": "S05",
+            "pdf": "venue/samples/S05-mripp.pdf",
+            "sample_version_limitation": "可访问arXiv v3为2025年9页；Crossref确认为RA-L 2026年3月，DOI3655204。接受版OpenReview两个公开地址均403，未将此9页当最终格式。",
+            "title": "Scalable MRIPP",
+            "venue_label": "IEEE Robotics and Automation Letters",
+            "visual_read": {
+              "method": "rendered_pdf",
+              "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。",
+              "pages": [
+                1,
+                3,
+                6,
+                7
+              ]
+            },
+            "year": 2026
+          },
+          {
+            "acceptance_evidence": {
+              "path": "venue/sources/hetmrta-acceptance.html",
+              "sha256": "d43e707705ebbd135fab9f3d6f93efd3775fc6965f7eb59e2cadf8763f49f7d2",
+              "url": "https://www.marmotlab.org/blog/2025/01/10/RAL2025.html"
+            },
+            "design": {
+              "figures": [
+                {
+                  "caption": "Fig. 1. Cooperative search and rescue in various environments. Vectors represent robots’ abilities and rescue tasks’ requirements, with each element indicating possession of a unique skill from relaying, sensing, bandaging, or obstacle removal, respectively. Schedules of robots are shown as arrows.",
+                  "claim": "救援对象的能力需求与机器人类型对应。",
+                  "design_takeaway": "业务任务与资源匹配共同画出",
+                  "evidence": "能力图标和当前/未来路线",
+                  "id": "S06-F1",
+                  "limitations": "概念图不证明真实救灾效用",
+                  "number": 1,
+                  "page": 1,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "任务为什么需要异构协作？",
+                  "type": "teaser"
+                },
+                {
+                  "caption": "Fig. 2. Network structure used in this work. It follows an encoder-decoder structure where the status of agents and tasks such as trait vectors and trait requirements are ﬁrst processed by a group of agent encoder, task encoder and cross encoder to build context and generate glimpses of the whole system. These features are then used by the decoder to output a policy (i.e., a probability distribution over all tasks).",
+                  "claim": "双编码与交互注意力用于下一任务选择。",
+                  "design_takeaway": "共享数据与调度决策分开",
+                  "evidence": "代理/任务图到策略解码的结构",
+                  "id": "S06-F2",
+                  "limitations": "本论文不需复现该网络作为唯一强基线",
+                  "number": 2,
+                  "page": 5,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "任务与机器人依赖如何进入调度？",
+                  "type": "method_overview"
+                },
+                {
+                  "caption": "Fig. 3. Makespan of the current solution throughout CTAS-D’s optimization process, compared to our ﬁnal solutions, in MA-AT scenarios with 25 agents (5 species) and 20 tasks (left) and 30 tasks (right). Our approach quickly yields high-performance solutions (see legend), which remain drastically better than",
+                  "claim": "快速策略与长时间优化的优势随时间变化。",
+                  "design_takeaway": "固定截止比较，避免只报无限时最优",
+                  "evidence": "20/30任务两子图的makespan—time曲线",
+                  "id": "S06-F3",
+                  "limitations": "优化可最终更优，不能宣称学习策略处处占优",
+                  "number": 3,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "在20任务例子中，长时间优化最终可超过快速策略的解质量。",
+                      "design_takeaway": "固定截止比较，避免只报无限时最优",
+                      "evidence": "实际查看PDF第7页：20任务的优化质量/耗时。",
+                      "label": "left",
+                      "limitations": "优化可最终更优，不能宣称学习策略处处占优",
+                      "question": "20任务的优化质量/耗时揭示什么？"
+                    },
+                    {
+                      "claim": "在30任务例子中也必须区分固定截止质量与最终收敛质量。",
+                      "design_takeaway": "固定截止比较，避免只报无限时最优",
+                      "evidence": "实际查看PDF第7页：30任务的优化质量/耗时。",
+                      "label": "right",
+                      "limitations": "优化可最终更优，不能宣称学习策略处处占优",
+                      "question": "30任务的优化质量/耗时揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "优化耗时与最终质量是什么关系？",
+                  "type": "analysis_plot"
+                },
+                {
+                  "caption": "Fig. 4. Aerial robotic validation on a cooperative search mission, where agents of different species (shown as ﬂying at different altitudes) dynamically form/disband coalitions to cooperatively search speciﬁc locations (tasks).",
+                  "claim": "不同高度标识机型，锥体标识任务。",
+                  "design_takeaway": "物理能力演示与主统计分开",
+                  "evidence": "六机室内搜索照片",
+                  "id": "S06-F4",
+                  "limitations": "照片不等于完整episode安全率",
+                  "number": 4,
+                  "page": 8,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "能否实际形成/解散任务协作组？",
+                  "type": "qualitative_comparison"
+                }
+              ],
+              "tables": []
+            },
+            "direction_match": "任务分配、等待与makespan/计算开销，含航空协作演示。",
+            "id": "S06",
+            "pdf": "venue/samples/S06-hetmrta.pdf",
+            "sample_version_limitation": "作者实验室保存的8页版本；作者录用公告确认RA-L身份。caption解析器漏检4表，已人工补读。",
+            "title": "Heterogeneous MRTA",
+            "venue_label": "IEEE Robotics and Automation Letters",
+            "visual_read": {
+              "method": "rendered_pdf",
+              "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。",
+              "pages": [
+                1,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "year": 2025
+          },
+          {
+            "acceptance_evidence": {
+              "path": "venue/samples/S07-pursuit.pdf",
+              "sha256": "8d94935eddf68bab911bb0911d6afe5af30dfab23e102ba5089957048fa54bbd",
+              "url": "https://arxiv.org/pdf/2409.15866v4"
+            },
+            "design": {
+              "figures": [
+                {
+                  "caption": "Fig. 1: Setup of multi-UAV pursuit-evasion. network that integrates predictive information about the evader’s movements into the RL policy inputs, improving the ability capture, distinguishing this from search strategies where the to cooperatively capture the evader with partial observation. target is passive [28]. Traditional research in this area can be",
+                  "caption_measurement_note": "机械caption可能拼入邻近正文；原测量字符串保留，语义判断仅依据已实际查看的图/表区域与真实图注。",
+                  "claim": "遮挡示意与仿真空间被对应。",
+                  "design_takeaway": "明确视域与隐藏量",
+                  "evidence": "a遮挡/检测示意，b仿真场景",
+                  "id": "S07-F1",
+                  "limitations": "追逃任务不作为本研究民用业务目标",
+                  "number": 1,
+                  "page": 2,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：遮挡、检测与捕获区域示意。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "明确视域与隐藏量",
+                      "evidence": "实际查看PDF第2页：遮挡、检测与捕获区域示意。",
+                      "label": "a",
+                      "limitations": "追逃任务不作为本研究民用业务目标",
+                      "question": "遮挡、检测与捕获区域示意揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：物理仿真环境。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "明确视域与隐藏量",
+                      "evidence": "实际查看PDF第2页：物理仿真环境。",
+                      "label": "b",
+                      "limitations": "追逃任务不作为本研究民用业务目标",
+                      "question": "物理仿真环境揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "部分观测与任务几何如何定义？",
+                  "type": "dataset_example"
+                },
+                {
+                  "caption": "Fig. 2: Pipeline of our method. We begin by calibrating the parameters of the quadrotor dynamics model through system identification. Next, we introduce an Adaptive Environment Generator to automatically generate tasks for policy training and employ an Evader Prediction-Enhanced Network for cooperative capture under partial observations. Finally, with two-stage reward refinement, the learned policy is directly transferred to real quadrotors in a zero-shot manner.",
+                  "claim": "系统辨识、任务生成和策略部署分层。",
+                  "design_takeaway": "控制资格与Agent比较分开",
+                  "evidence": "现实侧、仿真侧与预测网络路径",
+                  "id": "S07-F2",
+                  "limitations": "CTBR动作不是mission tool接口",
+                  "number": 2,
+                  "page": 3,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "动力学校准与训练部署如何连接？",
+                  "type": "method_overview"
+                },
+                {
+                  "caption": "Fig. 3: Attention-based observation encoder.",
+                  "claim": "本机、其他机、障碍与预测经过注意力融合。",
+                  "design_takeaway": "列清Actor观测来源",
+                  "evidence": "三路输入及自注意力结构",
+                  "id": "S07-F3",
+                  "limitations": "该状态接口不等于真实视觉",
+                  "number": 3,
+                  "page": 4,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "可见状态如何编码？",
+                  "type": "pipeline_detail"
+                },
+                {
+                  "caption": "Fig. 4: Design of the Adaptive Environment Generator.",
+                  "claim": "局部扩展与全局探索维护活动任务档案。",
+                  "design_takeaway": "dev难度调整与test隔离",
+                  "evidence": "双路径生成器",
+                  "id": "S07-F4",
+                  "limitations": "训练难例选择不能用于筛除低分test",
+                  "number": 4,
+                  "page": 5,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "训练任务如何覆盖难例？",
+                  "type": "pipeline_detail"
+                },
+                {
+                  "caption": "Fig. 5: Illustration of four test scenarios. the first-stage checkpoint. This ensures high task success while improving action smoothness, with the smoothness reward coefficient set to 2.0.",
+                  "caption_measurement_note": "机械caption可能拼入邻近正文；原测量字符串保留，语义判断仅依据已实际查看的图/表区域与真实图注。",
+                  "claim": "四种几何产生不同遮挡与通道。",
+                  "design_takeaway": "用场景族解释OOD",
+                  "evidence": "Wall/NarrowGap/Random/Passage",
+                  "id": "S07-F5",
+                  "limitations": "更换随机seed不足以构成OOD",
+                  "number": 5,
+                  "page": 5,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：横向阻挡。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用场景族解释OOD",
+                      "evidence": "实际查看PDF第5页：横向阻挡。",
+                      "label": "wall",
+                      "limitations": "更换随机seed不足以构成OOD",
+                      "question": "横向阻挡揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：窄通道。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用场景族解释OOD",
+                      "evidence": "实际查看PDF第5页：窄通道。",
+                      "label": "gap",
+                      "limitations": "更换随机seed不足以构成OOD",
+                      "question": "窄通道揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：随机遮挡。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用场景族解释OOD",
+                      "evidence": "实际查看PDF第5页：随机遮挡。",
+                      "label": "random",
+                      "limitations": "更换随机seed不足以构成OOD",
+                      "question": "随机遮挡揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：逃离通道。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "用场景族解释OOD",
+                      "evidence": "实际查看PDF第5页：逃离通道。",
+                      "label": "passage",
+                      "limitations": "更换随机seed不足以构成OOD",
+                      "question": "逃离通道揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "ID/OOD测试场景如何区分？",
+                  "type": "dataset_example"
+                },
+                {
+                  "caption": "Fig. 6: Results of all methods in a obstacle-free scenario. Fig. 6, baselines exhibit a sharp decline in capture rate as the capture radius decreases, underscoring the task’s difficulty. A • APF [13]: APF guides pursuers to a target position by",
+                  "caption_measurement_note": "机械caption可能拼入邻近正文；原测量字符串保留，语义判断仅依据已实际查看的图/表区域与真实图注。",
+                  "claim": "捕获率和捕获步数对半径的响应不同。",
+                  "design_takeaway": "质量与时间曲线并列",
+                  "evidence": "a成功率，b步数",
+                  "id": "S07-F6",
+                  "limitations": "此任务指标不能转作巡检交付成绩",
+                  "number": 6,
+                  "page": 6,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "缩小捕获半径时，不同方法成功率下降幅度明显不同。",
+                      "design_takeaway": "质量与时间曲线并列",
+                      "evidence": "实际查看PDF第6页：捕获半径与成功率。",
+                      "label": "a",
+                      "limitations": "此任务指标不能转作巡检交付成绩",
+                      "question": "捕获半径与成功率揭示什么？"
+                    },
+                    {
+                      "claim": "步数曲线保留失败造成的上限惩罚，不能只平均成功例。",
+                      "design_takeaway": "质量与时间曲线并列",
+                      "evidence": "实际查看PDF第6页：捕获半径与步数。",
+                      "label": "b",
+                      "limitations": "此任务指标不能转作巡检交付成绩",
+                      "question": "捕获半径与步数揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "难度参数变化时质量/耗时怎样变化？",
+                  "type": "quantitative_results"
+                },
+                {
+                  "caption": "Fig. 7: Demonstration of the pursuit strategies.",
+                  "claim": "四种几何产生不同队形/运动路径。",
+                  "design_takeaway": "从轨迹解释失败或收益",
+                  "evidence": "四场景路径快照",
+                  "id": "S07-F7",
+                  "limitations": "案例不代替总体统计",
+                  "number": 7,
+                  "page": 6,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：墙体两侧协作。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "从轨迹解释失败或收益",
+                      "evidence": "实际查看PDF第6页：墙体两侧协作。",
+                      "label": "wall",
+                      "limitations": "案例不代替总体统计",
+                      "question": "墙体两侧协作揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：窄口拦截。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "从轨迹解释失败或收益",
+                      "evidence": "实际查看PDF第6页：窄口拦截。",
+                      "label": "gap",
+                      "limitations": "案例不代替总体统计",
+                      "question": "窄口拦截揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：遮挡目标搜索。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "从轨迹解释失败或收益",
+                      "evidence": "实际查看PDF第6页：遮挡目标搜索。",
+                      "label": "random",
+                      "limitations": "案例不代替总体统计",
+                      "question": "遮挡目标搜索揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：出口分工。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "从轨迹解释失败或收益",
+                      "evidence": "实际查看PDF第6页：出口分工。",
+                      "label": "passage",
+                      "limitations": "案例不代替总体统计",
+                      "question": "出口分工揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "成功策略在不同地图如何执行？",
+                  "type": "qualitative_comparison"
+                },
+                {
+                  "caption": "Fig. 8: Ablation studies. (a) Performance of OPEN and baselines on training tasks. (b) Policy generalization across evader speeds in the Passage scenario.",
+                  "claim": "学习曲线与速度敏感性回答不同问题。",
+                  "design_takeaway": "消融与敏感性各自固定比较单位",
+                  "evidence": "a训练曲线，b不同目标速度",
+                  "id": "S07-F8",
+                  "limitations": "训练样本数不是独立测试root",
+                  "number": 8,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "所示训练轨迹中完整方法更早取得较高捕获率。",
+                      "design_takeaway": "消融与敏感性各自固定比较单位",
+                      "evidence": "实际查看PDF第7页：训练样本效率及模块消融。",
+                      "label": "a",
+                      "limitations": "训练样本数不是独立测试root",
+                      "question": "训练样本效率及模块消融揭示什么？"
+                    },
+                    {
+                      "claim": "完整方法在展示的速度范围内较稳定；这不证明范围外泛化。",
+                      "design_takeaway": "消融与敏感性各自固定比较单位",
+                      "evidence": "实际查看PDF第7页：目标速度外推。",
+                      "label": "b",
+                      "limitations": "训练样本数不是独立测试root",
+                      "question": "目标速度外推揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "模块与速度外推分别贡献什么？",
+                  "type": "ablation_visual"
+                }
+              ],
+              "tables": [
+                {
+                  "caption": "TABLE I: Results of all methods in test scenarios. Our approach significantly outperforms all baselines in test scenarios. 1.0",
+                  "claim": "四场景同时报告成功、步数和碰撞，排序并非全部一致。",
+                  "design_takeaway": "不以一个汇总遮盖安全退步",
+                  "evidence": "四场景×三指标×多方法",
+                  "id": "S07-T1",
+                  "limitations": "碰撞计数/步归一不等于episode硬安全",
+                  "number": 1,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "主成绩是否同时保留效率和碰撞？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE II: Prediction errors of our method in four test scenarios. Network (EPN) and Adaptive Environment Generator (AEG) modules. The variant “MAPPO + EPN” incorporates the",
+                  "caption_measurement_note": "机械caption可能拼入邻近正文；原测量字符串保留，语义判断仅依据已实际查看的图/表区域与真实图注。",
+                  "claim": "四场景误差不同。",
+                  "design_takeaway": "感知/预测诊断与交付主分开",
+                  "evidence": "预测误差一行四列",
+                  "id": "S07-T2",
+                  "limitations": "预测不是本研究新采样证据",
+                  "number": 2,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "预测误差在哪些场景更大？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE III: Comparison of OPEN and variants in OOD scenarios.",
+                  "claim": "不同模块对成功、步数和碰撞影响不同。",
+                  "design_takeaway": "同模型单因素消融并列分量",
+                  "evidence": "Random/Passage的模块对照",
+                  "id": "S07-T3",
+                  "limitations": "不能把模块交互全部归因单机制",
+                  "number": 3,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "OOD下移除模块如何影响质量？",
+                  "type": "ablation"
+                },
+                {
+                  "caption": "TABLE IV: Capture steps of all methods in four test scenarios. \"/\" notes that the One-stage fails to generate effective pursuit strategies in the simulation and we do not conduct experiments in the real-world.",
+                  "claim": "高仿真表现的无平滑策略在实机失败。",
+                  "design_takeaway": "保留失败和未启动状态",
+                  "evidence": "Sim/Real及fail、未执行标记",
+                  "id": "S07-T4",
+                  "limitations": "不能把未执行斜线当成功或零耗时",
+                  "number": 4,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "仿真与实机可行性何时分离？",
+                  "type": "ablation"
+                }
+              ]
+            },
+            "direction_match": "部分观测机群规划的ID/OOD、消融和物理资格；仅作实验结构参考，不改变民用任务。",
+            "id": "S07",
+            "pdf": "venue/samples/S07-pursuit.pdf",
+            "sample_version_limitation": "v4为接受版8页，首面接受信息明确。",
+            "title": "Online multi-UAV planning",
+            "venue_label": "IEEE Robotics and Automation Letters",
+            "visual_read": {
+              "method": "rendered_pdf",
+              "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。",
+              "pages": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "year": 2025
+          },
+          {
+            "acceptance_evidence": {
+              "path": "venue/sources/gradnav-metadata.html",
+              "sha256": "71cf2ccfbaa242e6ef99a7e02c137dc04b78ba63a86b2926ce7e93f07c8dc8f6",
+              "url": "https://arxiv.org/abs/2506.14009v2"
+            },
+            "design": {
+              "figures": [
+                {
+                  "caption": "Fig. 1: Our drone flight VLA model architecture.",
+                  "claim": "训练critic使用特权量，实际部署仅保留规定感知输入。",
+                  "design_takeaway": "权限图需显式列出训练/评测差异",
+                  "evidence": "上训练下部署的两部分",
+                  "id": "S08-F1",
+                  "limitations": "VLA低层动作不是本研究任务级编排",
+                  "number": 1,
+                  "page": 1,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：训练特权与可微动力学。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "权限图需显式列出训练/评测差异",
+                      "evidence": "实际查看PDF第1页：训练特权与可微动力学。",
+                      "label": "training",
+                      "limitations": "VLA低层动作不是本研究任务级编排",
+                      "question": "训练特权与可微动力学揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：实际机载视觉/指令到动作。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "权限图需显式列出训练/评测差异",
+                      "evidence": "实际查看PDF第1页：实际机载视觉/指令到动作。",
+                      "label": "deployment",
+                      "limitations": "VLA低层动作不是本研究任务级编排",
+                      "question": "实际机载视觉/指令到动作揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "训练特权与部署输入如何区分？",
+                  "type": "method_overview"
+                },
+                {
+                  "caption": "Fig. 2: Example trajectories of untrained long horizon tasks. The instructions are “GO THROUGH gate then STOP over CART” (left) and “FLY past the RIGHT side of the gate then STOP over MONITOR” (right).",
+                  "claim": "两条未训练组合任务具有不同路线和终点对象。",
+                  "design_takeaway": "任务卡与轨迹共同展示",
+                  "evidence": "左穿门到车，右绕门到显示器",
+                  "id": "S08-F2",
+                  "limitations": "只为成功例，不能证明总体泛化",
+                  "number": 2,
+                  "page": 5,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：穿门后到CART。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "任务卡与轨迹共同展示",
+                      "evidence": "实际查看PDF第5页：穿门后到CART。",
+                      "label": "left",
+                      "limitations": "只为成功例，不能证明总体泛化",
+                      "question": "穿门后到CART揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：从右侧绕门后到MONITOR。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "任务卡与轨迹共同展示",
+                      "evidence": "实际查看PDF第5页：从右侧绕门后到MONITOR。",
+                      "label": "right",
+                      "limitations": "只为成功例，不能证明总体泛化",
+                      "question": "从右侧绕门后到MONITOR揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "组合指令如何产生不同轨迹？",
+                  "type": "qualitative_comparison"
+                },
+                {
+                  "caption": "Fig. 3: Comparison of imperfect (left) and high quality (right) 3DGS maps’ rendering effect.",
+                  "claim": "左右渲染对比提供退化机制的可见依据。",
+                  "design_takeaway": "退化消融要展示实际输入",
+                  "evidence": "左模糊/缺损，右较清晰",
+                  "id": "S08-F3",
+                  "limitations": "渲染质量与结构化噪声不是同一指标",
+                  "number": 3,
+                  "page": 5,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "低质量模型呈现更模糊和缺失的视觉线索。",
+                      "design_takeaway": "退化消融要展示实际输入",
+                      "evidence": "实际查看PDF第5页：退化3DGS渲染。",
+                      "label": "left",
+                      "limitations": "渲染质量与结构化噪声不是同一指标",
+                      "question": "退化3DGS渲染揭示什么？"
+                    },
+                    {
+                      "claim": "较高质量模型保留更清晰的门与物体细节。",
+                      "design_takeaway": "退化消融要展示实际输入",
+                      "evidence": "实际查看PDF第5页：高质量3DGS渲染。",
+                      "label": "right",
+                      "limitations": "渲染质量与结构化噪声不是同一指标",
+                      "question": "高质量3DGS渲染揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "低质量视觉重建是什么样？",
+                  "type": "ablation_visual"
+                },
+                {
+                  "caption": "Fig. 4: Demonstration of multi-environment adaptation in real-world experiments using video frame overlay visualization. The top row shows the drone flying to the left of, through, above, and to the right of the gate in the middle-gate environment. The bottom row shows the drone executing the same directional tasks in the left-gate environment. Red arrowed curves illustrate the approximate flight trajectories. The learned policy demonstrates robust adaptation to varying environments, adapting to",
+                  "claim": "四指令×两门位置用轨迹叠图展示。",
+                  "design_takeaway": "案例布局与受控因素一一对应",
+                  "evidence": "两行四列，左/穿/上/右",
+                  "id": "S08-F4",
+                  "limitations": "帧叠图不是独立试验样本",
+                  "number": 4,
+                  "page": 6,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "该示例中可直接定位：中间门左侧。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "案例布局与受控因素一一对应",
+                      "evidence": "实际查看PDF第6页：中间门左侧。",
+                      "label": "mid-left",
+                      "limitations": "帧叠图不是独立试验样本",
+                      "question": "中间门左侧揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：中间门穿越。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "案例布局与受控因素一一对应",
+                      "evidence": "实际查看PDF第6页：中间门穿越。",
+                      "label": "mid-through",
+                      "limitations": "帧叠图不是独立试验样本",
+                      "question": "中间门穿越揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：中间门上方。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "案例布局与受控因素一一对应",
+                      "evidence": "实际查看PDF第6页：中间门上方。",
+                      "label": "mid-above",
+                      "limitations": "帧叠图不是独立试验样本",
+                      "question": "中间门上方揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：中间门右侧。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "案例布局与受控因素一一对应",
+                      "evidence": "实际查看PDF第6页：中间门右侧。",
+                      "label": "mid-right",
+                      "limitations": "帧叠图不是独立试验样本",
+                      "question": "中间门右侧揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：左侧门左绕。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "案例布局与受控因素一一对应",
+                      "evidence": "实际查看PDF第6页：左侧门左绕。",
+                      "label": "left-left",
+                      "limitations": "帧叠图不是独立试验样本",
+                      "question": "左侧门左绕揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：左侧门穿越。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "案例布局与受控因素一一对应",
+                      "evidence": "实际查看PDF第6页：左侧门穿越。",
+                      "label": "left-through",
+                      "limitations": "帧叠图不是独立试验样本",
+                      "question": "左侧门穿越揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：左侧门上方。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "案例布局与受控因素一一对应",
+                      "evidence": "实际查看PDF第6页：左侧门上方。",
+                      "label": "left-above",
+                      "limitations": "帧叠图不是独立试验样本",
+                      "question": "左侧门上方揭示什么？"
+                    },
+                    {
+                      "claim": "该示例中可直接定位：左侧门右绕。 仅支持这一个面板的机制/场景说明。",
+                      "design_takeaway": "案例布局与受控因素一一对应",
+                      "evidence": "实际查看PDF第6页：左侧门右绕。",
+                      "label": "left-right",
+                      "limitations": "帧叠图不是独立试验样本",
+                      "question": "左侧门右绕揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "不同环境和指令的实际行为如何变化？",
+                  "type": "qualitative_comparison"
+                },
+                {
+                  "caption": "Fig. 5: Experts’ usage intensity when executing the same task (“GO THROUGH gate”) at different surrounding environments (top-left gate, bottom-middle gate).",
+                  "claim": "同任务在两环境具有不同门控时序。",
+                  "design_takeaway": "机制诊断与主效果区分",
+                  "evidence": "上/下两环境两专家曲线",
+                  "id": "S08-F5",
+                  "limitations": "门控变化本身不能证明性能因果",
+                  "number": 5,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "左门环境两专家激活强度随任务阶段改变。",
+                      "design_takeaway": "机制诊断与主效果区分",
+                      "evidence": "实际查看PDF第7页：左门环境专家路由。",
+                      "label": "top",
+                      "limitations": "门控变化本身不能证明性能因果",
+                      "question": "左门环境专家路由揭示什么？"
+                    },
+                    {
+                      "claim": "中间门环境的激活主次与上方面板不同。",
+                      "design_takeaway": "机制诊断与主效果区分",
+                      "evidence": "实际查看PDF第7页：中间门环境专家路由。",
+                      "label": "bottom",
+                      "limitations": "门控变化本身不能证明性能因果",
+                      "question": "中间门环境专家路由揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "环境变化时专家路由如何变化？",
+                  "type": "analysis_plot"
+                },
+                {
+                  "caption": "Fig. 6: Task-switching with instruction change at step 100. Left: drone flying past the gate. Right: cosine similarity between text and visual embeddings, showing VLM regrounding.",
+                  "claim": "示例把换指令轨迹和相似度变化并列。",
+                  "design_takeaway": "响应须同时有状态和效果证据",
+                  "evidence": "左场景，右步100切换后的相似度",
+                  "id": "S08-F6",
+                  "limitations": "已有中途指令切换先例；单例不证明群体恢复优势",
+                  "number": 6,
+                  "page": 7,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "示例航迹显示指令更新后转向新的任务方向。",
+                      "design_takeaway": "响应须同时有状态和效果证据",
+                      "evidence": "实际查看PDF第7页：更换指令后的实际航迹。",
+                      "label": "left",
+                      "limitations": "已有中途指令切换先例；单例不证明群体恢复优势",
+                      "question": "更换指令后的实际航迹揭示什么？"
+                    },
+                    {
+                      "claim": "切换附近的匹配度下降后恢复并波动，不能直接当任务成功率。",
+                      "design_takeaway": "响应须同时有状态和效果证据",
+                      "evidence": "实际查看PDF第7页：相似度在切换点后的变化。",
+                      "label": "right",
+                      "limitations": "已有中途指令切换先例；单例不证明群体恢复优势",
+                      "question": "相似度在切换点后的变化揭示什么？"
+                    }
+                  ],
+                  "placement": "body",
+                  "question": "飞行中指令变化是否引发响应？",
+                  "type": "analysis_plot"
+                },
+                {
+                  "caption": "Fig. 7: Runtime profiling of real-time inference on NVIDIA Jetson Orin Nano.",
+                  "claim": "运行时存在周期峰值，资源量随时间变化。",
+                  "design_takeaway": "记录真实p50/p95与异常等待",
+                  "evidence": "RAM/CPU/GPU/功率/单次推理五行",
+                  "id": "S08-F7",
+                  "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失",
+                  "number": 7,
+                  "page": 8,
+                  "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。",
+                  "panels": [
+                    {
+                      "claim": "展示时段内内存用量相对稳定。",
+                      "design_takeaway": "记录真实p50/p95与异常等待",
+                      "evidence": "实际查看PDF第8页：内存轨迹。",
+                      "label": "ram",
+                      "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失",
+                      "question": "内存轨迹揭示什么？"
+                    },
+                    {
+                      "claim": "CPU负载随执行时间出现峰值。",
+                      "design_takeaway": "记录真实p50/p95与异常等待",
+                      "evidence": "实际查看PDF第8页：CPU负载。",
+                      "label": "cpu",
+                      "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失",
+                      "question": "CPU负载揭示什么？"
+                    },
+                    {
+                      "claim": "GPU负载在该实际飞行记录中持续波动。",
+                      "design_takeaway": "记录真实p50/p95与异常等待",
+                      "evidence": "实际查看PDF第8页：GPU负载。",
+                      "label": "gpu",
+                      "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失",
+                      "question": "GPU负载揭示什么？"
+                    },
+                    {
+                      "claim": "功率轨迹随时间变化，需作为实测资源量保留。",
+                      "design_takeaway": "记录真实p50/p95与异常等待",
+                      "evidence": "实际查看PDF第8页：功率轨迹。",
+                      "label": "power",
+                      "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失",
+                      "question": "功率轨迹揭示什么？"
+                    },
+                    {
+                      "claim": "推理存在周期性高延迟峰；仅报平均值会隐藏这一结构。",
+                      "design_takeaway": "记录真实p50/p95与异常等待",
+                      "evidence": "实际查看PDF第8页：单次推理延迟与周期峰值。",
+                      "label": "runtime",
+                      "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失",
+                      "question": "单次推理延迟与周期峰值揭示什么？"
+                    }
+                  ],
+                  "placement": "appendix",
+                  "question": "实际硬件推理资源是否稳定？",
+                  "type": "analysis_plot"
+                }
+              ],
+              "tables": [
+                {
+                  "caption": "TABLE I: Reward terms and weights. Early termination occurs if (i) height > 3m, (ii) linear velocity > 20 m/s, or (iii) the drone is out of bounds by > 3m (xo.b. , yo.b. ≥ 3). Here, q0 is the initial quaternion, htarget the target/hover height, ŷyaw the",
+                  "claim": "奖励与早停条件被明确列出。",
+                  "design_takeaway": "公开硬包线和阈值来源",
+                  "evidence": "Safe Control / Navigation两组",
+                  "id": "S08-T1",
+                  "limitations": "奖励权重不等于合格安全保证",
+                  "number": 1,
+                  "page": 4,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "安全与任务奖励如何规定？",
+                  "type": "hyperparameter"
+                },
+                {
+                  "caption": "TABLE II: Simulation results of multi task generalization experiment. For 8 trained tasks and 4 untrained tasks, the evaluation is conducted on 6 trials for each task, with the average rewards and success rates (SR) reported. “Proposed,",
+                  "claim": "用stage与overall绝对成功计数保留零值。",
+                  "design_takeaway": "总体分母必须保留；条件阶段率另报",
+                  "evidence": "训练/未见列和PPO/VLM/退化对照",
+                  "id": "S08-T2",
+                  "limitations": "少量重复不能证明广泛泛化",
+                  "number": 2,
+                  "page": 5,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "仿真中已见/未见任务怎样失败？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE III: Real hardware experiment results of multi-task generalization experiment. For 8 trained tasks and 4 untrained tasks, the evaluation is conducted on 3 trials for each task, with the success rates (SR) reported. “Proposed, LR” denotes",
+                  "claim": "阶段与总体成绩存在sim-to-real差别。",
+                  "design_takeaway": "主表区分模拟和真实轨道",
+                  "evidence": "与Table II并列的实机计数",
+                  "id": "S08-T3",
+                  "limitations": "本研究没有实机数据，不能借其成绩代替",
+                  "number": 3,
+                  "page": 5,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "实机结果是否复制仿真排序？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE IV: Simulation results of the multi-environment adaptation experiment are presented. For each of the 4 tasks in the 2 different surrounding environments, evaluation is conducted over 6 trials per task. The reported metrics include the average evaluation rewards and success rates.",
+                  "claim": "两环境下小模型对照表现不同。",
+                  "design_takeaway": "保持相同模型/场景因子",
+                  "evidence": "任务方向×门位置的仿真计数",
+                  "id": "S08-T4",
+                  "limitations": "不能把训练适应当未知环境zero-shot",
+                  "number": 4,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "多环境适应与模型容量如何权衡？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE V: Real hardware experiment results of the multienvironment adaptation experiment. For each of the 4 tasks across 2 different surrounding environments, evaluation is performed over 3 trials per task, with the success rates reported.",
+                  "claim": "成功计数暴露模拟之外的退化。",
+                  "design_takeaway": "不要只展示仿真有利行",
+                  "evidence": "两环境四方向的实机计数",
+                  "id": "S08-T5",
+                  "limitations": "每格三次是极有限精度",
+                  "number": 5,
+                  "page": 6,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "同一适应比较在实机如何变化？",
+                  "type": "main_results"
+                },
+                {
+                  "caption": "TABLE VI: MoE scalability experiment results in both simulation and real hardware. Each MoE policy network uses a different number of experts (2, 4, or 8). Simulation protocols follow Table IV, while real-robot protocols follow Table V.",
+                  "claim": "模拟收益提高而实机成功可能下降。",
+                  "design_takeaway": "质量—计算—部署时延边界应一并报告",
+                  "evidence": "2/4/8专家的Sim/Real对照",
+                  "id": "S08-T6",
+                  "limitations": "正文把退化联系到较低控制频率；仍非本研究根因证据",
+                  "number": 6,
+                  "page": 7,
+                  "panels": [],
+                  "placement": "body",
+                  "question": "增加专家数是否总是更好？",
+                  "type": "ablation"
+                },
+                {
+                  "caption": "TABLE VII: High level natural language instructions table for drone flight VLA tasks in Section III-A. Stage #1",
+                  "claim": "四种穿越指令与三个终点对象构成任务表。",
+                  "design_takeaway": "协议关键定义不能隐藏在外链",
+                  "evidence": "附录stage1与stage2表",
+                  "id": "S08-T7",
+                  "limitations": "附录计入八页上限",
+                  "number": 7,
+                  "page": 8,
+                  "panels": [],
+                  "placement": "appendix",
+                  "question": "任务组合空间是什么？",
+                  "type": "dataset_statistics"
+                }
+              ]
+            },
+            "direction_match": "自然语言航空任务、飞行中任务切换和真实机载推理开销；直接约束时延创新表述。",
+            "id": "S08",
+            "pdf": "venue/samples/S08-gradnav.pdf",
+            "sample_version_limitation": "v2为8页接受版；接受于2025，2026年2月卷期。arXiv参考年存在2025/2026歧义，按明确卷期年记2026并披露。",
+            "title": "GRaD-Nav++",
+            "venue_label": "IEEE Robotics and Automation Letters",
+            "visual_read": {
+              "method": "rendered_pdf",
+              "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。",
+              "pages": [
+                1,
+                4,
+                5,
+                6,
+                7,
+                8
+              ]
+            },
+            "year": 2026
+          }
+        ],
+        "sampling_limitations": "八篇文章RA-L身份由作者/出版注册元数据或接受版页眉确认；S02/S03/S05是接受前作者稿，S04保留样稿页眉。对这些PDF的阅读与测量是真实的，但最终版逐面板同一性未知；只将其作机制与视觉设计样本，官方8页优先。领域分别覆盖任务规划、机群信息获取、航空执行、持续多机器人评测，不能当已复现基线。 全部八篇的正文页数测量为总页数回退，机械页数带不支持references-excluded版式推断。",
+        "sampling_policy": {
+          "as_of": "2026-11-05",
+          "kind": "journal",
+          "measurement_warning_review": "逐页检查已实际完成：检测73图/表和人工另补6表，漏检表格见venue/analysis/manual-visuals.v1.md；130个实际面板均有定位与判断。caption越界拼入正文、误识单位(s)、漏字母和漏表均保留原测量并显式纠正。三篇公开PDF早于录用且两篇9页，另有预印本样稿页眉，页数和数量不能认证最终出版版式。 八份PDF均触发References-heading识别失败，pages_main_body实际上为总页数回退；不能把它解释为不含参考文献的正文页数。实际References可在图像页看到；仅使用官方8页全包上限。"
+        },
+        "stage": "venue",
+        "template": {
+          "archive": "venue/official/ieeeconf.zip",
+          "class_dependency": "venue/official/ieeeconf-macroman-utf8/ieeeconf.cls",
+          "encoding_record": "venue/official/template-encoding-record.v2.json",
+          "path": "venue/official/ieeeconf-macroman-utf8/root.tex",
+          "sha256": "9fc82e89810e5ea5e2f4f21372c0866d33b49955bad70103fd28f40ee3710056",
+          "status": "available",
+          "url": "https://ras.papercept.net/conferences/support/files/ieeeconf.zip"
+        },
+        "venue": "IEEE Robotics and Automation Letters",
+        "venue_comparison": "venue/comparison.ral-confirmed.v2.json",
+        "venue_plan_check": "venue/plan-check.ral.v2.json",
+        "venue_profile": "venue/profile.ral.v2.json",
+        "venue_selection": {
+          "candidates": [
+            {
+              "advantages": [
+                "全年投稿，无需预先承诺尚未核验的会议届次。",
+                "适合聚焦一个可复查的机器人评测问题。"
+              ],
+              "article_type_fit": "实证 benchmark Letter，突出连续飞行与时延对交付的影响。",
+              "constraints": "6页常规，最多8页，含图表、参考文献和附录；不能另加文本补充材料。计划原有6图4表需要在保留义务前提下重排/合并并重新冻结。",
+              "cost": {
+                "basis": "官方列明超出6页的两页各USD175；OA可选，当前不采购、不承担投稿费。",
+                "status": "known"
+              },
+              "evidence": [
+                {
+                  "path": "venue/sources/ral-authors.html",
+                  "quote": "Letters are six pages long",
+                  "sha256": "c1a9b2ceaa5604aa9dbfcc58f38ac863b3c1e514bf306a4f6cb2449a38c3a9b9",
+                  "url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/"
+                },
+                {
+                  "path": "venue/sources/ral-authors.html",
+                  "quote": "open throughout the year",
+                  "sha256": "c1a9b2ceaa5604aa9dbfcc58f38ac863b3c1e514bf306a4f6cb2449a38c3a9b9",
+                  "url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/"
+                }
+              ],
+              "id": "ral",
+              "kind": "journal",
+              "limitations": [
+                "篇幅紧；不能把必要裁判定义和关键实验移到无审稿文本附录。",
+                "纯仿真材料能否达到贡献门槛需由近两年已录用样本和实际结果评估。"
+              ],
+              "scope_fit": "机器人任务编排、执行与评测；方向匹配是研究者判断，不代表已获编辑认可。",
+              "timing": {
+                "basis": "官方写明全年开放；没有承诺本研究完成日期或录用。",
+                "status": "known"
+              },
+              "venue": "IEEE Robotics and Automation Letters"
+            },
+            {
+              "advantages": [
+                "正文空间容纳完整协议、资格、强基线与细分分析。",
+                "可围绕机器人可执行性和任务层诊断完整论证。"
+              ],
+              "article_type_fit": "完整实证 benchmark / robotics study，篇幅更能容纳计划机制与资格细节。",
+              "constraints": "首投至多18页，最终常规稿至多20页，超过12页收费；官方不接受补充文本作为审稿内容。",
+              "cost": {
+                "basis": "官方说明超过12页有版面费；OA可选。最终总费用依稿件长度和出版选择，当前未知且未授权。",
+                "status": "known"
+              },
+              "evidence": [
+                {
+                  "path": "venue/sources/tro-authors.html",
+                  "quote": "First submissions should be no more than 18 pages",
+                  "sha256": "4d5e30e97dcea47905c5a176fac95b5f96cbfd7116ddc7cef69bc0a4f2d373e1",
+                  "url": "https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/"
+                },
+                {
+                  "path": "venue/sources/tro-authors.html",
+                  "quote": "T-RO does not accept supplementary files.",
+                  "sha256": "4d5e30e97dcea47905c5a176fac95b5f96cbfd7116ddc7cef69bc0a4f2d373e1",
+                  "url": "https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/"
+                }
+              ],
+              "id": "tro",
+              "kind": "journal",
+              "limitations": [
+                "较宽篇幅并不降低显著性、原创性和验证要求。",
+                "当前尚未有合格benchmark运行证据，不据此承诺符合期刊标准。"
+              ],
+              "scope_fit": "机器人领域具有实质意义、可泛化的研究成果；需要更充分证据。",
+              "timing": {
+                "basis": "本次未核实固定决策周期；不假设审稿或录用日期。",
+                "status": "unknown"
+              },
+              "venue": "IEEE Transactions on Robotics"
+            }
+          ],
+          "criteria": [
+            "机器人任务层评测的读者与论文类型",
+            "官方篇幅与附录限制",
+            "现有证据与实验准备度",
+            "成本与时间约束",
+            "后续8–15篇同方向已录用文章可校准性"
+          ],
+          "mode": "candidate_comparison",
+          "rationale": "建议先以RA-L的聚焦实证benchmark为目标：连续飞行、证据时效与共享执行的核心论证集中。最终目标由用户选择；若保留完整6图4表和较长协议推导，T-RO的版式空间更合适，但需要更强实证支持。",
+          "selected_id": "ral"
+        }
+      },
+      "hashes": {
+        "planning/figure-table-plan.ral.v1.json": "553c47c76cd9d8a9c1229db7f63a582295ab1e261b5a0f9572af33fc57aa0930",
+        "venue/analysis/S01.v1.json": "d00514cf3ac4005847eb78c577bd5f57364b14be8113f463fd173ed1aab649fa",
+        "venue/analysis/S02.v1.json": "1ccde3f57a671b284cc9c4382d5d2e65d0e5eb42944a65beb4eae91ed872edc3",
+        "venue/analysis/S03.v1.json": "28e241f0400b133f2076f0a7b3f56847831b7c10e40e7ca778bcd0173879c390",
+        "venue/analysis/S04.v1.json": "261a3fe769949491c5a56fc980d8bef5a6d92a994ecb7cebc86782defddd3f60",
+        "venue/analysis/S05.v1.json": "76eb66b9e91eaac5601512370403c0518b48cbabb61576e07acf00bedcf0dffb",
+        "venue/analysis/S06.v1.json": "652d0d2673cb558a581e0363826c65659f04ff458868e04d16822a4d93737f72",
+        "venue/analysis/S07.v1.json": "9752a38ae291e194db9e57d4c3ec76556183b3b7cc3929e46b8ab7712089a958",
+        "venue/analysis/S08.v1.json": "3c2d13277b89b76f75333d5f200e621f59ce15732bd34316fc0a218c48822d0e",
+        "venue/analysis/manual-visuals.v1.json": "09dd94e1a040fe0c8077a7ed0235b3a7c53ef68edf948958d834585f947995dc",
+        "venue/analysis/manual-visuals.v1.md": "3dbc1bf856b42a0e0a4e6f585d9f50f017dfd8af3c98c5aad9ca8122136f8af2",
+        "venue/analysis/panel-corrections.v1.json": "e82943937610397006203a9bbb92153bf8795e9116270a49f8c3bdb235f11b95",
+        "venue/analysis/sample-version-audit.v1.md": "d62f1c3cb33f52118b4d4c046ed7a4b63e4ae09fb3c03517416dd0ab34cec36b",
+        "venue/candidates.v1.json": "257b1a87f2df234bc8648036baf600f98657b29bab1742da40c654ddb55421ac",
+        "venue/comparison.ral-confirmed.v1.json": "6c79257872ad933750ce43a49a7bfafa6014920c0014d28b46410040fbc55fc5",
+        "venue/comparison.ral-confirmed.v2.json": "6c79257872ad933750ce43a49a7bfafa6014920c0014d28b46410040fbc55fc5",
+        "venue/comparison.v1.json": "9cf70ad78232afa0343f80ccafe0dd78764ebbef7dad44b58ed2ead2d7023694",
+        "venue/comparison.v1.md": "62e4eb6e399a19c208956f5b593200bf400f3a48410fc1a3ac789499638a8af7",
+        "venue/design-template.v1.json": "f94097be38acea36365b9d823fb49d4a927128e76e9a726dead92ca6938db75c",
+        "venue/measurement-input.v1.json": "cbe8d6e4455ac8aa50fd4d4dc6e4b914c668158645b7a5ce8d4750a8a4441ae5",
+        "venue/measurements.ral.v1.json": "bbc69b9911efe2a08ba2530b43dbe8ae7cc5696baeee4c14b500d3bdc30192d3",
+        "venue/measurements.ral.v2.json": "bbc69b9911efe2a08ba2530b43dbe8ae7cc5696baeee4c14b500d3bdc30192d3",
+        "venue/official/ieeeconf-macroman-utf8/ieeeconf.cls": "4befef671c2a996889d325f5170d3387bf42aac9a37dcaa93724ad49816e4ec2",
+        "venue/official/ieeeconf-macroman-utf8/root.tex": "9fc82e89810e5ea5e2f4f21372c0866d33b49955bad70103fd28f40ee3710056",
+        "venue/official/ieeeconf.zip": "11d1051d5fe3dafd1e25bc7a8b66265cbe65dc135e26440cc6661baeeeb90c76",
+        "venue/official/ieeeconf.zip.source.json": "0bb9d0c3ed9919940d1afc69190260dd8c777cc38d30d3aa2f5a44e6c7cdb845",
+        "venue/official/ieeeconf/ieeeconf.cls": "4befef671c2a996889d325f5170d3387bf42aac9a37dcaa93724ad49816e4ec2",
+        "venue/official/ieeeconf/root.tex": "a7eba1fe1fcd8c39dcc523fd787dc713a90d6830b37c516a0bdaeaeeeac2408f",
+        "venue/official/template-encoding-record.v2.json": "1dd45f3d06cf77e60b7f79b309603da9e17af5ac42996bd2493fd87f273a79de",
+        "venue/official/template-smoke-v3/process-output.txt": "94bce1cb85f3cbead588c56d8c7a3c5398084ac38529cf2e5f6d4e5fdf914491",
+        "venue/official/template-smoke-v3/root.log": "4867c6f369e64df8a40c78f1e5d94661b161504213a9da7ee965bc45c2f08e79",
+        "venue/official/template-smoke-v3/root.pdf": "6787785400b802a9b8c14a0b65ef8648443886eb3744706cf7f062d7e73ad6e2",
+        "venue/plan-check.ral.v1.json": "a3d0ac6881f3c64b3a63d6c4e31f441a11fa08d9762396ef4ea4fe9ce28abfed",
+        "venue/plan-check.ral.v2.json": "a3d0ac6881f3c64b3a63d6c4e31f441a11fa08d9762396ef4ea4fe9ce28abfed",
+        "venue/profile.ral.v1.json": "d129de669e4cc1246d5dc293ff2885142bd7bb3cdd510ab195c0541f1695e052",
+        "venue/profile.ral.v2.json": "9fa32f550161132d8548646f93df70a2eee77f95720f8dabf7cf38105568058e",
+        "venue/reading-index.ral.v1.md": "efff836b7f0629e6a7af0e716078c0eae4943691ce9c02a508308836bd6d1bdd",
+        "venue/reading-index.ral.v2.md": "efff836b7f0629e6a7af0e716078c0eae4943691ce9c02a508308836bd6d1bdd",
+        "venue/sample-acquisition.v2.json": "4e5b6d3e7986669aec2eed480ad9bea337a1409a342803c5ebe7b888804bf349",
+        "venue/sample-acquisition.v4.json": "7450d0d9f290a62b6a88d6659099e2f037dad769dcd8e0c93e6b86c724bd92fe",
+        "venue/samples/S01-aerial-gym.pdf": "5c73cafa8c22f042be02a8fc6729f3cb6de510c054e3646a2aade76e60b5ecd0",
+        "venue/samples/S01-aerial-gym.pdf.source.json": "0bea52640c228c1e1485f6dfa483891f8095a6f2370880b6981875adeb7ae240",
+        "venue/samples/S02-lip-preprint.pdf": "434d0e4d2aedc457361e2c60cc16b88a847b2c64ec51b9a0c763587875574ad8",
+        "venue/samples/S02-lip-preprint.pdf.source.json": "b1ec8c522214c27d2321ce44fdae27d193de5224211bbca834785ffcf87051bc",
+        "venue/samples/S03-nl2hltl-preprint.pdf": "35eb942bfd13addb229489dcc5dd5937310199db8648660999637867257d259b",
+        "venue/samples/S03-nl2hltl-preprint.pdf.source.json": "baccbbbe395fd23a75fda915ab83633e285040bdff206fd05acb8942a2b45549",
+        "venue/samples/S04-smart.pdf": "aecbfbbadec1541634f03f5a95b8515d97ae0e524413bedc31102b8cda12ae2b",
+        "venue/samples/S04-smart.pdf.source.json": "c416c678f73544765630de18f04702edcdb5a238a8e5b1e6101e146567af4cae",
+        "venue/samples/S05-mripp.pdf": "be21518010cb554a0afa5009ab18b943cc48293778b5084d6c8d3b32298952e8",
+        "venue/samples/S05-mripp.pdf.source.json": "55aa1cdf20027fb7f79b6d17f02d2ea5d652864a1b9e4e282036c901966f93fd",
+        "venue/samples/S06-hetmrta.pdf": "ee02a541ae034564169d859a5aa628df7d5c1645606dbb1b51a00d6d7e7b70ce",
+        "venue/samples/S06-hetmrta.pdf.source.json": "52be662d1574dde2380418cfbf559a1ae65152582c87f1a1b069f12d18d1079e",
+        "venue/samples/S07-pursuit.pdf": "8d94935eddf68bab911bb0911d6afe5af30dfab23e102ba5089957048fa54bbd",
+        "venue/samples/S07-pursuit.pdf.source.json": "e46b86c361335f56052e0fb87aae887005d479628796abd8251c7be4942bc14f",
+        "venue/samples/S08-gradnav.pdf": "46161e3ef6f41b91cccfa89093db57a4780e6fe7bbb967f0497cfa5f6ddaa2ba",
+        "venue/samples/S08-gradnav.pdf.source.json": "7bb270add3aafad99a67e277414fa6f87c6a5ea49c10731a851fa70b4b8293df",
+        "venue/sources/gradnav-metadata.html": "71cf2ccfbaa242e6ef99a7e02c137dc04b78ba63a86b2926ce7e93f07c8dc8f6",
+        "venue/sources/gradnav-metadata.html.source.json": "0e4358aaae3a2ff9e2469128ad1e7a8458e716128d225696cb8f164aba588530",
+        "venue/sources/hetmrta-acceptance.html": "d43e707705ebbd135fab9f3d6f93efd3775fc6965f7eb59e2cadf8763f49f7d2",
+        "venue/sources/hetmrta-acceptance.html.source.json": "9524210754af4a148e4863141feeeb2ae91c752a52c51df47c3df7d4936f0c92",
+        "venue/sources/lip-author.html": "63aac83ff78d16196ba3e1db0a3b255fbcbc5e78abbfae4f96de1ba57a081ccc",
+        "venue/sources/lip-author.html.source.json": "9142cda74258aae1ac940b88ec9f209fb26d40a233c4d33e130d9823a526a154",
+        "venue/sources/lip-publisher-metadata.json": "0bfd92d5a222cd835691dc607b448a07e9f046b13aee83f15d83db1699e4ef67",
+        "venue/sources/lip-publisher-metadata.json.source.json": "5f326c72c39fcde318eb1725e54d4ddfa9f91d069075c4e0729a1a4186df8add",
+        "venue/sources/marmot-publications.html": "149a7328d956f6acac5705b2bdc86c8edbdea5e7300d6e25ecc0d8f3284ea836",
+        "venue/sources/marmot-publications.html.source.json": "4a80d2874636b269832d5a28afa7caf94599bfc9564580c4f1f35a61ebf3e601",
+        "venue/sources/mripp-author-repository.html": "0867bfda589ac099d93c7219e94dd74509611bf9be3175f89ec91003ae210714",
+        "venue/sources/mripp-author-repository.html.source.json": "d64c0e7bab01c2c3ec5f42e4d423a60c50267924b1d3af2b10f4497a79b02ee3",
+        "venue/sources/mripp-registry.json": "da8699364092e54fd27222ff3f586166b85e3f2030c11ba626a0afda60b457f4",
+        "venue/sources/mripp-registry.json.source.json": "952ba22f65035cda02dca7061e9dd0668eea967454b6a28cc28d51245fab956a",
+        "venue/sources/nl2hltl-author-repository.html": "3a0316fb1f0d8694221356f9bb17a025d8e98595c79693d572eaf1285f62e6ea",
+        "venue/sources/nl2hltl-author-repository.html.source.json": "e2c910b81825f7d0d3949a5442a3d7342b394895300c85ba95e205b029060ce7",
+        "venue/sources/nl2hltl-lab.html": "38bd7525169caf742d5aac69a839fc2d9ff43c5dd797c2846899deeb249d45b5",
+        "venue/sources/nl2hltl-lab.html.source.json": "f34a41512ae658c7dcd56f31f5e8dd7f3dc3228ce33962d8a97ae24e69760577",
+        "venue/sources/nl2hltl-registry.json": "14c673c3e22087cca473880e57db5275991b39034dbb12d7a06fdbf32c277149",
+        "venue/sources/nl2hltl-registry.json.source.json": "125c73be5ee05f33558d22f51754b1913de339af42af79094c40f9a580bbebd4",
+        "venue/sources/ral-authors.html": "c1a9b2ceaa5604aa9dbfcc58f38ac863b3c1e514bf306a4f6cb2449a38c3a9b9",
+        "venue/sources/ral-authors.html.source.json": "fbc0925a0375322f32bd5a00deaca75f56c2664c1634c581b834dcf13add7090",
+        "venue/sources/smart-project.html": "0a37ffe9215dea911220eafa6e6803a757d6c24aff83d3fb47941e476123f03e",
+        "venue/sources/smart-project.html.source.json": "25e583ee18b4472de22cc6b97da995ffcae4eccde33a06a8fb12ff9b4d57df4f",
+        "venue/sources/tro-authors.html": "4d5e30e97dcea47905c5a176fac95b5f96cbfd7116ddc7cef69bc0a4f2d373e1",
+        "venue/sources/tro-authors.html.source.json": "a180dededc66db2973c66f887c345b59f7d881db482ada659c29be18bc27c103"
+      }
+    }
+  ],
+  "stale": [],
+  "attempts": {},
+  "knowledge": "# Plan：冻结承诺并分解为可检查工作\n\nUse [production.md](../production.md): probe the actual interpreter/dependencies and generate the `experiment-template` recording envelope before freezing a scientific evaluator. WorkOrders use registered `export_image` and `prepare_tex` policies when needed. Dataset identities, seeds, method choices and their scientific justification remain task parameters.\n\n本阶段结合 Deli 本地逐项交付合同和 R6 计划快照、PaperFlow 的 WorkOrder/typed action，以及上游 Autoresearch 的 plan 子命令。下述字段含义按本分支 runtime contract，不代表复刻 PaperFlow 的 LangGraph 或 Deli 记账器。\n\n## 输入及冻结\n\n读取完整 Brief、venue/profile/template、材料证据和可行性。核对用户看到的每个要求已进入 `deliverable_plan`。每个稳定 requirement ID 要回答具体问题、规定必要内容与证据，并给出可判定验收；不要把“有一张图”当成图的内容要求。\n\n在实际工作前冻结计划快照，保留批准 Brief 的哈希、当前计划和每轮开始版本。控制器是状态的唯一写者，模型不能直接改控制文件或旧回执。计划快照不是后期从成稿逆向生成的副本。\n\n计划接受前必须设置“请用户回答”节点：用 `ask-user --kind budget` 展示默认 `budget: {}`（无隐含任务总上限、不新增付费授权）、可选 calls/tokens/cost/minutes、具体计划、当前已用与预留/未知用量，以及拟议预算和原因。通过宿主真实问答工具等待答复，再 `confirm-budget`；保留默认值也要有实际答复。用户拒绝则保留现预算并调整可行计划。增加或移除上限、改变币种都重走同一问答，不能把泛化执行授权、推荐选项或超时当答复。已有明确回答可按真实原文复用。详见 [user-input.md](../user-input.md) 和 [budget.md](../budget.md)。\n\n## 任务与动作\n\n- `WorkOrder.requirement_ids` 覆盖全部当前承诺，未知 ID、遗漏 ID、过期 Brief、非法依赖必须在执行前拒绝。一个实验可以支持多图；不是一项要求就永久创建一个 Agent。\n- 每个工作单有生产者、依赖、输入/输出、明确作用域与 typed actions。只调用已注册能力及其真实参数，不把任意生成的 Python/JS 作为脚本执行。宿主执行研究判断；确定性能力负责可复算工作。\n- 工具权限是可做的上界，不是已发生效果的证据。外部动作必须在其前置科学/资源结果出来后重新判断，审计任务 completed 不等于 GO。\n- 每个实验先把 claim、比较对象、变量/控制、指标方向、统计单位、样本/失败分母、分割暴露、停止/重试规则和负结果处置写清。先做最小可测任务，不把“跑不显著再加样本”当方案。\n- 为每张图表写问题、候选主张、数据、比较单位、区间/失败口径、形态选择理由和稿件位置。计划的是证据与论证，不是图型配额。\n\n## 轮次、停滞与分叉\n\n一轮结束按实际证据区分 verified progress、no progress 与 regression；心跳、换措辞或同一发现重述不清零停滞。使用当前控制器的 prepare/apply，而不并行启动 Deli `checkpoint.py` 第二套账本。停滞提示检查结构性转向，说明改变了什么假设、搜索空间或证据路径；保留已尝试方向与负面结果。提示不代替继续执行尚可完成的已授权工作。\n\nAutoresearch 指标循环保留 Modify/Verify/Keep-or-Discard，任务编排循环保留 predicate/units/plateau 语义。fork-and-flush 从当前最佳版本提供 fresh-context 多分支，按预算节点/早停滞条件及编排 plateau 的不同触发策略执行。其分支 metric 只决定候选保留，不能授予论文验收、修改原评价器、删掉失败记录或自动扩大算力。资源共享时顺序执行分支，所有分支计入实际预算。\n\n## 修改、失败与交接\n\n执行方法和顺序的常规调整在范围内进行；删除比较、降低证据标准或缩减必交义务需显式修订和真实范围授权。保留原承诺与 added/removed/changed 及原因。结果不支持假说时仍保留调查义务，不能通过重命名图号或改计划把缺项消掉。\n\n交给 literature/experiment 的是冻结计划、所有 requirement IDs、可执行工作单和统计设计；review 将同时读取轮前快照、现计划与成稿。未覆盖承诺、计划中的 must 数据仍待补、执行条件无法满足时返回具体阻塞，不进入写作凑内容。\n\n## 每轮的工程约束与来源适用性\n\nDeli 的 Topic→Draft→Deep Improvement→Sprint 提供轮次组织经验；本分支按研究证据依赖组织 intake、venue、plan、literature、experiment、figures、write、review。具体先后随真实输入，不能为复刻旧 Iter 1–6 先写结论、再于 Iter 7 做实验。论文后期仍保留 review→按缺陷路由→修复→编译→重新评审闭环。\n\n每轮首次操作先保存现计划快照和版本；登记本轮处理文件/起始证据，结束时提交验证与 R6 使用的实际材料。初始 frozen plan 不能替代每轮快照，成稿后补拍快照也不能证明轮前承诺。文件、规则、任务或证据变化后旧判断不能重用。中断恢复先对账上一轮和实际效果，不从零初始化。\n\nDeli 的文件工作量经验保留为观察：至少三百行计为大文件，变更多于五个提示检查影响。它们不拒绝继续、不要求拆分有效稿件；不用删除证据或缩小用户要求满足提示。\n\n本分支不采用 Deli 的隐藏轮数、单会话时长、实验次数或精修停止上限。三十分钟只是保存检查点后继续的提示；实际可选总上限只在用户回答的 `budget` 中，跨会话保留用量，显式 minutes 从创建任务起包含等待。只有实际采用了模拟评分才有分数增益，不可填造分数。内部实现失败保持 active；外部阻塞只影响相关工作，有本地可执行工作就继续。stopped 须有真实用户停止指令或程序验证的预算原因，不能因此通过质量门。四次连续停滞标 attention，不自动对外发消息或调用未授权服务。\n",
+  "knowledge_sha256": "c28278c06a48e68b76562e132cd41c5be647f1f59f4be7a52c7b75d490fe6173",
+  "upstream_protocol": "---\nname: autoresearch:plan\ndescription: \"Convert a goal into validated Scope, Metric, Direction, Verify config\"\nargument-hint: \"[Goal: <text>] [--chain <targets>]\"\ndisable-model-invocation: true\n---\n\nEXECUTE IMMEDIATELY.\n\n## Parse Arguments\n\nExtract from $ARGUMENTS:\n- `Goal:` — text after keyword, or full $ARGUMENTS if no keyword\n- `--chain <targets>` — comma-separated downstream commands\n- `--<subcommand>` — chain shorthand\n\nRemaining text = goal description.\n\n## Setup (if Goal missing)\n\nAskUserQuestion (single batch):\n  Q1 (Goal): \"What do you want to achieve?\" — open text\n  Q2 (Type): \"What kind of goal?\" — improve a metric, fix errors, audit security, explore edge cases, document code, ship something\nIf Goal provided → skip.\n\n## Phase 1: Analyze Goal\n\nParse the goal to determine:\n- Is it measurable? (metric-driven vs subjective)\n- What's the natural scope? (files, modules, entire codebase)\n- What subcommand fits best? (core loop, fix, debug, security, etc.)\n\n## Phase 2: Derive Scope\n\n1. Scan project structure\n2. Identify files relevant to the goal\n3. Propose file globs\n4. If ambiguous → ask user to confirm\n\n## Phase 3: Derive Metric + Direction\n\nFor metric-driven goals:\n- Identify what to measure (test coverage, error count, bundle size, latency, etc.)\n- Determine direction: higher_is_better or lower_is_better\n- Propose metric name and description\n\nFor performance, latency, throughput, runtime, CPU, memory, allocations, binary\nsize, power, energy, bandwidth, or compute-cost goals, read\n`references/behavior-preserving-optimization.md` in the autoresearch skill directory.\nDerive a behavior/resource Guard and a held-out confirmation plan separately\nfrom the headline metric; do not let the optimized metric certify itself.\n\nFor subjective goals:\n- Suggest proxy metrics where possible\n- Or recommend /autoresearch:reason for non-measurable goals\n\n## Phase 4: Derive Verify Command\n\n1. Identify how to extract the metric as a number from a shell command\n2. Propose Verify command (e.g., `npm test -- --coverage | grep \"All files\" | awk '{print $10}'`)\n3. **Safety screen:** check proposed command for rm -rf, fork bombs, curl|sh, credentials\n4. Dry-run the Verify command → confirm it outputs a valid number\n5. If dry-run fails → adjust command and retry\n\n## Phase 5: Derive Guard (optional)\n\nPropose a Guard command if applicable:\n- Test suite: `npm test` / `pytest` / `go test ./...`\n- Type check: `tsc --noEmit` / `mypy`\n- Build: `npm run build`\n- None if not applicable\n\n## Phase 6: Suggest Iterations\n\nBased on goal complexity:\n- Simple metric improvement → 10-15\n- Moderate refactoring → 20-25\n- Complex multi-file changes → 30+\n- Recommend bounded default, mention `Iterations: unlimited` option\n\n## Phase 7: Present Config\n\nOutput a ready-to-run autoresearch config block:\n\n```\n/autoresearch\nGoal: {derived goal}\nScope: {derived globs}\nMetric: {derived metric}\nDirection: {higher_is_better|lower_is_better}\nVerify: {derived command}\nGuard: {derived guard or omit}\nIterations: {suggested count}\n```\n\nAsk user: \"Run this config now, or adjust?\"\n\n## Chain Handoff\n\nIf --chain set:\n- Write handoff.json: version \"2.1.0\", source \"plan\", timestamp, status COMPLETE, config = derived config block\n- Invoke next target via the `autoresearch` skill's Subcommand routing, with the derived config\n",
+  "action_contracts": {
+    "compile_tex": [
+      "source",
+      "pdf"
+    ],
+    "render_statistics": [
+      "input",
+      "table",
+      "figure"
+    ],
+    "copy_artifact": [
+      "source",
+      "target"
+    ],
+    "validate_packet": [
+      "packet"
+    ],
+    "export_image": [
+      "source",
+      "target",
+      "options"
+    ],
+    "prepare_tex": [
+      "source",
+      "target",
+      "options"
+    ]
+  },
+  "requirements": [
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "设计命题：Actor只使用合法因果信息，共享低层隔离任务编排。",
+      "evidence_requirements": "版本化工具/权限协议与合格控制证据",
+      "id": "F1",
+      "kind": "figure",
+      "purpose": "哪些信息、控制和裁判由各层掌握？",
+      "title": "权限与持续执行架构"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "待参考episode验证：时戳与job状态构成完整因果链。",
+      "evidence_requirements": "TODO: 合格非LLM参考episode原始trace，示意与实测分标",
+      "id": "F2",
+      "kind": "figure",
+      "purpose": "真实任务变化怎样经过观测、job和报告形成后果？",
+      "title": "参考episode时间线"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "待检验：完整分母下的Y/Q与C/S/D/H/E存在可估计差异。",
+      "evidence_requirements": "TODO: 八配置完整root配对原始结果、区间及分量",
+      "id": "F3",
+      "kind": "figure",
+      "purpose": "ID/OOD各等级下方法怎样权衡交付与安全？",
+      "title": "主质量与安全分量"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "待检验H1/H2：同模型编排、确认与记忆影响事件损失。",
+      "evidence_requirements": "TODO: 事件兄弟trace、统一需求日历、删失标记",
+      "id": "F4",
+      "kind": "figure",
+      "purpose": "事件改派何时真实生效，交付损失如何变化？",
+      "title": "事件与交接"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "待检验H3：持续飞行下推理/链路等待影响有效动态格。",
+      "evidence_requirements": "TODO: 实际延迟/费用receipt与受控注入对照",
+      "id": "F5",
+      "kind": "figure",
+      "purpose": "实际与注入时延分别如何改变及时交付？",
+      "title": "时延—质量—成本"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "待trace验证：失败原因可与观测、执行和裁判后果对应。",
+      "evidence_requirements": "TODO: 两类预声明选择规则下的实际失败trace",
+      "id": "F6",
+      "kind": "figure",
+      "purpose": "哪些合法包、job行为导致任务损失？",
+      "title": "代表失败因果链"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "有据机制差别与未知格决定贡献边界。",
+      "evidence_requirements": "主文/代码机制定位，包含SMART与GRaD-Nav++边界",
+      "id": "T1",
+      "kind": "table",
+      "purpose": "与既有UAV任务和持续执行评测差别在哪？",
+      "title": "机制近邻矩阵"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "待资格证据：仅合格包线与dev冻结参数进入test。",
+      "evidence_requirements": "TODO: G1–G4资格记录、split manifest与阈值版本",
+      "id": "T2",
+      "kind": "table",
+      "purpose": "哪些参数和控制/感知/时间条件已被冻结？",
+      "title": "生成器与资格"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "待检验：不预设LLM优胜，C/S/D/Q/H/E/Y/SR及成本同时可见。",
+      "evidence_requirements": "TODO: 完整root×repeat×condition分母、ID/OOD和等级分层",
+      "id": "T3",
+      "kind": "table",
+      "purpose": "强经典、统一ReAct和同模型编排的完整成绩是什么？",
+      "title": "主基线与完整结果"
+    },
+    {
+      "acceptance_criteria": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。",
+      "claim": "待检验：事件、去重记忆、递进确认分别解释机制差异。",
+      "evidence_requirements": "TODO: 预选L3 roots三项消融与失败归因",
+      "id": "T4",
+      "kind": "table",
+      "purpose": "移除单一机制会怎样，失败是否改变结论？",
+      "title": "消融与失败类型"
+    },
+    {
+      "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+      "id": "S0",
+      "kind": "section",
+      "purpose": "真实研究问题、方法、已观察结果和适用范围；不预写性能。",
+      "title": "Abstract"
+    },
+    {
+      "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+      "id": "S1",
+      "kind": "section",
+      "purpose": "民用交付、持续执行、最近工作机制差别与三个RQ。",
+      "title": "Introduction"
+    },
+    {
+      "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+      "id": "S2",
+      "kind": "section",
+      "purpose": "用逐机制主来源限定贡献；承认SMART执行评测、GRaD-Nav++飞行任务更新/推理开销先例。",
+      "title": "Related Work"
+    },
+    {
+      "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+      "id": "S3",
+      "kind": "section",
+      "purpose": "任务、公开信息/隐藏truth、异步job、时钟、固定窗口报告、评分与G1–G4资格。",
+      "title": "Benchmark"
+    },
+    {
+      "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+      "id": "S4",
+      "kind": "section",
+      "purpose": "强经典基线、统一ReAct与同模型编排，独立root、ID/OOD、holdout、完整失败分母及统计。",
+      "title": "Baselines and Protocol"
+    },
+    {
+      "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+      "id": "S5",
+      "kind": "section",
+      "purpose": "按三个RQ呈现正式结果；真实/注入时延分开；保留阴性结果与删失。",
+      "title": "Results"
+    },
+    {
+      "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+      "id": "S6",
+      "kind": "section",
+      "purpose": "合成代理/结构化传感器、空中退出、有限包线、无实机/真实电池、版本与小样本外推。",
+      "title": "Limitations"
+    },
+    {
+      "acceptance_criteria": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。",
+      "claim": "证据约束下的章节论证；实证结论需正式数据。",
+      "evidence_requirements": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。",
+      "id": "S7",
+      "kind": "section",
+      "purpose": "只总结实际证据与边界，不把可复现协议等同真实救灾有效性。",
+      "title": "Conclusion"
+    },
+    {
+      "acceptance_criteria": "官方ieeeconf US Letter 10pt双栏，正文+图表+参考文献+附录共≤8页；实际PDF视觉核验、来源和引用核验、独立审查、完整源/证据映射；不含原赛事文件。",
+      "claim": "仅对冻结任务与证据范围作结论。",
+      "evidence_requirements": "全部F1–F6/T1–T4/S0–S7义务、模板/源码/PDF/版本manifest与真实独立审查。",
+      "id": "M1",
+      "kind": "manuscript",
+      "purpose": "可审阅、可重建的完整实证论文。",
+      "title": "RA-L manuscript and reproducible source"
+    }
+  ],
+  "budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {},
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 862.1411815166666,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "checkpoint": {
+    "due": false,
+    "interval_minutes": 30,
+    "minutes_since_checkpoint": 13.356653416666667,
+    "attention_required": false,
+    "advice": [],
+    "action": "Save an evidence-bound checkpoint, then continue authorized available work",
+    "terminal": false
+  },
+  "active_round": {
+    "documents": {
+      "WRITING_START.md": {
+        "lines": 75,
+        "sha256": "2ba396a4e65cb2c052279bca17000fc8807b5b198707f87a0d7b135cf8e6c21c"
+      },
+      "inputs/BENCHMARK_RESEARCH_PLAN.original.md": {
+        "lines": 2475,
+        "sha256": "dd01e21442950abccc543bb2ba4d53d1901fb2669dba21cbfe9aad7f13e591b0"
+      },
+      "inputs/brief.draft.json": {
+        "lines": 21,
+        "sha256": "c32cb97f4969e76e998c3d73ede792a1cc10204a95f8e6ba177ae70cdc4dee41"
+      },
+      "inputs/brief.ral.v1.json": {
+        "lines": 193,
+        "sha256": "8c616e5c2a926dfbdda6ce58596e591f5938864145e14f83c0909bcdd7611dc5"
+      },
+      "inputs/plan-excerpts.md": {
+        "lines": 24,
+        "sha256": "d428747fcc1e26af7eae37d036ee10453333fb95c46e7c1e718ad1f3275ebc01"
+      },
+      "inputs/provenance.json": {
+        "lines": 37,
+        "sha256": "a573f86d3d293630fa7fcb8c783f251f9cb7364e2e59eb91932e2ef100e4f507"
+      },
+      "inputs/user-venue-answer-20261105.json": {
+        "lines": 1,
+        "sha256": "286534f621ebd266774418c15a1f853de24c64d345d276401e3383ec47cb6a4a"
+      },
+      "inputs/venue-answer.v1.json": {
+        "lines": 11,
+        "sha256": "34b0bf0027db2f1f00bd5ab3d5e9a2db489b42d5deb38d4965490cd003700f04"
+      },
+      "inputs/writing-authorization.v1.json": {
+        "lines": 7,
+        "sha256": "3c1b23afd60a4d0f8ba66e480f4d24ffda5a0d652222cb4413caebad3cbda465"
+      },
+      "intake/environment.v1.json": {
+        "lines": 16,
+        "sha256": "56d769e43cf80de0e633f1123102d0aa7d0bf7d7daae2ba82799f2e1d57c2e92"
+      },
+      "intake/feasibility.v1.md": {
+        "lines": 9,
+        "sha256": "2f0272334f37f18600a8e33c98956b1f4058fb8101379472d8dae26ed802cdee"
+      },
+      "intake/local-validation.ral.v1.json": {
+        "lines": 28,
+        "sha256": "20f274717c94ac06269e991f54f5bd6761c82e07e887f4ff2590efda5936d907"
+      },
+      "intake/local-validation.v1.json": {
+        "lines": 25,
+        "sha256": "be1b8ef3f3493955bbab1cb8d8752afe3bd7db222b3d2bec1030d7fb1c32e880"
+      },
+      "intake/source-acquisition.v1.json": {
+        "lines": 60,
+        "sha256": "1bcd298a6f49c4ba6329399c093859196b0a628817b9405c470dd0e7e4c2ed99"
+      },
+      "literature/esarbench-v1.html.source.json": {
+        "lines": 10,
+        "sha256": "ae60ec30db282f018c5d1a0a3447df82d7e2534d96656380177a893effcdb2c9"
+      },
+      "literature/missionbench-v1.html.source.json": {
+        "lines": 10,
+        "sha256": "81f0f9574f18864e7b22d0768b2651746781b7db7e8c7146411c604ea2c923ff"
+      },
+      "literature/multiuav-plat-v1.html.source.json": {
+        "lines": 10,
+        "sha256": "7a04c86d8748b9cc6f426e2e4e6df0f59f5b58f7b7ef17feb6a120d94dfde2cb"
+      },
+      "literature/nearest-work-matrix.v1.md": {
+        "lines": 23,
+        "sha256": "be51ff456943020943d66f1bace68b3f92b84251280700d236cee0220d05955f"
+      },
+      "packets/environment.v1.json": {
+        "lines": 1,
+        "sha256": "72c1564ddeabd44e390483a6e152275afe470a605c432b9591471229f7d17982"
+      },
+      "packets/inspect-S01.json": {
+        "lines": 1,
+        "sha256": "5cde3de4ed8f39f2fdd69d11816e65d635955628389e97c23f066e1bc0a99c71"
+      },
+      "packets/inspect-S02.json": {
+        "lines": 1,
+        "sha256": "42742e7946c16ea6c17ed41e4171297bd9ef1e8f2c1a8e33447e7c155e6c666e"
+      },
+      "packets/inspect-S03.json": {
+        "lines": 1,
+        "sha256": "e93b131cabb593ee8fce3de15b58763411bda3e4599ebaeea200cc3a766e455e"
+      },
+      "packets/inspect-S04.json": {
+        "lines": 1,
+        "sha256": "8cca32837f7345ec34f3507eab7575a096cceb215294c262d71946cc8d73be11"
+      },
+      "packets/inspect-S05.json": {
+        "lines": 1,
+        "sha256": "ad5031c73b9e54783a1a572f7c88b6715c1398e919d9396bebade02e457ca0ae"
+      },
+      "packets/inspect-S06.json": {
+        "lines": 1,
+        "sha256": "72292b386f1cecda42517e14bc56b8c9361ac8d437b971aea5fc8a546f387e8f"
+      },
+      "packets/inspect-S07.json": {
+        "lines": 1,
+        "sha256": "b0336a92c825457bc9e70b54834b6ab61a49797e279810eff92ff60c721defe4"
+      },
+      "packets/inspect-S08.json": {
+        "lines": 1,
+        "sha256": "a48ea3647b4508544403ecce649f18c2fa51a638348e0ae2744bf74b2fac7c20"
+      },
+      "packets/intake.v1.json": {
+        "lines": 86,
+        "sha256": "4878f6dd7cd6bdc75ca7cd02f74ce63d26ef8ab3bd603ab3a6d2aa7ed280898e"
+      },
+      "packets/sample-acquisition.v1.json": {
+        "lines": 70,
+        "sha256": "419ca5d572e81c074f15bc22a87a219cafec7d25e8b3a6ca7d54f88a401a091e"
+      },
+      "packets/sample-acquisition.v2.json": {
+        "lines": 64,
+        "sha256": "cf12d71ef1ca5f729884226bf8bf15d445dc304f2c4a4d653f8582817b4f5360"
+      },
+      "packets/sample-acquisition.v3.json": {
+        "lines": 28,
+        "sha256": "13d64dc135f0237b0f086618355ad9fb93f6487a43bbd53ee4ad28e8c68bcb53"
+      },
+      "packets/sample-acquisition.v4.json": {
+        "lines": 34,
+        "sha256": "436c260859ddfa3624868bb06c532c1758210dc4d821d8fc06d232c88a9dfc68"
+      },
+      "packets/sources.v1.json": {
+        "lines": 29,
+        "sha256": "05553978588191e2d449563e67e86a09655a86018ae372a4105ef6fa03d363ba"
+      },
+      "planning/budget-proposal.ral.v1.json": {
+        "lines": 6,
+        "sha256": "0bc4c20cdc1b7eec1698316f3ce1d5b3ceff00cc15fa09bcf36c44e00f7191ff"
+      },
+      "planning/claim-evidence.v1.json": {
+        "lines": 194,
+        "sha256": "c4d828849e9ff46aa3d80e8332a580b721028d05d111120d0a598c5881c0c393"
+      },
+      "planning/claim-evidence.v1.md": {
+        "lines": 16,
+        "sha256": "ac07c9332ad012772267c13c47249f59880a7235118d23f953edbedf41c58038"
+      },
+      "planning/figure-table-plan.ral.v1.json": {
+        "lines": 149,
+        "sha256": "553c47c76cd9d8a9c1229db7f63a582295ab1e261b5a0f9572af33fc57aa0930"
+      },
+      "planning/resource-and-adapter-preflight.v1.md": {
+        "lines": 41,
+        "sha256": "39fa4910ba5747bbe9780ee1d620ad0ca0a2a5627628958b80bb530f35b84c15"
+      },
+      "planning/resource-proposal.ral.v1.md": {
+        "lines": 32,
+        "sha256": "b19ed2febcdd8b31d1849102d086f9c7a935b96adfcb1372d8a434a7cbb84344"
+      },
+      "venue/RAL_CALIBRATION.md": {
+        "lines": 38,
+        "sha256": "f29eaf3d528c5c322ac31fe7402262abe11fc2d1b1eaa01f572e0e43898cf9c0"
+      },
+      "venue/analysis/S01.v1.json": {
+        "lines": 420,
+        "sha256": "d00514cf3ac4005847eb78c577bd5f57364b14be8113f463fd173ed1aab649fa"
+      },
+      "venue/analysis/S02.v1.json": {
+        "lines": 166,
+        "sha256": "1ccde3f57a671b284cc9c4382d5d2e65d0e5eb42944a65beb4eae91ed872edc3"
+      },
+      "venue/analysis/S03.v1.json": {
+        "lines": 367,
+        "sha256": "28e241f0400b133f2076f0a7b3f56847831b7c10e40e7ca778bcd0173879c390"
+      },
+      "venue/analysis/S04.v1.json": {
+        "lines": 333,
+        "sha256": "261a3fe769949491c5a56fc980d8bef5a6d92a994ecb7cebc86782defddd3f60"
+      },
+      "venue/analysis/S05.v1.json": {
+        "lines": 168,
+        "sha256": "76eb66b9e91eaac5601512370403c0518b48cbabb61576e07acf00bedcf0dffb"
+      },
+      "venue/analysis/S06.v1.json": {
+        "lines": 90,
+        "sha256": "652d0d2673cb558a581e0363826c65659f04ff458868e04d16822a4d93737f72"
+      },
+      "venue/analysis/S07.v1.json": {
+        "lines": 313,
+        "sha256": "9752a38ae291e194db9e57d4c3ec76556183b3b7cc3929e46b8ab7712089a958"
+      },
+      "venue/analysis/S08.v1.json": {
+        "lines": 412,
+        "sha256": "3c2d13277b89b76f75333d5f200e621f59ce15732bd34316fc0a218c48822d0e"
+      },
+      "venue/analysis/manual-visuals.v1.json": {
+        "lines": 65,
+        "sha256": "09dd94e1a040fe0c8077a7ed0235b3a7c53ef68edf948958d834585f947995dc"
+      },
+      "venue/analysis/manual-visuals.v1.md": {
+        "lines": 76,
+        "sha256": "3dbc1bf856b42a0e0a4e6f585d9f50f017dfd8af3c98c5aad9ca8122136f8af2"
+      },
+      "venue/analysis/panel-corrections.v1.json": {
+        "lines": 332,
+        "sha256": "e82943937610397006203a9bbb92153bf8795e9116270a49f8c3bdb235f11b95"
+      },
+      "venue/analysis/sample-version-audit.v1.md": {
+        "lines": 18,
+        "sha256": "d62f1c3cb33f52118b4d4c046ed7a4b63e4ae09fb3c03517416dd0ab34cec36b"
+      },
+      "venue/calibration.ral.v1.json": {
+        "lines": 2594,
+        "sha256": "66067923bd056f5c5ce1b87eac735b69864f4bd9627372bec73dd7b635904d1a"
+      },
+      "venue/calibration.ral.v2.json": {
+        "lines": 2606,
+        "sha256": "0d4c4ec20e727730860e9f7b94f80a5b1ec7fd1415a74fc16fab53d7711d91e4"
+      },
+      "venue/candidates.v1.json": {
+        "lines": 99,
+        "sha256": "257b1a87f2df234bc8648036baf600f98657b29bab1742da40c654ddb55421ac"
+      },
+      "venue/comparison.ral-confirmed.v1.json": {
+        "lines": 94,
+        "sha256": "6c79257872ad933750ce43a49a7bfafa6014920c0014d28b46410040fbc55fc5"
+      },
+      "venue/comparison.ral-confirmed.v2.json": {
+        "lines": 94,
+        "sha256": "6c79257872ad933750ce43a49a7bfafa6014920c0014d28b46410040fbc55fc5"
+      },
+      "venue/comparison.v1.json": {
+        "lines": 97,
+        "sha256": "9cf70ad78232afa0343f80ccafe0dd78764ebbef7dad44b58ed2ead2d7023694"
+      },
+      "venue/comparison.v1.md": {
+        "lines": 19,
+        "sha256": "62e4eb6e399a19c208956f5b593200bf400f3a48410fc1a3ac789499638a8af7"
+      },
+      "venue/design-template.v1.json": {
+        "lines": 1245,
+        "sha256": "f94097be38acea36365b9d823fb49d4a927128e76e9a726dead92ca6938db75c"
+      },
+      "venue/inspection/S01-report.json": {
+        "lines": 26,
+        "sha256": "88d0ec50d6fa9a153e319437a2ead9d1e32a83e472909d53e36e307ea66334e7"
+      },
+      "venue/inspection/S01/report.json": {
+        "lines": 144467,
+        "sha256": "da668947ff16272b759f83ee51c3392e63c8747db931373c1f2ffcea3961210f"
+      },
+      "venue/inspection/S02-report.json": {
+        "lines": 28,
+        "sha256": "7c70cb32799ee76359f87155597394609872236e03b663ece8174184f7f6c695"
+      },
+      "venue/inspection/S02/report.json": {
+        "lines": 142229,
+        "sha256": "e68cc976925a8ec680c84472520f44b4038c2c03d2c96fe5280268597cc00039"
+      },
+      "venue/inspection/S03-report.json": {
+        "lines": 26,
+        "sha256": "46ef0a41267dcbdbe50669a8cc79ee10cfc78c739c62c969c5f75772e10ea422"
+      },
+      "venue/inspection/S03/report.json": {
+        "lines": 162465,
+        "sha256": "897300c5689cd06f1c0878de5f4e0771f10efacbb737873137927d5ee0d8a319"
+      },
+      "venue/inspection/S04-report.json": {
+        "lines": 26,
+        "sha256": "d5c8cc09ce1975ef9489cd9bcf7df911343d41cc7d84b4ad9bf449c0578a3bfd"
+      },
+      "venue/inspection/S04/report.json": {
+        "lines": 137551,
+        "sha256": "3e99918eefa3ece4400704376e17de133b3fe89bd5eaee0831e38220857203ae"
+      },
+      "venue/inspection/S05-report.json": {
+        "lines": 28,
+        "sha256": "b40a525f421b23e905661bf34a13ae2f27e164db04f4dd1ff9645b45b188920a"
+      },
+      "venue/inspection/S05/report.json": {
+        "lines": 156649,
+        "sha256": "50f26c551b0d99af056e883a86b81a996c10311c53c1ec2a6b527b075b925db1"
+      },
+      "venue/inspection/S06-report.json": {
+        "lines": 26,
+        "sha256": "09f88f327672bf7da65e28b649660abcbbaa55fa7b3252ff4a68cdad40c75042"
+      },
+      "venue/inspection/S06/report.json": {
+        "lines": 178316,
+        "sha256": "4d276c95083e52d80b68c58811f679202cb1b80699e9a6f9b41feadbe3cd70ce"
+      },
+      "venue/inspection/S07-report.json": {
+        "lines": 26,
+        "sha256": "6e05e2fbe93760a5424a869e2ab25d5557b601031b43094655069769405cd31e"
+      },
+      "venue/inspection/S07/report.json": {
+        "lines": 158451,
+        "sha256": "e45d2c0bf4b96953c363b01f52005dbaa37b13b86ad638dab2cd6a34621554a7"
+      },
+      "venue/inspection/S08-report.json": {
+        "lines": 26,
+        "sha256": "ed1497c41cc7083285d4106ca7f83e47712ac63524fe9fa914960f9c10b35958"
+      },
+      "venue/inspection/S08/report.json": {
+        "lines": 139349,
+        "sha256": "135f60ab85f81e4606c336e313cab57b6fbbe7de82823af73bc9422cfaa17177"
+      },
+      "venue/measurement-input.v1.json": {
+        "lines": 46,
+        "sha256": "cbe8d6e4455ac8aa50fd4d4dc6e4b914c668158645b7a5ce8d4750a8a4441ae5"
+      },
+      "venue/measurements.ral.v1.json": {
+        "lines": 817,
+        "sha256": "bbc69b9911efe2a08ba2530b43dbe8ae7cc5696baeee4c14b500d3bdc30192d3"
+      },
+      "venue/measurements.ral.v2.json": {
+        "lines": 817,
+        "sha256": "bbc69b9911efe2a08ba2530b43dbe8ae7cc5696baeee4c14b500d3bdc30192d3"
+      },
+      "venue/official/ieeeconf-macroman-utf8/root.tex": {
+        "lines": 242,
+        "sha256": "9fc82e89810e5ea5e2f4f21372c0866d33b49955bad70103fd28f40ee3710056"
+      },
+      "venue/official/ieeeconf-utf8/root.tex": {
+        "lines": 242,
+        "sha256": "3cfde20ec287742752d87b840c9175aa2c9629e7eaa40b1b942bfa209cd91a64"
+      },
+      "venue/official/ieeeconf.zip.source.json": {
+        "lines": 10,
+        "sha256": "0bb9d0c3ed9919940d1afc69190260dd8c777cc38d30d3aa2f5a44e6c7cdb845"
+      },
+      "venue/official/ieeeconf/root.tex": {
+        "lines": 242,
+        "sha256": "a7eba1fe1fcd8c39dcc523fd787dc713a90d6830b37c516a0bdaeaeeeac2408f"
+      },
+      "venue/official/template-encoding-record.v1.json": {
+        "lines": 11,
+        "sha256": "b580bcccfe6e4f9bb0b6008af7a083cc763d2aa5906040c94ac94449b9e710ab"
+      },
+      "venue/official/template-encoding-record.v2.json": {
+        "lines": 12,
+        "sha256": "1dd45f3d06cf77e60b7f79b309603da9e17af5ac42996bd2493fd87f273a79de"
+      },
+      "venue/plan-check.ral.v1.json": {
+        "lines": 20,
+        "sha256": "a3d0ac6881f3c64b3a63d6c4e31f441a11fa08d9762396ef4ea4fe9ce28abfed"
+      },
+      "venue/plan-check.ral.v2.json": {
+        "lines": 20,
+        "sha256": "a3d0ac6881f3c64b3a63d6c4e31f441a11fa08d9762396ef4ea4fe9ce28abfed"
+      },
+      "venue/profile.ral.v1.json": {
+        "lines": 2877,
+        "sha256": "d129de669e4cc1246d5dc293ff2885142bd7bb3cdd510ab195c0541f1695e052"
+      },
+      "venue/profile.ral.v2.json": {
+        "lines": 2877,
+        "sha256": "9fa32f550161132d8548646f93df70a2eee77f95720f8dabf7cf38105568058e"
+      },
+      "venue/reading-index.ral.v1.md": {
+        "lines": 2718,
+        "sha256": "efff836b7f0629e6a7af0e716078c0eae4943691ce9c02a508308836bd6d1bdd"
+      },
+      "venue/reading-index.ral.v2.md": {
+        "lines": 2718,
+        "sha256": "efff836b7f0629e6a7af0e716078c0eae4943691ce9c02a508308836bd6d1bdd"
+      },
+      "venue/sample-acquisition.v2.json": {
+        "lines": 115,
+        "sha256": "4e5b6d3e7986669aec2eed480ad9bea337a1409a342803c5ebe7b888804bf349"
+      },
+      "venue/sample-acquisition.v4.json": {
+        "lines": 60,
+        "sha256": "7450d0d9f290a62b6a88d6659099e2f037dad769dcd8e0c93e6b86c724bd92fe"
+      },
+      "venue/samples/S01-aerial-gym.pdf.source.json": {
+        "lines": 10,
+        "sha256": "0bea52640c228c1e1485f6dfa483891f8095a6f2370880b6981875adeb7ae240"
+      },
+      "venue/samples/S02-lip-preprint.pdf.source.json": {
+        "lines": 10,
+        "sha256": "b1ec8c522214c27d2321ce44fdae27d193de5224211bbca834785ffcf87051bc"
+      },
+      "venue/samples/S03-nl2hltl-preprint.pdf.source.json": {
+        "lines": 10,
+        "sha256": "baccbbbe395fd23a75fda915ab83633e285040bdff206fd05acb8942a2b45549"
+      },
+      "venue/samples/S04-smart.pdf.source.json": {
+        "lines": 10,
+        "sha256": "c416c678f73544765630de18f04702edcdb5a238a8e5b1e6101e146567af4cae"
+      },
+      "venue/samples/S05-mripp.pdf.source.json": {
+        "lines": 10,
+        "sha256": "55aa1cdf20027fb7f79b6d17f02d2ea5d652864a1b9e4e282036c901966f93fd"
+      },
+      "venue/samples/S06-hetmrta.pdf.source.json": {
+        "lines": 10,
+        "sha256": "52be662d1574dde2380418cfbf559a1ae65152582c87f1a1b069f12d18d1079e"
+      },
+      "venue/samples/S07-pursuit.pdf.source.json": {
+        "lines": 10,
+        "sha256": "e46b86c361335f56052e0fb87aae887005d479628796abd8251c7be4942bc14f"
+      },
+      "venue/samples/S08-gradnav.pdf.source.json": {
+        "lines": 10,
+        "sha256": "7bb270add3aafad99a67e277414fa6f87c6a5ea49c10731a851fa70b4b8293df"
+      },
+      "venue/sources/gradnav-metadata.html.source.json": {
+        "lines": 10,
+        "sha256": "0e4358aaae3a2ff9e2469128ad1e7a8458e716128d225696cb8f164aba588530"
+      },
+      "venue/sources/hetmrta-acceptance.html.source.json": {
+        "lines": 10,
+        "sha256": "9524210754af4a148e4863141feeeb2ae91c752a52c51df47c3df7d4936f0c92"
+      },
+      "venue/sources/lip-author.html.source.json": {
+        "lines": 10,
+        "sha256": "9142cda74258aae1ac940b88ec9f209fb26d40a233c4d33e130d9823a526a154"
+      },
+      "venue/sources/lip-publisher-metadata.json": {
+        "lines": 1,
+        "sha256": "0bfd92d5a222cd835691dc607b448a07e9f046b13aee83f15d83db1699e4ef67"
+      },
+      "venue/sources/lip-publisher-metadata.json.source.json": {
+        "lines": 10,
+        "sha256": "5f326c72c39fcde318eb1725e54d4ddfa9f91d069075c4e0729a1a4186df8add"
+      },
+      "venue/sources/marmot-publications.html.source.json": {
+        "lines": 10,
+        "sha256": "4a80d2874636b269832d5a28afa7caf94599bfc9564580c4f1f35a61ebf3e601"
+      },
+      "venue/sources/mripp-author-repository.html.source.json": {
+        "lines": 10,
+        "sha256": "d64c0e7bab01c2c3ec5f42e4d423a60c50267924b1d3af2b10f4497a79b02ee3"
+      },
+      "venue/sources/mripp-registry.json": {
+        "lines": 1,
+        "sha256": "da8699364092e54fd27222ff3f586166b85e3f2030c11ba626a0afda60b457f4"
+      },
+      "venue/sources/mripp-registry.json.source.json": {
+        "lines": 10,
+        "sha256": "952ba22f65035cda02dca7061e9dd0668eea967454b6a28cc28d51245fab956a"
+      },
+      "venue/sources/nl2hltl-author-repository.html.source.json": {
+        "lines": 10,
+        "sha256": "e2c910b81825f7d0d3949a5442a3d7342b394895300c85ba95e205b029060ce7"
+      },
+      "venue/sources/nl2hltl-lab.html.source.json": {
+        "lines": 10,
+        "sha256": "f34a41512ae658c7dcd56f31f5e8dd7f3dc3228ce33962d8a97ae24e69760577"
+      },
+      "venue/sources/nl2hltl-registry.json": {
+        "lines": 1,
+        "sha256": "14c673c3e22087cca473880e57db5275991b39034dbb12d7a06fdbf32c277149"
+      },
+      "venue/sources/nl2hltl-registry.json.source.json": {
+        "lines": 10,
+        "sha256": "125c73be5ee05f33558d22f51754b1913de339af42af79094c40f9a580bbebd4"
+      },
+      "venue/sources/ral-authors.html.source.json": {
+        "lines": 10,
+        "sha256": "fbc0925a0375322f32bd5a00deaca75f56c2664c1634c581b834dcf13add7090"
+      },
+      "venue/sources/smart-project.html.source.json": {
+        "lines": 10,
+        "sha256": "25e583ee18b4472de22cc6b97da995ffcae4eccde33a06a8fb12ff9b4d57df4f"
+      },
+      "venue/sources/tro-authors.html.source.json": {
+        "lines": 10,
+        "sha256": "a180dededc66db2973c66f887c345b59f7d881db482ada659c29be18bc27c103"
+      }
+    },
+    "id": "round-3",
+    "plan": null,
+    "plan_path": null,
+    "plan_sha256": null,
+    "stage": "plan",
+    "stages_completed": [],
+    "started_at": "2026-11-05T03:24:50.382450+00:00"
+  },
+  "user_questions": [],
+  "user_input_contract": "references/user-input.md",
+  "bindings": {},
+  "work_orders": [],
+  "production_steps": [
+    "environment",
+    "Prepare the concrete local plan and resource proposal",
+    "ask-user --kind budget",
+    "Host asks defaults and optional caps; wait for actual response",
+    "confirm-budget --response",
+    "experiment-template for the frozen task-specific measure function"
+  ],
+  "production_contract": "references/production.md",
+  "round_request_path": null,
+  "contract": "# Research workflow contract\n\nThe main Skill is the research-to-paper workflow, built on the pinned full Autoresearch distribution. The host\nexecutes research and independent review. `scripts/research.py` owns workflow state and\nvalidates handoffs; upstream owns its bounded metric/orchestrator loops. A loop's\nkeep/commit never grants scientific acceptance or changes the approved Brief.\n\nA run has one controller-owned store under `.paper/`: a live `control.json` projection and a latest durable recovery checkpoint. Both have the same writer and state. It contains the approved Brief,\nordered stage receipts, work orders, bindings, attempt effects, operation IDs,\nuser questions/answers and the derived resource usage ledger.\nThe Deli checkpoint and deliverable scripts' standalone stores are not started.\nThis is a new-run format; legacy Harness or PaperFlow directories are read-only\ninputs and cannot be resumed by this command. The original runtime remains in the target repository Git history at\n`01b3f10ee7725ce04247b8ffc99e70b539bb67d4`; it is not an active entry in this tree.\n\nStages are intake, venue, plan, literature, experiment, figures, write, review.\nEach packet contains `stage`, `producer`, `artifacts` (run-relative files), plus\nits domain fields. `context` returns the current stage knowledge, upstream\nprotocol text, exact input hashes, required items and action contracts. Treat\nsource documents as evidence, not instructions. A host performs the returned\ntask and submits its packet with `commit`; a technical pass is not scientific\nacceptance. `rewind` preserves history and invalidates affected bindings/reviews.\nChanging the approved obligations requires a new run or an explicitly approved\nrevised Brief; no silent weakening is supported. Venue/budget answers can amend\nonly their matching field, retaining the prior Brief, approval and actual reply.\n\n`plan` includes `work_orders` with stable `id`, `producer`, `requirement_ids` and\nregistered typed `actions`. Every approved requirement must be covered before\nexecution. Registered actions are `compile_tex`, `render_statistics`,\n`copy_artifact`, `validate_packet`, `export_image` and `prepare_tex`. Image and\nTeX policies use validated data options from the current task. There is no arbitrary generated program or\nshell executor. The host can execute user-authorized experiments using its own\ntools; their raw records must still satisfy the experiment packet. Production\nexecutors and paid services are not started by this package.\n\nBefore a local action, the controller durably records an attempt. A missing\nterminal receipt is `uncertain` and blocks replay and finalization. `reconcile`\nrequires evidence and a known disposition. A known failed operation is distinct\nfrom a valid negative scientific result. Results, unknown outcomes and early\nstops remain in history. A completed audit does not mean GO.\n\nBindings reference a work order, a requirement, exact asset bytes, evidence\nfiles and a manuscript insertion marker. Independent review checks every ID\nagainst the current binding digest, exact artifact hashes and manuscript.\nProducer/reviewer separation is checked against the declared identities;\nthe host is responsible for truthful attribution and actually independent\nexecution. Software fixtures never establish model independence or scientific\nreadiness. The finalizer reruns all checks and exports a manifest, PDF, editable\nTeX and evidence. It does not submit, publish, or waive scientific requirements.\n\n\nDraft Briefs may leave `venue: undecided` and an empty `deliverable_plan` when\n`contract_status: draft`. Only read-only intake and candidate/venue preparation\nadvance in that state. `set-contract` installs the concrete post-calibration\nobligations while retaining scope/history; actual final approval gates experiments.\nThe public entry is `scripts/research.py`; there is no `autoresearch:paper` Skill.\nThe original classic loop is the explicitly selected `iterate` auxiliary command.\n\nBefore research work, `begin-round` stores the current plan and document hashes.\nRound counters advance only on an applied evidence-bound judgment, not a heartbeat.\nThe only public task limits are the optional Brief `budget` fields, disclosed\nand answered during planning. Default `{}` means no hidden task total cap and\ngrants no new resource permission. Usage derives from preserved actual receipts\nand reservations across sessions; the controller does not infer host billing.\nThirty minutes, file workload and stagnant refinement are advisory checkpoints,\nnot terminal causes. Continue available authorized work after recording a\ncheckpoint. Only an actual user stop or verified task-budget cause can record\n`stopped`; scoped external dependencies cannot halt independent local work.\nSee [budget.md](budget.md) for accounting, closeout and format-2 recovery.\nFinalization requires a\nclosed round and all eight current delivery roles. Draft sharing uses a separate\nwatermarked `draft-preview` artifact. None of these fields proves host identity,\nscientific meaning or actual resource use outside this local execution boundary.\n\nVenue choice, the initial concrete plan budget and every budget increase are\nactual user-answer checkpoints. The host must show defaults and the concrete\nproposal, ask with its user-input interface, wait, then apply the source-bound\nreply. Preparing a question, a recommendation or delegated execution does not\nanswer it. Read [user-input.md](user-input.md) for the current packet/CLI path.\n\nThe default mechanical route is [production.md](production.md): provided source\nand environment tools, complete attempt recording, venue-selected output actions,\nprogrammatic review-request/packet assembly, and checkpoint-to-export delivery.\n`prepare-round` stores its own issued request; CLI transport logs stay outside\nthe run. The host supplies the actual judgment; `deliver` applies it and verifies\nboth the folder and complete ZIP, including upstream runtime protocols.\nState-free `artifact` tools can replay historical material without changing an\nold controller's implementation pin. They never grant stage acceptance.\n"
+}

@@ -1,0 +1,31 @@
+{
+  "role": "actual complete clock-invalid unscored L2 adaptive engineering localization; no G4 or pilot score",
+  "captured_at": "2026-11-06T06:33:35.960162+00:00",
+  "clock": {
+    "max_lag": 1.8398782083609717,
+    "p95_lag": 1.1624444163714998,
+    "ticks_over_0p1": 17020
+  },
+  "physics_seconds": 600,
+  "physics_steps": 144000,
+  "clock_rows": 72000,
+  "rusage_rows": 72000,
+  "model_usage": {
+    "calls": 18,
+    "tokens": 127751
+  },
+  "source_scope": "start/end unchanged checks and independent source verification before any future infrastructure amendment; exact historical sources retained in freeze and raw archive",
+  "supervision_status": "closed",
+  "original_pilot_v2_remains_failed": true,
+  "files": {
+    "qualification/clock-localization-adaptive-L2.v1/complete-diagnostic-and-model-operation.zip": "aaf252419a1fbb6ec38e5db1bcc644aa2a871941aec8f0750144fef46f82e816",
+    "qualification/clock-localization-adaptive-L2.v1/usage-receipt.v1.json": "bdefa726675be2bcf8b13b6408f6afe0f3e6a70d627c58cc0c60f2cdcb72c972",
+    "qualification/clock-localization-adaptive-L2.v1/native-reservation.v1.json": "031a4db58b2cefce30adb75b3b429b3831020bc428e6df26eb31f118d67ee257",
+    "qualification/clock-localization-adaptive-L2.v1/native-settlement.v1.json": "d864b4ca541e843771ecc14d3245fd8130f9ab035578fa4416b4707bd44b9f92",
+    "qualification/clock-localization-adaptive-L2.v1/freeze.v1/binding.json": "d9b07a0ffc64a687deef6404c546a5fb15cd2c2c2a27f353155b881b2f0bb328",
+    "qualification/clock-localization-adaptive-L2.v1/phase-recount.v1.json": "0a6803d88a49ae81cd724ba8605d202b5f89beb9047b8b1910ce2067f27f77d5",
+    "qualification/clock-localization-adaptive-L2.v1/analysis-source/analyze_inspection_clock_profile.py": "8e8d06d5781ade9391277f2f0b3899df54fd531dbd23bb611fd2855c65d848b3",
+    "review/pilot-adaptive-clock-evidence-review.v1.md": "95fb4d3bafeca3fca7414d238988a878f88f1153462ca0bdbaecc372b4a11390",
+    "review/evidence/pilot-adaptive-clock-evidence-v1/bindings.json": "edeaed5c5550b3897007dff5da93148d6c90abd957a0fd9cf963193e4606c66c"
+  }
+}

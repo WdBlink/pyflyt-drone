@@ -1,0 +1,74 @@
+{
+  "role": "targeted_prior_art_code_inspection_not_reproduction",
+  "accessed_at": "2026-11-05",
+  "repository": "zhangsheng93/MultiUAV-Plat",
+  "commit": "1794e45e421fb5de03094f0b63f9ca95f86ab42f",
+  "files": [
+    {
+      "path": "server/models/drone.py",
+      "blob_sha": "a8e80e0f59d7bfbfd5bcb27d142b748ccb3114b2",
+      "bytes": 19685,
+      "received_utf8": true,
+      "url": "https://github.com/zhangsheng93/MultiUAV-Plat/blob/1794e45e421fb5de03094f0b63f9ca95f86ab42f/server/models/drone.py"
+    },
+    {
+      "path": "server/models/task.py",
+      "blob_sha": "ea3940fb6e527415d6d8462318378ec1365789cd",
+      "bytes": 8710,
+      "received_utf8": true,
+      "url": "https://github.com/zhangsheng93/MultiUAV-Plat/blob/1794e45e421fb5de03094f0b63f9ca95f86ab42f/server/models/task.py"
+    },
+    {
+      "path": "server/main.py",
+      "blob_sha": "5569cb37bd1e67879a207fff02ca9c03b0f714cf",
+      "bytes": 11759,
+      "received_utf8": true,
+      "url": "https://github.com/zhangsheng93/MultiUAV-Plat/blob/1794e45e421fb5de03094f0b63f9ca95f86ab42f/server/main.py"
+    },
+    {
+      "path": "server/tests/test_move_along_path_partial.py",
+      "blob_sha": "f4c6eef3ddafc309db7e08c106b3ed03dcb7d775",
+      "bytes": 26965,
+      "received_utf8": true,
+      "url": "https://github.com/zhangsheng93/MultiUAV-Plat/blob/1794e45e421fb5de03094f0b63f9ca95f86ab42f/server/tests/test_move_along_path_partial.py"
+    },
+    {
+      "path": "server/config/example/Example_Session_Area_Search.json",
+      "blob_sha": "4f55b9589d1bf112e1e252229dcd1db024c3f3d3",
+      "bytes": 11776,
+      "received_utf8": true,
+      "url": "https://github.com/zhangsheng93/MultiUAV-Plat/blob/1794e45e421fb5de03094f0b63f9ca95f86ab42f/server/config/example/Example_Session_Area_Search.json"
+    },
+    {
+      "path": "server/controllers/drone_controller.py",
+      "blob_sha": "899aa257fd269ef6aff0b55308d0c82adcbb0097",
+      "bytes": 80800,
+      "received_utf8": true,
+      "url": "https://github.com/zhangsheng93/MultiUAV-Plat/blob/1794e45e421fb5de03094f0b63f9ca95f86ab42f/server/controllers/drone_controller.py"
+    }
+  ],
+  "scope": "Fetched these files through the connected GitHub read API. Read model initialization/position updates, task done/passed distinctions, simulation loop, sample session, partial-path test entry and targeted drone-controller execution fragments. Did not claim a complete code review.",
+  "findings": [
+    {
+      "path": "server/controllers/drone_controller.py",
+      "lines": [
+        721,
+        939
+      ],
+      "observation": "Path validation ends with updating position directly to final_waypoint and setting HOVERING at lines 926-929; this path does not provide continuously integrated fixedwing control."
+    },
+    {
+      "path": "server/main.py",
+      "lines": [
+        157,
+        171
+      ],
+      "observation": "Background simulation updates target/environment on a one-second loop; this prevents a blanket claim that the whole world is paused."
+    }
+  ],
+  "not_run": [
+    "Full service startup",
+    "Official validator and positive/negative task rerun"
+  ],
+  "reuse_decision": "Reuse PyFlyt dynamics. Add the missing shared fixedwing executor; do not copy GPL server components. Candidate task/check mechanisms are prior art, not proof of our task validity."
+}

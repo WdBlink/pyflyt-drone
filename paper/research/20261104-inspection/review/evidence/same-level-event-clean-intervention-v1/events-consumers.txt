@@ -1,0 +1,2 @@
+eval/analyze_inspection_qualification.py:65:            degraded = bool(run["events"] and row["drone_id"] == 2 and 300 <= row["t"] < 345)
+eval/replay_inspection_reference.py:138:            mission = InspectionMission(run["seed"], reference=run.get("layout", "reference") == "reference", events=run["events"])

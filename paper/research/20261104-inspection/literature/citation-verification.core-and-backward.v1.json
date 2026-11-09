@@ -1,0 +1,534 @@
+{
+  "records": [
+    {
+      "key": "MultiUAVPlat2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+        "authors": [
+          "Zhang, Sheng",
+          "Li, Qinglin",
+          "Zang, Yuechao",
+          "Huang, Xueqin",
+          "Fu, Yijia",
+          "Zhu, Cheng"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2606.31073v1"
+      },
+      "source_sha256": "3443de6bde899626582a8710d0b247e13851a49a9d1d0214bff474f91c3112d6",
+      "evidence": [
+        "literature/verification/MultiUAVPlat2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-MultiUAVPlat2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/multiuav-plat-v1.txt",
+              "quote": "role-based information access, hidden validation logic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "MissionBench2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+        "authors": [
+          "Navaratnarajah, Suman",
+          "Kim, Taehyoung",
+          "Ruthardt, Jona",
+          "Bhimwal, Ishaan",
+          "Yamada, Ryousuke",
+          "Blei, Yannik",
+          "Burgard, Wolfram",
+          "Asano, Yuki M"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2607.22014v1"
+      },
+      "source_sha256": "b4a50b1db4de3e43b56a9cdb4b50c906ab36388d132e410303072a54653d0cd4",
+      "evidence": [
+        "literature/verification/MissionBench2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-MissionBench2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/missionbench-v1.txt",
+              "quote": "continuous 4-DoF control, mission-level success criteria, and explicit reporting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ESARBench2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue",
+        "authors": [
+          "Zhang, Daoxuan",
+          "Chen, Ping",
+          "Zhou, Jianyi",
+          "Yang, Shuo"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2605.01371v1"
+      },
+      "source_sha256": "8fd52d6c0d23c74f5a0fd46890e0897d9fc087d865ed77d751ef4b5f0974239d",
+      "evidence": [
+        "literature/verification/ESARBench2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-ESARBench2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/esarbench-v1.txt",
+              "quote": "Within any given snapshot, the spatial distribution of the victims and clues remains stationary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Retriever2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "Retriever: Composing the Perception-Reasoning-Action Loop for Long-Horizon Manipulation",
+        "authors": [
+          "Zhao, Linfeng",
+          "Huang, Haojie",
+          "Mao, Jiayuan",
+          "Liu, Weiyu",
+          "Kochenderfer, Mykel",
+          "Wong, Lawson L. S."
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2607.17213v2"
+      },
+      "source_sha256": "1033222c15628b386fe1d759da92941d45edef64a56b82406d79b20f60820aa9",
+      "evidence": [
+        "literature/verification/Retriever2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-Retriever2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/retriever-v2.txt",
+              "quote": "Exact replay requires logging each step\u2019s event time"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "\u03b1\u00b3-Bench: A Unified Benchmark of Safety, Robustness, and Efficiency for LLM-Based UAV Agents over 6G Networks",
+        "authors": [
+          "Ferrag, Mohamed Amine",
+          "Lakas, Abderrahmane",
+          "Debbah, Merouane"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2601.03281v1"
+      },
+      "source_sha256": "f4f723a904832a9dff1793785aa7f630c9149fdf35a70e0cb09a44a08b044a08",
+      "evidence": [
+        "literature/verification/Alpha3Bench2026.v2.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-Alpha3Bench2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/alpha3-v1.txt",
+              "quote": "A2A interactions are asynchronous and logically instantaneous at the dialogue level"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PhysAIBench2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+        "authors": [
+          "Ferrag, Mohamed Amine",
+          "Debbah, Merouane",
+          "Lakas, Abderrahmane",
+          "Perumkunnil, Manu",
+          "Tihanyi, Norbert"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2609.23695v1"
+      },
+      "source_sha256": "e4e4f16d0a14060e59ac874b3fac852d522b85ee19b608d0d8edcc68d9e86bdf",
+      "evidence": [
+        "literature/verification/PhysAIBench2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-PhysAIBench2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/physai-v1.txt",
+              "quote": "converts autonomous UAV mission traces into multiple-choice action-selection tasks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "AERIAL2026",
+      "status": "verified",
+      "checked_at": "2026-11-05T23:59:08.283563+00:00",
+      "identity": {
+        "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
+        "authors": [
+          "Nunes, Diana",
+          "Amorim, Ricardo",
+          "Ribeiro, Pedro",
+          "Coelho, Andr\u00e9",
+          "Campos, Rui"
+        ],
+        "year": 2026,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2610.31029v1"
+      },
+      "source_sha256": "1dbf8055cf50d263a8e886d014f6d3fd5969d2685ea084b6012efe528942f1c7",
+      "evidence": [
+        "literature/verification/AERIAL2026.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-AERIAL2026",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/aerial-v1.txt",
+              "quote": "excludes code parsing, validation, and UAV mission execution in SITL"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SMART2025",
+      "status": "verified",
+      "checked_at": "2026-11-06T00:24:06.895370+00:00",
+      "identity": {
+        "title": "Advancing MAPF Toward the Real World: A Scalable Multi-Agent Realistic Testbed (SMART)",
+        "authors": [
+          "Yan, Jingtian",
+          "Li, Zhifei",
+          "Kang, William",
+          "Zheng, Kevin",
+          "Zhang, Yulun",
+          "Chen, Zhe",
+          "Zhang, Yue",
+          "Harabor, Daniel",
+          "Smith, Stephen F.",
+          "Li, Jiaoyang"
+        ],
+        "year": 2025,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2503.04798v3"
+      },
+      "source_sha256": "58c4a0ea051a7db61d8f3bfbddad43aef9cec4fc77ce2037f0c68471e95869fa",
+      "evidence": [
+        "literature/verification/SMART2025.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-SMART2025",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/smart-calibration-version.v1.txt",
+              "quote": "confirmations for finished actions"
+            },
+            {
+              "path": "literature/text/smart-calibration-version.v1.txt",
+              "quote": "This distributed executor design enables"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "GRaDNav2025",
+      "status": "verified",
+      "checked_at": "2026-11-06T00:24:06.895370+00:00",
+      "identity": {
+        "title": "GRaD-Nav++: Vision-Language Model Enabled Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics",
+        "authors": [
+          "Chen, Qianzhong",
+          "Gao, Naixiang",
+          "Huang, Suning",
+          "Low, JunEn",
+          "Chen, Timothy",
+          "Sun, Jiankai",
+          "Schwager, Mac"
+        ],
+        "year": 2025,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2506.14009v2"
+      },
+      "source_sha256": "89b112e5c05c7c0117b8ee395fb55b9ccc5ae9c5869ac3ed0dfaf339103eb67e",
+      "evidence": [
+        "literature/verification/GRaDNav2025.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-GRaDNav2025",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/gradnav-calibration-version.v1.txt",
+              "quote": "CLIP runs asynchronously with the policy"
+            },
+            {
+              "path": "literature/text/gradnav-calibration-version.v1.txt",
+              "quote": "data was collected during an actual flight experiment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PyFlyt2023",
+      "status": "verified",
+      "checked_at": "2026-11-06T00:44:57.952042+00:00",
+      "identity": {
+        "title": "PyFlyt -- UAV Simulation Environments for Reinforcement Learning Research",
+        "authors": [
+          "Tai, Jun Jet",
+          "Wong, Jim",
+          "Innocente, Mauro",
+          "Horri, Nadjim",
+          "Brusey, James",
+          "Phang, Swee King"
+        ],
+        "year": 2023,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2304.01305v1"
+      },
+      "source_sha256": "15a8222d3119de5c5d59f1450e445780af80dcd8b25efd99bb21bb5595167132",
+      "evidence": [
+        "literature/verification/PyFlyt2023.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-PyFlyt2023",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/pyflyt-v1.txt",
+              "quote": "platform built on the Bullet"
+            },
+            {
+              "path": "literature/text/pyflyt-v1.txt",
+              "quote": "and fixed-wing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ReAct2022",
+      "status": "verified",
+      "checked_at": "2026-11-06T00:44:57.952042+00:00",
+      "identity": {
+        "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+        "authors": [
+          "Yao, Shunyu",
+          "Zhao, Jeffrey",
+          "Yu, Dian",
+          "Du, Nan",
+          "Shafran, Izhak",
+          "Narasimhan, Karthik",
+          "Cao, Yuan"
+        ],
+        "year": 2022,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2210.03629v3"
+      },
+      "source_sha256": "0bdbef2564106889c48ecff9f3ce107cdd4dd225064d3dcd4bee0acd56be72d9",
+      "evidence": [
+        "literature/verification/ReAct2022.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-ReAct2022",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/react-v3.txt",
+              "quote": "few-shot in-context"
+            },
+            {
+              "path": "literature/text/react-v3.txt",
+              "quote": "thought-action-observation steps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TypeFly2023",
+      "status": "verified",
+      "checked_at": "2026-11-06T15:30:07.640854+00:00",
+      "identity": {
+        "title": "TypeFly: Flying Drones with Large Language Model",
+        "authors": [
+          "Chen, Guojun",
+          "Yu, Xiaojing",
+          "Ling, Neiwen",
+          "Zhong, Lin"
+        ],
+        "year": 2023,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2312.14950v2"
+      },
+      "source_sha256": "58d3b122db52bc481eea90533b8d77b58118e790d284594a66f930fec75ceda5",
+      "evidence": [
+        "literature/verification/TypeFly2023.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-TypeFly2023",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/typefly-v2.txt",
+              "quote": "All system skills are blocking"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CognitiveDrone2025",
+      "status": "verified",
+      "checked_at": "2026-11-06T15:30:07.644689+00:00",
+      "identity": {
+        "title": "CognitiveDrone: A VLA Model and Evaluation Benchmark for Real-Time Cognitive Task Solving and Reasoning in UAVs",
+        "authors": [
+          "Lykov, Artem",
+          "Serpiva, Valerii",
+          "Khan, Muhammad Haris",
+          "Sautenkov, Oleg",
+          "Myshlyaev, Artyom",
+          "Tadevosyan, Grik",
+          "Yaqoot, Yasheerah",
+          "Tsetserukou, Dzmitry"
+        ],
+        "year": 2025,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2503.01378v1"
+      },
+      "source_sha256": "4997320b7ad1e92e33c1322fbebb13e3953e056bd9dc6053c7f406267dfc2d47",
+      "evidence": [
+        "literature/verification/CognitiveDrone2025.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-CognitiveDrone2025",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/cognitivedrone-v1.txt",
+              "quote": "reasoning module operates"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "RaceVLA2025",
+      "status": "verified",
+      "checked_at": "2026-11-06T15:30:07.648272+00:00",
+      "identity": {
+        "title": "RaceVLA: VLA-based Racing Drone Navigation with Human-like Behaviour",
+        "authors": [
+          "Serpiva, Valerii",
+          "Lykov, Artem",
+          "Myshlyaev, Artyom",
+          "Khan, Muhammad Haris",
+          "Abdulkarim, Ali Alridha",
+          "Sautenkov, Oleg",
+          "Tsetserukou, Dzmitry"
+        ],
+        "year": 2025,
+        "venue": "arXiv preprint",
+        "identifier": "arXiv:2503.02572v1"
+      },
+      "source_sha256": "3402122472cc616c926ffe46b9dadfa4bdfc3936f6071ee27e57921d0d3c7041",
+      "evidence": [
+        "literature/verification/RaceVLA2025.v1.json"
+      ],
+      "claim_checks": [
+        {
+          "claim_id": "LC-RaceVLA2025",
+          "status": "supported",
+          "evidence_spans": [
+            {
+              "path": "literature/text/racevla-v1.txt",
+              "quote": "generate a four-component control signal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "batches": [
+    {
+      "keys": [
+        "MultiUAVPlat2026",
+        "MissionBench2026",
+        "ESARBench2026",
+        "Retriever2026",
+        "Alpha3Bench2026",
+        "PhysAIBench2026",
+        "AERIAL2026",
+        "SMART2025",
+        "GRaDNav2025",
+        "PyFlyt2023",
+        "ReAct2022",
+        "TypeFly2023",
+        "CognitiveDrone2025",
+        "RaceVLA2025"
+      ],
+      "checked_at": "2026-11-06T15:35:33.092824+00:00",
+      "evidence": "literature/verification/first-fourteen-tail-batch.v1.json"
+    }
+  ]
+}

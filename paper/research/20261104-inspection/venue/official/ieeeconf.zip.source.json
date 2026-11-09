@@ -1,0 +1,10 @@
+{
+  "path": "venue/official/ieeeconf.zip",
+  "url": "https://ras.papercept.net/conferences/support/files/ieeeconf.zip",
+  "resolved_url": "https://ras.papercept.net/conferences/support/files/ieeeconf.zip",
+  "kind": "zip",
+  "sha256": "11d1051d5fe3dafd1e25bc7a8b66265cbe65dc135e26440cc6661baeeeb90c76",
+  "fetched_at": "2026-11-05T02:38:55.305589+00:00",
+  "content_type": "application/zip",
+  "bytes": 102812
+}

@@ -1,0 +1,121 @@
+{
+  "keys": [
+    "MultiUAVPlat2026",
+    "MissionBench2026",
+    "ESARBench2026",
+    "Retriever2026",
+    "Alpha3Bench2026",
+    "PhysAIBench2026",
+    "AERIAL2026",
+    "SMART2025",
+    "GRaDNav2025",
+    "PyFlyt2023",
+    "ReAct2022",
+    "TypeFly2023",
+    "CognitiveDrone2025",
+    "RaceVLA2025"
+  ],
+  "checked_at": "2026-11-06T15:35:33.092563+00:00",
+  "scope": "Prior11unchanged primary checks carried forward; new3 primary metadata/body checked now. Exact reading extent and provenance per record, independent new3 review pending.",
+  "verification_records": [
+    {
+      "key": "MultiUAVPlat2026",
+      "source_sha256": "3443de6bde899626582a8710d0b247e13851a49a9d1d0214bff474f91c3112d6",
+      "evidence": [
+        "literature/verification/MultiUAVPlat2026.v1.json"
+      ]
+    },
+    {
+      "key": "MissionBench2026",
+      "source_sha256": "b4a50b1db4de3e43b56a9cdb4b50c906ab36388d132e410303072a54653d0cd4",
+      "evidence": [
+        "literature/verification/MissionBench2026.v1.json"
+      ]
+    },
+    {
+      "key": "ESARBench2026",
+      "source_sha256": "8fd52d6c0d23c74f5a0fd46890e0897d9fc087d865ed77d751ef4b5f0974239d",
+      "evidence": [
+        "literature/verification/ESARBench2026.v1.json"
+      ]
+    },
+    {
+      "key": "Retriever2026",
+      "source_sha256": "1033222c15628b386fe1d759da92941d45edef64a56b82406d79b20f60820aa9",
+      "evidence": [
+        "literature/verification/Retriever2026.v1.json"
+      ]
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "source_sha256": "f4f723a904832a9dff1793785aa7f630c9149fdf35a70e0cb09a44a08b044a08",
+      "evidence": [
+        "literature/verification/Alpha3Bench2026.v2.json"
+      ]
+    },
+    {
+      "key": "PhysAIBench2026",
+      "source_sha256": "e4e4f16d0a14060e59ac874b3fac852d522b85ee19b608d0d8edcc68d9e86bdf",
+      "evidence": [
+        "literature/verification/PhysAIBench2026.v1.json"
+      ]
+    },
+    {
+      "key": "AERIAL2026",
+      "source_sha256": "1dbf8055cf50d263a8e886d014f6d3fd5969d2685ea084b6012efe528942f1c7",
+      "evidence": [
+        "literature/verification/AERIAL2026.v1.json"
+      ]
+    },
+    {
+      "key": "SMART2025",
+      "source_sha256": "58c4a0ea051a7db61d8f3bfbddad43aef9cec4fc77ce2037f0c68471e95869fa",
+      "evidence": [
+        "literature/verification/SMART2025.v1.json"
+      ]
+    },
+    {
+      "key": "GRaDNav2025",
+      "source_sha256": "89b112e5c05c7c0117b8ee395fb55b9ccc5ae9c5869ac3ed0dfaf339103eb67e",
+      "evidence": [
+        "literature/verification/GRaDNav2025.v1.json"
+      ]
+    },
+    {
+      "key": "PyFlyt2023",
+      "source_sha256": "15a8222d3119de5c5d59f1450e445780af80dcd8b25efd99bb21bb5595167132",
+      "evidence": [
+        "literature/verification/PyFlyt2023.v1.json"
+      ]
+    },
+    {
+      "key": "ReAct2022",
+      "source_sha256": "0bdbef2564106889c48ecff9f3ce107cdd4dd225064d3dcd4bee0acd56be72d9",
+      "evidence": [
+        "literature/verification/ReAct2022.v1.json"
+      ]
+    },
+    {
+      "key": "TypeFly2023",
+      "source_sha256": "58d3b122db52bc481eea90533b8d77b58118e790d284594a66f930fec75ceda5",
+      "evidence": [
+        "literature/verification/TypeFly2023.v1.json"
+      ]
+    },
+    {
+      "key": "CognitiveDrone2025",
+      "source_sha256": "4997320b7ad1e92e33c1322fbebb13e3953e056bd9dc6053c7f406267dfc2d47",
+      "evidence": [
+        "literature/verification/CognitiveDrone2025.v1.json"
+      ]
+    },
+    {
+      "key": "RaceVLA2025",
+      "source_sha256": "3402122472cc616c926ffe46b9dadfa4bdfc3936f6071ee27e57921d0d3c7041",
+      "evidence": [
+        "literature/verification/RaceVLA2025.v1.json"
+      ]
+    }
+  ],
+  "not_exhaustive": true
+}

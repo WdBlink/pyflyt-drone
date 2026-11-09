@@ -1,0 +1,233 @@
+{
+  "role": "Actual v4 tenth through twelfth callbacks only; no complete root/G4/formal comparison",
+  "at": "2026-11-06T19:03:53.329696+00:00",
+  "completed_callbacks": 12,
+  "planned_callbacks": 108,
+  "complete_roots": 0,
+  "slots": [
+    {
+      "order_index": 9,
+      "name": "dev-L1-01-B3-M1-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.013702042000659276,
+        "clock_lag_p95_seconds": 0.0039033333353586386,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "usage": {
+        "calls": 22,
+        "tokens": 146917
+      },
+      "resource_evidence": {
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-009-a0/complete-attempt.zip": "f303665bd186fbd9f733b33fa03c19be4db4a63d02bc7d68683060135b9b9d57",
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-009-a0/usage-receipt.json": "b1f8a5cc29d718003010d3e2c671868beab3b7544af85deae3d0c6c7c9ccdfcb",
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-009-a0.settle.json": "2731e348ca71a414e3b6fd687fc6ac257fa2f6ae625324b8a3cfa0b387e546ef"
+      }
+    },
+    {
+      "order_index": 10,
+      "name": "dev-L1-01-B3-M2-1",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.00970483400305966,
+        "clock_lag_p95_seconds": 0.003065750000700973,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "usage": {
+        "calls": 30,
+        "tokens": 178072
+      },
+      "resource_evidence": {
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-010-a0/complete-attempt.zip": "1638e7fec8d41dd0618561c588b5f136bda33e420e9cb5441abfbfed00185de9",
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-010-a0/usage-receipt.json": "43e3c113a1cb4305d44bd5bd52b0573235b529f80b6119224b1ae4e51277e40e",
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-010-a0.settle.json": "eb1ebd310581ede9822e022679e58b2aa6339faf4c0842c9f52eb9dfb0911aa0"
+      }
+    },
+    {
+      "order_index": 11,
+      "name": "dev-L1-01-B4-M1-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.014017124998645158,
+        "clock_lag_p95_seconds": 0.003874541665823017,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "usage": {
+        "calls": 24,
+        "tokens": 172337
+      },
+      "resource_evidence": {
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-011-a0/complete-attempt.zip": "e064048fff85cfda7181f505a7213e8e1861a13f85b6cbc07af0ed40d3cd3634",
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-011-a0/usage-receipt.json": "c115b314005756aad3d9941c45e4db63cd96ebd26907d6ca23400e06ec62f920",
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-011-a0.settle.json": "27aa0ce18110ff0fe971655f2086361f11d74ff042079696690320db98d9921a"
+      }
+    }
+  ],
+  "native_budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 762,
+      "tokens": 4805143,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-002-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-008-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-011-a0": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-postinventory-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-fixed-M1-load-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-runtime-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 3226.8528936166667,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "barrier": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 12,
+    "case_id": "dev-L1-01",
+    "condition": "B1",
+    "at": "2026-11-06T19:02:04.932678+00:00"
+  },
+  "bound_files": {
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/plan.json": "06c2ef2b35f9d3b1907184562c4a45f49311ff9dfe2a0a9d87b3be381f9d0d7f",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/terminal.json": "94514b9ae5fb75dbcd91d5e4de558c6553f9895a014eea0d0f8669b9490e93a6",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/flight/run.json": "faa59d95459db3f94550587320749df3d9eda53437caecc83c66b1a955aeb3c9",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/flight/world.json": "26c847a857818bb0631996d3ceee23c9a314703e7791a6ec3228d94d0d4b12c2",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/flight/private-case.json": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/plan.json": "2124f82cfedf6298e07c242cc670836e69c2f321daad28cdf71f9a6705497649",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/terminal.json": "e83687b2dd74503f8d18fd58bf4311ac1167b75b46bc0f57cf06537b40081ad3",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/flight/run.json": "76ff50c5702bd3e14b59b190a3423ce4c05e6e361afd479fdb219800c34f1428",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/flight/world.json": "5e69e472fab0a8a7b55d39e2a6010ed21ec9d0b68f1c362fa88be2e07ba426df",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/flight/private-case.json": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/plan.json": "199705944a1e06a7bc834a27367716d29e85e36ba58ab669dfe7fc2e3149f96d",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/terminal.json": "5381314c1c68f0f3df6c81cd44a23ecd5654f2b2df8a398fa4daeb7508722a70",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/flight/run.json": "3fbfbfda47c820b92ebdcd3270a3140a78384b41f11120b37a36a15339687c17",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/flight/world.json": "26b5ffc3b0f4d35c65c5e39b501b240fa9de7478da15cbc0d55f04992123afc7",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/flight/private-case.json": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40"
+  },
+  "immutable_captures": {
+    "qualification/pilot-v4-slots-ten-twelve.v1/supervisor.at-twelve.stdout": "c365474fc93d99bf5f8f66f0d1feac2e5af6c5ea1618e207d383b3e240d57cd7",
+    "qualification/pilot-v4-slots-ten-twelve.v1/checkpoint-pauses.at-twelve.jsonl": "e8c52c2fbabbbe1cd51f6e2778ce1f7e645047bf000af22f652cfb3282180194",
+    "qualification/pilot-v4-slots-ten-twelve.v1/native-status.at-twelve.json": "e7c69613ee14d7120791cc1475fbbbd441a7733ff1cb41c0ff351030d155d2c3"
+  },
+  "limits": "Ordinary max/P95/witness clock summaries, not full72000phase vector. Cost/host/Codex/capital/energy unmetered."
+}

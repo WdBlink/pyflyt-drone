@@ -1,0 +1,36 @@
+{
+  "schema": "inspection-eight-condition-development-pilot-intent-v3",
+  "role": "new independent complete development pilot after reviewed observer repair; not old failed-slot retry, G4 or formal data",
+  "actual_production_sources_unchanged_since_preparation": true,
+  "preparation": {
+    "path": "qualification/pilot-source-preparation.v3/binding.json",
+    "sha256": "aeb15ca38f736b1aa4fc31c05d6e71a61c8b690b89824c8ef25af8401f2e7413"
+  },
+  "launch_review": {
+    "path": "review/pilot-v3-launch-readiness-review.v1.md",
+    "sha256": "c49f36e0a9d1525a9accf0ad9673d0e524156b1bfe2f445b281ed790023e17a4"
+  },
+  "launch_binding": {
+    "path": "review/evidence/pilot-v3-launch-v1/binding.json",
+    "sha256": "d2d45be3f17e77d8f094c812e462d680a4cc7f55a8235a75c37cd2c13e43c0fd"
+  },
+  "output": "logs/inspection-eight-condition-pilot.v3",
+  "physical_receipts": "logs/inspection-eight-condition-dev-flights.v3",
+  "schedule_seed": 2026110621,
+  "sampler_master_seed": 2026110622,
+  "reservation_prefix": "dev-all8-pilot-v3",
+  "root_count": 6,
+  "actual_episode_denominator": 108,
+  "root_mean_denominator": 48,
+  "classical_episodes": 18,
+  "LLM_episodes": 90,
+  "max_attempts_per_slot": 2,
+  "max_clock_lag_seconds": 0.1,
+  "original_classic_selection_sha256": "75f57580f0f5371d91a741fd4f9573e52192d019e9730335123a7ae67897a32e",
+  "old_v2_terminal_status": "failed;10validcallbacks/0completeindependentroots;all108 denominator preserved;oldorder10twoattemptsexhausted",
+  "source_policy": "Do not edit production during this pilot. Parallel staged formal IO changes are not installed; later delta review must justify reuse and cannot relabel these actual pilot bytes.",
+  "resource_policy": "Sole native owner reserves and settles each actual LLM attempt; unknown retains reservation and blocks retry. budget={} stays; local existing models/hardware only; no paid API/purchased compute.",
+  "checkpoint_policy": "Use existing between-episode checkpoint.request barrier; never pause a physical or live model operation.",
+  "not_a_power_or_method_winner_inference": true,
+  "all_formal_namespaces_still_uninstantiated": true
+}

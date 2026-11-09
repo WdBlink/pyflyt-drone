@@ -1,0 +1,46 @@
+{
+  "role": "same bounded native-output eprint repair as first-neighbors; nine exact version identifiers, no other changes",
+  "source": "literature/references.mechanism-neighbors.v1.bib",
+  "source_sha256": "b9738b645879653669fdfe6030111b465222f6b4ecbb62b670eebd6fa5b4b5bb",
+  "target": "literature/references.mechanism-neighbors.v2.bib",
+  "target_sha256": "2a08bcf123aa79bcbea0cc7f846a13d1fe2f78ec1fc8026f48efea646b10e4f0",
+  "changes": [
+    {
+      "key": "MultiUAVPlat2026",
+      "eprint": "2606.31073v1"
+    },
+    {
+      "key": "MissionBench2026",
+      "eprint": "2607.22014v1"
+    },
+    {
+      "key": "ESARBench2026",
+      "eprint": "2605.01371v1"
+    },
+    {
+      "key": "Retriever2026",
+      "eprint": "2607.17213v2"
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "eprint": "2601.03281v1"
+    },
+    {
+      "key": "PhysAIBench2026",
+      "eprint": "2609.23695v1"
+    },
+    {
+      "key": "AERIAL2026",
+      "eprint": "2610.31029v1"
+    },
+    {
+      "key": "SMART2025",
+      "eprint": "2503.04798v3"
+    },
+    {
+      "key": "GRaDNav2025",
+      "eprint": "2506.14009v2"
+    }
+  ],
+  "inverse_restores_native": true
+}

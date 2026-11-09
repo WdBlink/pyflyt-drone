@@ -1,0 +1,4509 @@
+{
+  "role": "recount and attribution evidence only; original037 still unknown",
+  "at": "2026-11-07T03:14:35.221144+00:00",
+  "callbacks": 37,
+  "attempted_slots": 38,
+  "denominator": 108,
+  "sdk_abort_counts": {
+    "classic": {
+      "stopped": 12,
+      "completed": 6
+    },
+    "llm": {
+      "stopped": 58,
+      "completed": 31,
+      "failed": 1
+    },
+    "root-means": {
+      "stopped": 48
+    }
+  },
+  "last_slots": {
+    "36": {
+      "terminal_status": "completed",
+      "terminal_Y": 0.3314065510597302,
+      "score_before_cleanup_gate": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0,
+        "remaining_range_m": [
+          7797.750802770335,
+          7797.235686388489,
+          7797.753486088235,
+          7797.300868009259
+        ],
+        "static_recall": 0.0,
+        "static_denominator_weight": 5,
+        "dynamic_denominator_weight": 180.0,
+        "static_entities": [
+          {
+            "entity_key": "truth-003",
+            "weight": 1,
+            "quality": 0.0
+          },
+          {
+            "entity_key": "truth-004",
+            "weight": 1,
+            "quality": 0.0
+          },
+          {
+            "entity_key": "truth-009",
+            "weight": 1,
+            "quality": 0.0
+          },
+          {
+            "entity_key": "truth-011",
+            "weight": 1,
+            "quality": 0.0
+          },
+          {
+            "entity_key": "truth-012",
+            "weight": 1,
+            "quality": 0.0
+          }
+        ],
+        "dynamic_entities": [
+          {
+            "entity_key": "truth-000",
+            "quality": 0.0,
+            "observed": 0.0,
+            "bins": [
+              {
+                "index": 1,
+                "starts_at": 236.0,
+                "ends_at": 239.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 2,
+                "starts_at": 239.0,
+                "ends_at": 242.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 3,
+                "starts_at": 242.0,
+                "ends_at": 245.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 4,
+                "starts_at": 245.0,
+                "ends_at": 248.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 5,
+                "starts_at": 248.0,
+                "ends_at": 251.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 6,
+                "starts_at": 251.0,
+                "ends_at": 254.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 7,
+                "starts_at": 254.0,
+                "ends_at": 257.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 8,
+                "starts_at": 257.0,
+                "ends_at": 260.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 9,
+                "starts_at": 260.0,
+                "ends_at": 263.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 10,
+                "starts_at": 263.0,
+                "ends_at": 266.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 11,
+                "starts_at": 266.0,
+                "ends_at": 269.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 12,
+                "starts_at": 269.0,
+                "ends_at": 272.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 13,
+                "starts_at": 272.0,
+                "ends_at": 275.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 14,
+                "starts_at": 275.0,
+                "ends_at": 278.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 15,
+                "starts_at": 278.0,
+                "ends_at": 281.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 16,
+                "starts_at": 281.0,
+                "ends_at": 284.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 17,
+                "starts_at": 284.0,
+                "ends_at": 287.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 18,
+                "starts_at": 287.0,
+                "ends_at": 290.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 19,
+                "starts_at": 290.0,
+                "ends_at": 293.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 20,
+                "starts_at": 293.0,
+                "ends_at": 296.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 21,
+                "starts_at": 296.0,
+                "ends_at": 299.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 22,
+                "starts_at": 299.0,
+                "ends_at": 302.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 23,
+                "starts_at": 302.0,
+                "ends_at": 305.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 24,
+                "starts_at": 305.0,
+                "ends_at": 308.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 25,
+                "starts_at": 308.0,
+                "ends_at": 311.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 26,
+                "starts_at": 311.0,
+                "ends_at": 314.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 27,
+                "starts_at": 314.0,
+                "ends_at": 317.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 28,
+                "starts_at": 317.0,
+                "ends_at": 320.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 29,
+                "starts_at": 320.0,
+                "ends_at": 323.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 30,
+                "starts_at": 323.0,
+                "ends_at": 326.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 31,
+                "starts_at": 326.0,
+                "ends_at": 329.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 32,
+                "starts_at": 329.0,
+                "ends_at": 332.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 33,
+                "starts_at": 332.0,
+                "ends_at": 335.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 34,
+                "starts_at": 335.0,
+                "ends_at": 338.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 35,
+                "starts_at": 338.0,
+                "ends_at": 341.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 36,
+                "starts_at": 341.0,
+                "ends_at": 344.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 37,
+                "starts_at": 344.0,
+                "ends_at": 347.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 38,
+                "starts_at": 347.0,
+                "ends_at": 350.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 39,
+                "starts_at": 350.0,
+                "ends_at": 353.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 40,
+                "starts_at": 353.0,
+                "ends_at": 356.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 41,
+                "starts_at": 356.0,
+                "ends_at": 359.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 42,
+                "starts_at": 359.0,
+                "ends_at": 362.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 43,
+                "starts_at": 362.0,
+                "ends_at": 365.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 44,
+                "starts_at": 365.0,
+                "ends_at": 368.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 45,
+                "starts_at": 368.0,
+                "ends_at": 371.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 46,
+                "starts_at": 371.0,
+                "ends_at": 374.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 47,
+                "starts_at": 374.0,
+                "ends_at": 377.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 48,
+                "starts_at": 377.0,
+                "ends_at": 380.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 49,
+                "starts_at": 380.0,
+                "ends_at": 383.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 50,
+                "starts_at": 383.0,
+                "ends_at": 386.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 51,
+                "starts_at": 386.0,
+                "ends_at": 389.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 52,
+                "starts_at": 389.0,
+                "ends_at": 392.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 53,
+                "starts_at": 392.0,
+                "ends_at": 395.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 54,
+                "starts_at": 395.0,
+                "ends_at": 398.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 55,
+                "starts_at": 398.0,
+                "ends_at": 401.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 56,
+                "starts_at": 401.0,
+                "ends_at": 404.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 57,
+                "starts_at": 404.0,
+                "ends_at": 407.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 58,
+                "starts_at": 407.0,
+                "ends_at": 410.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 59,
+                "starts_at": 410.0,
+                "ends_at": 413.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 60,
+                "starts_at": 413.0,
+                "ends_at": 416.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              }
+            ]
+          },
+          {
+            "entity_key": "truth-007",
+            "quality": 0.0,
+            "observed": 0.0,
+            "bins": [
+              {
+                "index": 1,
+                "starts_at": 166.0,
+                "ends_at": 169.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 2,
+                "starts_at": 169.0,
+                "ends_at": 172.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 3,
+                "starts_at": 172.0,
+                "ends_at": 175.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 4,
+                "starts_at": 175.0,
+                "ends_at": 178.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 5,
+                "starts_at": 178.0,
+                "ends_at": 181.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 6,
+                "starts_at": 181.0,
+                "ends_at": 184.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 7,
+                "starts_at": 184.0,
+                "ends_at": 187.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 8,
+                "starts_at": 187.0,
+                "ends_at": 190.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 9,
+                "starts_at": 190.0,
+                "ends_at": 193.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 10,
+                "starts_at": 193.0,
+                "ends_at": 196.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 11,
+                "starts_at": 196.0,
+                "ends_at": 199.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 12,
+                "starts_at": 199.0,
+                "ends_at": 202.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 13,
+                "starts_at": 202.0,
+                "ends_at": 205.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 14,
+                "starts_at": 205.0,
+                "ends_at": 208.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 15,
+                "starts_at": 208.0,
+                "ends_at": 211.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 16,
+                "starts_at": 211.0,
+                "ends_at": 214.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 17,
+                "starts_at": 214.0,
+                "ends_at": 217.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 18,
+                "starts_at": 217.0,
+                "ends_at": 220.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 19,
+                "starts_at": 220.0,
+                "ends_at": 223.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 20,
+                "starts_at": 223.0,
+                "ends_at": 226.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 21,
+                "starts_at": 226.0,
+                "ends_at": 229.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 22,
+                "starts_at": 229.0,
+                "ends_at": 232.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 23,
+                "starts_at": 232.0,
+                "ends_at": 235.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 24,
+                "starts_at": 235.0,
+                "ends_at": 238.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 25,
+                "starts_at": 238.0,
+                "ends_at": 241.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 26,
+                "starts_at": 241.0,
+                "ends_at": 244.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 27,
+                "starts_at": 244.0,
+                "ends_at": 247.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 28,
+                "starts_at": 247.0,
+                "ends_at": 250.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 29,
+                "starts_at": 250.0,
+                "ends_at": 253.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 30,
+                "starts_at": 253.0,
+                "ends_at": 256.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 31,
+                "starts_at": 256.0,
+                "ends_at": 259.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 32,
+                "starts_at": 259.0,
+                "ends_at": 262.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 33,
+                "starts_at": 262.0,
+                "ends_at": 265.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 34,
+                "starts_at": 265.0,
+                "ends_at": 268.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 35,
+                "starts_at": 268.0,
+                "ends_at": 271.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 36,
+                "starts_at": 271.0,
+                "ends_at": 274.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 37,
+                "starts_at": 274.0,
+                "ends_at": 277.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 38,
+                "starts_at": 277.0,
+                "ends_at": 280.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 39,
+                "starts_at": 280.0,
+                "ends_at": 283.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 40,
+                "starts_at": 283.0,
+                "ends_at": 286.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 41,
+                "starts_at": 286.0,
+                "ends_at": 289.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 42,
+                "starts_at": 289.0,
+                "ends_at": 292.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 43,
+                "starts_at": 292.0,
+                "ends_at": 295.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 44,
+                "starts_at": 295.0,
+                "ends_at": 298.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 45,
+                "starts_at": 298.0,
+                "ends_at": 301.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 46,
+                "starts_at": 301.0,
+                "ends_at": 304.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 47,
+                "starts_at": 304.0,
+                "ends_at": 307.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 48,
+                "starts_at": 307.0,
+                "ends_at": 310.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 49,
+                "starts_at": 310.0,
+                "ends_at": 313.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 50,
+                "starts_at": 313.0,
+                "ends_at": 316.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 51,
+                "starts_at": 316.0,
+                "ends_at": 319.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 52,
+                "starts_at": 319.0,
+                "ends_at": 322.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 53,
+                "starts_at": 322.0,
+                "ends_at": 325.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 54,
+                "starts_at": 325.0,
+                "ends_at": 328.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 55,
+                "starts_at": 328.0,
+                "ends_at": 331.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 56,
+                "starts_at": 331.0,
+                "ends_at": 334.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 57,
+                "starts_at": 334.0,
+                "ends_at": 337.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 58,
+                "starts_at": 337.0,
+                "ends_at": 340.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 59,
+                "starts_at": 340.0,
+                "ends_at": 343.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 60,
+                "starts_at": 343.0,
+                "ends_at": 346.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              }
+            ]
+          },
+          {
+            "entity_key": "truth-013",
+            "quality": 0.0,
+            "observed": 0.0,
+            "bins": [
+              {
+                "index": 1,
+                "starts_at": 113.0,
+                "ends_at": 116.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 2,
+                "starts_at": 116.0,
+                "ends_at": 119.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 3,
+                "starts_at": 119.0,
+                "ends_at": 122.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 4,
+                "starts_at": 122.0,
+                "ends_at": 125.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 5,
+                "starts_at": 125.0,
+                "ends_at": 128.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 6,
+                "starts_at": 128.0,
+                "ends_at": 131.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 7,
+                "starts_at": 131.0,
+                "ends_at": 134.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 8,
+                "starts_at": 134.0,
+                "ends_at": 137.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 9,
+                "starts_at": 137.0,
+                "ends_at": 140.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 10,
+                "starts_at": 140.0,
+                "ends_at": 143.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 11,
+                "starts_at": 143.0,
+                "ends_at": 146.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 12,
+                "starts_at": 146.0,
+                "ends_at": 149.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 13,
+                "starts_at": 149.0,
+                "ends_at": 152.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 14,
+                "starts_at": 152.0,
+                "ends_at": 155.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 15,
+                "starts_at": 155.0,
+                "ends_at": 158.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 16,
+                "starts_at": 158.0,
+                "ends_at": 161.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 17,
+                "starts_at": 161.0,
+                "ends_at": 164.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 18,
+                "starts_at": 164.0,
+                "ends_at": 167.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 19,
+                "starts_at": 167.0,
+                "ends_at": 170.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 20,
+                "starts_at": 170.0,
+                "ends_at": 173.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 21,
+                "starts_at": 173.0,
+                "ends_at": 176.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 22,
+                "starts_at": 176.0,
+                "ends_at": 179.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 23,
+                "starts_at": 179.0,
+                "ends_at": 182.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 24,
+                "starts_at": 182.0,
+                "ends_at": 185.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 25,
+                "starts_at": 185.0,
+                "ends_at": 188.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 26,
+                "starts_at": 188.0,
+                "ends_at": 191.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 27,
+                "starts_at": 191.0,
+                "ends_at": 194.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 28,
+                "starts_at": 194.0,
+                "ends_at": 197.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 29,
+                "starts_at": 197.0,
+                "ends_at": 200.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 30,
+                "starts_at": 200.0,
+                "ends_at": 203.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 31,
+                "starts_at": 203.0,
+                "ends_at": 206.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 32,
+                "starts_at": 206.0,
+                "ends_at": 209.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 33,
+                "starts_at": 209.0,
+                "ends_at": 212.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 34,
+                "starts_at": 212.0,
+                "ends_at": 215.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 35,
+                "starts_at": 215.0,
+                "ends_at": 218.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 36,
+                "starts_at": 218.0,
+                "ends_at": 221.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 37,
+                "starts_at": 221.0,
+                "ends_at": 224.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 38,
+                "starts_at": 224.0,
+                "ends_at": 227.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 39,
+                "starts_at": 227.0,
+                "ends_at": 230.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 40,
+                "starts_at": 230.0,
+                "ends_at": 233.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 41,
+                "starts_at": 233.0,
+                "ends_at": 236.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 42,
+                "starts_at": 236.0,
+                "ends_at": 239.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 43,
+                "starts_at": 239.0,
+                "ends_at": 242.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 44,
+                "starts_at": 242.0,
+                "ends_at": 245.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 45,
+                "starts_at": 245.0,
+                "ends_at": 248.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 46,
+                "starts_at": 248.0,
+                "ends_at": 251.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 47,
+                "starts_at": 251.0,
+                "ends_at": 254.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 48,
+                "starts_at": 254.0,
+                "ends_at": 257.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 49,
+                "starts_at": 257.0,
+                "ends_at": 260.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 50,
+                "starts_at": 260.0,
+                "ends_at": 263.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 51,
+                "starts_at": 263.0,
+                "ends_at": 266.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 52,
+                "starts_at": 266.0,
+                "ends_at": 269.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 53,
+                "starts_at": 269.0,
+                "ends_at": 272.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 54,
+                "starts_at": 272.0,
+                "ends_at": 275.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 55,
+                "starts_at": 275.0,
+                "ends_at": 278.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 56,
+                "starts_at": 278.0,
+                "ends_at": 281.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 57,
+                "starts_at": 281.0,
+                "ends_at": 284.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 58,
+                "starts_at": 284.0,
+                "ends_at": 287.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 59,
+                "starts_at": 287.0,
+                "ends_at": 290.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 60,
+                "starts_at": 290.0,
+                "ends_at": 293.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              }
+            ]
+          }
+        ],
+        "association_ambiguities": 0
+      },
+      "meter": {
+        "calls": 25,
+        "tokens": 165249
+      },
+      "causal_joins": 25,
+      "max_lag_seconds": 0.009676834000856616,
+      "p95_lag_seconds": 0.0024099583349510567,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0
+    },
+    "37": {
+      "terminal_status": "unknown_process_cleanup",
+      "terminal_Y": null,
+      "score_before_cleanup_gate": {
+        "C": 0.9942196531791907,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314065510597302,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314065510597302,
+        "SR": 0,
+        "remaining_range_m": [
+          7804.095134888119,
+          7800.540498987746,
+          7801.158370631154,
+          7803.235151611001
+        ],
+        "static_recall": 0.0,
+        "static_denominator_weight": 5,
+        "dynamic_denominator_weight": 180.0,
+        "static_entities": [
+          {
+            "entity_key": "truth-003",
+            "weight": 1,
+            "quality": 0.0
+          },
+          {
+            "entity_key": "truth-004",
+            "weight": 1,
+            "quality": 0.0
+          },
+          {
+            "entity_key": "truth-009",
+            "weight": 1,
+            "quality": 0.0
+          },
+          {
+            "entity_key": "truth-011",
+            "weight": 1,
+            "quality": 0.0
+          },
+          {
+            "entity_key": "truth-012",
+            "weight": 1,
+            "quality": 0.0
+          }
+        ],
+        "dynamic_entities": [
+          {
+            "entity_key": "truth-000",
+            "quality": 0.0,
+            "observed": 0.0,
+            "bins": [
+              {
+                "index": 1,
+                "starts_at": 236.0,
+                "ends_at": 239.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 2,
+                "starts_at": 239.0,
+                "ends_at": 242.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 3,
+                "starts_at": 242.0,
+                "ends_at": 245.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 4,
+                "starts_at": 245.0,
+                "ends_at": 248.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 5,
+                "starts_at": 248.0,
+                "ends_at": 251.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 6,
+                "starts_at": 251.0,
+                "ends_at": 254.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 7,
+                "starts_at": 254.0,
+                "ends_at": 257.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 8,
+                "starts_at": 257.0,
+                "ends_at": 260.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 9,
+                "starts_at": 260.0,
+                "ends_at": 263.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 10,
+                "starts_at": 263.0,
+                "ends_at": 266.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 11,
+                "starts_at": 266.0,
+                "ends_at": 269.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 12,
+                "starts_at": 269.0,
+                "ends_at": 272.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 13,
+                "starts_at": 272.0,
+                "ends_at": 275.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 14,
+                "starts_at": 275.0,
+                "ends_at": 278.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 15,
+                "starts_at": 278.0,
+                "ends_at": 281.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 16,
+                "starts_at": 281.0,
+                "ends_at": 284.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 17,
+                "starts_at": 284.0,
+                "ends_at": 287.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 18,
+                "starts_at": 287.0,
+                "ends_at": 290.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 19,
+                "starts_at": 290.0,
+                "ends_at": 293.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 20,
+                "starts_at": 293.0,
+                "ends_at": 296.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 21,
+                "starts_at": 296.0,
+                "ends_at": 299.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 22,
+                "starts_at": 299.0,
+                "ends_at": 302.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 23,
+                "starts_at": 302.0,
+                "ends_at": 305.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 24,
+                "starts_at": 305.0,
+                "ends_at": 308.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 25,
+                "starts_at": 308.0,
+                "ends_at": 311.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 26,
+                "starts_at": 311.0,
+                "ends_at": 314.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 27,
+                "starts_at": 314.0,
+                "ends_at": 317.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 28,
+                "starts_at": 317.0,
+                "ends_at": 320.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 29,
+                "starts_at": 320.0,
+                "ends_at": 323.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 30,
+                "starts_at": 323.0,
+                "ends_at": 326.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 31,
+                "starts_at": 326.0,
+                "ends_at": 329.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 32,
+                "starts_at": 329.0,
+                "ends_at": 332.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 33,
+                "starts_at": 332.0,
+                "ends_at": 335.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 34,
+                "starts_at": 335.0,
+                "ends_at": 338.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 35,
+                "starts_at": 338.0,
+                "ends_at": 341.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 36,
+                "starts_at": 341.0,
+                "ends_at": 344.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 37,
+                "starts_at": 344.0,
+                "ends_at": 347.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 38,
+                "starts_at": 347.0,
+                "ends_at": 350.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 39,
+                "starts_at": 350.0,
+                "ends_at": 353.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 40,
+                "starts_at": 353.0,
+                "ends_at": 356.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 41,
+                "starts_at": 356.0,
+                "ends_at": 359.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 42,
+                "starts_at": 359.0,
+                "ends_at": 362.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 43,
+                "starts_at": 362.0,
+                "ends_at": 365.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 44,
+                "starts_at": 365.0,
+                "ends_at": 368.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 45,
+                "starts_at": 368.0,
+                "ends_at": 371.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 46,
+                "starts_at": 371.0,
+                "ends_at": 374.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 47,
+                "starts_at": 374.0,
+                "ends_at": 377.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 48,
+                "starts_at": 377.0,
+                "ends_at": 380.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 49,
+                "starts_at": 380.0,
+                "ends_at": 383.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 50,
+                "starts_at": 383.0,
+                "ends_at": 386.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 51,
+                "starts_at": 386.0,
+                "ends_at": 389.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 52,
+                "starts_at": 389.0,
+                "ends_at": 392.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 53,
+                "starts_at": 392.0,
+                "ends_at": 395.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 54,
+                "starts_at": 395.0,
+                "ends_at": 398.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 55,
+                "starts_at": 398.0,
+                "ends_at": 401.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 56,
+                "starts_at": 401.0,
+                "ends_at": 404.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 57,
+                "starts_at": 404.0,
+                "ends_at": 407.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 58,
+                "starts_at": 407.0,
+                "ends_at": 410.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 59,
+                "starts_at": 410.0,
+                "ends_at": 413.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 60,
+                "starts_at": 413.0,
+                "ends_at": 416.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              }
+            ]
+          },
+          {
+            "entity_key": "truth-007",
+            "quality": 0.0,
+            "observed": 0.0,
+            "bins": [
+              {
+                "index": 1,
+                "starts_at": 166.0,
+                "ends_at": 169.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 2,
+                "starts_at": 169.0,
+                "ends_at": 172.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 3,
+                "starts_at": 172.0,
+                "ends_at": 175.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 4,
+                "starts_at": 175.0,
+                "ends_at": 178.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 5,
+                "starts_at": 178.0,
+                "ends_at": 181.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 6,
+                "starts_at": 181.0,
+                "ends_at": 184.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 7,
+                "starts_at": 184.0,
+                "ends_at": 187.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 8,
+                "starts_at": 187.0,
+                "ends_at": 190.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 9,
+                "starts_at": 190.0,
+                "ends_at": 193.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 10,
+                "starts_at": 193.0,
+                "ends_at": 196.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 11,
+                "starts_at": 196.0,
+                "ends_at": 199.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 12,
+                "starts_at": 199.0,
+                "ends_at": 202.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 13,
+                "starts_at": 202.0,
+                "ends_at": 205.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 14,
+                "starts_at": 205.0,
+                "ends_at": 208.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 15,
+                "starts_at": 208.0,
+                "ends_at": 211.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 16,
+                "starts_at": 211.0,
+                "ends_at": 214.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 17,
+                "starts_at": 214.0,
+                "ends_at": 217.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 18,
+                "starts_at": 217.0,
+                "ends_at": 220.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 19,
+                "starts_at": 220.0,
+                "ends_at": 223.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 20,
+                "starts_at": 223.0,
+                "ends_at": 226.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 21,
+                "starts_at": 226.0,
+                "ends_at": 229.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 22,
+                "starts_at": 229.0,
+                "ends_at": 232.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 23,
+                "starts_at": 232.0,
+                "ends_at": 235.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 24,
+                "starts_at": 235.0,
+                "ends_at": 238.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 25,
+                "starts_at": 238.0,
+                "ends_at": 241.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 26,
+                "starts_at": 241.0,
+                "ends_at": 244.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 27,
+                "starts_at": 244.0,
+                "ends_at": 247.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 28,
+                "starts_at": 247.0,
+                "ends_at": 250.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 29,
+                "starts_at": 250.0,
+                "ends_at": 253.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 30,
+                "starts_at": 253.0,
+                "ends_at": 256.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 31,
+                "starts_at": 256.0,
+                "ends_at": 259.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 32,
+                "starts_at": 259.0,
+                "ends_at": 262.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 33,
+                "starts_at": 262.0,
+                "ends_at": 265.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 34,
+                "starts_at": 265.0,
+                "ends_at": 268.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 35,
+                "starts_at": 268.0,
+                "ends_at": 271.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 36,
+                "starts_at": 271.0,
+                "ends_at": 274.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 37,
+                "starts_at": 274.0,
+                "ends_at": 277.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 38,
+                "starts_at": 277.0,
+                "ends_at": 280.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 39,
+                "starts_at": 280.0,
+                "ends_at": 283.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 40,
+                "starts_at": 283.0,
+                "ends_at": 286.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 41,
+                "starts_at": 286.0,
+                "ends_at": 289.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 42,
+                "starts_at": 289.0,
+                "ends_at": 292.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 43,
+                "starts_at": 292.0,
+                "ends_at": 295.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 44,
+                "starts_at": 295.0,
+                "ends_at": 298.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 45,
+                "starts_at": 298.0,
+                "ends_at": 301.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 46,
+                "starts_at": 301.0,
+                "ends_at": 304.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 47,
+                "starts_at": 304.0,
+                "ends_at": 307.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 48,
+                "starts_at": 307.0,
+                "ends_at": 310.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 49,
+                "starts_at": 310.0,
+                "ends_at": 313.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 50,
+                "starts_at": 313.0,
+                "ends_at": 316.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 51,
+                "starts_at": 316.0,
+                "ends_at": 319.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 52,
+                "starts_at": 319.0,
+                "ends_at": 322.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 53,
+                "starts_at": 322.0,
+                "ends_at": 325.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 54,
+                "starts_at": 325.0,
+                "ends_at": 328.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 55,
+                "starts_at": 328.0,
+                "ends_at": 331.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 56,
+                "starts_at": 331.0,
+                "ends_at": 334.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 57,
+                "starts_at": 334.0,
+                "ends_at": 337.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 58,
+                "starts_at": 337.0,
+                "ends_at": 340.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 59,
+                "starts_at": 340.0,
+                "ends_at": 343.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 60,
+                "starts_at": 343.0,
+                "ends_at": 346.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              }
+            ]
+          },
+          {
+            "entity_key": "truth-013",
+            "quality": 0.0,
+            "observed": 0.0,
+            "bins": [
+              {
+                "index": 1,
+                "starts_at": 113.0,
+                "ends_at": 116.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 2,
+                "starts_at": 116.0,
+                "ends_at": 119.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 3,
+                "starts_at": 119.0,
+                "ends_at": 122.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 4,
+                "starts_at": 122.0,
+                "ends_at": 125.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 5,
+                "starts_at": 125.0,
+                "ends_at": 128.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 6,
+                "starts_at": 128.0,
+                "ends_at": 131.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 7,
+                "starts_at": 131.0,
+                "ends_at": 134.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 8,
+                "starts_at": 134.0,
+                "ends_at": 137.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 9,
+                "starts_at": 137.0,
+                "ends_at": 140.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 10,
+                "starts_at": 140.0,
+                "ends_at": 143.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 11,
+                "starts_at": 143.0,
+                "ends_at": 146.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 12,
+                "starts_at": 146.0,
+                "ends_at": 149.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 13,
+                "starts_at": 149.0,
+                "ends_at": 152.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 14,
+                "starts_at": 152.0,
+                "ends_at": 155.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 15,
+                "starts_at": 155.0,
+                "ends_at": 158.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 16,
+                "starts_at": 158.0,
+                "ends_at": 161.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 17,
+                "starts_at": 161.0,
+                "ends_at": 164.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 18,
+                "starts_at": 164.0,
+                "ends_at": 167.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 19,
+                "starts_at": 167.0,
+                "ends_at": 170.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 20,
+                "starts_at": 170.0,
+                "ends_at": 173.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 21,
+                "starts_at": 173.0,
+                "ends_at": 176.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 22,
+                "starts_at": 176.0,
+                "ends_at": 179.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 23,
+                "starts_at": 179.0,
+                "ends_at": 182.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 24,
+                "starts_at": 182.0,
+                "ends_at": 185.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 25,
+                "starts_at": 185.0,
+                "ends_at": 188.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 26,
+                "starts_at": 188.0,
+                "ends_at": 191.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 27,
+                "starts_at": 191.0,
+                "ends_at": 194.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 28,
+                "starts_at": 194.0,
+                "ends_at": 197.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 29,
+                "starts_at": 197.0,
+                "ends_at": 200.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 30,
+                "starts_at": 200.0,
+                "ends_at": 203.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 31,
+                "starts_at": 203.0,
+                "ends_at": 206.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 32,
+                "starts_at": 206.0,
+                "ends_at": 209.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 33,
+                "starts_at": 209.0,
+                "ends_at": 212.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 34,
+                "starts_at": 212.0,
+                "ends_at": 215.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 35,
+                "starts_at": 215.0,
+                "ends_at": 218.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 36,
+                "starts_at": 218.0,
+                "ends_at": 221.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 37,
+                "starts_at": 221.0,
+                "ends_at": 224.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 38,
+                "starts_at": 224.0,
+                "ends_at": 227.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 39,
+                "starts_at": 227.0,
+                "ends_at": 230.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 40,
+                "starts_at": 230.0,
+                "ends_at": 233.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 41,
+                "starts_at": 233.0,
+                "ends_at": 236.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 42,
+                "starts_at": 236.0,
+                "ends_at": 239.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 43,
+                "starts_at": 239.0,
+                "ends_at": 242.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 44,
+                "starts_at": 242.0,
+                "ends_at": 245.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 45,
+                "starts_at": 245.0,
+                "ends_at": 248.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 46,
+                "starts_at": 248.0,
+                "ends_at": 251.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 47,
+                "starts_at": 251.0,
+                "ends_at": 254.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 48,
+                "starts_at": 254.0,
+                "ends_at": 257.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 49,
+                "starts_at": 257.0,
+                "ends_at": 260.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 50,
+                "starts_at": 260.0,
+                "ends_at": 263.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 51,
+                "starts_at": 263.0,
+                "ends_at": 266.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 52,
+                "starts_at": 266.0,
+                "ends_at": 269.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 53,
+                "starts_at": 269.0,
+                "ends_at": 272.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 54,
+                "starts_at": 272.0,
+                "ends_at": 275.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 55,
+                "starts_at": 275.0,
+                "ends_at": 278.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 56,
+                "starts_at": 278.0,
+                "ends_at": 281.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 57,
+                "starts_at": 281.0,
+                "ends_at": 284.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 58,
+                "starts_at": 284.0,
+                "ends_at": 287.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 59,
+                "starts_at": 287.0,
+                "ends_at": 290.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              },
+              {
+                "index": 60,
+                "starts_at": 290.0,
+                "ends_at": 293.0,
+                "weight": 1.0,
+                "evidence_id": null,
+                "quality": 0.0,
+                "zero_reason": "no_legal_timely_measurement"
+              }
+            ]
+          }
+        ],
+        "association_ambiguities": 0
+      },
+      "meter": {
+        "calls": 22,
+        "tokens": 160664
+      },
+      "causal_joins": 22,
+      "max_lag_seconds": 0.009353917004773393,
+      "p95_lag_seconds": 0.0013802916665781595,
+      "report_audit_entries": 38,
+      "accepted_unique_ids": 7
+    }
+  },
+  "original037_external": {
+    "pid": 65758,
+    "gui_uid": 501,
+    "job": "local.home-jarvis.xiaomi-voice",
+    "xpcproxy": {
+      "timestamp": "2026-11-07 10:53:04.888080+0800",
+      "eventMessage": "xpcproxy spawned with pid 65758",
+      "subsystem": "gui/501/local.home-jarvis.xiaomi-voice [65758]",
+      "processID": 1,
+      "processImagePath": "/sbin/launchd",
+      "senderImagePath": "/sbin/launchd",
+      "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+      "machTimestamp": 1165081302206
+    },
+    "python_spawn": {
+      "timestamp": "2026-11-07 10:53:04.896116+0800",
+      "eventMessage": "Successfully spawned python[65758] because semaphore",
+      "subsystem": "gui/501/local.home-jarvis.xiaomi-voice [65758]",
+      "processID": 1,
+      "processImagePath": "/sbin/launchd",
+      "senderImagePath": "/sbin/launchd",
+      "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+      "machTimestamp": 1165081495066
+    },
+    "removal": {
+      "timestamp": "2026-11-07 10:53:05.401655+0800",
+      "eventMessage": "removing child: pid/65758",
+      "subsystem": "system",
+      "processID": 1,
+      "processImagePath": "/sbin/launchd",
+      "senderImagePath": "/sbin/launchd",
+      "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+      "machTimestamp": 1165093627992
+    },
+    "observations_utc": [
+      "2026-11-07T02:53:05.064001+00:00",
+      "2026-11-07T02:53:05.132386+00:00",
+      "2026-11-07T02:53:05.132930+00:00",
+      "2026-11-07T02:53:05.206916+00:00"
+    ],
+    "original_scan_rows": [
+      {
+        "ordinal": 0,
+        "row": {
+          "parent": 1,
+          "group": 65758,
+          "uid": 501,
+          "status": "R",
+          "born": "Sat Nov 7 10:53:04 2026",
+          "command": "/Users/wdblink/Code/my_repo/home-jarvis/.venv/bin/python"
+        },
+        "start_utc": "2026-11-07T02:53:05.064001+00:00",
+        "end_utc": "2026-11-07T02:53:05.132386+00:00"
+      },
+      {
+        "ordinal": 1,
+        "row": {
+          "parent": 1,
+          "group": 65758,
+          "uid": 501,
+          "status": "S",
+          "born": "Sat Nov 7 10:53:04 2026",
+          "command": "/Users/wdblink/Code/my_repo/home-jarvis/.venv/bin/python"
+        },
+        "start_utc": "2026-11-07T02:53:05.132930+00:00",
+        "end_utc": "2026-11-07T02:53:05.206916+00:00"
+      }
+    ]
+  },
+  "later_observation": {
+    "at": "2026-11-07T03:14:34.624244+00:00",
+    "original_owned_remaining": [],
+    "unclaimed_pid_present": false,
+    "scope": "later only; no process actions"
+  },
+  "tree_filetime_corroboration_only": [
+    {
+      "order_index": 24,
+      "scope": "original file metadata read later; not original ps scan timestamp",
+      "match": {
+        "pid": 26337,
+        "gui_uid": 501,
+        "job": "local.home-jarvis.xiaomi-voice",
+        "xpcproxy": {
+          "timestamp": "2026-11-07 06:18:36.887559+0800",
+          "eventMessage": "xpcproxy spawned with pid 26337",
+          "subsystem": "gui/501/local.home-jarvis.xiaomi-voice [26337]",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 769849948061
+        },
+        "python_spawn": {
+          "timestamp": "2026-11-07 06:18:36.892904+0800",
+          "eventMessage": "Successfully spawned python[26337] because semaphore",
+          "subsystem": "gui/501/local.home-jarvis.xiaomi-voice [26337]",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 769850076352
+        },
+        "removal": {
+          "timestamp": "2026-11-07 06:18:37.200347+0800",
+          "eventMessage": "removing child: pid/26337",
+          "subsystem": "system",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 769857454972
+        },
+        "observations_utc": [
+          "2026-11-06T22:18:37.187908+00:00",
+          "2026-11-06T22:18:37.187993+00:00"
+        ]
+      }
+    },
+    {
+      "order_index": 30,
+      "scope": "original file metadata read later; not original ps scan timestamp",
+      "match": {
+        "pid": 86715,
+        "gui_uid": 501,
+        "job": "local.home-jarvis.xiaomi-voice",
+        "xpcproxy": {
+          "timestamp": "2026-11-07 08:23:25.310994+0800",
+          "eventMessage": "xpcproxy spawned with pid 86715",
+          "subsystem": "gui/501/local.home-jarvis.xiaomi-voice [86715]",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 949571559672
+        },
+        "python_spawn": {
+          "timestamp": "2026-11-07 08:23:25.318551+0800",
+          "eventMessage": "Successfully spawned python[86715] because semaphore",
+          "subsystem": "gui/501/local.home-jarvis.xiaomi-voice [86715]",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 949571741060
+        },
+        "removal": {
+          "timestamp": "2026-11-07 08:23:25.601664+0800",
+          "eventMessage": "removing child: pid/86715",
+          "subsystem": "system",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 949578535770
+        },
+        "observations_utc": [
+          "2026-11-07T00:23:25.577844+00:00",
+          "2026-11-07T00:23:25.577934+00:00"
+        ]
+      }
+    },
+    {
+      "order_index": 37,
+      "scope": "original file metadata read later; not original ps scan timestamp",
+      "match": {
+        "pid": 65758,
+        "gui_uid": 501,
+        "job": "local.home-jarvis.xiaomi-voice",
+        "xpcproxy": {
+          "timestamp": "2026-11-07 10:53:04.888080+0800",
+          "eventMessage": "xpcproxy spawned with pid 65758",
+          "subsystem": "gui/501/local.home-jarvis.xiaomi-voice [65758]",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 1165081302206
+        },
+        "python_spawn": {
+          "timestamp": "2026-11-07 10:53:04.896116+0800",
+          "eventMessage": "Successfully spawned python[65758] because semaphore",
+          "subsystem": "gui/501/local.home-jarvis.xiaomi-voice [65758]",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 1165081495066
+        },
+        "removal": {
+          "timestamp": "2026-11-07 10:53:05.401655+0800",
+          "eventMessage": "removing child: pid/65758",
+          "subsystem": "system",
+          "processID": 1,
+          "processImagePath": "/sbin/launchd",
+          "senderImagePath": "/sbin/launchd",
+          "bootUUID": "AAE87917-4736-4BAA-99B9-F7C816816E6A",
+          "machTimestamp": 1165093627992
+        },
+        "observations_utc": [
+          "2026-11-07T02:53:05.210531+00:00",
+          "2026-11-07T02:53:05.210606+00:00"
+        ]
+      }
+    }
+  ],
+  "native_usage": {
+    "calls": 1314,
+    "tokens": 8480064,
+    "cost": {}
+  },
+  "new_resource_operations": 0,
+  "files": [
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/source-hashes.json",
+      "sha256": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/dependency-hashes.json",
+      "sha256": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/input-hashes.json",
+      "sha256": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/source-files.json",
+      "sha256": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-030.v1/source/observe_cleanup.py",
+      "sha256": "83ffb02d0582c243e33421ba0f831d754010c1cb99c70b3022b5a743d96c646c"
+    },
+    {
+      "path": "paper/research/20261104-inspection/review/evidence/pilot-v4-passive-close-observer-v2/review.json",
+      "sha256": "33ed4010f841d2f935639b854e77c435aa9f36b206baf1a6e052230bcf341f23"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-030.v1/source/continue_pilot.py",
+      "sha256": "4c78d5b130f27f15f34483f7f88bf5a7c348cef2399d272faae3c63ba3502a8f"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/source/inspect_original.py",
+      "sha256": "0b33e768298dc7f8ea6c7e8b3d2b7667fa30c63d01fbe086cc68aa863cd4d7c1"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/source/launchd_provenance.py",
+      "sha256": "669cee40aca21ad22a3037cf0a002ee30ddcd27bcabd034b9f02a9cfe8ea0be9"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/launchd.v1/file-times.json",
+      "sha256": "bbee8465bad45770081c38645b86b0b927bbab2dbf15f289f78784545f0da2bf"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/launchd.v1/filtered-launchctl-job.txt",
+      "sha256": "0ff05601694b88a8d85bbc6a775f3be524ff0aaade2540ba16f12694b2c16cc3"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/launchd.v1/lookup.json",
+      "sha256": "992bf96a4b2c95d60fa4ce174502bb2958fbb15cd99026697533cb16f885d846"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/launchd.v1/slot024.json",
+      "sha256": "889349c379ea73d7e400e538937acc56313791df43e34d4b39a637417a02c68c"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/launchd.v1/slot030.json",
+      "sha256": "955786ce576fd915a28eb2f85638749af36731123fba06ad1d5decfcf9aec1db"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/launchd.v1/slot037-compact.log",
+      "sha256": "edcbecf721310bef185979f6a9d5ab7e16706c3d563e70a22c72973ecb96b2a3"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/launchd.v1/slot037.json",
+      "sha256": "a8e1f13ba8d39995ea9b7c33e0dddb6a54a6ff27f4903e5f0daf6c8ad973d5d4"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/terminal.json",
+      "sha256": "2183b93170d7362349bcfe33e452809d989ab8f0a212d9848436e0e4c4a6aaf0"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/process-tree.json",
+      "sha256": "a4f78cb975844c88ad90e7fb65f92b151110d92b20e7bf90b03b534ceff36ba2"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/cleanup-observations/root-60623-48545371959708.json",
+      "sha256": "6edd60553b11cf9032bf67e7a5f05f22e05550769c9856c624c3e2b5fa25cee8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/plan.json",
+      "sha256": "1e440a2377828e00a5aa7d28f7196cdbeb9788b3cfb8aeffa22d0f786a694ccf"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/intent.json",
+      "sha256": "bf53cbc613b632a85da7c13a7be1ae9354280050f28d8fdb57dc0f996aa80664"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/stdout.log",
+      "sha256": "e731fa67275d926eb9fd06693172db3613ac2bc7860292ced38e94b55efdc9d8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/process-return.json",
+      "sha256": "2d43b0c8af157e31e6ab70871a968f92c498fa6a55c7e5b401dc474f3fef6e57"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/settle-owner.json",
+      "sha256": "0da19a053b9318ceea1b1dfc07242942f906c88aa08b89f0b35632b136bf26f9"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/started.json",
+      "sha256": "ad3a6090e7a7e8da7d8035dca66a4057d7a343c3a83a53fd5f3264fe3c5a401d"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/reserve-owner.json",
+      "sha256": "93eb0c12a0e31e1253fe4633e211a98938f38c442609a1377900e6e47a40951c"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/private-case.json",
+      "sha256": "fb011f0b3960c0a730ba7e4f68c644b63aeb3c6cce0b01be2caf5c0f76ab68d3"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/progress.jsonl",
+      "sha256": "11d9df6ea9c5bec5d454ed3c2acafb6e24151def71a203d277f5925d7493abd1"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/world.json",
+      "sha256": "8f2419b42cdcc2affa06ace7ec70139a33c71b95c9deaa4cce41795fdd1ec526"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/actor.jsonl",
+      "sha256": "b37c8b0795b30d26db727ec0b89fbe01319362107ca05ea7032b04c672a0db28"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/run.json",
+      "sha256": "04d9225b2d03dedfe485012a175a387dcade3eb3b928b03c64f0a925eb4680b0"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/model-transport/stderr.log",
+      "sha256": "b45b7b528f740f48da4bcd10f95c01744c076cb0fb3e5c0d9587ac16996b3d16"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M3-1/attempt-00/flight/model-transport/stdout.log",
+      "sha256": "353ddf7ec3e225bca420708ddd02fe89fbf4fa2e18af9027df7669c699f9dfb3"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/service-completion.json",
+      "sha256": "67f0fe29aeebe3993d59ed8bd87a025fade763a403c1f8ae40cb20a5144e8e73"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/service-intent.json",
+      "sha256": "760885284018171da6a2ff816e6753d36011fc5678b19f875640f09dbe9a9bd7"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0022/request.json",
+      "sha256": "acc6a27884c5c802551fcf84e1bb685ec398053f594be28f044b894fd36e5ff2"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0022/tokens.jsonl",
+      "sha256": "e786d9cd0ce7fa01fd8607514e3f5bd989f67163d5262c146907deaf17382b64"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0022/response.json",
+      "sha256": "af71153137ea2022dde2ff4658e5ad07f402b056716179892d9ae431ae7c7c6c"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0013/request.json",
+      "sha256": "8a1a8297c74384bd1f35b85e184260911c2cd93cfff2aca6a0eed6c271c63670"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0013/tokens.jsonl",
+      "sha256": "df5240bd77efb4b6f4af92e81497dd8c116bfc53f1c309a6bb7d4281a036d0dc"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0013/response.json",
+      "sha256": "fbae356ceeedf1c314b0ac76dd341a8d106564d8d0096cf1a3bee7de82500f13"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0014/request.json",
+      "sha256": "ff9fc0374f4f0831d93801537c5d7888354edcbc38596af528d06a3d4e2c1167"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0014/tokens.jsonl",
+      "sha256": "54ec3c4b4d506b73c5385e8afb1da9b7a784675cb3a4daf59be9bbeeb7068507"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0014/response.json",
+      "sha256": "748dd7443ed9ac15464148c5ec0d10f3933e825552c451d86edb6a81361c4c53"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0015/request.json",
+      "sha256": "8f9ed3da62e1cdfa65bfb2050a03cc05034dec73d2d4ca8ca1281d7cc41e74d2"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0015/tokens.jsonl",
+      "sha256": "e5edd1e9dbdaf8f5179c45e235acf50ca33f69224a7621de45dfbcb214478c0a"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0015/response.json",
+      "sha256": "f158b7935b94049f2839a13bd5cbb0750db55ff620e5697c174017acbcdeb256"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0012/request.json",
+      "sha256": "e6a683f80ee65eff55309fba45af0e48370abf5e612aaac31bcb4c1861da9643"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0012/tokens.jsonl",
+      "sha256": "7cbd80b27b4e5a9653165ebfa0aaa5b43ffe2bf30bf6366c4127795ae97a0756"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0012/response.json",
+      "sha256": "b6764160745fa0ccaeb817b65c602a8ac21a06fd75138ff86e4a76256fa71754"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0001/request.json",
+      "sha256": "2ca6309d6533333a657666967cf0470f4e2bc5763183a324da87508b6d2a5b94"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0001/tokens.jsonl",
+      "sha256": "3c04782d85963727a693dd2bd66cfef17003826a9e7758a7a1fca4c498340daa"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0001/response.json",
+      "sha256": "7e3182b6502b83f5e37a1a5ac9a9435fec3f1993d8b7ee3958fe9a565ac8e1c5"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0006/request.json",
+      "sha256": "d641730ed434fce43c690c91c605d39e532ab4de04d839d81e9a8c1e4120603d"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0006/tokens.jsonl",
+      "sha256": "60e6727a1fe6017d3532c0a62a0a3f62d45a2827948f116e5b03b0a58ae2d7d8"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0006/response.json",
+      "sha256": "eee99ff17f2124ce550d275a92b9fbcd19c48095df9be5f4031f76e813a97b22"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0008/request.json",
+      "sha256": "39c81c3227b6e55fc2e457175423d2923a6a23bf3650e142060c1229be0532fc"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0008/tokens.jsonl",
+      "sha256": "4dc4c76b8408bc932fdd94c5132810a7fcd92e123d0208f7f2c25a77e26bf76f"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0008/response.json",
+      "sha256": "427763298c9c052c76314157e2765c3443eebe1529d7e10e991cd7e2dbc38d1d"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0009/request.json",
+      "sha256": "bd89cac5830ca38820d709b547856bc32013762d110ebc28af22d55916c244f1"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0009/tokens.jsonl",
+      "sha256": "065e4700b03d60831d0772ff11c18f86e9d7c1df3d30c3e2a39fcf489935c75b"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0009/response.json",
+      "sha256": "31e0b2be54fa4b4855cfb1da7d7c2cc3d447ffcdc5576417f4825fe565426825"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0007/request.json",
+      "sha256": "9f42e91a365bb42bcd1cae937bdc090d74de14413dedb779fa68efcb11a60f71"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0007/tokens.jsonl",
+      "sha256": "c6ff5bee707cf68bc0ec5b22a600325722d8d8f5304ea8d12e623fcab47f5897"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0007/response.json",
+      "sha256": "8f82681b042d7d408942f4e3126f6f0b62637803512f477d0ff30a61fffca01a"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0019/request.json",
+      "sha256": "875cf0df32dd03e238bfa7705d86f6c805fea7a251fc0979687ae68daff81375"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0019/tokens.jsonl",
+      "sha256": "4c489a9ad55a752d36e3bbe772b94ab8ea36163b973289c64c1d5334ab1a5648"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0019/response.json",
+      "sha256": "dc7a4949db4319476f782097a16e082d21a5092405280560e2e5bb57ec8d5e22"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0021/request.json",
+      "sha256": "34736d995cef3bd1986f87dbbbdb5cb7f5f431150d693540ddab3640a5925f06"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0021/tokens.jsonl",
+      "sha256": "92d07ab44a1261159385bc9c255ff9c1c7ff9a9699ab27be8529d7daf9549999"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0021/response.json",
+      "sha256": "17a85413e4d5d5a216e6184be6f95f17fd6ddf8929be4431074bab5b65a0b22e"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0017/request.json",
+      "sha256": "9de5efdd9a58f47d3ff5fa7b64b65b9967a825873239363ba7c669a22b6c6d26"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0017/tokens.jsonl",
+      "sha256": "60c5c1ec885ca4a958c21ef096c9830bebf41cdf2c6af0baeb78e0dcff9bb9bc"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0017/response.json",
+      "sha256": "e4a178628f66fd833def72e96e3587583f2bbcc60918264e98697cef0889b1dc"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0010/request.json",
+      "sha256": "681873fa34d701ca92c7c274e33fec9e5ef10661b47b22bea7273c2e97b793e2"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0010/tokens.jsonl",
+      "sha256": "e43b6d77370a83d0ed98b1d32d5808654bf694925269222cdb1b7f53ff7d639c"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0010/response.json",
+      "sha256": "c0fd8bde351b1c2d8e246361de11486d20add4bd79972bf10405cb0697f3629c"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0011/request.json",
+      "sha256": "0d9f42f5b14fe46bd00d4a8ecfd66b2500e6cf03b603cf4927d55397479be64b"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0011/tokens.jsonl",
+      "sha256": "a5a4079227432045ee18cb735d5e473f0b85b7872a1c8cd0c45cd67055fbf041"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0011/response.json",
+      "sha256": "b3c4e73623e411b195b823e72ce84a6911662b1e5390b9c13bab619feceaa014"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0016/request.json",
+      "sha256": "6fe384a0e366a1ca5f0eb9e084a7ae8475e61c493d8aaed94dee638f43a9351d"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0016/tokens.jsonl",
+      "sha256": "4d3c25dddccc8b2570e1e402fa16c455afd3e02aba79a2470a39fdcd30c91ef7"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0016/response.json",
+      "sha256": "4bca9bd078396e3a2a6c05ab5f7e048e73f1e06af3520df4d9a08158ce122046"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0020/request.json",
+      "sha256": "c049d7db18eaaedb6dad4024211ad3fcc3cb6478a3a04e431a92f33da6037489"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0020/tokens.jsonl",
+      "sha256": "50aab5c1f9176a22283768dffb7f72e79e350f8729adb75ca5910f8848ab775b"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0020/response.json",
+      "sha256": "541918ef4613101d2c0b9c3af83643643031326e8c37d80005e65b5d87e77e74"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0018/request.json",
+      "sha256": "8c57d31d145f52cc6d8056e4c9de3cbc3cb3442c75bfc813b8053124179a5a53"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0018/tokens.jsonl",
+      "sha256": "6fc4bd202bc6e0cc3c3fa0dbb594ba3b36a59ed65a658a128b1a646297ac64bb"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0018/response.json",
+      "sha256": "fae4d7e62204ed8bb4dcabe86622cd0e54ca2156d800c8470738af10301a17d5"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0005/request.json",
+      "sha256": "98e0a04ce1fabef3e0ab5b6c7a741d517d5186b8c72d4db8de55013211bd3acc"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0005/tokens.jsonl",
+      "sha256": "a3d5b86dc8d39ffd14786ae98d8b97d2fcb5790bd53f18e75a599816fb30c3d0"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0005/response.json",
+      "sha256": "d5597ae12335007afab30187ded678dace8001f2f24a46d6958fc693ad475034"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0002/request.json",
+      "sha256": "2a297f357fa30afae878fd2d4c242d34d474449f47151e87721eac62a43ef309"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0002/tokens.jsonl",
+      "sha256": "a143c36ed5c916065e86b78a3db31ca237f4e8a7819d89f5e4a84035bacd77aa"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0002/response.json",
+      "sha256": "d77f5c56019d5241aa61d5186baa6ae84bf54c5e5b570a175057c76a813e16de"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0003/request.json",
+      "sha256": "fa4cdc69aa1035ecab4d92fc5b9d1c778d29011ab5d6ab7efb652dc1f3d1b566"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0003/tokens.jsonl",
+      "sha256": "18ffc11ce4b31a65467e55ab76a5d0be6101ed4728959b0aac2314a2ab3a48e8"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0003/response.json",
+      "sha256": "e5b622a7e4523ab56cf44c3f08f6ec85efca589cc3158aa0629f6374534367f7"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0004/request.json",
+      "sha256": "93b5923d9a64cf7fb8ec19138b9940d0bc19c78484eeca6a134e0aba784a7dd9"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0004/tokens.jsonl",
+      "sha256": "29c7b700861b099137fc7f423509c23da4c71b6445872e79fd46c7dbf3c0397e"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-037-a0/call-0004/response.json",
+      "sha256": "e104ea3c3ce8c3d98d705e478f49cde97833f3c08303ba6e37cf9045fc501ab1"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-037-a0/complete-attempt.zip",
+      "sha256": "ad39074fda740a30ce726a71dc8ef82a185737ebab926be1197bef09b3aa4572"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-037-a0/usage-receipt.json",
+      "sha256": "a030f83c7438f7d2ce0f6d717e9527efe358274d9dde1f1b1fa07d1a98e3c387"
+    },
+    {
+      "path": "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-037-a0.settle.json",
+      "sha256": "c2b44295f993c8463c37d157d4dc804b4b6affa48f21a3f2862ea3123b9baf9a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/classic/results.json",
+      "sha256": "1089395ff6ade11b9897cb2f01d5aa12dd3c2226fb6f052aa26956b2937658b9"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/results.json",
+      "sha256": "6fb38661067cc8a05b9657b55362707c654135a226a18995c6547f20245a1a4d"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/root-means/results.json",
+      "sha256": "97e3ac242b92a19557aeb0e14df71375d6e2f2c3b2c30bb2ed026bffed63e369"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/plan.json",
+      "sha256": "928382d1c29090d1171bbf03c70f0341d00b13eb9faccb6d401f953ee8898389"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/terminal.json",
+      "sha256": "a2ae72197c6e8866e695c2bb410c32f1fff4452bebea6c4523564acd5b9c62bc"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/intent.json",
+      "sha256": "32656e4f3788c18e1367f19039ee808078180ff4614b4e58ff17617b9108345a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/stdout.log",
+      "sha256": "7c7030251ffb3077023fb348cf8f4c7a3d1d51db65b31f6c152a406a776c79b6"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/process-return.json",
+      "sha256": "6cab0fffc15a9cfc605a381c11f30c00d10320019a2a154ea464786b1b9324c8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/settle-owner.json",
+      "sha256": "a8a9836634e37bb2465f169f8126e30f4382977385bc8e8bc99fad09fc3d31f0"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/started.json",
+      "sha256": "65300f4aba893749bd439ee05b0b4c072fbbe5575248d99ff864cd33e044cd79"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/process-tree.json",
+      "sha256": "426d7b96aea3cba18367cd26706a14ae42cb1bf1090da495ee6dc82c62091f66"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/reserve-owner.json",
+      "sha256": "7222a15ffa6c07c026fd45bd6a9730f426cf09dd2d44c2b97da5f6243913f132"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/private-case.json",
+      "sha256": "fb011f0b3960c0a730ba7e4f68c644b63aeb3c6cce0b01be2caf5c0f76ab68d3"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/progress.jsonl",
+      "sha256": "61eaa702e7f59074c75a65fd6f42b006508cfc46e001dec2dcde43d04870811f"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/world.json",
+      "sha256": "4234583d45c8aa03a8fab6fbd7989332534bc9bb2723e15bb8348a0cef8fbfd5"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/actor.jsonl",
+      "sha256": "3a6e0737cce7e05bcd7841497b080c340d2f4c36939f0fb3840bd0500d420299"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/run.json",
+      "sha256": "aa4fd3dac3dc830f9b587dfaaa51fc8e3fdd8af0d52eee3f24a8c01b237f566f"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/model-transport/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L2-00-B3-M1-2/attempt-00/flight/model-transport/stdout.log",
+      "sha256": "bd427cf6c079d4dffa1fc8deb80f14d9fa0f10518c5a5b9fad6f9d230146b43a"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/service-completion.json",
+      "sha256": "90ae6aa88c8a07779ba01bd8f1171c8e4e98a15dc5402658a7ccf76e1d662fc6"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/service-intent.json",
+      "sha256": "9f8b873fb74f2f9b7df08ba8daadef22ae17f8e37401d3cfe8beafc6a5110548"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0022/request.json",
+      "sha256": "c14539d1034720716318d142165337ce3eea1938f942a8c4fe78df4b26a0baac"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0022/tokens.jsonl",
+      "sha256": "a6fc663151e7b71bf06df2ee3241ccbba68564a6b500625c6f475f3f99400d0f"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0022/response.json",
+      "sha256": "a5f0611e10d6136ec7086ef890554906af407746ae88995126c7892c66a8bc82"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0025/request.json",
+      "sha256": "ab59a3623e35514c688c6e0e17840157653b094c33de4a14221dc8b00a68a782"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0025/tokens.jsonl",
+      "sha256": "04902d0730f85b922275680c617541b0f1234fa1e8fdb00cc86a3320c0aa2e87"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0025/response.json",
+      "sha256": "d5a98667c17e5ed5be70225f3228051c8fe7e4b4ddcbfcb3681ca928eb2f001f"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0013/request.json",
+      "sha256": "b0987aecffa104d346b43488bf75e14b73baddb20bc3e577026c79cd4a199a8a"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0013/tokens.jsonl",
+      "sha256": "6730cec7e731ba4ea6f702769d912253e61091890d9cf47eaa4fab6227cfa39b"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0013/response.json",
+      "sha256": "858e51c76b62db436244a89a7cdce1296b8509a3c6eca0959e45cb6e972a77d7"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0014/request.json",
+      "sha256": "82c3cc661c57078244e1e9a5ededabe371b0ccf54dd4468bf908088c60526312"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0014/tokens.jsonl",
+      "sha256": "eb3553d521434a66b13b838dd8fd39be1051c7f09adf0ab204db25f8fd189dda"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0014/response.json",
+      "sha256": "065771400641e58c232015c2d7231326760b7da3a80dd635b09c1229bd9924fd"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0015/request.json",
+      "sha256": "379f5cdf6e1bb998ec02ad2485473153798718a2e206e5ef86ea04b8ac15c91a"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0015/tokens.jsonl",
+      "sha256": "cbe1cd799aaafe31c6f162fea81afd13a377d6cfc3a279e45dc81092f9b94f3c"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0015/response.json",
+      "sha256": "d79a9c10f29506c0ac17a44d5be27d0e789e1f2fdff4b41125855a263d77079e"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0012/request.json",
+      "sha256": "f045a0d3dee5befacebbb2c4028093e883b3ac1e42dc15ba399816928e55ff9a"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0012/tokens.jsonl",
+      "sha256": "55f1e40753e815903781874d3faf2a016c49d7a7cb99b6f0dcd1645b74ce61ce"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0012/response.json",
+      "sha256": "49fef8912b6bf44c4734e9c09e6487b79d5bea3a8732fa2e268db7228d5a0b32"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0024/request.json",
+      "sha256": "86413e4e1e68a00bacfee45a0079a5b863328e7ac156301823192184aec02345"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0024/tokens.jsonl",
+      "sha256": "adc366621c7b9eafddc1af9562b9786bd454e1457e26d04f16c675f108a2aca0"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0024/response.json",
+      "sha256": "47576d1328a00c932dedf20dfe9697b10085cf1edaf274d623ce5a3dcdceac45"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0023/request.json",
+      "sha256": "ac2bc70c70fa402b6f8a4bc3a60982060849ca9a237b95d63bd4872368ad52fe"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0023/tokens.jsonl",
+      "sha256": "12062b7d63deeb0ef1162f7eb90537217ab483e8dc73f3dccb2e749574bf91c0"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0023/response.json",
+      "sha256": "0a2ca929668c089bd4b2f8ffab3daa93ddc1be020d12304b1bb37bc64c185421"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0001/request.json",
+      "sha256": "119d62c565400e2a3a1ed9fdd04b182c795589722f7230afa1f9c76ed6d31faf"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0001/tokens.jsonl",
+      "sha256": "3b948895117ed530134b842a3bf33ef6b697eb39922c7f62bd1c56a3fb356dba"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0001/response.json",
+      "sha256": "715876aed1a5f0c7dbce7a0b851441729466230aeeef0430bc3bdd8b7d3cf18e"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0006/request.json",
+      "sha256": "41eca4ac50e8350b5fbdac59f4df954231d6dab017339d8f10cca3b149333d4b"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0006/tokens.jsonl",
+      "sha256": "09252b82e817bc992f3b2a1fc23e79f955449b91d8fc611e4bcd59b74c1fcb91"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0006/response.json",
+      "sha256": "b5be269e5a156f28d6e17b71d5fabdb5966877e9c588867ae1e1af3ab28c9742"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0008/request.json",
+      "sha256": "d18c0f8a931a5bf9d6c9580b91e131b70f570c9bbf9440730e0e96ba3110b551"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0008/tokens.jsonl",
+      "sha256": "4217db7aaedd60b1e5d408f8b01de04696b8b6b9cefc95dff36f9e16d0d7a037"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0008/response.json",
+      "sha256": "4f00927643acb289d75da4a943f647797107b2aeba77217160b124492c3b2322"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0009/request.json",
+      "sha256": "70489b87824c01dfcef6c2faceb87aedd359b258003d5c27057b23e2b517d562"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0009/tokens.jsonl",
+      "sha256": "ee6cea0c8cdbfd8e9bd0efb74551a22d9e83cd63195efeb6a88a72cb93d4778d"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0009/response.json",
+      "sha256": "d46ba9d69abc74db6de71576e8cbd54c2c717a2897515f6c8a2853560957becc"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0007/request.json",
+      "sha256": "a3cee00899730cb962b8e2805a8dfc2b5d48ce1dcb24205592bc2986ac865d94"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0007/tokens.jsonl",
+      "sha256": "7de6502f634c63602965f687598b50208fa3b3fff3abce35e1c69bec9d23078a"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0007/response.json",
+      "sha256": "56b75c96b8b9830852452067e085ca86adc8cf1a8addc74baa0e044de6cf8380"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0019/request.json",
+      "sha256": "de1ed70c6e0f4071cc04ca25cdd3453a81342d37a008f62256f1e33cfbfdad52"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0019/tokens.jsonl",
+      "sha256": "52536938096c7d2403c80cf36fe5f5b832cd960cfbff6b00c93fdf813effb112"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0019/response.json",
+      "sha256": "6fbbe377d208e847b66ef2ee5c6d209015605e2331f587652e191be4d61a8fbc"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0021/request.json",
+      "sha256": "a273fdd3aa2912fe5b93fca44fd1baae95b464f9654028708478a5c59408e3e3"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0021/tokens.jsonl",
+      "sha256": "cc88aacfd0ea97b17f4efcf3ee21a4128e894b454d067609945ba8e88bac93c3"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0021/response.json",
+      "sha256": "2f499c75cf298c0c9dd93158503b27f89ecd46a77db76c0050acb48ef651ec27"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0017/request.json",
+      "sha256": "93954b4e11e8cfefe9bc599a09e4bf233ba5d84e7635427918a4c3402969eb92"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0017/tokens.jsonl",
+      "sha256": "a561ffbb99e7113a0f4e1f35cf15168bb40d1bd7b48c565fdc47d6fe7b6d6e73"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0017/response.json",
+      "sha256": "93f95c8c1a87bca9e254a99b16b81d99d7dd4e3025d5100a86008ee4195ca016"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0010/request.json",
+      "sha256": "7354eb890d8332cb5e12a690286d30bfdf5e99b0a10749e416f525056eca0b0b"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0010/tokens.jsonl",
+      "sha256": "17b5ca8f991f3ed95c0a3ab0649ba3e2033fe4bff0f2ec465e8548412b15c086"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0010/response.json",
+      "sha256": "2f8e51fb5dc5c1035f635c7116091f94d771a9140b3fe807259fca5aa84e6b91"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0011/request.json",
+      "sha256": "fa5006886d10a8e9a550c061bd142d549198f81e455418e63e73587a15af0557"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0011/tokens.jsonl",
+      "sha256": "daa847222b5e836d0c0b569868abc5a24089cf6c9520253d510dceea32ff1c81"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0011/response.json",
+      "sha256": "e8690d5bac992c0021a0b9c8ec12d3aca4f973e9f6112f84804077081ae282b0"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0016/request.json",
+      "sha256": "4629faf1fb6bc382211b3076cdbc8395e0a092d6e42bd964bb82bbe40d9147b7"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0016/tokens.jsonl",
+      "sha256": "a5e100dd632de5e8290a38f1c1244cdc32de00126cb9f3d5b5f41b83d552af55"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0016/response.json",
+      "sha256": "91ceb753456acb4eb995594e69298384958da80d904b8e630ff0252d44835e49"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0020/request.json",
+      "sha256": "8938120d508a0d6042ba911290ebc2397685212e9d19c27ef0c0729f7e4f83c3"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0020/tokens.jsonl",
+      "sha256": "80a180ecac1e786d2de32dee53eb9b31d5b3e37bb832a96cc7d7feda50c52d39"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0020/response.json",
+      "sha256": "31c2b79130ce5b02983d32ef2f958d378d88a69f0efb41b625fa959f64712ed7"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0018/request.json",
+      "sha256": "ef411db77abc16cd0b4237cc7b4627cf11cfdd6158731d9811016b5688d14b59"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0018/tokens.jsonl",
+      "sha256": "52536938096c7d2403c80cf36fe5f5b832cd960cfbff6b00c93fdf813effb112"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0018/response.json",
+      "sha256": "d4b39d3172e6d7f4185ea6098dc442effe03518c82b3fe9385d093e16ab0d2b2"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0005/request.json",
+      "sha256": "fc0874024b9221320e6020c931889353fa7a5c52ad14f8ef83095a6060412e82"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0005/tokens.jsonl",
+      "sha256": "7aaec5422affaa32f6b3d93e989040fff8de80aca7be90f3cb61ef384cd237a5"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0005/response.json",
+      "sha256": "66abed003acf6e96ccfde1dc2ecc856d18952743e711aedcad24e3dee93b5173"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0002/request.json",
+      "sha256": "ebe1a74b03e9d072d1eb0bd95ebae17302b91199b36136ec1a447a91e7ded6a4"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0002/tokens.jsonl",
+      "sha256": "fe0bfe04098a1feb424b3eac2e7605931c1a7c6367c97c4f76e5dddb606a03c7"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0002/response.json",
+      "sha256": "56540fc42d746da61608da5437f6c73f6f842ff51dfb06d9852dca095c26155c"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0003/request.json",
+      "sha256": "aa75410a1b70408de1642bb1c57bf9902b9bb135bd287952dedebbf5e2cb4888"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0003/tokens.jsonl",
+      "sha256": "d881fb5251bba8c6b8eca4d257704cfb8851042e826673ebd9e7fd45edfc7ddc"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0003/response.json",
+      "sha256": "5a8526ea158a5efe31e830f46889da6392d475fee606e62fe040291e7297c211"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0004/request.json",
+      "sha256": "17529dda04b19793e2a54474452aabcb4bc83151a753e4902604e3dcd11df7d8"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0004/tokens.jsonl",
+      "sha256": "da10e5e59418b59b7da03fcf0a8c5e6a918246604f98d9191750f6499ebf4198"
+    },
+    {
+      "path": "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-036-a0/call-0004/response.json",
+      "sha256": "89c8db52357626eed0afd828c03e943e82ef033efef4929a3d256cdfbbedd885"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-036-a0/complete-attempt.zip",
+      "sha256": "4ec98d708b0458796f7ad8a15789ae43cc837e68e45ce3361fc3d62696fb8272"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-036-a0/usage-receipt.json",
+      "sha256": "dc0f52a514ebbab1679372964fef732026d394c4ea221d1e7cc46ad045ac3da7"
+    },
+    {
+      "path": "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-036-a0.settle.json",
+      "sha256": "a854273b7aac0b698ec3c1b2e535362b65ac942c4b716c0c6b15953a0e5ca925"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L2-00-B3-M1-2.json",
+      "sha256": "545139250a647cb47a302c6d50cec375ee31c59c9f46b48937aad8cfff0b3fdc"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/order-receipts/000036.json",
+      "sha256": "c8a34eee72440b69c4e9c66f3eac7e9362d256d411e2c0c2f26764e0ecb80483"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/cleanup-observations/root-55406-47915843810416.json",
+      "sha256": "178146386901cb4f28bdfe28f2cb65e78db81f558b2c53a00445c3efbef149c0"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-2/attempt-00/process-tree.json",
+      "sha256": "ae19d0f443f3093bcee565e45214e23ff63e3f366b71507fc588c7ff64fa6291"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-1/attempt-00/process-tree.json",
+      "sha256": "8821c585f5c2fb6477f0cb3391b2bcfe4276160b9dcf9dec096c294511e69f58"
+    },
+    {
+      "path": "paper/research/20261104-inspection/review/evidence/pilot-v4-foreign-cleanup-evidence-v1/binding.json",
+      "sha256": "9fc8deb230a1fcc0f9e724e24fbdd9dd14b5c5dd2c7139032ca6c09505412643"
+    },
+    {
+      "path": "paper/research/20261104-inspection/review/pilot-v4-foreign-cleanup-evidence-review.v1.md",
+      "sha256": "003206f7f3aa555b4ac7406833566395e3336aaba8c583bac16ef541ba4d2645"
+    }
+  ],
+  "captures": [
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/evidence.v1/original037-terminal.json",
+      "sha256": "2183b93170d7362349bcfe33e452809d989ab8f0a212d9848436e0e4c4a6aaf0"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/evidence.v1/original037-tree.json",
+      "sha256": "a4f78cb975844c88ad90e7fb65f92b151110d92b20e7bf90b03b534ceff36ba2"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/evidence.v1/original037-sidecar.json",
+      "sha256": "6edd60553b11cf9032bf67e7a5f05f22e05550769c9856c624c3e2b5fa25cee8"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/evidence.v1/original036-sidecar.json",
+      "sha256": "178146386901cb4f28bdfe28f2cb65e78db81f558b2c53a00445c3efbef149c0"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/evidence.v1/native-status.json",
+      "sha256": "64bf266dbaf681412b8b0cebaf519fc448d7ad5d65bca6f5e2d86499508eaa48"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-037.v1/evidence.v1/aborted-supervisor.stdout",
+      "sha256": "fef6980be90c3f9c784aa0b9438fb086f1495403b99d820bb941782ede423afb"
+    }
+  ]
+}

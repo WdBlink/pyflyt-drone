@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "url": "https://www.siliconflow.cn/pricing",
+      "path": "planning/model-sources/siliconflow-pricing.v1.html",
+      "kind": "html",
+      "max_bytes": 3000000
+    },
+    {
+      "url": "https://docs.siliconflow.cn/docs/api/chat-completions-post",
+      "path": "planning/model-sources/siliconflow-chat.v1.html",
+      "kind": "html",
+      "max_bytes": 3000000
+    },
+    {
+      "url": "https://docs.siliconflow.cn/docs/api/models-get",
+      "path": "planning/model-sources/siliconflow-model-list.v1.html",
+      "kind": "html",
+      "max_bytes": 3000000
+    }
+  ]
+}

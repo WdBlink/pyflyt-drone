@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-05T23:59:08.283563+00:00",
+  "identity": {
+    "title": "Retriever: Composing the Perception-Reasoning-Action Loop for Long-Horizon Manipulation",
+    "authors": [
+      "Zhao, Linfeng",
+      "Huang, Haojie",
+      "Mao, Jiayuan",
+      "Liu, Weiyu",
+      "Kochenderfer, Mykel",
+      "Wong, Lawson L. S."
+    ],
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2607.17213v2"
+  },
+  "url": "https://arxiv.org/abs/2607.17213v2",
+  "metadata_path": "literature/primary/retriever-v2-metadata.html",
+  "metadata_sha256": "9838b2ac4cd9bfe5a4b87606a208e5effe639c67c4a877ef07ffafdf5388f842",
+  "read_path": "literature/text/retriever-v2.txt",
+  "read_sha256": "1033222c15628b386fe1d759da92941d45edef64a56b82406d79b20f60820aa9",
+  "read_extent": "abstract, section IV and Appendix C-D runtime/replay contracts; real-robot quantitative claims not verified here",
+  "acceptance": "not claimed; this record is the pinned arXiv version",
+  "claim": "Provides explicit asynchronous clocks and synchronization policies, with consumed-input/clock logging for replay; generic asynchronous causal runtimes are prior art.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/retriever-v2.txt",
+      "quote": "Exact replay requires logging each step’s event time"
+    }
+  ],
+  "unknowns": "No blanket claim that other systems pause all physics. No cross-benchmark score comparison."
+}

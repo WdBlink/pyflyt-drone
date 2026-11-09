@@ -1,0 +1,260 @@
+{
+  "question_formed_at": "2026-11-04T13:16:03.231752Z",
+  "question_formed_at_basis": "Known controller creation/adoption of inherited research framing, not a claim to know the user original idea formation date. All current readings are conservatively retrospective and are not claimed as causal inspiration.",
+  "searches": [
+    {
+      "query": "UAV LLM benchmark continuous asynchronous inference latency clock MissionBench MultiUAV-Plat",
+      "method": "keyword",
+      "result_ids": [
+        "MultiUAVPlat2026",
+        "Alpha3Bench2026"
+      ],
+      "searched_at": "2026-11-05T23:59:08.283563+00:00"
+    },
+    {
+      "query": "SMART multi UAV language models IEEE Robotics Automation Letters 2026",
+      "method": "keyword",
+      "result_ids": [
+        "SMARTPending"
+      ],
+      "searched_at": "2026-11-05T23:59:08.283563+00:00",
+      "note": "SMART MAPF author project found; calibration source exists, detailed comparator admission pending"
+    },
+    {
+      "query": "GRaD-Nav++ 2026 robotics automation letters",
+      "method": "keyword",
+      "result_ids": [
+        "GRaDNavPending"
+      ],
+      "searched_at": "2026-11-05T23:59:08.283563+00:00",
+      "note": "arXiv2506.14009 and author site found; detailed comparator admission pending"
+    },
+    {
+      "query": "\"Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents\" arxiv",
+      "method": "keyword",
+      "result_ids": [
+        "MissionBench2026"
+      ]
+    },
+    {
+      "query": "\"ESARBench\" arxiv",
+      "method": "keyword",
+      "result_ids": [
+        "ESARBench2026"
+      ]
+    },
+    {
+      "query": "\"INFERENCEBENCH\" \"inference systems\"",
+      "method": "keyword",
+      "result_ids": [
+        "InferenceBenchServing"
+      ]
+    }
+  ],
+  "naive_baseline_ids": [
+    "MultiUAVPlat2026",
+    "MissionBench2026",
+    "ESARBench2026"
+  ],
+  "hard_negative_ids": [
+    "InferenceBenchServing"
+  ],
+  "candidates": [
+    {
+      "id": "MultiUAVPlat2026",
+      "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+      "url": "https://arxiv.org/abs/2606.31073v1",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Mechanism and reuse boundary for multi-UAV-public-tools",
+      "decision": "include",
+      "read_status": "read",
+      "read_path": "literature/text/multiuav-plat-v1.txt",
+      "verification": {
+        "status": "primary_checked",
+        "evidence": "literature/verification/MultiUAVPlat2026.v1.json"
+      },
+      "evidence_spans": [
+        {
+          "path": "literature/text/multiuav-plat-v1.txt",
+          "quote": "role-based information access, hidden validation logic"
+        }
+      ],
+      "read_extent": "targeted task/interface/method sections plus earlier six-file code audit; not full independent reproduction",
+      "metadata_publication_date": "2026-06-30"
+    },
+    {
+      "id": "MissionBench2026",
+      "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+      "url": "https://arxiv.org/abs/2607.22014v1",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Mechanism and reuse boundary for aerial-mission-and-report",
+      "decision": "include",
+      "read_status": "read",
+      "read_path": "literature/text/missionbench-v1.txt",
+      "verification": {
+        "status": "primary_checked",
+        "evidence": "literature/verification/MissionBench2026.v1.json"
+      },
+      "evidence_spans": [
+        {
+          "path": "literature/text/missionbench-v1.txt",
+          "quote": "continuous 4-DoF control, mission-level success criteria, and explicit reporting"
+        }
+      ],
+      "read_extent": "targeted task/control/evaluation sections, not a simulator runtime reproduction",
+      "metadata_publication_date": "2026-07-24"
+    },
+    {
+      "id": "ESARBench2026",
+      "title": "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue",
+      "url": "https://arxiv.org/abs/2605.01371v1",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Mechanism and reuse boundary for aerial-search-snapshot",
+      "decision": "include",
+      "read_status": "read",
+      "read_path": "literature/text/esarbench-v1.txt",
+      "verification": {
+        "status": "primary_checked",
+        "evidence": "literature/verification/ESARBench2026.v1.json"
+      },
+      "evidence_spans": [
+        {
+          "path": "literature/text/esarbench-v1.txt",
+          "quote": "Within any given snapshot, the spatial distribution of the victims and clues remains stationary"
+        }
+      ],
+      "read_extent": "targeted Event-Snapshot-Task construction and baseline/evaluation sections",
+      "metadata_publication_date": "2026-05-02"
+    },
+    {
+      "id": "Retriever2026",
+      "title": "Retriever: Composing the Perception-Reasoning-Action Loop for Long-Horizon Manipulation",
+      "url": "https://arxiv.org/abs/2607.17213v2",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Mechanism and reuse boundary for asynchronous-runtime",
+      "decision": "include",
+      "read_status": "read",
+      "read_path": "literature/text/retriever-v2.txt",
+      "verification": {
+        "status": "primary_checked",
+        "evidence": "literature/verification/Retriever2026.v1.json"
+      },
+      "evidence_spans": [
+        {
+          "path": "literature/text/retriever-v2.txt",
+          "quote": "Exact replay requires logging each step’s event time"
+        }
+      ],
+      "read_extent": "abstract, section IV and Appendix C-D runtime/replay contracts; real-robot quantitative claims not verified here",
+      "metadata_publication_date": "2026-09-11"
+    },
+    {
+      "id": "Alpha3Bench2026",
+      "title": "α³-Bench: A Unified Benchmark of Safety, Robustness, and Efficiency for LLM-Based UAV Agents over 6G Networks",
+      "url": "https://arxiv.org/abs/2601.03281v1",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Mechanism and reuse boundary for conversational-uav-network",
+      "decision": "include",
+      "read_status": "read",
+      "read_path": "literature/text/alpha3-v1.txt",
+      "verification": {
+        "status": "primary_checked",
+        "evidence": "literature/verification/Alpha3Bench2026.v2.json"
+      },
+      "evidence_spans": [
+        {
+          "path": "literature/text/alpha3-v1.txt",
+          "quote": "A2A interactions are asynchronous and logically instantaneous at the dialogue level"
+        }
+      ],
+      "read_extent": "abstract and section III-B4 tool operational semantics; broader experiments remain outside this claim",
+      "metadata_publication_date": "2026-01-01"
+    },
+    {
+      "id": "PhysAIBench2026",
+      "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+      "url": "https://arxiv.org/abs/2609.23695v1",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Mechanism and reuse boundary for trace-derived-decisions",
+      "decision": "include",
+      "read_status": "read",
+      "read_path": "literature/text/physai-v1.txt",
+      "verification": {
+        "status": "primary_checked",
+        "evidence": "literature/verification/PhysAIBench2026.v1.json"
+      },
+      "evidence_spans": [
+        {
+          "path": "literature/text/physai-v1.txt",
+          "quote": "converts autonomous UAV mission traces into multiple-choice action-selection tasks"
+        }
+      ],
+      "read_extent": "abstract/introduction and declared construction/evaluation protocol; no adoption of reported model score rankings",
+      "metadata_publication_date": "2026-09-20"
+    },
+    {
+      "id": "AERIAL2026",
+      "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
+      "url": "https://arxiv.org/abs/2610.31029v1",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Mechanism and reuse boundary for uav-model-selection",
+      "decision": "include",
+      "read_status": "read",
+      "read_path": "literature/text/aerial-v1.txt",
+      "verification": {
+        "status": "primary_checked",
+        "evidence": "literature/verification/AERIAL2026.v1.json"
+      },
+      "evidence_spans": [
+        {
+          "path": "literature/text/aerial-v1.txt",
+          "quote": "excludes code parsing, validation, and UAV mission execution in SITL"
+        }
+      ],
+      "read_extent": "sections3.1-5.4 implementation, selection pipeline and metric definitions; inference-wait physics semantics remain unverified",
+      "metadata_publication_date": "2026-10-22"
+    },
+    {
+      "id": "InferenceBenchServing",
+      "title": "InferenceBench: A Benchmark for Open-Ended LLM Inference Optimization by AI Agents",
+      "url": "https://github.com/aisa-group/InferenceBench",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Keyword hard negative: inference latency evaluation is topically close but the evaluated task is inference-server optimization, not aerial mission delivery.",
+      "decision": "exclude",
+      "exclusion_reason": "Targets serving-system optimization; not an online UAV mission comparator. Registered from primary repository/paper search result only; no full-method reading or quantitative claim.",
+      "read_status": "registered",
+      "metadata_publication_date": "2026"
+    },
+    {
+      "id": "SMARTPending",
+      "title": "Advancing MAPF Toward the Real World: A Scalable Multi-Agent Realistic Testbed (SMART)",
+      "url": "https://smart-mapf.github.io/smart/",
+      "published_at": "2026",
+      "exposure": "retrospective",
+      "purpose": "Required T1 mechanism-boundary comparator; venue calibration exists but targeted mechanism claims still need reading.",
+      "decision": "exclude",
+      "exclusion_reason": "Not admitted to this provisional seven-source support packet pending targeted mechanism reading/claim verification; future version may admit with evidence.",
+      "read_status": "registered"
+    },
+    {
+      "id": "GRaDNavPending",
+      "title": "GRaD-Nav++: Vision-Language Model Enabled Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics",
+      "url": "https://arxiv.org/abs/2506.14009",
+      "published_at": "2025",
+      "exposure": "retrospective",
+      "purpose": "Required T1 mechanism-boundary comparator; venue calibration exists but targeted mechanism claims still need reading.",
+      "decision": "exclude",
+      "exclusion_reason": "Not admitted to this provisional seven-source support packet pending targeted mechanism reading/claim verification; future version may admit with evidence.",
+      "read_status": "registered"
+    }
+  ],
+  "scope": "First seven bounded mechanism records only; not complete literature stage or T1. SMART/GRaD-Nav++ remain to verify at mechanism level."
+}

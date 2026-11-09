@@ -1,0 +1,27 @@
+{
+  "role": "Interpretation correction only; not a new measurement or capacity acceptance",
+  "original_measurement": {
+    "path": "qualification/formal-capacity-first-root.v1/inventory-and-shape.json",
+    "sha256": "329d8e05cf3bdaf80a9c6650a8f52360c10b8b0b09eba33fee3e514e643c9633"
+  },
+  "clarification": {
+    "path": "planning/formal-capacity-first-root-clarification.v2.md",
+    "sha256": "1e86489977d862e89510ad2c909b2ee3a1dce664e703ec22f3b7b3cbd484293a"
+  },
+  "unwrapped_settle_payload_template_bytes": 167885,
+  "settle_pretty_wire_template_bytes": 251916,
+  "settle_trace_template_bytes": 174970,
+  "pure_template_repetition_arithmetic": {
+    "copies": 8912,
+    "wire_plus_trace_bytes": 3804408032,
+    "unwrapped_payload_bytes": 1496191120,
+    "not_a_native_sequence_or_upper_bound": true
+  },
+  "withdrawn_interpretations": [
+    "conservative upper bound for status/other-command transport",
+    "actual wrapped single-result object size",
+    "cumulative unique operation-result bytes"
+  ],
+  "actual_resource_actions": 0,
+  "final_capacity_status": "needs_work"
+}

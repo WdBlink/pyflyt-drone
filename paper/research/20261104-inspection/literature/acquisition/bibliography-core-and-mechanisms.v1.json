@@ -1,0 +1,226 @@
+{
+  "target": "literature/references.core-and-mechanisms.v1.bib",
+  "entries": [
+    {
+      "key": "MultiUAVPlat2026",
+      "kind": "misc",
+      "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+      "year": 2026,
+      "authors": [
+        "Zhang, Sheng",
+        "Li, Qinglin",
+        "Zang, Yuechao",
+        "Huang, Xueqin",
+        "Fu, Yijia",
+        "Zhu, Cheng"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2606.31073v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/MultiUAVPlat2026.v1.json",
+        "version": "2606.31073v1"
+      }
+    },
+    {
+      "key": "MissionBench2026",
+      "kind": "misc",
+      "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+      "year": 2026,
+      "authors": [
+        "Navaratnarajah, Suman",
+        "Kim, Taehyoung",
+        "Ruthardt, Jona",
+        "Bhimwal, Ishaan",
+        "Yamada, Ryousuke",
+        "Blei, Yannik",
+        "Burgard, Wolfram",
+        "Asano, Yuki M"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2607.22014v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/MissionBench2026.v1.json",
+        "version": "2607.22014v1"
+      }
+    },
+    {
+      "key": "ESARBench2026",
+      "kind": "misc",
+      "title": "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue",
+      "year": 2026,
+      "authors": [
+        "Zhang, Daoxuan",
+        "Chen, Ping",
+        "Zhou, Jianyi",
+        "Yang, Shuo"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2605.01371v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/ESARBench2026.v1.json",
+        "version": "2605.01371v1"
+      }
+    },
+    {
+      "key": "Retriever2026",
+      "kind": "misc",
+      "title": "Retriever: Composing the Perception-Reasoning-Action Loop for Long-Horizon Manipulation",
+      "year": 2026,
+      "authors": [
+        "Zhao, Linfeng",
+        "Huang, Haojie",
+        "Mao, Jiayuan",
+        "Liu, Weiyu",
+        "Kochenderfer, Mykel",
+        "Wong, Lawson L. S."
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2607.17213v2",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/Retriever2026.v1.json",
+        "version": "2607.17213v2"
+      }
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "kind": "misc",
+      "title": "α³-Bench: A Unified Benchmark of Safety, Robustness, and Efficiency for LLM-Based UAV Agents over 6G Networks",
+      "year": 2026,
+      "authors": [
+        "Ferrag, Mohamed Amine",
+        "Lakas, Abderrahmane",
+        "Debbah, Merouane"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2601.03281v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/Alpha3Bench2026.v2.json",
+        "version": "2601.03281v1"
+      }
+    },
+    {
+      "key": "PhysAIBench2026",
+      "kind": "misc",
+      "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+      "year": 2026,
+      "authors": [
+        "Ferrag, Mohamed Amine",
+        "Debbah, Merouane",
+        "Lakas, Abderrahmane",
+        "Perumkunnil, Manu",
+        "Tihanyi, Norbert"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2609.23695v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/PhysAIBench2026.v1.json",
+        "version": "2609.23695v1"
+      }
+    },
+    {
+      "key": "AERIAL2026",
+      "kind": "misc",
+      "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
+      "year": 2026,
+      "authors": [
+        "Nunes, Diana",
+        "Amorim, Ricardo",
+        "Ribeiro, Pedro",
+        "Coelho, André",
+        "Campos, Rui"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2610.31029v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/AERIAL2026.v1.json",
+        "version": "2610.31029v1"
+      }
+    },
+    {
+      "key": "SMART2025",
+      "kind": "misc",
+      "title": "Advancing MAPF Toward the Real World: A Scalable Multi-Agent Realistic Testbed (SMART)",
+      "year": 2025,
+      "authors": [
+        "Yan, Jingtian",
+        "Li, Zhifei",
+        "Kang, William",
+        "Zheng, Kevin",
+        "Zhang, Yulun",
+        "Chen, Zhe",
+        "Zhang, Yue",
+        "Harabor, Daniel",
+        "Smith, Stephen F.",
+        "Li, Jiaoyang"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2503.04798v3",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/SMART2025.v1.json",
+        "version": "2503.04798v3"
+      }
+    },
+    {
+      "key": "GRaDNav2025",
+      "kind": "misc",
+      "title": "GRaD-Nav++: Vision-Language Model Enabled Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics",
+      "year": 2025,
+      "authors": [
+        "Chen, Qianzhong",
+        "Gao, Naixiang",
+        "Huang, Suning",
+        "Low, JunEn",
+        "Chen, Timothy",
+        "Sun, Jiankai",
+        "Schwager, Mac"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2506.14009v2",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/GRaDNav2025.v1.json",
+        "version": "2506.14009v2"
+      }
+    },
+    {
+      "key": "PyFlyt2023",
+      "kind": "misc",
+      "title": "PyFlyt -- UAV Simulation Environments for Reinforcement Learning Research",
+      "year": 2023,
+      "authors": [
+        "Tai, Jun Jet",
+        "Wong, Jim",
+        "Innocente, Mauro",
+        "Horri, Nadjim",
+        "Brusey, James",
+        "Phang, Swee King"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2304.01305v1",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/PyFlyt2023.v1.json",
+        "version": "2304.01305v1"
+      }
+    },
+    {
+      "key": "ReAct2022",
+      "kind": "misc",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "year": 2022,
+      "authors": [
+        "Yao, Shunyu",
+        "Zhao, Jeffrey",
+        "Yu, Dian",
+        "Du, Nan",
+        "Shafran, Izhak",
+        "Narasimhan, Karthik",
+        "Cao, Yuan"
+      ],
+      "howpublished": "arXiv preprint",
+      "url": "https://arxiv.org/abs/2210.03629v3",
+      "metadata": {
+        "primary_identity_evidence": "literature/verification/ReAct2022.v1.json",
+        "version": "2210.03629v3"
+      }
+    }
+  ]
+}

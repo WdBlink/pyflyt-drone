@@ -1,0 +1,527 @@
+{
+  "role": "Actual original v4 callbacks32\u201334 and first3 passive close sidecars; no formal/G4 comparison",
+  "at": "2026-11-07T02:01:52.633575+00:00",
+  "completed_callbacks": 34,
+  "planned_callbacks": 108,
+  "complete_physical_root_blocks": 1,
+  "provided_sdk_final_outer_recording_complete": false,
+  "slots": [
+    {
+      "order_index": 31,
+      "root_block_index": 1,
+      "case_id": "dev-L3-01",
+      "domain": "ID",
+      "level": 3,
+      "condition": "B3-M1",
+      "repeat_ordinal": 1,
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.009460291999857873,
+        "clock_lag_p95_seconds": 0.0030826666634879984,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "world_bytes": 23157269,
+      "usage": {
+        "calls": 27,
+        "tokens": 178717
+      },
+      "passive_close": {
+        "original_status": "closed",
+        "captured_global_scans": 2,
+        "write_wall_ns": 749041,
+        "post_close_metadata_wall_ns": 1196083,
+        "observed_close_wall_ns": 77141750,
+        "ref": {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/cleanup-observations/root-23070-44099603881125.json",
+          "sha256": "9ca7a2c8f07a2aa6d669b12cfa235dcf0c0f513fd215a09638c1e009983116b5",
+          "write_wall_ns": 749041,
+          "post_close_metadata_wall_ns": 1196083
+        },
+        "scope": "existing close global scans only; no complete hot history or net instrument tax"
+      },
+      "decision_attempts": 29,
+      "commands_enqueued": 15,
+      "causal_join_decode_status": {
+        "decoded_not_tool_acceptance": 18,
+        "policy_format_failure": 9,
+        "ignored_noncompleted_or_late": 2
+      }
+    },
+    {
+      "order_index": 32,
+      "root_block_index": 1,
+      "case_id": "dev-L3-01",
+      "domain": "ID",
+      "level": 3,
+      "condition": "B3-M2",
+      "repeat_ordinal": 1,
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.010022124995884951,
+        "clock_lag_p95_seconds": 0.00346837499964181,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "world_bytes": 23963987,
+      "usage": {
+        "calls": 30,
+        "tokens": 162842
+      },
+      "passive_close": {
+        "original_status": "closed",
+        "captured_global_scans": 2,
+        "write_wall_ns": 668416,
+        "post_close_metadata_wall_ns": 1029541,
+        "observed_close_wall_ns": 78995917,
+        "ref": {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/cleanup-observations/root-28116-44718831234000.json",
+          "sha256": "1ca3c8821a892cd0d4d7535d08801262d8e59a6c99a7b829806f8047a58d7166",
+          "write_wall_ns": 668416,
+          "post_close_metadata_wall_ns": 1029541
+        },
+        "scope": "existing close global scans only; no complete hot history or net instrument tax"
+      },
+      "decision_attempts": 30,
+      "commands_enqueued": 30,
+      "causal_join_decode_status": {
+        "decoded_not_tool_acceptance": 30
+      }
+    },
+    {
+      "order_index": 33,
+      "root_block_index": 1,
+      "case_id": "dev-L3-01",
+      "domain": "ID",
+      "level": 3,
+      "condition": "B3-M2",
+      "repeat_ordinal": 2,
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.009269333997508511,
+        "clock_lag_p95_seconds": 0.0031424169995943885,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "report_tool_audit_entries_count": 1,
+      "accepted_unique_report_ids_count": 1,
+      "world_bytes": 23964693,
+      "usage": {
+        "calls": 30,
+        "tokens": 166504
+      },
+      "passive_close": {
+        "original_status": "closed",
+        "captured_global_scans": 2,
+        "write_wall_ns": 698084,
+        "post_close_metadata_wall_ns": 1045250,
+        "observed_close_wall_ns": 77687292,
+        "ref": {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/cleanup-observations/root-33241-45339282218125.json",
+          "sha256": "dc2247f96780558559f8888962fb971dc9ece918187f8197963a8d5f13a73fc0",
+          "write_wall_ns": 698084,
+          "post_close_metadata_wall_ns": 1045250
+        },
+        "scope": "existing close global scans only; no complete hot history or net instrument tax"
+      },
+      "decision_attempts": 30,
+      "commands_enqueued": 32,
+      "causal_join_decode_status": {
+        "decoded_not_tool_acceptance": 28,
+        "policy_format_failure": 2
+      }
+    }
+  ],
+  "native_budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 1240,
+      "tokens": 7976190,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-002-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-008-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-011-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-013-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-014-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-015-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-016-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-017-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-018-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-019-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-020-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-021-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-022-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-023-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-024-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-025-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-027-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-028-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-030-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-031-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-032-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-033-a0": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-postinventory-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-fixed-M1-load-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-runtime-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 3644.863640583333,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "barrier": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 34,
+    "case_id": "dev-L3-01",
+    "condition": "B4-M2",
+    "at": "2026-11-07T01:59:43.056214+00:00"
+  },
+  "bound_files": {
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-1/plan.json": {
+      "sha256": "dd9786c00645877358e048e4dbec9da8e3d2e3afd9ad60c00f1b0012b8695a51",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-1/attempt-00/terminal.json": {
+      "sha256": "4c9306771431236b4c08de06aee6cc5bcc173eb089439f6366da94b3b06454b4",
+      "bytes": 65238
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-1/attempt-00/flight/run.json": {
+      "sha256": "84e09d50f5586b434eb991dc1a5d796519302ade6a31ce65e9c13a5c4719787f",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-1/attempt-00/flight/world.json": {
+      "sha256": "78468e12e348219ad78ed981d4d38d8be24e5dae649997bae2de223bde52b1b5",
+      "bytes": 23157269
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-1/attempt-00/flight/private-case.json": {
+      "sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "bytes": 5405
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-031-a0/complete-attempt.zip": {
+      "sha256": "46fe01f6ecafd86e5a22eea92c1b7d72798e8d823089e44dfd01849b16453924",
+      "bytes": 10429172
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-031-a0/usage-receipt.json": {
+      "sha256": "b5fd37e7da45c6c3dc78298e875b31568912133f71b19d4684757cbddaaa3a1a",
+      "bytes": 11853
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-031-a0.settle.json": {
+      "sha256": "af50cd85d7aa9e5dc0d6c9aea1290cea3f9318e8f53139735fb2ba100e0076a3",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/order-receipts/000031.json": {
+      "sha256": "0ffa2574ff52ed1f497b00d706c2880ee03620bd50e4becdacc5f6da6be098bb",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M1-1.json": {
+      "sha256": "f9df114da7b9133d340a16acbff97393268608ac531add2b90a14a8422e80bbb",
+      "bytes": 1336
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/cleanup-observations/root-23070-44099603881125.json": {
+      "sha256": "9ca7a2c8f07a2aa6d669b12cfa235dcf0c0f513fd215a09638c1e009983116b5",
+      "bytes": 5145
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-1/attempt-00/process-tree.json": {
+      "sha256": "1258d6951a054f79b7c4e2536e7564935dc6e76fc7c9bf149c64fd01010ff5f2",
+      "bytes": 1694
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-1/plan.json": {
+      "sha256": "f603c1fdb0e94f30b55714b6a6114450fd75ba641b4190b12d5851520438be6d",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-1/attempt-00/terminal.json": {
+      "sha256": "8581b883d99e4eba03b774badbf8463b2161b0783ab5a12cfbcb329211c41df3",
+      "bytes": 67582
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-1/attempt-00/flight/run.json": {
+      "sha256": "fae1d6a32aabf1cc704c47dff4031427055fb6d38dcef74b6eb37fdf06d90cf4",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-1/attempt-00/flight/world.json": {
+      "sha256": "4dd7fb77ca6f52425c3e3f59b6baf58a4893f80eb8a19cd313730673a1af5cc3",
+      "bytes": 23963987
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-1/attempt-00/flight/private-case.json": {
+      "sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "bytes": 5405
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-032-a0/complete-attempt.zip": {
+      "sha256": "ab20c6b25fb29843427e433f51f3ff16790443784863df90e4af13383e5ec080",
+      "bytes": 10393607
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-032-a0/usage-receipt.json": {
+      "sha256": "fcf1ccfb3b9d3600e5e75d90eecb9242ebfb2e4781688bc842d76d073d5f6737",
+      "bytes": 13053
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-032-a0.settle.json": {
+      "sha256": "839b5ad4a802cbe5a62acae3d64e83db9df784fd93cc1613874756ac9fa7f547",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/order-receipts/000032.json": {
+      "sha256": "ce3474206735d670b7bf6a893b083ec760f05c3cb1cf8c7178b9bbf09eeda400",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M2-1.json": {
+      "sha256": "dca41a50bbc39445429e607f33cefc7ade677e9081cc22ff3206af8f7585473d",
+      "bytes": 1336
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/cleanup-observations/root-28116-44718831234000.json": {
+      "sha256": "1ca3c8821a892cd0d4d7535d08801262d8e59a6c99a7b829806f8047a58d7166",
+      "bytes": 5145
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-1/attempt-00/process-tree.json": {
+      "sha256": "e8cfaabbee115f3b799233357fc23f59530b14fcba7a2fb235fd5c6ca9e157cb",
+      "bytes": 1694
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-2/plan.json": {
+      "sha256": "491cd9886c6b2c754cd73c8a474778278fa3b03f94ee8d0860f7b4fd66c5adf7",
+      "bytes": 17822
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-2/attempt-00/terminal.json": {
+      "sha256": "c480a0cb656520bd615aa62ad68c878061927b613073f70aac3301418133e9ff",
+      "bytes": 67570
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-2/attempt-00/flight/run.json": {
+      "sha256": "2fa65e195fbd15b63101cece2f64c65df246422fc42a3c7851812ac9cff60223",
+      "bytes": 297358
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-2/attempt-00/flight/world.json": {
+      "sha256": "93a15ba49c3f8521d0d4bfe962c5c22c62c27e20f11dbbf4067451fbeeb25ca1",
+      "bytes": 23964693
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-2/attempt-00/flight/private-case.json": {
+      "sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "bytes": 5405
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-033-a0/complete-attempt.zip": {
+      "sha256": "b8fef975e5c01f861be5edf8c34b3ff1be8a837906378377e4690f6b165787a3",
+      "bytes": 10409188
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-033-a0/usage-receipt.json": {
+      "sha256": "ef710a4bf765e5e34172b4b44cadb4410ae9f9a7c030e620feddd662c9b8a719",
+      "bytes": 13053
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-033-a0.settle.json": {
+      "sha256": "4c3fae6b4edbba16cee8c5a5254a386a1449ec59ccf705267ce5ee6aab12ff8c",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/order-receipts/000033.json": {
+      "sha256": "037e667e993513023ea1f84ab9763de283a1069bffea3d9efa4e2621106f586c",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M2-2.json": {
+      "sha256": "640b3f09527921d8e0afd69c2759e3245b59b67d28fffdc22638004194ba3015",
+      "bytes": 1336
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v2/cleanup-observations/root-33241-45339282218125.json": {
+      "sha256": "dc2247f96780558559f8888962fb971dc9ece918187f8197963a8d5f13a73fc0",
+      "bytes": 5145
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-2/attempt-00/process-tree.json": {
+      "sha256": "e0117d2240a21c155ee8e3774c003af7f9e80bd160e5fc3607c842408839c629",
+      "bytes": 1694
+    }
+  },
+  "immutable_captures": {
+    "qualification/pilot-v4-slots-thirtytwo-thirtyfour.v1/supervisor.at-thirtyfour.stdout": "c06f8db56c6b33d9d96796973a0ccbf1d54300a856eadbb57fc1582564ddfb9d",
+    "qualification/pilot-v4-slots-thirtytwo-thirtyfour.v1/checkpoint-pauses.at-thirtyfour.jsonl": "5dec7195d73d7452fcc3787446e1b0e5d5247168bb33108d3d5322fe076415a1",
+    "qualification/pilot-v4-slots-thirtytwo-thirtyfour.v1/native-status.at-thirtyfour.json": "c89023dd6c5748dd7e41f6484a15c05b3bf8d6e3d9f1fdc7f616c83727358788",
+    "qualification/pilot-v4-slots-thirtytwo-thirtyfour.v1/capture-source.py": "fe35aad57023576a8d7356237959d6e568b45f612989ef8f809e4590b722c34b",
+    "qualification/pilot-v4-slots-thirtytwo-thirtyfour.v1/passive-close/root-23070-44099603881125.json": "9ca7a2c8f07a2aa6d669b12cfa235dcf0c0f513fd215a09638c1e009983116b5",
+    "qualification/pilot-v4-slots-thirtytwo-thirtyfour.v1/passive-close/root-28116-44718831234000.json": "1ca3c8821a892cd0d4d7535d08801262d8e59a6c99a7b829806f8047a58d7166",
+    "qualification/pilot-v4-slots-thirtytwo-thirtyfour.v1/passive-close/root-33241-45339282218125.json": "dc2247f96780558559f8888962fb971dc9ece918187f8197963a8d5f13a73fc0"
+  },
+  "limits": [
+    "One complete L1 root and partial L3 root, not population estimates or actual formal data.",
+    "Clock summaries/witness, not complete72000-phase vectors.",
+    "Cost/host/Codex/capital/energy remain unmetered."
+  ]
+}

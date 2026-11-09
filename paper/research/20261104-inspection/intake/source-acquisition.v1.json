@@ -1,0 +1,60 @@
+{
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review",
+  "sources": [
+    {
+      "bytes": 558414,
+      "content_type": "text/html; charset=UTF-8",
+      "fetched_at": "2026-11-04T13:16:13.567768+00:00",
+      "kind": "html",
+      "path": "venue/sources/ral-authors.html",
+      "resolved_url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/",
+      "reused": false,
+      "sha256": "c1a9b2ceaa5604aa9dbfcc58f38ac863b3c1e514bf306a4f6cb2449a38c3a9b9",
+      "url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/"
+    },
+    {
+      "bytes": 564914,
+      "content_type": "text/html; charset=UTF-8",
+      "fetched_at": "2026-11-04T13:16:17.559139+00:00",
+      "kind": "html",
+      "path": "venue/sources/tro-authors.html",
+      "resolved_url": "https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/",
+      "reused": false,
+      "sha256": "4d5e30e97dcea47905c5a176fac95b5f96cbfd7116ddc7cef69bc0a4f2d373e1",
+      "url": "https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/"
+    },
+    {
+      "bytes": 228117,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-04T13:16:19.250490+00:00",
+      "kind": "html",
+      "path": "literature/multiuav-plat-v1.html",
+      "resolved_url": "https://arxiv.org/html/2606.31073v1",
+      "reused": false,
+      "sha256": "b6de8bf3dfca95e1eb40431c76e675cc16494b9db2fd974e3093f5576e42b3bf",
+      "url": "https://arxiv.org/html/2606.31073v1"
+    },
+    {
+      "bytes": 549994,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-04T13:16:21.437470+00:00",
+      "kind": "html",
+      "path": "literature/missionbench-v1.html",
+      "resolved_url": "https://arxiv.org/html/2607.22014v1",
+      "reused": false,
+      "sha256": "f415a1bdbce97f0ac1cc3dbd57d235aeb2bbe659671acc86fb5153caf3b96dbc",
+      "url": "https://arxiv.org/html/2607.22014v1"
+    },
+    {
+      "bytes": 278645,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-04T13:16:25.084958+00:00",
+      "kind": "html",
+      "path": "literature/esarbench-v1.html",
+      "resolved_url": "https://arxiv.org/html/2605.01371v1",
+      "reused": false,
+      "sha256": "cf75e39bd5a7a9099a37024350aa2372e14bd1f77ef1c1a8295bbdd26e013067",
+      "url": "https://arxiv.org/html/2605.01371v1"
+    }
+  ]
+}

@@ -1,0 +1,711 @@
+{
+  "role": "actual same-cohort31-cache reconstruction, not new flights or G4",
+  "pause": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 31,
+    "case_id": "dev-L3-01",
+    "condition": "B3-M1",
+    "at": "2026-11-07T01:22:32.931028+00:00"
+  },
+  "old_sdk_status_counts": {
+    "stopped": 77,
+    "completed": 30,
+    "failed": 1
+  },
+  "continued_completed_callbacks": 31,
+  "strict_cache_count": 29,
+  "reconciled_cache_count": 2,
+  "new_physics_or_model_effects": 0,
+  "physical_denominator": 108,
+  "remaining_original_slots": 77,
+  "original_attempt_directories": 31,
+  "budget": {
+    "known_usage": {
+      "calls": 1153,
+      "tokens": 7468127,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "unknown_usage": [],
+    "unresolved_usage": []
+  },
+  "limitations": "original unknown/abort retained; classic wrapper CLI cache reads are not new physical episodes; costs/Codex/host unmetered; fullpilot and G4 pending",
+  "files": [
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/source-hashes.json",
+      "sha256": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/source-hashes.json",
+      "sha256": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/source-hashes.json",
+      "sha256": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/source-files.json",
+      "sha256": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/source-files.json",
+      "sha256": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/source-files.json",
+      "sha256": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/dependency-hashes.json",
+      "sha256": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/dependency-hashes.json",
+      "sha256": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/dependency-hashes.json",
+      "sha256": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/input-hashes.json",
+      "sha256": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/input-hashes.json",
+      "sha256": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/input-hashes.json",
+      "sha256": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/episode-order.json",
+      "sha256": "4e9fe5e86c0621bc7cdc2876391498432c594beddc99f26a2fbc7cecd64636cb"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/episode-order.json",
+      "sha256": "4e9fe5e86c0621bc7cdc2876391498432c594beddc99f26a2fbc7cecd64636cb"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/episode-order.json",
+      "sha256": "4e9fe5e86c0621bc7cdc2876391498432c594beddc99f26a2fbc7cecd64636cb"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4/sampler-seeds.json",
+      "sha256": "e8c27d85ea56dc0e950c0bfc0dfc4e4747d9eb84ed9d8bb30136614bc05a97c1"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/sampler-seeds.json",
+      "sha256": "e8c27d85ea56dc0e950c0bfc0dfc4e4747d9eb84ed9d8bb30136614bc05a97c1"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/sampler-seeds.json",
+      "sha256": "e8c27d85ea56dc0e950c0bfc0dfc4e4747d9eb84ed9d8bb30136614bc05a97c1"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/terminal.json",
+      "sha256": "074baa6a27ae6a40def5d6542e8c9638c4fe21482e3b91f0c04ae65d9cc989e9"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B4-M2-1.json",
+      "sha256": "f3535db076b6ecd3ecd2ef64a16cde7a5d807b3b323a29c4e542926894eaadd9"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B4-M2-1.json",
+      "sha256": "7047f5c15003004a8cdf31c352d058424689070f46a94c08ad93ea986e6feb1a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-0/attempt-00/terminal.json",
+      "sha256": "e7dc52fd8a524d8b03bebf656a57b97b720d623758b61df0473f2d3dd154f18f"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M2-0.json",
+      "sha256": "e4ec49a10569c1590b3f4ddebfd8ec4f469f38d1a08bec93cfc99713d04c5a08"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M2-0.json",
+      "sha256": "5f3c692db391ef824f65aaec29d4edbedba30925bec5a953eabdd89f2cfb0256"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B2-0/attempt-00/terminal.json",
+      "sha256": "99ee0213edc2ce547d91ffb4db7fe510ff13166fa4dc92342aefe9732e436d46"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/classic/raw/dev-L1-01-B2-0.json",
+      "sha256": "5f885f89e66959e393cef9f5ced57d1561411b1217da57dc9b60d801c696fbbf"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/classic/raw/dev-L1-01-B2-0.json",
+      "sha256": "2fedb5be86392491b946c637f437bda930ea939c2294fec18d3a73325304b558"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/terminal.json",
+      "sha256": "98dd2a4df9eec6a15787cf2da4b161f60268812f8a5b0000a07708ad7b287fbc"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B4-M1-1.json",
+      "sha256": "45746cdff1030b0515ae640ee9464dd3316925c91b671c8226cd7c0fc4999657"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B4-M1-1.json",
+      "sha256": "e203431c0db2b59b22b7242b467d82267abd0cb21465543aa3f52110bfe23f67"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/terminal.json",
+      "sha256": "5459fa4d78018a9b0aed453bafa0ab6e9ac7486b816ed414bfa347b78f4d005a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M2-2.json",
+      "sha256": "774264f4d8a9d20cff95a8dad4562fc804b0af1ff06d4609ef3f116c24fe970b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M2-2.json",
+      "sha256": "fc7a4ecb2bea0e51473875f47d8345cfbdea57bbec3ea0885840ef2b7ad4a517"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/terminal.json",
+      "sha256": "b2d80bc195b160aa7bede5e6f78fa2ec1a5bfdebfaf1916dcefd793b9c379ee8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/classic/raw/dev-L1-01-B0-0.json",
+      "sha256": "dc0dfd319660d3d9ad1d1e8b7e8778ab7cd4603298dae987994656daf5722d3a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/classic/raw/dev-L1-01-B0-0.json",
+      "sha256": "1dee23197f84d14bb8c467467ca2b1924d48a5b0cee39fef85df9e450d0f7177"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-0/attempt-00/terminal.json",
+      "sha256": "c8bda72d01030cdf0bcd2656ae0c4392f114499b707a0ed687b4f1aae9e10154"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M3-0.json",
+      "sha256": "5643f7edf8ac280d0714696597b5e49a536d8834be1c3fc4231e3c8f423224b3"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M3-0.json",
+      "sha256": "c9ed96fb2599f00c5824838f5f4dd88b410ba3543247dde27b73cca989a8ddc5"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-2/attempt-00/terminal.json",
+      "sha256": "e94ef4b9275bce9ebe78fbd7284241cbc9295ae6e8f9048d8cebb2fbaee402b2"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M1-2.json",
+      "sha256": "14894df61aa63c1a0374ef7a77b6219c40774b084c0a4d5917b074ad98b2cfaa"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M1-2.json",
+      "sha256": "84d65db033c2c8b8f18d3ab3e594205d69b5324ee5bfeba52fd8d0257c5e2ade"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-1/attempt-00/terminal.json",
+      "sha256": "7e64a195720a97510108cdbb2856b031f5d061d72fd15ea1b16e6d3167bff2a9"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M3-1.json",
+      "sha256": "ce639b84ce01f7556bb3650427c49fa116dc53aa72c4af20073a4e82a20c91b9"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M3-1.json",
+      "sha256": "647308d15fcac019a29ced8a7a7c0b08d6372063673e80acb533592fc942d07d"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/terminal.json",
+      "sha256": "94514b9ae5fb75dbcd91d5e4de558c6553f9895a014eea0d0f8669b9490e93a6"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M1-0.json",
+      "sha256": "c40557c08ad9d2fd3f2225a7c59f7ae1f68291e0882a76a6d0e422e3bb8953dd"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M1-0.json",
+      "sha256": "ecdeaaac36d03f199c07ae5c116355aecb78e6f9a5fb8cee0b1155a7404aa8b8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/terminal.json",
+      "sha256": "e83687b2dd74503f8d18fd58bf4311ac1167b75b46bc0f57cf06537b40081ad3"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M2-1.json",
+      "sha256": "1fa77368ec11518fd4f87d44958891cc9b8e4fe2f412bddb27176b5ebf7010aa"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M2-1.json",
+      "sha256": "24d166e00c234c442c7289bcc2b33fdae2c0521d4afd0a4fca21513e77f95e37"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/terminal.json",
+      "sha256": "5381314c1c68f0f3df6c81cd44a23ecd5654f2b2df8a398fa4daeb7508722a70"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B4-M1-0.json",
+      "sha256": "838ec0d07e94aa84c00c4bf6d66f4463a8d9efb4f116261359fa68379c9b97a6"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B4-M1-0.json",
+      "sha256": "a45511cf7a91aa91f7905e5e036234bb84fab48cc06ca33233f629cf43b98de8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B1-0/attempt-00/terminal.json",
+      "sha256": "151f45e536d715efe71e2525cb4958df975c84175fd64e29124970f91202ebdf"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/classic/raw/dev-L1-01-B1-0.json",
+      "sha256": "fcbd7cef7abf865fcd749932b0dc0c55ed83992cc3143811dc8203fe99e2764d"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/classic/raw/dev-L1-01-B1-0.json",
+      "sha256": "48d02d4d1d9ae230d2bc2fd93063cc7df4b0d44cd98e251ecf6c3f08775f7bee"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-0/attempt-00/terminal.json",
+      "sha256": "e856d6e3bfed41dd48b6fc529ca3ba42a2cd17cbab99cb7fbbe6779c8b2cb3f7"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B4-M2-0.json",
+      "sha256": "ff7aa209591292b026b4269bd267c15ac09f1629486d9eb5bebac3924b2a528d"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B4-M2-0.json",
+      "sha256": "c95e32a11254bc3938d960a8f0948196d450c972e4f42396275288382792bbf3"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-2/attempt-00/terminal.json",
+      "sha256": "f9fa38e079ac6c412b204c4e1f7f6fd65585f2e487f853ef79f5cc6360b99065"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M3-2.json",
+      "sha256": "a0bb2122000292cface2162cb797eed234e49858f05a24731802cea7a20e7bbf"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M3-2.json",
+      "sha256": "e7679f52b4005b2da9769a131e08479ad9effb1d6ecb3913e33804c01a2b0e92"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-2/attempt-00/terminal.json",
+      "sha256": "0ee9b806531afa0a813d7e3e237598884f8aea7a592fa6fd1d17dc97b108eae8"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B4-M2-2.json",
+      "sha256": "4933d505b7837888b2220037f0a879e0dc6203dbeaa037670169bf072cd67cda"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B4-M2-2.json",
+      "sha256": "2ced59acd854ca09ea062e86130288770580bd7276c2f24cd2332a9bca9ddd38"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-1/attempt-00/terminal.json",
+      "sha256": "402cfea57d400f6bd95f5ee6293369c3985dfb64dd70a43c7e891f22de5b443c"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B3-M1-1.json",
+      "sha256": "309feb39121764de985d78919d58f574b20ada79a07cc8ca707b8f782e86e70f"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B3-M1-1.json",
+      "sha256": "0be1f763277ad34cb606e0a3a443a06765a2385496ed4bed69c3876dc145820a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-2/attempt-00/terminal.json",
+      "sha256": "629cd6e0e81f059cb98546a968c02cda805d61c05e9b878f1510d810d160a6b7"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L1-01-B4-M1-2.json",
+      "sha256": "8d12dd7e1dbcb424a632df6cbcc1919dc69a3066fe8faf2a8226d2436eff4d3c"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L1-01-B4-M1-2.json",
+      "sha256": "678ba4aa341ca59da08c7ad89a9cc546afbbc534a5c0b0a80a50ec053691d124"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-0/attempt-00/terminal.json",
+      "sha256": "85b915449ede785c13e33565ae30723f73471a1172d356a95be02b7bf56fbb26"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B4-M1-0.json",
+      "sha256": "4a900f29219438d9af1cbc1aa307ea27902588df726b51ae1403474337e6ba27"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B4-M1-0.json",
+      "sha256": "73a0e6d3654774c6a40fbc191f47f4a21e07ca883d6d8325b122eac461bc9b68"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M2-0/attempt-00/terminal.json",
+      "sha256": "86ec44248750daa31299ed42fff01750c65e73c17250603a72aa9f030b1f6cb1"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B4-M2-0.json",
+      "sha256": "b39983c42c9da6fed2e6d14fefae3b2e14c7daa62da8fe4d500b01c45a52148e"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B4-M2-0.json",
+      "sha256": "1b05cf3cf72f08f5f11b58d17c4a08af270ecb2c108b5cd0e6b0caf055bc35b9"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-2/attempt-00/terminal.json",
+      "sha256": "5e08e6c7c379f8b2f9fcedf8244414e9f542b9a2f432bd6f0fcf8e4ca4ca7693"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M3-2.json",
+      "sha256": "9434a472e132f6b7e84968d42e46f22b9425325551baf6191174808a4c0ba302"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B3-M3-2.json",
+      "sha256": "432de79453b271dd784b3f9cf8019cda7d7c713173070a12ba175a441f0c8740"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-1/attempt-00/terminal.json",
+      "sha256": "21071a3061f8e6ac7f5901306fae989a6a66cdf1022b808b82b8022076ae3369"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M3-1.json",
+      "sha256": "bf0b18df39f171623dc26582d2842d7703f2b0ccd95dff61e02a9626fcd6c391"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B3-M3-1.json",
+      "sha256": "1f579e2cf9f75197d05bbef2965c508ec8d5f4c18dfe24ba2a8c7a24dcbe6b1f"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-2/attempt-00/terminal.json",
+      "sha256": "cb8edca5f0c246d207b628ad2511b3cd14affedd22baef05ffd8a31feb1804d2"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B4-M1-2.json",
+      "sha256": "de3086d7af33fc2f6fdacc2bf82ca64e5d5cdcb570261ac5a884d8b9740348ef"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B4-M1-2.json",
+      "sha256": "76a9f2ac452e9b5b4717971b8006afd40f92cfe2c56f4294dbcfd71997fb7db5"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-0/attempt-00/terminal.json",
+      "sha256": "aced3b28ca2ed925839637496b66bc5a28a6457b8ce65fc7f6c4a6ce166240b7"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M3-0.json",
+      "sha256": "ef2dc3908e25675d7697cb31d22e9f0d9bd22099dfa85d31730e6e64ca5ffd87"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B3-M3-0.json",
+      "sha256": "12aa965b4cb54cc680d54a0bcb70151a6970ea7e32fd9c8dd6f07ccf9a9fa737"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-2/attempt-00/terminal.json",
+      "sha256": "86f0189e000815abc250df4092bc264bbb7fa79dcca65a032edec88d68c3f6cd"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M1-2.json",
+      "sha256": "9fa572ab755e6c723e836cafb906ba9f7a355c1c5a86022774f1be5da34a8af7"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B3-M1-2.json",
+      "sha256": "51623345b06450e512c8af7717d20f791e4bbd7fe466ec1dd3793df29b85663b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M2-2/attempt-00/terminal.json",
+      "sha256": "086604730c899b9a1fb4d7deeddcff1b7c76f31512030df26706d6113f837a28"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B4-M2-2.json",
+      "sha256": "7411881cdb380eccdbd2e4315383e2ca0658c8fb69f4b6268f00cd7bf979531b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B4-M2-2.json",
+      "sha256": "acec9b75ca5a6b877ca20110940f87b2472133d4599ce2dc02350090faf1a1e2"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L3-01-B1-0/attempt-00/terminal.json",
+      "sha256": "ed23f8ccf09d1f0dcc1d07723d5f30492f3ae01de7af679207255ac616c03066"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/classic/raw/dev-L3-01-B1-0.json",
+      "sha256": "dbdfc7fa7a97a37efbb21c68a6efb9ab7e8a59d7d9306c60b3a2a1587be894da"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/classic/raw/dev-L3-01-B1-0.json",
+      "sha256": "010395e22fae7451ae3dca7bde43893cc2d753b8b7a3b209792e00e8b275c42a"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M1-0/attempt-00/terminal.json",
+      "sha256": "9ddd05e1919d22e7c1ed180c2d0acc84d969683e65fe4ea8add348932d87b9e0"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M1-0.json",
+      "sha256": "598e5e04b3a94dac44a41997e0bc77ae6394a6bbc46d7c65b5c91fb1d6126af6"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B3-M1-0.json",
+      "sha256": "b8f3edf656bc60f2a6088b78b49fd4d04cf04b7adef902871761b63f62ccdffe"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-0/attempt-00/terminal.json",
+      "sha256": "bbe03557844883dd29b24b327bc4ee1aafc24d26f0fb748ec216f81271a91af7"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B3-M2-0.json",
+      "sha256": "655238fa8e58aa4edb0f1e3cc6a43e09edb4e89de834a71033c75393bfa55e07"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B3-M2-0.json",
+      "sha256": "0090c851240bbf38f12d93f519da5c189a54e18a98048c2210f0096a19694b9e"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L3-01-B2-0/attempt-00/terminal.json",
+      "sha256": "6582bd60620794bd8cf1f55ac35bddf1adce489b9a4f4f1e77a0e53ef9666b67"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/classic/raw/dev-L3-01-B2-0.json",
+      "sha256": "3521bf8e6da4682b4353b76ca8522d472fbb076f958f568249cbafd076491f60"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/classic/raw/dev-L3-01-B2-0.json",
+      "sha256": "edb188c783cf1436a8c3c0efa759d2db24dcd421181634f98f78ef5f1214b95f"
+    },
+    {
+      "path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-1/attempt-00/terminal.json",
+      "sha256": "3cf398b2674d81c2217b1b823fb765886aacf3bf9426634c74568ae836774831"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/llm/raw/dev-L3-01-B4-M1-1.json",
+      "sha256": "5bfe4f76668ae3b10c196719926ec1c62aaf36d4fdd0dfb84303386fca51455b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B4-M1-1.json",
+      "sha256": "ea7e54bf00608c895397cb8bf1a030bfb0fb94a22d024338e7694eeb75584cec"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/recovery-adapter.json",
+      "sha256": "cfa3534d2ac577634f7978cff38b71c4e2e89a72bf10a6f28f26089a8330be8c"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/checkpoint.request",
+      "sha256": "a2834b72f2f4b1190c2c3c3189ed8ac5099caebc59608066f0a523c1d972163b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/checkpoint-pauses.jsonl",
+      "sha256": "56a9f77f73cf6e9a310084dbb3f50af357626f30151dbf95a5134ff5c5fe1b05"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-030.v1/source/continue_pilot.py",
+      "sha256": "4c78d5b130f27f15f34483f7f88bf5a7c348cef2399d272faae3c63ba3502a8f"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-030.v1/source/observe_cleanup.py",
+      "sha256": "83ffb02d0582c243e33421ba0f831d754010c1cb99c70b3022b5a743d96c646c"
+    },
+    {
+      "path": "paper/research/20261104-inspection/review/evidence/pilot-v4-passive-close-observer-v2/review.json",
+      "sha256": "33ed4010f841d2f935639b854e77c435aa9f36b206baf1a6e052230bcf341f23"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/invocations/026.json",
+      "sha256": "f6088db26eda15fb013d4a8ef4625ada9295b7c8aa98568b872477479ae25280"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/invocations/002.json",
+      "sha256": "370a1e517b85192d6f569dfc4377eeb39e3b76db3dc71ea3141e7f1e6e07ff1b"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/invocations/029.json",
+      "sha256": "75f98a2c2882c14daf93ddb579d70d8f12d4a11f6a0dcccbc58c4a76bc40a427"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/invocations/005.json",
+      "sha256": "368d2a2a20abd5446466df788a83cfd1bef6d17683809ad326142250c644ea1c"
+    },
+    {
+      "path": "logs/inspection-eight-condition-pilot.v4.continuation.v2/invocations/012.json",
+      "sha256": "647ce17fe7d914f6434c93fc70c9383e237e1cb7a8b4aacc3d372bba1947ed17"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-024.v1/acceptance.v1.json",
+      "sha256": "e4cd3a90e0ecbade0f01d7430e98e9583a4bcdafc6f9bfa9e69a87c34b77b39e"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-030.v1/source/check_cache_prefix.py",
+      "sha256": "55e76cd02bc269be898d932e1c4e80e2b80414ca964b0cd2d58ebdc8dc75a18f"
+    },
+    {
+      "path": "paper/research/20261104-inspection/recovery/pilot-v4-cleanup-030.v1/acceptance.v1.json",
+      "sha256": "6df7877a09c724eee0c06181fb03387ccdf01a6ba1146f99f56170364baaaca2"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/native-status.json",
+      "sha256": "868ed5c79a8695acbf0b8adbe38e37c645173f82bfedbbe3fad75ce38ba0bf2d"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/accepted-verify.json",
+      "sha256": "0a41f876bda76fa9012941f3a1df36a5bbcc1150aaf53f95cf289bea54697f8f"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/stdout-at-barrier.jsonl",
+      "sha256": "2137a5609948f559c052b4e00a207bb9e32d7f5bdbe329c8d21f0b5f11d545e6"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/source-hashes.json",
+      "sha256": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/source-files.json",
+      "sha256": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/dependency-hashes.json",
+      "sha256": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/input-hashes.json",
+      "sha256": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/episode-order.json",
+      "sha256": "4e9fe5e86c0621bc7cdc2876391498432c594beddc99f26a2fbc7cecd64636cb"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/sampler-seeds.json",
+      "sha256": "e8c27d85ea56dc0e950c0bfc0dfc4e4747d9eb84ed9d8bb30136614bc05a97c1"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/recovery-adapter.json",
+      "sha256": "cfa3534d2ac577634f7978cff38b71c4e2e89a72bf10a6f28f26089a8330be8c"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/checkpoint.request",
+      "sha256": "a2834b72f2f4b1190c2c3c3189ed8ac5099caebc59608066f0a523c1d972163b"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/checkpoint-pauses.jsonl",
+      "sha256": "56a9f77f73cf6e9a310084dbb3f50af357626f30151dbf95a5134ff5c5fe1b05"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B4-M2-1.json",
+      "sha256": "f3535db076b6ecd3ecd2ef64a16cde7a5d807b3b323a29c4e542926894eaadd9"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M2-0.json",
+      "sha256": "e4ec49a10569c1590b3f4ddebfd8ec4f469f38d1a08bec93cfc99713d04c5a08"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/classic/raw/dev-L1-01-B2-0.json",
+      "sha256": "5f885f89e66959e393cef9f5ced57d1561411b1217da57dc9b60d801c696fbbf"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B4-M1-1.json",
+      "sha256": "45746cdff1030b0515ae640ee9464dd3316925c91b671c8226cd7c0fc4999657"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M2-2.json",
+      "sha256": "774264f4d8a9d20cff95a8dad4562fc804b0af1ff06d4609ef3f116c24fe970b"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/classic/raw/dev-L1-01-B0-0.json",
+      "sha256": "dc0dfd319660d3d9ad1d1e8b7e8778ab7cd4603298dae987994656daf5722d3a"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M3-0.json",
+      "sha256": "5643f7edf8ac280d0714696597b5e49a536d8834be1c3fc4231e3c8f423224b3"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M1-2.json",
+      "sha256": "14894df61aa63c1a0374ef7a77b6219c40774b084c0a4d5917b074ad98b2cfaa"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M3-1.json",
+      "sha256": "ce639b84ce01f7556bb3650427c49fa116dc53aa72c4af20073a4e82a20c91b9"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M1-0.json",
+      "sha256": "c40557c08ad9d2fd3f2225a7c59f7ae1f68291e0882a76a6d0e422e3bb8953dd"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M2-1.json",
+      "sha256": "1fa77368ec11518fd4f87d44958891cc9b8e4fe2f412bddb27176b5ebf7010aa"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B4-M1-0.json",
+      "sha256": "838ec0d07e94aa84c00c4bf6d66f4463a8d9efb4f116261359fa68379c9b97a6"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/classic/raw/dev-L1-01-B1-0.json",
+      "sha256": "fcbd7cef7abf865fcd749932b0dc0c55ed83992cc3143811dc8203fe99e2764d"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B4-M2-0.json",
+      "sha256": "ff7aa209591292b026b4269bd267c15ac09f1629486d9eb5bebac3924b2a528d"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M3-2.json",
+      "sha256": "a0bb2122000292cface2162cb797eed234e49858f05a24731802cea7a20e7bbf"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B4-M2-2.json",
+      "sha256": "4933d505b7837888b2220037f0a879e0dc6203dbeaa037670169bf072cd67cda"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B3-M1-1.json",
+      "sha256": "309feb39121764de985d78919d58f574b20ada79a07cc8ca707b8f782e86e70f"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L1-01-B4-M1-2.json",
+      "sha256": "8d12dd7e1dbcb424a632df6cbcc1919dc69a3066fe8faf2a8226d2436eff4d3c"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B4-M1-0.json",
+      "sha256": "4a900f29219438d9af1cbc1aa307ea27902588df726b51ae1403474337e6ba27"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B4-M2-0.json",
+      "sha256": "b39983c42c9da6fed2e6d14fefae3b2e14c7daa62da8fe4d500b01c45a52148e"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B3-M3-2.json",
+      "sha256": "9434a472e132f6b7e84968d42e46f22b9425325551baf6191174808a4c0ba302"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B3-M3-1.json",
+      "sha256": "bf0b18df39f171623dc26582d2842d7703f2b0ccd95dff61e02a9626fcd6c391"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B4-M1-2.json",
+      "sha256": "de3086d7af33fc2f6fdacc2bf82ca64e5d5cdcb570261ac5a884d8b9740348ef"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B3-M3-0.json",
+      "sha256": "ef2dc3908e25675d7697cb31d22e9f0d9bd22099dfa85d31730e6e64ca5ffd87"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B3-M1-2.json",
+      "sha256": "9fa572ab755e6c723e836cafb906ba9f7a355c1c5a86022774f1be5da34a8af7"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B4-M2-2.json",
+      "sha256": "7411881cdb380eccdbd2e4315383e2ca0658c8fb69f4b6268f00cd7bf979531b"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/classic/raw/dev-L3-01-B1-0.json",
+      "sha256": "dbdfc7fa7a97a37efbb21c68a6efb9ab7e8a59d7d9306c60b3a2a1587be894da"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B3-M1-0.json",
+      "sha256": "598e5e04b3a94dac44a41997e0bc77ae6394a6bbc46d7c65b5c91fb1d6126af6"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B3-M2-0.json",
+      "sha256": "655238fa8e58aa4edb0f1e3cc6a43e09edb4e89de834a71033c75393bfa55e07"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/classic/raw/dev-L3-01-B2-0.json",
+      "sha256": "3521bf8e6da4682b4353b76ca8522d472fbb076f958f568249cbafd076491f60"
+    },
+    {
+      "path": "paper/research/20261104-inspection/qualification/pilot-v4-cache31-prefix.v1/sdk/llm/raw/dev-L3-01-B4-M1-1.json",
+      "sha256": "5bfe4f76668ae3b10c196719926ec1c62aaf36d4fdd0dfb84303386fca51455b"
+    }
+  ]
+}

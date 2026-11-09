@@ -1,0 +1,8 @@
+{
+  "eval/run_inspection_reference.py": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+  "eval/run_inspection_llm_development.py": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+  "eval/run_inspection_dev.py": "470b639ad8c41876490156755449a9c82ca0ccecf73099d5d62dbab366add586",
+  "eval/run_inspection_classic_pilot.py": "4cce1140d144ff719ff7a7f01b35204e1a4525868b490b7f4915fd78aa5581dc",
+  "eval/run_inspection_eight_condition_pilot.py": "c14c52b0e9a7aa00336b6e69b3274d5ba0284077cf9b04c1f85fd34c2dc87b86",
+  "eval/inspection_episode_receipts.py": "59f88d5a3ec90497e19ec91ac9b914f09fe6a2303d029e6aecbb6fb2f958387b"
+}

@@ -1,0 +1,49 @@
+{
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review",
+  "sources": [
+    {
+      "bytes": 43245,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:54:15.723610+00:00",
+      "kind": "html",
+      "path": "literature/primary/retriever-v2-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2607.17213v2",
+      "reused": false,
+      "sha256": "9838b2ac4cd9bfe5a4b87606a208e5effe639c67c4a877ef07ffafdf5388f842",
+      "url": "https://arxiv.org/abs/2607.17213v2"
+    },
+    {
+      "bytes": 43407,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:54:16.484044+00:00",
+      "kind": "html",
+      "path": "literature/primary/alpha3-v1-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2601.03281v1",
+      "reused": false,
+      "sha256": "020372dc3b2fb5ab8e3a349f7966db3fbe781d183f22bad15e81375a0a1b1d4f",
+      "url": "https://arxiv.org/abs/2601.03281v1"
+    },
+    {
+      "bytes": 43639,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:54:17.086028+00:00",
+      "kind": "html",
+      "path": "literature/primary/physai-v1-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2609.23695v1",
+      "reused": false,
+      "sha256": "cc9167fe4fe60ec4a51b2fb2dcd6880eff56fca0d022ddc327562f1efce8169e",
+      "url": "https://arxiv.org/abs/2609.23695v1"
+    },
+    {
+      "bytes": 41250,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:54:17.741249+00:00",
+      "kind": "html",
+      "path": "literature/primary/aerial-v1-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2610.31029v1",
+      "reused": false,
+      "sha256": "2d68ada7c6989f03a17b0788ae22cb16f49021403ae852b0b4160b50049b95ae",
+      "url": "https://arxiv.org/abs/2610.31029v1"
+    }
+  ]
+}

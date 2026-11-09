@@ -1,0 +1,7 @@
+{
+  "issues": [
+    "literature: source publication time needs a timezone"
+  ],
+  "status": "fail",
+  "validation": "record_integrity_not_external_truth"
+}

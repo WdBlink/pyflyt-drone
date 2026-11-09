@@ -1,0 +1,139 @@
+{
+  "role": "First actual production-runtime full600s development callback, not complete root/G4/formal result",
+  "slot": {
+    "order_index": 0,
+    "case_id": "dev-L1-01",
+    "condition": "B4-M2",
+    "repeat_ordinal": 1
+  },
+  "completed_callbacks": 1,
+  "planned_callbacks": 108,
+  "complete_roots": 0,
+  "terminal_status": "completed",
+  "clock": {
+    "simulated_seconds": 600.0,
+    "physics_steps_executed": 144000,
+    "max_clock_lag_seconds": 0.047306791666528625,
+    "clock_lag_p95_seconds": 0.0028497083332013062,
+    "clock_lag_over_0p1_seconds_ticks": 0
+  },
+  "runtime_policy": {
+    "schema": "inspection-physics-runtime-window-v1",
+    "errors": [],
+    "scope": "current physics main thread only; GC deferral covers its process, not model/coordinator processes",
+    "requested_ns": {
+      "period": 8333333,
+      "computation": 4000000,
+      "constraint": 8000000
+    },
+    "soft_realtime_not_a_guarantee": true,
+    "before": {
+      "values": [
+        1
+      ],
+      "default": false
+    },
+    "prior_rt": {
+      "values": [
+        0,
+        120000,
+        240000,
+        1
+      ],
+      "default": true
+    },
+    "mach_timebase": {
+      "numer": 125,
+      "denom": 3
+    },
+    "requested_ticks": [
+      200000,
+      96000,
+      192000,
+      1
+    ],
+    "gc_enabled_before": true,
+    "gc_threshold_before": [
+      700,
+      10,
+      10
+    ],
+    "pre_epoch_collected": 14,
+    "active_start": {
+      "values": [
+        200000,
+        96000,
+        192000,
+        1
+      ],
+      "default": false
+    },
+    "gc_enabled_at_epoch": false,
+    "window_wall_seconds": 600.0026774580001,
+    "active_end": {
+      "values": [
+        200000,
+        96000,
+        192000,
+        1
+      ],
+      "default": false
+    },
+    "restored": {
+      "values": [
+        1
+      ],
+      "default": false
+    },
+    "rt_after_restore": {
+      "values": [
+        0,
+        120000,
+        240000,
+        1
+      ],
+      "default": true
+    },
+    "post_loop_collected": 14,
+    "gc_enabled_after": true
+  },
+  "usage": {
+    "calls": 21,
+    "tokens": 137950
+  },
+  "native_known_cumulative": {
+    "calls": 555,
+    "tokens": 3472962,
+    "cost": {}
+  },
+  "remaining_reservations": {
+    "calls": 0,
+    "tokens": 0,
+    "cost": {}
+  },
+  "unknown": [],
+  "unresolved": [],
+  "resource_archive": {
+    "path": "qualification/local-model-episodes/dev-all8-pilot-v4-000-a0/complete-attempt.zip",
+    "sha256": "ac969742b438a928d8be2fe3963417a244b850ec6d069216b41534df4c1d7c39"
+  },
+  "bound_evidence": {
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/plan.json": "32ce81572b996515424e4f5cd6fa6867edc1d55c3a6474e9b7ce277e694efcd1",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/terminal.json": "074baa6a27ae6a40def5d6542e8c9638c4fe21482e3b91f0c04ae65d9cc989e9",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/flight/run.json": "57b917ded2b4a7f661302522813d54879f97c78281f4541968cc03c4b2fd3fe7",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/flight/world.json": "46855aecc353790cad6c01e7372dcc002a94761c0cf70550b154659a15336eec",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/process-tree.json": "3c4c7bdcb17e30696bd5fc454b291e22659f4693a6b72f7134a2134174b61140",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/process-return.json": "df39a41125affc1b3834bd3e9a41f41af66c037b2481a658b5935a337bd7981a",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/settle-owner.json": "d4ac938735dd79b4e4de7895242ec528686bcdaab02e4b97ebc666f6fba28abc",
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-000-a0/usage-receipt.json": "10b441c5cd558012466961bdccda23be6270cc9735041d3986a98846dc119d7c",
+    "paper/research/20261104-inspection/qualification/pilot-v4-first-slot.v1/checkpoint-pauses.at-first-slot.jsonl": "a3ccfce3308507f6be9891352f6e27acecf2db7eeb8340f6cdb958c0b03ec68c"
+  },
+  "barrier": "Acknowledged before order1/B3-M2 reservation and spawn; physical/model operation closed before concentrated checks",
+  "limits": "Ordinary world maximum/P95/one-Hz progress; no complete72000 clock phase vector or independent raw recount for this pilot callback. Producer validation completed; whole pilot independent acceptance pending.",
+  "historical_pause_log": {
+    "path": "logs/inspection-eight-condition-pilot.v4/checkpoint-pauses.jsonl",
+    "sha256_at_capture": "a3ccfce3308507f6be9891352f6e27acecf2db7eeb8340f6cdb958c0b03ec68c",
+    "live_log_will_append": "Only the immutable captured copy is evidence for this observation."
+  },
+  "supersedes": "binding.json v1 captured a live append-only log; this version binds the preserved observation bytes."
+}

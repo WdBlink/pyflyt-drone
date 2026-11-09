@@ -1,0 +1,387 @@
+{
+  "role": "Exact uninstalled44source27tests response/resource integration and observed author checks; no formal data",
+  "at": "2026-11-06T20:07:45.000965+00:00",
+  "baseline": {
+    "path": "planning/formal-admission-candidate.v3/secondary-analysis-integration.v1/binding.json",
+    "sha256": "6e72718a1c6fb7c529dd54a7de065300bc02e037d51e995b0c65841a7e844e82"
+  },
+  "final_delta": {
+    "path": "planning/formal-admission-candidate.v3/response-resource-freeze.v2/binding.json",
+    "sha256": "8441e871ceb1c2b95602eaa45d1b430a6b0bcb5dceeec03dbb360374c13356e0"
+  },
+  "sources": 44,
+  "tests": 27,
+  "members": {
+    "source/eval/analyze_inspection_formal.py": {
+      "sha256": "aca945d84a661b07164922eca525e207074d9bdfc2a938e516c7447c9678d52f",
+      "bytes": 27413,
+      "frozen_copy": "response-resource-freeze.v2/source/eval/analyze_inspection_formal.py"
+    },
+    "source/eval/analyze_inspection_formal_secondary.py": {
+      "sha256": "480e897a8ed634b93aae67f139c18652871e3ecb4127f684470929f79e488452",
+      "bytes": 24099,
+      "frozen_copy": "response-resource-freeze.v2/source/eval/analyze_inspection_formal_secondary.py"
+    },
+    "source/eval/inspection_cases.py": {
+      "sha256": "7537b17aa0cbcfd4cffdb00c1d35e45e56217f477e055db77ba80724c0868cef",
+      "bytes": 16211,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_cases.py"
+    },
+    "source/eval/inspection_classic.py": {
+      "sha256": "763b14320f95e5d534154c4d4886cbd40e12cf13182f64d5eb572cd7d5e4fd00",
+      "bytes": 14286,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_classic.py"
+    },
+    "source/eval/inspection_common_calendar.py": {
+      "sha256": "b42f8944079adbf23ec236c20de8de51b8697a12d7d94e40275fbdc65ff9a364",
+      "bytes": 6491,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_common_calendar.py"
+    },
+    "source/eval/inspection_darwin_inventory.py": {
+      "sha256": "f1870d92317d5f482d5d5cc19f791fffecb23ac0fb7c777028be5e1060c59ab9",
+      "bytes": 6724,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_darwin_inventory.py"
+    },
+    "source/eval/inspection_dataset_admission.py": {
+      "sha256": "890ae2432ac6453c3f8c13ff95112703f858c43e35a50d24a6ab6abe65de1f93",
+      "bytes": 10735,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_dataset_admission.py"
+    },
+    "source/eval/inspection_development_catalog.py": {
+      "sha256": "b3a2d91f3589b0b1bc3f7da8518637b99620e0c3099f4bd8d2542b4ff0a5fe08",
+      "bytes": 9599,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_development_catalog.py"
+    },
+    "source/eval/inspection_episode_receipts.py": {
+      "sha256": "11339aaffe69a6ceed537057364b5bc0de5a84672f7285e03e56e733221f9ec7",
+      "bytes": 15151,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_episode_receipts.py"
+    },
+    "source/eval/inspection_event_endpoints.py": {
+      "sha256": "d12ca95432645aa05da534303d17dde69e4fd0620b06ead4d31176860f819f59",
+      "bytes": 31968,
+      "frozen_copy": "secondary-analysis-freeze.v5/source/eval/inspection_event_endpoints.py"
+    },
+    "source/eval/inspection_formal_admission.py": {
+      "sha256": "3272e19e4ec4d3ad4802ff5a939feea8cf0a258f6777ee60a5b21ef2d758c5fa",
+      "bytes": 18853,
+      "frozen_copy": "response-resource-freeze.v2/source/eval/inspection_formal_admission.py"
+    },
+    "source/eval/inspection_formal_case.py": {
+      "sha256": "d625e0c0ba75a2bb86ef2d98974043d08a5d9017fdedf22723a918e852ee4a59",
+      "bytes": 6858,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_formal_case.py"
+    },
+    "source/eval/inspection_formal_dispatch.py": {
+      "sha256": "a54eb94ce214a2e4782017121024a754a869d328fe89538775d8554636ba9e58",
+      "bytes": 14111,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_formal_dispatch.py"
+    },
+    "source/eval/inspection_formal_execution.py": {
+      "sha256": "08ede38138d6987142d4272448cd447929975e58ff7c3e94ae0729b0bd53e378",
+      "bytes": 10637,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_formal_execution.py"
+    },
+    "source/eval/inspection_formal_intervention.py": {
+      "sha256": "d30db3aaf1df79e5e76d934b48ea48535265e257dd7a3d4365459ba5b9a097cc",
+      "bytes": 3601,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_formal_intervention.py"
+    },
+    "source/eval/inspection_formal_namespace.py": {
+      "sha256": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+      "bytes": 4358,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_formal_namespace.py"
+    },
+    "source/eval/inspection_formal_population.py": {
+      "sha256": "5e231f1856c586fdfc2a3b8dca32b2599a71d9f009ea5a3d6daca33231a543eb",
+      "bytes": 1903,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_formal_population.py"
+    },
+    "source/eval/inspection_formal_secondary.py": {
+      "sha256": "4eaaff4106706ce244633d88d2023407b4f8cbc9e960c8cbc8ad7ba57320da26",
+      "bytes": 8642,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_formal_secondary.py"
+    },
+    "source/eval/inspection_intervention_statistics.py": {
+      "sha256": "b26803c5ed4ee82927703660b8b63c949963f8aa6f60503a820487905bc5b3ce",
+      "bytes": 7490,
+      "frozen_copy": "intervention-statistics-freeze.v1/source/eval/inspection_intervention_statistics.py"
+    },
+    "source/eval/inspection_llm_actor.py": {
+      "sha256": "cd1bf019c637d447946cba30e1e2d8572c4ff90594de4b5b2d90f49cd65ccc7b",
+      "bytes": 13363,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_llm_actor.py"
+    },
+    "source/eval/inspection_llm_episode_receipts.py": {
+      "sha256": "15ea1b686cd5a3747162bad9237f34f0340e29541a2659d6678958a08fa14bea",
+      "bytes": 14056,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_llm_episode_receipts.py"
+    },
+    "source/eval/inspection_llm_protocol.py": {
+      "sha256": "b1c2f73c3894058105cea8b3b6088128fbe44fee29bda9854423ce3c0c3d19ed",
+      "bytes": 7465,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_llm_protocol.py"
+    },
+    "source/eval/inspection_measurement_loader.py": {
+      "sha256": "4e5677a60166e92031aca2bc48d4944954ecaeb9c20cbc7c79edd7b014c0bf52",
+      "bytes": 10233,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_measurement_loader.py"
+    },
+    "source/eval/inspection_model_client.py": {
+      "sha256": "40ccd5f5f4100e4ed42a6ac22ecf35f3bc24a9db4e2b57f1826625b78afcb158",
+      "bytes": 6033,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_model_client.py"
+    },
+    "source/eval/inspection_model_receipts.py": {
+      "sha256": "f68f149960254ef9e50a47354722d7f64d83417adda26a845fb076847dab6a49",
+      "bytes": 8402,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_model_receipts.py"
+    },
+    "source/eval/inspection_model_service.py": {
+      "sha256": "22c35639ecd5f0d79127c706f7c5b23ec421bdf7afd1a2c5a2480621d154e2dc",
+      "bytes": 14400,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_model_service.py"
+    },
+    "source/eval/inspection_namespace_admission.py": {
+      "sha256": "0a8ab3868d0c5b1970a8f777d843b1977072a7080c47e65632639d71833aee37",
+      "bytes": 15296,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_namespace_admission.py"
+    },
+    "source/eval/inspection_population.py": {
+      "sha256": "afa5f70650b230fe8eff826b409e28d8d9e41a96b82435b2c92aed7fd38797fd",
+      "bytes": 20383,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_population.py"
+    },
+    "source/eval/inspection_process_cleanup.py": {
+      "sha256": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+      "bytes": 7329,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_process_cleanup.py"
+    },
+    "source/eval/inspection_recording.py": {
+      "sha256": "115ecd64a3e451e7b3ad1990215f780f6fc4939bd1c5a24eb0a642f12ea59ce9",
+      "bytes": 11383,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_recording.py"
+    },
+    "source/eval/inspection_response_diagnostics.py": {
+      "sha256": "d4cf1af0aef3a085ceffe2014cfd088e2ba836b4d80c53b6c6c3793f622b7a8f",
+      "bytes": 13459,
+      "frozen_copy": "response-resource-freeze.v2/source/eval/inspection_response_diagnostics.py"
+    },
+    "source/eval/inspection_scenarios.py": {
+      "sha256": "9048fb7b55dde1f5f262c8c60d12357259cc81c0cf9b2b22bec620cc71812638",
+      "bytes": 6201,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_scenarios.py"
+    },
+    "source/eval/inspection_secondary_recording.py": {
+      "sha256": "9af7274d93abc2018592dd7c134ace946e2b7f57c5b86dce14d7090201bf274f",
+      "bytes": 4273,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_secondary_recording.py"
+    },
+    "source/eval/inspection_secondary_statistics.py": {
+      "sha256": "b056b9d42223651c9d467ba332ee7803505bc3b7a382f69e3c83bdd197c68ab1",
+      "bytes": 3765,
+      "frozen_copy": "primary-analysis-freeze.v4/source/eval/inspection_secondary_statistics.py"
+    },
+    "source/eval/inspection_statistics.py": {
+      "sha256": "70c8783be6f6665b81b1190d6b905f4a22938445cc4c641458202bab5c710545",
+      "bytes": 11118,
+      "frozen_copy": "primary-analysis-freeze.v4/source/eval/inspection_statistics.py"
+    },
+    "source/eval/inspection_worker_runtime.py": {
+      "sha256": "bf4e0b38f1d7da98ccd559091b2b722c74ed0e6fdfd0088336ccaa441bdfc21c",
+      "bytes": 6094,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/inspection_worker_runtime.py"
+    },
+    "source/eval/prepare_inspection_development_population.py": {
+      "sha256": "9d564a45412165aab72795c9dca6cf61ad1d96f314066b0d0447e86947e5248a",
+      "bytes": 6541,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/prepare_inspection_development_population.py"
+    },
+    "source/eval/prepare_inspection_formal_execution.py": {
+      "sha256": "b7fc1391f6b43de6e5bf809122436d6858a7c3a5103f2601bd9919507d4ccd55",
+      "bytes": 4264,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/prepare_inspection_formal_execution.py"
+    },
+    "source/eval/prepare_inspection_formal_population.py": {
+      "sha256": "4bab05728bfdfead0252c00da9eb61e69e1d20bee32b3629ab2c2b90ea967451",
+      "bytes": 16890,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/prepare_inspection_formal_population.py"
+    },
+    "source/eval/run_inspection_formal.py": {
+      "sha256": "0ea0b2882ab095aede6a1aa41c3880dd81da9538aa16036e36cd680f83518f48",
+      "bytes": 12709,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/run_inspection_formal.py"
+    },
+    "source/eval/run_inspection_formal_secondary.py": {
+      "sha256": "440f17d3a98b0504b0d50c8acd005a1ad6284589d9c5b46118c21396bb57a4f5",
+      "bytes": 6973,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/run_inspection_formal_secondary.py"
+    },
+    "source/eval/run_inspection_llm_development.py": {
+      "sha256": "4d854e2bf8d1b641724d7f64d737ad2216f1abae37e384a09d1db71fe3142794",
+      "bytes": 17430,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/run_inspection_llm_development.py"
+    },
+    "source/eval/run_inspection_llm_episode.py": {
+      "sha256": "4261be147a9f67a64b0a17ef78adecbdeb32e6193d7f19a8ddd1e996e52e36cc",
+      "bytes": 18804,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/run_inspection_llm_episode.py"
+    },
+    "source/eval/run_inspection_reference.py": {
+      "sha256": "020b1c482969b6132270b970c37c5f69ceacc88960afed641b577cebab2ff5ea",
+      "bytes": 19474,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/source/eval/run_inspection_reference.py"
+    },
+    "tests/test_dataset_admission.py": {
+      "sha256": "54d8efe49319067526578c8945cef314f11034870d81abbfd4a33a855f2e75b9",
+      "bytes": 15025,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_dataset_admission.py"
+    },
+    "tests/test_development_catalog.py": {
+      "sha256": "98de52d0a8677891e2de5077e40f4a3d2797f91edd22b45148d923fbcac3aeca",
+      "bytes": 8491,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_development_catalog.py"
+    },
+    "tests/test_event_endpoints.py": {
+      "sha256": "d321f1d65e0d7f7b44dd9bc669ca8e788febd9fd0f8fc41c2308ccdc820e02e8",
+      "bytes": 10878,
+      "frozen_copy": "secondary-analysis-freeze.v5/tests/test_event_endpoints.py"
+    },
+    "tests/test_formal_analysis.py": {
+      "sha256": "6bde369fdae4c29704f41e44f8cda4aa42e1ed0fd7a2af68669376d33da49e14",
+      "bytes": 18070,
+      "frozen_copy": "response-resource-freeze.v2/tests/test_formal_analysis.py"
+    },
+    "tests/test_formal_cache.py": {
+      "sha256": "18cc9c3dd67672607ec9fabba65108010a2982c5939f6b2abd993256044dbd7b",
+      "bytes": 2997,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_cache.py"
+    },
+    "tests/test_formal_case.py": {
+      "sha256": "62312721854eb51492b3888411172a7cec808abb0975a8925bc74992c5f59fe0",
+      "bytes": 11891,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_case.py"
+    },
+    "tests/test_formal_common_calendar.py": {
+      "sha256": "eead5da20ec0d0a4e75595960492ebddf4eb6c7315458d43e4c53e3b409ea865",
+      "bytes": 4267,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_common_calendar.py"
+    },
+    "tests/test_formal_dispatch.py": {
+      "sha256": "efb452b1eac3388a9adb00bff374be69850e6a69d7f10366dc68c8a8c8626392",
+      "bytes": 5319,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_dispatch.py"
+    },
+    "tests/test_formal_event_endpoints.py": {
+      "sha256": "6a6d6362514de67d8625dce2539b266e444d9c12568b19b67ec3a6d83efa4d35",
+      "bytes": 17691,
+      "frozen_copy": "secondary-analysis-freeze.v5/tests/test_formal_event_endpoints.py"
+    },
+    "tests/test_formal_execution.py": {
+      "sha256": "7fff641cf422daf4899a4d03a89fa5077654e219ac1736ea5b20fff11730426a",
+      "bytes": 12312,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_execution.py"
+    },
+    "tests/test_formal_meter_types.py": {
+      "sha256": "749717e05bd7c08252c50c69ac67b724e010cfcaeb9a3caf9f51e316f755e46e",
+      "bytes": 1465,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_meter_types.py"
+    },
+    "tests/test_formal_model_service.py": {
+      "sha256": "3aa43013e2bf62977ea352d3857eca4083f2116e86bcd3551a734b0f55666fd0",
+      "bytes": 5102,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_model_service.py"
+    },
+    "tests/test_formal_phase_layout.py": {
+      "sha256": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb",
+      "bytes": 4067,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_phase_layout.py"
+    },
+    "tests/test_formal_population_gate.py": {
+      "sha256": "137732cc40ee6f211f05031bb9220f7b099032aef49ca73c6143f0be3625aff1",
+      "bytes": 4159,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_population_gate.py"
+    },
+    "tests/test_formal_population_writer.py": {
+      "sha256": "eef14dcfd9e73ceb8d5ff388b3d07e851135350675e0a1f8f619fa4f809fdf99",
+      "bytes": 16386,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_population_writer.py"
+    },
+    "tests/test_formal_runner.py": {
+      "sha256": "96ec23e17290481b70c3e68337aa79690038e88c8cb8f55d88cfef30823e0dd5",
+      "bytes": 9430,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_runner.py"
+    },
+    "tests/test_formal_secondary.py": {
+      "sha256": "ebf92f374f21da46bef3b4ea94860ad7f7d42ae71b7a58af1904352e04aa10d8",
+      "bytes": 4692,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_secondary.py"
+    },
+    "tests/test_formal_secondary_analysis.py": {
+      "sha256": "18a9cdb483794f39b93f099167b5c2b857974c36de25a6cedd59054eefe9a85e",
+      "bytes": 14863,
+      "frozen_copy": "response-resource-freeze.v2/tests/test_formal_secondary_analysis.py"
+    },
+    "tests/test_formal_secondary_runner.py": {
+      "sha256": "1382262ece7577494ebeec43ed443c49b8b3c040d812bb6bc62bfd0fc1a57ee9",
+      "bytes": 7635,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_secondary_runner.py"
+    },
+    "tests/test_formal_settlement.py": {
+      "sha256": "9c3c135a1348cea3dfece3a79a1b99819368f511fbd4654bd390093366299cb2",
+      "bytes": 3609,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_settlement.py"
+    },
+    "tests/test_formal_worker.py": {
+      "sha256": "ff3086d23cd3e80a3fc4b7742e70dbfcb16087c27d8ed88e78463d1b4a417f55",
+      "bytes": 5837,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_formal_worker.py"
+    },
+    "tests/test_g4_proof_boundary.py": {
+      "sha256": "1bb42f3850b20063b03e43ec1a62c034834c46c4de990d0f2a47d0af66672b12",
+      "bytes": 17458,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_g4_proof_boundary.py"
+    },
+    "tests/test_intervention_statistics.py": {
+      "sha256": "278f5feba0b660b5ccf4a83b7e2f49292f30231077ab3c3b5b6c9ca9ec076395",
+      "bytes": 4593,
+      "frozen_copy": "intervention-statistics-freeze.v1/tests/test_intervention_statistics.py"
+    },
+    "tests/test_namespace_admission.py": {
+      "sha256": "d9785bafc2145808488751ee7fbdda523b4b4c7ff7283de6b9509d288ddcd0a2",
+      "bytes": 18407,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_namespace_admission.py"
+    },
+    "tests/test_population_shared_law.py": {
+      "sha256": "5f63344c76c3a7e8e78ff6530bfa30b5e40a80823816f90d00bbf67b521bd3e7",
+      "bytes": 3607,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_population_shared_law.py"
+    },
+    "tests/test_response_diagnostics.py": {
+      "sha256": "a8f7df595ca6dee0a9d5ea4df53982f9ac709f9b2b0e999d9317d23ff162331c",
+      "bytes": 12618,
+      "frozen_copy": "response-resource-freeze.v2/tests/test_response_diagnostics.py"
+    },
+    "tests/test_secondary_recording.py": {
+      "sha256": "0595819f4013cd21f3d490740d4eb488a8d624a712f353d62d8d58d61d1aebae",
+      "bytes": 3649,
+      "frozen_copy": "secondary-consumer-runtime-freeze.v1/tests/test_secondary_recording.py"
+    }
+  },
+  "actual_logs": {
+    "planning/formal-admission-candidate.v3/response-resource-integration.v1/inspection-response-resource-focused.v1.tests.log": {
+      "sha256": "07f7dbf978c79876dd6ac3018942123a40f2d5ea56870816d6cc1641651f06a6",
+      "observed_exit_code": 0
+    },
+    "planning/formal-admission-candidate.v3/response-resource-integration.v1/inspection-response-resource-complete.v2.tests.log": {
+      "sha256": "36efd0fd69813b4c9848e0dffe04da1b2e5160496b6db2843682980c6ec2662f",
+      "observed_exit_code": 0
+    },
+    "planning/formal-admission-candidate.v3/response-resource-integration.v1/inspection-response-resource-compile.v2.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observed_exit_code": 0
+    }
+  },
+  "verification": "First48focused70.77s passed but both independent reviewers reproduced original snapshotdict shadowed by progressfloat at secondgenerated response. v2 only disambiguates variables, retains two-call anddeclined\u2192generated regressions. Actual final complete522passed137.58s/exit0,compile0. Final limited repair reviews not yet observed as frozen byroot; cannot substitute author green for those reviews.",
+  "limits": "All new software data are explicit trusted-evidence/Fake physical/native-shaped fixtures plus provided SDK, not measured formal policies. Existing actual development15callbacks recorded separately. Entire graph uninstalled; finalG4, completepilot, actualclean/20s-delay/finalsource freeze and independent integration acceptance remain; original statistics/grader/eventv5 bodies unchanged."
+}

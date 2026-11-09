@@ -1,0 +1,13 @@
+{
+  "role": "uninstalled namespace proof component v3, synthetic literal tests only",
+  "files": {
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/contract.json": "3e54d8e878467c222ae79f32994fc317501ea040b1623b7e40541b3d047b91d5",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/inspection_namespace_admission.py": "2ebd0e4b710457691a4d93f69ef9e204e30cd1a7aa3f0cd5a3856f28e229b7f9",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/namespace-tests.log": "b8b21c21693fa9a05b240c86c958532e9fa7861fb7d423ac20a44b185c363bd7",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/test_formal_phase_layout.py": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb",
+    "planning/formal-admission-candidate.v3/namespace-proof-freeze.v3/test_namespace_admission.py": "3eda5705abb1febc716c68afdf1e9a034787a671023f0dcd4df36f7b8d654ee7"
+  },
+  "unchanged_g4_fixture_helper_sha256": "191d7af54bee6062053897d40fbd5f6e81f2c639a1f455004951a073ee94dc53",
+  "unchanged_g4_proof_sha256": "c981449425a835fad40eda9bbdc47dc76d2aa0e473a26bde8312743739a1779d"
+}

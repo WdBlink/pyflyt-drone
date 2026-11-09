@@ -1,0 +1,52 @@
+{
+  "role": "one bounded unscored engineering localization, not original slot third retry or formal/policy sample",
+  "created_at": "2026-11-06T04:38:00.618858+00:00",
+  "parent_failure_archive": {
+    "path": "qualification/eight-condition-pilot-terminated.v2/binding.json",
+    "sha256": "0885e21e423528bcf66c1b8cfe2435c0963c3d4e174e2aa7c0f5c7c3be1154d8"
+  },
+  "question": "If a clock burst recurs under a fixed M1 prompt load plus unchanged B0 actor, which sleep/RPC/step/progress/publication/log stage and wall/thread/process CPU/GC intervals contain it?",
+  "protocol": {
+    "physical_case": "dev-L1-00, copied exact original bytes",
+    "seconds": 600,
+    "physics_hz": 240,
+    "control_hz": 120,
+    "clock_lag_threshold": 0.1,
+    "physics_policy": "unchanged nonLLM B0",
+    "model_workload": "all20 recorded M1 messages+seeds; serial, at original worker-before-request sim targets; actual lateness/unfinished requests recorded",
+    "model_outputs": "retained but never parsed as commands",
+    "generation_profile": "same pinned M1 profile, maxcalls20/max_total_tokens180000/input8192/output1024/soft60s/temp.2/topp.95/thinkingFalse",
+    "measurement": "preallocated30float64 fields per control tick; full72000 lag series, thread/process CPU, 16384 boundedGC events, UTC/monotonic bracket anchor; write after loop",
+    "settings": "all4thread env1, sameGC settings, sameepoch/pacer/retry/threshold; caffeinate idle assertion scoped to diagnostic supervisor PID"
+  },
+  "resource_proposal": {
+    "model_operations": 1,
+    "max_calls": 20,
+    "max_tokens": 180000,
+    "paid_API": false,
+    "new_purchased_compute": false,
+    "task_budget": {},
+    "native_usage_before": {
+      "calls": 353,
+      "tokens": 2240091,
+      "known_operations": 17
+    },
+    "native_host_capital_energy_cost": "unmetered, not0"
+  },
+  "source_files": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile.py": "aa4ff3be49bd744e19ffa7e58b03c220b34a137c1fbfc13c4374f298c0b7dd7e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_diagnostic_worker.py": "304fd96297f19a958f189bac03f7628894645e9b8107de5fb309039884884cb1",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/probe_inspection_clock_load.py": "f17ca0a0a59a2b4a022f6c1c3f210ad146256eb892c8339ea0a65922085b3366",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/tests/test_inspection_clock_profile.py": "8b5f25a88e182d460c371208d6cac38dfd8d552a53fd95665fc504d5e0d2c687"
+  },
+  "tape": {
+    "path": "qualification/clock-localization-fixed-load.v1/tape.json",
+    "sha256": "1ce4b730a025317d03eb139b3a7e092e6b4b89786128c8d351a77af84499f6c4"
+  },
+  "not_yet_run": true,
+  "limits": [
+    "Instrumented/B0 workload is not original B4 adaptive execution; missing/different burst is inconclusive.",
+    "No configuration selection or performance improvement claim from this one localization.",
+    "Original two attempts and exhausted retry cap remain failed; new full pilot only after evidence-supported repair and fresh qualification."
+  ]
+}

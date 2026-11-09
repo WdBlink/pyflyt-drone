@@ -1,0 +1,162 @@
+{
+  "role": "actual terminated new v3 development pilot; no complete valid comparison or G4 qualification",
+  "captured_at": "2026-11-06T12:29:57.853722+00:00",
+  "driver_exit_code": 1,
+  "cause": "order0 dev-L3-00/B3-M2/repeat1 two known clock failures; finite cap exhausted, no third attempt or resume",
+  "valid_callbacks": 0,
+  "actual_physical_attempts": 2,
+  "complete_independent_roots": 0,
+  "sdk": {
+    "classic": {
+      "planned": 18,
+      "statuses": {
+        "stopped": 18
+      },
+      "attempted_count": 0,
+      "execution_status": "failed",
+      "sha256": "719aa1be13b6639ecf926910cd0312f27a1df6d7285fdbc1e342b1fc2edeb719"
+    },
+    "llm": {
+      "planned": 90,
+      "statuses": {
+        "stopped": 89,
+        "failed": 1
+      },
+      "attempted_count": 1,
+      "execution_status": "failed",
+      "sha256": "1be20ab9e2e176871c103a62b976092690296276d869ae10d6bde1b52b5c2f5f"
+    },
+    "root-means": {
+      "planned": 48,
+      "statuses": {
+        "stopped": 48
+      },
+      "attempted_count": 0,
+      "execution_status": "failed",
+      "sha256": "7a60a1619e34ea3c020a7f7ec02dc5e5c18d9d19748b03fefdb7c0f1573871dd"
+    }
+  },
+  "attempts": [
+    {
+      "attempt_ordinal": 0,
+      "terminal_sha256": "7d1e1e5920df79bf2d800de1e47b146ffca9675f412fb697933d89e4d565c677",
+      "status": "known_operational_failure",
+      "Y_admitted": null,
+      "returncode": 0,
+      "physical_validation": {
+        "run_sha256": "38e9e86b151493348eb2634827d955fea345569ed759ace606bfddae16d58265",
+        "world_sha256": "7c2ede70521264531580840e22955bdfe1700a170d5244c42e4891d82f03679c",
+        "copied_case_sha256": "ae583cf527b4db9e0768231bdeaf595a20e6a344db07aabe31f0858a1a5275f3",
+        "returncode": 0,
+        "max_clock_lag_seconds": 0.4054049999685958,
+        "failure_reasons": [
+          "clock_lag_exceeded"
+        ]
+      },
+      "p95_clock_lag_seconds": 0.005993125339351479,
+      "clock_lag_over_0p1_seconds_ticks": 129,
+      "maximum_clock_lag_witness": {
+        "sim_time": 427.75,
+        "lag_seconds": 0.4054049999685958,
+        "current_step_work_seconds": 0.4034566660411656,
+        "sensor_tick": false,
+        "previous_publication_work_seconds": 1.0419171303510666e-06
+      },
+      "usage": {
+        "calls": 30,
+        "tokens": 165378
+      },
+      "cleanup_status": "closed",
+      "raw_score_preserved_not_admitted": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "sources_unchanged": true,
+      "dependencies_unchanged": true
+    },
+    {
+      "attempt_ordinal": 1,
+      "terminal_sha256": "bc07eaa791b0719f0817fc6e05c4a87616dcf2f681e9dfa67029bed8bceed745",
+      "status": "known_operational_failure",
+      "Y_admitted": null,
+      "returncode": 0,
+      "physical_validation": {
+        "run_sha256": "8419ad48df8bce5510c64e25a758521109ea7160199663fbf815ae23ecff4f08",
+        "world_sha256": "93828d66c9743bdc95d01b8a85c1475d927e4641deaf028511215386b06e5f14",
+        "copied_case_sha256": "ae583cf527b4db9e0768231bdeaf595a20e6a344db07aabe31f0858a1a5275f3",
+        "returncode": 0,
+        "max_clock_lag_seconds": 0.2103543746906098,
+        "failure_reasons": [
+          "clock_lag_exceeded"
+        ]
+      },
+      "p95_clock_lag_seconds": 0.005677832701849184,
+      "clock_lag_over_0p1_seconds_ticks": 92,
+      "maximum_clock_lag_witness": {
+        "sim_time": 287.5083333333333,
+        "lag_seconds": 0.2103543746906098,
+        "current_step_work_seconds": 0.08582545805256814,
+        "sensor_tick": false,
+        "previous_publication_work_seconds": 0.0005515000084415078
+      },
+      "usage": {
+        "calls": 30,
+        "tokens": 165378
+      },
+      "cleanup_status": "closed",
+      "raw_score_preserved_not_admitted": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "sources_unchanged": true,
+      "dependencies_unchanged": true
+    }
+  ],
+  "archives": {
+    "complete-pilot-sdk.zip": {
+      "sha256": "478587c31568ba7faac950a1126d26e11dce046c47d1798215a117668c22378c",
+      "bytes": 467907,
+      "members": 170
+    },
+    "complete-physical-attempts.zip": {
+      "sha256": "e69caefca9378a6d2b10e8b09eb4a0181b88d85ab00012f81f3a701f3248f5c9",
+      "bytes": 20196995,
+      "members": 32
+    }
+  },
+  "resource_total": {
+    "operations": 22,
+    "known_usage": {
+      "calls": 474,
+      "tokens": 3004256
+    },
+    "status_counts": {
+      "known": 22
+    },
+    "cost_host_capital_energy_unmetered": true
+  },
+  "limitation": "Max/p95/tick count and maximum witness plus1Hz progress only; no complete72000 lag/GC/rusage vector in these flights. No unique-cause inference.",
+  "software_review_concurrency": {
+    "window_UTC_from_log_metadata": [
+      "2026-11-06T12:04:48.869440Z",
+      "2026-11-06T12:05:11.772747Z"
+    ],
+    "actual_result": "63 fixture tests22.60s, tools completed before notification; overlaps early first flight. Agent reports no concentrated tests during retry.",
+    "boundary": "run.started predates model load/warmup; no UTC physical epoch recorded, do not invent exact UTC lag peaks or causal attribution."
+  },
+  "checkpoint_request": "saved inside complete SDK archive; never acknowledged because slot exhausted before next callback",
+  "paid_API_used": false,
+  "formal_namespaces_still_uninstantiated": true
+}

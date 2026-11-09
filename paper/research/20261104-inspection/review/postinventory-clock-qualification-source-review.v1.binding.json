@@ -1,0 +1,123 @@
+{
+  "schema": "independent-postinventory-clock-source-review-v1",
+  "reviewer": "/root/control_review",
+  "freeze_binding_sha256": "3d7f26115c117565bd475bafe14927567d04ef4191b056ba552cd12e1ac0f931",
+  "intent_sha256": "242dbfdf59d09546da06d60c3e9805893746e4c522d8cfc97fd852b1bdf36ef4",
+  "freeze_intent_byte_identical": true,
+  "frozen_file_count": 111,
+  "actual_frozen_sources": 107,
+  "all_frozen_input_and_current_source_hashes_match": true,
+  "normal_import": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_process_cleanup.py": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_darwin_inventory.py": "f1870d92317d5f482d5d5cc19f791fffecb23ac0fb7c777028be5e1060c59ab9"
+  },
+  "installed_reviewed_candidate_binding_sha256": "edefe19a4b4c77faa92052b6fa86ebbcc60c0eaa6f43c69a5c0c762f1f60435e",
+  "installation": {
+    "path": "qualification/process-inventory-repair-installation.v1/installation.v1.json",
+    "sha256": "a60c9754e5b0bab16a18f298a6c40240e4e6907554670a2701ffaed64f743146",
+    "before_backup_matches_old_production": true,
+    "two_installed_sources_byte_identical_to_reviewed_v2": true
+  },
+  "declared_changes_from_old63": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_process_cleanup.py": {
+      "before": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+      "after": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d"
+    },
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/run_inspection_eight_condition_pilot.py": {
+      "before": "ce911fdb7d6adc5125dac28ad2c42eeed4d579426f6ec2f446971d0f9a9e1756",
+      "after": "c14c52b0e9a7aa00336b6e69b3274d5ba0284077cf9b04c1f85fd34c2dc87b86"
+    }
+  },
+  "probe_variant_six_sources": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/probe_inspection_adaptive_clock.py": "b92e87dddbaeaa1f9fc287e2b54abbd859e4b213ed57675d801b1e2266a9f803",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_diagnostic_worker.py": "eb1c8bc91f2bedeee159066f50ec5ada037ec40ac199c5b8cd3b176290f43207",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile.py": "aa4ff3be49bd744e19ffa7e58b03c220b34a137c1fbfc13c4374f298c0b7dd7e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile_rusage.py": "43cc8ee2ddc196c01584fa0b2c079ed7871520f225dfff30a2b07e2ba3bbbe00",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_process_cleanup.py": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_darwin_inventory.py": "f1870d92317d5f482d5d5cc19f791fffecb23ac0fb7c777028be5e1060c59ab9"
+  },
+  "case": {
+    "path": "qualification/dev-cases.v2/dev-L2-00.json",
+    "sha256": "fb011f0b3960c0a730ba7e4f68c644b63aeb3c6cce0b01be2caf5c0f76ab68d3"
+  },
+  "sampler_seed": 2026110616,
+  "complete_envelope_checks": {
+    "freeze_files": 111,
+    "complete_sources": 107,
+    "preparation_sources": 103,
+    "extra_diagnostic_sources": [
+      "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile.py",
+      "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile_rusage.py",
+      "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_diagnostic_worker.py",
+      "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/probe_inspection_adaptive_clock.py"
+    ],
+    "old63_changed": {
+      "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_process_cleanup.py": {
+        "before": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+        "after": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d"
+      },
+      "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/run_inspection_eight_condition_pilot.py": {
+        "before": "ce911fdb7d6adc5125dac28ad2c42eeed4d579426f6ec2f446971d0f9a9e1756",
+        "after": "c14c52b0e9a7aa00336b6e69b3274d5ba0284077cf9b04c1f85fd34c2dc87b86"
+      }
+    },
+    "current_transport": {
+      "path": "recovery/owner-document-snapshots-v2/transport.v2.json",
+      "sha256": "2f698501f2d0504d3a7cb24dcff34cecb94aca2bce69b4db17b240ad1c609832"
+    },
+    "transport_sources": 38,
+    "preparation_slots": 108,
+    "preparation_outer": 48,
+    "condition_counts": {
+      "B3-M2": 18,
+      "B2": 6,
+      "B4-M1": 18,
+      "B3-M3": 18,
+      "B0": 6,
+      "B4-M2": 18,
+      "B3-M1": 18,
+      "B1": 6
+    }
+  },
+  "preparation": {
+    "path": "logs/inspection-eight-condition-pilot-preparation.v3",
+    "files_sha256": {
+      "preparation.json": "6a78f25b6179eb5032f2ec7bb632f53f14a3ca2652229dc70adefe1ab29cea33",
+      "source-hashes.json": "78ab9221ad5293a5a4aed06069aa04f0f2a6140aabfe4bdf0d747e5cc3e9eac2",
+      "source-files.json": "24fa5c1d5c8620eb30afcfeb393aac72c0e535f2a16a57ca4bb309140cc09c2d",
+      "input-hashes.json": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+      "prepared-episode-order.json": "27f3c27b9aace5c706ec701c749b737ffebaf06254f3abb4a170eaad23048ce6",
+      "sampler-seeds.json": "44e4003829123f7e4de8ce62c06ea48bab7c270e631ceebec358e92aa445442d"
+    },
+    "source_texts_hash_to_exact103_source_hashes": true,
+    "sources_103_subset_of107_extra4diagnostic": true,
+    "actual_dispatch_not_executed_by_reviewer": true,
+    "source_return_before_measure_and_record_matrix": true
+  },
+  "pure_Fake_tests": {
+    "path": "/tmp/inspection-postinventory-clock-source-review-v1/test_six_source_glue.py",
+    "sha256": "6e342c16b24662aae8f97b35c20f2b8be59a7981c8a2fc8083ebcd8de4e4f4f3",
+    "log_sha256": "a00d95dfbc084b6eb22229f4a5b545b4452162a59797c0faa121535a79212580",
+    "result": "4 passed in 0.04s",
+    "reused_helper_sha256": "eb4ca5e391aacb8fe470c022324ebcc65b774eeab48154aea89c43bc506cb6ae",
+    "cases": [
+      "correct six-source purpose slice admitted",
+      "missing provider rejected",
+      "wrong cleanup SHA rejected",
+      "final supervisor inventory saved and unknown cleanup retains failed status and known nonzero meter"
+    ]
+  },
+  "retained_installed_test_log": {
+    "sha256": "015c7bdd3cb3c1ad54ee5b4f2e4b76ffd136b3e319149508fe8c6a0f1abc5b93",
+    "result": "46 passed in 9.69s (existing retained log, not rerun by reviewer)"
+  },
+  "decision": "no_new_blockers_for_one_unscored_postinventory_clock_qualification_subject_to_native_reservation",
+  "open_findings": [],
+  "limits": [
+    "actual native reservation not yet made or certified by reviewer",
+    "read only current owner history transport pointer, not whole owner migration/pair/implementation re-audit",
+    "did not rerun prepare-only, models, physics, load clock, full107source semantic audit or installed46 suite",
+    "hot backend counters exclude direct global init/attach/shutdown ps calls",
+    "no old-cause, Y, full pilot, G4 or scientific/root-independence claim"
+  ]
+}

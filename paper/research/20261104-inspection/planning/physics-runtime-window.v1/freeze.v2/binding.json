@@ -1,0 +1,20 @@
+{
+  "role": "uninstalled timing-window rollback repair plus engineering worker/probe integration subject",
+  "files": {
+    "source/physics_runtime.py": "bf4e0b38f1d7da98ccd559091b2b722c74ed0e6fdfd0088336ccaa441bdfc21c",
+    "source/probe.py": "712aab6d50189376415edd56c3fbc1e0063258b7ff1a1890c6c86c3f194dfc10",
+    "source/timed_profile.py": "e4afc0073b8e5a3787da087f7cffa339328a417eceddc357ac902b4e54698526",
+    "source/timed_worker.py": "3fe5cdf40aa25d2082d5cea52d9fa9ead32f046c2af5147371ef9c624592c526",
+    "tests/test_runtime_window.py": "3ab4c3e21d8148fce8f4340e396fd5736e913e11c25b4f58ab4704ab73c87aac",
+    "tests/test_timed_profile.py": "84d4f7d49bcd2efd8ecaedef59d72b3171792796e6f0e6d7d3c4550f44231c21",
+    "tests/test_worker_adapter.py": "1fb5acb809ea2e147b9242e09d026574882136f71ae7d87144d6c710ff085c0e",
+    "inspection-runtime-window.v4.tests.log": "06cdf8bcb89efbe1e002f486792f1f4e5041790a94a9ede6adf87e5214f877f9",
+    "inspection-runtime-window.v5.tests.log": "2e7359278a3ddbcdcac04b10012e312304df9ea151a5dd23c920b9c3e3c6fa13"
+  },
+  "actual_checks": "13 passed in0.05s; native self-thread roundtrip, Fake failures, one-row telemetry cross hashes, post-start constructor rollback, final policy-error propagation, original physical while AST unchanged",
+  "v1_preserved": "freeze.v1 and independent P2 constructor metadata-fault counterexample remain unchanged",
+  "delta": "timed_profile constructor except now calls full self.stop rollback, new small worker adapter makes runtime audit errors operational failure; probe remains one unscored M2/B3/devL3/same1096691202 workload",
+  "production_installed": false,
+  "actual_candidate_600s_model_or_physics": false,
+  "limits": "Soft real-time only; GC deferred only inside isolated bounded physics worker; full load, memory/cleanup/actual policy and clock still unverified."
+}

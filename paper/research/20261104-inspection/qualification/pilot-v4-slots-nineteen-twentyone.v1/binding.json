@@ -1,0 +1,424 @@
+{
+  "role": "Actual v4 callbacks19\u201321, first3 of second development root; no formal/G4 comparison",
+  "at": "2026-11-06T21:26:33.567626+00:00",
+  "completed_callbacks": 21,
+  "planned_callbacks": 108,
+  "complete_physical_root_blocks": 1,
+  "provided_sdk_final_outer_recording_complete": false,
+  "slots": [
+    {
+      "order_index": 18,
+      "root_block_index": 1,
+      "case_id": "dev-L3-01",
+      "domain": "ID",
+      "level": 3,
+      "condition": "B4-M1",
+      "repeat_ordinal": 0,
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.009242707998055266,
+        "clock_lag_p95_seconds": 0.002809874667832446,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "reports_count": 1,
+      "world_bytes": 23175432,
+      "usage": {
+        "calls": 24,
+        "tokens": 172374
+      },
+      "decision_attempts": 26,
+      "commands_enqueued": 22,
+      "causal_join_decode_status": {
+        "decoded_not_tool_acceptance": 17,
+        "policy_format_failure": 7,
+        "ignored_noncompleted_or_late": 2
+      }
+    },
+    {
+      "order_index": 19,
+      "root_block_index": 1,
+      "case_id": "dev-L3-01",
+      "domain": "ID",
+      "level": 3,
+      "condition": "B4-M2",
+      "repeat_ordinal": 0,
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.008568666999053676,
+        "clock_lag_p95_seconds": 0.003043750332039963,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "reports_count": 0,
+      "world_bytes": 23964488,
+      "usage": {
+        "calls": 27,
+        "tokens": 175907
+      },
+      "decision_attempts": 32,
+      "commands_enqueued": 30,
+      "causal_join_decode_status": {
+        "policy_format_failure": 18,
+        "decoded_not_tool_acceptance": 9,
+        "ignored_noncompleted_or_late": 5
+      }
+    },
+    {
+      "order_index": 20,
+      "root_block_index": 1,
+      "case_id": "dev-L3-01",
+      "domain": "ID",
+      "level": 3,
+      "condition": "B3-M3",
+      "repeat_ordinal": 2,
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.008474333000776824,
+        "clock_lag_p95_seconds": 0.0023813330008124467,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "score": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "reports_count": 12,
+      "world_bytes": 21013667,
+      "usage": {
+        "calls": 22,
+        "tokens": 159244
+      },
+      "decision_attempts": 22,
+      "commands_enqueued": 71,
+      "causal_join_decode_status": {
+        "decoded_not_tool_acceptance": 21,
+        "ignored_after_episode_deadline": 1
+      }
+    }
+  ],
+  "native_budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 956,
+      "tokens": 6141839,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-002-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-008-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-011-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-013-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-014-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-015-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-016-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-017-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-018-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-019-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-020-a0": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-postinventory-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-fixed-M1-load-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-runtime-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 3369.7148862000004,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "barrier": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 21,
+    "case_id": "dev-L3-01",
+    "condition": "B3-M3",
+    "at": "2026-11-06T21:25:08.746035+00:00"
+  },
+  "bound_files": {
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-0/plan.json": {
+      "sha256": "c2444754747f821137b125fdfa21010fa477870d833b3cbc6e8fd23ea1e52749",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-0/attempt-00/terminal.json": {
+      "sha256": "85b915449ede785c13e33565ae30723f73471a1172d356a95be02b7bf56fbb26",
+      "bytes": 62611
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-0/attempt-00/flight/run.json": {
+      "sha256": "d079f1555b8abdb355a9bfe50f7af63a7409c35114946887234dd956af7a384e",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-0/attempt-00/flight/world.json": {
+      "sha256": "2875e4b42e72f6e94962beb359ee880b3e9798614a9aa783c6357dcbf446d5e3",
+      "bytes": 23175432
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-0/attempt-00/flight/private-case.json": {
+      "sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "bytes": 5405
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-018-a0/complete-attempt.zip": {
+      "sha256": "1a67360d4214ac8aea2e19a37366ed7025c86e913b344068e075f392383d3689",
+      "bytes": 10481235
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-018-a0/usage-receipt.json": {
+      "sha256": "8e22095e93f08856cf3bb04578529e740a5b1ab6d535bf01527af8ce77ddff48",
+      "bytes": 10653
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-018-a0.settle.json": {
+      "sha256": "8c0f38c544ce957d15ef50865af29dc475a171e665fec720275c6a99bdda810a",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000018.json": {
+      "sha256": "3666f1604e55c47854aed1f900c43d8b1908defe34fcdf34afce129169411298",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L3-01-B4-M1-0.json": {
+      "sha256": "7ad0ccf5b351b6ab554c08cc7eb0a4b63fd7077564c5b60dd374ea738c63fb97",
+      "bytes": 983
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M2-0/plan.json": {
+      "sha256": "3434be8fdf08c0833ad2c1dcfb15125a1280b6d33fa6c832f384820d4f7d630a",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M2-0/attempt-00/terminal.json": {
+      "sha256": "86ec44248750daa31299ed42fff01750c65e73c17250603a72aa9f030b1f6cb1",
+      "bytes": 65711
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M2-0/attempt-00/flight/run.json": {
+      "sha256": "f297a4e2a0ed4adfe1ba635ae33006aab2c3079a34a3335358e2bb054c250746",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M2-0/attempt-00/flight/world.json": {
+      "sha256": "ffac328da98a09194800ee5c6d110834e92332a8801deb3cbafaa91ededc7a7b",
+      "bytes": 23964488
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M2-0/attempt-00/flight/private-case.json": {
+      "sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "bytes": 5405
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-019-a0/complete-attempt.zip": {
+      "sha256": "e84fb960be35747df26c2175d6d09f8e3c676dd031d27b83a852fcd7374b5454",
+      "bytes": 10473388
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-019-a0/usage-receipt.json": {
+      "sha256": "ecc26ccdc1d431e5651d404ebf2d3340cedfe02e4af7a23c014826a1c6875037",
+      "bytes": 11855
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-019-a0.settle.json": {
+      "sha256": "5c713fac12f4e350024ede8c0a5441bd50f843ac71df4d120eda130a135c64f7",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000019.json": {
+      "sha256": "f7f6ba6d6cbad1d074615b7a3477c7d661df8128b222a75be888f7815db21c00",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L3-01-B4-M2-0.json": {
+      "sha256": "7383a8f1c726065ec8e8eba224b867ba30e86ceb0b1d2fded3fe3989325b46e3",
+      "bytes": 983
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-2/plan.json": {
+      "sha256": "c60870d88d9eea13e350209db41240a8f41c6d77ba8538cb0e5236a53bd5c14f",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-2/attempt-00/terminal.json": {
+      "sha256": "5e08e6c7c379f8b2f9fcedf8244414e9f542b9a2f432bd6f0fcf8e4ca4ca7693",
+      "bytes": 60577
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-2/attempt-00/flight/run.json": {
+      "sha256": "f064abce8a4e52637e0d36d7ace064c6b056cf89ea1134e48baab8d33f642629",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-2/attempt-00/flight/world.json": {
+      "sha256": "4854029f14190ee6e42d983516d15ae9605f888f0ccc9233f90f46f9db4cc18c",
+      "bytes": 21013667
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-2/attempt-00/flight/private-case.json": {
+      "sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "bytes": 5405
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-020-a0/complete-attempt.zip": {
+      "sha256": "46b3ab103202222562685225e8f9c4ef51a3bb24ea7a1a25b3ddeebd0405c101",
+      "bytes": 10326614
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-020-a0/usage-receipt.json": {
+      "sha256": "ccd6f9dc4141148c1834db9867d0bdf7134732d4cda75508cff3174d5e54ed55",
+      "bytes": 9853
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-020-a0.settle.json": {
+      "sha256": "65c3f00f4d3b1049a2551d2528e1c9f8c45174fceeefe42dd5e572ae07763626",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-pilot.v4/order-receipts/000020.json": {
+      "sha256": "cb8033737a32c313b882d7d978fddaaed66b3effe73f9755e3ec91d30153cd36",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4/llm/raw/dev-L3-01-B3-M3-2.json": {
+      "sha256": "916fbe1fe3f1e7a8a4303314bc10d4e03600e934958fe4a03845d01f95801abd",
+      "bytes": 983
+    }
+  },
+  "immutable_captures": {
+    "qualification/pilot-v4-slots-nineteen-twentyone.v1/supervisor.at-twentyone.stdout": "add4b0c6e13b81eee6e88c6827ac6ab65d7c8378b300bc327fc2a583bc50da64",
+    "qualification/pilot-v4-slots-nineteen-twentyone.v1/checkpoint-pauses.at-twentyone.jsonl": "cbb279bb0da8e649c0b8309a88a39cf30fb928c755a839f20917ea5d8ec82630",
+    "qualification/pilot-v4-slots-nineteen-twentyone.v1/native-status.at-twentyone.json": "3b816b6631cfb30190114808f59153f8fb00746dfd69cb4a11b2d29fb66423d2",
+    "qualification/pilot-v4-slots-nineteen-twentyone.v1/capture-source.py": "bbf523b888a34389870471b158a09ea38c6d429c46252ffe33907b2877827c61"
+  },
+  "limits": [
+    "One complete L1 root and partial L3 root, not population estimates or actual formal data.",
+    "Clock summaries/witness, not complete72000-phase vectors.",
+    "Cost/host/Codex/capital/energy remain unmetered."
+  ]
+}

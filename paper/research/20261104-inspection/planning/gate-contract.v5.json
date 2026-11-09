@@ -1,0 +1,211 @@
+{
+  "version": "inspection-platform-dev-v5",
+  "created_at": "2026-11-05T05:18:51.766858+00:00",
+  "role": "prospective_platform_qualification_not_formal_model_evaluation",
+  "source_plan_sha256": "dd01e21442950abccc543bb2ba4d53d1901fb2669dba21cbfe9aad7f13e591b0",
+  "G1": {
+    "roots_per_family": 20,
+    "families": {
+      "straight": 60,
+      "heading_changes": 120,
+      "loiter": 180,
+      "survey": 180,
+      "sortie_exit": 240
+    },
+    "root_role": "control parameter roots, not independent scientific road/terrain evaluation roots",
+    "success_fraction_per_family": 0.95,
+    "altitude_m": [
+      60,
+      100
+    ],
+    "airspeed_m_s": [
+      15,
+      25
+    ],
+    "bank_abs_degrees": 45,
+    "minimum_separation_m": 15,
+    "wind_max_m_s": 2,
+    "physics_hz": 240,
+    "control_hz": 120,
+    "tracking_rmse_m_after_settle": 15,
+    "tracking_max_m_after_settle": 40,
+    "settle_seconds": 20,
+    "exit_radius_error_m": 10,
+    "exit_course_error_degrees": 25,
+    "exit_dwell_seconds": 20,
+    "hard_safety_checked_each_physics_step": true,
+    "settled_course_error_degrees": 10,
+    "heading_schedule": [
+      {
+        "from": 0,
+        "degrees": 0
+      },
+      {
+        "from": 20,
+        "degrees": 45
+      },
+      {
+        "from": 60,
+        "degrees": -45
+      },
+      {
+        "from": 100,
+        "degrees": 0
+      }
+    ],
+    "flight_bounds_xy_m": {
+      "straight": 5000,
+      "heading_changes": 5000,
+      "loiter": 550,
+      "survey": 550,
+      "sortie_exit": 550
+    },
+    "sortie_exit_switch_fraction": 0.5,
+    "radius_range_m": [
+      80,
+      90
+    ],
+    "survey_half_length_range_m": [
+      220,
+      250
+    ],
+    "wind_sampling": "even roots calm; odd roots max magnitude with direction root radians",
+    "aircraft_sampling": "straight even roots 1 aircraft; all other slots 4 aircraft",
+    "root_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "G2": {
+    "checks": [
+      "coordinate and flat terrain AGL",
+      "synchronous aircraft and moving proxies",
+      "actor RPC allowlist excludes truth/seed/future/grader",
+      "immutable minted evidence and causal arrival",
+      "queued/running/terminal jobs, stale version and cancellation",
+      "nonrefundable report slots and fixed first association",
+      "static last legal received version; all hidden targets in denominator",
+      "dynamic same-measurement-time truth; prefilter then latest then correctness",
+      "late/store-forward observations; priority effective at bin start",
+      "safe exit and exogenous retirement qualification; self-caused failures not exempt"
+    ],
+    "positive_negative_fixtures_required": true
+  },
+  "G3": {
+    "reference_seconds": 600,
+    "aircraft_count": 4,
+    "main_clock": "monotonic wallclock 1x",
+    "maximum_clock_lag_seconds": 0.1,
+    "maximum_wait_advance_error_seconds": 0.1,
+    "sensor_hz": 2,
+    "trace_hz": 10,
+    "reference_minimum_Y": 0.2,
+    "reference_minimum_static_recall": 0.5,
+    "normal_sensor_inspect_position_rmse_max_m": 3,
+    "normal_sensor_confirmed_class_accuracy_min": 0.9,
+    "distractor_or_background_false_candidates_required": true,
+    "method_call_count_independent_noise": true,
+    "real_pose_fov_and_ray_occlusion": true,
+    "parallel_worlds_for_formal_run": 1,
+    "calibration_dev_only": true,
+    "actual_model_latency_not_claimed_by_sleep_probe": true,
+    "sensor_model": {
+      "survey_fov_degrees": 110,
+      "inspect_fov_degrees": 20,
+      "maximum_off_nadir_degrees": 50,
+      "local_trackers_per_aircraft": true,
+      "normal_position_sigma_m": {
+        "survey": 4,
+        "inspect": 1
+      },
+      "detection_miss_probability": 0.1,
+      "normal_class_accuracy": {
+        "survey": 0.8,
+        "inspect": 0.99
+      },
+      "normal_distractor_survey_false_candidate_probability": 0.3,
+      "background_candidate_probability_per_frame": 0.01,
+      "base_transport_seconds": 0.5,
+      "quality_threshold": 0.8,
+      "quality_survey": "camera_health * (0.95 - 0.2 * (off_nadir_degrees / 50)^2)",
+      "quality_inspect": "camera_health * 0.95",
+      "degraded_health": 0.55,
+      "degraded_noise_sigma_multiplier": 3,
+      "degraded_class_accuracy": 0.65,
+      "random_stream_key": [
+        "root",
+        "sensor_tick",
+        "aircraft",
+        "entity_internal_index",
+        "channel"
+      ],
+      "coverage_delivery": "ground ledger updates only after its immutable measured footprint packet arrives",
+      "optical_origin_body_m": [
+        0,
+        0,
+        -0.3
+      ]
+    },
+    "coordinator_block_probe_seconds": 5,
+    "coordinator_block_probe_at_seconds": 100
+  },
+  "G4": {
+    "freeze_required": [
+      "platform sources and assets",
+      "generator and dev/test/holdout family protocol",
+      "qualified physical/sensor/clock envelope",
+      "scorer, thresholds, weights, failure/retry rules",
+      "classic baselines",
+      "LLM tool/prompt/memory/budget/model versions",
+      "recording and root-paired statistical adapter",
+      "pilot evidence and concrete formal resource authorization"
+    ],
+    "no_test_exposure_before_freeze": true,
+    "no_paid_API_or_extra_compute_authorization_inferred": true
+  },
+  "reference_spec": {
+    "deadline_seconds": 600,
+    "flight_area_xy_m": [
+      -550,
+      550
+    ],
+    "roi_extent_m": 800,
+    "report_budget": 10,
+    "survey_capsule_radius_m": 80,
+    "survey_half_length_m": 250,
+    "static_anomaly_classes": 3,
+    "sensor_type": "shared structured synthetic sensor, ideal stabilized gimbal, nadir survey and causal candidate-pointed zoom inspection; not real vision",
+    "terrain": "flat z=0; AGL explicitly computed against this terrain",
+    "candidate_counts_role": "hidden generator quantities; not actor task-card fields",
+    "range_budget_m_per_aircraft": 18000,
+    "exit_range_reserve_m": 1000,
+    "success_thresholds": {
+      "C": 0.8,
+      "S": 0.6,
+      "D": 0.5,
+      "H": 1,
+      "E": 1
+    }
+  },
+  "completion_rule": "All gates need corresponding executed evidence and independent engineering review. Human domain review remains pending unless actually supplied. Missing checks are not pass.",
+  "supersedes": "gate-contract.v4.json",
+  "change_reason": "Bind optical extrinsics, exact SR component thresholds and explicit range reserve before the first 1x reference; G1 definitions unchanged."
+}
