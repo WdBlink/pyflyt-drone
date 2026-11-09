@@ -1,0 +1,49 @@
+{
+  "role": "Uninstalled secondary consumer with explicit staged test import closure; no production change",
+  "at": "2026-11-06T19:06:14.607623+00:00",
+  "baseline": {
+    "path": "secondary-analysis-freeze.v2/binding.json",
+    "sha256": "c50e74768028f747d07e6f3ee20805f6b996dfe75e79e6bc63ffa5a6e74f7bb3"
+  },
+  "members": {
+    "source/eval/analyze_inspection_formal_secondary.py": {
+      "sha256": "3756da21c9d338d415dcff4034121e81c736a6dc3966d83e4d5661d6ddde54d6",
+      "bytes": 23386
+    },
+    "source/eval/inspection_event_endpoints.py": {
+      "sha256": "988c1b25c2c792a8e184fa21f34ac40246d1b1e7805e94efc4dd692ceb9a0af3",
+      "bytes": 30084
+    },
+    "source/eval/inspection_formal_admission.py": {
+      "sha256": "508026b4d3ac69f5bd7de8cfc7e53f3343dca88e64a4cfc79c00335104f37c20",
+      "bytes": 18806
+    },
+    "source/eval/inspection_intervention_statistics.py": {
+      "sha256": "b26803c5ed4ee82927703660b8b63c949963f8aa6f60503a820487905bc5b3ce",
+      "bytes": 7490
+    },
+    "tests/test_formal_secondary_analysis.py": {
+      "sha256": "bc31fec84d014b733b89c16e12171dbbf93339f62120b4fed54bd0192c75f68c",
+      "bytes": 14658
+    },
+    "tests/test_event_endpoints.py": {
+      "sha256": "d321f1d65e0d7f7b44dd9bc669ca8e788febd9fd0f8fc41c2308ccdc820e02e8",
+      "bytes": 10878
+    },
+    "tests/test_formal_event_endpoints.py": {
+      "sha256": "9bc470d8ae71c697c84e34c2eaf6d072d4eeb872aac277d9f2503292e95bc9d7",
+      "bytes": 14881
+    },
+    "tests/test_intervention_statistics.py": {
+      "sha256": "278f5feba0b660b5ccf4a83b7e2f49292f30231077ab3c3b5b6c9ca9ec076395",
+      "bytes": 4593
+    }
+  },
+  "protocol": {
+    "path": "planning/secondary-analysis-consumer.v4.md",
+    "sha256": "f4be91e78f692698fda07373e7e6d0a693d2dd17f2b0f80c3d57d1f91830aa72"
+  },
+  "scope": "Same locked main comparator216/36 slots, exact complete SDK/physical closed bytes, descriptive scalar/common-calendar plus dual-path adoption and original-window information/recovery records. ZIP metadata/detail layout and explicit NA/censor/trace-gap. Required-source additions; pure numeric body unchanged.",
+  "pending": "All new connector/event tests and independent implementation review; response/resource diagnostics not yet wired. No G4/formal admission or actual namespace/seed/order/data effects.",
+  "verification": "v2 focused61passed28.89s. Whole suite collection then found legacy test imports cached production common_calendar without formal helper. Only fix explicit staged common_calendar load in new connector fixture. Source bytes remain equalv1/v2; actual whole suite pending."
+}

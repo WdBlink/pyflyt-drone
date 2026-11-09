@@ -1,0 +1,79 @@
+{
+  "schema": "independent-adaptive-clock-source-review-v1",
+  "reviewer": "/root/control_review",
+  "freeze_binding_sha256": "d9b07a0ffc64a687deef6404c546a5fb15cd2c2c2a27f353155b881b2f0bb328",
+  "frozen_input_count": 72,
+  "all_frozen_file_sha256_verified": true,
+  "intent_sha256": "771122d7dd7c6a430656ddee05a229add374ff5fce49364160e7dd86e3c4a94b",
+  "freeze_intent_byte_identical": true,
+  "original_scientific_sources": {
+    "count": 63,
+    "all_current_sha256_match": true,
+    "reference_worker_sha256": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+    "coordinator_sha256": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+    "closure_hash_pointer": "paper/research/20261104-inspection/planning/clock-localization-adaptive-L2.v1.json:prior_scientific_sources.hashes"
+  },
+  "variant_sources": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/probe_inspection_adaptive_clock.py": "38e0b5f43508e483b84c2d513728f6abbe0178e132d7b294e7c52966940aac99",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_diagnostic_worker.py": "eb1c8bc91f2bedeee159066f50ec5ada037ec40ac199c5b8cd3b176290f43207",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile.py": "aa4ff3be49bd744e19ffa7e58b03c220b34a137c1fbfc13c4374f298c0b7dd7e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile_rusage.py": "43cc8ee2ddc196c01584fa0b2c079ed7871520f225dfff30a2b07e2ba3bbbe00"
+  },
+  "case": {
+    "path": "qualification/dev-cases.v2/dev-L2-00.json",
+    "sha256": "fb011f0b3960c0a730ba7e4f68c644b63aeb3c6cce0b01be2caf5c0f76ab68d3"
+  },
+  "sampler_seed": 2026110616,
+  "parent_references_verified": {
+    "parent_evidence": {
+      "path": "qualification/clock-localization-fixed-load.v1/actual-diagnostic-binding.v1.json",
+      "sha256": "6d009178e08736ac5516c04dc7ffb40bf3bc3b6c068facdd3eb67e58bca9febc"
+    },
+    "independent_parent_review": {
+      "path": "review/pilot-clock-localization-evidence-review.v1.md",
+      "sha256": "43336d653403d7c44e23750e53f664d8efb6fa9f585ea02b0085f170b09e5b21"
+    }
+  },
+  "tests": {
+    "provided": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/test_inspection_clock_profile.py tests/test_inspection_clock_rusage.py",
+      "result": "20 passed in 0.02s",
+      "log_path": "/tmp/inspection-adaptive-clock-source-review-v1/provided-tests.log",
+      "log_sha256": "2293f65e6203b27ee8d501e60813d051cf5d7fbe19140591e2efd2379942a9b8"
+    },
+    "independent": {
+      "test_path": "/tmp/inspection-adaptive-clock-source-review-v1/test_dispatch_cleanup.py",
+      "test_sha256": "eb4ca5e391aacb8fe470c022324ebcc65b774eeab48154aea89c43bc506cb6ae",
+      "log_sha256": "86288ee89a493b657a4f02c2118272c4f6a9a7afa049f10741e60f3a564db934",
+      "result": "3 passed in 0.04s",
+      "cases": [
+        "instrumented-child exact M1/B4/case/sampler CLI plus actual ForkingPickler partial roundtrip",
+        "original coordinator spawn Process receives partial worker/factory; construction intercepted before service or physics starts",
+        "unknown outer cleanup rejects completed; known nonzero resource recount preserved; lag threshold exceeded remains explicit"
+      ]
+    },
+    "working_four_sources_two_tests_match_freeze": true
+  },
+  "qos_header_checked": {
+    "path": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/qos.h",
+    "sha256": "bfcfcf23501c328f5aa7f3bb39c0c8167730ab111393063c5b5fb4bd72d074f2",
+    "scope": "read-only getter signature verified; no call or scheduler setting change by this review"
+  },
+  "decision": "no_open_blockers_for_one_unscored_adaptive_development_clock_diagnostic",
+  "open_findings": [],
+  "required_execution_boundaries": [
+    "one real sufficient native development reservation; shared service preflight before model/physics",
+    "new dev-L2 engineering output, no original L1 retry/SDK slot filling or use of Y",
+    "actual durable service usage or explicit unknown; no zero imputation",
+    "source/inputs remain frozen and no concurrent CPU/model/physics work during diagnosis",
+    "pass/failure not cause localization proof, repair qualification or G4"
+  ],
+  "not_run": [
+    "MLX forward",
+    "physics",
+    "actual spawn child execution",
+    "RNG/formal geometry",
+    "real owner read/write or budget operation",
+    "counter microbenchmark or QoS probe"
+  ]
+}

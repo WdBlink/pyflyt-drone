@@ -1,0 +1,40 @@
+{
+  "role": "v3 author checks and immutable reconstruction, not G4/native acceptance",
+  "verification": {
+    "tests": "20passed13.63s/exit0",
+    "real_prepare": "Original source/clock/actor/frozen grader/model meter/known owner recount;Y.368353660488492,25calls166000tokens;no model/physics/resource effects",
+    "delta": "Before/after complete receipt directory/file/type snapshots and full fixed-reference final check; original acceptance SHA returned.",
+    "older_green_not_covering_defect": "v2 author16green preceded independent4 actualIO counterexamples, all retained"
+  },
+  "members": [
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/freeze.v3/continue_pilot.py",
+      "sha256": "bb196f6c6939d9c050eb56f1b435eee68264347093b1cf85f0556cae12101c54",
+      "bytes": 19299
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/freeze.v3/proposal.json",
+      "sha256": "c59a4e15439da55708acb84127ed02b9c7c2a0a7d962eb837a4f3c67cd742aac",
+      "bytes": 41691
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/freeze.v3/proposal.v3.stdout",
+      "sha256": "81d39cca28f59c83562603ac7227a46ffe5ac4a9973caa3a3fdaf8de1e7b95db",
+      "bytes": 209
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/freeze.v3/test_continue_pilot.py",
+      "sha256": "988afab06e2381277f8fee8c218cb52281e35e007d51cff19a20b2f733595b10",
+      "bytes": 10312
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-024.v1/freeze.v3/tests.v3.log",
+      "sha256": "5d068265ee2b262fc4c1b47851c9b4ef298f6b2559700f4671c50c065d310621",
+      "bytes": 100
+    }
+  ],
+  "source_variants": {
+    "path": "recovery/pilot-v4-cleanup-024.v1/source-variants.v1.json",
+    "sha256": "6f0c6d7d52658f16d0ec367ea06645c4902c621e78a9e1d4822f25b45ee68ca0"
+  }
+}

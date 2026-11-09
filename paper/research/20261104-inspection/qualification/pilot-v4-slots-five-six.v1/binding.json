@@ -1,0 +1,178 @@
+{
+  "role": "Actual v4 fifth/sixth callbacks only, not complete root/G4/formal comparison",
+  "at": "2026-11-06T17:03:42.120570+00:00",
+  "completed_callbacks": 6,
+  "planned_callbacks": 108,
+  "complete_roots": 0,
+  "slots": [
+    {
+      "order_index": 4,
+      "name": "dev-L1-01-B3-M2-2",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.009214166000674595,
+        "clock_lag_p95_seconds": 0.0030161250007978424,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": [],
+      "usage": {
+        "calls": 30,
+        "tokens": 163566
+      },
+      "resource_evidence": {
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-004-a0/complete-attempt.zip": "d89eba74481727c4d897ead611929c7b4d1d4adaf36241fb82c220de9a31daab",
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-004-a0/usage-receipt.json": "43d7b6fdd9a30865f71e74b5fc8f901b1347f6239f4990073c7426ab170869a0",
+        "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-004-a0.settle.json": "ac205d39fb78cda6274f453428364ffe49241e5d3d79d5c55d8c530b652dfd7c"
+      }
+    },
+    {
+      "order_index": 5,
+      "name": "classic/dev-L1-01-B0-0",
+      "attempts": 1,
+      "terminal_status": "completed",
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.009544874999846797,
+        "clock_lag_p95_seconds": 0.0031780836665689094,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "runtime_errors": []
+    }
+  ],
+  "native_budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 627,
+      "tokens": 3890237,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-002-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-004-a0": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-postinventory-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-fixed-M1-load-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-runtime-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 3092.7905453333337,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "barrier": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 6,
+    "case_id": "dev-L1-01",
+    "condition": "B3-M3",
+    "at": "2026-11-06T16:47:33.153405+00:00"
+  },
+  "bound_files": {
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/plan.json": "10cde77f4aa7c28bdb1e81bc392fc00f33d075769be4d80c5e005e7176a27bda",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/terminal.json": "5459fa4d78018a9b0aed453bafa0ab6e9ac7486b816ed414bfa347b78f4d005a",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/flight/run.json": "d083b812b6f41557545810cf543284de7820b8f8bbc30ad095e1e87004e82011",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/flight/world.json": "79ad88a145857671ad5ba02107b4734ef0de8f4e09d83b936b6e6c108e13c8cb",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/flight/private-case.json": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/plan.json": "533476f0c8d5c3ba9588e91c966b42dd8b043f09022b04fb795aca27ad45b027",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/terminal.json": "b2d80bc195b160aa7bede5e6f78fa2ec1a5bfdebfaf1916dcefd793b9c379ee8",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/flight/run.json": "b7a49ef62c9dea1cd8ee885e89b0d5ee1db8cf65886a23307b899bf5a9fce890",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/flight/world.json": "6522fb0f77ee74590e32592b1e4b16d351a19dc2bcbe363e088c8c540c150f88",
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/flight/private-case.json": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40"
+  },
+  "immutable_captures": {
+    "qualification/pilot-v4-slots-five-six.v1/supervisor.at-six.stdout": "70ff79bbe5b0a3dabcfe30275b87a2aa1b59eb6ac883c97f3c636ff3d55646bb",
+    "qualification/pilot-v4-slots-five-six.v1/checkpoint-pauses.at-six.jsonl": "8d51381d0bc0632b00dbaf08a04bd2ee630cc86a22aabebccdade1f005a93cd1",
+    "qualification/pilot-v4-slots-five-six.v1/native-status.at-six.json": "3aa6004c160427e4fda58f1a317cd68f7fe3fce21031982f8ea9a3c9743928ae"
+  },
+  "limits": "Ordinary clock max/P95/witness, not complete72000phase vector. Cost/host/Codex/capital/energy unmetered."
+}

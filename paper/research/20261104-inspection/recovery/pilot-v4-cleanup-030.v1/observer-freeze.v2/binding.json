@@ -1,0 +1,23 @@
+{
+  "role": "passive observer candidatev2, not030acceptance/caller/G4",
+  "tests": "25 passed in0.04s/exit0; see actual tests.log for measured duration",
+  "repair": "fixed write bytes SHA; private initial refs; each check rejects missing/mutated/symlink/hardlink and aliases inserted during hash window; no missing close record can borrow previous record",
+  "prior": "observer-freeze.v1 and independent actualIOrequest_changes preserved",
+  "files": [
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/observer-freeze.v2/observe_cleanup.py",
+      "sha256": "83ffb02d0582c243e33421ba0f831d754010c1cb99c70b3022b5a743d96c646c",
+      "bytes": 9702
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/observer-freeze.v2/test_observe_cleanup.py",
+      "sha256": "8a6d0f8128e59b9d93029cc573c012837dc3f97ac27a0fd70f652079a0e310d8",
+      "bytes": 13870
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/observer-freeze.v2/tests.log",
+      "sha256": "52831d01017bcdee34dc569425cbc4050bb41cb6d61325cc320d098da1c68027",
+      "bytes": 99
+    }
+  ]
+}

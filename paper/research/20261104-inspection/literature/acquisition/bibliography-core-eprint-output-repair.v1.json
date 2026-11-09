@@ -1,0 +1,54 @@
+{
+  "role": "same bounded native-output eprint repair;11verified version identifiers only",
+  "source": "literature/references.core-and-mechanisms.v1.bib",
+  "source_sha256": "5b5f73096ceed66cbfa4977e2ffbbedbe711bd3e1f452074cb260996697bf9cd",
+  "target": "literature/references.core-and-mechanisms.v2.bib",
+  "target_sha256": "bd05fa60cbdd2c0557828e237aa6c1a31d3ca77d6674e0b5de56358cabc35069",
+  "changes": [
+    {
+      "key": "MultiUAVPlat2026",
+      "eprint": "2606.31073v1"
+    },
+    {
+      "key": "MissionBench2026",
+      "eprint": "2607.22014v1"
+    },
+    {
+      "key": "ESARBench2026",
+      "eprint": "2605.01371v1"
+    },
+    {
+      "key": "Retriever2026",
+      "eprint": "2607.17213v2"
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "eprint": "2601.03281v1"
+    },
+    {
+      "key": "PhysAIBench2026",
+      "eprint": "2609.23695v1"
+    },
+    {
+      "key": "AERIAL2026",
+      "eprint": "2610.31029v1"
+    },
+    {
+      "key": "SMART2025",
+      "eprint": "2503.04798v3"
+    },
+    {
+      "key": "GRaDNav2025",
+      "eprint": "2506.14009v2"
+    },
+    {
+      "key": "PyFlyt2023",
+      "eprint": "2304.01305v1"
+    },
+    {
+      "key": "ReAct2022",
+      "eprint": "2210.03629v3"
+    }
+  ],
+  "inverse_restores_native": true
+}

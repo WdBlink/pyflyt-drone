@@ -1,0 +1,18 @@
+{
+  "role": "uninstalled read-only development identity catalog producer; no actual catalog or formal generation",
+  "scope": "Only explicitly bound dev manifests/cases. Source component acceptance is not used-input coverage acceptance.",
+  "actual_test_scope": "16pass include48old/new artifacts+5devpopulation+3clean/event variants=56artifact records, not independent roots. Oldv1invaliddev-L2-03 semantic/config retained with rejection reason; actual load still rejects. RNG functions monkeypatched to raise.",
+  "pending": "Final used-input coverage/private-origin reconciliation and actual catalog freezing remain; this component/source test is not G4 acceptance. No actual catalog artifact or formal data produced.",
+  "dependencies": {
+    "planning/formal-admission-candidate.v3/source/eval/inspection_formal_admission.py": "c981449425a835fad40eda9bbdc47dc76d2aa0e473a26bde8312743739a1779d",
+    "planning/formal-admission-candidate.v3/source/eval/inspection_namespace_admission.py": "2ebd0e4b710457691a4d93f69ef9e204e30cd1a7aa3f0cd5a3856f28e229b7f9",
+    "planning/formal-admission-candidate.v3/source/eval/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "planning/formal-admission-candidate.v3/tests/test_namespace_admission.py": "3eda5705abb1febc716c68afdf1e9a034787a671023f0dcd4df36f7b8d654ee7",
+    "planning/formal-admission-candidate.v3/tests/test_g4_proof_boundary.py": "191d7af54bee6062053897d40fbd5f6e81f2c639a1f455004951a073ee94dc53"
+  },
+  "repair_of": {
+    "path": "review/development-catalog-component-review.v1.md",
+    "sha256": "9ac6ac0df60888b12a059f7841c2b8b3e2fcf7d1ec77cbbc3e6424fbf8f3c9c3"
+  },
+  "repair": "Private read-only archived identity decoder reuses schema dataclasses and canonical digest helper, retains finite/types/dev/native seeds, but does not filter on current physical admissibility. Current executable validation is recorded as accepted/rejected metadata only. Real mission/load guards unchanged."
+}

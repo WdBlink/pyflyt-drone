@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-11-06T15:30:07.644689+00:00",
+  "identity": {
+    "title": "CognitiveDrone: A VLA Model and Evaluation Benchmark for Real-Time Cognitive Task Solving and Reasoning in UAVs",
+    "authors": [
+      "Lykov, Artem",
+      "Serpiva, Valerii",
+      "Khan, Muhammad Haris",
+      "Sautenkov, Oleg",
+      "Myshlyaev, Artyom",
+      "Tadevosyan, Grik",
+      "Yaqoot, Yasheerah",
+      "Tsetserukou, Dzmitry"
+    ],
+    "year": 2025,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2503.01378v1"
+  },
+  "url": "https://arxiv.org/abs/2503.01378v1",
+  "metadata_path": "literature/primary/cognitivedrone-v1-metadata.html",
+  "metadata_sha256": "3ffbe598150fcfbfdf14c6bc4a160573cba5e676b6699b1f86339dd6d670660c",
+  "read_path": "literature/text/cognitivedrone-v1.txt",
+  "read_sha256": "4997320b7ad1e92e33c1322fbebb13e3953e056bd9dc6053c7f406267dfc2d47",
+  "primary_html": {
+    "path": "literature/primary/cognitivedrone-v1.html",
+    "sha256": "ea64a139f0fc9f5b6371870784f146e678acbb85792a63860f80ad40e433fa54"
+  },
+  "first_publication_date": "2025/03/03",
+  "read_extent": "SectionsIII-A/B and V-A; targeted primary HTML reading, no reproduction or claimed benchmark score under our protocol.",
+  "acceptance": "Pinned arXiv version only; no conference/journal upgrade or independent reproduction.",
+  "claim": "CognitiveDrone-R1 combines a slower reasoning VLM with faster VLA control in a Gazebo/ArduPilot gate-selection benchmark. The described frequencies are approximately2Hz and10Hz. These sections establish a reasoning/control precedent, without establishing our report-deadline or inference-wait physics contract.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/cognitivedrone-v1.txt",
+      "quote": "reasoning module operates"
+    }
+  ],
+  "metadata_components": "family,given come from the primary citation_author comma ordering, not surname guessing."
+}

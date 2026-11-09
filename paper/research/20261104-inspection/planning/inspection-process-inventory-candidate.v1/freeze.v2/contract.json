@@ -1,0 +1,16 @@
+{
+  "role": "uninstalled measured infrastructure repair candidate, not a clock-cause/G4 certificate",
+  "reason": "Actual adaptive clock run spent456.28s in1734full-table observations; this is monitor wall time, not total CPU or unique cause.",
+  "behavior": "Only hot SubprocessTree.observe queries already observed process roots and recursively current children via libproc. Original full ps baseline/attach, unbound-root recovery, shutdown/orphan scans, birth comparisons, signalling and .1s wait cadence remain. Any native uncertainty falls back to full ps.",
+  "ABI": "SDK C layout136/offsets verified, Apple public libproc child wrapper returns PID counts with byte buffer argument.",
+  "primary_api_source": "https://github.com/apple-oss-distributions/xnu/blob/main/libsyscall/wrappers/libproc/libproc.c",
+  "tests": "41combined tests include15new, adding foreign-root and foreign-child fallback regressions; no actual flight/MLX",
+  "performance_result": "readonly-forest-performance.v6.json; new explicit UID guard, same controlled4process fixture20pairs; no clock/G4 certificate.",
+  "not_installed": true,
+  "future_requirements": "Independent review, actual source-amendment installation and provenance closure, one fresh post-repair instrumented qualification before a new prospective full pilot. Original v2 failed SDK never resumed.",
+  "repair_of": {
+    "path": "review/process-inventory-repair-review.v1.md",
+    "sha256": "87ed61b1ed35b3a6124d90969db7ae21a867c5848aa6d0478ecdc7868c7bf20d"
+  },
+  "repair": "Any foreign UID observed root or child explicitly raises RecordUnavailable and uses original fullPS, even when basic BSD info could be read. No foreign short-name native ownership record is adopted."
+}

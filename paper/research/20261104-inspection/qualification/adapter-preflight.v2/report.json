@@ -1,0 +1,71 @@
+{
+  "role": "synthetic_SDK_preflight_not_flight_method_or_inference_evidence",
+  "passed": true,
+  "positive": {
+    "independent_roots": 72,
+    "actual_episode_denominator": 1296,
+    "classic_episode_denominator": 216,
+    "llm_episode_denominator": 1080,
+    "outer_aggregate_rows": 576,
+    "conditions": {
+      "B0": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3-M1": 3,
+      "B3-M2": 3,
+      "B3-M3": 3,
+      "B4-M1": 3,
+      "B4-M2": 3
+    },
+    "primary_inference_ready": false
+  },
+  "operational_failure_fixture": [
+    {
+      "group": "classic",
+      "denominator": 6,
+      "attempted": 1
+    },
+    {
+      "group": "llm",
+      "denominator": 30,
+      "attempted": 0
+    },
+    {
+      "group": "root-means",
+      "denominator": 16,
+      "attempted": 0
+    }
+  ],
+  "invalid_score_fixtures_rejected": [
+    "nonfinite",
+    "out-of-range",
+    "boolean"
+  ],
+  "sources_unchanged": true,
+  "source_sha256": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/preflight_inspection_recording.py": "2339341608f4244f910ab97b8c96a70606593b4be0a65c270c175191fa0e169f",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_recording.py": "f0e7614be26c45f1103d42ae774666d37a11735afca95867c4da80ea8a497b4c",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/budget.py": "89347301003d265d30d30cc4d6f1a0952ff29f4156eb6f8463825601346f687e",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/client.py": "bfa1a918c0088f25c508bec87c69f7536aa8a2e41f06c08401df190b6f745193",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/experiments.py": "4dffd762966ef27d78fd521341aefb2145895b26ad9d382d16f04f1bab6eec02",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/exploration.py": "5bc9293976a0f00819eb59d0179747456ebf4b1e9c783bd074d416ee2de07f1f",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/planning.py": "f294697792d60744808ed90fe989b91a04eba49403a41499aca082474e7e7b0b",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/production.py": "8e8b41849893980267378fa2843af69b0f65555cac5523bfc33f7a3e37275770",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/reviewing.py": "946e00ebba3af1b38e713bdbf6c734ac2586dde0802bc09926fd2186296e2afc",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/rounds.py": "3ff7155fcee1cf4df1b65faad8044934676ed8d80349cba9748367f47fe50d8c",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/runtime.py": "5b8ae5a80bab6619d52c74bccf007373f491f9cd1364d4837a54a9c03787f5da",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/science.py": "9f7a8eecb2741f18afaccfb3da1ba33951d88c2bd4fd1983dfc1b5953649cfaf",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/user_input.py": "ce2fe872c8129afcbc73a01bea7e9f95e3e67ac1e56f6e97fbf32b8ee4b61eac",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/venue_tools.py": "df1c302c5fe0fdee876b8199dea2e31ea37890c4e2ae70d1675388d9c1e7ed58",
+    "/Users/wdblink/.codex/skills/autoresearch/paper/lib/writing.py": "c6fc673246d2304a93f6866d7fe56ee6173816afedb4cbee0cd2019a22790fe9"
+  },
+  "source_snapshot": "source-snapshot.json",
+  "source_snapshot_sha256": "730c90bb0e2b8973dc196cba7658bf26a20d3a6e4838e0597b07a15d3b709cfd",
+  "classic_best_is_placeholder_for_fixture_only": true,
+  "limitations": [
+    "no real episode traces or costs",
+    "no real generator/split validation",
+    "root-paired stratified inference and multiplicity adapter still required",
+    "no formal authorization"
+  ]
+}

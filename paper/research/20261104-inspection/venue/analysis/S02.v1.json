@@ -1,0 +1,166 @@
+{
+  "figures": [
+    {
+      "caption": "Fig. 1: LiP-LLM generates a dependency graph from a skill list and allocates the actions to multiple robots using linear programming. In the skill list generation phase, it creates a skill list from a predefined skill set to accomplish the given instructions. Next, it analyzes the skills in the skill list for precedence dependencies and generates a dependency graph. Finally, it allocates the tasks to each robot using linear programming and executes them.",
+      "claim": "技能、依赖图与线性分配被显式分开。",
+      "design_takeaway": "画清LLM与经典调度职责",
+      "evidence": "三列技能生成→依赖→任务分配",
+      "id": "S02-F1",
+      "limitations": "此图没有持续飞行时钟",
+      "number": 1,
+      "page": 2,
+      "panels": [
+        {
+          "label": "skills",
+          "question": "LLM选择可用技能揭示什么？",
+          "claim": "该示例中可直接定位：LLM选择可用技能。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第2页：LLM选择可用技能。",
+          "design_takeaway": "画清LLM与经典调度职责",
+          "limitations": "此图没有持续飞行时钟"
+        },
+        {
+          "label": "dependencies",
+          "question": "显式先后依赖图揭示什么？",
+          "claim": "该示例中可直接定位：显式先后依赖图。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第2页：显式先后依赖图。",
+          "design_takeaway": "画清LLM与经典调度职责",
+          "limitations": "此图没有持续飞行时钟"
+        },
+        {
+          "label": "allocation",
+          "question": "优化分配与执行揭示什么？",
+          "claim": "该示例中可直接定位：优化分配与执行。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第2页：优化分配与执行。",
+          "design_takeaway": "画清LLM与经典调度职责",
+          "limitations": "此图没有持续飞行时钟"
+        }
+      ],
+      "placement": "body",
+      "question": "语言推理与优化各承担什么？",
+      "type": "method_overview",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 2: Experiment environments : (a)Environment A includes two arm robots. (b)Environment B includes two arm robots and one mobile robot. (c)Environment C includes three arm robots (two in the living room and one in the kitchen) and two mobile robots.",
+      "claim": "三个场景改变机械臂、移动机器人与房间配置。",
+      "design_takeaway": "场景变化必须对应受控因素",
+      "evidence": "a双臂、b双臂加移动、c多房间",
+      "id": "S02-F2",
+      "limitations": "室内操控不等于机群巡检",
+      "number": 2,
+      "page": 5,
+      "panels": [
+        {
+          "label": "a",
+          "question": "双臂单桌揭示什么？",
+          "claim": "该示例中可直接定位：双臂单桌。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第5页：双臂单桌。",
+          "design_takeaway": "场景变化必须对应受控因素",
+          "limitations": "室内操控不等于机群巡检"
+        },
+        {
+          "label": "b",
+          "question": "双臂加移动机器人揭示什么？",
+          "claim": "该示例中可直接定位：双臂加移动机器人。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第5页：双臂加移动机器人。",
+          "design_takeaway": "场景变化必须对应受控因素",
+          "limitations": "室内操控不等于机群巡检"
+        },
+        {
+          "label": "c",
+          "question": "多房间、多臂、多移动机器人揭示什么？",
+          "claim": "该示例中可直接定位：多房间、多臂、多移动机器人。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第5页：多房间、多臂、多移动机器人。",
+          "design_takeaway": "场景变化必须对应受控因素",
+          "limitations": "室内操控不等于机群巡检"
+        }
+      ],
+      "placement": "body",
+      "question": "实验复杂度如何改变？",
+      "type": "dataset_example",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    }
+  ],
+  "tables": [
+    {
+      "caption": "TABLE I. L ANGUAGE I NSTRUCTION ’G ROUP NAME ’ REPRESENTS THE INSTRUCTION GROUP. ’D ETAIL’ PROVIDES DETAILS ABOUT EACH INSTRUCTION GROUP. ’E XAMPLE ’ SHOWS EXAMPLE OF THE INSTRUCTIONS . ’T RIAL’ IS THE NUMBER OF INSTRUCTIONS IN EACH GROUP.",
+      "claim": "四组包含基本、命名、歧义与新增对象。",
+      "design_takeaway": "预先定义任务变化与数量",
+      "evidence": "组别/细节/例子/trial列",
+      "id": "S02-T1",
+      "limitations": "语言改写不是独立物理root",
+      "number": 1,
+      "page": 5,
+      "panels": [],
+      "placement": "body",
+      "question": "指令扰动的内容与分母是什么？",
+      "type": "dataset_statistics"
+    },
+    {
+      "caption": "TABLE II.",
+      "claim": "方法优势依赖组别，指标并列。",
+      "design_takeaway": "展示质量与时间而非单个优点",
+      "evidence": "G1–G4与A/B环境的SR/SPL/Time",
+      "id": "S02-T2",
+      "limitations": "文中时间只对成功实例统计，不用于本研究主分母",
+      "number": 2,
+      "page": 6,
+      "panels": [],
+      "placement": "body",
+      "question": "不同指令组的成功、效率、时间如何权衡？",
+      "type": "main_results"
+    },
+    {
+      "caption": "TABLE III.",
+      "claim": "约束分层后保留各方法三个指标。",
+      "design_takeaway": "对硬约束分层汇报",
+      "evidence": "C1–C3与A/B环境的结果块",
+      "id": "S02-T3",
+      "limitations": "不能把SPL当真实飞行航程",
+      "number": 3,
+      "page": 6,
+      "panels": [],
+      "placement": "body",
+      "question": "机器人约束是否改变结论？",
+      "type": "main_results"
+    },
+    {
+      "caption": "TABLE IV.",
+      "claim": "成功率与过程时间的优势并不一致。",
+      "design_takeaway": "明确保留速度与成功的相反排序",
+      "evidence": "C场景L1–L3中SMART-LLM有更短过程时间",
+      "id": "S02-T4",
+      "limitations": "不能只用成功案例时间支持部署结论",
+      "number": 4,
+      "page": 7,
+      "panels": [],
+      "placement": "body",
+      "question": "更复杂指令下是否仍全面占优？",
+      "type": "main_results"
+    },
+    {
+      "caption": "TABLE V.",
+      "claim": "成功和效率提升与更高过程时间并存。",
+      "design_takeaway": "主表应同时给质量和资源代价",
+      "evidence": "C场景C1–C3表",
+      "id": "S02-T5",
+      "limitations": "预印本9页，不能视为RA-L最终页数惯例",
+      "number": 5,
+      "page": 7,
+      "panels": [],
+      "placement": "body",
+      "question": "复杂场景约束增加后表现如何？",
+      "type": "main_results"
+    }
+  ],
+  "visual_read": {
+    "pages": [
+      2,
+      5,
+      6,
+      7
+    ],
+    "method": "rendered_pdf",
+    "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。"
+  }
+}

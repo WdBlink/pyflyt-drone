@@ -1,0 +1,51 @@
+{
+  "role": "actual prepare-only source/order/sampler intent; no SDK callbacks, physical flight or model dispatch",
+  "prepared": {
+    "role": "prospective development intent only; no SDK callbacks or dispatch",
+    "episode_denominator": 108,
+    "conditions": {
+      "B0": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3-M1": 3,
+      "B3-M2": 3,
+      "B3-M3": 3,
+      "B4-M1": 3,
+      "B4-M2": 3
+    },
+    "original_classic_selection_sha256": "75f57580f0f5371d91a741fd4f9573e52192d019e9730335123a7ae67897a32e",
+    "classic_best": "B1",
+    "actual_model_generation_calls": 0,
+    "actual_physical_flights": 0
+  },
+  "source_count": 104,
+  "dependency_count": 61,
+  "input_count": 10,
+  "schedule_seed": 2026110641,
+  "sampler_master_seed": 2026110642,
+  "first_slot": {
+    "order_index": 0,
+    "root_block_index": 0,
+    "case_id": "dev-L1-01",
+    "domain": "ID",
+    "level": 1,
+    "condition": "B4-M2",
+    "repeat_ordinal": 1
+  },
+  "original_files": {
+    "logs/inspection-eight-condition-pilot-preparation.v4/preparation.json": "6a78f25b6179eb5032f2ec7bb632f53f14a3ca2652229dc70adefe1ab29cea33",
+    "logs/inspection-eight-condition-pilot-preparation.v4/input-hashes.json": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+    "logs/inspection-eight-condition-pilot-preparation.v4/source-hashes.json": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560",
+    "logs/inspection-eight-condition-pilot-preparation.v4/dependency-hashes.json": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+    "logs/inspection-eight-condition-pilot-preparation.v4/sampler-seeds.json": "e8c27d85ea56dc0e950c0bfc0dfc4e4747d9eb84ed9d8bb30136614bc05a97c1",
+    "logs/inspection-eight-condition-pilot-preparation.v4/source-files.json": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91",
+    "logs/inspection-eight-condition-pilot-preparation.v4/prepared-episode-order.json": "4e9fe5e86c0621bc7cdc2876391498432c594beddc99f26a2fbc7cecd64636cb"
+  },
+  "archive": {
+    "path": "qualification/pilot-source-preparation.v4/prepared-source-order-only.zip",
+    "sha256": "34c132aff4dc8ff65ae4f92c6aca9b35e9fdd46bb4c32dc4e09c75cdd6d0115c",
+    "bytes": 407484,
+    "members": 8
+  },
+  "source_delta": "Reviewed helper copied unchanged into production; runtime lifecycle/inventories/audit guard delta under independent review; no flight/GO yet."
+}

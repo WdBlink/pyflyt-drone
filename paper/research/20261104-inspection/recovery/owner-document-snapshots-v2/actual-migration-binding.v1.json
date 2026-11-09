@@ -1,0 +1,18 @@
+{
+  "role": "actual same-owner migration and exact preservation at closed round27/order9 gate; no scientific qualification",
+  "files": {
+    "recovery/owner-document-snapshots-v2/gate.actual.v1.json": "571120da3cd749465e08e9254fb02621a88056a5be491ce03f3636e8f668f334",
+    "recovery/owner-document-snapshots-v2/migration-packet.actual.v1.json": "ea834dfc8a51ae539467a7bb76a98aea150a0d5ec6ea49cb20f5a6ee32a39662",
+    "recovery/owner-document-snapshots-v2/migration-result.actual.v1.json": "247c5d2d39c7c4a952046498570446fb4cc04e5be7f6a4545ee0c2d4e5ef40a7",
+    "recovery/owner-document-snapshots-v2/migration-replay.actual.v1.json": "c92b7865e02ea6c0f7a44f64b169f2c9d29b9e6ea971c71b1ec31d91f39d808e",
+    "recovery/owner-document-snapshots-v2/post-migration-validation.actual.v1.json": "3eff369689361e845a604915b0719aefd4c8f10cbc38a6322ce982a4b7d522da",
+    "recovery/owner-document-snapshots-v2/control.json.before": "0717fa0caece83ad8722afbea4cfb99e43957d7499f2569698888c0a1785d5ef",
+    "recovery/owner-document-snapshots-v2/checkpoint.json.before": "e1af8389ae3d58f9aaf79c4c1165fc84e605fb06542e73bd564afc9eb55a554f",
+    "recovery/owner-document-snapshots-v2/control.json.after": "3243ae9ce5b4e68166c7823fe39ec653e020ffcddc7b8153e816127af2ace170",
+    "recovery/owner-document-snapshots-v2/independent-review.v2.json": "41ba66d4c08fc15174e0ca14189631ca35642bc97f462ad9581bf07d6b729639",
+    "recovery/owner-document-snapshots-v2/transport.v2.json": "2f698501f2d0504d3a7cb24dcff34cecb94aca2bce69b4db17b240ad1c609832",
+    "recovery/owner-document-snapshots-v2/prior-research.py": "5ca105c6a26cd631ca6c5cd70a1698677b23b924a0f26a0579a349607121d7a0",
+    "recovery/owner-document-snapshots-v2/compat-research.py": "bc7e2c0496b215d422b3913da21dcf7283cf8b647c1d4a059350d55cdd6324f5",
+    "recovery/owner-document-snapshots-v2/ACTIVE_CONTROLLER.before.md": "89403b9440b4339d855ff8f389fedb2acc2de05655b6502e0493a6f9ea3925c2"
+  }
+}

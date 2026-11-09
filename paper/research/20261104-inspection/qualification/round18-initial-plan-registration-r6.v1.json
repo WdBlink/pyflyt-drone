@@ -1,0 +1,49 @@
+{
+  "round_id": "round-18",
+  "original_plan_sha256": null,
+  "current_plan_sha256": "553c47c76cd9d8a9c1229db7f63a582295ab1e261b5a0f9572af33fc57aa0930",
+  "verdict": "disclosed_deviation",
+  "scope": "Explicit disclosure of initial plan registration during a round that began before any accepted plan. No scientific promise was removed or changed; this is not a G4 waiver or an outcome-driven amendment.",
+  "disclosure": "Round18 began with original_plan=null. Normal sole-owner plan acceptance now registers the same10 visual obligations already present in the original19-item approvedBrief and unchanged preexisting venue-calibrated figure/table file; plan_diff therefore reports10added,0removed,0changed. The research commitments remain the original19, with strings losslessly represented as lists.",
+  "original_visual_plan_file_sha256_unchanged_since_budget": "553c47c76cd9d8a9c1229db7f63a582295ab1e261b5a0f9572af33fc57aa0930",
+  "same_original_requirement_ids": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "M1",
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+  ],
+  "current_visual_ids": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+  ],
+  "evidence": [
+    "review/initial-research-plan-repair-review.v1.md",
+    "review/brief-schema-repair-review.v1.md",
+    "qualification/initial-plan-admission.v1.json"
+  ],
+  "no_weakening": true,
+  "current_G4": "needs_work"
+}

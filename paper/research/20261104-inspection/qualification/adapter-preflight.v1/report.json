@@ -1,0 +1,46 @@
+{
+  "role": "synthetic_SDK_preflight_not_flight_method_or_inference_evidence",
+  "passed": true,
+  "positive": {
+    "independent_roots": 72,
+    "actual_episode_denominator": 1296,
+    "classic_episode_denominator": 216,
+    "llm_episode_denominator": 1080,
+    "outer_aggregate_rows": 576,
+    "conditions": {
+      "B0": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3-M1": 3,
+      "B3-M2": 3,
+      "B3-M3": 3,
+      "B4-M1": 3,
+      "B4-M2": 3
+    },
+    "primary_inference_ready": false
+  },
+  "operational_failure_fixture": [
+    {
+      "group": "classic",
+      "denominator": 6,
+      "attempted": 1
+    },
+    {
+      "group": "llm",
+      "denominator": 30,
+      "attempted": 0
+    },
+    {
+      "group": "root-means",
+      "denominator": 16,
+      "attempted": 0
+    }
+  ],
+  "classic_best_is_placeholder_for_fixture_only": true,
+  "limitations": [
+    "no real episode traces or costs",
+    "no real generator/split validation",
+    "root-paired stratified inference and multiplicity adapter still required",
+    "no formal authorization"
+  ]
+}

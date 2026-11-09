@@ -1,0 +1,24 @@
+{
+  "role": "bounded development profiling intent, not new policy/model/clock qualification or implementation choice",
+  "expected_allowed_claim": "An instrumented non-realtime execution replay can locate synchronous GC overlapping a slow mission step; one replay cannot establish a live1x cause, speedup or preferred configuration.",
+  "input": "logs/inspection-eight-condition-dev-flights.v2/dev-L1-00-B3-M3-0/attempt-00/flight",
+  "actual_prior_clock_witness": {
+    "sim_time": 406.0,
+    "max_clock_lag_seconds": 0.11925233295187354,
+    "current_step_work_seconds": 0.11834158294368535,
+    "sensor_tick": true
+  },
+  "helper": "eval/profile_inspection_replay_gc.py",
+  "helper_sha256": "bbbb8b0a8476defb5f70d8e05dece248189ce597159fcaf5f3a7a131fb009948",
+  "before_run": "fresh between-episode acknowledgement, no active model/physics; record host load/18cores and four thread vars1",
+  "measurement": "mission.step wall time and gc callback intervals; exact full execution replay must pass or timing is unusable",
+  "limitations": [
+    "One instrumented replay only; no faster/slower verdict or config selection.",
+    "Freeze the preexisting original JSON/input heap to exclude double-ledger GC traversal; this is diagnostic and differs from production.",
+    "Derive only absent classic-replayer layout/seed fields from verified original dev input; preserve original files/hash and explicit derivation record.",
+    "No GC disabling or hot patch of frozen pilot source.",
+    "Any later configuration choice needs repeated interleaved controlled evidence plus actual1x/model integration and independent review."
+  ],
+  "live_source_changed": false,
+  "actual_generation_calls": 0
+}

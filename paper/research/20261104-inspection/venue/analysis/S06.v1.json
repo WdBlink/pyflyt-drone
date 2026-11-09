@@ -1,0 +1,90 @@
+{
+  "figures": [
+    {
+      "caption": "Fig. 1. Cooperative search and rescue in various environments. Vectors represent robots’ abilities and rescue tasks’ requirements, with each element indicating possession of a unique skill from relaying, sensing, bandaging, or obstacle removal, respectively. Schedules of robots are shown as arrows.",
+      "claim": "救援对象的能力需求与机器人类型对应。",
+      "design_takeaway": "业务任务与资源匹配共同画出",
+      "evidence": "能力图标和当前/未来路线",
+      "id": "S06-F1",
+      "limitations": "概念图不证明真实救灾效用",
+      "number": 1,
+      "page": 1,
+      "panels": [],
+      "placement": "body",
+      "question": "任务为什么需要异构协作？",
+      "type": "teaser"
+    },
+    {
+      "caption": "Fig. 2. Network structure used in this work. It follows an encoder-decoder structure where the status of agents and tasks such as trait vectors and trait requirements are ﬁrst processed by a group of agent encoder, task encoder and cross encoder to build context and generate glimpses of the whole system. These features are then used by the decoder to output a policy (i.e., a probability distribution over all tasks).",
+      "claim": "双编码与交互注意力用于下一任务选择。",
+      "design_takeaway": "共享数据与调度决策分开",
+      "evidence": "代理/任务图到策略解码的结构",
+      "id": "S06-F2",
+      "limitations": "本论文不需复现该网络作为唯一强基线",
+      "number": 2,
+      "page": 5,
+      "panels": [],
+      "placement": "body",
+      "question": "任务与机器人依赖如何进入调度？",
+      "type": "method_overview"
+    },
+    {
+      "caption": "Fig. 3. Makespan of the current solution throughout CTAS-D’s optimization process, compared to our ﬁnal solutions, in MA-AT scenarios with 25 agents (5 species) and 20 tasks (left) and 30 tasks (right). Our approach quickly yields high-performance solutions (see legend), which remain drastically better than",
+      "claim": "快速策略与长时间优化的优势随时间变化。",
+      "design_takeaway": "固定截止比较，避免只报无限时最优",
+      "evidence": "20/30任务两子图的makespan—time曲线",
+      "id": "S06-F3",
+      "limitations": "优化可最终更优，不能宣称学习策略处处占优",
+      "number": 3,
+      "page": 7,
+      "panels": [
+        {
+          "label": "left",
+          "question": "20任务的优化质量/耗时揭示什么？",
+          "claim": "在20任务例子中，长时间优化最终可超过快速策略的解质量。",
+          "evidence": "实际查看PDF第7页：20任务的优化质量/耗时。",
+          "design_takeaway": "固定截止比较，避免只报无限时最优",
+          "limitations": "优化可最终更优，不能宣称学习策略处处占优"
+        },
+        {
+          "label": "right",
+          "question": "30任务的优化质量/耗时揭示什么？",
+          "claim": "在30任务例子中也必须区分固定截止质量与最终收敛质量。",
+          "evidence": "实际查看PDF第7页：30任务的优化质量/耗时。",
+          "design_takeaway": "固定截止比较，避免只报无限时最优",
+          "limitations": "优化可最终更优，不能宣称学习策略处处占优"
+        }
+      ],
+      "placement": "body",
+      "question": "优化耗时与最终质量是什么关系？",
+      "type": "analysis_plot",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 4. Aerial robotic validation on a cooperative search mission, where agents of different species (shown as ﬂying at different altitudes) dynamically form/disband coalitions to cooperatively search speciﬁc locations (tasks).",
+      "claim": "不同高度标识机型，锥体标识任务。",
+      "design_takeaway": "物理能力演示与主统计分开",
+      "evidence": "六机室内搜索照片",
+      "id": "S06-F4",
+      "limitations": "照片不等于完整episode安全率",
+      "number": 4,
+      "page": 8,
+      "panels": [],
+      "placement": "body",
+      "question": "能否实际形成/解散任务协作组？",
+      "type": "qualitative_comparison"
+    }
+  ],
+  "tables": [],
+  "visual_read": {
+    "pages": [
+      1,
+      5,
+      6,
+      7,
+      8
+    ],
+    "method": "rendered_pdf",
+    "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。"
+  }
+}

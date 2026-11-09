@@ -1,0 +1,196 @@
+{
+  "identities": [
+    {
+      "key": "MultiUAVPlat2026",
+      "authors": [
+        "Zhang, Sheng",
+        "Li, Qinglin",
+        "Zang, Yuechao",
+        "Huang, Xueqin",
+        "Fu, Yijia",
+        "Zhu, Cheng"
+      ],
+      "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+      "year": 2026
+    },
+    {
+      "key": "MissionBench2026",
+      "authors": [
+        "Navaratnarajah, Suman",
+        "Kim, Taehyoung",
+        "Ruthardt, Jona",
+        "Bhimwal, Ishaan",
+        "Yamada, Ryousuke",
+        "Blei, Yannik",
+        "Burgard, Wolfram",
+        "Asano, Yuki M"
+      ],
+      "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+      "year": 2026
+    },
+    {
+      "key": "ESARBench2026",
+      "authors": [
+        "Zhang, Daoxuan",
+        "Chen, Ping",
+        "Zhou, Jianyi",
+        "Yang, Shuo"
+      ],
+      "title": "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue",
+      "year": 2026
+    },
+    {
+      "key": "Retriever2026",
+      "authors": [
+        "Zhao, Linfeng",
+        "Huang, Haojie",
+        "Mao, Jiayuan",
+        "Liu, Weiyu",
+        "Kochenderfer, Mykel",
+        "Wong, Lawson L. S."
+      ],
+      "title": "Retriever: Composing the Perception-Reasoning-Action Loop for Long-Horizon Manipulation",
+      "year": 2026
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "authors": [
+        "Ferrag, Mohamed Amine",
+        "Lakas, Abderrahmane",
+        "Debbah, Merouane"
+      ],
+      "title": "α³-Bench: A Unified Benchmark of Safety, Robustness, and Efficiency for LLM-Based UAV Agents over 6G Networks",
+      "year": 2026
+    },
+    {
+      "key": "PhysAIBench2026",
+      "authors": [
+        "Ferrag, Mohamed Amine",
+        "Debbah, Merouane",
+        "Lakas, Abderrahmane",
+        "Perumkunnil, Manu",
+        "Tihanyi, Norbert"
+      ],
+      "title": "PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI",
+      "year": 2026
+    },
+    {
+      "key": "AERIAL2026",
+      "authors": [
+        "Nunes, Diana",
+        "Amorim, Ricardo",
+        "Ribeiro, Pedro",
+        "Coelho, André",
+        "Campos, Rui"
+      ],
+      "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
+      "year": 2026
+    },
+    {
+      "key": "SMART2025",
+      "authors": [
+        "Yan, Jingtian",
+        "Li, Zhifei",
+        "Kang, William",
+        "Zheng, Kevin",
+        "Zhang, Yulun",
+        "Chen, Zhe",
+        "Zhang, Yue",
+        "Harabor, Daniel",
+        "Smith, Stephen F.",
+        "Li, Jiaoyang"
+      ],
+      "title": "Advancing MAPF Toward the Real World: A Scalable Multi-Agent Realistic Testbed (SMART)",
+      "year": 2025
+    },
+    {
+      "key": "GRaDNav2025",
+      "authors": [
+        "Chen, Qianzhong",
+        "Gao, Naixiang",
+        "Huang, Suning",
+        "Low, JunEn",
+        "Chen, Timothy",
+        "Sun, Jiankai",
+        "Schwager, Mac"
+      ],
+      "title": "GRaD-Nav++: Vision-Language Model Enabled Visual Drone Navigation with Gaussian Radiance Fields and Differentiable Dynamics",
+      "year": 2025
+    },
+    {
+      "key": "PyFlyt2023",
+      "authors": [
+        "Tai, Jun Jet",
+        "Wong, Jim",
+        "Innocente, Mauro",
+        "Horri, Nadjim",
+        "Brusey, James",
+        "Phang, Swee King"
+      ],
+      "title": "PyFlyt -- UAV Simulation Environments for Reinforcement Learning Research",
+      "year": 2023
+    },
+    {
+      "key": "ReAct2022",
+      "authors": [
+        "Yao, Shunyu",
+        "Zhao, Jeffrey",
+        "Yu, Dian",
+        "Du, Nan",
+        "Shafran, Izhak",
+        "Narasimhan, Karthik",
+        "Cao, Yuan"
+      ],
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "year": 2022
+    },
+    {
+      "key": "TypeFly2023",
+      "authors": [
+        "Chen, Guojun",
+        "Yu, Xiaojing",
+        "Ling, Neiwen",
+        "Zhong, Lin"
+      ],
+      "title": "TypeFly: Flying Drones with Large Language Model",
+      "year": 2023
+    },
+    {
+      "key": "CognitiveDrone2025",
+      "authors": [
+        "Lykov, Artem",
+        "Serpiva, Valerii",
+        "Khan, Muhammad Haris",
+        "Sautenkov, Oleg",
+        "Myshlyaev, Artyom",
+        "Tadevosyan, Grik",
+        "Yaqoot, Yasheerah",
+        "Tsetserukou, Dzmitry"
+      ],
+      "title": "CognitiveDrone: A VLA Model and Evaluation Benchmark for Real-Time Cognitive Task Solving and Reasoning in UAVs",
+      "year": 2025
+    },
+    {
+      "key": "RaceVLA2025",
+      "authors": [
+        "Serpiva, Valerii",
+        "Lykov, Artem",
+        "Myshlyaev, Artyom",
+        "Khan, Muhammad Haris",
+        "Abdulkarim, Ali Alridha",
+        "Sautenkov, Oleg",
+        "Tsetserukou, Dzmitry"
+      ],
+      "title": "RaceVLA: VLA-based Racing Drone Navigation with Human-like Behaviour",
+      "year": 2025
+    }
+  ],
+  "source_hashes": {},
+  "meaning": "Formatting and explicit name components only; source verification and citation support remain separate",
+  "artifacts": [
+    "literature/references.core-and-backward.v1.bib"
+  ],
+  "hashes": {
+    "literature/references.core-and-backward.v1.bib": "3f91c77c46e3e19c872b36a6641ea158ac48471614f6956ce9870427e9ccd1c3"
+  }
+}

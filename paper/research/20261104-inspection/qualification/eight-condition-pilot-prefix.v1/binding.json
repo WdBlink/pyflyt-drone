@@ -1,0 +1,74 @@
+{
+  "role": "live SDK immutable completed prefix and declared denominator; not final results or inference",
+  "copied_file_sha256": {
+    "episode-order.json": "78968fe5a399a0685855b38aa3b6be7adab9bf47f4971b3d2194796d0d3a8da9",
+    "source-hashes.json": "66d58f35ae2ce290938710eeda6fe69ff11d85a3ee20c5d9fd0c3260e6dbf2db",
+    "input-hashes.json": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+    "dependency-hashes.json": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+    "sampler-seeds.json": "d062f65ce5b84d894edf3d3da25e915c9ea990171abadc7d7f8c13f386f5ac44",
+    "classic/design.json": "ccd3bf023f9a1ffe79da468a696e9f056f5f1675b8592bd9a6b9fc1307994f5f",
+    "llm/design.json": "0aa6f7374d7259709d011ff10f91aec81129a4c00c4885b940ec0a93eac7f05f",
+    "root-means/design.json": "848d1fa7eaa64fb0ddc1ae0bb0d56afe4a0bceb9437b403f7cc55c2dfcc86a0a",
+    "order-receipts/000000.json": "d8e42a120a910757fbe521720dd1a0584664aff9190c4692992dfb1dff6ab6ce",
+    "order-receipts/000001.json": "c86fd26946ef4e64752505f628b45508cffc28b4e63b9e3611d6e9ac4d67c7a0",
+    "llm/raw/dev-L1-00-B3-M3-0.json": "875a3c8a02ae9d25cac11fb5cfcd5c5bca30c8e0094402c7624ab86682b8becc",
+    "llm/raw/dev-L1-00-B3-M2-2.json": "2bab36e218bf16c46351426bed96abf19e9b1d24cf02bb04c69b90db06d046fa",
+    "checkpoint-pauses.jsonl": "8ea42597a331c63eef254d42a1bf065f0b527a1f9cecaa9f3c7317eb785f5359"
+  },
+  "planned_episode_denominator": 108,
+  "completed_callbacks": [
+    0,
+    1
+  ],
+  "independent_roots_completed": 0,
+  "checkpoint_ack": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 2,
+    "case_id": "dev-L1-00",
+    "condition": "B3-M1",
+    "at": "2026-11-05T23:27:23.551026+00:00"
+  },
+  "SDK_results_not_yet_written": "provided SDK emits results on finish/exit; no invented interim SDK rows",
+  "budget_at_ack": {
+    "limits": {},
+    "known_usage": {
+      "calls": 82,
+      "tokens": 474862,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 2051.3065528833336,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "G4": "needs_work"
+}

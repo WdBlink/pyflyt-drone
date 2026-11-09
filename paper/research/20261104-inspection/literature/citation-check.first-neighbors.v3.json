@@ -1,0 +1,7 @@
+{
+  "issues": [
+    "literature: search result IDs must be a list"
+  ],
+  "status": "fail",
+  "validation": "record_integrity_not_external_truth"
+}

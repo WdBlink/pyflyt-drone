@@ -1,0 +1,34 @@
+{
+  "role": "Root scientific scope judgment for literature-stage adoption, not paper/G4/human completion",
+  "at": "2026-11-06T16:20:29.615504+00:00",
+  "verified_citations": 16,
+  "subject_packet_before_wrapper": {
+    "path": "literature/packet.sixteen.v1.json",
+    "sha256": "45ddced9f0ea7be022861e9adecec091084305d0e2d4175f27d2d8220d39e3b3"
+  },
+  "native_citation_check": {
+    "path": "literature/citation-check.sixteen.v1.json",
+    "sha256": "92e141ed7b508ee6159edbca630e0338b6ac1faddd3eeb75c269e2df4a9b7740",
+    "actual_status": "pass",
+    "validation": "record_integrity_not_external_truth"
+  },
+  "bounded_independent_reports": {
+    "review/first-neighbor-citation-records-review.v1.md": "77cd8a93153d80424f0cf5748961083872a214b5b6083e69b513a7697fc37599",
+    "review/smart-gradnav-mechanism-citation-review.v1.md": "15b6daef542a4ef91326f1dce8e51f2c921b41e85269488c3f394cb9472a98d0",
+    "review/core-method-citation-review.v1.md": "6aad69737ee8bfd8fa189de433a40aee206010f49a8a4ed4266a35b6f87829e9",
+    "review/backward-three-literature-review.v1.md": "ec62d2fb1f1eecdbc69b4006248699cd9b9df82e38ba282ec4437bdf227618f5",
+    "review/statistical-primary-reading-review.v1.md": "26835da70ae9d47c441083831342de0bef040ce56cc1cce9e1dfbadc1f7ec14c"
+  },
+  "wrapper_delta": "Catalog v2 changes only historical scope text, not16 identities/claims/source spans/plan/verification/bib. Adds frozen independent review/evidence and bounded unified mechanism matrix from already reviewed source claims. All earlier schemas/HTTP failures/bib variants preserved.",
+  "scientific_limits": [
+    "Directed read extents only; no full reproduction or exhaustive novelty claim.",
+    "ArXiv identities kept pinned preprints; no unsupported acceptance upgrades.",
+    "Clock-while-model-waits remains unknown for neighbors where not proved; unknown is not absence.",
+    "Structured-sensor inspection differs from pixel/VLA tasks; no cross-platform score comparison.",
+    "Statistics guarantee conditional on independent bounded root differences/fixed design; shared-host output independence not proved.",
+    "Holm original text read through damaged mirror OCR; official identity verified; no local original-PDF visual/fulltext or verified DOI claim.",
+    "G4 still needs complete108 pilot, actualclean/delay integration and finalfreeze/independent acceptance.",
+    "No actual main/holdout namespace/seed/order/data/results or manuscript drafting."
+  ],
+  "preparation_note": "Initial bounded path collector rejected an overlong prose value before packet creation. No stage committed on that failed preparation; final collector accepts explicit run-relative source-path prefixes only."
+}

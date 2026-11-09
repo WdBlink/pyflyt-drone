@@ -1,0 +1,1717 @@
+{
+  "repository": "https://github.com/uditgoenka/autoresearch",
+  "revision": "7bddd056dfd0b0ded8360588d8101b1ecb5c0baa",
+  "target_previous_revision": "01b3f10ee7725ce04247b8ffc99e70b539bb67d4",
+  "files": [
+    {
+      "path": ".agents/plugins/marketplace.json",
+      "mode": "100644",
+      "git_blob": "8e8be3a93a6f0911cf3d703df4f597e39c5d6e8e"
+    },
+    {
+      "path": ".agents/skills/autoresearch/SKILL.md",
+      "mode": "100644",
+      "git_blob": "ac379c79f0654a8e2afcaeb9365193c600c98e6a"
+    },
+    {
+      "path": ".agents/skills/autoresearch/agents/openai.yaml",
+      "mode": "100644",
+      "git_blob": "3500edde8f8e3d4178765c703da82a61d42d2a78"
+    },
+    {
+      "path": ".agents/skills/autoresearch/autoresearch.md",
+      "mode": "100644",
+      "git_blob": "13c4e825e26adf4241df087c49cd8ef364744aa3"
+    },
+    {
+      "path": ".agents/skills/autoresearch/debug.md",
+      "mode": "100644",
+      "git_blob": "9b02f45fc9860c2bebf27a4b911b54f83f34ff84"
+    },
+    {
+      "path": ".agents/skills/autoresearch/evals.md",
+      "mode": "100644",
+      "git_blob": "84a8575bfe2914de7ec80bdd714ecfaa38d5dcaa"
+    },
+    {
+      "path": ".agents/skills/autoresearch/fix.md",
+      "mode": "100644",
+      "git_blob": "4587e57eb60b64430c32b1465e11e64052213ad6"
+    },
+    {
+      "path": ".agents/skills/autoresearch/improve.md",
+      "mode": "100644",
+      "git_blob": "4a8e29dac47a85f19b1d0f023d510edbb99ec1b1"
+    },
+    {
+      "path": ".agents/skills/autoresearch/learn.md",
+      "mode": "100644",
+      "git_blob": "30941545ec8ba16bebedc61b717f858aa9cb60a4"
+    },
+    {
+      "path": ".agents/skills/autoresearch/plan.md",
+      "mode": "100644",
+      "git_blob": "7065f4ed3248d35676e5e0e72b5c59e0fef89160"
+    },
+    {
+      "path": ".agents/skills/autoresearch/predict.md",
+      "mode": "100644",
+      "git_blob": "f8cf7a0a619c7d764fd1ba0807ac47484b3dcf2e"
+    },
+    {
+      "path": ".agents/skills/autoresearch/probe.md",
+      "mode": "100644",
+      "git_blob": "a717e412fde4bd1ff0dca52ecda49fdbdaaed38c"
+    },
+    {
+      "path": ".agents/skills/autoresearch/reason.md",
+      "mode": "100644",
+      "git_blob": "d766759c511af0331865e9ce8da0c970ff59745c"
+    },
+    {
+      "path": ".agents/skills/autoresearch/references/behavior-preserving-optimization.md",
+      "mode": "100644",
+      "git_blob": "d3271cf2789c6112f58f75cb02788aa997a87f3e"
+    },
+    {
+      "path": ".agents/skills/autoresearch/references/fork-and-flush.md",
+      "mode": "100644",
+      "git_blob": "acbb5c557948cfc46c82bbefe5f626271cb5f1d2"
+    },
+    {
+      "path": ".agents/skills/autoresearch/references/orchestrator-routing.md",
+      "mode": "100644",
+      "git_blob": "e1636dabe272d34483f5e9ab4c23be752b7e4565"
+    },
+    {
+      "path": ".agents/skills/autoresearch/references/predict-personas.md",
+      "mode": "100644",
+      "git_blob": "383e2379cdac2d226ca4e5c8fb135053cfd9c393"
+    },
+    {
+      "path": ".agents/skills/autoresearch/references/reason-judge-protocol.md",
+      "mode": "100644",
+      "git_blob": "7f5e70611056a381b6649691feb13f952e854746"
+    },
+    {
+      "path": ".agents/skills/autoresearch/references/security-checklist.md",
+      "mode": "100644",
+      "git_blob": "c1dedecfbdaa10510c1048ab846505a437026a7d"
+    },
+    {
+      "path": ".agents/skills/autoresearch/regression.md",
+      "mode": "100644",
+      "git_blob": "5267924dfccadfeb5ce3065dbdc0832ae4793663"
+    },
+    {
+      "path": ".agents/skills/autoresearch/scenario.md",
+      "mode": "100644",
+      "git_blob": "4963bdda4555849f71554e2d07b9431598d852f9"
+    },
+    {
+      "path": ".agents/skills/autoresearch/scripts/orchestrate.sh",
+      "mode": "100755",
+      "git_blob": "e3ac336e37ca3f11f800a951cd18e3ae7fd889f0"
+    },
+    {
+      "path": ".agents/skills/autoresearch/scripts/score-regression.sh",
+      "mode": "100755",
+      "git_blob": "f79bcfd5996b6310f34ccb2db2e4c522d00a3852"
+    },
+    {
+      "path": ".agents/skills/autoresearch/security.md",
+      "mode": "100644",
+      "git_blob": "1214472b3c99ac702ab3cb756ad83a535a199871"
+    },
+    {
+      "path": ".agents/skills/autoresearch/ship.md",
+      "mode": "100644",
+      "git_blob": "ed105d3634691cf3694371de3fecd39433f694d5"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "git_blob": "d43f147669cc94e8e70feea215f09b4e18429acc"
+    },
+    {
+      "path": ".claude/commands/autoresearch.md",
+      "mode": "100644",
+      "git_blob": "5946b55c46f54a292ae570e36e10aad040e587f0"
+    },
+    {
+      "path": ".claude/commands/autoresearch/debug.md",
+      "mode": "100644",
+      "git_blob": "457dd67454c90d20acd6b5ab111daf98253e1290"
+    },
+    {
+      "path": ".claude/commands/autoresearch/evals.md",
+      "mode": "100644",
+      "git_blob": "51e481badd5a817b8f180cab66ada5c53d8c008e"
+    },
+    {
+      "path": ".claude/commands/autoresearch/fix.md",
+      "mode": "100644",
+      "git_blob": "5b13072e516fc33e0896da3179fbe8447ada8407"
+    },
+    {
+      "path": ".claude/commands/autoresearch/improve.md",
+      "mode": "100644",
+      "git_blob": "b715953e60ee7cd2d228ffe34f32ddd612cb8c5f"
+    },
+    {
+      "path": ".claude/commands/autoresearch/learn.md",
+      "mode": "100644",
+      "git_blob": "9c40a7bb628ee1b5b7d4ab4eae851bbd3f0728cd"
+    },
+    {
+      "path": ".claude/commands/autoresearch/plan.md",
+      "mode": "100644",
+      "git_blob": "81500c88b8fd633fe519fa55c4c0dffe904ce84d"
+    },
+    {
+      "path": ".claude/commands/autoresearch/predict.md",
+      "mode": "100644",
+      "git_blob": "2ccbd0714e971f499cfd8765103c921e632d708a"
+    },
+    {
+      "path": ".claude/commands/autoresearch/probe.md",
+      "mode": "100644",
+      "git_blob": "6b604a7bce72fefd2a12747199178a894436d264"
+    },
+    {
+      "path": ".claude/commands/autoresearch/reason.md",
+      "mode": "100644",
+      "git_blob": "fed9ad8028649c41b49d87adf1367aff20757c0c"
+    },
+    {
+      "path": ".claude/commands/autoresearch/regression.md",
+      "mode": "100644",
+      "git_blob": "8aa045992b35a54182c2138e6bfe6fb59c5d0bc7"
+    },
+    {
+      "path": ".claude/commands/autoresearch/scenario.md",
+      "mode": "100644",
+      "git_blob": "d57b9fcc08181f5c54a4b9b2fb53964fe4a4301b"
+    },
+    {
+      "path": ".claude/commands/autoresearch/security.md",
+      "mode": "100644",
+      "git_blob": "9e2d55454becbb3c5606a2606644146fbfc8cf46"
+    },
+    {
+      "path": ".claude/commands/autoresearch/ship.md",
+      "mode": "100644",
+      "git_blob": "564b3b7e511af7f751b6a4add605cc59f475b983"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/.ckignore",
+      "mode": "100644",
+      "git_blob": "f90aada3ff755100627f784a4f4edfd934951077"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/dangerous-cmd-block.cjs",
+      "mode": "100644",
+      "git_blob": "450b9c9b5b871731fd76722ed90191c06f30346e"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/dev-rules-reminder.cjs",
+      "mode": "100644",
+      "git_blob": "013b1d66aee7a21d7f84737bf10dc4282d68bd59"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/hooks.json",
+      "mode": "100644",
+      "git_blob": "7c37c4e6685784fc5443afef0a5219378c91643a"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/iteration-context.cjs",
+      "mode": "100644",
+      "git_blob": "d049e0a9cfab2cc2a10af7d52737534b375b6cc9"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/lib/ar-hook-utils.cjs",
+      "mode": "100644",
+      "git_blob": "e7f9bab76cb4c49f68e955a580439a28bcc749d6"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/lib/ignore.cjs",
+      "mode": "100644",
+      "git_blob": "f48c44aacbf7a9fdac595c177c220b542535b78b"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/node-hook-runner.sh",
+      "mode": "100755",
+      "git_blob": "4e495c3c3d10e3437fbfae1abebe05365911478e"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/privacy-block.cjs",
+      "mode": "100644",
+      "git_blob": "291358d0d789e5c16ee38b9466b378e3751bc141"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/run-marker.cjs",
+      "mode": "100644",
+      "git_blob": "9afef04d8260bf7ebf0a015879d6374726adf5c8"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/scout-block.cjs",
+      "mode": "100644",
+      "git_blob": "194c8e687dd98931d3b5175c00f033472c9b6e1a"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/session-init.cjs",
+      "mode": "100644",
+      "git_blob": "9c9d468a7bbae4fa7cd158abcce4c5ce6ee33e66"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/simplify-gate.cjs",
+      "mode": "100644",
+      "git_blob": "08f64075b1813abe0e650d366e5865678ace8cc0"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/stop-notify.cjs",
+      "mode": "100644",
+      "git_blob": "a55b6a8f7448fcbc76a3c58e2c26d95023f334aa"
+    },
+    {
+      "path": ".claude/hooks/autoresearch/subagent-context.cjs",
+      "mode": "100644",
+      "git_blob": "0f0cb1bdf8fa2c02712441ff955687c0c24ab1b3"
+    },
+    {
+      "path": ".claude/skills/.env.example",
+      "mode": "100644",
+      "git_blob": "fe5a0c5773db45847c00923274a6642636974e85"
+    },
+    {
+      "path": ".claude/skills/autoresearch/SKILL.md",
+      "mode": "100644",
+      "git_blob": "d32d849199e180d64848b1bfafb7a025aa437ab7"
+    },
+    {
+      "path": ".claude/skills/autoresearch/references/behavior-preserving-optimization.md",
+      "mode": "100644",
+      "git_blob": "d3271cf2789c6112f58f75cb02788aa997a87f3e"
+    },
+    {
+      "path": ".claude/skills/autoresearch/references/fork-and-flush.md",
+      "mode": "100644",
+      "git_blob": "acbb5c557948cfc46c82bbefe5f626271cb5f1d2"
+    },
+    {
+      "path": ".claude/skills/autoresearch/references/orchestrator-routing.md",
+      "mode": "100644",
+      "git_blob": "e1636dabe272d34483f5e9ab4c23be752b7e4565"
+    },
+    {
+      "path": ".claude/skills/autoresearch/references/predict-personas.md",
+      "mode": "100644",
+      "git_blob": "383e2379cdac2d226ca4e5c8fb135053cfd9c393"
+    },
+    {
+      "path": ".claude/skills/autoresearch/references/reason-judge-protocol.md",
+      "mode": "100644",
+      "git_blob": "7f5e70611056a381b6649691feb13f952e854746"
+    },
+    {
+      "path": ".claude/skills/autoresearch/references/security-checklist.md",
+      "mode": "100644",
+      "git_blob": "c1dedecfbdaa10510c1048ab846505a437026a7d"
+    },
+    {
+      "path": ".claude/skills/autoresearch/scripts/orchestrate.sh",
+      "mode": "100755",
+      "git_blob": "e3ac336e37ca3f11f800a951cd18e3ae7fd889f0"
+    },
+    {
+      "path": ".claude/skills/autoresearch/scripts/score-regression.sh",
+      "mode": "100755",
+      "git_blob": "f79bcfd5996b6310f34ccb2db2e4c522d00a3852"
+    },
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "git_blob": "6313b56c57848efce05faa7aa7e901ccfc2886ea"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "git_blob": "ad437582cebb634d73a11c34ee2576f6c4952cb0"
+    },
+    {
+      "path": ".github/preprgate/hard-phases.json",
+      "mode": "100644",
+      "git_blob": "b0289b60031005137af016456a92c500dd7d8337"
+    },
+    {
+      "path": ".github/preprgate/preprgate-lib.sh",
+      "mode": "100644",
+      "git_blob": "a94ddc3ed1efd3c3c40ee5f5cd88602dd53d8211"
+    },
+    {
+      "path": ".github/preprgate/react-health.mjs",
+      "mode": "100755",
+      "git_blob": "7f8788271c224e56b9a0e70d6ee354d05ceab222"
+    },
+    {
+      "path": ".github/preprgate/render-evidence.mjs",
+      "mode": "100755",
+      "git_blob": "84fef25229444bd82f753c8fafea8e37867d576f"
+    },
+    {
+      "path": ".github/preprgate/run-checks.sh",
+      "mode": "100755",
+      "git_blob": "35b0ba5406fa5ba54eff922edf3400be44674c29"
+    },
+    {
+      "path": ".github/workflows/preprgate-evidence.yml",
+      "mode": "100644",
+      "git_blob": "419b8daf84cd1d86e5895f1fba8d450cb66e2743"
+    },
+    {
+      "path": ".github/workflows/release-readiness.yml",
+      "mode": "100644",
+      "git_blob": "8bc1c6991770d9186f827906e03ddf1780cdd9ab"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "git_blob": "478662e887860d351f51f9fc91682a2a8b951d38"
+    },
+    {
+      "path": ".muse/skills/autoresearch/SKILL.md",
+      "mode": "100644",
+      "git_blob": "c5857dfea93f8f5b48e852f196788b83cc2051be"
+    },
+    {
+      "path": ".muse/skills/autoresearch/autoresearch.md",
+      "mode": "100644",
+      "git_blob": "13c4e825e26adf4241df087c49cd8ef364744aa3"
+    },
+    {
+      "path": ".muse/skills/autoresearch/debug.md",
+      "mode": "100644",
+      "git_blob": "9b02f45fc9860c2bebf27a4b911b54f83f34ff84"
+    },
+    {
+      "path": ".muse/skills/autoresearch/evals.md",
+      "mode": "100644",
+      "git_blob": "84a8575bfe2914de7ec80bdd714ecfaa38d5dcaa"
+    },
+    {
+      "path": ".muse/skills/autoresearch/fix.md",
+      "mode": "100644",
+      "git_blob": "4587e57eb60b64430c32b1465e11e64052213ad6"
+    },
+    {
+      "path": ".muse/skills/autoresearch/improve.md",
+      "mode": "100644",
+      "git_blob": "9af54d68af423f5d4bbdd7fd34da7799e493ff45"
+    },
+    {
+      "path": ".muse/skills/autoresearch/learn.md",
+      "mode": "100644",
+      "git_blob": "30941545ec8ba16bebedc61b717f858aa9cb60a4"
+    },
+    {
+      "path": ".muse/skills/autoresearch/plan.md",
+      "mode": "100644",
+      "git_blob": "e41ac8a84255d7e34a8c87762415cf0fab7b240f"
+    },
+    {
+      "path": ".muse/skills/autoresearch/predict.md",
+      "mode": "100644",
+      "git_blob": "f8cf7a0a619c7d764fd1ba0807ac47484b3dcf2e"
+    },
+    {
+      "path": ".muse/skills/autoresearch/probe.md",
+      "mode": "100644",
+      "git_blob": "a717e412fde4bd1ff0dca52ecda49fdbdaaed38c"
+    },
+    {
+      "path": ".muse/skills/autoresearch/reason.md",
+      "mode": "100644",
+      "git_blob": "d766759c511af0331865e9ce8da0c970ff59745c"
+    },
+    {
+      "path": ".muse/skills/autoresearch/references/behavior-preserving-optimization.md",
+      "mode": "100644",
+      "git_blob": "d3271cf2789c6112f58f75cb02788aa997a87f3e"
+    },
+    {
+      "path": ".muse/skills/autoresearch/references/fork-and-flush.md",
+      "mode": "100644",
+      "git_blob": "acbb5c557948cfc46c82bbefe5f626271cb5f1d2"
+    },
+    {
+      "path": ".muse/skills/autoresearch/references/orchestrator-routing.md",
+      "mode": "100644",
+      "git_blob": "e1636dabe272d34483f5e9ab4c23be752b7e4565"
+    },
+    {
+      "path": ".muse/skills/autoresearch/references/predict-personas.md",
+      "mode": "100644",
+      "git_blob": "383e2379cdac2d226ca4e5c8fb135053cfd9c393"
+    },
+    {
+      "path": ".muse/skills/autoresearch/references/reason-judge-protocol.md",
+      "mode": "100644",
+      "git_blob": "7f5e70611056a381b6649691feb13f952e854746"
+    },
+    {
+      "path": ".muse/skills/autoresearch/references/security-checklist.md",
+      "mode": "100644",
+      "git_blob": "c1dedecfbdaa10510c1048ab846505a437026a7d"
+    },
+    {
+      "path": ".muse/skills/autoresearch/regression.md",
+      "mode": "100644",
+      "git_blob": "5267924dfccadfeb5ce3065dbdc0832ae4793663"
+    },
+    {
+      "path": ".muse/skills/autoresearch/scenario.md",
+      "mode": "100644",
+      "git_blob": "4963bdda4555849f71554e2d07b9431598d852f9"
+    },
+    {
+      "path": ".muse/skills/autoresearch/scripts/orchestrate.sh",
+      "mode": "100755",
+      "git_blob": "e3ac336e37ca3f11f800a951cd18e3ae7fd889f0"
+    },
+    {
+      "path": ".muse/skills/autoresearch/scripts/score-regression.sh",
+      "mode": "100755",
+      "git_blob": "f79bcfd5996b6310f34ccb2db2e4c522d00a3852"
+    },
+    {
+      "path": ".muse/skills/autoresearch/security.md",
+      "mode": "100644",
+      "git_blob": "1214472b3c99ac702ab3cb756ad83a535a199871"
+    },
+    {
+      "path": ".muse/skills/autoresearch/ship.md",
+      "mode": "100644",
+      "git_blob": "ed105d3634691cf3694371de3fecd39433f694d5"
+    },
+    {
+      "path": ".opencode/agents/docs-manager.md",
+      "mode": "100644",
+      "git_blob": "313f39eb346b146c4bfc3a810a11c7e6d60554b4"
+    },
+    {
+      "path": ".opencode/commands/autoresearch.md",
+      "mode": "100644",
+      "git_blob": "308ddf4ef89b940e3a0df96d3d769c096b91a23f"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_debug.md",
+      "mode": "100644",
+      "git_blob": "e00e1fa7a5759d0a04e574e0c2c2d4cf8c396bba"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_evals.md",
+      "mode": "100644",
+      "git_blob": "6465086b4a3aaf73045c1b900c67b2db893839e2"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_fix.md",
+      "mode": "100644",
+      "git_blob": "f12a15fc2cbb0d81652b409f3721f987cde0790f"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_improve.md",
+      "mode": "100644",
+      "git_blob": "1c54ff8ddd63c73a74113d27700293e02fee4480"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_learn.md",
+      "mode": "100644",
+      "git_blob": "3deb839177852f67dab747132b3b0906cfc0d678"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_plan.md",
+      "mode": "100644",
+      "git_blob": "706aa916d1c494ef6a8e32e1a6e4742ec96d4fba"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_predict.md",
+      "mode": "100644",
+      "git_blob": "372fe7a533502910d2a93e0e12f35955b751b1b6"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_probe.md",
+      "mode": "100644",
+      "git_blob": "4db45b5be1c79111f13f6d9a6f10090363276a32"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_reason.md",
+      "mode": "100644",
+      "git_blob": "33213ff7e74c084252bc1e63a0548b5810be4f72"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_regression.md",
+      "mode": "100644",
+      "git_blob": "35b6332ad8b74100b091d91d8612b1fafdd8c93e"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_scenario.md",
+      "mode": "100644",
+      "git_blob": "250afa1a6967000e573768258518e0ad1f7d5805"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_security.md",
+      "mode": "100644",
+      "git_blob": "bc544bfe4445fc3a0058c2199f757608dda5c185"
+    },
+    {
+      "path": ".opencode/commands/autoresearch_ship.md",
+      "mode": "100644",
+      "git_blob": "7ffb9d57e2b07a13f5bc7b650fcca6436302267e"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/SKILL.md",
+      "mode": "100644",
+      "git_blob": "a85eb6adbf6d3eac9d941bc73b25e6b2cb5375d6"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/references/behavior-preserving-optimization.md",
+      "mode": "100644",
+      "git_blob": "d3271cf2789c6112f58f75cb02788aa997a87f3e"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/references/fork-and-flush.md",
+      "mode": "100644",
+      "git_blob": "acbb5c557948cfc46c82bbefe5f626271cb5f1d2"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/references/orchestrator-routing.md",
+      "mode": "100644",
+      "git_blob": "e1636dabe272d34483f5e9ab4c23be752b7e4565"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/references/predict-personas.md",
+      "mode": "100644",
+      "git_blob": "383e2379cdac2d226ca4e5c8fb135053cfd9c393"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/references/reason-judge-protocol.md",
+      "mode": "100644",
+      "git_blob": "7f5e70611056a381b6649691feb13f952e854746"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/references/security-checklist.md",
+      "mode": "100644",
+      "git_blob": "c1dedecfbdaa10510c1048ab846505a437026a7d"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/scripts/orchestrate.sh",
+      "mode": "100755",
+      "git_blob": "e3ac336e37ca3f11f800a951cd18e3ae7fd889f0"
+    },
+    {
+      "path": ".opencode/skills/autoresearch/scripts/score-regression.sh",
+      "mode": "100755",
+      "git_blob": "f79bcfd5996b6310f34ccb2db2e4c522d00a3852"
+    },
+    {
+      "path": ".openqodex/.gitignore",
+      "mode": "100644",
+      "git_blob": "814c4394a4905f601da931b981338bde6337a0a0"
+    },
+    {
+      "path": ".openqodex/config.yaml",
+      "mode": "100644",
+      "git_blob": "0e68969025bbcd068fe9ec2ef7530ce6c6b0e531"
+    },
+    {
+      "path": ".openqodex/custom-instructions.md",
+      "mode": "100644",
+      "git_blob": "e02ad382eae495448177ed7e5343284cc23cc725"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "git_blob": "fc13a431560659331cf8e2392fadca362447b4d5"
+    },
+    {
+      "path": "COMPARISON.md",
+      "mode": "100644",
+      "git_blob": "3a48cd05de6c84d8546871a19d5856c1114c2c0d"
+    },
+    {
+      "path": "CONTEXT.md",
+      "mode": "100644",
+      "git_blob": "b4b2e7e5da9c1fe9a630faaab583961179decc96"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "git_blob": "54f06f35745ec9b02cf14ba8bb267c90dbfa6d7a"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "git_blob": "faeff86b0a3a8ebf9cbc42e825a3f3b7034cd893"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "git_blob": "f71583de38dae9ec7c8acda85921010d3e83cfe6"
+    },
+    {
+      "path": "claude-plugin/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "git_blob": "8e8c6202350747274e5ab552c09cd482028e8b47"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch.md",
+      "mode": "100644",
+      "git_blob": "5946b55c46f54a292ae570e36e10aad040e587f0"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/debug.md",
+      "mode": "100644",
+      "git_blob": "457dd67454c90d20acd6b5ab111daf98253e1290"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/evals.md",
+      "mode": "100644",
+      "git_blob": "51e481badd5a817b8f180cab66ada5c53d8c008e"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/fix.md",
+      "mode": "100644",
+      "git_blob": "5b13072e516fc33e0896da3179fbe8447ada8407"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/improve.md",
+      "mode": "100644",
+      "git_blob": "b715953e60ee7cd2d228ffe34f32ddd612cb8c5f"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/learn.md",
+      "mode": "100644",
+      "git_blob": "9c40a7bb628ee1b5b7d4ab4eae851bbd3f0728cd"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/plan.md",
+      "mode": "100644",
+      "git_blob": "81500c88b8fd633fe519fa55c4c0dffe904ce84d"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/predict.md",
+      "mode": "100644",
+      "git_blob": "2ccbd0714e971f499cfd8765103c921e632d708a"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/probe.md",
+      "mode": "100644",
+      "git_blob": "6b604a7bce72fefd2a12747199178a894436d264"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/reason.md",
+      "mode": "100644",
+      "git_blob": "fed9ad8028649c41b49d87adf1367aff20757c0c"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/regression.md",
+      "mode": "100644",
+      "git_blob": "8aa045992b35a54182c2138e6bfe6fb59c5d0bc7"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/scenario.md",
+      "mode": "100644",
+      "git_blob": "d57b9fcc08181f5c54a4b9b2fb53964fe4a4301b"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/security.md",
+      "mode": "100644",
+      "git_blob": "9e2d55454becbb3c5606a2606644146fbfc8cf46"
+    },
+    {
+      "path": "claude-plugin/commands/autoresearch/ship.md",
+      "mode": "100644",
+      "git_blob": "564b3b7e511af7f751b6a4add605cc59f475b983"
+    },
+    {
+      "path": "claude-plugin/hooks/.ckignore",
+      "mode": "100644",
+      "git_blob": "f90aada3ff755100627f784a4f4edfd934951077"
+    },
+    {
+      "path": "claude-plugin/hooks/dangerous-cmd-block.cjs",
+      "mode": "100644",
+      "git_blob": "450b9c9b5b871731fd76722ed90191c06f30346e"
+    },
+    {
+      "path": "claude-plugin/hooks/dev-rules-reminder.cjs",
+      "mode": "100644",
+      "git_blob": "013b1d66aee7a21d7f84737bf10dc4282d68bd59"
+    },
+    {
+      "path": "claude-plugin/hooks/hooks.json",
+      "mode": "100644",
+      "git_blob": "7c37c4e6685784fc5443afef0a5219378c91643a"
+    },
+    {
+      "path": "claude-plugin/hooks/iteration-context.cjs",
+      "mode": "100644",
+      "git_blob": "d049e0a9cfab2cc2a10af7d52737534b375b6cc9"
+    },
+    {
+      "path": "claude-plugin/hooks/lib/ar-hook-utils.cjs",
+      "mode": "100644",
+      "git_blob": "e7f9bab76cb4c49f68e955a580439a28bcc749d6"
+    },
+    {
+      "path": "claude-plugin/hooks/lib/ignore.cjs",
+      "mode": "100644",
+      "git_blob": "f48c44aacbf7a9fdac595c177c220b542535b78b"
+    },
+    {
+      "path": "claude-plugin/hooks/node-hook-runner.sh",
+      "mode": "100755",
+      "git_blob": "4e495c3c3d10e3437fbfae1abebe05365911478e"
+    },
+    {
+      "path": "claude-plugin/hooks/privacy-block.cjs",
+      "mode": "100644",
+      "git_blob": "291358d0d789e5c16ee38b9466b378e3751bc141"
+    },
+    {
+      "path": "claude-plugin/hooks/run-marker.cjs",
+      "mode": "100644",
+      "git_blob": "9afef04d8260bf7ebf0a015879d6374726adf5c8"
+    },
+    {
+      "path": "claude-plugin/hooks/scout-block.cjs",
+      "mode": "100644",
+      "git_blob": "194c8e687dd98931d3b5175c00f033472c9b6e1a"
+    },
+    {
+      "path": "claude-plugin/hooks/session-init.cjs",
+      "mode": "100644",
+      "git_blob": "9c9d468a7bbae4fa7cd158abcce4c5ce6ee33e66"
+    },
+    {
+      "path": "claude-plugin/hooks/simplify-gate.cjs",
+      "mode": "100644",
+      "git_blob": "08f64075b1813abe0e650d366e5865678ace8cc0"
+    },
+    {
+      "path": "claude-plugin/hooks/stop-notify.cjs",
+      "mode": "100644",
+      "git_blob": "a55b6a8f7448fcbc76a3c58e2c26d95023f334aa"
+    },
+    {
+      "path": "claude-plugin/hooks/subagent-context.cjs",
+      "mode": "100644",
+      "git_blob": "0f0cb1bdf8fa2c02712441ff955687c0c24ab1b3"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/SKILL.md",
+      "mode": "100644",
+      "git_blob": "d32d849199e180d64848b1bfafb7a025aa437ab7"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/references/behavior-preserving-optimization.md",
+      "mode": "100644",
+      "git_blob": "d3271cf2789c6112f58f75cb02788aa997a87f3e"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/references/fork-and-flush.md",
+      "mode": "100644",
+      "git_blob": "acbb5c557948cfc46c82bbefe5f626271cb5f1d2"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/references/orchestrator-routing.md",
+      "mode": "100644",
+      "git_blob": "e1636dabe272d34483f5e9ab4c23be752b7e4565"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/references/predict-personas.md",
+      "mode": "100644",
+      "git_blob": "383e2379cdac2d226ca4e5c8fb135053cfd9c393"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/references/reason-judge-protocol.md",
+      "mode": "100644",
+      "git_blob": "7f5e70611056a381b6649691feb13f952e854746"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/references/security-checklist.md",
+      "mode": "100644",
+      "git_blob": "c1dedecfbdaa10510c1048ab846505a437026a7d"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/scripts/orchestrate.sh",
+      "mode": "100755",
+      "git_blob": "e3ac336e37ca3f11f800a951cd18e3ae7fd889f0"
+    },
+    {
+      "path": "claude-plugin/skills/autoresearch/scripts/score-regression.sh",
+      "mode": "100755",
+      "git_blob": "f79bcfd5996b6310f34ccb2db2e4c522d00a3852"
+    },
+    {
+      "path": "context7.json",
+      "mode": "100644",
+      "git_blob": "d1f27e6be1d520fde86a7c292fa725d8ab4b45f0"
+    },
+    {
+      "path": "docs/changelog.md",
+      "mode": "100644",
+      "git_blob": "b55663a0420935915562bffbaf2535313fa11b0a"
+    },
+    {
+      "path": "docs/code-standards.md",
+      "mode": "100644",
+      "git_blob": "54fb77182fe8e2fee2a59b2f092a3975c1705623"
+    },
+    {
+      "path": "docs/codebase-summary.md",
+      "mode": "100644",
+      "git_blob": "8fb5fa1be154ae151005032798d56c8252310065"
+    },
+    {
+      "path": "docs/development-roadmap.md",
+      "mode": "100644",
+      "git_blob": "1e81da8847c76fa1c34cb3e060f78c2d3392dda6"
+    },
+    {
+      "path": "docs/project-changelog.md",
+      "mode": "100644",
+      "git_blob": "47a636bf1df9b4e64b2ed7c08d8831abcecfa2d8"
+    },
+    {
+      "path": "docs/project-overview-pdr.md",
+      "mode": "100644",
+      "git_blob": "8ea6c7c84e887f3e3f19184cf38ef0c4ff6f762d"
+    },
+    {
+      "path": "docs/system-architecture.md",
+      "mode": "100644",
+      "git_blob": "0ad47fe8b28fb0768f62b74eeab6ef41e1d51797"
+    },
+    {
+      "path": "guide/README.md",
+      "mode": "100644",
+      "git_blob": "40972c69d373a263651d086173224c793ea2a793"
+    },
+    {
+      "path": "guide/advanced-patterns.md",
+      "mode": "100644",
+      "git_blob": "c20f4d3251915021d1c67b7d19a54d8170c615a0"
+    },
+    {
+      "path": "guide/autoresearch-codex.md",
+      "mode": "100644",
+      "git_blob": "e045e3c82f975dfcebd319e5c15e60458f18a993"
+    },
+    {
+      "path": "guide/autoresearch-debug.md",
+      "mode": "100644",
+      "git_blob": "daa3a0e41d046c340734cb3713cce9baa258f054"
+    },
+    {
+      "path": "guide/autoresearch-evals.md",
+      "mode": "100644",
+      "git_blob": "f9387eb76c34b51c4c1b41086573c0f26d958d4d"
+    },
+    {
+      "path": "guide/autoresearch-fix.md",
+      "mode": "100644",
+      "git_blob": "b09cae71112e3e512661c86aa9a92567f8523753"
+    },
+    {
+      "path": "guide/autoresearch-improve.md",
+      "mode": "100644",
+      "git_blob": "cda4dcbd9bea70cde49cf7df5123441be70e07b5"
+    },
+    {
+      "path": "guide/autoresearch-learn.md",
+      "mode": "100644",
+      "git_blob": "93fb1600348ec34a7cc0cd50cad8eeb063b42870"
+    },
+    {
+      "path": "guide/autoresearch-orchestrator.md",
+      "mode": "100644",
+      "git_blob": "00707e3ad26b13014cbc11a121d02a8d125bda50"
+    },
+    {
+      "path": "guide/autoresearch-plan.md",
+      "mode": "100644",
+      "git_blob": "7fc29e5a737a06e1498840190e1ce17c8d023e61"
+    },
+    {
+      "path": "guide/autoresearch-predict.md",
+      "mode": "100644",
+      "git_blob": "2557c343ed9dfcdd3108bbaa6e73867f45317208"
+    },
+    {
+      "path": "guide/autoresearch-probe.md",
+      "mode": "100644",
+      "git_blob": "30a82d23fa34a8023f94b5f0df62ee66e4197be7"
+    },
+    {
+      "path": "guide/autoresearch-reason.md",
+      "mode": "100644",
+      "git_blob": "2baa2c7453ba1e00b0fc58ea3243724d55172a91"
+    },
+    {
+      "path": "guide/autoresearch-regression.md",
+      "mode": "100644",
+      "git_blob": "3bd50e56faaa8b2da845c8d19fc7217832e90d46"
+    },
+    {
+      "path": "guide/autoresearch-scenario.md",
+      "mode": "100644",
+      "git_blob": "c188a2aff70c2230befbcbe716144160bb9fbe0c"
+    },
+    {
+      "path": "guide/autoresearch-security.md",
+      "mode": "100644",
+      "git_blob": "134ff13494a854354264e16c59481aa858e70c14"
+    },
+    {
+      "path": "guide/autoresearch-ship.md",
+      "mode": "100644",
+      "git_blob": "616d1ac4eee9378bea43450d12a13811ffd654fa"
+    },
+    {
+      "path": "guide/autoresearch.md",
+      "mode": "100644",
+      "git_blob": "2b9b6c58b0d2894ac7761b85d842ec4f5b9327c9"
+    },
+    {
+      "path": "guide/chains-and-combinations.md",
+      "mode": "100644",
+      "git_blob": "130250967d40e027de8dc60b377c66cc2528ec4e"
+    },
+    {
+      "path": "guide/examples-by-domain.md",
+      "mode": "100644",
+      "git_blob": "be659e805c7755dcea46576a18d097b9a558684f"
+    },
+    {
+      "path": "guide/getting-started.md",
+      "mode": "100644",
+      "git_blob": "becfd9953d89882376f05b7de86b9578a9b33a80"
+    },
+    {
+      "path": "guide/hooks.md",
+      "mode": "100644",
+      "git_blob": "c8cfe26b9c4c60047de09dd98e684a49d4de1c28"
+    },
+    {
+      "path": "guide/scenario/README.md",
+      "mode": "100644",
+      "git_blob": "aa20a0417a11998610a25c70d457de930c347acd"
+    },
+    {
+      "path": "guide/scenario/adversarial-architecture-decisions.md",
+      "mode": "100644",
+      "git_blob": "00ba07128398257e327970aa0f1a9f85be003495"
+    },
+    {
+      "path": "guide/scenario/cicd-pipeline-deployment.md",
+      "mode": "100644",
+      "git_blob": "be1eb2ddd63517e0e83895cb90fd2d00616500fd"
+    },
+    {
+      "path": "guide/scenario/cross-border-wire-transfers.md",
+      "mode": "100644",
+      "git_blob": "bba6d0f0e2b3ece624718f79fd765fa4fd091764"
+    },
+    {
+      "path": "guide/scenario/document-collaboration.md",
+      "mode": "100644",
+      "git_blob": "0f88faa89df02fd3a9b6c56ada3b95502b0d0072"
+    },
+    {
+      "path": "guide/scenario/healthcare-appointment-scheduling.md",
+      "mode": "100644",
+      "git_blob": "def4956d9880e8b5b8a32858b056f0219e7bff89"
+    },
+    {
+      "path": "guide/scenario/iot-firmware-updates.md",
+      "mode": "100644",
+      "git_blob": "429b8170fc09e14bca9e22b00bc713ded925afaa"
+    },
+    {
+      "path": "guide/scenario/mobile-push-notifications.md",
+      "mode": "100644",
+      "git_blob": "a5464c58e5f4ae295e55568b417274b875dc3e48"
+    },
+    {
+      "path": "guide/scenario/multi-tenant-saas-onboarding.md",
+      "mode": "100644",
+      "git_blob": "e54f663113b8aa7c41a025b369a1633c3df8b35e"
+    },
+    {
+      "path": "guide/scenario/real-time-chat-messaging.md",
+      "mode": "100644",
+      "git_blob": "2f3e3ee6c7977bade92329d20e0b014c52220417"
+    },
+    {
+      "path": "guide/scenario/search-autocomplete.md",
+      "mode": "100644",
+      "git_blob": "7570aafaf2d7bb8c23d24903a760e1b3f52a7044"
+    },
+    {
+      "path": "guide/scenario/social-media-content-moderation.md",
+      "mode": "100644",
+      "git_blob": "171449417c6476ed06fadbd132a98cea71f21dc8"
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "git_blob": "8fb35a37e0d7f72a80d10e94c2044bdb296725f7"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "git_blob": "17d14a0b784536fa66cc34a2b3d77c0d79a3f071"
+    },
+    {
+      "path": "pi-extension/README.md",
+      "mode": "100644",
+      "git_blob": "b97b5ca0cb34a6db5cd0738367ba3731ccd9ea81"
+    },
+    {
+      "path": "pi-extension/package.json",
+      "mode": "100644",
+      "git_blob": "fd721adef88429e812116dc1743a54d3e53b5059"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch.md",
+      "mode": "100644",
+      "git_blob": "a2ff9b1a01205243e25b7e169e2836a9c4a22a63"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_debug.md",
+      "mode": "100644",
+      "git_blob": "8472df5d69d245d3e1eedb76aba8f291748b6344"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_evals.md",
+      "mode": "100644",
+      "git_blob": "ab27a8fe604526c3c703df67b050b24ef77a3cbd"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_fix.md",
+      "mode": "100644",
+      "git_blob": "3e6f4d7d93df69c468f6f9e8797b8beaedf73a75"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_improve.md",
+      "mode": "100644",
+      "git_blob": "9b9f1c08599b46bb8ab4b1ff2ddfe4cf108fc902"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_learn.md",
+      "mode": "100644",
+      "git_blob": "c754cb16a801a5f855bc664b02e3672d7c8c044f"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_plan.md",
+      "mode": "100644",
+      "git_blob": "2c4fe649b37de424f8e0495db09f74cd3d928995"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_predict.md",
+      "mode": "100644",
+      "git_blob": "32fc729d794450ccdbda093b4516e9900657e5e1"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_probe.md",
+      "mode": "100644",
+      "git_blob": "9e166b3f176eb2372e6512a4d4e359dfa9208229"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_reason.md",
+      "mode": "100644",
+      "git_blob": "50c6aa35da28716e417dabc72e7d5a3d3cfeb66b"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_regression.md",
+      "mode": "100644",
+      "git_blob": "e3ecd048363ee39699d1ef35bc46c261003d7326"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_scenario.md",
+      "mode": "100644",
+      "git_blob": "4b37b9a197a9f79ad41aeb69609af4ef9a01d984"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_security.md",
+      "mode": "100644",
+      "git_blob": "6cf4e872528449cd54ea5b7887bf7a5a591f429f"
+    },
+    {
+      "path": "pi-extension/prompts/autoresearch_ship.md",
+      "mode": "100644",
+      "git_blob": "522b8cfdc07ef94269f6c756c2cd09ec8b1e2d10"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/SKILL.md",
+      "mode": "100644",
+      "git_blob": "5bde164b6683a4023f88b520c6ec2a29414d1d67"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/references/behavior-preserving-optimization.md",
+      "mode": "100644",
+      "git_blob": "d3271cf2789c6112f58f75cb02788aa997a87f3e"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/references/fork-and-flush.md",
+      "mode": "100644",
+      "git_blob": "acbb5c557948cfc46c82bbefe5f626271cb5f1d2"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/references/orchestrator-routing.md",
+      "mode": "100644",
+      "git_blob": "e1636dabe272d34483f5e9ab4c23be752b7e4565"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/references/predict-personas.md",
+      "mode": "100644",
+      "git_blob": "383e2379cdac2d226ca4e5c8fb135053cfd9c393"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/references/reason-judge-protocol.md",
+      "mode": "100644",
+      "git_blob": "7f5e70611056a381b6649691feb13f952e854746"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/references/security-checklist.md",
+      "mode": "100644",
+      "git_blob": "c1dedecfbdaa10510c1048ab846505a437026a7d"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/scripts/orchestrate.sh",
+      "mode": "100755",
+      "git_blob": "e3ac336e37ca3f11f800a951cd18e3ae7fd889f0"
+    },
+    {
+      "path": "pi-extension/skills/autoresearch/scripts/score-regression.sh",
+      "mode": "100755",
+      "git_blob": "f79bcfd5996b6310f34ccb2db2e4c522d00a3852"
+    },
+    {
+      "path": "pi-extension/src/guardrails.ts",
+      "mode": "100644",
+      "git_blob": "642526236168b6bdf2b2d8e7d33c7a97e28f774e"
+    },
+    {
+      "path": "pi-extension/src/hooks/dangerous-cmd-block.ts",
+      "mode": "100644",
+      "git_blob": "a4b366b4da28aac435b01160b17d0e2e8ba2e670"
+    },
+    {
+      "path": "pi-extension/src/hooks/dev-rules-reminder.ts",
+      "mode": "100644",
+      "git_blob": "cc7d1eca143b6386b26c33bc401d0839cd0d9099"
+    },
+    {
+      "path": "pi-extension/src/hooks/iteration-context.ts",
+      "mode": "100644",
+      "git_blob": "4304b5332f35370adaa87d91248ef59fe6a2fae3"
+    },
+    {
+      "path": "pi-extension/src/hooks/privacy-block.ts",
+      "mode": "100644",
+      "git_blob": "cf206818af6c5b3e4da61664424494cc23378e4f"
+    },
+    {
+      "path": "pi-extension/src/hooks/scout-block.ts",
+      "mode": "100644",
+      "git_blob": "fcf1f3fd1fcba3679457e4de05664d20b98f7c50"
+    },
+    {
+      "path": "pi-extension/src/hooks/simplify-gate.ts",
+      "mode": "100644",
+      "git_blob": "061d3328448d716e89513185fd7f65f98e453b9c"
+    },
+    {
+      "path": "pi-extension/src/hooks/stop-notify.ts",
+      "mode": "100644",
+      "git_blob": "9ed93edf1f5182a4c964ec548171bc5fdb717df6"
+    },
+    {
+      "path": "pi-extension/src/hooks/subagent-context.ts",
+      "mode": "100644",
+      "git_blob": "2b4183c750a63d125efbf3270c85f812d891e26f"
+    },
+    {
+      "path": "pi-extension/src/index.ts",
+      "mode": "100644",
+      "git_blob": "965aa41cbe49b1fc4ae465668604a4b60f0f18ce"
+    },
+    {
+      "path": "pi-extension/src/lib/ignore.ts",
+      "mode": "100644",
+      "git_blob": "71c5fd47e58ec271cfc78ecf6f9a520e5212659c"
+    },
+    {
+      "path": "pi-extension/src/lib/paths.ts",
+      "mode": "100644",
+      "git_blob": "eac8c28262d523e85bd91012df346bace8546b8e"
+    },
+    {
+      "path": "pi-extension/src/lib/session-state.ts",
+      "mode": "100644",
+      "git_blob": "44e7aac92583def7a734d7f69191b05b8f04f4d3"
+    },
+    {
+      "path": "pi-extension/src/lib/shell.ts",
+      "mode": "100644",
+      "git_blob": "caf332dab0e25016af5f1bf019d00ee987231511"
+    },
+    {
+      "path": "pi-extension/src/lib/tsv.ts",
+      "mode": "100644",
+      "git_blob": "233ea88ee5fc63b5308032e95e5c62c79999e7fd"
+    },
+    {
+      "path": "plugins/autoresearch/.codex-plugin/plugin.json",
+      "mode": "100644",
+      "git_blob": "5ee49a062306e54781615f97967a65d74982a6eb"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/SKILL.md",
+      "mode": "100644",
+      "git_blob": "ac379c79f0654a8e2afcaeb9365193c600c98e6a"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/autoresearch.md",
+      "mode": "100644",
+      "git_blob": "13c4e825e26adf4241df087c49cd8ef364744aa3"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/debug.md",
+      "mode": "100644",
+      "git_blob": "9b02f45fc9860c2bebf27a4b911b54f83f34ff84"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/evals.md",
+      "mode": "100644",
+      "git_blob": "84a8575bfe2914de7ec80bdd714ecfaa38d5dcaa"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/fix.md",
+      "mode": "100644",
+      "git_blob": "4587e57eb60b64430c32b1465e11e64052213ad6"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/improve.md",
+      "mode": "100644",
+      "git_blob": "4a8e29dac47a85f19b1d0f023d510edbb99ec1b1"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/learn.md",
+      "mode": "100644",
+      "git_blob": "30941545ec8ba16bebedc61b717f858aa9cb60a4"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/plan.md",
+      "mode": "100644",
+      "git_blob": "7065f4ed3248d35676e5e0e72b5c59e0fef89160"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/predict.md",
+      "mode": "100644",
+      "git_blob": "f8cf7a0a619c7d764fd1ba0807ac47484b3dcf2e"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/probe.md",
+      "mode": "100644",
+      "git_blob": "a717e412fde4bd1ff0dca52ecda49fdbdaaed38c"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/reason.md",
+      "mode": "100644",
+      "git_blob": "d766759c511af0331865e9ce8da0c970ff59745c"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/references/behavior-preserving-optimization.md",
+      "mode": "100644",
+      "git_blob": "d3271cf2789c6112f58f75cb02788aa997a87f3e"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/references/fork-and-flush.md",
+      "mode": "100644",
+      "git_blob": "acbb5c557948cfc46c82bbefe5f626271cb5f1d2"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/references/orchestrator-routing.md",
+      "mode": "100644",
+      "git_blob": "e1636dabe272d34483f5e9ab4c23be752b7e4565"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/references/predict-personas.md",
+      "mode": "100644",
+      "git_blob": "383e2379cdac2d226ca4e5c8fb135053cfd9c393"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/references/reason-judge-protocol.md",
+      "mode": "100644",
+      "git_blob": "7f5e70611056a381b6649691feb13f952e854746"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/references/security-checklist.md",
+      "mode": "100644",
+      "git_blob": "c1dedecfbdaa10510c1048ab846505a437026a7d"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/regression.md",
+      "mode": "100644",
+      "git_blob": "5267924dfccadfeb5ce3065dbdc0832ae4793663"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/scenario.md",
+      "mode": "100644",
+      "git_blob": "4963bdda4555849f71554e2d07b9431598d852f9"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/scripts/orchestrate.sh",
+      "mode": "100755",
+      "git_blob": "e3ac336e37ca3f11f800a951cd18e3ae7fd889f0"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/scripts/score-regression.sh",
+      "mode": "100755",
+      "git_blob": "f79bcfd5996b6310f34ccb2db2e4c522d00a3852"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/security.md",
+      "mode": "100644",
+      "git_blob": "1214472b3c99ac702ab3cb756ad83a535a199871"
+    },
+    {
+      "path": "plugins/autoresearch/skills/autoresearch/ship.md",
+      "mode": "100644",
+      "git_blob": "ed105d3634691cf3694371de3fecd39433f694d5"
+    },
+    {
+      "path": "scripts/install.sh",
+      "mode": "100755",
+      "git_blob": "dba8486d1210d15a32b345fcb414b9e21f5eb55c"
+    },
+    {
+      "path": "scripts/orchestrate.sh",
+      "mode": "100755",
+      "git_blob": "e3ac336e37ca3f11f800a951cd18e3ae7fd889f0"
+    },
+    {
+      "path": "scripts/release.md",
+      "mode": "100644",
+      "git_blob": "486c5d082774f8b782f238b3977ec4b6a44866fc"
+    },
+    {
+      "path": "scripts/release.sh",
+      "mode": "100755",
+      "git_blob": "58fdaa669b2287ff176173fad4f0f9c16c4e5025"
+    },
+    {
+      "path": "scripts/score-debug-fix.sh",
+      "mode": "100755",
+      "git_blob": "e4c9d94bc7d2afc3379972f25a629353c929600f"
+    },
+    {
+      "path": "scripts/score-regression.sh",
+      "mode": "100755",
+      "git_blob": "f79bcfd5996b6310f34ccb2db2e4c522d00a3852"
+    },
+    {
+      "path": "scripts/transform.sh",
+      "mode": "100755",
+      "git_blob": "47086200df0f5c7beb371b48251942e055bfdfd8"
+    },
+    {
+      "path": "tests/fixtures/hooks/https-webhook-stub.cjs",
+      "mode": "100644",
+      "git_blob": "0803b25c108b078c555876b095fc70318c4f6cac"
+    },
+    {
+      "path": "tests/fixtures/hooks/webhook-smoke.cjs",
+      "mode": "100644",
+      "git_blob": "4077974cbadc6f1c110578e07fe8309e0c34231d"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/plateau-all-unknowns.txt",
+      "mode": "100644",
+      "git_blob": "b40f094cf195610aabd787b211e422d3f9f278c7"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/plateau-improving.txt",
+      "mode": "100644",
+      "git_blob": "7b7eb7265504f2bb1da7d5f265eb8c74fad4d1a7"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/plateau-oscillate.txt",
+      "mode": "100644",
+      "git_blob": "c29782c745745a463f3ab7a1f8c29ac6fac88072"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/plateau-short-history.txt",
+      "mode": "100644",
+      "git_blob": "fb16eb9b6601452555d75b2ea0a9fb495e9b5850"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/plateau-stuck-unknown.txt",
+      "mode": "100644",
+      "git_blob": "c4182f3a68b481a6ca8571fed0f16d7c9fb039e3"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/plateau-thrash.txt",
+      "mode": "100644",
+      "git_blob": "9760205e06212080a311c18be155e2e9e57a9c97"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/plateau-with-unknowns.txt",
+      "mode": "100644",
+      "git_blob": "0d829c343d80298d0abb08d6b0ed9019dffbbe62"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-bad-type.json",
+      "mode": "100644",
+      "git_blob": "1092146759aa10b245ce005578612355f2b49ef8"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-ceiling.json",
+      "mode": "100644",
+      "git_blob": "bf8c7dfabb216f2f1cc7028e4ae9990c909d982d"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-clean-ship.json",
+      "mode": "100644",
+      "git_blob": "16f93b7d2df5d43dfca9ecbfd2f41baffc281c52"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-converged.json",
+      "mode": "100644",
+      "git_blob": "14d6465fc6bd60faa63406374320dc819ebb28da"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-danger-predicate.json",
+      "mode": "100644",
+      "git_blob": "3763134674cb379521488c78a3b78f34b6742954"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-errors.json",
+      "mode": "100644",
+      "git_blob": "f3b65ee9d39ea0afb184b2585f57b191b8af4eaf"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-escaped-quote-predicate.json",
+      "mode": "100644",
+      "git_blob": "5d683dc7f3024451beaf7a1e84727cb4c64b6bc1"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-malformed.json",
+      "mode": "100644",
+      "git_blob": "90dce3cfdd873dd492f5ebd36f4f524be003800a"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-missing-predicate.json",
+      "mode": "100644",
+      "git_blob": "c5860ddaaebe36a25f18db2cf228c7ed55285525"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-numeric-predicate.json",
+      "mode": "100644",
+      "git_blob": "e8ed4eb6aa66c439306d671b29f2c69d504025b1"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-pending-verify-ship.json",
+      "mode": "100644",
+      "git_blob": "95370b231c27fbf04776f2aa522b7aaf171a3fb1"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-pending-verify.json",
+      "mode": "100644",
+      "git_blob": "78e39765934b729197df8bb54d3de6356f551e6a"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-plateau-ceiling.json",
+      "mode": "100644",
+      "git_blob": "d5dbf4a1ba4ac1d37eb5fce3076f65fc5ca19bf0"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-plateau-no-forks.json",
+      "mode": "100644",
+      "git_blob": "10ec99df91c769c43d0f03364dfb436f51c5a3c2"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-plateau-one-fork.json",
+      "mode": "100644",
+      "git_blob": "061871c83eb8e6140b75dc67a155f2badac78049"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-plateau-quoted-fork.json",
+      "mode": "100644",
+      "git_blob": "5e3869ee54d29d6e670d38b2904859e0b9125303"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-plateau.json",
+      "mode": "100644",
+      "git_blob": "84321ffb80eaf5e6cbb4a281bd2990f83b500dc8"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-quoted-safe-predicate.json",
+      "mode": "100644",
+      "git_blob": "de2dac7cd229190eeefa19a2c8199fda2cfb9514"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-regression-unstable.json",
+      "mode": "100644",
+      "git_blob": "a1562c69b764019faa5549127161d9c1f934c1fb"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-safe-predicate.json",
+      "mode": "100644",
+      "git_blob": "c2e91c8ed71d3fa63b0ee182a1d6bca31d593c95"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-unicode-danger-predicate.json",
+      "mode": "100644",
+      "git_blob": "62e6f356856cb25877306d8d723583350f4018e2"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-untested-gaps.json",
+      "mode": "100644",
+      "git_blob": "db4430c13a5a3827ee571a5ed46bffff8d299795"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-valid.json",
+      "mode": "100644",
+      "git_blob": "7d8536b0b4755f572ae92637ecdd3715953ed579"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/state-verify-false-ship.json",
+      "mode": "100644",
+      "git_blob": "2df5a1d08af3f1a75b5ae2bd0a72910ed92e6d97"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/units-computable.json",
+      "mode": "100644",
+      "git_blob": "7345aa1bdbf8633f18dde0d593cdad9082e6c74d"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/units-missing-field.json",
+      "mode": "100644",
+      "git_blob": "6d64a0dbc2c65120bb3744eec5046dafd9c7a32d"
+    },
+    {
+      "path": "tests/fixtures/orchestrator/units-zero.json",
+      "mode": "100644",
+      "git_blob": "e70dbd3a726cf6c72e41b6f380d2e6755c180343"
+    },
+    {
+      "path": "tests/fixtures/regression/absent-to-red.tsv",
+      "mode": "100644",
+      "git_blob": "25df907716433aa018126b7563160fbde36248d6"
+    },
+    {
+      "path": "tests/fixtures/regression/all-unavailable.tsv",
+      "mode": "100644",
+      "git_blob": "2d37ae780d4e8f7366d7ec66fa5ee9e81024c013"
+    },
+    {
+      "path": "tests/fixtures/regression/empty.tsv",
+      "mode": "100644",
+      "git_blob": "549b466bf0e0b2497c3089e2ec8abe0f2c1d3aaa"
+    },
+    {
+      "path": "tests/fixtures/regression/flake-to-red.tsv",
+      "mode": "100644",
+      "git_blob": "f4b4478731fe3fdace6581b3d5c931792d2cbc48"
+    },
+    {
+      "path": "tests/fixtures/regression/green-to-red.tsv",
+      "mode": "100644",
+      "git_blob": "e311794ea6ae259e0c560acddec8d11ebfbe971f"
+    },
+    {
+      "path": "tests/fixtures/regression/invalid-classification.tsv",
+      "mode": "100644",
+      "git_blob": "eea83d1948e179ac97a209887f321e94c30c5fdb"
+    },
+    {
+      "path": "tests/fixtures/regression/invalid-regressed.tsv",
+      "mode": "100644",
+      "git_blob": "e31a5db9bcc760b081b96f11bc7d95baf6a5849c"
+    },
+    {
+      "path": "tests/fixtures/regression/invalid-tier.tsv",
+      "mode": "100644",
+      "git_blob": "f7d4aea07147fe14b3e381ea9e502d8f13fd42d1"
+    },
+    {
+      "path": "tests/fixtures/regression/perf-in-band.tsv",
+      "mode": "100644",
+      "git_blob": "a971e704229dce34cce326ccc222c2daef50d395"
+    },
+    {
+      "path": "tests/fixtures/regression/perf-over-band.tsv",
+      "mode": "100644",
+      "git_blob": "f308f0c6b2c937ac741779696836882608f69c16"
+    },
+    {
+      "path": "tests/fixtures/regression/red-to-red.tsv",
+      "mode": "100644",
+      "git_blob": "f4074b0c74dc0161c789702fc7d07370771a0ef5"
+    },
+    {
+      "path": "tests/fixtures/regression/score-boundary-94.tsv",
+      "mode": "100644",
+      "git_blob": "89bd8206c9e8ed1901b02f3138ddce401c937ac4"
+    },
+    {
+      "path": "tests/fixtures/regression/score-boundary-95.tsv",
+      "mode": "100644",
+      "git_blob": "a98b93533fa4cdfd7b27d8515331cdb590440d7e"
+    },
+    {
+      "path": "tests/fixtures/regression/truncated-hard.tsv",
+      "mode": "100644",
+      "git_blob": "24bf7f4b9bc94da71c8df9c9c47ffd3021b5c7ae"
+    },
+    {
+      "path": "tests/fixtures/regression/unavailable-dim.tsv",
+      "mode": "100644",
+      "git_blob": "b83eef09a020d98e8d0329bbb5b7ea7305d0aa38"
+    },
+    {
+      "path": "tests/test-hooks.sh",
+      "mode": "100755",
+      "git_blob": "42fe38b385632aa7bffce710eee106e55544671b"
+    },
+    {
+      "path": "tests/test-install.sh",
+      "mode": "100755",
+      "git_blob": "f7027771db4241436e063792538a78d772dcee89"
+    },
+    {
+      "path": "tests/test-maintenance.sh",
+      "mode": "100755",
+      "git_blob": "9105d40bc998f6717892f7c5ac28e2cea13cee8b"
+    },
+    {
+      "path": "tests/test-orchestrator.sh",
+      "mode": "100644",
+      "git_blob": "46f9505ba768ca10f1363549d45ed3a06a335d4f"
+    },
+    {
+      "path": "tests/test-pi.sh",
+      "mode": "100755",
+      "git_blob": "b4e6a3ffb79e95f9a6ad64775308e9dbc1b52942"
+    },
+    {
+      "path": "tests/test-regression.sh",
+      "mode": "100755",
+      "git_blob": "1064ebc3a785e65e56063049164d5b09270e2847"
+    }
+  ]
+}

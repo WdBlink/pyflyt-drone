@@ -1,0 +1,38 @@
+{
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review",
+  "sources": [
+    {
+      "bytes": 24122,
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-11-05T14:20:51.729224+00:00",
+      "kind": "json",
+      "path": "planning/model-sources/qwen38-27b.metadata.v1.json",
+      "resolved_url": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B",
+      "reused": false,
+      "sha256": "2f3177d78c0db88524f12cfbed15b890a561bc551851b9ac2c2f929d933c2845",
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B"
+    },
+    {
+      "bytes": 71039,
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-11-05T14:20:52.661383+00:00",
+      "kind": "json",
+      "path": "planning/model-sources/glm53-flash.metadata.v1.json",
+      "resolved_url": "https://huggingface.co/api/models/zai-org/GLM-5.3-Flash",
+      "reused": false,
+      "sha256": "1bfb9cb5e70276a73dfa23ae16e28f2499b253f3a85906a36638722b171266d6",
+      "url": "https://huggingface.co/api/models/zai-org/GLM-5.3-Flash"
+    },
+    {
+      "bytes": 7375,
+      "content_type": "application/json; charset=utf-8",
+      "fetched_at": "2026-11-05T14:20:53.327993+00:00",
+      "kind": "json",
+      "path": "planning/model-sources/deepseek41-flash-1017.metadata.v1.json",
+      "resolved_url": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "reused": false,
+      "sha256": "16690234ffc0dd8b96eef3a098176d6eeaea1eaf0a02a74898b8c22d8fd9e9f5",
+      "url": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  ]
+}

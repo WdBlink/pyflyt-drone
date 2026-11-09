@@ -1,0 +1,28 @@
+{
+  "role": "uninstalled development-only passive observer candidate; not030admission/G4/continuation",
+  "tests": "18 passed in0.03s/exit0",
+  "scope": "original close return/error preserved; no extra inventory; real sidecarIO with synthetic process tables; real original close exercised with fake wait/table and no signals",
+  "limits": "no real flight/MLX/model/native operation; caller integration and independent review pending; thread/reentry/sidecar failures mark observation incomplete",
+  "files": [
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/observer-freeze.v1/observe_cleanup.py",
+      "sha256": "0a08e7e33d35dd504c6b4bbfc1d7bb5111bdafaeb2e8e0fa1c45d0722f8909df",
+      "bytes": 8235
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/observer-freeze.v1/test_observe_cleanup.py",
+      "sha256": "0525afdba3390a9dc66eb830de9d30eff0a93b6ae5d3ce4d04cf2da9fefed259",
+      "bytes": 10462
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/observer-freeze.v1/tests.log",
+      "sha256": "8ee478d15541cf62c53cb9c73b798353c8116fe2fa86492e504bd1a65792b9ac",
+      "bytes": 99
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/observer-freeze.v1/baseline_inspection_process_cleanup.py",
+      "sha256": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+      "bytes": 7329
+    }
+  ]
+}

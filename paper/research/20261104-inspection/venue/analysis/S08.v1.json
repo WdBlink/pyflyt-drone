@@ -1,0 +1,412 @@
+{
+  "figures": [
+    {
+      "caption": "Fig. 1: Our drone flight VLA model architecture.",
+      "claim": "训练critic使用特权量，实际部署仅保留规定感知输入。",
+      "design_takeaway": "权限图需显式列出训练/评测差异",
+      "evidence": "上训练下部署的两部分",
+      "id": "S08-F1",
+      "limitations": "VLA低层动作不是本研究任务级编排",
+      "number": 1,
+      "page": 1,
+      "panels": [
+        {
+          "label": "training",
+          "question": "训练特权与可微动力学揭示什么？",
+          "claim": "该示例中可直接定位：训练特权与可微动力学。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第1页：训练特权与可微动力学。",
+          "design_takeaway": "权限图需显式列出训练/评测差异",
+          "limitations": "VLA低层动作不是本研究任务级编排"
+        },
+        {
+          "label": "deployment",
+          "question": "实际机载视觉/指令到动作揭示什么？",
+          "claim": "该示例中可直接定位：实际机载视觉/指令到动作。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第1页：实际机载视觉/指令到动作。",
+          "design_takeaway": "权限图需显式列出训练/评测差异",
+          "limitations": "VLA低层动作不是本研究任务级编排"
+        }
+      ],
+      "placement": "body",
+      "question": "训练特权与部署输入如何区分？",
+      "type": "method_overview",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 2: Example trajectories of untrained long horizon tasks. The instructions are “GO THROUGH gate then STOP over CART” (left) and “FLY past the RIGHT side of the gate then STOP over MONITOR” (right).",
+      "claim": "两条未训练组合任务具有不同路线和终点对象。",
+      "design_takeaway": "任务卡与轨迹共同展示",
+      "evidence": "左穿门到车，右绕门到显示器",
+      "id": "S08-F2",
+      "limitations": "只为成功例，不能证明总体泛化",
+      "number": 2,
+      "page": 5,
+      "panels": [
+        {
+          "label": "left",
+          "question": "穿门后到CART揭示什么？",
+          "claim": "该示例中可直接定位：穿门后到CART。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第5页：穿门后到CART。",
+          "design_takeaway": "任务卡与轨迹共同展示",
+          "limitations": "只为成功例，不能证明总体泛化"
+        },
+        {
+          "label": "right",
+          "question": "从右侧绕门后到MONITOR揭示什么？",
+          "claim": "该示例中可直接定位：从右侧绕门后到MONITOR。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第5页：从右侧绕门后到MONITOR。",
+          "design_takeaway": "任务卡与轨迹共同展示",
+          "limitations": "只为成功例，不能证明总体泛化"
+        }
+      ],
+      "placement": "body",
+      "question": "组合指令如何产生不同轨迹？",
+      "type": "qualitative_comparison",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 3: Comparison of imperfect (left) and high quality (right) 3DGS maps’ rendering effect.",
+      "claim": "左右渲染对比提供退化机制的可见依据。",
+      "design_takeaway": "退化消融要展示实际输入",
+      "evidence": "左模糊/缺损，右较清晰",
+      "id": "S08-F3",
+      "limitations": "渲染质量与结构化噪声不是同一指标",
+      "number": 3,
+      "page": 5,
+      "panels": [
+        {
+          "label": "left",
+          "question": "退化3DGS渲染揭示什么？",
+          "claim": "低质量模型呈现更模糊和缺失的视觉线索。",
+          "evidence": "实际查看PDF第5页：退化3DGS渲染。",
+          "design_takeaway": "退化消融要展示实际输入",
+          "limitations": "渲染质量与结构化噪声不是同一指标"
+        },
+        {
+          "label": "right",
+          "question": "高质量3DGS渲染揭示什么？",
+          "claim": "较高质量模型保留更清晰的门与物体细节。",
+          "evidence": "实际查看PDF第5页：高质量3DGS渲染。",
+          "design_takeaway": "退化消融要展示实际输入",
+          "limitations": "渲染质量与结构化噪声不是同一指标"
+        }
+      ],
+      "placement": "body",
+      "question": "低质量视觉重建是什么样？",
+      "type": "ablation_visual",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 4: Demonstration of multi-environment adaptation in real-world experiments using video frame overlay visualization. The top row shows the drone flying to the left of, through, above, and to the right of the gate in the middle-gate environment. The bottom row shows the drone executing the same directional tasks in the left-gate environment. Red arrowed curves illustrate the approximate flight trajectories. The learned policy demonstrates robust adaptation to varying environments, adapting to",
+      "claim": "四指令×两门位置用轨迹叠图展示。",
+      "design_takeaway": "案例布局与受控因素一一对应",
+      "evidence": "两行四列，左/穿/上/右",
+      "id": "S08-F4",
+      "limitations": "帧叠图不是独立试验样本",
+      "number": 4,
+      "page": 6,
+      "panels": [
+        {
+          "label": "mid-left",
+          "question": "中间门左侧揭示什么？",
+          "claim": "该示例中可直接定位：中间门左侧。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第6页：中间门左侧。",
+          "design_takeaway": "案例布局与受控因素一一对应",
+          "limitations": "帧叠图不是独立试验样本"
+        },
+        {
+          "label": "mid-through",
+          "question": "中间门穿越揭示什么？",
+          "claim": "该示例中可直接定位：中间门穿越。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第6页：中间门穿越。",
+          "design_takeaway": "案例布局与受控因素一一对应",
+          "limitations": "帧叠图不是独立试验样本"
+        },
+        {
+          "label": "mid-above",
+          "question": "中间门上方揭示什么？",
+          "claim": "该示例中可直接定位：中间门上方。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第6页：中间门上方。",
+          "design_takeaway": "案例布局与受控因素一一对应",
+          "limitations": "帧叠图不是独立试验样本"
+        },
+        {
+          "label": "mid-right",
+          "question": "中间门右侧揭示什么？",
+          "claim": "该示例中可直接定位：中间门右侧。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第6页：中间门右侧。",
+          "design_takeaway": "案例布局与受控因素一一对应",
+          "limitations": "帧叠图不是独立试验样本"
+        },
+        {
+          "label": "left-left",
+          "question": "左侧门左绕揭示什么？",
+          "claim": "该示例中可直接定位：左侧门左绕。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第6页：左侧门左绕。",
+          "design_takeaway": "案例布局与受控因素一一对应",
+          "limitations": "帧叠图不是独立试验样本"
+        },
+        {
+          "label": "left-through",
+          "question": "左侧门穿越揭示什么？",
+          "claim": "该示例中可直接定位：左侧门穿越。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第6页：左侧门穿越。",
+          "design_takeaway": "案例布局与受控因素一一对应",
+          "limitations": "帧叠图不是独立试验样本"
+        },
+        {
+          "label": "left-above",
+          "question": "左侧门上方揭示什么？",
+          "claim": "该示例中可直接定位：左侧门上方。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第6页：左侧门上方。",
+          "design_takeaway": "案例布局与受控因素一一对应",
+          "limitations": "帧叠图不是独立试验样本"
+        },
+        {
+          "label": "left-right",
+          "question": "左侧门右绕揭示什么？",
+          "claim": "该示例中可直接定位：左侧门右绕。 仅支持这一个面板的机制/场景说明。",
+          "evidence": "实际查看PDF第6页：左侧门右绕。",
+          "design_takeaway": "案例布局与受控因素一一对应",
+          "limitations": "帧叠图不是独立试验样本"
+        }
+      ],
+      "placement": "body",
+      "question": "不同环境和指令的实际行为如何变化？",
+      "type": "qualitative_comparison",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 5: Experts’ usage intensity when executing the same task (“GO THROUGH gate”) at different surrounding environments (top-left gate, bottom-middle gate).",
+      "claim": "同任务在两环境具有不同门控时序。",
+      "design_takeaway": "机制诊断与主效果区分",
+      "evidence": "上/下两环境两专家曲线",
+      "id": "S08-F5",
+      "limitations": "门控变化本身不能证明性能因果",
+      "number": 5,
+      "page": 7,
+      "panels": [
+        {
+          "label": "top",
+          "question": "左门环境专家路由揭示什么？",
+          "claim": "左门环境两专家激活强度随任务阶段改变。",
+          "evidence": "实际查看PDF第7页：左门环境专家路由。",
+          "design_takeaway": "机制诊断与主效果区分",
+          "limitations": "门控变化本身不能证明性能因果"
+        },
+        {
+          "label": "bottom",
+          "question": "中间门环境专家路由揭示什么？",
+          "claim": "中间门环境的激活主次与上方面板不同。",
+          "evidence": "实际查看PDF第7页：中间门环境专家路由。",
+          "design_takeaway": "机制诊断与主效果区分",
+          "limitations": "门控变化本身不能证明性能因果"
+        }
+      ],
+      "placement": "body",
+      "question": "环境变化时专家路由如何变化？",
+      "type": "analysis_plot",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 6: Task-switching with instruction change at step 100. Left: drone flying past the gate. Right: cosine similarity between text and visual embeddings, showing VLM regrounding.",
+      "claim": "示例把换指令轨迹和相似度变化并列。",
+      "design_takeaway": "响应须同时有状态和效果证据",
+      "evidence": "左场景，右步100切换后的相似度",
+      "id": "S08-F6",
+      "limitations": "已有中途指令切换先例；单例不证明群体恢复优势",
+      "number": 6,
+      "page": 7,
+      "panels": [
+        {
+          "label": "left",
+          "question": "更换指令后的实际航迹揭示什么？",
+          "claim": "示例航迹显示指令更新后转向新的任务方向。",
+          "evidence": "实际查看PDF第7页：更换指令后的实际航迹。",
+          "design_takeaway": "响应须同时有状态和效果证据",
+          "limitations": "已有中途指令切换先例；单例不证明群体恢复优势"
+        },
+        {
+          "label": "right",
+          "question": "相似度在切换点后的变化揭示什么？",
+          "claim": "切换附近的匹配度下降后恢复并波动，不能直接当任务成功率。",
+          "evidence": "实际查看PDF第7页：相似度在切换点后的变化。",
+          "design_takeaway": "响应须同时有状态和效果证据",
+          "limitations": "已有中途指令切换先例；单例不证明群体恢复优势"
+        }
+      ],
+      "placement": "body",
+      "question": "飞行中指令变化是否引发响应？",
+      "type": "analysis_plot",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 7: Runtime profiling of real-time inference on NVIDIA Jetson Orin Nano.",
+      "claim": "运行时存在周期峰值，资源量随时间变化。",
+      "design_takeaway": "记录真实p50/p95与异常等待",
+      "evidence": "RAM/CPU/GPU/功率/单次推理五行",
+      "id": "S08-F7",
+      "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失",
+      "number": 7,
+      "page": 8,
+      "panels": [
+        {
+          "label": "ram",
+          "question": "内存轨迹揭示什么？",
+          "claim": "展示时段内内存用量相对稳定。",
+          "evidence": "实际查看PDF第8页：内存轨迹。",
+          "design_takeaway": "记录真实p50/p95与异常等待",
+          "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失"
+        },
+        {
+          "label": "cpu",
+          "question": "CPU负载揭示什么？",
+          "claim": "CPU负载随执行时间出现峰值。",
+          "evidence": "实际查看PDF第8页：CPU负载。",
+          "design_takeaway": "记录真实p50/p95与异常等待",
+          "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失"
+        },
+        {
+          "label": "gpu",
+          "question": "GPU负载揭示什么？",
+          "claim": "GPU负载在该实际飞行记录中持续波动。",
+          "evidence": "实际查看PDF第8页：GPU负载。",
+          "design_takeaway": "记录真实p50/p95与异常等待",
+          "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失"
+        },
+        {
+          "label": "power",
+          "question": "功率轨迹揭示什么？",
+          "claim": "功率轨迹随时间变化，需作为实测资源量保留。",
+          "evidence": "实际查看PDF第8页：功率轨迹。",
+          "design_takeaway": "记录真实p50/p95与异常等待",
+          "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失"
+        },
+        {
+          "label": "runtime",
+          "question": "单次推理延迟与周期峰值揭示什么？",
+          "claim": "推理存在周期性高延迟峰；仅报平均值会隐藏这一结构。",
+          "evidence": "实际查看PDF第8页：单次推理延迟与周期峰值。",
+          "design_takeaway": "记录真实p50/p95与异常等待",
+          "limitations": "已有飞行推理代价先例；不据此推断本研究机群交付损失"
+        }
+      ],
+      "placement": "appendix",
+      "question": "实际硬件推理资源是否稳定？",
+      "type": "analysis_plot",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    }
+  ],
+  "tables": [
+    {
+      "caption": "TABLE I: Reward terms and weights. Early termination occurs if (i) height > 3m, (ii) linear velocity > 20 m/s, or (iii) the drone is out of bounds by > 3m (xo.b. , yo.b. ≥ 3). Here, q0 is the initial quaternion, htarget the target/hover height, ŷyaw the",
+      "claim": "奖励与早停条件被明确列出。",
+      "design_takeaway": "公开硬包线和阈值来源",
+      "evidence": "Safe Control / Navigation两组",
+      "id": "S08-T1",
+      "limitations": "奖励权重不等于合格安全保证",
+      "number": 1,
+      "page": 4,
+      "panels": [],
+      "placement": "body",
+      "question": "安全与任务奖励如何规定？",
+      "type": "hyperparameter"
+    },
+    {
+      "caption": "TABLE II: Simulation results of multi task generalization experiment. For 8 trained tasks and 4 untrained tasks, the evaluation is conducted on 6 trials for each task, with the average rewards and success rates (SR) reported. “Proposed,",
+      "claim": "用stage与overall绝对成功计数保留零值。",
+      "design_takeaway": "总体分母必须保留；条件阶段率另报",
+      "evidence": "训练/未见列和PPO/VLM/退化对照",
+      "id": "S08-T2",
+      "limitations": "少量重复不能证明广泛泛化",
+      "number": 2,
+      "page": 5,
+      "panels": [],
+      "placement": "body",
+      "question": "仿真中已见/未见任务怎样失败？",
+      "type": "main_results"
+    },
+    {
+      "caption": "TABLE III: Real hardware experiment results of multi-task generalization experiment. For 8 trained tasks and 4 untrained tasks, the evaluation is conducted on 3 trials for each task, with the success rates (SR) reported. “Proposed, LR” denotes",
+      "claim": "阶段与总体成绩存在sim-to-real差别。",
+      "design_takeaway": "主表区分模拟和真实轨道",
+      "evidence": "与Table II并列的实机计数",
+      "id": "S08-T3",
+      "limitations": "本研究没有实机数据，不能借其成绩代替",
+      "number": 3,
+      "page": 5,
+      "panels": [],
+      "placement": "body",
+      "question": "实机结果是否复制仿真排序？",
+      "type": "main_results"
+    },
+    {
+      "caption": "TABLE IV: Simulation results of the multi-environment adaptation experiment are presented. For each of the 4 tasks in the 2 different surrounding environments, evaluation is conducted over 6 trials per task. The reported metrics include the average evaluation rewards and success rates.",
+      "claim": "两环境下小模型对照表现不同。",
+      "design_takeaway": "保持相同模型/场景因子",
+      "evidence": "任务方向×门位置的仿真计数",
+      "id": "S08-T4",
+      "limitations": "不能把训练适应当未知环境zero-shot",
+      "number": 4,
+      "page": 6,
+      "panels": [],
+      "placement": "body",
+      "question": "多环境适应与模型容量如何权衡？",
+      "type": "main_results"
+    },
+    {
+      "caption": "TABLE V: Real hardware experiment results of the multienvironment adaptation experiment. For each of the 4 tasks across 2 different surrounding environments, evaluation is performed over 3 trials per task, with the success rates reported.",
+      "claim": "成功计数暴露模拟之外的退化。",
+      "design_takeaway": "不要只展示仿真有利行",
+      "evidence": "两环境四方向的实机计数",
+      "id": "S08-T5",
+      "limitations": "每格三次是极有限精度",
+      "number": 5,
+      "page": 6,
+      "panels": [],
+      "placement": "body",
+      "question": "同一适应比较在实机如何变化？",
+      "type": "main_results"
+    },
+    {
+      "caption": "TABLE VI: MoE scalability experiment results in both simulation and real hardware. Each MoE policy network uses a different number of experts (2, 4, or 8). Simulation protocols follow Table IV, while real-robot protocols follow Table V.",
+      "claim": "模拟收益提高而实机成功可能下降。",
+      "design_takeaway": "质量—计算—部署时延边界应一并报告",
+      "evidence": "2/4/8专家的Sim/Real对照",
+      "id": "S08-T6",
+      "limitations": "正文把退化联系到较低控制频率；仍非本研究根因证据",
+      "number": 6,
+      "page": 7,
+      "panels": [],
+      "placement": "body",
+      "question": "增加专家数是否总是更好？",
+      "type": "ablation"
+    },
+    {
+      "caption": "TABLE VII: High level natural language instructions table for drone flight VLA tasks in Section III-A. Stage #1",
+      "claim": "四种穿越指令与三个终点对象构成任务表。",
+      "design_takeaway": "协议关键定义不能隐藏在外链",
+      "evidence": "附录stage1与stage2表",
+      "id": "S08-T7",
+      "limitations": "附录计入八页上限",
+      "number": 7,
+      "page": 8,
+      "panels": [],
+      "placement": "appendix",
+      "question": "任务组合空间是什么？",
+      "type": "dataset_statistics"
+    }
+  ],
+  "visual_read": {
+    "pages": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "method": "rendered_pdf",
+    "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。"
+  }
+}

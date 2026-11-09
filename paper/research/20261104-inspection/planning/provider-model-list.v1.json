@@ -1,0 +1,408 @@
+{
+  "role": "read_only_model_catalog_not_inference_or_model_qualification",
+  "at": "2026-11-05T14:01:40.334572+00:00",
+  "endpoint": "https://api.siliconflow.cn/v1/models?sub_type=chat",
+  "credential_value_saved": false,
+  "http_status": 200,
+  "response": {
+    "object": "list",
+    "data": [
+      {
+        "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "zai-org/GLM-5.3-Flash",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "tencent/Hy4-preview",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "zai-org/GLM-5.3",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-V4-Flash",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "meituan-longcat/LongCat-2.0",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "zai-org/GLM-5.2",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "moonshotai/Kimi-K2.7-Code",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-V4-Pro",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Pro/moonshotai/Kimi-K2.6",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Pro/zai-org/GLM-5.1",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "XingChenAGI/Xing4.0-29B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-V3.2",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Pro/deepseek-ai/DeepSeek-V3.2",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-V3.1-Terminus",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Pro/deepseek-ai/DeepSeek-V3.1-Terminus",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3.6-35B-A3B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3.6-27B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3.5-122B-A10B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3.5-35B-A3B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3.5-27B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3.5-9B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3.5-4B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "PaddlePaddle/PaddleOCR-VL-1.5",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-R1",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Pro/deepseek-ai/DeepSeek-R1",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-V3",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Pro/deepseek-ai/DeepSeek-V3",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "stepfun-ai/Step-3.5-Flash",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-VL-32B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-VL-32B-Thinking",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-VL-8B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-VL-8B-Thinking",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-VL-30B-A3B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-VL-30B-A3B-Thinking",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-Omni-30B-A3B-Thinking",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-Omni-30B-A3B-Captioner",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-OCR",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "inclusionAI/Ling-flash-2.0",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "inclusionAI/Ling-mini-2.0",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "tencent/Hunyuan-MT-7B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "ByteDance-Seed/Seed-OSS-36B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "zai-org/GLM-4.5V",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "zai-org/GLM-4.5-Air",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "tencent/Hunyuan-A13B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-32B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-14B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen3-8B",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "THUDM/GLM-4-32B-0414",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "THUDM/GLM-Z1-9B-0414",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "THUDM/GLM-4-9B-0414",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen2.5-72B-Instruct-128K",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen2.5-72B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen2.5-32B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen2.5-14B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Qwen/Qwen2.5-7B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "Pro/Qwen/Qwen2.5-7B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "LoRA/Qwen/Qwen2.5-32B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "LoRA/Qwen/Qwen2.5-14B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "LoRA/Qwen/Qwen2.5-72B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      },
+      {
+        "id": "LoRA/Qwen/Qwen2.5-7B-Instruct",
+        "object": "model",
+        "created": 0,
+        "owned_by": ""
+      }
+    ]
+  }
+}

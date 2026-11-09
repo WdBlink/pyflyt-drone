@@ -1,0 +1,113 @@
+{
+  "files": {
+    "paper/research/20261104-inspection/experiment/design.ral.v3.json": "83f8f1a72f5261aaa5783c0d190f3788fafcd05bca1e7d16a6901c69c9abf0de",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v1/binding.json": "38ecf56c0dc841ab425c0206715e370b1cce24e843da6024bd723191c2de7911",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v1/contract.json": "2b3f828ca54864a1da215567383560398fd64088d6717ae10b0375dc8b50263a",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v1/inspection_formal_namespace.py": "ddafaf5322f4b40d63925e0c2ad37b440b942ac7c1fd2c5ff6445f9ebb4fa818",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v1/inspection_namespace_admission.py": "2f4197da345c9c8a49ff877e26baff0848213ba5a18fca157106ba975986ab07",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v1/namespace-tests.log": "f0c5c7574dd63d6d92a6ca31d3ba865f48c189a3d52b6e332103fe612758d9da",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v1/phase-tests.log": "44d83ad137613939263c06a94cfab265f730215f63d49278ebe4449ac0d33999",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v1/test_formal_phase_layout.py": "faf73f716277eb03bfe4bf86fa723a6797c55db4c35088dc0dc1ede9da972a1b",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v1/test_namespace_admission.py": "a09aee609f3837428c988da3f26df335fdbded720884569e9f8f3cf9f3c9cf47",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_admission.py": "c981449425a835fad40eda9bbdc47dc76d2aa0e473a26bde8312743739a1779d",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_namespace.py": "ddafaf5322f4b40d63925e0c2ad37b440b942ac7c1fd2c5ff6445f9ebb4fa818",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_namespace_admission.py": "2f4197da345c9c8a49ff877e26baff0848213ba5a18fca157106ba975986ab07",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_formal_phase_layout.py": "faf73f716277eb03bfe4bf86fa723a6797c55db4c35088dc0dc1ede9da972a1b",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_g4_proof_boundary.py": "191d7af54bee6062053897d40fbd5f6e81f2c639a1f455004951a073ee94dc53",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_namespace_admission.py": "a09aee609f3837428c988da3f26df335fdbded720884569e9f8f3cf9f3c9cf47"
+  },
+  "freeze_binding_sha256": "38ecf56c0dc841ab425c0206715e370b1cce24e843da6024bd723191c2de7911",
+  "independent_artifacts": {
+    "/tmp/inspection-namespace-review-v1/namespace-tests.log": "6d9e84cf05fea19689e354e324a8d1723538cba82f95eaf4dea77041a318831d",
+    "/tmp/inspection-namespace-review-v1/phase-tests.log": "c3788640522b7a73a8a63ce1a35822e59814788116a50e7dc72a1c192363d3f2",
+    "/tmp/inspection-namespace-review-v1/probe_namespace.py": "597cd6a989394260649cdbb9496d9bc296ddd4cf6366ddc520cc0120bbaeaa18",
+    "/tmp/inspection-namespace-review-v1/results.json": "9f1b6c0a21a3cb9695d892641bcb2210f53f1739d5e716bb01da91f8b3ff450d"
+  },
+  "probe_results": {
+    "fixed-path-alias": {
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "one canonical phase intent; no replacement namespace"
+    },
+    "foreign-source": {
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "namespace changed an already accepted scientific subject"
+    },
+    "g4-revoked-after-seeds": {
+      "accepted": false,
+      "exception": "ValueError",
+      "fresh_g4_check_afterward": "ValueError: qualification finding has been superseded",
+      "owner_reader_calls": 3,
+      "reason": "qualification finding has been superseded",
+      "seed_intent_was_read": true
+    },
+    "g4-revoked-before-seeds": {
+      "accepted": false,
+      "exception": "ValueError",
+      "fresh_g4_check_afterward": "ValueError: qualification finding has been superseded",
+      "owner_reader_calls": 2,
+      "reason": "qualification finding has been superseded",
+      "seed_intent_was_read": false
+    },
+    "holdout-positive": {
+      "accepted": true,
+      "native_request": "b927e8c66c71f630b1acdc078e5120c0ac4d25ec499d7aa285df8561d1e8d239",
+      "phase": "holdout",
+      "root_count": 12
+    },
+    "latest-plan-packet": {
+      "accepted": true,
+      "fresh_g4_check_afterward": "ValueError: accepted plan and live dispatch owner required",
+      "native_request": "4c933e179eec16bdb775ea1a380a0145ebb284ec577372f9161b40470d86d235",
+      "owner_reader_calls": 3,
+      "phase": "main",
+      "root_count": 72,
+      "seed_intent_was_read": true
+    },
+    "latest-source": {
+      "accepted": true,
+      "fresh_g4_check_afterward": "ValueError: admission artifact changed",
+      "native_request": "c66850b4558ee67b80ce9509f968fdd4fd4d5fdc1979f6f182a365fce5927cf0",
+      "owner_reader_calls": 3,
+      "phase": "main",
+      "root_count": 72,
+      "seed_intent_was_read": true
+    },
+    "main-positive": {
+      "accepted": true,
+      "native_request": "95566c76f55ed22997b59eaa9dcab1038531d7ea30bb109e31096349f83c8cd2",
+      "phase": "main",
+      "root_count": 72
+    },
+    "reversed-native-parent-order": {
+      "accepted": true,
+      "native_request": "07365d120e2cb69508ec4e9986484a68bead024b5c6b51e0918e010fd84c982a",
+      "phase": "holdout",
+      "root_count": 12
+    },
+    "rewritten-intent": {
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "qualification is not bound by its actual applied native round"
+    },
+    "top-level-condition-drop": {
+      "accepted": true,
+      "episode_denominator": 1296,
+      "root_mean_denominator": 576
+    },
+    "top-level-seeds": {
+      "accepted": true,
+      "episode_denominator": 1296,
+      "root_mean_denominator": 576
+    }
+  },
+  "reviewer": "/root/control_review",
+  "scope": "uninstalled namespace/phase read-only binding component; literal synthetic seeds only; no live owner access/mutation, model, physics, RNG draws or actual formal inputs",
+  "test_results": {
+    "namespace": "26 passed in1.17s",
+    "phase": "17 passed in0.03s",
+    "run_in_separate_processes": true,
+    "working_SHA_matched_freeze_before_execution": true
+  }
+}

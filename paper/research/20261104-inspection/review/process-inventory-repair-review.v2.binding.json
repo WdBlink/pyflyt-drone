@@ -1,0 +1,81 @@
+{
+  "schema": "independent-process-inventory-repair-review-v2",
+  "reviewer": "/root/control_review",
+  "freeze_binding_sha256": "edefe19a4b4c77faa92052b6fa86ebbcc60c0eaa6f43c69a5c0c762f1f60435e",
+  "frozen_files": {
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/abi-probe.c": "5e945a8331d291f3ae0b75a3cbc4a72fd583ca3498d320f7425241bfcdf38a4a",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/abi-probe.v1.json": "3dcaeb3cf111b5e9f5b0269d759d6e4ea60f37d58a9f19827ea05159dbb51657",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/combined-compat-tests.log": "b079ede4ac60da8f17876c078a3fb57a945c23fbad3457b745460c74718c71dd",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/contract.json": "2e6f5460225afcc16de26bcf62f0f0292256ea67f91fedc32e986bf6cfefda2a",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/probe_forest_inventory.py": "62962cad123b514415950537da95da158e221434ca406b38167fb6fc6d252ac7",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/readonly-forest-performance.v6.json": "304199921e5c798ca1a790a4a9c6753af83a934b21207d36bbe970b37e33725e",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/source/eval/inspection_darwin_inventory.py": "f1870d92317d5f482d5d5cc19f791fffecb23ac0fb7c777028be5e1060c59ab9",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/source/eval/inspection_process_cleanup.py": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/tests/test_native_inventory.py": "e6db857931a2aa6759d228fc97572568904e7b5c3590cdffdfab6923e694f54f",
+    "planning/inspection-process-inventory-candidate.v1/freeze.v2/verify_staged_cleanup.py": "2a8a8fb51de56b51bb19de484f02a7a4e0401920f8320466955f76ecfce0474a"
+  },
+  "prior_review_sha256": "87ed61b1ed35b3a6124d90969db7ae21a867c5848aa6d0478ecdc7868c7bf20d",
+  "changes": "two-line uid!=os.getuid RecordUnavailable guard after readable BSD record, plus root/child unit cases; no cleanup source or verifier changes",
+  "candidate_cleanup_sha256": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+  "candidate_cleanup_byte_identical_to_reviewed_v1": true,
+  "production_cleanup_still_original_sha256": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+  "provided_compat_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python paper/research/20261104-inspection/planning/inspection-process-inventory-candidate.v1/verify_staged_cleanup.py",
+    "working_inputs_matched_freeze": true,
+    "result": "41 passed in 10.03s; includes15new and actual sleeping-child discovery/cleanup/unbound-root failed-attach recovery",
+    "log_path": "/tmp/inspection-process-inventory-review-v2/compat-tests.log",
+    "log_sha256": "312c28158b2dcfd48b93e79b3dae2b39a88d3c95091603af7f9d62defad2a932"
+  },
+  "independent_original_counterexample_reuse": {
+    "script_path": "/tmp/inspection-process-inventory-review-v2/test_original_foreign_counterexample.py",
+    "script_sha256": "5b78057a7b75ddeb31df22b91f8fc7674cd8e3226a5fc95ffc1bd2bd340942ed",
+    "log_sha256": "fcd476841e8af121ff907e81a92a59579b64c007b70cb79f9d096806f703fc7e",
+    "result": "2 passed in 0.01s; foreign root and child each invoke global fallback exactly once; complete sentinel including unrelated/orphan row returned; no hot-native increment or partial adoption; RecordUnavailable reason incremented"
+  },
+  "retained_v6_microprobe_recount": {
+    "metric_rows": 40,
+    "pairs": 20,
+    "all_forest_identity_python_checks": true,
+    "source_sha256_matches_frozen_candidate": true,
+    "backend_counts": {
+      "hot_native": 22,
+      "hot_legacy": 0,
+      "fallback_reasons": {}
+    },
+    "median_seconds": {
+      "legacy_full": {
+        "wall": 0.07539377099601552,
+        "self_cpu": 0.002858999999999997,
+        "child_cpu": 0.07201550000000007,
+        "self_plus_child_cpu": 0.07483599999999994
+      },
+      "native_forest": {
+        "wall": 0.00031525047961622477,
+        "self_cpu": 0.0003154999999999981,
+        "child_cpu": 0.0,
+        "self_plus_child_cpu": 0.0003154999999999842
+      }
+    },
+    "new_microprobe_executed_by_reviewer": false
+  },
+  "finding_disposition": {
+    "v1_foreign_fallback_P2": "closed"
+  },
+  "open_findings": [],
+  "decision": "bounded_source_repair_closed_candidate_still_uninstalled_not_clock_or_G4",
+  "not_run": [
+    "model",
+    "physics",
+    "formal RNG/data",
+    "actual owner mutation",
+    "new performance microprobe",
+    "load clock qualification",
+    "installation"
+  ],
+  "continuing_limits": [
+    "source-amendment and provenance closure before install",
+    "fresh post-repair measured clock qualification still required",
+    "original failed pilot not resumed or reclassified",
+    "second-resolution persistent birth and periodic observation/subreaper limits unchanged"
+  ]
+}

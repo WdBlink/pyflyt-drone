@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/toc/10.1111/(ISSN)1467-9469.50thanniversary",
+      "path": "literature/primary/holm-wiley-anniversary.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://www.jstor.org/stable/i412579",
+      "path": "literature/primary/holm-1979-journal-issue.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    }
+  ]
+}

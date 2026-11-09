@@ -1,0 +1,29 @@
+{
+  "sources": [
+    {
+      "url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/",
+      "path": "venue/sources/ral-authors.html",
+      "kind": "html"
+    },
+    {
+      "url": "https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/",
+      "path": "venue/sources/tro-authors.html",
+      "kind": "html"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.31073v1",
+      "path": "literature/multiuav-plat-v1.html",
+      "kind": "html"
+    },
+    {
+      "url": "https://arxiv.org/html/2607.22014v1",
+      "path": "literature/missionbench-v1.html",
+      "kind": "html"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.01371v1",
+      "path": "literature/esarbench-v1.html",
+      "kind": "html"
+    }
+  ]
+}

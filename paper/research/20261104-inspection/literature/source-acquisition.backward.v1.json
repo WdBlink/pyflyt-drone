@@ -1,0 +1,52 @@
+{
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2312.14950v2",
+      "path": "literature/primary/typefly-v2-metadata.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://arxiv.org/html/2312.14950v2",
+      "path": "literature/primary/typefly-v2.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://arxiv.org/abs/2503.01378v1",
+      "path": "literature/primary/cognitivedrone-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://arxiv.org/html/2503.01378v1",
+      "path": "literature/primary/cognitivedrone-v1.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://arxiv.org/abs/2503.02572v1",
+      "path": "literature/primary/racevla-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://arxiv.org/html/2503.02572v1",
+      "path": "literature/primary/racevla-v1.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://arxiv.org/html/2503.04798v3",
+      "path": "literature/primary/smart-v3.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://arxiv.org/html/2506.14009v2",
+      "path": "literature/primary/gradnav-v2.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    }
+  ]
+}

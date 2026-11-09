@@ -1,0 +1,22 @@
+{
+  "schema": "inspection-runtime-production-integration-review-v1",
+  "role": "source delta and software checks only; independent review and actual smoke/fullpilot pending",
+  "files": {
+    "eval/run_inspection_reference.py": "09189b827047bf0ecca51e044db4fb3eadeffa0dda8b3e87ade91c007be29742",
+    "eval/run_inspection_llm_development.py": "98ba1f50beab345e1d3aae19ac6dbb694e3bf5ba6d6d2a1227faac05eabce7b1",
+    "eval/run_inspection_dev.py": "385052e5179747fbadf4a3a412704190062133fcff00ed1b1ec10349dfd68c3f",
+    "eval/run_inspection_classic_pilot.py": "247269fc95273c208359c5ec5d0bdb877d2c625f4cfc2ebc84a54cb87012e850",
+    "eval/run_inspection_eight_condition_pilot.py": "53378474ca95c94d88a07c084f898d6dc3bf49e45c04c3714304297f9822f2a1",
+    "eval/inspection_episode_receipts.py": "82b85e69307f2e0ee212ceaeca60acfd729d361fe239ea33101b706765f69fee",
+    "eval/inspection_worker_runtime.py": "bf4e0b38f1d7da98ccd559091b2b722c74ed0e6fdfd0088336ccaa441bdfc21c",
+    "tests/test_inspection_worker_runtime.py": "cdb897f65ca14856d857e79e0a149436f3f978f1157e43a9cec7790cfddc7347",
+    "tests/test_inspection_runtime_integration.py": "b8987aad990c7c06f8e42992b8e772fb823535c962fe3bf2a3bb9df71801d3d3",
+    "inspection-runtime-integration.v1.tests.log": "18cada4b83a1f3ea3bdc9be3c3e6afb869c4c83649420df769df7e1e65c9dbdc",
+    "inspection-runtime-integration.v2.tests.log": "733867c85207e217462af873d9e5f1cf611d4f2c9542de3014c784ca1c8633a4",
+    "inspection-runtime-integration.v1.compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "before_hashes_sha256": "6401fa5a4388747ab9871ab48549551e5513e840a07079cf32aca60ed3a1d9a1",
+  "reviewed_helper_sha256": "bf4e0b38f1d7da98ccd559091b2b722c74ed0e6fdfd0088336ccaa441bdfc21c",
+  "identical_to_candidate_helper": true,
+  "scope": "Reference worker runtime lifecycle; source inventories in reference/dev/classic/all-eight/LLM; shared receipt runtime-audit admission. Diagnostic derivatives stay frozen as old engineering versions. Physics-loop AST unchanged."
+}

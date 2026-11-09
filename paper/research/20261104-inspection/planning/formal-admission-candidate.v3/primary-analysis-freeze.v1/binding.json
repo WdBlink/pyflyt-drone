@@ -1,0 +1,29 @@
+{
+  "role": "Untested staged main/holdout analysis consumer delta for independent source review; no formal data",
+  "at": "2026-11-06T16:44:07.997939+00:00",
+  "baseline": "secondary-consumer-runtime-freeze.v1/binding.json",
+  "baseline_sha256": "d0ce314b471a85438493d4399665df598ceb8bc7219e747aaac202d65dd06ef0",
+  "members": {
+    "source/eval/analyze_inspection_formal.py": {
+      "sha256": "7e4dc0e42f4dc203a790487b7cd86ea5531167d8d713ac230faf72da4e3da286",
+      "bytes": 20706
+    },
+    "source/eval/inspection_formal_admission.py": {
+      "sha256": "cc363a9fd99d432afbe8c2e532621f27dd0bf403018462345a05028630aeb16c",
+      "bytes": 18636
+    },
+    "source/eval/inspection_statistics.py": {
+      "sha256": "70c8783be6f6665b81b1190d6b905f4a22938445cc4c641458202bab5c710545",
+      "bytes": 11118
+    },
+    "source/eval/inspection_secondary_statistics.py": {
+      "sha256": "b056b9d42223651c9d467ba332ee7803505bc3b7a382f69e3c83bdd197c68ab1",
+      "bytes": 3765
+    },
+    "tests/test_formal_analysis.py": {
+      "sha256": "2b9eba6745d791b681ef88d60a271d6f5df581edf3bcacb27a0f53d6b27e8e73",
+      "bytes": 8519
+    }
+  },
+  "scope": "New analysis entry, required-source addition and exact two existing numeric-module copies; no production source or prior frozen17grader change. New tests not yet run; await between-episode barrier. No namespace/model/physics/native operations."
+}

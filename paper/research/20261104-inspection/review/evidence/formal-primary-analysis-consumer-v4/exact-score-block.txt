@@ -1,0 +1,15 @@
+recorded_evidence = {**evidence, "adapter_repeat_ordinal": slot.repeat_ordinal,
+            "adapter_condition": slot.condition, "order_index": slot.order_index,
+            "schedule_sha256": schedule_sha}
+if raw["value"] != y or canonical_sha(raw["evidence"]) != canonical_sha(recorded_evidence):
+            raise ValueError("SDK value/evidence differs from independently revalidated physical receipt")
+score = evidence["score"]
+if (any(type(score[k]) not in (int, float) or not math.isfinite(score[k]) or not 0 <= score[k] <= 1
+                for k in SCORE_FIELDS)
+                or any(type(score[k]) is not int or score[k] not in (0, 1) for k in ("H", "E", "SR"))
+                or score["Y"] != y):
+            raise ValueError("finite bounded revalidated score components required")
+rows.append({"case_id": slot.case_id, "domain": slot.domain, "level": slot.level,
+            "condition": slot.condition, "repeat_ordinal": slot.repeat_ordinal, "status": "completed",
+            "SR": score["SR"], "score": {key: score[key] for key in SCORE_FIELDS},
+            "full_score_sha256": canonical_sha(score), "source_episode": str(directory.relative_to(project))})

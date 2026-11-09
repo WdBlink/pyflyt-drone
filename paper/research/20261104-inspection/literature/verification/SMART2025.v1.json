@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-11-06T00:24:06.895370+00:00",
+  "identity": {
+    "title": "Advancing MAPF Toward the Real World: A Scalable Multi-Agent Realistic Testbed (SMART)",
+    "authors": [
+      "Yan, Jingtian",
+      "Li, Zhifei",
+      "Kang, William",
+      "Zheng, Kevin",
+      "Zhang, Yulun",
+      "Chen, Zhe",
+      "Zhang, Yue",
+      "Harabor, Daniel",
+      "Smith, Stephen F.",
+      "Li, Jiaoyang"
+    ],
+    "year": 2025,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2503.04798v3"
+  },
+  "url": "https://arxiv.org/abs/2503.04798v3",
+  "metadata_path": "literature/primary/smart-v3-metadata.html",
+  "metadata_sha256": "a3f9afc3b434d538cbe2f0b0c3849b825bb8517f949b047ea275576396c347c9",
+  "first_publication_date": "2025/03/03",
+  "version_update_date": "2026/04/19",
+  "metadata_declared_doi": "10.1109/LRA.2026.3688062",
+  "read_path": "literature/text/smart-calibration-version.v1.txt",
+  "read_sha256": "58c4a0ea051a7db61d8f3bfbddad43aef9cec4fc77ce2037f0c68471e95869fa",
+  "read_extent": "Method III-B/C and task definition; not a reproduction or verification of scalability numbers.",
+  "acceptance": "No journal-version upgrade; citation is pinned arXiv version. DOI from arXiv metadata retained only as additional provenance.",
+  "claim": "Uses an ADG execution monitor with RPC completion confirmations and independently operating robot executors. Its stated evaluation task is MAPF path execution, providing prior art for monitored physical execution.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/smart-calibration-version.v1.txt",
+      "quote": "confirmations for finished actions"
+    },
+    {
+      "path": "literature/text/smart-calibration-version.v1.txt",
+      "quote": "This distributed executor design enables"
+    }
+  ]
+}

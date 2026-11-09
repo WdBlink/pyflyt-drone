@@ -1,0 +1,21 @@
+{
+  "contract_status": "draft",
+  "question": "Under shared qualified execution and causal sensing, how do mission agents trade inspection quality, safety, event recovery and latency during continuous multi-UAV fixed-wing flight?",
+  "scope": "Begin the empirical benchmark paper specified by BENCHMARK_RESEARCH_PLAN.md. Current authorization covers read-only evidence intake, official venue comparison, literature preparation and local writing preparation. Qualification and formal results are missing. No paid API use, long simulation campaign, publication or submission is inferred.",
+  "angle": "Deadline-bound information delivery with finite reports, continuous flight and auditable causal evidence; negative LLM results are valid.",
+  "audience": "Robotics and embodied-agent benchmark researchers",
+  "venue": "undecided",
+  "direction": "Mission-level agents for continuous fixed-wing multi-UAV inspection",
+  "paper_type": "empirical",
+  "resources": {
+    "hardware": "Current local Mac; simulation and TeX dependencies not yet probed",
+    "access": "Local project materials and public primary literature",
+    "authorization": "User requested starting paper writing according to the existing plan; prepare local artifacts and verify evidence. Paid calls and expanded compute require concrete authorization.",
+    "cost_basis": "No paid external calls or simulation experiments initiated; native host cost is unreported by this controller."
+  },
+  "budget": {},
+  "reviewers": [
+    "Codex independent reviewer (separate context; assignment pending)"
+  ],
+  "deliverable_plan": []
+}

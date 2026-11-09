@@ -1,0 +1,44 @@
+{
+  "source_provenance": "/Users/wdblink/.codex/skills/deli-autoresearch/PROVENANCE.md",
+  "copied_at": "2026-11-03",
+  "files": [
+    {
+      "path": "scripts/venue_profile.py",
+      "source": "/Users/wdblink/.codex/skills/deli-autoresearch/scripts/venue_profile.py",
+      "sha256": "5c7860fd2994602ef2bc2650644fad4fbfd2957470b6350ab8e68503e699fc7c",
+      "origin": "user-authored local Deli adaptation; not Deli upstream original"
+    },
+    {
+      "path": "scripts/plan_audit.py",
+      "source": "/Users/wdblink/.codex/skills/deli-autoresearch/scripts/plan_audit.py",
+      "sha256": "e60ad6e4de917040065fac4d12b01ccca889bb7229d90c27293ac5b5f2d7aa47",
+      "origin": "user-authored local Deli adaptation; not Deli upstream original"
+    },
+    {
+      "path": "scripts/deliverable_contract.py",
+      "source": "/Users/wdblink/.codex/skills/deli-autoresearch/scripts/deliverable_contract.py",
+      "sha256": "d26fd697eb841cd7d02452c98b4e5173fa537bc1dd46ad32c94b7cacf04f3c9c",
+      "origin": "user-authored local Deli adaptation; not Deli upstream original"
+    },
+    {
+      "path": "tests/test_venue_profile.py",
+      "source": "/Users/wdblink/.codex/skills/deli-autoresearch/tests/test_venue_profile.py",
+      "sha256": "62d1a917845c35e87ccce67c2239615045cf62efdbe2aae6587dbcf9577b90b1",
+      "origin": "user-authored local Deli adaptation; not Deli upstream original"
+    },
+    {
+      "path": "tests/test_plan_audit.py",
+      "source": "/Users/wdblink/.codex/skills/deli-autoresearch/tests/test_plan_audit.py",
+      "sha256": "7f06252872ff99cd089e3c115c300b1310a2e6ab74981acba8e37b542eed9e04",
+      "origin": "user-authored local Deli adaptation; not Deli upstream original"
+    },
+    {
+      "path": "tests/test_deliverable_contract.py",
+      "source": "/Users/wdblink/.codex/skills/deli-autoresearch/tests/test_deliverable_contract.py",
+      "sha256": "6faad833be4956b914235f21d5ba32bdae81f3573f0599a47502121fb84996f3",
+      "origin": "user-authored local Deli adaptation; not Deli upstream original"
+    }
+  ],
+  "integration": "Only pure functions are imported. No freeze/bind/review/checkpoint command writes a parallel state ledger.",
+  "license_note": "No license is inferred for Deli upstream original pages. These scripts and tests are identified as local additions in the source PROVENANCE."
+}

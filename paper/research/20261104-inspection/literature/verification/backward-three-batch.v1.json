@@ -1,0 +1,22 @@
+{
+  "role": "New3source verification batch;14cumulative primary entries, not a quota or independent acceptance",
+  "entries": [
+    {
+      "key": "TypeFly2023",
+      "verification": "literature/verification/TypeFly2023.v1.json",
+      "verification_sha256": "bb576f02a4f20251d32cfb8e1ac3abca668165fda973cb2b2a8a9f23b67e5856"
+    },
+    {
+      "key": "CognitiveDrone2025",
+      "verification": "literature/verification/CognitiveDrone2025.v1.json",
+      "verification_sha256": "e30015d68baa3f2cf3e563af308a0e52022c28576ca35b3d4cc45c2fc968d96d"
+    },
+    {
+      "key": "RaceVLA2025",
+      "verification": "literature/verification/RaceVLA2025.v1.json",
+      "verification_sha256": "f8f090976c19c2d91513b1c662587226583a8ec1ea208b8ca050f97a20d4dd79"
+    }
+  ],
+  "first_seen_scope": "retrospective discovery during ongoing devpilot; versions predate question, actual discovery does not.",
+  "not_changed": "No model, prompt, arm, seed, sample size, grader or scientific obligation changed."
+}

@@ -1,0 +1,115 @@
+{
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review",
+  "sources": [
+    {
+      "bytes": 5322821,
+      "content_type": "application/pdf",
+      "fetched_at": "2026-11-05T02:38:37.554339+00:00",
+      "kind": "pdf",
+      "path": "venue/samples/S05-mripp.pdf",
+      "resolved_url": "https://arxiv.org/pdf/2409.16967",
+      "reused": false,
+      "sha256": "be21518010cb554a0afa5009ab18b943cc48293778b5084d6c8d3b32298952e8",
+      "url": "https://arxiv.org/pdf/2409.16967"
+    },
+    {
+      "bytes": 3211968,
+      "content_type": "application/pdf",
+      "fetched_at": "2026-11-05T02:38:41.011483+00:00",
+      "kind": "pdf",
+      "path": "venue/samples/S06-hetmrta.pdf",
+      "resolved_url": "https://marmotlab.org/publications/73-RAL2025-HetMRTA.pdf",
+      "reused": false,
+      "sha256": "ee02a541ae034564169d859a5aa628df7d5c1645606dbb1b51a00d6d7e7b70ce",
+      "url": "https://marmotlab.org/publications/73-RAL2025-HetMRTA.pdf"
+    },
+    {
+      "bytes": 3277899,
+      "content_type": "application/pdf",
+      "fetched_at": "2026-11-05T02:38:42.932160+00:00",
+      "kind": "pdf",
+      "path": "venue/samples/S07-pursuit.pdf",
+      "resolved_url": "https://arxiv.org/pdf/2409.15866v4",
+      "reused": false,
+      "sha256": "8d94935eddf68bab911bb0911d6afe5af30dfab23e102ba5089957048fa54bbd",
+      "url": "https://arxiv.org/pdf/2409.15866v4"
+    },
+    {
+      "bytes": 5811491,
+      "content_type": "application/pdf",
+      "fetched_at": "2026-11-05T02:38:45.129307+00:00",
+      "kind": "pdf",
+      "path": "venue/samples/S08-gradnav.pdf",
+      "resolved_url": "https://arxiv.org/pdf/2506.14009v2",
+      "reused": false,
+      "sha256": "46161e3ef6f41b91cccfa89093db57a4780e6fe7bbb967f0497cfa5f6ddaa2ba",
+      "url": "https://arxiv.org/pdf/2506.14009v2"
+    },
+    {
+      "bytes": 16161,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T02:38:45.984060+00:00",
+      "kind": "html",
+      "path": "venue/sources/smart-project.html",
+      "resolved_url": "https://smart-mapf.github.io/smart/",
+      "reused": false,
+      "sha256": "0a37ffe9215dea911220eafa6e6803a757d6c24aff83d3fb47941e476123f03e",
+      "url": "https://smart-mapf.github.io/smart/"
+    },
+    {
+      "bytes": 5305,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T02:38:47.580287+00:00",
+      "kind": "html",
+      "path": "venue/sources/hetmrta-acceptance.html",
+      "resolved_url": "https://www.marmotlab.org/blog/2025/01/10/RAL2025.html",
+      "reused": false,
+      "sha256": "d43e707705ebbd135fab9f3d6f93efd3775fc6965f7eb59e2cadf8763f49f7d2",
+      "url": "https://www.marmotlab.org/blog/2025/01/10/RAL2025.html"
+    },
+    {
+      "bytes": 86316,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T02:38:49.249500+00:00",
+      "kind": "html",
+      "path": "venue/sources/marmot-publications.html",
+      "resolved_url": "https://marmotlab.org/publications.html",
+      "reused": false,
+      "sha256": "149a7328d956f6acac5705b2bdc86c8edbdea5e7300d6e25ecc0d8f3284ea836",
+      "url": "https://marmotlab.org/publications.html"
+    },
+    {
+      "bytes": 102812,
+      "content_type": "application/zip",
+      "fetched_at": "2026-11-05T02:38:55.305589+00:00",
+      "kind": "zip",
+      "path": "venue/official/ieeeconf.zip",
+      "resolved_url": "https://ras.papercept.net/conferences/support/files/ieeeconf.zip",
+      "reused": false,
+      "sha256": "11d1051d5fe3dafd1e25bc7a8b66265cbe65dc135e26440cc6661baeeeb90c76",
+      "url": "https://ras.papercept.net/conferences/support/files/ieeeconf.zip"
+    },
+    {
+      "bytes": 44841,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T02:38:56.294438+00:00",
+      "kind": "html",
+      "path": "venue/sources/gradnav-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2506.14009v2",
+      "reused": false,
+      "sha256": "71cf2ccfbaa242e6ef99a7e02c137dc04b78ba63a86b2926ce7e93f07c8dc8f6",
+      "url": "https://arxiv.org/abs/2506.14009v2"
+    },
+    {
+      "bytes": 252959,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T02:38:58.178000+00:00",
+      "kind": "html",
+      "path": "venue/sources/nl2hltl-author-repository.html",
+      "resolved_url": "https://github.com/intelligent-control-lab/NL2HLTL",
+      "reused": false,
+      "sha256": "3a0316fb1f0d8694221356f9bb17a025d8e98595c79693d572eaf1285f62e6ea",
+      "url": "https://github.com/intelligent-control-lab/NL2HLTL"
+    }
+  ]
+}

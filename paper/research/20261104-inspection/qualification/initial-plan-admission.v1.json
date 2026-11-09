@@ -1,0 +1,35 @@
+{
+  "role": "normal sole-owner initial-plan admission and bounded development evidence; G4 not passed",
+  "at": "2026-11-05T19:10:29.363083+00:00",
+  "brief_sha256": "9169308d3db5f53716b0784d0cda30e94faec0c16d0b6051a7fa47607bc0ff9a",
+  "frozen_plan": "f17d41111458e5f2b2529e94499c9f372a826d959c4cc5a28c8f6af2b6deff01",
+  "receipt_stages": [
+    "intake",
+    "venue",
+    "plan"
+  ],
+  "initial_plan_operation": "accept-initial-source-bound-ral-plan-20261106",
+  "budget_operation": "rebind-original-default-budget-after-lossless-schema-repair-20261106",
+  "plan_gate_separate_from_G4": true,
+  "real_model_generation_calls": 0,
+  "native_usage_reservations": 0,
+  "main_holdout_instances": 0,
+  "source_bindings": {
+    "packets/plan.ral.v3.json": "5c1a0278332c4ee6e4f0546530a56842c30c18c5fcdb015934debb5b6a864b78",
+    "experiment/design.ral.v3.json": "83f8f1a72f5261aaa5783c0d190f3788fafcd05bca1e7d16a6901c69c9abf0de",
+    "experiment/evaluator.v2.py": "de826d2488b5a8ad366ccec9ead8b81bebf6b794a533a38ac55338916848611b",
+    "experiment/evaluator-source-manifest.v2.json": "ecc2069fc8795adb9096173ab2d859b6540a94309ecf99310755cb7b3177bf80",
+    "planning/population.ral.v1.json": "307fbd5e77f841bf4a1b431a478527fa3aa85905694fd0242068d26c729a434c",
+    "inputs/brief.ral.v2.json": "e84396c4b96f9a1681bce948e44949802b02422e7ac90b89759fa2e48a45b37b",
+    "inputs/budget-answer.schema-rebind.v1.json": "7432b1ff565ff413744507da0be94a97c26aa3bec2f0c0c453fefde01b9f1e37",
+    "planning/budget-answer-schema-reuse.v1.json": "9eb4e4b08d7ac2c3f8fba8ebb9edf52da8af9dac3a61d5508c91d59968e0d6a6",
+    "qualification/evaluator-actual-recount.v2.json": "b822934f04fad9371e1f9ab23a8337215fa78237da9516b863c91c470d71ffe4",
+    "qualification/canonical-sdk-preflight.v2/report.json": "70755750f9f5dde313eeb965bf2e1e1707291dd91f5e96865efe716df5b447a1",
+    "qualification/classic-prefix-measurement-recount.v1.json": "853428111ed6a5af9a1ede25f946f80d6a9cc318678a8a5a385a6b25bd7e3eca",
+    "review/initial-research-plan-repair-review.v1.md": "a187fd368a656d55fbf5db575f528ff4d1aa969b858c7a25dc71f4897740595b",
+    "review/frozen-evaluator-repair-review.v1.md": "c073e8fac7ae1701a4f5e212f5db005f698da73e61d29b4a8f9215ef2b023956",
+    "review/brief-schema-repair-review.v1.md": "3b6429715e67e6dd15157eb927c4e25d7bd7fe00e9e2aa08ee84ac0ae4bb0c99",
+    "review/classic-measurement-loader-repair-review.v1.md": "fcd1714f8f3177a06f7fd72399857b2dc2828ff79825ab64bb33066d21553f98",
+    "review/local-model-wire-service-repair-review.v1.md": "046c9d95769037579308f07a90e92ec6c4612d726e990fb142d7aad5ffde7e18"
+  }
+}

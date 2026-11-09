@@ -1,0 +1,162 @@
+{
+  "role": "valid original callbacks29\u201330 only; following slot030 still unknown, no new barrier acknowledgement",
+  "at": "2026-11-07T00:31:16.661783+00:00",
+  "completed_callbacks": 30,
+  "planned_callbacks": 108,
+  "aborted_sdk_counts": {
+    "stopped": 77,
+    "completed": 30,
+    "failed": 1
+  },
+  "attempted": 31,
+  "slots": [
+    {
+      "order_index": 28,
+      "root_block_index": 1,
+      "case_id": "dev-L3-01",
+      "domain": "ID",
+      "level": 3,
+      "condition": "B3-M2",
+      "repeat_ordinal": 0,
+      "attempts": 1,
+      "score": {
+        "C": 0.9939498703543648,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3313166234514549,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3313166234514549,
+        "SR": 0
+      },
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.01050208399828989,
+        "clock_lag_p95_seconds": 0.003498000671485535,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "usage": {
+        "calls": 30,
+        "tokens": 168912
+      }
+    },
+    {
+      "order_index": 29,
+      "root_block_index": 1,
+      "case_id": "dev-L3-01",
+      "domain": "ID",
+      "level": 3,
+      "condition": "B2",
+      "repeat_ordinal": 0,
+      "attempts": 1,
+      "score": {
+        "C": 0.9049265341400173,
+        "S": 0.7777777777777778,
+        "D": 0.17256637168141592,
+        "Q": 0.618423561199737,
+        "H": 1,
+        "E": 1,
+        "Y": 0.618423561199737,
+        "SR": 0
+      },
+      "clock": {
+        "simulated_seconds": 600.0,
+        "physics_steps_executed": 144000,
+        "max_clock_lag_seconds": 0.010683166998205706,
+        "clock_lag_p95_seconds": 0.0035590840008694613,
+        "clock_lag_over_0p1_seconds_ticks": 0
+      },
+      "report_tool_audit_entries_count": 329,
+      "accepted_unique_report_ids_count": 5,
+      "usage": null
+    }
+  ],
+  "bound_files": {
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-0/plan.json": {
+      "sha256": "df09638feec63ceb5fd9c54ef0a0eb67a920733e205e004ca654e5b864dcd998",
+      "bytes": 17823
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-0/attempt-00/terminal.json": {
+      "sha256": "bbe03557844883dd29b24b327bc4ee1aafc24d26f0fb748ec216f81271a91af7",
+      "bytes": 67580
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-0/attempt-00/flight/world.json": {
+      "sha256": "061791863ea65344b424fdf598c16300592abe8ee4efbebda2e7d2fd2cbd7d0b",
+      "bytes": 23971611
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-0/attempt-00/flight/run.json": {
+      "sha256": "ad4ca14808c0c81beb51b270496e8458292c1488dd5a19edb065fb9bafda28de",
+      "bytes": 297359
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-0/attempt-00/flight/private-case.json": {
+      "sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "bytes": 5405
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v1/order-receipts/000028.json": {
+      "sha256": "fe3be3bdfef63f96d57d43e67f916d5071bdf8ffc40a31c8aa8e0d2fc8b59f14",
+      "bytes": 360
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v1/llm/raw/dev-L3-01-B3-M2-0.json": {
+      "sha256": "0090c851240bbf38f12d93f519da5c189a54e18a98048c2210f0096a19694b9e",
+      "bytes": 983
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-028-a0/complete-attempt.zip": {
+      "sha256": "9b2aa1a5d2061547522eb19b936a96ff7880bfb67744c5adc37cc1e031f0ef27",
+      "bytes": 10406333
+    },
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-028-a0/usage-receipt.json": {
+      "sha256": "25d1c8628f9adfc03f4be2cc8bfbe32207a09dce688f895270d4aeb42bf206f8",
+      "bytes": 13053
+    },
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-028-a0.settle.json": {
+      "sha256": "c1424689e51969c2412562feae8f976fd115789b7b3905ea04e1795abf03194d",
+      "bytes": 175
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M2-0/attempt-00/process-tree.json": {
+      "sha256": "e88fa6f6da2e9e89ed0b56a7f1e0ac9dccb5a6c5a55bba8de446d66e827d9dbe",
+      "bytes": 1694
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L3-01-B2-0/plan.json": {
+      "sha256": "b0bde7f50145ed946a9dbf83b861b901d784746f954029bb0c124c75e1b9e458",
+      "bytes": 15988
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L3-01-B2-0/attempt-00/terminal.json": {
+      "sha256": "6582bd60620794bd8cf1f55ac35bddf1adce489b9a4f4f1e77a0e53ef9666b67",
+      "bytes": 1299
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L3-01-B2-0/attempt-00/flight/world.json": {
+      "sha256": "cc3fc38b531bb621c611b6d6fab3724f08571738e0a21f0539768d45e879966c",
+      "bytes": 26518605
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L3-01-B2-0/attempt-00/flight/run.json": {
+      "sha256": "b03238f614545f14d16b615c73bf15a465e1c39e9871465840d259faaf2e1a8b",
+      "bytes": 277470
+    },
+    "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L3-01-B2-0/attempt-00/flight/private-case.json": {
+      "sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "bytes": 5405
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v1/order-receipts/000029.json": {
+      "sha256": "6d37b8d882097d517670c65b879e89a2ea799fbde32079d6e9049c4aa5881a7a",
+      "bytes": 358
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v1/classic/raw/dev-L3-01-B2-0.json": {
+      "sha256": "edb188c783cf1436a8c3c0efa759d2db24dcd421181634f98f78ef5f1214b95f",
+      "bytes": 962
+    },
+    "logs/inspection-eight-condition-pilot.v4.continuation.v1/invocations/029.json": {
+      "sha256": "bea07fc6b77abd955410184c8a2d87fe2b9cd15f3fda0531eedbf8d797e982f4",
+      "bytes": 2527
+    }
+  },
+  "immutable_captures": {
+    "qualification/pilot-v4-slots-twentynine-thirty.v1/capture-source.py": "b083e4bbf3ee0ee5c7b1dc5c1fd87d73224a60f854ec9a41ef70707d90faf368",
+    "qualification/pilot-v4-slots-twentynine-thirty.v1/classic-order29-frozen-recount.json": "0bfe4b51c063ecfe922707967ebe47bb063f2bd6fc19ef138b4eebfffac422e3",
+    "qualification/pilot-v4-slots-twentynine-thirty.v1/native-status.json": "a31dcaae4f233c34fe736f72750318f9702689790201f1fd40e251b15daaef82",
+    "qualification/pilot-v4-slots-twentynine-thirty.v1/aborted-supervisor.stdout": "5873d5225ea17e8b9cb43337b62d267b672eecea76df6977de868d3a7309541e"
+  },
+  "limits": "one completeL1 and partialL3; not formal/G4; ordinary clock summaries; original030unknown retained"
+}

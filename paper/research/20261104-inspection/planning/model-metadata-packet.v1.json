@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3.8-27B",
+      "path": "planning/model-sources/qwen38-27b.metadata.v1.json",
+      "kind": "json",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://huggingface.co/api/models/zai-org/GLM-5.3-Flash",
+      "path": "planning/model-sources/glm53-flash.metadata.v1.json",
+      "kind": "json",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "path": "planning/model-sources/deepseek41-flash-1017.metadata.v1.json",
+      "kind": "json",
+      "max_bytes": 2000000
+    }
+  ]
+}

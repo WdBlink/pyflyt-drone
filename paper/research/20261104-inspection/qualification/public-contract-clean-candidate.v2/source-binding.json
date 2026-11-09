@@ -1,0 +1,22 @@
+{
+  "role": "v2 normalizes embedded parent tuple/list representation on JSON input; original failing test retained in v1",
+  "sources": {
+    "eval/inspection_llm_actor.py": "cd1bf019c637d447946cba30e1e2d8572c4ff90594de4b5b2d90f49cd65ccc7b",
+    "eval/inspection_llm_protocol.py": "b1c2f73c3894058105cea8b3b6088128fbe44fee29bda9854423ce3c0c3d19ed",
+    "envs/inspection/scenario.py": "6e7517b7b515d9f1a9cb86001112f4abd101939976dd3e044f0889a4665a5d22",
+    "envs/inspection/protocol.py": "c32bdabb67bf8493ff5125d0af4fc289d1d0210db762016a9c56a96dd2f174a4",
+    "envs/inspection/scoring.py": "bc8a21947d340fce28c83c3d2313ad9a2e7711e6af07c1bd275f774009b5631a",
+    "envs/inspection/mission.py": "715fce4a99325b6d26fbb1e9ffc20896603bfbd4d48396f0513a46f5ad14aec7",
+    "envs/inspection/execution.py": "dc301939ea1d55f08f01c69af5561c75f762ac45bdd0d144d677514387425ea4",
+    "envs/inspection/reference.py": "85f97b6cb632c7f178c20ad9f53097510cab1dca0cd56aec15a5fe222b9365c3",
+    "eval/inspection_classic.py": "763b14320f95e5d534154c4d4886cbd40e12cf13182f64d5eb572cd7d5e4fd00",
+    "eval/inspection_population.py": "bb7098554475a65d4717077b7704bcf5902cd0fc674c1a9a95a51a7e066a5ff7",
+    "eval/inspection_cases.py": "7537b17aa0cbcfd4cffdb00c1d35e45e56217f477e055db77ba80724c0868cef",
+    "eval/inspection_scenarios.py": "9159ba44790d6d315074a824e52adeebd96468ab3032c6f0f07fdb755ce2753f",
+    "tests/test_inspection_population.py": "5d44cfbfbe4ca38aaa2f399eb0c620d0d41bdbe2ccfe7df7ecec22c480570753",
+    "eval/run_inspection_reference.py": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+    "eval/run_inspection_dev.py": "470b639ad8c41876490156755449a9c82ca0ccecf73099d5d62dbab366add586",
+    "eval/inspection_episode_receipts.py": "59f88d5a3ec90497e19ec91ac9b914f09fe6a2303d029e6aecbb6fb2f958387b",
+    "eval/inspection_common_calendar.py": "777b099d041e302b613f9de485b72f793bce7b9fa59901b236f21ce623376c79"
+  }
+}

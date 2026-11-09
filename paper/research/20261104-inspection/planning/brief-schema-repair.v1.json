@@ -1,0 +1,210 @@
+{
+  "role": "lossless representation repair, not scientific or resource scope change",
+  "source_brief_sha256": "8c616e5c2a926dfbdda6ce58596e591f5938864145e14f83c0909bcdd7611dc5",
+  "normalized_brief_sha256": "e84396c4b96f9a1681bce948e44949802b02422e7ac90b89759fa2e48a45b37b",
+  "changed_paths": [
+    {
+      "id": "F1",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "F1",
+      "field": "evidence_requirements",
+      "original_text": "版本化工具/权限协议与合格控制证据"
+    },
+    {
+      "id": "F2",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "F2",
+      "field": "evidence_requirements",
+      "original_text": "TODO: 合格非LLM参考episode原始trace，示意与实测分标"
+    },
+    {
+      "id": "F3",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "F3",
+      "field": "evidence_requirements",
+      "original_text": "TODO: 八配置完整root配对原始结果、区间及分量"
+    },
+    {
+      "id": "F4",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "F4",
+      "field": "evidence_requirements",
+      "original_text": "TODO: 事件兄弟trace、统一需求日历、删失标记"
+    },
+    {
+      "id": "F5",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "F5",
+      "field": "evidence_requirements",
+      "original_text": "TODO: 实际延迟/费用receipt与受控注入对照"
+    },
+    {
+      "id": "F6",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "F6",
+      "field": "evidence_requirements",
+      "original_text": "TODO: 两类预声明选择规则下的实际失败trace"
+    },
+    {
+      "id": "T1",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "T1",
+      "field": "evidence_requirements",
+      "original_text": "主文/代码机制定位，包含SMART与GRaD-Nav++边界"
+    },
+    {
+      "id": "T2",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "T2",
+      "field": "evidence_requirements",
+      "original_text": "TODO: G1–G4资格记录、split manifest与阈值版本"
+    },
+    {
+      "id": "T3",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "T3",
+      "field": "evidence_requirements",
+      "original_text": "TODO: 完整root×repeat×condition分母、ID/OOD和等级分层"
+    },
+    {
+      "id": "T4",
+      "field": "acceptance_criteria",
+      "original_text": "真实插入RA-L稿件，图注、单位、分母和比较条件与原始证据一致；待数据项不以示意或旧RTA替代；全部内容含参考文献/附录不超过8页。"
+    },
+    {
+      "id": "T4",
+      "field": "evidence_requirements",
+      "original_text": "TODO: 预选L3 roots三项消融与失败归因"
+    },
+    {
+      "id": "S0",
+      "field": "acceptance_criteria",
+      "original_text": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+    },
+    {
+      "id": "S0",
+      "field": "evidence_requirements",
+      "original_text": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+    },
+    {
+      "id": "S1",
+      "field": "acceptance_criteria",
+      "original_text": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+    },
+    {
+      "id": "S1",
+      "field": "evidence_requirements",
+      "original_text": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+    },
+    {
+      "id": "S2",
+      "field": "acceptance_criteria",
+      "original_text": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+    },
+    {
+      "id": "S2",
+      "field": "evidence_requirements",
+      "original_text": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+    },
+    {
+      "id": "S3",
+      "field": "acceptance_criteria",
+      "original_text": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+    },
+    {
+      "id": "S3",
+      "field": "evidence_requirements",
+      "original_text": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+    },
+    {
+      "id": "S4",
+      "field": "acceptance_criteria",
+      "original_text": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+    },
+    {
+      "id": "S4",
+      "field": "evidence_requirements",
+      "original_text": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+    },
+    {
+      "id": "S5",
+      "field": "acceptance_criteria",
+      "original_text": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+    },
+    {
+      "id": "S5",
+      "field": "evidence_requirements",
+      "original_text": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+    },
+    {
+      "id": "S6",
+      "field": "acceptance_criteria",
+      "original_text": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+    },
+    {
+      "id": "S6",
+      "field": "evidence_requirements",
+      "original_text": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+    },
+    {
+      "id": "S7",
+      "field": "acceptance_criteria",
+      "original_text": "章节文字、引用与对应图表/协议/原始结果相符，无未支持的完成或优胜主张。"
+    },
+    {
+      "id": "S7",
+      "field": "evidence_requirements",
+      "original_text": "经核验主来源、资格/版本协议及本研究对应数据；Results/Abstract/Conclusion依赖实际结果。"
+    },
+    {
+      "id": "M1",
+      "field": "acceptance_criteria",
+      "original_text": "官方ieeeconf US Letter 10pt双栏，正文+图表+参考文献+附录共≤8页；实际PDF视觉核验、来源和引用核验、独立审查、完整源/证据映射；不含原赛事文件。"
+    },
+    {
+      "id": "M1",
+      "field": "evidence_requirements",
+      "original_text": "全部F1–F6/T1–T4/S0–S7义务、模板/源码/PDF/版本manifest与真实独立审查。"
+    }
+  ],
+  "inverse_mapping_exact": true,
+  "changed_budget": false,
+  "changed_question_venue_resources_scope_or_any_text": false,
+  "original_native_refusal": {
+    "status": "refused",
+    "reason": "plan: item[0].acceptance_criteria: expected an array"
+  },
+  "intended_owner_actions": [
+    "set-contract via normal API before any accepted plan",
+    "approve bound to original actual instruction",
+    "reissue native budget binding and reuse actual unchanged default-budget answer without impersonating a new answer",
+    "retry unchanged reviewed v3plan packet"
+  ]
+}

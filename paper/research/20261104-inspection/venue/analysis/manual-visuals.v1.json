@@ -1,0 +1,65 @@
+{
+  "reason": "Caption parser omitted these six real tables; all were actually inspected. These records supplement rather than falsify the immutable mechanical measurements.",
+  "visuals": [
+    {
+      "id": "S04-manual-T1",
+      "number": 1,
+      "page": 7,
+      "question": "不同硬件的CPU/内存/仿真速度如何比较？",
+      "claim": "物理引擎、硬件与规模共同决定吞吐，缺失格明确保留。",
+      "evidence": "第7页左上TABLE I：CPU、GB与simulation speed。",
+      "design_takeaway": "报告硬件与RTF，不把基础设施速度归因于Agent。",
+      "limitations": "表号顺序和版式为公开预印本，不能当严格排版范本。"
+    },
+    {
+      "id": "S04-manual-T2",
+      "number": 2,
+      "page": 6,
+      "question": "相同计划重复执行是否稳定？",
+      "claim": "重复执行的均值与波动按机器人规模列出。",
+      "evidence": "第6页右侧TABLE II：平均与最大execution time。",
+      "design_takeaway": "重复只测执行稳定性，不增加独立root。",
+      "limitations": "此处不能支持本研究API时延/硬安全资格。"
+    },
+    {
+      "id": "S06-manual-T1",
+      "number": 1,
+      "page": 6,
+      "question": "单技能二元任务下质量与耗时怎样权衡？",
+      "claim": "精确/启发式/学习方法的解质量和计算时间排序不同。",
+      "evidence": "第6页左上SA-BT对照，含失败/超时格。",
+      "design_takeaway": "质量、成功与计算时间并列。",
+      "limitations": "正文其他指标仅对可解实例汇总，本研究不采用此选择性主分母。"
+    },
+    {
+      "id": "S06-manual-T2",
+      "number": 2,
+      "page": 6,
+      "question": "可累加能力任务增加后怎样变化？",
+      "claim": "规模上升时优化器会出现找不到解的情形。",
+      "evidence": "第6页右上SA-AT，含零成功与斜线格。",
+      "design_takeaway": "超时和未解任务不能删。",
+      "limitations": "能力叠加定义不同于本研究同型固定翼。"
+    },
+    {
+      "id": "S06-manual-T3",
+      "number": 3,
+      "page": 6,
+      "question": "多技能任务能否避免能力浪费与等待？",
+      "claim": "成功、makespan、等待与能力冗余需要分别看。",
+      "evidence": "第6页右下MA-AT表的多指标列。",
+      "design_takeaway": "保留调度效率与任务质量分量。",
+      "limitations": "该统计尚未验证与本研究root层级一致。"
+    },
+    {
+      "id": "S06-manual-T4",
+      "number": 4,
+      "page": 7,
+      "question": "大规模泛化与求解代价如何变化？",
+      "claim": "较大任务/机群下策略质量和计算时间都有代价。",
+      "evidence": "第7页左上大规模MA-AT表。",
+      "design_takeaway": "规模轨道独立列出，不混主任务难度。",
+      "limitations": "抽象任务数不能当相同物理包线的飞行验证。"
+    }
+  ]
+}

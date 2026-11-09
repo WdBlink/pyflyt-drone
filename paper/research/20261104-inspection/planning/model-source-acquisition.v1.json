@@ -1,0 +1,38 @@
+{
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review",
+  "sources": [
+    {
+      "bytes": 836705,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T14:20:55.377404+00:00",
+      "kind": "html",
+      "path": "planning/model-sources/siliconflow-pricing.v1.html",
+      "resolved_url": "https://www.siliconflow.cn/pricing",
+      "reused": false,
+      "sha256": "579f6a08184f5b8e40a61265b155bb088894f18f21a69f2b5967f0509afb5f01",
+      "url": "https://www.siliconflow.cn/pricing"
+    },
+    {
+      "bytes": 633885,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T14:20:56.039143+00:00",
+      "kind": "html",
+      "path": "planning/model-sources/siliconflow-chat.v1.html",
+      "resolved_url": "https://docs.siliconflow.cn/docs/api/chat-completions-post",
+      "reused": false,
+      "sha256": "3bbbd2fefd1ba14008fe554d9613c4bf8218177be941b6db0e426e932fcda6ed",
+      "url": "https://docs.siliconflow.cn/docs/api/chat-completions-post"
+    },
+    {
+      "bytes": 215948,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T14:20:56.556801+00:00",
+      "kind": "html",
+      "path": "planning/model-sources/siliconflow-model-list.v1.html",
+      "resolved_url": "https://docs.siliconflow.cn/docs/api/models-get",
+      "reused": false,
+      "sha256": "fa92ffdad8cd3b7095659865d64bf448e47146e725fbfe7781621cb901e1e18d",
+      "url": "https://docs.siliconflow.cn/docs/api/models-get"
+    }
+  ]
+}

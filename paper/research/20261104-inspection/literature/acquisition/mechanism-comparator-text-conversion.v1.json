@@ -1,0 +1,20 @@
+{
+  "records": [
+    {
+      "source": "venue/samples/S04-smart.pdf",
+      "source_sha256": "aecbfbbadec1541634f03f5a95b8515d97ae0e524413bedc31102b8cda12ae2b",
+      "derived_text": "literature/text/smart-calibration-version.v1.txt",
+      "text_sha256": "58c4a0ea051a7db61d8f3bfbddad43aef9cec4fc77ce2037f0c68471e95869fa",
+      "tool": "/opt/homebrew/bin/pdftotext -layout",
+      "scope": "mechanical text derivative of calibrated PDF version; no claim of fresh visual inspection"
+    },
+    {
+      "source": "venue/samples/S08-gradnav.pdf",
+      "source_sha256": "46161e3ef6f41b91cccfa89093db57a4780e6fe7bbb967f0497cfa5f6ddaa2ba",
+      "derived_text": "literature/text/gradnav-calibration-version.v1.txt",
+      "text_sha256": "89b112e5c05c7c0117b8ee395fb55b9ccc5ae9c5869ac3ed0dfaf339103eb67e",
+      "tool": "/opt/homebrew/bin/pdftotext -layout",
+      "scope": "mechanical text derivative of calibrated PDF version; no claim of fresh visual inspection"
+    }
+  ]
+}

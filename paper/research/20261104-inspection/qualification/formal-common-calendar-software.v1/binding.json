@@ -1,0 +1,9 @@
+{
+  "role": "8 literal software fixture checks only; no actual formal roots, flights, independent acceptance or G4",
+  "files": {
+    "inspection_common_calendar.py": "b42f8944079adbf23ec236c20de8de51b8697a12d7d94e40275fbdc65ff9a364",
+    "test_formal_common_calendar.py": "9a0c7d46eb76a30ca113613dfb57d759e450bea78164992978659da31da7ef5e",
+    "inspection-formal-common-calendar.v1.tests.log": "4a1550f958d618e5ef2dd11e1ac53a40f17f1a5230df5b29421a0771c9850695"
+  },
+  "scope": "same L3 parent/clean geometry and demand; hand-computed static weights/Y, unchanged sealed histories; changed parent/score/level/seed/world identity/hidden entities reject"
+}

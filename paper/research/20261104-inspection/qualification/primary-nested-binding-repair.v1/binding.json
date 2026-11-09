@@ -1,0 +1,12 @@
+{
+  "role": "working nested binding type repair only, not independent approval",
+  "inputs": {
+    "planning/formal-admission-candidate.v3/source/eval/inspection_model_service.py": "22c35639ecd5f0d79127c706f7c5b23ec421bdf7afd1a2c5a2480621d154e2dc",
+    "planning/formal-admission-candidate.v3/source/eval/inspection_model_receipts.py": "f68f149960254ef9e50a47354722d7f64d83417adda26a845fb076847dab6a49",
+    "planning/formal-admission-candidate.v3/tests/test_formal_model_service.py": "3aa43013e2bf62977ea352d3857eca4083f2116e86bcd3551a734b0f55666fd0",
+    "planning/formal-admission-candidate.v3/tests/test_formal_meter_types.py": "749717e05bd7c08252c50c69ac67b724e010cfcaeb9a3caf9f51e316f755e46e"
+  },
+  "actual_result": "18 passed in0.21s",
+  "production_installed": false,
+  "test_log_sha256": "f3cc59d8e91f5bef7ad0018e4a482efcb7f865eb26b26cda35dd6e9faf382a1d"
+}

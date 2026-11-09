@@ -1,0 +1,11 @@
+# v4 order024 late-cleanup 追加恢复候选
+
+当前事实是24个callback完成，第25次物理飞行/生成已完成且用量known，但原cleanup为unknown；未认领PID的原身份未知。原terminal/tree/archive与108槽失败SDK完整保留。当前原5个PID与26337均不存在，同uid活Python orphan为空；这只证明后续观察，不能倒填原close为closed。
+
+候选只允许原v4精确order24/dev-L3-01/B3-M1/repeat2/attempt00的追加late-cleanup disposition。原104source/61deps/10inputs、原plan、payload/model/settlement/archive、600s/100ms、actor、冻结grader和known native用量必须重新核对；原未知原因必须仅为已记录的额外PID，当前也必须安静。原Y仍从冻结validator读取，所有未通过/其他unknown继续阻断，无新reserve、flight、attempt或免费第三次重试。
+
+来源绑定的新helper/proposal须经独立审查和真实sole-owner applied finding后才可消费。它不修改生产源/旧文件，仅供development恢复；不产生G4、main/holdout权限。唯一owner的budget-settle已完成，不重写或再结算。
+
+新的provided SDK envelope仍是同6root、108个物理slot、原order/sampler/prefix；24份已完成缓存和1份reconciled缓存只重建记录，从order25才产生后续effect。原abort视图与新继续视图不是216个episode。新行明确引用原unknown terminal及追加disposition，不能让原terminal看似completed；后续独立重计也须使用同一resolver。helper自身作为新增恢复adapter来源独立绑定，不声称在原104来源里。其余API全部委托原pilot，原数据/策略/物理源字节不变。
+
+本文件是候选契约，不是已批准恢复；在代码、原证据重核、独立review与native finding完成之前保持阻断。

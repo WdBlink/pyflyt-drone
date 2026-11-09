@@ -1,0 +1,140 @@
+{
+  "files": {
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/binding.json": "5bb32118eccdba44ce19e176ffbbfc2052eb1fee31700f52e66f8e523a571a8e",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/contract.json": "7ffa1fcf94bff2f216e91082910caccc3359a41e814ff818a4800c12f9e2c593",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/inspection_namespace_admission.py": "74aa46e67e77d591beb2b6fbe61895742ff8d70b9c8050bcd9fe32bb5944cf5c",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/namespace-tests.log": "1c242b7cc0a6913a9574e86031ac6bac86df145b2bd0c63b3758e7038b2591fb",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/phase-tests.log": "c492c41580448240d0cd071f0c665f8548d9931c41518b75e86f2e55f4694f2a",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/test_formal_phase_layout.py": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/namespace-proof-freeze.v2/test_namespace_admission.py": "21711b47b1c320de82b33ec4591c4f933e4e34adf4c64c20590fe357c6dd2bbd",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_admission.py": "c981449425a835fad40eda9bbdc47dc76d2aa0e473a26bde8312743739a1779d",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_g4_proof_boundary.py": "191d7af54bee6062053897d40fbd5f6e81f2c639a1f455004951a073ee94dc53",
+    "paper/research/20261104-inspection/review/namespace-proof-component-review.v1.md": "1265e37fb06dc5ec1b0992c4cfa0e001192c368b4c68d8e5de8ce7da1fec12cd"
+  },
+  "freeze_binding_sha256": "5bb32118eccdba44ce19e176ffbbfc2052eb1fee31700f52e66f8e523a571a8e",
+  "independent_artifacts": {
+    "/tmp/inspection-namespace-review-v2/namespace-tests.log": "bf48980610a85178b9939bd2618a652b052101950d7b0efac57baa7055612788",
+    "/tmp/inspection-namespace-review-v2/phase-tests.log": "7b51290850c3e68b61b1255e40ffbd1cdc58ddb046d559c24cebc03ed83db419",
+    "/tmp/inspection-namespace-review-v2/probe_v2.py": "c2a6ccbadc68ba09b73ae79f8c37682b74af82fb097d5f6b9bde481e00f0156d",
+    "/tmp/inspection-namespace-review-v2/results.json": "9a91679da95073d56f6054c59cf444a1384cf161156880ad1c4ba08bc86fc77d"
+  },
+  "independent_results": {
+    "ancestor-revisions": [
+      {
+        "accepted": true,
+        "phase": "holdout",
+        "revised_parent": "inspection-main-namespace-v1",
+        "root_count": 12
+      },
+      {
+        "accepted": false,
+        "exception": "ValueError",
+        "reason": "qualification finding has been superseded",
+        "revised_parent": "inspection-main-dataset-v1"
+      },
+      {
+        "accepted": false,
+        "exception": "ValueError",
+        "reason": "qualification finding has been superseded",
+        "revised_parent": "inspection-main-primary-analysis-lock-v1"
+      },
+      {
+        "accepted": false,
+        "exception": "ValueError",
+        "reason": "qualification finding has been superseded",
+        "revised_parent": "inspection-holdout-open-once-v1"
+      }
+    ],
+    "grid-bool-seed": {
+      "accepted": false,
+      "reason": "the accepted outer eight-condition single-root-mean seed grid is required"
+    },
+    "grid-conditions": {
+      "accepted": false,
+      "reason": "the accepted outer eight-condition single-root-mean seed grid is required"
+    },
+    "grid-float-seed": {
+      "accepted": false,
+      "reason": "the accepted outer eight-condition single-root-mean seed grid is required"
+    },
+    "grid-seeds": {
+      "accepted": false,
+      "reason": "the accepted outer eight-condition single-root-mean seed grid is required"
+    },
+    "holdout-positive": {
+      "accepted": true,
+      "phase": "holdout",
+      "root_count": 12
+    },
+    "main-positive": {
+      "accepted": true,
+      "phase": "main",
+      "root_count": 72
+    },
+    "parent-order": [
+      {
+        "accepted": false,
+        "child": "inspection-main-namespace-v1",
+        "exception": "ValueError",
+        "parent": "synthetic-finding",
+        "reason": "native parent must be applied strictly before its child"
+      },
+      {
+        "accepted": false,
+        "child": "inspection-main-dataset-v1",
+        "exception": "ValueError",
+        "parent": "inspection-main-namespace-v1",
+        "reason": "native parent must be applied strictly before its child"
+      },
+      {
+        "accepted": false,
+        "child": "inspection-main-primary-analysis-lock-v1",
+        "exception": "ValueError",
+        "parent": "inspection-main-dataset-v1",
+        "reason": "native parent must be applied strictly before its child"
+      },
+      {
+        "accepted": false,
+        "child": "inspection-holdout-open-once-v1",
+        "exception": "ValueError",
+        "parent": "inspection-main-primary-analysis-lock-v1",
+        "reason": "native parent must be applied strictly before its child"
+      },
+      {
+        "accepted": false,
+        "child": "inspection-holdout-namespace-v1",
+        "exception": "ValueError",
+        "parent": "inspection-holdout-open-once-v1",
+        "reason": "native parent must be applied strictly before its child"
+      }
+    ],
+    "plan-drift": {
+      "accepted": false,
+      "exception": "ValueError",
+      "owner_reads": 2,
+      "reason": "accepted plan and live dispatch owner required",
+      "seed_bytes_read": false
+    },
+    "source-drift": {
+      "accepted": false,
+      "exception": "ValueError",
+      "owner_reads": 2,
+      "reason": "admission artifact changed",
+      "seed_bytes_read": false
+    }
+  },
+  "independent_tests": {
+    "namespace": "33 passed in0.69s",
+    "phase": "23 passed in0.01s",
+    "separate_processes": true
+  },
+  "reviewer": "/root/control_review",
+  "scope": "bounded namespace v2 repair/current ancestor-binding review only; isolated native-shaped fixtures and literal seeds; no live owner access, model/physics/RNG/formal geometry or production source changes",
+  "working_verified_before_execution": {
+    "namespace_source_sha256": "74aa46e67e77d591beb2b6fbe61895742ff8d70b9c8050bcd9fe32bb5944cf5c",
+    "namespace_tests_sha256": "21711b47b1c320de82b33ec4591c4f933e4e34adf4c64c20590fe357c6dd2bbd",
+    "phase_source_sha256": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "phase_tests_sha256": "194275f8e42a4a73a09e9058cae86077c6b3199b970003f48f567396eff843eb"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review",
+  "sources": [
+    {
+      "bytes": 44266,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-06T00:06:44.961478+00:00",
+      "kind": "html",
+      "path": "literature/primary/smart-v3-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2503.04798v3",
+      "reused": false,
+      "sha256": "a3f9afc3b434d538cbe2f0b0c3849b825bb8517f949b047ea275576396c347c9",
+      "url": "https://arxiv.org/abs/2503.04798v3"
+    },
+    {
+      "bytes": 45412,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-06T00:06:45.685697+00:00",
+      "kind": "html",
+      "path": "literature/primary/gradnav-v2-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2506.14009v2",
+      "reused": false,
+      "sha256": "ea0434245d8c6beb0ea2b2c8666ad61b138b02d639be5edc071e249d68f7d31b",
+      "url": "https://arxiv.org/abs/2506.14009v2"
+    }
+  ]
+}

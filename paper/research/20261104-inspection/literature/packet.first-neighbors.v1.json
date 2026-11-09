@@ -1,0 +1,7 @@
+{
+  "stage": "literature",
+  "catalog": "literature/catalog.first-neighbors.v1.json",
+  "bibliography": "literature/references.first-neighbors.v1.bib",
+  "citation_plan": "literature/citation-plan.first-neighbors.v1.jsonl",
+  "citation_verification": "literature/citation-verification.first-neighbors.v1.json"
+}

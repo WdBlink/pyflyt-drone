@@ -1,0 +1,15 @@
+# Formal delta runtime qualification plan v2 来源勘误
+
+本版只纠正 v1 的一处来源归属，其他负载、计时、最小证据和G4边界结论不重审、不改动。
+
+v1写道：“本轮用户还明确要求每effect的native资源与撤销新鲜性保留。”这把root给独立审查的技术约束误写成了终端用户的明确原话。终端用户的要求是按计划完成G1–G4后再开展正式实验；没有据此新增每effect全量审计的用户硬要求。
+
+该句应读为：
+
+> 当前候选通过每次generation前的admitted_limits/admit_dispatch执行native资源与资格撤销新鲜性检查；本次工程审查以保留该既有source边界为技术约束。该约束来自候选实现及root的工程审查指令，不是终端用户新增的明确要求。
+
+v1 binding中的 `scientific_interpretation.current_user_clarification` 也应按本勘误理解为 `engineering_review_constraints`，不得当作终端用户原话或新G4前置门。关于不要求在G4前取得真实main/holdout祖先端到端证据的解释，仍是原计划范围与本次工程审查的限定，不新增权限或门槛。
+
+v1报告与binding原字节保留，SHA分别为 `7c58e61ac68fe9da1cbf58287676def4ac1fb1b7f8844d919c6d0418ac0d393b`、`e433cfa643d30055dfb033ef68be3bae5499ddbb1e1b218fdd321b9efceda451`。本v2只在以上来源归属上优先于v1，未复验source、重跑测试或增加CPU probe，不改变科学N/硬约束，不授G4/main/human。
+
+勘误完成后停止R写入。

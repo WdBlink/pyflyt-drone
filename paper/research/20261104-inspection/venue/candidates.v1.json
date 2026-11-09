@@ -1,0 +1,99 @@
+{
+  "stage": "venue",
+  "producer": "codex-primary",
+  "artifacts": [
+    "venue/sources/ral-authors.html",
+    "venue/sources/tro-authors.html"
+  ],
+  "venue": "IEEE Robotics and Automation Letters",
+  "venue_selection": {
+    "mode": "candidate_comparison",
+    "selected_id": "ral",
+    "rationale": "建议先以RA-L的聚焦实证benchmark为目标：连续飞行、证据时效与共享执行的核心论证集中。最终目标由用户选择；若保留完整6图4表和较长协议推导，T-RO的版式空间更合适，但需要更强实证支持。",
+    "criteria": [
+      "机器人任务层评测的读者与论文类型",
+      "官方篇幅与附录限制",
+      "现有证据与实验准备度",
+      "成本与时间约束",
+      "后续8–15篇同方向已录用文章可校准性"
+    ],
+    "candidates": [
+      {
+        "id": "ral",
+        "venue": "IEEE Robotics and Automation Letters",
+        "kind": "journal",
+        "scope_fit": "机器人任务编排、执行与评测；方向匹配是研究者判断，不代表已获编辑认可。",
+        "article_type_fit": "实证 benchmark Letter，突出连续飞行与时延对交付的影响。",
+        "constraints": "6页常规，最多8页，含图表、参考文献和附录；不能另加文本补充材料。计划原有6图4表需要在保留义务前提下重排/合并并重新冻结。",
+        "advantages": [
+          "全年投稿，无需预先承诺尚未核验的会议届次。",
+          "适合聚焦一个可复查的机器人评测问题。"
+        ],
+        "limitations": [
+          "篇幅紧；不能把必要裁判定义和关键实验移到无审稿文本附录。",
+          "纯仿真材料能否达到贡献门槛需由近两年已录用样本和实际结果评估。"
+        ],
+        "cost": {
+          "status": "known",
+          "basis": "官方列明超出6页的两页各USD175；OA可选，当前不采购、不承担投稿费。"
+        },
+        "timing": {
+          "status": "known",
+          "basis": "官方写明全年开放；没有承诺本研究完成日期或录用。"
+        },
+        "evidence": [
+          {
+            "path": "venue/sources/ral-authors.html",
+            "url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/",
+            "sha256": "c1a9b2ceaa5604aa9dbfcc58f38ac863b3c1e514bf306a4f6cb2449a38c3a9b9",
+            "quote": "Letters are six pages long"
+          },
+          {
+            "path": "venue/sources/ral-authors.html",
+            "url": "https://www.ieee-ras.org/publications/ra-l/ra-l-information-for-authors/",
+            "sha256": "c1a9b2ceaa5604aa9dbfcc58f38ac863b3c1e514bf306a4f6cb2449a38c3a9b9",
+            "quote": "open throughout the year"
+          }
+        ]
+      },
+      {
+        "id": "tro",
+        "venue": "IEEE Transactions on Robotics",
+        "kind": "journal",
+        "scope_fit": "机器人领域具有实质意义、可泛化的研究成果；需要更充分证据。",
+        "article_type_fit": "完整实证 benchmark / robotics study，篇幅更能容纳计划机制与资格细节。",
+        "constraints": "首投至多18页，最终常规稿至多20页，超过12页收费；官方不接受补充文本作为审稿内容。",
+        "advantages": [
+          "正文空间容纳完整协议、资格、强基线与细分分析。",
+          "可围绕机器人可执行性和任务层诊断完整论证。"
+        ],
+        "limitations": [
+          "较宽篇幅并不降低显著性、原创性和验证要求。",
+          "当前尚未有合格benchmark运行证据，不据此承诺符合期刊标准。"
+        ],
+        "cost": {
+          "status": "known",
+          "basis": "官方说明超过12页有版面费；OA可选。最终总费用依稿件长度和出版选择，当前未知且未授权。"
+        },
+        "timing": {
+          "status": "unknown",
+          "basis": "本次未核实固定决策周期；不假设审稿或录用日期。"
+        },
+        "evidence": [
+          {
+            "path": "venue/sources/tro-authors.html",
+            "url": "https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/",
+            "sha256": "4d5e30e97dcea47905c5a176fac95b5f96cbfd7116ddc7cef69bc0a4f2d373e1",
+            "quote": "First submissions should be no more than 18 pages"
+          },
+          {
+            "path": "venue/sources/tro-authors.html",
+            "url": "https://www.ieee-ras.org/publications/t-ro/t-ro-information-for-authors/",
+            "sha256": "4d5e30e97dcea47905c5a176fac95b5f96cbfd7116ddc7cef69bc0a4f2d373e1",
+            "quote": "T-RO does not accept supplementary files."
+          }
+        ]
+      }
+    ]
+  }
+}

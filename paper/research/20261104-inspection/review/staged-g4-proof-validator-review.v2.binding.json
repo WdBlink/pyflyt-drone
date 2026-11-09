@@ -1,0 +1,120 @@
+{
+  "files": {
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v2/proof-validator-freeze.v2/contract.json": "60a87d6e8dad88e46a8406d5167f1c27cdbfa6ca2e0a620d5e1cf8b27d0934b6",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v2/proof-validator-freeze.v2/inspection_formal_admission.py": "91bd91d1ac5346508cecdc66584b67a72dbe421959cda276b8e6c533550fb512",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v2/proof-validator-freeze.v2/test_g4_proof_boundary.py": "d76673ed496febea615bc828ec460291b8482a3870800b4bf64f0c55fcb19c2f",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v2/proof-validator-freeze.v2/tests.log": "084ed09db0c90ccb63dd5e3d7698a143dc9019e36f7cb1b56f11e9db2714fabf",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v2/source/eval/inspection_formal_admission.py": "91bd91d1ac5346508cecdc66584b67a72dbe421959cda276b8e6c533550fb512",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v2/tests/test_g4_proof_boundary.py": "d76673ed496febea615bc828ec460291b8482a3870800b4bf64f0c55fcb19c2f",
+    "paper/research/20261104-inspection/runtime/autoresearch-state-reader-v1/lib/runtime.py": "5f887d7b188203a3beda96127b055d4e5009017eced0533f55afacc2a3c19f52"
+  },
+  "freeze_binding_sha256": "16787754910e35b994d77b72825e6cf13ef931be21cb836d0c2a7f114c95d238",
+  "independent_artifacts": {
+    "/tmp/inspection-g4-proof-review-v2/independent-probe-results.json": "7d3211fbbb767bf0e560bac499cd2b673ac05a7dbb0e15731c0e5bc9b46bef54",
+    "/tmp/inspection-g4-proof-review-v2/independent-tests.log": "a7a762938347b36b76ea79fe66f865ef07e80864f6842f7eed672908bdc1802b",
+    "/tmp/inspection-g4-proof-review-v2/probe_v2.py": "7382e5660baff367bf096431f3ec1372d793884a80745d285017c22268ba6548"
+  },
+  "independent_test_result": "40 passed in0.22s; working tests SHA matched freeze before execution",
+  "new_residual": {
+    "accepted-evaluator-drift": {
+      "accepted": true,
+      "accepted_evaluator_sha256": "01fe950030b21a721976bddba4379a093d962dd543cf9a04d0279dd988c229ea",
+      "actual_evaluator_sha256": "f4f1f31efeb4d886f8c5e23c20895eea102214753ac1700b7da589971de8ff03",
+      "native_request": "88dba3e806519cdaba16e8dc1f56339f5e3d6b5c07df1b525ecf6dcb960e8a18",
+      "project": "/tmp/inspection-g4-proof-review-v2/accepted-evaluator-drift-4nvlqhno"
+    },
+    "factory_distinct_consumers_and_invalid_evaluator": {
+      "factory_returned": true,
+      "manifest_member_hash_mismatches": 17,
+      "owner_and_sdk_lib_union": true,
+      "owner_and_sdk_scripts_union": true,
+      "owner_reader_selected_path": [
+        "/private/tmp/inspection-g4-proof-review-v2/factory-content-3t6n_6hg/owner-runtime"
+      ],
+      "project": "/tmp/inspection-g4-proof-review-v2/factory-content-3t6n_6hg"
+    }
+  },
+  "reviewer": "/root/control_review",
+  "scope": "bounded staged G4Proof repair audit; no real owner load/write, production source change, model/physics/formal seed/order/case generation",
+  "v1_retests": {
+    "actual_inventory": {
+      "dependencies": 61,
+      "eval_init_absent": true,
+      "matches_bound61": true,
+      "package_initializers_bound": true,
+      "sources": 88
+    },
+    "arbitrary-dependency": {
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "complete qualified source/dependency closure required"
+    },
+    "buffer-race": {
+      "accepted": false,
+      "exception": "ValueError",
+      "injection_fired": 1,
+      "reason": "admission artifact changed"
+    },
+    "eval-init": {
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "qualified package absence changed"
+    },
+    "initializer": {
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "admission artifact changed"
+    },
+    "json-invalid": [
+      {
+        "accepted": false,
+        "text": "{\"x\":1e999}"
+      },
+      {
+        "accepted": false,
+        "text": "{\"x\":-1e999}"
+      },
+      {
+        "accepted": false,
+        "text": "{\"x\":NaN}"
+      },
+      {
+        "accepted": false,
+        "text": "{\"x\":1,\"x\":2}"
+      }
+    ],
+    "native-brief": {
+      "accepted": false,
+      "exception": "Refusal",
+      "reason": "Approved Brief changed"
+    },
+    "native-checkpoint": {
+      "accepted": false,
+      "exception": "Refusal",
+      "reason": "Controller and latest durable checkpoint differ; recover before proceeding"
+    },
+    "native-implementation": {
+      "accepted": false,
+      "exception": "Refusal",
+      "reason": "Execution code or stage knowledge changed; pin the old implementation or migrate explicitly"
+    },
+    "native-schema": {
+      "accepted": false,
+      "exception": "Refusal",
+      "reason": "Old or unknown run format; use its pinned runtime or an explicit reviewed migration"
+    },
+    "positive": {
+      "accepted": true,
+      "native_request": "e16ddc2db283f7f46ac68140894a1b650dd2cf340c9f3162ce28ecda9ec65329"
+    },
+    "revision": {
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "qualification finding has been superseded"
+    },
+    "unrelated-later": {
+      "accepted": true,
+      "native_request": "c2c71679b54ad35d5035ca61568d0ec6dff7a8702c33b6d1e48bce34a18a9f73"
+    }
+  }
+}

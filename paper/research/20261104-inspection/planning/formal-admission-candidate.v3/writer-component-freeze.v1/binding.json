@@ -1,0 +1,19 @@
+{
+  "role": "uninstalled one-shot namespace/opening/geometry writer prototype; unreviewed; DatasetProof dependency has known P2; no G4 or actual formal data admission",
+  "validation": "14 /tmp synthetic tests with real formal RNG/model/physics forbidden; literal entropy/Fake generation only; partial intent/geometry, exhaustion, collisions and changed source retained, repeat effects refused",
+  "files": {
+    "planning/formal-admission-candidate.v3/writer-component-freeze.v1/prepare_inspection_formal_population.py": "30fe4e6eeabb9f9c888fa1978e2f00eefe8831db23d324adce9837db4cb457d2",
+    "planning/formal-admission-candidate.v3/writer-component-freeze.v1/test_formal_population_writer.py": "6f3e226ff3f7fcdc3f332fc3c595cd8f72e8837339a6b643d8313d5f6d0e1ac9",
+    "planning/formal-admission-candidate.v3/writer-component-freeze.v1/writer10.log": "f079e34d7337d47539571d4ee3e2d97c533ec273af0b0b4fa71b7ec7ee67386c",
+    "planning/formal-admission-candidate.v3/writer-component-freeze.v1/writer14.log": "cb1df6966d70a14d586ec3a2bfc49cdc264dbd01e240a3de24d3375ece1d485b"
+  },
+  "working_sources": {
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/prepare_inspection_formal_population.py": "30fe4e6eeabb9f9c888fa1978e2f00eefe8831db23d324adce9837db4cb457d2",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_formal_population_writer.py": "6f3e226ff3f7fcdc3f332fc3c595cd8f72e8837339a6b643d8313d5f6d0e1ac9"
+  },
+  "blocked_dependency": {
+    "path": "review/dataset-admission-component-review.v1.md",
+    "sha256": "2a638f151252489f334f488f3b45db4e3add40411169047d438e622bc55976be"
+  },
+  "no_actual_formal_datasets": true
+}

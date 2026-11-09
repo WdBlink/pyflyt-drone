@@ -1,0 +1,39 @@
+{
+  "role": "synthetic exact-design SDK compatibility, not main instances, flights or G4 qualification",
+  "passed": true,
+  "design_sha256": "83f8f1a72f5261aaa5783c0d190f3788fafcd05bca1e7d16a6901c69c9abf0de",
+  "design_bytes_unchanged": true,
+  "actual_model_calls": 0,
+  "actual_flights": 0,
+  "callback_count": 1296,
+  "outer_rows": 576,
+  "owner_science_experiment_validation": [],
+  "fixture_classic_B1_is_not_dev_selection": true,
+  "recording_summary": {
+    "independent_roots": 72,
+    "actual_episode_denominator": 1296,
+    "classic_episode_denominator": 216,
+    "llm_episode_denominator": 1080,
+    "outer_aggregate_rows": 576,
+    "conditions": {
+      "B0": 1,
+      "B1": 1,
+      "B2": 1,
+      "B3-M1": 3,
+      "B3-M2": 3,
+      "B3-M3": 3,
+      "B4-M1": 3,
+      "B4-M2": 3
+    },
+    "primary_inference_ready": false
+  },
+  "sources": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/preflight_inspection_canonical_recording.py": "690f2578d3fc3977f7a8155887d134b6700f52654e2e48ff8c78de998e944fe2",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_recording.py": "a2fbdddcf7546b3f69f1cc8d2fc1d565620be3ce6582c6f61f8e93923decffcb"
+  },
+  "complete_records_archive_sha256": "acf45edb77811940b71c54b030929ff3b7a3f7755722e287cb4eb3045bafa174",
+  "source_snapshots": {
+    "inspection_recording.py": "a2fbdddcf7546b3f69f1cc8d2fc1d565620be3ce6582c6f61f8e93923decffcb",
+    "preflight_inspection_canonical_recording.py": "690f2578d3fc3977f7a8155887d134b6700f52654e2e48ff8c78de998e944fe2"
+  }
+}

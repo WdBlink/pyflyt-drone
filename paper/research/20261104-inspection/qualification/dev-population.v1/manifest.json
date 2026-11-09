@@ -1,0 +1,79 @@
+{
+  "role": "five fresh development population strata; not main/holdout or pilot replacement",
+  "split": "dev",
+  "main_and_holdout_instantiated": false,
+  "first_pilot": false,
+  "namespace_intent_sha256": "3557d42fa75cd20ed85ac1f629097914c140069d042c5d9b863f5b52dd356dbb",
+  "records": [
+    {
+      "case_id": "devext-ID-L1-00",
+      "lineage_group": "devext-ID-L1-00",
+      "domain": "ID",
+      "level": "L1",
+      "file": "devext-ID-L1-00.json",
+      "file_sha256": "fe6b671f068cb7134f7b27025175ef443fc0f38edda1bc1b387734f5ce8ef6d3",
+      "case_sha256": "0a94c2a1ba56f97ca8817ce079cfc41fc9bdaca95b37119436ecd260cfad3332",
+      "configuration_sha256": "5b3bf2e2d344e404440f75a0b2e07ea7bb967f64149418a029b546b072a6c47e",
+      "root_generation_seed": 104996727044221515525739412524229528072,
+      "sensor_seed": 160566224089786286074440996489447364074,
+      "generation_audit": "devext-ID-L1-00-generation.json",
+      "generation_audit_sha256": "288c59dfb7ecf3cbfb1c048079e8ea7cb2eab5e0bf5e32f6704239bafee54021"
+    },
+    {
+      "case_id": "devext-ID-L2-00",
+      "lineage_group": "devext-ID-L2-00",
+      "domain": "ID",
+      "level": "L2",
+      "file": "devext-ID-L2-00.json",
+      "file_sha256": "f0d64b0c4c74d3fa5590f930f946715d1278baaa3b6e16d6c3cfc8ff82d76ca4",
+      "case_sha256": "63bbfa5d5d65df0bed25b68c233753a7104aa613f3485b2142517f03ea014af9",
+      "configuration_sha256": "4790be2aa4a5a7065cc0438f48226d6b425b85a91d4b7cbaa64d7f8d3bc16634",
+      "root_generation_seed": 256150977348976761867890704919427975126,
+      "sensor_seed": 173727246855273283180729868789605074180,
+      "generation_audit": "devext-ID-L2-00-generation.json",
+      "generation_audit_sha256": "186b8c9259edc4c37de4afa3f573bd79b692c992af8fecc41f0dbec300442e6e"
+    },
+    {
+      "case_id": "devext-ID-L3-00",
+      "lineage_group": "devext-ID-L3-00",
+      "domain": "ID",
+      "level": "L3",
+      "file": "devext-ID-L3-00.json",
+      "file_sha256": "4208707924f16cccd9ce72dadd9b63ca024c00f70bac84c130e6d1b980d0664e",
+      "case_sha256": "0a568fc3a469bb09c52f5305de7f68fe4de58650fce44a4a2180d999468d1e18",
+      "configuration_sha256": "63ecc6dd9a4d6e7ecf4fb5cbbc5f43cf137f61d1ec2ad371ce502a17c5946fd6",
+      "root_generation_seed": 169413912084497225273558451167978279752,
+      "sensor_seed": 26054225652192058690438180434710325573,
+      "generation_audit": "devext-ID-L3-00-generation.json",
+      "generation_audit_sha256": "385807708a1424e5564e49aabcab077ab2d3e83d09f2832f216c256dbdf487b4"
+    },
+    {
+      "case_id": "devext-OOD-L2-00",
+      "lineage_group": "devext-OOD-L2-00",
+      "domain": "OOD",
+      "level": "L2",
+      "file": "devext-OOD-L2-00.json",
+      "file_sha256": "7f957fb783b02cf827078b79c1dd5ac8f154613178f80fa374c7af764cbfe8c3",
+      "case_sha256": "3154490519201743fa8939173f13eed3665bd8e57284a9d3d30575122e1d8426",
+      "configuration_sha256": "4cf752702b5b814d6490f2e57d1c9dbbc03181675e704b83d8d8d36314a2cc94",
+      "root_generation_seed": 236325283579446999115514718674049652371,
+      "sensor_seed": 35973037711808650518341528261562899302,
+      "generation_audit": "devext-OOD-L2-00-generation.json",
+      "generation_audit_sha256": "c68da3172009ae661c47fe3840fb2e5da3711099661da2aa34f069dfa770f361"
+    },
+    {
+      "case_id": "devext-OOD-L3-00",
+      "lineage_group": "devext-OOD-L3-00",
+      "domain": "OOD",
+      "level": "L3",
+      "file": "devext-OOD-L3-00.json",
+      "file_sha256": "fc992f5e83c8614e8594af381ef26725450324e845339532043aff98f41a740a",
+      "case_sha256": "be9e0b050f0192e4bfdeddfbb054d5c5c99625b904313555bdaba9eac21b8983",
+      "configuration_sha256": "bb488f3fa7764b0b87be0cfaacfc2ad8d909a7417b55d286cd54145aec3abdee",
+      "root_generation_seed": 172471272386161588475491299711735836061,
+      "sensor_seed": 16697300465710139123236885465251791377,
+      "generation_audit": "devext-OOD-L3-00-generation.json",
+      "generation_audit_sha256": "551a26357320d9fff83f3307698382e729c03aa710e8bece09b100ed304fbf69"
+    }
+  ]
+}

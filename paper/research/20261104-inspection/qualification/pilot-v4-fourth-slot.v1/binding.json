@@ -1,0 +1,157 @@
+{
+  "role": "Fourth actual v4 callback; same dev root and incomplete pilot, no formal performance claim",
+  "observed_at": "2026-11-06T16:24:23.692553+00:00",
+  "completed_callbacks": 4,
+  "planned_callbacks": 108,
+  "complete_roots": 0,
+  "slot": {
+    "order_index": 3,
+    "case_id": "dev-L1-01",
+    "condition": "B4-M1",
+    "repeat_ordinal": 1
+  },
+  "clock": {
+    "simulated_seconds": 600.0,
+    "physics_steps_executed": 144000,
+    "max_clock_lag_seconds": 0.012864000000263331,
+    "clock_lag_p95_seconds": 0.003563583333139775,
+    "clock_lag_over_0p1_seconds_ticks": 0
+  },
+  "runtime_errors": [],
+  "usage": {
+    "calls": 13,
+    "tokens": 93287
+  },
+  "native_budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 597,
+      "tokens": 3726671,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-002-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-003-a0": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-postinventory-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-fixed-M1-load-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-runtime-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 3067.428350216667,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "barrier": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 4,
+    "case_id": "dev-L1-01",
+    "condition": "B3-M2",
+    "at": "2026-11-06T16:17:02.666170+00:00"
+  },
+  "bound_files": {
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/plan.json": "10d3f9e71468351128762a4e93e17862ab73a4158520051478bc1d2dd804091b",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/terminal.json": "98dd2a4df9eec6a15787cf2da4b161f60268812f8a5b0000a07708ad7b287fbc",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/flight/run.json": "aa88cd92c3ff7b4ec336ba90c601f54cb968655db1091b3ea92e94a3327bbae2",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/flight/world.json": "b575bd507c1f2b680400f8a6cb07ce88c3afa87b0783272f1a8fdef1dcda1c7a",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/flight/private-case.json": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/process-return.json": "9817e0b2d7b5c446dbc579d292ede073d1a5604d46eb623c01c8bc71b69b69c5",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/process-tree.json": "5e1833d449ed2d41c9dc2a210bda244561c0bccfd92d35ac3e4875fa9791cc66",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/settle-owner.json": "a9886ee36f7976cd62ca8b740718b393e569e464b5e7019e412ab3cdfdccab67"
+  },
+  "resource_evidence": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-003-a0/complete-attempt.zip": "f0a3f3c602f8f104b2948774501e228b3c472a540ecb6f1e258dacf0910758aa",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-003-a0/usage-receipt.json": "58addd191216d3863c86f10d1284916376dcc750e460f75b56227939bc6ec026",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-003-a0.settle.json": "1b3f1de39080afc58a446b10d1f9e2cfa57d2ec4b9f67a23afce18da73a34552"
+  },
+  "immutable_captures": {
+    "qualification/pilot-v4-fourth-slot.v1/supervisor.at-four.stdout": "d41432f2e35f5a698fad1662087dfdcbf5a8d720147cc0d86d515b0711110d77",
+    "qualification/pilot-v4-fourth-slot.v1/checkpoint-pauses.at-four.jsonl": "21603490329cc0e9b64e31802425cf6d141ffb19a65bc69cb7249d8a2bdec2ea",
+    "qualification/pilot-v4-fourth-slot.v1/native-context.at-four.json": "643926263838021ee6e21f432633832f51e17d4b6a7ec4b793cc96e49c19692a"
+  },
+  "limits": "No full72000phase vector or wholepilot independent review. Cost/host/Codex/capital/energy unmetered."
+}

@@ -1,0 +1,35 @@
+{
+  "role": "Source-reading render and actual failed-fetch logs; no manuscript rendering",
+  "read_printed_pages": [
+    14,
+    15,
+    16
+  ],
+  "sources": [
+    "literature/primary/hoeffding-1963-original-scan.pdf",
+    "literature/primary/hoeffding-1963-crossref.json",
+    "literature/searches/holm-original-mirror-reading.20261106.v1.txt"
+  ],
+  "files": {
+    "literature/acquisition/statistical-primary-reading.v1/hoeffding-03.png": {
+      "sha256": "f9e5d2737a91b56ce51d071fb401fbfe5a313ce02d43c499d1c7e8ac47f6cb5f",
+      "bytes": 285455
+    },
+    "literature/acquisition/statistical-primary-reading.v1/source-fetch.v2.stdout": {
+      "sha256": "e4652ba72600fd3a847cafcd2e2610a22a6386c19629e6abf70e711f1bdbdaaf",
+      "bytes": 61
+    },
+    "literature/acquisition/statistical-primary-reading.v1/hoeffding-05.png": {
+      "sha256": "c63901fe44e311c3eb538c3e36a7e76ff5d935e4fbaa66cb146925553286498a",
+      "bytes": 209617
+    },
+    "literature/acquisition/statistical-primary-reading.v1/hoeffding-04.png": {
+      "sha256": "1dcab1f7ff777c53c943b821712b611e5aea2befbf048f9f69d8bb65ecc03c29",
+      "bytes": 242199
+    },
+    "literature/acquisition/statistical-primary-reading.v1/source-fetch.v1.stdout": {
+      "sha256": "0ebcab487d515b75ea429ef182f9035195539c38a3d4c28c733ed7e692349e38",
+      "bytes": 61
+    }
+  }
+}

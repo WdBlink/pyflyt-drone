@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "url": "https://openreview.net/pdf?id=3bvKDPFP0U",
+      "path": "venue/samples/S05-mripp-accepted.pdf",
+      "kind": "pdf",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://icontrol.ri.cmu.edu/research/hierarchical_specifications.html",
+      "path": "venue/sources/nl2hltl-lab.html",
+      "kind": "html",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1109%2FLRA.2024.3518105",
+      "path": "venue/sources/lip-publisher-metadata.json",
+      "kind": "json",
+      "max_bytes": 30000000
+    },
+    {
+      "url": "https://github.com/AccGen99/marl_ipp",
+      "path": "venue/sources/mripp-author-repository.html",
+      "kind": "html",
+      "max_bytes": 30000000
+    }
+  ]
+}

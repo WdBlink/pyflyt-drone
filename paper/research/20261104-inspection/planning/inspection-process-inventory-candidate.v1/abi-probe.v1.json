@@ -1,0 +1,16 @@
+{
+  "role": "installed SDK C-layout probe, not a kernel-wide ABI guarantee",
+  "layout": {
+    "size": 136,
+    "comm": 48,
+    "name": 64,
+    "nice": 116,
+    "start_seconds": 120,
+    "start_microseconds": 128
+  },
+  "source_sha256": "5e945a8331d291f3ae0b75a3cbc4a72fd583ca3498d320f7425241bfcdf38a4a",
+  "sdk_headers": {
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libproc.h": "246d87709fc6b9157ce5cf3c475656ac48e0e1ae8bbdc46cf45acd34294448cd",
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/proc_info.h": "e427fa96b348537b21552b9de71e01039410bcad2cedee5584c5e5fddafd70fc"
+  }
+}

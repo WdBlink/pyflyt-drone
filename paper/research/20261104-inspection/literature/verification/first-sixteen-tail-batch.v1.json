@@ -1,0 +1,27 @@
+{
+  "keys": [
+    "MultiUAVPlat2026",
+    "MissionBench2026",
+    "ESARBench2026",
+    "Retriever2026",
+    "Alpha3Bench2026",
+    "PhysAIBench2026",
+    "AERIAL2026",
+    "SMART2025",
+    "GRaDNav2025",
+    "PyFlyt2023",
+    "ReAct2022",
+    "TypeFly2023",
+    "CognitiveDrone2025",
+    "RaceVLA2025",
+    "Hoeffding1963",
+    "Holm1979"
+  ],
+  "checked_at": "2026-11-06T16:10:04.814973+00:00",
+  "basis": "Fourteen existing verified records unchanged; two additional statistics identities and bounded source/method claims checked by root. New two and normalized bibliography await independent review.",
+  "new_keys": [
+    "Hoeffding1963",
+    "Holm1979"
+  ],
+  "unresolved": "No local original Holm PDF; OCR/type and conditional inference limitations retained."
+}

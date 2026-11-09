@@ -1,0 +1,82 @@
+{
+  "meaning": "Acquired bytes and provenance; content relevance and source authority require host review",
+  "sources": [
+    {
+      "bytes": 44543,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:18:00.712590+00:00",
+      "kind": "html",
+      "path": "literature/primary/multiuav-plat-v1-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2606.31073v1",
+      "reused": false,
+      "sha256": "b7078cad181b7de4d6b894c67c8cf00ab1153aeb801f66a046fbf042f075435e",
+      "url": "https://arxiv.org/abs/2606.31073v1"
+    },
+    {
+      "bytes": 43130,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:18:01.366173+00:00",
+      "kind": "html",
+      "path": "literature/primary/missionbench-v1-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2607.22014v1",
+      "reused": false,
+      "sha256": "237de5667b97ff4915400e9209e0872f3669e4d7e2f03f488be8b34c998399fe",
+      "url": "https://arxiv.org/abs/2607.22014v1"
+    },
+    {
+      "bytes": 43232,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:18:02.089880+00:00",
+      "kind": "html",
+      "path": "literature/primary/esarbench-v1-metadata.html",
+      "resolved_url": "https://arxiv.org/abs/2605.01371v1",
+      "reused": false,
+      "sha256": "2eaac9a38d444a288a2fa3a0ee425e0957d941e84a3800c9ce3cb1e4c4d1970e",
+      "url": "https://arxiv.org/abs/2605.01371v1"
+    },
+    {
+      "bytes": 808000,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:18:03.847166+00:00",
+      "kind": "html",
+      "path": "literature/primary/retriever-v2.html",
+      "resolved_url": "https://arxiv.org/html/2607.17213v2",
+      "reused": false,
+      "sha256": "ccf9c4b104a7dd720bc418ea0bb510e81fe55fb0bab3bf7b2ff52ca3742f8df2",
+      "url": "https://arxiv.org/html/2607.17213v2"
+    },
+    {
+      "bytes": 547080,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:18:05.003516+00:00",
+      "kind": "html",
+      "path": "literature/primary/alpha3-v1.html",
+      "resolved_url": "https://arxiv.org/html/2601.03281v1",
+      "reused": false,
+      "sha256": "9af55bdaa99610b124e8886b797fa22f547257dd5f9aa0bedf20a3a2182c9b7a",
+      "url": "https://arxiv.org/html/2601.03281v1"
+    },
+    {
+      "bytes": 898971,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:18:06.293831+00:00",
+      "kind": "html",
+      "path": "literature/primary/physai-v1.html",
+      "resolved_url": "https://arxiv.org/html/2609.23695v1",
+      "reused": false,
+      "sha256": "4c7cf32271f2dafdddd6f16510863f201624e415da8617476ae895d37b54e1e9",
+      "url": "https://arxiv.org/html/2609.23695v1"
+    },
+    {
+      "bytes": 267255,
+      "content_type": "text/html; charset=utf-8",
+      "fetched_at": "2026-11-05T23:18:08.510066+00:00",
+      "kind": "html",
+      "path": "literature/primary/aerial-v1.html",
+      "resolved_url": "https://arxiv.org/html/2610.31029v1",
+      "reused": false,
+      "sha256": "8e739e3198cad09e98e0f3806dfb4569f320f24bb828b6df0b0be0a3d5b229c2",
+      "url": "https://arxiv.org/html/2610.31029v1"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "role": "actual completed unscored engineering diagnostic; no G4 or original clock-cause acceptance",
+  "captured_at": "2026-11-06T05:12:14.221786+00:00",
+  "clock": {
+    "max_lag": 0.08569320901295896,
+    "p95_lag": 0.005028416697541616,
+    "ticks_over_0p1": 0
+  },
+  "physics_seconds": 600,
+  "physics_steps": 144000,
+  "control_rows": 72000,
+  "model_usage": {
+    "calls": 20,
+    "tokens": 142134
+  },
+  "all20_fixed_request_bytes_equal": true,
+  "all20_output_text_equal": true,
+  "all20_token_journal_bytes_equal": true,
+  "source_inputs_dependencies_unchanged": true,
+  "original_pilot_failed_and_retry_cap_exhausted": true,
+  "files": {
+    "qualification/clock-localization-fixed-load.v1/complete-diagnostic-and-model-operation.zip": "f859e75086d4d44bfa968f2884adbfb78b453faf725441c59f9305da36c9081c",
+    "qualification/clock-localization-fixed-load.v1/usage-receipt.v1.json": "0734c2d43c5cc6ffca1d06650ef706a57fff9f5e2c671770df4ea01aff328d71",
+    "qualification/clock-localization-fixed-load.v1/native-reservation.v1.json": "c685a69cfd2f4080e1ce5d4a56c39fbad4ed2ff74fe32168c6d6a554b4b42de5",
+    "qualification/clock-localization-fixed-load.v1/native-settlement.v1.json": "6c7e59b2301df5f08e880b233cc2b0406956959b34a5ad7eda865efdd20a4c81",
+    "qualification/clock-localization-fixed-load.v1/freeze.v2/binding.json": "7acbab10b21b2644543efcaae9e6de7fdf4d0f32ef9021f4a567d8acc12ecdf9",
+    "qualification/clock-localization-fixed-load.v1/phase-recount.v1.json": "80aba3483ab02c641b3fb10f6c2550d7c02d3c1fdf4ce26e775a90975256c56a",
+    "qualification/clock-localization-fixed-load.v1/fixed-load-comparison.v1.json": "900fb38240b12f3898b253b82009402e07333d635e49e502f52dab9fb022ae2e",
+    "qualification/clock-localization-fixed-load.v1/analysis-source/analyze_inspection_clock_profile.py": "06479a2f5b95192e57d46668918944fa4b8b03b3251fa844e6149f730fe69c01"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "native_projection": {
+    "accepted_plan_and_population_hashes_verified": true,
+    "active_round_id": "round-25",
+    "control_not_copied": true,
+    "control_snapshot_sha256": "65048185d63a316ad55a18cd1658fd24c565c88d7fd6ea80d0021dd7a4598d0b",
+    "frozen_plan": "f17d41111458e5f2b2529e94499c9f372a826d959c4cc5a28c8f6af2b6deff01",
+    "g4_evidence": {
+      "qualification/eight-condition-pilot-intent.v2/binding.json": "024e879176d6b6d591428d09864c82902dfd0e80cceb321402127776abb8a996",
+      "qualification/g4-next-integration-intent.v1.json": "420dfcf13df10631bf18ff06dc347b8340fe30d9a567935bdb3a32422124ba46",
+      "qualification/g4-progress.v9.md": "383c931f7965483d2180d5f4bfe0469cdfa49d58643f1d51eb426c755e5e8fe9"
+    },
+    "g4_evidence_bytes_verified": true,
+    "g4_status_evidence": "G4needs_work in latest finding.limitations and bound g4-progress.v9.md",
+    "latest_applied_round_id": "round-24",
+    "latest_request_sha256": "e3a52fc4e538e8b80ec2dba55d34e7a672b26385b5a35474e13d41cc4dbefc59",
+    "request_and_decision_digest_verified": true,
+    "round_validation": "structure_and_binding_only"
+  },
+  "observed_at_utc": "2026-11-06T00:31:05.560853+00:00",
+  "planned_slots_only": {
+    "holdout_episode_count": 216,
+    "holdout_ids": [
+      "holdout-ID-L2-00",
+      "holdout-ID-L2-01",
+      "holdout-ID-L2-02",
+      "holdout-ID-L2-03",
+      "holdout-ID-L2-04",
+      "holdout-ID-L2-05",
+      "holdout-ID-L3-00",
+      "holdout-ID-L3-01",
+      "holdout-ID-L3-02",
+      "holdout-ID-L3-03",
+      "holdout-ID-L3-04",
+      "holdout-ID-L3-05"
+    ],
+    "holdout_ids_source": "design.split_contract.holdout_ids",
+    "holdout_roots": 12,
+    "main_episode_count": 1296,
+    "main_ids_source": "design.cases + recording_semantics.root_metadata; split_contract.main_counts",
+    "main_roots": 72,
+    "main_strata": {
+      "main-ID-L1": 16,
+      "main-ID-L2": 16,
+      "main-ID-L3": 16,
+      "main-OOD-L2": 12,
+      "main-OOD-L3": 12
+    },
+    "seed_or_instance_generated": false
+  },
+  "reviewer": "/root/control_review",
+  "scope": "source-only phase admission interface audit; no runtime imports/generation/physics/model/owner action; no full ledger/answers copied",
+  "source_sha256": {
+    "eval/inspection_cases.py": "7537b17aa0cbcfd4cffdb00c1d35e45e56217f477e055db77ba80724c0868cef",
+    "eval/inspection_episode_receipts.py": "59f88d5a3ec90497e19ec91ac9b914f09fe6a2303d029e6aecbb6fb2f958387b",
+    "eval/inspection_llm_episode_receipts.py": "ceed2af65c21da0901d80d996537ac6f1469a2840256989ba4dca75d158ab53f",
+    "eval/inspection_measurement_loader.py": "fa93cdc64a12271908bafeeea7fd099a5d9c70d0d7bab57492d0db26daec109b",
+    "eval/inspection_model_receipts.py": "922372548ceb972e9f95d1c52923cfe7d9dd6ce12dba2feec3b2d44a99167683",
+    "eval/inspection_model_service.py": "64e8307ece55b1d6928e91607a269dfb082926265f1d98a2bde90a5931eb2e8f",
+    "eval/inspection_population.py": "bb7098554475a65d4717077b7704bcf5902cd0fc674c1a9a95a51a7e066a5ff7",
+    "eval/inspection_recording.py": "a2fbdddcf7546b3f69f1cc8d2fc1d565620be3ce6582c6f61f8e93923decffcb",
+    "eval/inspection_scenarios.py": "9159ba44790d6d315074a824e52adeebd96468ab3032c6f0f07fdb755ce2753f",
+    "eval/prepare_inspection_development_population.py": "9d564a45412165aab72795c9dca6cf61ad1d96f314066b0d0447e86947e5248a",
+    "eval/run_inspection_dev.py": "470b639ad8c41876490156755449a9c82ca0ccecf73099d5d62dbab366add586",
+    "eval/run_inspection_eight_condition_pilot.py": "ce911fdb7d6adc5125dac28ad2c42eeed4d579426f6ec2f446971d0f9a9e1756",
+    "eval/run_inspection_llm_development.py": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+    "eval/run_inspection_llm_episode.py": "37a40dcc989059a4a6abb43a6fc7b741153a7291fc075225bd06046a78928364",
+    "eval/run_inspection_reference.py": "4c280adab488f9c81d68265dd9930d9775dbb6372b36d1d776d9350f9f36f3ca",
+    "paper/research/20261104-inspection/ACTIVE_CONTROLLER.md": "89403b9440b4339d855ff8f389fedb2acc2de05655b6502e0493a6f9ea3925c2",
+    "paper/research/20261104-inspection/experiment/design.ral.v3.json": "83f8f1a72f5261aaa5783c0d190f3788fafcd05bca1e7d16a6901c69c9abf0de",
+    "paper/research/20261104-inspection/planning/population.ral.v1.json": "307fbd5e77f841bf4a1b431a478527fa3aa85905694fd0242068d26c729a434c",
+    "paper/research/20261104-inspection/planning/statistical-protocol.ral.v1.md": "b18123390584f3f260d9bcc80b0455402ccc68f606ad428fe06804e04d2e795f",
+    "paper/research/20261104-inspection/qualification/g4-next-integration-intent.v1.json": "420dfcf13df10631bf18ff06dc347b8340fe30d9a567935bdb3a32422124ba46",
+    "paper/research/20261104-inspection/qualification/g4-progress.v9.md": "383c931f7965483d2180d5f4bfe0469cdfa49d58643f1d51eb426c755e5e8fe9",
+    "paper/research/20261104-inspection/runtime/autoresearch-state-reader-v1/lib/budget.py": "89347301003d265d30d30cc4d6f1a0952ff29f4156eb6f8463825601346f687e",
+    "paper/research/20261104-inspection/runtime/autoresearch-state-reader-v1/lib/runtime.py": "5f887d7b188203a3beda96127b055d4e5009017eced0533f55afacc2a3c19f52"
+  }
+}

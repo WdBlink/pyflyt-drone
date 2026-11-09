@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-05T23:59:08.283563+00:00",
+  "identity": {
+    "title": "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue",
+    "authors": [
+      "Zhang, Daoxuan",
+      "Chen, Ping",
+      "Zhou, Jianyi",
+      "Yang, Shuo"
+    ],
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2605.01371v1"
+  },
+  "url": "https://arxiv.org/abs/2605.01371v1",
+  "metadata_path": "literature/primary/esarbench-v1-metadata.html",
+  "metadata_sha256": "2eaac9a38d444a288a2fa3a0ee425e0957d941e84a3800c9ce3cb1e4c4d1970e",
+  "read_path": "literature/text/esarbench-v1.txt",
+  "read_sha256": "8fd52d6c0d23c74f5a0fd46890e0897d9fc087d865ed77d751ef4b5f0974239d",
+  "read_extent": "targeted Event-Snapshot-Task construction and baseline/evaluation sections",
+  "acceptance": "not claimed; this record is the pinned arXiv version",
+  "claim": "Victim/clue layouts remain stationary within each event snapshot; this is not a claim that AirSim physics pauses.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/esarbench-v1.txt",
+      "quote": "Within any given snapshot, the spatial distribution of the victims and clues remains stationary"
+    }
+  ],
+  "unknowns": "No blanket claim that other systems pause all physics. No cross-benchmark score comparison."
+}

@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2607.17213v2",
+      "path": "literature/primary/retriever-v2-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/abs/2601.03281v1",
+      "path": "literature/primary/alpha3-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.23695v1",
+      "path": "literature/primary/physai-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.31029v1",
+      "path": "literature/primary/aerial-v1-metadata.html",
+      "kind": "html",
+      "max_bytes": 2000000
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-05T23:59:08.283563+00:00",
+  "identity": {
+    "title": "AERIAL: Mission-Aware LLM Selection for Language-Driven UAV Control in Flying Networks",
+    "authors": [
+      "Nunes, Diana",
+      "Amorim, Ricardo",
+      "Ribeiro, Pedro",
+      "Coelho, André",
+      "Campos, Rui"
+    ],
+    "year": 2026,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2610.31029v1"
+  },
+  "url": "https://arxiv.org/abs/2610.31029v1",
+  "metadata_path": "literature/primary/aerial-v1-metadata.html",
+  "metadata_sha256": "2d68ada7c6989f03a17b0788ae22cb16f49021403ae852b0b4160b50049b95ae",
+  "read_path": "literature/text/aerial-v1.txt",
+  "read_sha256": "1dbf8055cf50d263a8e886d014f6d3fd5969d2685ea084b6012efe528942f1c7",
+  "read_extent": "sections3.1-5.4 implementation, selection pipeline and metric definitions; inference-wait physics semantics remain unverified",
+  "acceptance": "not claimed; this record is the pinned arXiv version",
+  "claim": "Measures generation response latency separately from SITL mission execution; its empirical scenario-model lookup addresses model selection rather than a fixed-model orchestration contrast.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/aerial-v1.txt",
+      "quote": "excludes code parsing, validation, and UAV mission execution in SITL"
+    }
+  ],
+  "unknowns": "No blanket claim that other systems pause all physics. No cross-benchmark score comparison."
+}

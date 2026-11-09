@@ -1,0 +1,239 @@
+{
+  "kind": "analytical_only_not_physics_or_qualification",
+  "connectors": [
+    {
+      "from_y": -300,
+      "to_y": -100,
+      "length_m": 314.1592653589794,
+      "time_s_at_20": 15.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        -180.00000000000136
+      ],
+      "max_abs_xy": 380.0
+    },
+    {
+      "from_y": -300,
+      "to_y": 100,
+      "length_m": 514.1592653589794,
+      "time_s_at_20": 25.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        19.99999999999868
+      ],
+      "max_abs_xy": 380.0
+    },
+    {
+      "from_y": -300,
+      "to_y": 300,
+      "length_m": 714.1592653589794,
+      "time_s_at_20": 35.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        219.99999999999858
+      ],
+      "max_abs_xy": 380.0
+    },
+    {
+      "from_y": -100,
+      "to_y": -300,
+      "length_m": 314.1592653589794,
+      "time_s_at_20": 15.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        -379.99999999999875
+      ],
+      "max_abs_xy": 379.99999999999875
+    },
+    {
+      "from_y": -100,
+      "to_y": 100,
+      "length_m": 314.1592653589794,
+      "time_s_at_20": 15.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        19.99999999999875
+      ],
+      "max_abs_xy": 250.0
+    },
+    {
+      "from_y": -100,
+      "to_y": 300,
+      "length_m": 514.1592653589794,
+      "time_s_at_20": 25.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        219.99999999999864
+      ],
+      "max_abs_xy": 250.0
+    },
+    {
+      "from_y": 100,
+      "to_y": -300,
+      "length_m": 514.1592653589794,
+      "time_s_at_20": 25.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        -379.99999999999875
+      ],
+      "max_abs_xy": 379.99999999999875
+    },
+    {
+      "from_y": 100,
+      "to_y": -100,
+      "length_m": 314.1592653589794,
+      "time_s_at_20": 15.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        -179.99999999999864
+      ],
+      "max_abs_xy": 250.0
+    },
+    {
+      "from_y": 100,
+      "to_y": 300,
+      "length_m": 314.1592653589794,
+      "time_s_at_20": 15.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        219.99999999999864
+      ],
+      "max_abs_xy": 250.0
+    },
+    {
+      "from_y": 300,
+      "to_y": -300,
+      "length_m": 714.1592653589794,
+      "time_s_at_20": 35.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        -379.99999999999864
+      ],
+      "max_abs_xy": 379.99999999999864
+    },
+    {
+      "from_y": 300,
+      "to_y": -100,
+      "length_m": 514.1592653589794,
+      "time_s_at_20": 25.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        -179.99999999999864
+      ],
+      "max_abs_xy": 250.0
+    },
+    {
+      "from_y": 300,
+      "to_y": 100,
+      "length_m": 314.1592653589794,
+      "time_s_at_20": 15.70796326794897,
+      "endpoint": [
+        -50.00000000000027,
+        20.000000000001222
+      ],
+      "max_abs_xy": 250.0
+    }
+  ],
+  "moving_orbit_at_20m_s": [
+    {
+      "radius_m": 80,
+      "airspeed_m_s": 20.0,
+      "center_velocity_m_s": [
+        1.5,
+        0.0
+      ],
+      "wind_m_s": [
+        -2.0,
+        0.0
+      ],
+      "bank_degrees_min_max": [
+        19.131847869127267,
+        35.13337925677836
+      ]
+    },
+    {
+      "radius_m": 90,
+      "airspeed_m_s": 20.0,
+      "center_velocity_m_s": [
+        1.5,
+        0.0
+      ],
+      "wind_m_s": [
+        -2.0,
+        0.0
+      ],
+      "bank_degrees_min_max": [
+        17.13760786797826,
+        32.02579506012732
+      ]
+    },
+    {
+      "radius_m": 100,
+      "airspeed_m_s": 20.0,
+      "center_velocity_m_s": [
+        1.5,
+        0.0
+      ],
+      "wind_m_s": [
+        -2.0,
+        0.0
+      ],
+      "bank_degrees_min_max": [
+        15.51055467865561,
+        29.37716056831615
+      ]
+    },
+    {
+      "radius_m": 105,
+      "airspeed_m_s": 20.0,
+      "center_velocity_m_s": [
+        1.5,
+        0.0
+      ],
+      "wind_m_s": [
+        -2.0,
+        0.0
+      ],
+      "bank_degrees_min_max": [
+        14.805149986533547,
+        28.197495710975268
+      ]
+    }
+  ],
+  "selected_observe_18m_s_90m": {
+    "radius_m": 90,
+    "airspeed_m_s": 18,
+    "center_velocity_m_s": [
+      1.5,
+      0.0
+    ],
+    "wind_m_s": [
+      -2.0,
+      0.0
+    ],
+    "bank_degrees_min_max": [
+      13.394691072739255,
+      27.634698409610625
+    ]
+  },
+  "horizontal_view_limit_m": {
+    "72": 85.80625866678311,
+    "80": 95.34028740753678,
+    "88": 104.87431614829046,
+    "96": 114.40834488904414
+  },
+  "nominal_observe_radial_margin_m_at_96m": 24.408344889044145,
+  "observe_view_limit_with_2m_vertical_error_and_0_3m_camera_offset_m": 111.66731162607746,
+  "observe_remaining_view_margin_after_6m_xy_tube_and_5m_estimate_radius_m": 10.667311626077463,
+  "survey_capsule_length_m": 1502.654824574367,
+  "survey_lap_s_at_20": 75.13274122871834,
+  "adjacent_capsules_nominal_gap_m": 40,
+  "tube_m_provisional_not_qualified": 6,
+  "required_nominal_pair_clearance_m": 27,
+  "continuous_sampling_extra_margin_m_at_50ms_vmax27": 1.35,
+  "limitations": [
+    "No controller, airframe, roll transient, estimator, occlusion, or traffic execution is run.",
+    "1.5 m/s is a synthetic probe value, not an authorized target speed bound.",
+    "A 6 m tracking tube is a hypothesis requiring new physical qualification."
+  ]
+}

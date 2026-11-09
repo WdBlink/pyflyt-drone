@@ -1,0 +1,38 @@
+{
+  "role": "Partial first-root capacity measurement only; final pilot/source/storage gate still open",
+  "at": "2026-11-06T20:50:01.440919+00:00",
+  "files": [
+    {
+      "path": "qualification/formal-capacity-first-root.v1/representation-projection.json",
+      "sha256": "9abf2858a84539006f0fdd299b468873452dc8a3f75c2d944185862494a5c014",
+      "bytes": 1189,
+      "original": "/tmp/inspection-native-capacity-at-first-root.v1.json"
+    },
+    {
+      "path": "qualification/formal-capacity-first-root.v1/inventory-and-shape.json",
+      "sha256": "329d8e05cf3bdaf80a9c6650a8f52360c10b8b0b09eba33fee3e514e643c9633",
+      "bytes": 26376,
+      "original": "/tmp/inspection-capacity-first-root.v1/measurement.json"
+    },
+    {
+      "path": "qualification/formal-capacity-first-root.v1/inventory-probe-source.py",
+      "sha256": "5a9ae8e1f946ddd0425303ea1eb69eab6bb6957c92139bcfb52a96fa031de96b",
+      "bytes": 7722,
+      "original": "/tmp/inspection-capacity-first-root.v1/probe-source.py"
+    },
+    {
+      "path": "qualification/formal-capacity-first-root.v1/representation-probe-source.py",
+      "sha256": "9d7c1c4467a12334d09b8561f117fbd4955e037c6ab6a5d67ec023383f6cf273",
+      "bytes": 3383,
+      "original": "paper/research/20261104-inspection/recovery/owner-document-snapshots-v2/freeze.v1/capacity-projection.py"
+    },
+    {
+      "path": "qualification/formal-capacity-first-root.v1/offline-golden-pair.zip",
+      "sha256": "cd2bc68b63bfeb81461263e91bd4ee5185a411613e0145ecb215ee779108c8a3",
+      "bytes": 28931755,
+      "role": "Offline immutable original pair only, never an active owner or scheduler"
+    }
+  ],
+  "baseline_control_sha256": "2284d2759f78ef0f8aa29abf9d8ca3389ef14d5338cd1e9746805a15673c1206",
+  "new_resource_actions": 0
+}

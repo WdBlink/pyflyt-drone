@@ -1,0 +1,57 @@
+{
+  "schema": "inspection-M2-runtime-candidate-qualification-intent-v1",
+  "role": "instrumented_B3_M2_runtime_candidate_not_pilot_retry",
+  "architecture": "B3",
+  "model": "M2",
+  "case": {
+    "path": "qualification/dev-cases.v2/dev-L3-00.json",
+    "sha256": "ae583cf527b4db9e0768231bdeaf595a20e6a344db07aabe31f0858a1a5275f3"
+  },
+  "sampler_seed": 1096691202,
+  "request_budget": {
+    "max_input_tokens": 8192,
+    "max_output_tokens": 1024,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "enable_thinking": false,
+    "max_request_seconds": 60,
+    "max_calls": 32,
+    "max_total_tokens": 180000
+  },
+  "output": "logs/inspection-clock-runtime-M2-L3.v1",
+  "reservation": "dev-clock-runtime-M2-L3-v1-20261106",
+  "reference_diagnostic": {
+    "path": "qualification/clock-localization-M2-L3.v1/actual-diagnostic-binding.v1.json",
+    "sha256": "aff1ca1675c890427dd02e20b5da5947b28ebfd66323d37addf8e88e2240f2f6"
+  },
+  "runtime_source_subject": {
+    "path": "planning/physics-runtime-window.v1/freeze.v2/binding.json",
+    "sha256": "8c08adb80bba6179b78401e9374c9beb3abeb1546a7208dbd07198403117bfac"
+  },
+  "runtime_change": "bounded physics-process cyclicGC deferral plus current physics-thread Mach soft time constraint; 120Hz/4ms computation/8ms constraint; restored at loop end or failure",
+  "unchanged": [
+    "original epoch/pacer/physics/control/actor/model/prompt/case/sampler",
+    ".1s lag admission threshold",
+    "600s1x/144000steps/72000control",
+    "defaultGC of model/coordinator/other processes",
+    "existing diagnostic caffeinate -i-w"
+  ],
+  "source_scope": "Candidate worker adds only runtime-audit error\u2192operational_failure; actual while AST same. Profile factory records explicit GC/scheduling policy, accurate metadata/cross-file hashes.",
+  "one_shot": "One separately reserved engineering run; no automatic retry; never fills or retries the failed v3 SDK slot",
+  "not_a_strict_single_factor_AB_or_G4": true,
+  "production_unchanged": true,
+  "paid_API_used": false,
+  "extra_sources": {
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/planning/physics-runtime-window.v1/source/probe.py": "712aab6d50189376415edd56c3fbc1e0063258b7ff1a1890c6c86c3f194dfc10",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/planning/physics-runtime-window.v1/source/timed_worker.py": "3fe5cdf40aa25d2082d5cea52d9fa9ead32f046c2af5147371ef9c624592c526",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile.py": "aa4ff3be49bd744e19ffa7e58b03c220b34a137c1fbfc13c4374f298c0b7dd7e",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_clock_profile_rusage.py": "43cc8ee2ddc196c01584fa0b2c079ed7871520f225dfff30a2b07e2ba3bbbe00",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_process_cleanup.py": "ce210650067d2b4e6f49c47845dea36e034d2c7c2e1187899023ddf22f792a9d",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/eval/inspection_darwin_inventory.py": "f1870d92317d5f482d5d5cc19f791fffecb23ac0fb7c777028be5e1060c59ab9",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/planning/physics-runtime-window.v1/source/physics_runtime.py": "bf4e0b38f1d7da98ccd559091b2b722c74ed0e6fdfd0088336ccaa441bdfc21c",
+    "/Users/wdblink/.codex/worktrees/538e/pyflyt-drone/paper/research/20261104-inspection/planning/physics-runtime-window.v1/source/timed_profile.py": "e4afc0073b8e5a3787da087f7cffa339328a417eceddc357ac902b4e54698526"
+  },
+  "during_flight": "Own concentrated tests/checkpoints/consumed-source edits/parallel physical or model runs must stop before physical epoch.",
+  "admission": "Start only after actual independent source/rollback/integration review has no unresolved blocking finding; then native reserve32calls180000tokens.",
+  "validation": "full clock+rusage72000 andGC arrays; audit errors empty, GC disabled at epoch/restored after, active real-time end/standard restore, memory+cleanup+usage exact; requiremaxlag<=.1 for this single candidate load only"
+}

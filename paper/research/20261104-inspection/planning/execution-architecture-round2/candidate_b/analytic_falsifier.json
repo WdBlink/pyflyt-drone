@@ -1,0 +1,62 @@
+{
+  "role": "single_analytic_necessary_geometry_falsifier_not_physics_not_qualification",
+  "input": {
+    "radius_m": 80.0,
+    "airspeed_m_s": 18.0,
+    "wind_xy_m_s": [
+      -2.0,
+      0.0
+    ],
+    "explicit_navigation_target_speed_m_s": 1.5,
+    "seconds": 60,
+    "initial_target_offset_m": [
+      -21.140151009795893,
+      0.0
+    ]
+  },
+  "geometry": {
+    "circle_period_s": 28.186868013061193,
+    "center_shift_m": 46.65412636644611,
+    "straight_seconds": 2.9158828979028817,
+    "repeat_period_s": 31.102750910964076,
+    "phase_gated_max_ideal_distance_m": 91.89018054825739,
+    "fixed_circle_max_ideal_distance_m": 132.81915725727683,
+    "max_nominal_feedforward_bank_degrees": 27.00720473621467
+  },
+  "illustrative_unqualified_allowances": {
+    "own_xy_m": 10.0,
+    "own_altitude_m": 3.0,
+    "target_error_m": 4.0,
+    "optical_origin_and_target_height_m": 0.9,
+    "horizontal_optical_origin_allowance_m": 0.3,
+    "ideal_sampling_omission_bound_m": 0.1075,
+    "reduced_horizontal_reach_m": 109.76050587792673,
+    "phase_gated_distance_upper_m": 106.29768054825739
+  },
+  "acquisition_delay_sensitivity": [
+    {
+      "capture_at_s": 1.5,
+      "ideal_max_distance_m": 92.43341728629929,
+      "with_illustrative_allowance_m": 106.84091728629929,
+      "optical_necessary_screen_passes": true
+    },
+    {
+      "capture_at_s": 3.5,
+      "ideal_max_distance_m": 120.28304981345279,
+      "with_illustrative_allowance_m": 134.6905498134528,
+      "optical_necessary_screen_passes": false
+    }
+  ],
+  "necessary_geometry_rejected": false,
+  "excluded": [
+    "curvature-ramp geometry and roll transient",
+    "actual navigation capture",
+    "Gaussian error support or unknown target turns",
+    "narrow-axis pointing error",
+    "ray occlusion/health/misses/classification/association/upload",
+    "fleet reservation/home recovery/tail proof",
+    "1x wall clock"
+  ],
+  "interpretation": "The phase matters: a full-circle radius+center-offset screen is overly pessimistic. This ideal input survives a conservative off-nadir screen; the delayed initial capture does not. It is not evidence that an aircraft or dynamic task passes.",
+  "wall_seconds": 0.07344783307053149
+}

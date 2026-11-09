@@ -1,0 +1,6 @@
+{
+  "budget": {},
+  "plan": "planning/figure-table-plan.ral.v1.json",
+  "reason": "RA-L已选择并完成带版本限制的八篇文章校准；按原计划保留六图四表和三RQ，先闭合G1–G4与非LLM参考episode/pilot，再核定正式八配置运行资源。当前未知API费用不由默认预算授权。",
+  "estimate": "planning/resource-proposal.ral.v1.md"
+}

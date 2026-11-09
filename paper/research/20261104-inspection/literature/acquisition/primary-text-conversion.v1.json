@@ -1,0 +1,174 @@
+{
+  "records": [
+    {
+      "source": "literature/primary/aerial-v1.html",
+      "source_sha256": "8e739e3198cad09e98e0f3806dfb4569f320f24bb828b6df0b0be0a3d5b229c2",
+      "text": "literature/text/aerial-v1.txt",
+      "text_sha256": "1dbf8055cf50d263a8e886d014f6d3fd5969d2685ea084b6012efe528942f1c7",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {}
+    },
+    {
+      "source": "literature/primary/alpha3-v1.html",
+      "source_sha256": "9af55bdaa99610b124e8886b797fa22f547257dd5f9aa0bedf20a3a2182c9b7a",
+      "text": "literature/text/alpha3-v1.txt",
+      "text_sha256": "f4f723a904832a9dff1793785aa7f630c9149fdf35a70e0cb09a44a08b044a08",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {}
+    },
+    {
+      "source": "literature/primary/esarbench-v1-metadata.html",
+      "source_sha256": "2eaac9a38d444a288a2fa3a0ee425e0957d941e84a3800c9ce3cb1e4c4d1970e",
+      "text": "literature/text/esarbench-v1-metadata.txt",
+      "text_sha256": "2517c596830f6818cc7f94a91694c2d1fbb6cf9289ce168f98adec9b2eae5ea1",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {
+        "og:title": [
+          "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue"
+        ],
+        "citation_title": [
+          "ESARBench: A Benchmark for Agentic UAV Embodied Search and Rescue"
+        ],
+        "citation_author": [
+          "Zhang, Daoxuan",
+          "Chen, Ping",
+          "Zhou, Jianyi",
+          "Yang, Shuo"
+        ],
+        "citation_date": [
+          "2026/05/02"
+        ],
+        "citation_online_date": [
+          "2026/05/02"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2605.01371"
+        ],
+        "citation_arxiv_id": [
+          "2605.01371"
+        ],
+        "citation_abstract": [
+          "The rapid advancement of Multimodal Large Language Models (MLLMs) has empowered Unmanned Aerial Vehicle (UAV) with exceptional capabilities in spatial reasoning, semantic understanding, and complex decision-making, making them inherently suited for UAV Search and Rescue (SAR). However, existing UAV SAR research is dominated by traditional vision and path-planning methods and lacks a comprehensive and unified benchmark for embodied agents. To bridge this gap, we first propose the novel task of \\textbf{Embodied Search and Rescue (ESAR)}, which requires aerial agents to autonomously explore complex environments, identify rescue clues, and reason about victim locations to execute informed decision-making. Additionally, we present \\textbf{ESARBench}, the first comprehensive benchmark designed to evaluate MLLM-driven UAV agents in highly realistic SAR scenarios. Leveraging Unreal Engine 5 and AirSim, we construct four high-fidelity, large-scale open environments mapped directly from real-world Geographic Information System (GIS) data to ensure photorealistic landscapes. To rigorously simulate actual rescue operations, our benchmark incorporates dynamic variables including weather conditions, time of day, and stochastic clue placement. Furthermore, we create a dataset of 600 tasks modeled after real-world rescue cases and propose a robust set of evaluation metrics. We evaluate diverse baselines, ranging from traditional heuristics to advanced ground and aerial MLLM-based ObjectNav agents. Experimental results highlight the challenges in ESAR, revealing critical bottlenecks in spatial memory, aerial adaptation, and the trade-off between search efficiency and flight safety. We hope ESARBench serves as a valuable resource to advance research on Embodied Search and Rescue domain. Source code and project page: https://4amgodvzx.github.io/ESAR.github.io."
+        ]
+      }
+    },
+    {
+      "source": "literature/primary/missionbench-v1-metadata.html",
+      "source_sha256": "237de5667b97ff4915400e9209e0872f3669e4d7e2f03f488be8b34c998399fe",
+      "text": "literature/text/missionbench-v1-metadata.txt",
+      "text_sha256": "9f5b45696744866a52eaab5e97711e32b63f1f9177e6353184f9b912ad7c1777",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {
+        "og:title": [
+          "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents"
+        ],
+        "citation_title": [
+          "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents"
+        ],
+        "citation_author": [
+          "Navaratnarajah, Suman",
+          "Kim, Taehyoung",
+          "Ruthardt, Jona",
+          "Bhimwal, Ishaan",
+          "Yamada, Ryousuke",
+          "Blei, Yannik",
+          "Burgard, Wolfram",
+          "Asano, Yuki M"
+        ],
+        "citation_date": [
+          "2026/07/24"
+        ],
+        "citation_online_date": [
+          "2026/07/24"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2607.22014"
+        ],
+        "citation_arxiv_id": [
+          "2607.22014"
+        ],
+        "citation_abstract": [
+          "Multimodal Large Language Models (MLLMs) are emerging as core reasoning modules for embodied agents, yet it remains unclear how well general-purpose models can solve long-horizon embodied tasks from a single high-level instruction. We introduce MissionBench, a benchmark for mission-level evaluation of MLLMs in aerial 3D environments. It comprises 120 missions across five simulated 3D environments and four task families. Agents must autonomously plan, navigate, and report outcomes using only egocentric observations and its action history, without aerial-specific fine-tuning. Across 22 open- and closed-source MLLMs, the strongest model succeeds on fewer than 35% of missions compared to 84.4% human performance, highlighting the difficulty of multi-step embodied tasks. Despite large variations between model families, we observe gains from scaling, indicating that larger general-purpose models possess stronger zero-shot embodied capabilities. Our analysis shows that mission-level competence requires coordinating multiple capabilities beyond spatial perception, including multi-step planning and adaptive reasoning. This motivates closed-loop evaluation and highlights both the promise and risk of scaling-driven improvements for embodied AI."
+        ]
+      }
+    },
+    {
+      "source": "literature/primary/multiuav-plat-v1-metadata.html",
+      "source_sha256": "b7078cad181b7de4d6b894c67c8cf00ab1153aeb801f66a046fbf042f075435e",
+      "text": "literature/text/multiuav-plat-v1-metadata.txt",
+      "text_sha256": "56297e5d076e073e395caf84760697234b802582cb91a85877e37e9e2e70c887",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {
+        "og:title": [
+          "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning"
+        ],
+        "citation_title": [
+          "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning"
+        ],
+        "citation_author": [
+          "Zhang, Sheng",
+          "Li, Qinglin",
+          "Zang, Yuechao",
+          "Huang, Xueqin",
+          "Fu, Yijia",
+          "Zhu, Cheng"
+        ],
+        "citation_date": [
+          "2026/06/30"
+        ],
+        "citation_online_date": [
+          "2026/06/30"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2606.31073"
+        ],
+        "citation_arxiv_id": [
+          "2606.31073"
+        ],
+        "citation_abstract": [
+          "Large language models (LLMs) provide a promising interface for high-level robotic task planning, but their use in multi-UAV collaboration remains difficult to evaluate systematically. Existing UAV simulators mainly emphasize dynamics, perception, or low-level control, while existing LLM-agent benchmarks rarely capture aerial-robotics constraints such as partial observability, spatial coverage, UAV assignment, and multi-vehicle coordination. To bridge this gap, we present MultiUAV-Plat, a lightweight, easy-to-use, LLM-agent-oriented simulation platform for multi-UAV collaborative task planning. The platform exposes concise RESTful APIs, agent-facing observations, role-based information access, hidden validation logic, and optional 2D/3D visualization, allowing agents to solve missions through realistic tool interaction rather than privileged simulator access. Built on this platform, the MultiUAV-Plat Benchmark contains 75 mission sessions, 1500 natural-language tasks, and 9396 validation checks across target assignment, area search, and area assignment and patrol scenarios. We further propose Agent4Drone, a task-specific LLM agent framework that structures multi-UAV behavior into memory, observation, task understanding, planning, execution, and verification. In a full paired benchmark comparison, Agent4Drone achieves a 57.9% task pass rate, a 74.6% average task check pass rate, and a 72.0% global check pass rate, substantially outperforming a ReAct baseline at 30.6%, 47.9%, and 43.1%, respectively. Agent4Drone also reduces the total failed task rate from 32.4% to 12.9%. These results demonstrate that MultiUAV-Plat and MultiUAV-Plat Benchmark provide a reproducible foundation for studying LLM-driven multi-UAV autonomy under realistic information and execution constraints."
+        ]
+      }
+    },
+    {
+      "source": "literature/primary/physai-v1.html",
+      "source_sha256": "4c7cf32271f2dafdddd6f16510863f201624e415da8617476ae895d37b54e1e9",
+      "text": "literature/text/physai-v1.txt",
+      "text_sha256": "e4e4f16d0a14060e59ac874b3fac852d522b85ee19b608d0d8edcc68d9e86bdf",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {}
+    },
+    {
+      "source": "literature/primary/retriever-v2.html",
+      "source_sha256": "ccf9c4b104a7dd720bc418ea0bb510e81fe55fb0bab3bf7b2ff52ca3742f8df2",
+      "text": "literature/text/retriever-v2.txt",
+      "text_sha256": "1033222c15628b386fe1d759da92941d45edef64a56b82406d79b20f60820aa9",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {}
+    },
+    {
+      "source": "literature/multiuav-plat-v1.html",
+      "source_sha256": "b6de8bf3dfca95e1eb40431c76e675cc16494b9db2fd974e3093f5576e42b3bf",
+      "text": "literature/text/multiuav-plat-v1.txt",
+      "text_sha256": "3443de6bde899626582a8710d0b247e13851a49a9d1d0214bff474f91c3112d6",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {}
+    },
+    {
+      "source": "literature/missionbench-v1.html",
+      "source_sha256": "f415a1bdbce97f0ac1cc3dbd57d235aeb2bbe659671acc86fb5153caf3b96dbc",
+      "text": "literature/text/missionbench-v1.txt",
+      "text_sha256": "b4a50b1db4de3e43b56a9cdb4b50c906ab36388d132e410303072a54653d0cd4",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {}
+    },
+    {
+      "source": "literature/esarbench-v1.html",
+      "source_sha256": "cf75e39bd5a7a9099a37024350aa2372e14bd1f77ef1c1a8295bbdd26e013067",
+      "text": "literature/text/esarbench-v1.txt",
+      "text_sha256": "8fd52d6c0d23c74f5a0fd46890e0897d9fc087d865ed77d751ef4b5f0974239d",
+      "conversion": "macOS textutil; plain text may flatten mathematics/layout; no semantic reading assertion",
+      "metadata": {}
+    }
+  ]
+}

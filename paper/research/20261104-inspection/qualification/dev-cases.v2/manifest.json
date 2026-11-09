@@ -1,0 +1,710 @@
+{
+  "schema": "inspection-dev-case-v1",
+  "split": "dev",
+  "master_seed": 45898416712875537064514310957308097722,
+  "root_count": 24,
+  "records": [
+    {
+      "case_id": "dev-L1-00",
+      "lineage_group": "dev-L1-00",
+      "file": "dev-L1-00.json",
+      "case_sha256": "7dea477c5234ef3e22bf576a9f610c3941c3b09efe4c1db4bb6a7d9574db0e95",
+      "file_sha256": "5600888c8cc583edadbb1e1d43f8f0dcd928b9b4e44c2dc93296a1788c62b422",
+      "first_pilot": true,
+      "validation": {
+        "valid": true,
+        "case_sha256": "7dea477c5234ef3e22bf576a9f610c3941c3b09efe4c1db4bb6a7d9574db0e95",
+        "coverage_cells": 1174,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 0,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L1-01",
+      "lineage_group": "dev-L1-01",
+      "file": "dev-L1-01.json",
+      "case_sha256": "f1fc0867bb9e4f2b29b45988bd652cd90dbcfff9d4b69bede60c6693ecedb283",
+      "file_sha256": "eb5e10b7a7bb3727853d0b5d7868200819f646585cf3b6082a01a58039e95f40",
+      "first_pilot": true,
+      "validation": {
+        "valid": true,
+        "case_sha256": "f1fc0867bb9e4f2b29b45988bd652cd90dbcfff9d4b69bede60c6693ecedb283",
+        "coverage_cells": 1223,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 0,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L1-02",
+      "lineage_group": "dev-L1-02",
+      "file": "dev-L1-02.json",
+      "case_sha256": "b849ad945703bdc6bb0d9050746ac3611c5b270de5de2219348a56c18ffe3fc6",
+      "file_sha256": "46e0fbef234a3401cf0c8f1aaa2158da6f56fe7a668ef01ef84a3a4568f76367",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "b849ad945703bdc6bb0d9050746ac3611c5b270de5de2219348a56c18ffe3fc6",
+        "coverage_cells": 1162,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 0,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L1-03",
+      "lineage_group": "dev-L1-03",
+      "file": "dev-L1-03.json",
+      "case_sha256": "46fc1d601749ae996eeb36e0133feebf0479e62e88189458873c49ba3dd4a6df",
+      "file_sha256": "2aad5644548641bf3f56db8ca91616c5c29afee96a20fd73ec067c6c6e051f1b",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "46fc1d601749ae996eeb36e0133feebf0479e62e88189458873c49ba3dd4a6df",
+        "coverage_cells": 1221,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 0,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L1-04",
+      "lineage_group": "dev-L1-04",
+      "file": "dev-L1-04.json",
+      "case_sha256": "9f1cc4ff1b5d8e6103eb676bda7dd4a89d8d47f8932841b051272f3a3b7aa7e5",
+      "file_sha256": "9bbfb6bd12f84232f58a1212a38ea6eb21f5ef90f4e29293b13ace2919c13143",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "9f1cc4ff1b5d8e6103eb676bda7dd4a89d8d47f8932841b051272f3a3b7aa7e5",
+        "coverage_cells": 1201,
+        "capacity": {
+          "static_perfect_reports_needed": 2,
+          "dynamic_perfect_reports_needed": 0,
+          "combined_perfect_reports_needed": 2,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L1-05",
+      "lineage_group": "dev-L1-05",
+      "file": "dev-L1-05.json",
+      "case_sha256": "e535f349e09f1b22993265b568d7ddce96119757f0d13126330cb04eba1ae6f1",
+      "file_sha256": "8659f07852a58ff3aef015b8d7426ba309d196b9d83b7b57fdb809c2bf8f4770",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "e535f349e09f1b22993265b568d7ddce96119757f0d13126330cb04eba1ae6f1",
+        "coverage_cells": 1219,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 0,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L1-06",
+      "lineage_group": "dev-L1-06",
+      "file": "dev-L1-06.json",
+      "case_sha256": "a26682db67ed21f7291a66b5ea6b145fd5954bc70557b266c4fa4ab4522291af",
+      "file_sha256": "2247891f647c9544d47f11f9865bbcbab06c88735ed86c4a31b18427527cc637",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "a26682db67ed21f7291a66b5ea6b145fd5954bc70557b266c4fa4ab4522291af",
+        "coverage_cells": 1150,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 0,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L1-07",
+      "lineage_group": "dev-L1-07",
+      "file": "dev-L1-07.json",
+      "case_sha256": "bc8b7464d9a02e6787a86ec508cb48d9daa46fcdd368c1cac2e3ac272fdf6a9e",
+      "file_sha256": "df478318c9a80d0d5511e7aa23418c1f30237c9b105320fbe950e12f1743400d",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "bc8b7464d9a02e6787a86ec508cb48d9daa46fcdd368c1cac2e3ac272fdf6a9e",
+        "coverage_cells": 1191,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 0,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L2-00",
+      "lineage_group": "dev-L2-00",
+      "file": "dev-L2-00.json",
+      "case_sha256": "d5e336acfff2fa9fc673a4a3246b89fcaac34d409c4dc2e43a3f45df7b40d07d",
+      "file_sha256": "fb011f0b3960c0a730ba7e4f68c644b63aeb3c6cce0b01be2caf5c0f76ab68d3",
+      "first_pilot": true,
+      "validation": {
+        "valid": true,
+        "case_sha256": "d5e336acfff2fa9fc673a4a3246b89fcaac34d409c4dc2e43a3f45df7b40d07d",
+        "coverage_cells": 1211,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 2,
+          "combined_perfect_reports_needed": 5,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L2-01",
+      "lineage_group": "dev-L2-01",
+      "file": "dev-L2-01.json",
+      "case_sha256": "e634b052e099df17c9f2bc9bbc10efaee306b26aec9db9f575236bee99f61020",
+      "file_sha256": "cc72a42df0879bb33c3c39a91318059c10e51bef5663246b58e5f417d4c4f30c",
+      "first_pilot": true,
+      "validation": {
+        "valid": true,
+        "case_sha256": "e634b052e099df17c9f2bc9bbc10efaee306b26aec9db9f575236bee99f61020",
+        "coverage_cells": 1213,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 4,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L2-02",
+      "lineage_group": "dev-L2-02",
+      "file": "dev-L2-02.json",
+      "case_sha256": "fc3b8fa42659c77d56225b6059c25c0a61622ff1416e209a0e3ab0d2bc7999ff",
+      "file_sha256": "4daf4c0c9746a6e905798b86a54919114e0dcfa012d3ac7c69272a80904845be",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "fc3b8fa42659c77d56225b6059c25c0a61622ff1416e209a0e3ab0d2bc7999ff",
+        "coverage_cells": 1249,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 2,
+          "combined_perfect_reports_needed": 5,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L2-03",
+      "lineage_group": "dev-L2-03",
+      "file": "dev-L2-03.json",
+      "case_sha256": "f56e7fd7c80b3ce1bcf4df77a94dcf6e8ee5724403e06845a880cb1119078cc9",
+      "file_sha256": "be180b059870870b6e55e616df59ce14680e62df6d42dc85d42a76b771a95bca",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "f56e7fd7c80b3ce1bcf4df77a94dcf6e8ee5724403e06845a880cb1119078cc9",
+        "coverage_cells": 1185,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 2,
+          "combined_perfect_reports_needed": 5,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L2-04",
+      "lineage_group": "dev-L2-04",
+      "file": "dev-L2-04.json",
+      "case_sha256": "ca1ab3a5ff9cebb0e307b9eb40dafacf802f758879eca0b54a28f2a34693a28e",
+      "file_sha256": "1ef7c238a9d71d2d838e10290d0ef5f3bebb9ed5f3e749c9b0724307cfe88340",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "ca1ab3a5ff9cebb0e307b9eb40dafacf802f758879eca0b54a28f2a34693a28e",
+        "coverage_cells": 1258,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 4,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L2-05",
+      "lineage_group": "dev-L2-05",
+      "file": "dev-L2-05.json",
+      "case_sha256": "c218b746e5976619ff639e7ae5a7e56f95be50ca901036a1b6a8f7f373d36e4e",
+      "file_sha256": "6f291c67b88574635fdccdf5e47adce3700c95ca30f921e56dc103830d8efeaa",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "c218b746e5976619ff639e7ae5a7e56f95be50ca901036a1b6a8f7f373d36e4e",
+        "coverage_cells": 1200,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 4,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L2-06",
+      "lineage_group": "dev-L2-06",
+      "file": "dev-L2-06.json",
+      "case_sha256": "b5e28aa55617c27c8dcf409401ef33a9c67b90c154b4f61358c1c07c5764ed85",
+      "file_sha256": "3a9eb22db45e89f2f5676793ba14548c6d56973893c866a680363863d4d42ec2",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "b5e28aa55617c27c8dcf409401ef33a9c67b90c154b4f61358c1c07c5764ed85",
+        "coverage_cells": 1239,
+        "capacity": {
+          "static_perfect_reports_needed": 4,
+          "dynamic_perfect_reports_needed": 2,
+          "combined_perfect_reports_needed": 6,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L2-07",
+      "lineage_group": "dev-L2-07",
+      "file": "dev-L2-07.json",
+      "case_sha256": "ccd42f7ae8d9371c26efe86b663746704be6d945c4846c1f681127e489828b8f",
+      "file_sha256": "a4830829dfb09f91489b15254372acbb796bccf5b23143f3791bffa12d78f34e",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "ccd42f7ae8d9371c26efe86b663746704be6d945c4846c1f681127e489828b8f",
+        "coverage_cells": 1213,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 4,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L3-00",
+      "lineage_group": "dev-L3-00",
+      "file": "dev-L3-00.json",
+      "case_sha256": "54322e6e9117abe9d3b4c42d9b37d8f62eeb5edfa0b007890a9fce8a94b7154f",
+      "file_sha256": "ae583cf527b4db9e0768231bdeaf595a20e6a344db07aabe31f0858a1a5275f3",
+      "first_pilot": true,
+      "validation": {
+        "valid": true,
+        "case_sha256": "54322e6e9117abe9d3b4c42d9b37d8f62eeb5edfa0b007890a9fce8a94b7154f",
+        "coverage_cells": 1157,
+        "capacity": {
+          "static_perfect_reports_needed": 2,
+          "dynamic_perfect_reports_needed": 2,
+          "combined_perfect_reports_needed": 4,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L3-01",
+      "lineage_group": "dev-L3-01",
+      "file": "dev-L3-01.json",
+      "case_sha256": "6a0547b6966622fa7dafd82b80faa8fe39caacbea1d27b125839355300df1bc2",
+      "file_sha256": "8ccea56f7d8cc1e562ad86a9640b7bed55446aff396fa93a9942d50bd91ba9e3",
+      "first_pilot": true,
+      "validation": {
+        "valid": true,
+        "case_sha256": "6a0547b6966622fa7dafd82b80faa8fe39caacbea1d27b125839355300df1bc2",
+        "coverage_cells": 1157,
+        "capacity": {
+          "static_perfect_reports_needed": 2,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L3-02",
+      "lineage_group": "dev-L3-02",
+      "file": "dev-L3-02.json",
+      "case_sha256": "7c568a3f7929af6c25702aeb073c93ca0d039cccbb1b7b78c158ba8f38642eeb",
+      "file_sha256": "f4cb0766cdfbe3926550093838677469d4a300510fe65f54138191aff8de8d46",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "7c568a3f7929af6c25702aeb073c93ca0d039cccbb1b7b78c158ba8f38642eeb",
+        "coverage_cells": 1159,
+        "capacity": {
+          "static_perfect_reports_needed": 2,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L3-03",
+      "lineage_group": "dev-L3-03",
+      "file": "dev-L3-03.json",
+      "case_sha256": "1b73c9df14cb5e211d76b3fdfc0707911a93554933f41504740186ca8a9cb222",
+      "file_sha256": "cab1278d866ca115d80b8cee6ff23f1b0d126224c74e1045db1995408d2a9055",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "1b73c9df14cb5e211d76b3fdfc0707911a93554933f41504740186ca8a9cb222",
+        "coverage_cells": 1212,
+        "capacity": {
+          "static_perfect_reports_needed": 1,
+          "dynamic_perfect_reports_needed": 2,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L3-04",
+      "lineage_group": "dev-L3-04",
+      "file": "dev-L3-04.json",
+      "case_sha256": "5679b02118c3c5593bf9ff4034d5fc5a74c8fa18667250cfad8083780bc32a26",
+      "file_sha256": "255b1696aedff4835c38dd8926221503e01f3b800ec7720992b981a2332dd721",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "5679b02118c3c5593bf9ff4034d5fc5a74c8fa18667250cfad8083780bc32a26",
+        "coverage_cells": 1194,
+        "capacity": {
+          "static_perfect_reports_needed": 2,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L3-05",
+      "lineage_group": "dev-L3-05",
+      "file": "dev-L3-05.json",
+      "case_sha256": "7f1346dbd2378839a48d45e5cdf140924fe71b50c5479dac71019a4a289fe60f",
+      "file_sha256": "3c784664f4e1642a9334999db8ec23b9eaadf8377464e9eed4140a9eca8169fc",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "7f1346dbd2378839a48d45e5cdf140924fe71b50c5479dac71019a4a289fe60f",
+        "coverage_cells": 1161,
+        "capacity": {
+          "static_perfect_reports_needed": 2,
+          "dynamic_perfect_reports_needed": 2,
+          "combined_perfect_reports_needed": 4,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L3-06",
+      "lineage_group": "dev-L3-06",
+      "file": "dev-L3-06.json",
+      "case_sha256": "900b73bbeecc44829409b07f9c031b4b628d7e859175f9565606230d30a09b3a",
+      "file_sha256": "2a13a2ad50606fc38ed36504bbf90e2001c6eab7b6b9a1b77547ab11ac673fe3",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "900b73bbeecc44829409b07f9c031b4b628d7e859175f9565606230d30a09b3a",
+        "coverage_cells": 1211,
+        "capacity": {
+          "static_perfect_reports_needed": 3,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 4,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    },
+    {
+      "case_id": "dev-L3-07",
+      "lineage_group": "dev-L3-07",
+      "file": "dev-L3-07.json",
+      "case_sha256": "931724143c46803db42a80d7af19c783f2ff6bc6ce9ff8b30eb45bdd81a881b4",
+      "file_sha256": "afa07c8475252cd6cca6cfb0d12785d0bb4eb3824eae5345a7fc2052437c819f",
+      "first_pilot": false,
+      "validation": {
+        "valid": true,
+        "case_sha256": "931724143c46803db42a80d7af19c783f2ff6bc6ce9ff8b30eb45bdd81a881b4",
+        "coverage_cells": 1170,
+        "capacity": {
+          "static_perfect_reports_needed": 2,
+          "dynamic_perfect_reports_needed": 1,
+          "combined_perfect_reports_needed": 3,
+          "budget": 10,
+          "scope": "necessary capacity bound only; not a physical solvability proof"
+        },
+        "trajectory_validation": "601 samples plus speed-based continuous boundary/building/pair separation bounds"
+      }
+    }
+  ],
+  "source_sha256": "7537b17aa0cbcfd4cffdb00c1d35e45e56217f477e055db77ba80724c0868cef",
+  "main_and_holdout_instantiated": false,
+  "parent_manifest_sha256": "b5a00d2cf88549dcabce17667825fa8e1f171052516b853cb3095f3f218ee6b9",
+  "repair_rule": "Regenerate only semantically invalid input from same frozen root seed; never use policy scores; preserve original input/result. These versions are not new independent roots.",
+  "parent_validation": [
+    {
+      "case_id": "dev-L1-00",
+      "parent_case_sha256": "7dea477c5234ef3e22bf576a9f610c3941c3b09efe4c1db4bb6a7d9574db0e95",
+      "case_sha256": "7dea477c5234ef3e22bf576a9f610c3941c3b09efe4c1db4bb6a7d9574db0e95",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L1-00"
+    },
+    {
+      "case_id": "dev-L1-01",
+      "parent_case_sha256": "f1fc0867bb9e4f2b29b45988bd652cd90dbcfff9d4b69bede60c6693ecedb283",
+      "case_sha256": "f1fc0867bb9e4f2b29b45988bd652cd90dbcfff9d4b69bede60c6693ecedb283",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L1-01"
+    },
+    {
+      "case_id": "dev-L1-02",
+      "parent_case_sha256": "b849ad945703bdc6bb0d9050746ac3611c5b270de5de2219348a56c18ffe3fc6",
+      "case_sha256": "b849ad945703bdc6bb0d9050746ac3611c5b270de5de2219348a56c18ffe3fc6",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L1-02"
+    },
+    {
+      "case_id": "dev-L1-03",
+      "parent_case_sha256": "46fc1d601749ae996eeb36e0133feebf0479e62e88189458873c49ba3dd4a6df",
+      "case_sha256": "46fc1d601749ae996eeb36e0133feebf0479e62e88189458873c49ba3dd4a6df",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L1-03"
+    },
+    {
+      "case_id": "dev-L1-04",
+      "parent_case_sha256": "9f1cc4ff1b5d8e6103eb676bda7dd4a89d8d47f8932841b051272f3a3b7aa7e5",
+      "case_sha256": "9f1cc4ff1b5d8e6103eb676bda7dd4a89d8d47f8932841b051272f3a3b7aa7e5",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L1-04"
+    },
+    {
+      "case_id": "dev-L1-05",
+      "parent_case_sha256": "e535f349e09f1b22993265b568d7ddce96119757f0d13126330cb04eba1ae6f1",
+      "case_sha256": "e535f349e09f1b22993265b568d7ddce96119757f0d13126330cb04eba1ae6f1",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L1-05"
+    },
+    {
+      "case_id": "dev-L1-06",
+      "parent_case_sha256": "a26682db67ed21f7291a66b5ea6b145fd5954bc70557b266c4fa4ab4522291af",
+      "case_sha256": "a26682db67ed21f7291a66b5ea6b145fd5954bc70557b266c4fa4ab4522291af",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L1-06"
+    },
+    {
+      "case_id": "dev-L1-07",
+      "parent_case_sha256": "bc8b7464d9a02e6787a86ec508cb48d9daa46fcdd368c1cac2e3ac272fdf6a9e",
+      "case_sha256": "bc8b7464d9a02e6787a86ec508cb48d9daa46fcdd368c1cac2e3ac272fdf6a9e",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L1-07"
+    },
+    {
+      "case_id": "dev-L2-00",
+      "parent_case_sha256": "d5e336acfff2fa9fc673a4a3246b89fcaac34d409c4dc2e43a3f45df7b40d07d",
+      "case_sha256": "d5e336acfff2fa9fc673a4a3246b89fcaac34d409c4dc2e43a3f45df7b40d07d",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L2-00"
+    },
+    {
+      "case_id": "dev-L2-01",
+      "parent_case_sha256": "e634b052e099df17c9f2bc9bbc10efaee306b26aec9db9f575236bee99f61020",
+      "case_sha256": "e634b052e099df17c9f2bc9bbc10efaee306b26aec9db9f575236bee99f61020",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L2-01"
+    },
+    {
+      "case_id": "dev-L2-02",
+      "parent_case_sha256": "fc3b8fa42659c77d56225b6059c25c0a61622ff1416e209a0e3ab0d2bc7999ff",
+      "case_sha256": "fc3b8fa42659c77d56225b6059c25c0a61622ff1416e209a0e3ab0d2bc7999ff",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L2-02"
+    },
+    {
+      "case_id": "dev-L2-03",
+      "parent_case_sha256": "ed93254799d5b4634b9ed50c974f21f67a62b387f189f35a1d1f38c3e4d38947",
+      "case_sha256": "f56e7fd7c80b3ce1bcf4df77a94dcf6e8ee5724403e06845a880cb1119078cc9",
+      "input_changed": true,
+      "reason": "ground proxies cannot be certified separated between samples",
+      "lineage_group": "dev-L2-03"
+    },
+    {
+      "case_id": "dev-L2-04",
+      "parent_case_sha256": "ca1ab3a5ff9cebb0e307b9eb40dafacf802f758879eca0b54a28f2a34693a28e",
+      "case_sha256": "ca1ab3a5ff9cebb0e307b9eb40dafacf802f758879eca0b54a28f2a34693a28e",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L2-04"
+    },
+    {
+      "case_id": "dev-L2-05",
+      "parent_case_sha256": "c218b746e5976619ff639e7ae5a7e56f95be50ca901036a1b6a8f7f373d36e4e",
+      "case_sha256": "c218b746e5976619ff639e7ae5a7e56f95be50ca901036a1b6a8f7f373d36e4e",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L2-05"
+    },
+    {
+      "case_id": "dev-L2-06",
+      "parent_case_sha256": "b5e28aa55617c27c8dcf409401ef33a9c67b90c154b4f61358c1c07c5764ed85",
+      "case_sha256": "b5e28aa55617c27c8dcf409401ef33a9c67b90c154b4f61358c1c07c5764ed85",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L2-06"
+    },
+    {
+      "case_id": "dev-L2-07",
+      "parent_case_sha256": "ccd42f7ae8d9371c26efe86b663746704be6d945c4846c1f681127e489828b8f",
+      "case_sha256": "ccd42f7ae8d9371c26efe86b663746704be6d945c4846c1f681127e489828b8f",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L2-07"
+    },
+    {
+      "case_id": "dev-L3-00",
+      "parent_case_sha256": "54322e6e9117abe9d3b4c42d9b37d8f62eeb5edfa0b007890a9fce8a94b7154f",
+      "case_sha256": "54322e6e9117abe9d3b4c42d9b37d8f62eeb5edfa0b007890a9fce8a94b7154f",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L3-00"
+    },
+    {
+      "case_id": "dev-L3-01",
+      "parent_case_sha256": "6a0547b6966622fa7dafd82b80faa8fe39caacbea1d27b125839355300df1bc2",
+      "case_sha256": "6a0547b6966622fa7dafd82b80faa8fe39caacbea1d27b125839355300df1bc2",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L3-01"
+    },
+    {
+      "case_id": "dev-L3-02",
+      "parent_case_sha256": "7c568a3f7929af6c25702aeb073c93ca0d039cccbb1b7b78c158ba8f38642eeb",
+      "case_sha256": "7c568a3f7929af6c25702aeb073c93ca0d039cccbb1b7b78c158ba8f38642eeb",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L3-02"
+    },
+    {
+      "case_id": "dev-L3-03",
+      "parent_case_sha256": "1b73c9df14cb5e211d76b3fdfc0707911a93554933f41504740186ca8a9cb222",
+      "case_sha256": "1b73c9df14cb5e211d76b3fdfc0707911a93554933f41504740186ca8a9cb222",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L3-03"
+    },
+    {
+      "case_id": "dev-L3-04",
+      "parent_case_sha256": "5679b02118c3c5593bf9ff4034d5fc5a74c8fa18667250cfad8083780bc32a26",
+      "case_sha256": "5679b02118c3c5593bf9ff4034d5fc5a74c8fa18667250cfad8083780bc32a26",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L3-04"
+    },
+    {
+      "case_id": "dev-L3-05",
+      "parent_case_sha256": "7f1346dbd2378839a48d45e5cdf140924fe71b50c5479dac71019a4a289fe60f",
+      "case_sha256": "7f1346dbd2378839a48d45e5cdf140924fe71b50c5479dac71019a4a289fe60f",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L3-05"
+    },
+    {
+      "case_id": "dev-L3-06",
+      "parent_case_sha256": "900b73bbeecc44829409b07f9c031b4b628d7e859175f9565606230d30a09b3a",
+      "case_sha256": "900b73bbeecc44829409b07f9c031b4b628d7e859175f9565606230d30a09b3a",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L3-06"
+    },
+    {
+      "case_id": "dev-L3-07",
+      "parent_case_sha256": "931724143c46803db42a80d7af19c783f2ff6bc6ce9ff8b30eb45bdd81a881b4",
+      "case_sha256": "931724143c46803db42a80d7af19c783f2ff6bc6ce9ff8b30eb45bdd81a881b4",
+      "input_changed": false,
+      "reason": null,
+      "lineage_group": "dev-L3-07"
+    }
+  ]
+}

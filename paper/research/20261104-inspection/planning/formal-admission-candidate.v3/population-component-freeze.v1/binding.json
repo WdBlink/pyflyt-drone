@@ -1,0 +1,29 @@
+{
+  "role": "uninstalled shared-law extraction and namespace-gated generation component; no writer/dataset/dispatch or G4 acceptance",
+  "tests": "15 shared-law + 7 fake pre-draw boundaries; all staged components140 passed; existing five dev roots replayed, zero formal draws",
+  "files": {
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/combined140-tests.log": "3642cd8f1ea2e3a2e4f7464548b480d011ecde90f4b1c8e956d89e65d333509c",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/initial-tests-format-mismatch.log": "9147c7ed9d92df78a3ab81aa100871e7861be7e0614a16a78587d0442e620268",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/inspection_formal_admission.py": "c981449425a835fad40eda9bbdc47dc76d2aa0e473a26bde8312743739a1779d",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/inspection_formal_population.py": "5e231f1856c586fdfc2a3b8dca32b2599a71d9f009ea5a3d6daca33231a543eb",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/inspection_namespace_admission.py": "2ebd0e4b710457691a4d93f69ef9e204e30cd1a7aa3f0cd5a3856f28e229b7f9",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/inspection_population.py": "afa5f70650b230fe8eff826b409e28d8d9e41a96b82435b2c92aed7fd38797fd",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/pre-draw-gate-tests.log": "ca12bf5ea55b044bc10bb2aa85a86e00af21c4d9016b261b92fd477b542d30a9",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/production-before-inspection_population.py": "bb7098554475a65d4717077b7704bcf5902cd0fc674c1a9a95a51a7e066a5ff7",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/shared-law-tests.log": "909f38afe0f83a69b2fca9c7ec228d875aa6112213544af66330c2217ed46ea4",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/test_formal_population_gate.py": "137732cc40ee6f211f05031bb9220f7b099032aef49ca73c6143f0be3625aff1",
+    "planning/formal-admission-candidate.v3/population-component-freeze.v1/test_population_shared_law.py": "5f63344c76c3a7e8e78ff6530bfa30b5e40a80823816f90d00bbf67b521bd3e7"
+  },
+  "working_sources": {
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_population.py": "afa5f70650b230fe8eff826b409e28d8d9e41a96b82435b2c92aed7fd38797fd",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_population.py": "5e231f1856c586fdfc2a3b8dca32b2599a71d9f009ea5a3d6daca33231a543eb",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_admission.py": "c981449425a835fad40eda9bbdc47dc76d2aa0e473a26bde8312743739a1779d",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_namespace_admission.py": "2ebd0e4b710457691a4d93f69ef9e204e30cd1a7aa3f0cd5a3856f28e229b7f9",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/source/eval/inspection_formal_namespace.py": "44abef28366a3104bdc9c653f056c1596e3b7a9cfd23501343eaabbb4434f321",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_population_shared_law.py": "5f63344c76c3a7e8e78ff6530bfa30b5e40a80823816f90d00bbf67b521bd3e7",
+    "paper/research/20261104-inspection/planning/formal-admission-candidate.v3/tests/test_formal_population_gate.py": "137732cc40ee6f211f05031bb9220f7b099032aef49ca73c6143f0be3625aff1"
+  },
+  "production_before_sha256": "bb7098554475a65d4717077b7704bcf5902cd0fc674c1a9a95a51a7e066a5ff7",
+  "no_formal_datasets": true
+}

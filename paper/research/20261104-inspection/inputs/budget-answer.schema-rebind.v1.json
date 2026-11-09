@@ -1,0 +1,11 @@
+{
+  "question_sha256": "d03d73b9f7b2485c3fbe2dd4d72cc094611d01ebf2e3e440b2e08e2a7da43d7a",
+  "answer": {
+    "choice": "default"
+  },
+  "human_response": {
+    "path": "inputs/user-budget-answer-20261105.json",
+    "sha256": "7afb340c5f18e7cbad4eda93d58d87cce1d0185e27c8adc1c7ead1d01f418cac",
+    "quote": "保留默认预算，无隐含总量上限（推荐）"
+  }
+}

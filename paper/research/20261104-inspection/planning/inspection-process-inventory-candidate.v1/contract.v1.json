@@ -1,0 +1,11 @@
+{
+  "role": "uninstalled measured infrastructure repair candidate, not a clock-cause/G4 certificate",
+  "reason": "Actual adaptive clock run spent456.28s in1734full-table observations; this is monitor wall time, not total CPU or unique cause.",
+  "behavior": "Only hot SubprocessTree.observe queries already observed process roots and recursively current children via libproc. Original full ps baseline/attach, unbound-root recovery, shutdown/orphan scans, birth comparisons, signalling and .1s wait cadence remain. Any native uncertainty falls back to full ps.",
+  "ABI": "SDK C layout136/offsets verified, Apple public libproc child wrapper returns PID counts with byte buffer argument.",
+  "primary_api_source": "https://github.com/apple-oss-distributions/xnu/blob/main/libsyscall/wrappers/libproc/libproc.c",
+  "tests": "13 new unit/live-process tests;39 combined including unchanged actual cleanup and synthetic receipt fault tests; no simulation/MLX/RNG/actual owner writes",
+  "performance_result": "readonly-forest-performance.v5.json, idle20alternating paired scans of4owned processes; exact ownership fields and Python detection, complete observed forest; no under-load deadline claim",
+  "not_installed": true,
+  "future_requirements": "Independent review, actual source-amendment installation and provenance closure, one fresh post-repair instrumented qualification before a new prospective full pilot. Original v2 failed SDK never resumed."
+}

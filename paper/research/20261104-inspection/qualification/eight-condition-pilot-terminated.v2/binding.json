@@ -1,0 +1,94 @@
+{
+  "role": "actual terminated fixed v2 pilot; complete SDK denominators retained, not G4 or a valid completed comparison",
+  "captured_at": "2026-11-06T04:20:43.772707+00:00",
+  "driver_exit_code": 1,
+  "cause": "order10 B4-M1 repeat2 exhausted symmetric one infra retry; bothclockinvalid",
+  "valid_callbacks": 10,
+  "actual_physical_attempts": 13,
+  "complete_independent_roots": 0,
+  "sdk": {
+    "classic": {
+      "planned": 18,
+      "statuses": {
+        "stopped": 16,
+        "completed": 2
+      },
+      "reported_denominator": 18,
+      "attempted_count": 2,
+      "execution_status": "failed",
+      "sha256": "c99279508e43c5eda10c023b4728e34039db9af8db595f1ab692a927a9600e10"
+    },
+    "llm": {
+      "planned": 90,
+      "statuses": {
+        "stopped": 81,
+        "completed": 8,
+        "failed": 1
+      },
+      "reported_denominator": 90,
+      "attempted_count": 9,
+      "execution_status": "failed",
+      "sha256": "07ea23c4c6dfccbd4b20814ad236a99a560ba6c91abe11831178b0bd12e625e4"
+    },
+    "root-means": {
+      "planned": 48,
+      "statuses": {
+        "stopped": 48
+      },
+      "reported_denominator": 48,
+      "attempted_count": 0,
+      "execution_status": "failed",
+      "sha256": "19aacee634a5d064d35524c00096e6e861011665cd494de682cec6d44ce4f51e"
+    }
+  },
+  "failed_slot_attempts": [
+    {
+      "attempt": "attempt-00",
+      "status": "known_operational_failure",
+      "physical_validation": {
+        "run_sha256": "a7760ec90dea6a85d35bb21821907b946389f41c78aeca28554f8a82bfc6a142",
+        "world_sha256": "0c0cddc3cdff7a88985bd022cebce618fe418d7d76b3f348f508bcb1d2800d91",
+        "copied_case_sha256": "5600888c8cc583edadbb1e1d43f8f0dcd928b9b4e44c2dc93296a1788c62b422",
+        "returncode": 0,
+        "max_clock_lag_seconds": 1.768018833322742,
+        "failure_reasons": [
+          "clock_lag_exceeded"
+        ]
+      },
+      "terminal_sha256": "94cd10a5a26cfe78de4234da11c9043143584d73b4bd8f7303fea31a416b9650"
+    },
+    {
+      "attempt": "attempt-01",
+      "status": "known_operational_failure",
+      "physical_validation": {
+        "run_sha256": "77aa41b30352e0899733a4f3cb2e183588db4c3b1250fe6680f2c0f9b635a3e5",
+        "world_sha256": "44cd9de740a8f46f7ef1bcbf3bba19b8dcda4041b4700bde16f46111112434f2",
+        "copied_case_sha256": "5600888c8cc583edadbb1e1d43f8f0dcd928b9b4e44c2dc93296a1788c62b422",
+        "returncode": 0,
+        "max_clock_lag_seconds": 0.3529511250322912,
+        "failure_reasons": [
+          "clock_lag_exceeded"
+        ]
+      },
+      "terminal_sha256": "219a0a2c4f696c3775ce415d31709e197272219f93810dfc38118800e5d5ad81"
+    }
+  ],
+  "archives": {
+    "complete-pilot-sdk.zip": {
+      "sha256": "6defaaf53264313cd74137c788b47969544a5446094004960c68361cb08b3ab9",
+      "bytes": 301204,
+      "members": 198
+    },
+    "complete-physical-attempts.zip": {
+      "sha256": "2e7199f06e8c94fd9333e876dc5abdcdc47c715d1a99fb996669a943eeb75856",
+      "bytes": 131422040,
+      "members": 203
+    }
+  },
+  "post_exit_checkpoint_request": "created after driver failure, never acknowledged; copied then removed as stale root control marker",
+  "all_prior_policy_scores_and_invalid_raw_preserved": true,
+  "files": {
+    "driver.stdout-stderr.log": "d2e0b75d8626fa989e8644a3fadb6db18f3e61be5d021b70d613be8632aa9fe1",
+    "post-exit-unacknowledged-checkpoint-request.json": "0286d78a4ddaa144393c9abffa16c918a07a4773478a2cfaee5c026aaa2fdd4b"
+  }
+}

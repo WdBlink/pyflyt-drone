@@ -1,0 +1,16 @@
+{
+  "role": "pre-native-dispatch repair candidate; independent repair review pending; not G4",
+  "source_hashes": {
+    "eval/inspection_llm_episode_receipts.py": "a0e4193b78769e3b8e8fd7383bc55de80d1ee00151539ab3337c1301a25adff9",
+    "eval/run_inspection_llm_episode.py": "506f16abbbc4a71d9e91a680f86de2cfa1ae0dad00ccad48576cbe3f9a0d122b",
+    "eval/inspection_process_cleanup.py": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+    "eval/run_inspection_eight_condition_pilot.py": "b978b7dd50e68a28128c9101ce5d48d7c2c6591ee17ddca3d86b9faea8cdf59c",
+    "tests/test_inspection_llm_episode_receipts.py": "907ba637358ba02483e784619b5ea98988001e6422d1af4df72af197505cde2c",
+    "tests/test_inspection_process_cleanup.py": "b976bc01df42bb379fdbc6664a1bd152d38c00d46c4939b0bc76c8741da18d1f"
+  },
+  "scope_note": "66tests preceded last close-root-bind guard; no claim that guard was in that test source; subsequent narrow tests required",
+  "known_actual_model_usage_unchanged": {
+    "calls": 29,
+    "tokens": 162210
+  }
+}

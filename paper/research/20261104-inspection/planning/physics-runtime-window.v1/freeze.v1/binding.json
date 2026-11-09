@@ -1,0 +1,31 @@
+{
+  "role": "uninstalled timing-window engineering candidate, no flight/model evidence",
+  "files": {
+    "source/physics_runtime.py": "bf4e0b38f1d7da98ccd559091b2b722c74ed0e6fdfd0088336ccaa441bdfc21c",
+    "source/timed_profile.py": "7883d176b9defaf6a3e5f42ddc29483a3b28603afad3c4987f8f36c5cd50b527",
+    "tests/test_runtime_window.py": "3696fc6a4e69eb6a2714260c36bdb7fcf2d3e741cc63a848164bb283bda02118",
+    "tests/test_timed_profile.py": "32eaf69d645ef4e78e7b3ca2266cd73ab2b83f174c5c917bab0939a7c027d48e",
+    "inspection-runtime-window.v1.tests.log": "d5be81bbe49b412357ba177be7fae47b32ba70b563d2a01ec6ee15df362cc215",
+    "inspection-runtime-window.v2.tests.log": "d5be81bbe49b412357ba177be7fae47b32ba70b563d2a01ec6ee15df362cc215",
+    "inspection-runtime-window.v3.tests.log": "54d62a0149f447ee2867b9e102287fade45e0a057ff3b969489678c98884e9ae"
+  },
+  "actual_latest_result": "8 tests passed (see retained v3 log); includes short self-thread native roundtrip and one numeric telemetry row, no aircraft/model",
+  "runtime_scope": "Only current physics thread Mach constraint; process-local cyclicGC deferred until control exit. All state restoration/metadata errors recorded. Not a hard realtime guarantee.",
+  "new_production_install": false,
+  "epoch_pacer_physics_law_threshold_model_prompt_unchanged": true,
+  "sources": [
+    {
+      "url": "https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/scheduler/scheduler.html",
+      "claim": "User thread Mach soft real-time constraint; dynamic demotion is possible."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/osfmk/mach/thread_policy.h",
+      "claim": "Actual policy ABI/flavors/fields; Mach absolute ticks and count."
+    },
+    {
+      "url": "https://docs.python.org/3.11/library/gc.html",
+      "claim": "Disable affects cyclic collector; reference counting remains. Delayed cycles and restoration require bounded lifetime checks."
+    }
+  ],
+  "limitations": "Not independently reviewed or installed. Must validate full600s M2 load, no in-window GC, actual active/restored policy, RAM/cleanup and clock<=.1 before reuse; source differences not a strict single-factor A/B."
+}

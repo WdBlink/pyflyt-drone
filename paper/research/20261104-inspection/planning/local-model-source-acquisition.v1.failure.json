@@ -1,0 +1,7 @@
+{
+  "status": "refused",
+  "reason": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>",
+  "partial_sources_retained": 6,
+  "source": "actual CLI stderr/stdout from session86476",
+  "paid_inference_calls": 0
+}

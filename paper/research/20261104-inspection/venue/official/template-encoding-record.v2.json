@@ -1,0 +1,12 @@
+{
+  "original_encoding": "mac_roman",
+  "basis": "Original 0xD2/0xD3 quote and 0xD0 dash decode as intended typographic punctuation in the official sample. cp1252 trial was reversible but produced incorrect glyphs and failed; retained as failed preflight.",
+  "original": "venue/official/ieeeconf/root.tex",
+  "original_sha256": "a7eba1fe1fcd8c39dcc523fd787dc713a90d6830b37c516a0bdaeaeeeac2408f",
+  "normalized": "venue/official/ieeeconf-macroman-utf8/root.tex",
+  "normalized_sha256": "9fc82e89810e5ea5e2f4f21372c0866d33b49955bad70103fd28f40ee3710056",
+  "round_trip_verified": true,
+  "class_bytes_identical": true,
+  "compile_exit": 0,
+  "manuscript_authored": false
+}

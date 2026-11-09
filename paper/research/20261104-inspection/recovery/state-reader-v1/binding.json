@@ -1,0 +1,9 @@
+{
+  "role": "read_only_backup_not_another_state_owner",
+  "previous_implementation": "bfd85afe5d6745b4111d67f3c7d79bef4b0b3e15894b356b1468c180e48a9df2",
+  "state_digest": "3ebd2c22bf02b642e6fdb6bf1d002d5144112477f1e02f32c7cf7f354b863397",
+  "files": {
+    "checkpoint.json.before": "dfa9f69a649450052fc8d6c0b1277e4098feb9ee46725373fe68aa0398df8321",
+    "control.json.before": "22b2b35b5c5a979b0da0e018e40f7aff106a0763355d5a39f95ba431ff67a1e0"
+  }
+}

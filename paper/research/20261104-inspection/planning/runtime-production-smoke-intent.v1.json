@@ -1,0 +1,29 @@
+{
+  "schema": "inspection-runtime-production-smoke-intent-v1",
+  "role": "20s actual nonLLM integration smoke only; cannot qualify full600s mission, complete root, pilot or G4",
+  "source_delta_binding": {
+    "path": "planning/physics-runtime-integration.v1/freeze.v1/binding.json",
+    "sha256": "b57679da7beea68d611ed7eb96c8ff5b5bbc793f055cad302f959f6dd59da9b8"
+  },
+  "independent_source_review_required_before_dispatch": true,
+  "out": "logs/inspection-runtime-production-smoke.v1",
+  "case": "qualification/dev-cases.v2/dev-L3-00.json",
+  "case_sha256": "ae583cf527b4db9e0768231bdeaf595a20e6a344db07aabe31f0858a1a5275f3",
+  "policy": "B0",
+  "duration_seconds": 20,
+  "realtime": true,
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "host_awake": "caffeinate -i around existing CLI; no display/system-global scheduling change",
+  "checks": [
+    "actual world/physics step count and clock",
+    "runtime request at start/end and restoration",
+    "private/source/dependency bindings and normal supervisor exit"
+  ],
+  "resource_scope": "existing host only; no model/API dispatch; local CLI/energy/host cost unmetered",
+  "host_noise": "Other existing CPU workloads observed; never terminated for this research. Single smoke is not a controlled performance comparison."
+}

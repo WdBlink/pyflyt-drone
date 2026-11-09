@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-11-06T00:44:57.952042+00:00",
+  "identity": {
+    "title": "PyFlyt -- UAV Simulation Environments for Reinforcement Learning Research",
+    "authors": [
+      "Tai, Jun Jet",
+      "Wong, Jim",
+      "Innocente, Mauro",
+      "Horri, Nadjim",
+      "Brusey, James",
+      "Phang, Swee King"
+    ],
+    "year": 2023,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2304.01305v1"
+  },
+  "url": "https://arxiv.org/abs/2304.01305v1",
+  "metadata_path": "literature/primary/pyflyt-v1-metadata.html",
+  "metadata_sha256": "b2a4bf09051ff3ec8ccf46077b6459524a3eb7ac6c047a9dc489b200feea8570",
+  "first_publication_date": "2023/04/03",
+  "version_update_date": "2023/04/03",
+  "read_path": "literature/text/pyflyt-v1.txt",
+  "read_sha256": "15a8222d3119de5c5d59f1450e445780af80dcd8b25efd99bb21bb5595167132",
+  "read_extent": "Abstract/introduction and modular components/control-rate discussion; no real-world validity claimed for the current benchmark.",
+  "acceptance": "Pinned arXiv version only. ReAct official OpenReview API403 recorded separately; no venue upgrade from camera-ready remark.",
+  "claim": "PyFlyt provides Bullet-based modular UAV simulation with fixed-wing support. This attributes the software foundation; our current version and flight envelope require separate recorded qualification.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/pyflyt-v1.txt",
+      "quote": "platform built on the Bullet"
+    },
+    {
+      "path": "literature/text/pyflyt-v1.txt",
+      "quote": "and fixed-wing"
+    }
+  ]
+}

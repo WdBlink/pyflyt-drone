@@ -1,0 +1,11 @@
+{
+  "operation": "lossless cp1252 to UTF-8 transcode",
+  "reason": "Original official root.tex contains smart-quote bytes rejected by current UTF-8 LaTeX default. Original ZIP and members preserved unchanged.",
+  "original": "venue/official/ieeeconf/root.tex",
+  "original_sha256": "a7eba1fe1fcd8c39dcc523fd787dc713a90d6830b37c516a0bdaeaeeeac2408f",
+  "normalized": "venue/official/ieeeconf-utf8/root.tex",
+  "normalized_sha256": "3cfde20ec287742752d87b840c9175aa2c9629e7eaa40b1b942bfa209cd91a64",
+  "round_trip_verified": true,
+  "class_bytes_identical": true,
+  "manuscript_authored": false
+}

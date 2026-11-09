@@ -1,0 +1,24 @@
+{
+  "role": "synthetic_numeric_preflight_not_method_or_test_evidence",
+  "passed": true,
+  "roots": 72,
+  "main_shape_validated": true,
+  "hand_macro_effects": [
+    0.11,
+    -0.035,
+    0.08
+  ],
+  "input_and_batch_order_invariant": true,
+  "degenerate_null_conservative": true,
+  "source_sha256": {
+    "eval/preflight_inspection_statistics.py": "744dedf043e9e6ca980ef14ce522d3e9ce49f2a8f97fce0d443e26565de733a8",
+    "eval/inspection_statistics.py": "a42bd777f783b5f9fc6702944117663a0e564566fa77f1a3ebf1e534c43c70a8",
+    "eval/inspection_recording.py": "9613a8e800d470110dbf86890837ba853c3f50834ae29f0722994927d27cb352"
+  },
+  "limitations": [
+    "no real episode/split/lineage/model/cost verification",
+    "candidate statistics not independently implemented-review approved",
+    "finite-sample skew/rare-failure stress tests and SR/censoring/event adapter still pending",
+    "pointwise bootstrap intervals and asymptotic p-values do not guarantee small-sample coverage"
+  ]
+}

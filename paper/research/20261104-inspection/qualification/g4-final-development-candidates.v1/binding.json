@@ -1,0 +1,19 @@
+{
+  "role": "pre-G4 current implementation candidates and actual targeted test logs; pending limited independent reviews, no main GO",
+  "source_hashes": {
+    "eval/inspection_llm_episode_receipts.py": "ceed2af65c21da0901d80d996537ac6f1469a2840256989ba4dca75d158ab53f",
+    "eval/run_inspection_llm_episode.py": "37a40dcc989059a4a6abb43a6fc7b741153a7291fc075225bd06046a78928364",
+    "eval/inspection_process_cleanup.py": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+    "eval/run_inspection_llm_development.py": "c3bed0403ca4a8e7f5d79c0db3df5da0aeb27e46e37423e94474447fbd4da552",
+    "eval/run_inspection_eight_condition_pilot.py": "ce911fdb7d6adc5125dac28ad2c42eeed4d579426f6ec2f446971d0f9a9e1756",
+    "eval/inspection_llm_actor.py": "056bdbce49bd9096a73df1d580d25b5f48987e228e742354805edaa5c863a497",
+    "eval/inspection_event_endpoints.py": "6ac62f8d266966420bc3457d4b7992ae5755094bbfdd9b7928cf73dc1cd341b8",
+    "tests/test_inspection_llm_episode_receipts.py": "09567c4134eb65d4e53493381a25100150a52d972655fe762c3449ab632783a0",
+    "tests/test_inspection_event_endpoints.py": "d3010361235f9f69b0eb6cfca874c300bc20857c5e28cfd0a430453b75781ea8",
+    "tests/test_inspection_injected_delay.py": "b9048096f5e25211f43b2c00921840a0bba60aed6d60ba882b152abad7ebfb96"
+  },
+  "actual_model_usage_unchanged": {
+    "calls": 29,
+    "tokens": 162210
+  }
+}

@@ -1,0 +1,7 @@
+# 核心方法引用与适配边界（研究笔记，非正文）
+
+PyFlyt arXiv2304.01305v1已取得PDF/metadata并定向读摘要、功能与组件段：原论文描述Bullet物理与模块化UAV组件，含fixed-wing与多个回路速率。它支持软件来源归属，不直接验证本任务当前PyFlyt0.29.0的飞机参数、17m/s控制包线、合成感知或真实硬件。当前实现/版本与G1–G3实际资格证据必须分别给出，不能把祖先论文的仿真演示变成当前benchmark或真实飞行证据。此条尚未进入最终citation packet。
+
+ReAct arXiv2210.03629v3已取得PDF/metadata并读§2：原方法让语言推理与领域动作交互，典型prompt含人工few-shot thought/action/observation轨迹，决策任务可稀疏产生thought。当前B3是统一资源/工具边界下的bounded ReAct-style适配：20s周期、单个在途请求、最多32次尝试、统一JSON工具输出、保留最近两次exchange及公共帧；没有复现原论文PaLM540B或原任务few-shot配置。应给出完整实际prompt和历史截断，不能将B3称为原论文逐项复现，也不能用原论文分数与本项目横比。B4与消融仍共享相同公共工具与基础证据合同；不依据当前pilot分数更改这些方法。
+
+官方OpenReview forum经web返回验证页面，提供的source-fetch请求官方API得到403；四份成功arXiv源及provenance保留于`acquisition/core-methods-partial-fetch-and-conversion.v1.json`。v3自述camera-ready不被当作本轮取得正式decision，不为通过记录而虚构录用来源。可先以固定arXiv版本引用，或在后续实际取得官方decision后单独核验升级。此处未因访问失败断言论文未录用。

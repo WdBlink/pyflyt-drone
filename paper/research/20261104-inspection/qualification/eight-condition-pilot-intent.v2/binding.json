@@ -1,0 +1,12 @@
+{
+  "role": "prospective version2 source/order/sampler intent; no actual model or physics callbacks",
+  "files": {
+    "dependency-hashes.json": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+    "input-hashes.json": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+    "preparation.json": "6a78f25b6179eb5032f2ec7bb632f53f14a3ca2652229dc70adefe1ab29cea33",
+    "prepared-episode-order.json": "78968fe5a399a0685855b38aa3b6be7adab9bf47f4971b3d2194796d0d3a8da9",
+    "sampler-seeds.json": "d062f65ce5b84d894edf3d3da25e915c9ea990171abadc7d7f8c13f386f5ac44",
+    "source-files.json": "e14f64b02a0cdf0e0a37bc1677711abbc99d7c4cdff95e7fb8136253dda8c317",
+    "source-hashes.json": "0fa9d8dfcd54b855a6500cf6723721fbccde63a528a9f63c235d62a21b5b75c1"
+  }
+}

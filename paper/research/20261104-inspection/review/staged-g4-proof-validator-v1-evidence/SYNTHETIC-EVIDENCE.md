@@ -1,0 +1,1 @@
+All probe subjects, reviews, acceptance records and native rounds are synthetic software fixtures under /tmp. They are not genuine G4 evidence, phase permission, model or physical results. No synthetic owner was copied over the real .paper. The only real task check attempted to read an existing development intention as an acceptance and was rejected.

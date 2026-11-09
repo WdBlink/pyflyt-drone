@@ -1,0 +1,9 @@
+{
+  "role": "one bounded source/script/derived execution profile, no live-clock or performance verdict",
+  "files": {
+    "profile.json": "e0705b210d070cbcc5f1be4b9e3af1af782d81d288d2fd0ac7d4b32c7f29a91a",
+    "profile_inspection_replay_gc.py": "bbbb8b0a8476defb5f70d8e05dece248189ce597159fcaf5f3a7a131fb009948",
+    "result-and-limits.md": "3d8d7570820a6530874628fdb04fbb76d6ea864b9da171fa32dc018148c7c07c",
+    "stdout.log": "4c55bfb45a688e658031583d9cce7bc2474f74be3365289033763a5c86bb277c"
+  }
+}

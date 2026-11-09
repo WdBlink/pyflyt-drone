@@ -1,0 +1,192 @@
+{
+  "design": "design.json",
+  "design_sha256": "3fd0b4c1be631ffd8f8bb538b656930900f0fd6da2aa2bd0f67d772d26c438b3",
+  "started_at": "2026-11-05T17:36:27.553736+00:00",
+  "finished_at": "2026-11-05T20:27:19.847818+00:00",
+  "reported_denominator": 18,
+  "attempted_count": 18,
+  "execution_status": "completed",
+  "outcome": "inconclusive",
+  "runs": [
+    {
+      "case_id": "dev-L1-00",
+      "seed": 0,
+      "condition": "B0",
+      "status": "completed",
+      "value": 0.9970187393526406,
+      "id": "dev-L1-00-B0-0",
+      "raw": "raw/dev-L1-00-B0-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L1-00",
+      "seed": 0,
+      "condition": "B1",
+      "status": "completed",
+      "value": 0.9373935264054514,
+      "id": "dev-L1-00-B1-0",
+      "raw": "raw/dev-L1-00-B1-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L1-00",
+      "seed": 0,
+      "condition": "B2",
+      "status": "completed",
+      "value": 0.803449744463373,
+      "id": "dev-L1-00-B2-0",
+      "raw": "raw/dev-L1-00-B2-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L1-01",
+      "seed": 0,
+      "condition": "B0",
+      "status": "completed",
+      "value": 0.9971381847914963,
+      "id": "dev-L1-01-B0-0",
+      "raw": "raw/dev-L1-01-B0-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L1-01",
+      "seed": 0,
+      "condition": "B1",
+      "status": "completed",
+      "value": 0.9901880621422732,
+      "id": "dev-L1-01-B1-0",
+      "raw": "raw/dev-L1-01-B1-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L1-01",
+      "seed": 0,
+      "condition": "B2",
+      "status": "completed",
+      "value": 0.9754701553556828,
+      "id": "dev-L1-01-B2-0",
+      "raw": "raw/dev-L1-01-B2-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L2-00",
+      "seed": 0,
+      "condition": "B0",
+      "status": "completed",
+      "value": 0.7845597455424045,
+      "id": "dev-L2-00-B0-0",
+      "raw": "raw/dev-L2-00-B0-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L2-00",
+      "seed": 0,
+      "condition": "B1",
+      "status": "completed",
+      "value": 0.5789292595650977,
+      "id": "dev-L2-00-B1-0",
+      "raw": "raw/dev-L2-00-B1-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L2-00",
+      "seed": 0,
+      "condition": "B2",
+      "status": "completed",
+      "value": 0.5582428561233956,
+      "id": "dev-L2-00-B2-0",
+      "raw": "raw/dev-L2-00-B2-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L2-01",
+      "seed": 0,
+      "condition": "B0",
+      "status": "completed",
+      "value": 0.9242649079417422,
+      "id": "dev-L2-01-B0-0",
+      "raw": "raw/dev-L2-01-B0-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L2-01",
+      "seed": 0,
+      "condition": "B1",
+      "status": "completed",
+      "value": 0.7022877164056059,
+      "id": "dev-L2-01-B1-0",
+      "raw": "raw/dev-L2-01-B1-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L2-01",
+      "seed": 0,
+      "condition": "B2",
+      "status": "completed",
+      "value": 0.7086379041861317,
+      "id": "dev-L2-01-B2-0",
+      "raw": "raw/dev-L2-01-B2-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L3-00",
+      "seed": 0,
+      "condition": "B0",
+      "status": "completed",
+      "value": 0.8245752535103837,
+      "id": "dev-L3-00-B0-0",
+      "raw": "raw/dev-L3-00-B0-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L3-00",
+      "seed": 0,
+      "condition": "B1",
+      "status": "completed",
+      "value": 0.65594260176561,
+      "id": "dev-L3-00-B1-0",
+      "raw": "raw/dev-L3-00-B1-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L3-00",
+      "seed": 0,
+      "condition": "B2",
+      "status": "completed",
+      "value": 0.6271768508436419,
+      "id": "dev-L3-00-B2-0",
+      "raw": "raw/dev-L3-00-B2-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L3-01",
+      "seed": 0,
+      "condition": "B0",
+      "status": "completed",
+      "value": 0.9089803504638944,
+      "id": "dev-L3-01-B0-0",
+      "raw": "raw/dev-L3-01-B0-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L3-01",
+      "seed": 0,
+      "condition": "B1",
+      "status": "completed",
+      "value": 0.7308584657197564,
+      "id": "dev-L3-01-B1-0",
+      "raw": "raw/dev-L3-01-B1-0.json",
+      "attempted": true
+    },
+    {
+      "case_id": "dev-L3-01",
+      "seed": 0,
+      "condition": "B2",
+      "status": "completed",
+      "value": 0.7560108237745705,
+      "id": "dev-L3-01-B2-0",
+      "raw": "raw/dev-L3-01-B2-0.json",
+      "attempted": true
+    }
+  ]
+}

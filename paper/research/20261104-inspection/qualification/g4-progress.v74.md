@@ -1,0 +1,7 @@
+# G4 开发继续点 v74
+
+原生round87已记录实际B4-M1延迟和无损容量；active round88用于同一冻结计划的独立G4接受。最后开发排除目录用已安装producer在禁RNG环境中重建。六原manifest、56个case字节工件，32语义及物理配置身份、120环境/程序种子精确等于原已审v2；当前166个私有副本、130个归档的137个私有成员和151个typed plan（103实际来源路径）均精确映射。32位策略采样值作为回放来源分列，不冒充128位环境碰撞域。独立只读核查的附加范围未见遗漏；不声称普查所有历史或临时RNG。目录绑定 `qualification/development-identity-catalog.v1/results.final.v1/binding.json` SHA 0ea1061b7b55f3c73caf4998633159128a5e98678f1c2d49c40f9145c33c0fb6。
+
+正式待审subject `qualification/formal-freeze-final.v1/subject.json` SHA 123fecfb9a283874e6d3064cff4dc702cf86fdfcfa525cb5ede3ce703111bac5；其精确150源/61依赖、21具名证据、3模型及prompt/协议和实际Mac M5 Max/64GiB profile已绑定。source closure SHA 62f4b08de27f72adda42d4fa2b009ec2e36def3b7592e8daf0d1b43dc705d91d；hardware SHA 77ed1284ec7bb97bef0c0c2a79295029839e6c2b9772124a8b4c13a96526b350，fresh free164.840GB，仍大于157.207GB压力形状。协议不含新的模型、API或购买算力，budget={}、原科学义务/分母/选择器保持。实际正式guard仍需真正的祖先和每槽fresh检查。
+
+已交实际独立审查；本文件不授资格。只有对同一subject的独立通过和唯一owner应用真实G4 finding后，才进入main一次性namespace intent、独立数据审查和定序。暂无正式seed、dataset、得分、图表或论文结果。仿真资格不替代实机或领域人工审阅。

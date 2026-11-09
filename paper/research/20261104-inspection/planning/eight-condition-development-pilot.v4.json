@@ -1,0 +1,51 @@
+{
+  "schema": "inspection-eight-condition-development-pilot-intent-v4",
+  "role": "fresh complete development pilot after reviewed runtime integration; not old failed-slot retry, new independent roots, G4 or formal data",
+  "evidence": {
+    "qualification/pilot-source-preparation.v4/binding.json": "59122e64c8dbeb812655ed1792859ca79cd8846f10a8048b91e5365f0c771317",
+    "review/runtime-production-integration-review.v1.md": "bcd6bd0369a1ff1d404c8c90c95541068a1baa49d73b4c5c0d23900ee3af0d75",
+    "review/evidence/runtime-production-integration-v1/bindings.json": "d3aa00cfcf392aac96c65dc1da8cc924fa2395d5e5b134aed1d918c9d7ce72bb",
+    "qualification/runtime-production-smoke.v1/binding.json": "211edd621ae879702d46d165f1d603cb6f37356957fd111e88359b1b9e8e37d2",
+    "review/clock-runtime-M2-L3-actual-review.v1.md": "2f3806255701ecf03894a45acf54165baccf3351141beca883cac53980279f41",
+    "review/evidence/clock-runtime-M2-L3-actual-v1/binding.json": "dbade59ab594437663d7871c480b9ea482d0bf50f9a876a9b1cc28ef35d2a649"
+  },
+  "applied_owner_checkpoint": {
+    "round": 38,
+    "request_sha256": "18809a2e589f4ecae8c35d3fc3f744e66bb43d1ba6918f70e380bdab3b5a884b",
+    "operation_id": "checkpoint-runtime-window-qualified-and-production-adopted-20261106"
+  },
+  "active_round": 39,
+  "source_count": 104,
+  "dependency_count": 61,
+  "input_count": 10,
+  "output": "logs/inspection-eight-condition-pilot.v4",
+  "physical_receipts": "logs/inspection-eight-condition-dev-flights.v4",
+  "stdout": "logs/inspection-eight-condition-pilot.v4.supervisor.stdout",
+  "schedule_seed": 2026110641,
+  "sampler_master_seed": 2026110642,
+  "reservation_prefix": "dev-all8-pilot-v4",
+  "root_count": 6,
+  "actual_episode_denominator": 108,
+  "root_mean_denominator": 48,
+  "classical_episodes": 18,
+  "LLM_episodes": 90,
+  "max_attempts_per_slot": 2,
+  "max_clock_lag_seconds": 0.1,
+  "first_slot": {
+    "order_index": 0,
+    "root_block_index": 0,
+    "case_id": "dev-L1-01",
+    "domain": "ID",
+    "level": 1,
+    "condition": "B4-M2",
+    "repeat_ordinal": 1
+  },
+  "original_classic_selection_sha256": "75f57580f0f5371d91a741fd4f9573e52192d019e9730335123a7ae67897a32e",
+  "runtime": "helper bytes unchanged from independently reviewed engineering candidate; shared physics lifecycle; caffeine idle assertion, four thread limits=1",
+  "old_runs": "v2/v3 remain permanently failed with full failed/unstarted denominator; never reopen old slots, no third attempt",
+  "source_policy": "No edits to consumed production/dependency/input during actual pilot; later staged formal adoption requires delta review and evidence reuse justification",
+  "resource_policy": "same sole native owner reserves/settles each actual local model attempt; unknown held and blocks retry; existing local hardware/models only; budget={} unchanged, no paid APIs/purchased compute",
+  "checkpoint_policy": "checkpoint.request between episodes before any reservation/spawn; never suspend physical worker or live request",
+  "concurrent_host_scope": "existing other host CPU tasks remain; no task concentrated tests or mass inventory/hash operations during actual flight; source final preflight before launch exact",
+  "all_formal_namespaces_still_uninstantiated": true
+}

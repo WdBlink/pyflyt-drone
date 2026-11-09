@@ -1,0 +1,17 @@
+{
+  "role": "unapproved first030helper/proposal; compile and real readonlyprepare pass; tests/caller review not yet run; retained before author type/finalcheck adjustment",
+  "files": [
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-author.v1/continue_pilot.py",
+      "sha256": "4e251139fa1cf8cfda2581909f6d44dbc19e3f6683f2a57b5639aa67969d8192"
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-author.v1/proposal.json",
+      "sha256": "a1b63d66a0c5697a9187850f2cbe5af1ddd8efcd3a0eedd4d2f8ba6b0e8bc3f1"
+    },
+    {
+      "path": "recovery/pilot-v4-cleanup-030.v1/continuation-author.v1/prepare.stdout",
+      "sha256": "5ced5dbd6c5d2d4a8c29dff982c780ec449e4648c1725897c9dc4ba97aace1ea"
+    }
+  ]
+}

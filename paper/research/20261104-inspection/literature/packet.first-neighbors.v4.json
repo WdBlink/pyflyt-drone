@@ -1,0 +1,27 @@
+{
+  "stage": "literature",
+  "catalog": "literature/catalog.first-neighbors.v4.json",
+  "bibliography": "literature/references.first-neighbors.v1.bib",
+  "citation_plan": "literature/citation-plan.first-neighbors.v1.jsonl",
+  "citation_verification": "literature/citation-verification.first-neighbors.v1.json",
+  "artifacts": [
+    "literature/citation-plan.first-neighbors.v1.jsonl",
+    "literature/citation-verification.first-neighbors.v1.json",
+    "literature/references.first-neighbors.v1.bib",
+    "literature/text/aerial-v1.txt",
+    "literature/text/alpha3-v1.txt",
+    "literature/text/esarbench-v1.txt",
+    "literature/text/missionbench-v1.txt",
+    "literature/text/multiuav-plat-v1.txt",
+    "literature/text/physai-v1.txt",
+    "literature/text/retriever-v2.txt",
+    "literature/verification/AERIAL2026.v1.json",
+    "literature/verification/Alpha3Bench2026.v1.json",
+    "literature/verification/ESARBench2026.v1.json",
+    "literature/verification/MissionBench2026.v1.json",
+    "literature/verification/MultiUAVPlat2026.v1.json",
+    "literature/verification/PhysAIBench2026.v1.json",
+    "literature/verification/Retriever2026.v1.json",
+    "literature/catalog.first-neighbors.v4.json"
+  ]
+}

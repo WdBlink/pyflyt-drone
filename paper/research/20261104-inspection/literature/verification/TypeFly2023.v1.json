@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-11-06T15:30:07.640854+00:00",
+  "identity": {
+    "title": "TypeFly: Flying Drones with Large Language Model",
+    "authors": [
+      "Chen, Guojun",
+      "Yu, Xiaojing",
+      "Ling, Neiwen",
+      "Zhong, Lin"
+    ],
+    "year": 2023,
+    "venue": "arXiv preprint",
+    "identifier": "arXiv:2312.14950v2"
+  },
+  "url": "https://arxiv.org/abs/2312.14950v2",
+  "metadata_path": "literature/primary/typefly-v2-metadata.html",
+  "metadata_sha256": "d11694a6cdb92b46309a14114c032c300c5efdb10dd658da9bf4b2c97b96e471",
+  "read_path": "literature/text/typefly-v2.txt",
+  "read_sha256": "58d3b122db52bc481eea90533b8d77b58118e790d284594a66f930fec75ceda5",
+  "primary_html": {
+    "path": "literature/primary/typefly-v2.html",
+    "sha256": "9df13a4cd58d424793c4c99ecab8f99f3ac7e4d4a4ab137b631e89673c28801d"
+  },
+  "first_publication_date": "2023/12/08",
+  "read_extent": "Sections5.1.3,5.2,5.3; targeted primary HTML reading, not code/hardware reproduction.",
+  "acceptance": "Pinned arXiv version only; no conference/journal upgrade or independent reproduction.",
+  "claim": "TypeFly overlaps streamed MiniSpec generation with execution and specifies blocking skill calls. Its time-to-first-action framing is a relevant latency precedent; our continuous inspection delivery contract remains a separate evaluation scope.",
+  "evidence_spans": [
+    {
+      "path": "literature/text/typefly-v2.txt",
+      "quote": "All system skills are blocking"
+    }
+  ],
+  "metadata_components": "family,given come from the primary citation_author comma ordering, not surname guessing.",
+  "version_update_date": "2024/09/26",
+  "naming_note": "ArXiv metadata abstract says ChatFly while versioned HTML body/title says TypeFly; mechanism support is taken from the versioned body, with the same author/arXiv identity."
+}

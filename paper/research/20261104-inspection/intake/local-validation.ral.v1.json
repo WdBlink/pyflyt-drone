@@ -1,0 +1,28 @@
+{
+  "as_of": "2026-11-05",
+  "checks": {
+    "controller_has_no_stale_artifacts": true,
+    "controller_has_no_uncertain_attempts": true,
+    "venue_answer_source_bound": true,
+    "budget_question_pending": true,
+    "eight_unique_sample_pdfs": true,
+    "all_measured_visuals_have_semantic_notes": true,
+    "visual_pages_declared_and_present": true,
+    "new_document_links_resolve": true,
+    "all_original_visual_obligations_retained": true,
+    "original_plan_unchanged": true
+  },
+  "missing_links": [],
+  "measured_visuals": 73,
+  "panel_records": 130,
+  "extra_manual_tables": 6,
+  "status": "pass",
+  "not_scientific_acceptance": true,
+  "not_performed": [
+    "qualification episodes",
+    "pilot",
+    "formal model evaluation",
+    "manuscript writing",
+    "independent manuscript review"
+  ]
+}

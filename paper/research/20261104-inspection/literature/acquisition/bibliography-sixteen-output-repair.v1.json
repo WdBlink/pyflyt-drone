@@ -1,0 +1,100 @@
+{
+  "role": "Bounded explicit-version field repair after actual provided formatter; not runtime/source/policy change",
+  "before": {
+    "path": "literature/references.sixteen.v1.bib",
+    "sha256": "60d2e818dc7c1c8722b05a74b01e237e99f2c1d3b5837a545e2097a6062c770b"
+  },
+  "after": {
+    "path": "literature/references.sixteen.v2.bib",
+    "sha256": "b58d7988c22884a04d0b993e29a811f2586b886c0515c81b11dd5eb76fb00449"
+  },
+  "changes": [
+    {
+      "key": "MultiUAVPlat2026",
+      "field": "eprint",
+      "before": null,
+      "after": "2606.31073v1"
+    },
+    {
+      "key": "MissionBench2026",
+      "field": "eprint",
+      "before": null,
+      "after": "2607.22014v1"
+    },
+    {
+      "key": "ESARBench2026",
+      "field": "eprint",
+      "before": null,
+      "after": "2605.01371v1"
+    },
+    {
+      "key": "Retriever2026",
+      "field": "eprint",
+      "before": null,
+      "after": "2607.17213v2"
+    },
+    {
+      "key": "Alpha3Bench2026",
+      "field": "eprint",
+      "before": null,
+      "after": "2601.03281v1"
+    },
+    {
+      "key": "PhysAIBench2026",
+      "field": "eprint",
+      "before": null,
+      "after": "2609.23695v1"
+    },
+    {
+      "key": "AERIAL2026",
+      "field": "eprint",
+      "before": null,
+      "after": "2610.31029v1"
+    },
+    {
+      "key": "SMART2025",
+      "field": "eprint",
+      "before": null,
+      "after": "2503.04798v3"
+    },
+    {
+      "key": "GRaDNav2025",
+      "field": "eprint",
+      "before": null,
+      "after": "2506.14009v2"
+    },
+    {
+      "key": "PyFlyt2023",
+      "field": "eprint",
+      "before": null,
+      "after": "2304.01305v1"
+    },
+    {
+      "key": "ReAct2022",
+      "field": "eprint",
+      "before": null,
+      "after": "2210.03629v3"
+    },
+    {
+      "key": "TypeFly2023",
+      "field": "eprint",
+      "before": null,
+      "after": "2312.14950v2"
+    },
+    {
+      "key": "CognitiveDrone2025",
+      "field": "eprint",
+      "before": null,
+      "after": "2503.01378v1"
+    },
+    {
+      "key": "RaceVLA2025",
+      "field": "eprint",
+      "before": null,
+      "after": "2503.02572v1"
+    }
+  ],
+  "first_fourteen_fields_exactly_equal_prior_verified_bib": true,
+  "new_two_article_fields_unchanged": true,
+  "reason": "Provided formatter accepts no eprint field. Add only explicit source-pinned14arXiv version identifiers, as prior bounded repair; journal articles have sourced volume/issue/pages/DOI or stableJSTORURL."
+}

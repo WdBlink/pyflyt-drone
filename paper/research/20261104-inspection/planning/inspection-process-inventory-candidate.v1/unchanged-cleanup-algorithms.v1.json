@@ -1,0 +1,13 @@
+{
+  "role": "AST equality excludes locations; native hot read adapter is the only changed existing method",
+  "unchanged": {
+    "_inventory": true,
+    "stop_worker_tree": true,
+    "SubprocessTree.__init__": true,
+    "SubprocessTree.attach": true,
+    "SubprocessTree.wait": true,
+    "SubprocessTree.close": true
+  },
+  "original_sha256": "361ba11b8ea088627e4c0bd832168bb26821297e5d8f54bf6d43c2ba327a9c70",
+  "candidate_sha256": "ade354321d5716b58c7004b5d90ca41a3d40198c771bf7cecf46a618a5f1a34b"
+}

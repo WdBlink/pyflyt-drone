@@ -1,0 +1,420 @@
+{
+  "role": "Report-count unit clarification only; original world/score/SDK/old bindings unchanged",
+  "at": "2026-11-06T21:28:42.336861+00:00",
+  "superseded_interpretation": "The legacy reports_count field is len(world.reports), which counts report audit submissions/revisions, not occupied report slots.",
+  "correct_semantics": "world.reports is ledger.audit. Accepted distinct report_id count equals the final progress ledger.reports count; idempotent revisions do not consume a new slot.",
+  "original_bindings": [
+    {
+      "path": "qualification/pilot-v4-first-root.v1/binding.json",
+      "sha256": "34ea02afc84e4cdff84adcf420c2f10ad9cb06bc39fc4c286ba9b51341d627f0"
+    },
+    {
+      "path": "qualification/pilot-v4-slots-nineteen-twentyone.v1/binding.json",
+      "sha256": "8250e65dff77e6f67e513bcbb7aeece035518c7fb3b36a5d29bf65a641318862"
+    }
+  ],
+  "source_reference": {
+    "path": "envs/inspection/mission.py",
+    "sha256": "715fce4a99325b6d26fbb1e9ffc20896603bfbd4d48396f0513a46f5ad14aec7",
+    "locations": [
+      "public_state report_slots_used",
+      "worker progress len(mission.ledger.reports)",
+      "audit reports=self.ledger.audit"
+    ]
+  },
+  "slots": [
+    {
+      "order_index": 0,
+      "case_id": "dev-L1-01",
+      "condition": "B4-M2",
+      "repeat_ordinal": 1,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-1/attempt-00/flight/world.json",
+      "world_sha256": "46855aecc353790cad6c01e7372dcc002a94761c0cf70550b154659a15336eec",
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "accepted_report_ids": [],
+      "last_report_submission_sim_time": null,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 0
+    },
+    {
+      "order_index": 1,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M2",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-0/attempt-00/flight/world.json",
+      "world_sha256": "55b9adce6dd1f0c73226bc7f1cfe0574b280f300289e6afa00d256e44e25bab9",
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "accepted_report_ids": [],
+      "last_report_submission_sim_time": null,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 0
+    },
+    {
+      "order_index": 2,
+      "case_id": "dev-L1-01",
+      "condition": "B2",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B2-0/attempt-00/flight/world.json",
+      "world_sha256": "80b5d010de51f7cf34316b46afa6e4a4460be31d35c7f5d818283db30d33e04f",
+      "report_tool_audit_entries_count": 4,
+      "accepted_unique_report_ids_count": 4,
+      "accepted_report_ids": [
+        "report-candidate-1-00002",
+        "report-candidate-1-00003",
+        "report-candidate-2-00008",
+        "report-candidate-3-00008"
+      ],
+      "last_report_submission_sim_time": 162.50833333333333,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 4
+    },
+    {
+      "order_index": 3,
+      "case_id": "dev-L1-01",
+      "condition": "B4-M1",
+      "repeat_ordinal": 1,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-1/attempt-00/flight/world.json",
+      "world_sha256": "b575bd507c1f2b680400f8a6cb07ce88c3afa87b0783272f1a8fdef1dcda1c7a",
+      "report_tool_audit_entries_count": 1,
+      "accepted_unique_report_ids_count": 1,
+      "accepted_report_ids": [
+        "rpt-2-00001"
+      ],
+      "last_report_submission_sim_time": 514.7416666666667,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 1
+    },
+    {
+      "order_index": 4,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M2",
+      "repeat_ordinal": 2,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-2/attempt-00/flight/world.json",
+      "world_sha256": "79ad88a145857671ad5ba02107b4734ef0de8f4e09d83b936b6e6c108e13c8cb",
+      "report_tool_audit_entries_count": 2,
+      "accepted_unique_report_ids_count": 2,
+      "accepted_report_ids": [
+        "rep-5-00001",
+        "rep-9"
+      ],
+      "last_report_submission_sim_time": 370.46666666666664,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 2
+    },
+    {
+      "order_index": 5,
+      "case_id": "dev-L1-01",
+      "condition": "B0",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B0-0/attempt-00/flight/world.json",
+      "world_sha256": "6522fb0f77ee74590e32592b1e4b16d351a19dc2bcbe363e088c8c540c150f88",
+      "report_tool_audit_entries_count": 4,
+      "accepted_unique_report_ids_count": 4,
+      "accepted_report_ids": [
+        "report-candidate-1-00002",
+        "report-candidate-1-00004",
+        "report-candidate-2-00001",
+        "report-candidate-3-00001"
+      ],
+      "last_report_submission_sim_time": 100.5,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 4
+    },
+    {
+      "order_index": 6,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M3",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-0/attempt-00/flight/world.json",
+      "world_sha256": "1fe13f40c12a34feab2ab60bda459bef8e9ba40185e7f9cd79f185706d981b7e",
+      "report_tool_audit_entries_count": 25,
+      "accepted_unique_report_ids_count": 10,
+      "accepted_report_ids": [
+        "report-00001",
+        "report-00002",
+        "report-00003",
+        "report-00004",
+        "report-00005",
+        "report-00006",
+        "report-00007",
+        "report-00008",
+        "report-00009",
+        "report-00010"
+      ],
+      "last_report_submission_sim_time": 553.3333333333334,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 10
+    },
+    {
+      "order_index": 7,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M1",
+      "repeat_ordinal": 2,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-2/attempt-00/flight/world.json",
+      "world_sha256": "ea2a9b17a99e9132e0e401626ee5ee6a544971c978870fa4ed9441779437f4f3",
+      "report_tool_audit_entries_count": 3,
+      "accepted_unique_report_ids_count": 3,
+      "accepted_report_ids": [
+        "rep-0-00001",
+        "rep-0-00015",
+        "rep-2-00013"
+      ],
+      "last_report_submission_sim_time": 462.65833333333336,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 3
+    },
+    {
+      "order_index": 8,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M3",
+      "repeat_ordinal": 1,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-1/attempt-00/flight/world.json",
+      "world_sha256": "f5affaf0e9f988d74537fe440d538b5abb62ad2ae0f8927a0f82aad36a0245a8",
+      "report_tool_audit_entries_count": 100,
+      "accepted_unique_report_ids_count": 10,
+      "accepted_report_ids": [
+        "report-1",
+        "report-10",
+        "report-2",
+        "report-3",
+        "report-4",
+        "report-5",
+        "report-6",
+        "report-7",
+        "report-8",
+        "report-9"
+      ],
+      "last_report_submission_sim_time": 459.575,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 10
+    },
+    {
+      "order_index": 9,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M1",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-0/attempt-00/flight/world.json",
+      "world_sha256": "26c847a857818bb0631996d3ceee23c9a314703e7791a6ec3228d94d0d4b12c2",
+      "report_tool_audit_entries_count": 3,
+      "accepted_unique_report_ids_count": 2,
+      "accepted_report_ids": [
+        "rep-001",
+        "rep-002"
+      ],
+      "last_report_submission_sim_time": 444.4,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 2
+    },
+    {
+      "order_index": 10,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M2",
+      "repeat_ordinal": 1,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M2-1/attempt-00/flight/world.json",
+      "world_sha256": "5e69e472fab0a8a7b55d39e2a6010ed21ec9d0b68f1c362fa88be2e07ba426df",
+      "report_tool_audit_entries_count": 1,
+      "accepted_unique_report_ids_count": 1,
+      "accepted_report_ids": [
+        "rep-9-00001"
+      ],
+      "last_report_submission_sim_time": 187.26666666666668,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 1
+    },
+    {
+      "order_index": 11,
+      "case_id": "dev-L1-01",
+      "condition": "B4-M1",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-0/attempt-00/flight/world.json",
+      "world_sha256": "26b5ffc3b0f4d35c65c5e39b501b240fa9de7478da15cbc0d55f04992123afc7",
+      "report_tool_audit_entries_count": 2,
+      "accepted_unique_report_ids_count": 2,
+      "accepted_report_ids": [
+        "rep-2-00001",
+        "rpt-1-00002"
+      ],
+      "last_report_submission_sim_time": 552.2583333333333,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 2
+    },
+    {
+      "order_index": 12,
+      "case_id": "dev-L1-01",
+      "condition": "B1",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/classic/dev-L1-01-B1-0/attempt-00/flight/world.json",
+      "world_sha256": "f2900b620a7c12101d2aa3dd62217bebdb8778fc7227ec600a5e9f08e25b281c",
+      "report_tool_audit_entries_count": 4,
+      "accepted_unique_report_ids_count": 4,
+      "accepted_report_ids": [
+        "report-candidate-1-00002",
+        "report-candidate-2-00001",
+        "report-candidate-2-00009",
+        "report-candidate-3-00001"
+      ],
+      "last_report_submission_sim_time": 229.00833333333333,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 4
+    },
+    {
+      "order_index": 13,
+      "case_id": "dev-L1-01",
+      "condition": "B4-M2",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-0/attempt-00/flight/world.json",
+      "world_sha256": "21c25499bcc78a9616becbc7dac93c1b00c013bcce6de97d7c1cb66cd16e7ae5",
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "accepted_report_ids": [],
+      "last_report_submission_sim_time": null,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 0
+    },
+    {
+      "order_index": 14,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M3",
+      "repeat_ordinal": 2,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M3-2/attempt-00/flight/world.json",
+      "world_sha256": "ee680ed594fcab9c4dedf03c99e25cccecfbf45d53ee1a62694efdd760687f1c",
+      "report_tool_audit_entries_count": 20,
+      "accepted_unique_report_ids_count": 6,
+      "accepted_report_ids": [
+        "report-001",
+        "report-002",
+        "report-003",
+        "report-004",
+        "report-005",
+        "report-006"
+      ],
+      "last_report_submission_sim_time": 528.0666666666667,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 6
+    },
+    {
+      "order_index": 15,
+      "case_id": "dev-L1-01",
+      "condition": "B4-M2",
+      "repeat_ordinal": 2,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M2-2/attempt-00/flight/world.json",
+      "world_sha256": "db007e55ca27442ae2d00668ac167f93afb6c89f7e9f55eceeb47f910bce397a",
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "accepted_report_ids": [],
+      "last_report_submission_sim_time": null,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 0
+    },
+    {
+      "order_index": 16,
+      "case_id": "dev-L1-01",
+      "condition": "B3-M1",
+      "repeat_ordinal": 1,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B3-M1-1/attempt-00/flight/world.json",
+      "world_sha256": "c164c1f6735c9f365e0ddc2b462b7e1a7c4b43f35fbeba445539439dc1971764",
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "accepted_report_ids": [],
+      "last_report_submission_sim_time": null,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 0
+    },
+    {
+      "order_index": 17,
+      "case_id": "dev-L1-01",
+      "condition": "B4-M1",
+      "repeat_ordinal": 2,
+      "legacy_binding": "qualification/pilot-v4-first-root.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L1-01-B4-M1-2/attempt-00/flight/world.json",
+      "world_sha256": "b9df1188e2cf58de040f130b02ae54c960cc404ced95b58d3b869179d336c123",
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "accepted_report_ids": [],
+      "last_report_submission_sim_time": null,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 0
+    },
+    {
+      "order_index": 18,
+      "case_id": "dev-L3-01",
+      "condition": "B4-M1",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-slots-nineteen-twentyone.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M1-0/attempt-00/flight/world.json",
+      "world_sha256": "2875e4b42e72f6e94962beb359ee880b3e9798614a9aa783c6357dcbf446d5e3",
+      "report_tool_audit_entries_count": 1,
+      "accepted_unique_report_ids_count": 1,
+      "accepted_report_ids": [
+        "rpt-0-00001"
+      ],
+      "last_report_submission_sim_time": 432.60833333333335,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 1
+    },
+    {
+      "order_index": 19,
+      "case_id": "dev-L3-01",
+      "condition": "B4-M2",
+      "repeat_ordinal": 0,
+      "legacy_binding": "qualification/pilot-v4-slots-nineteen-twentyone.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B4-M2-0/attempt-00/flight/world.json",
+      "world_sha256": "ffac328da98a09194800ee5c6d110834e92332a8801deb3cbafaa91ededc7a7b",
+      "report_tool_audit_entries_count": 0,
+      "accepted_unique_report_ids_count": 0,
+      "accepted_report_ids": [],
+      "last_report_submission_sim_time": null,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 0
+    },
+    {
+      "order_index": 20,
+      "case_id": "dev-L3-01",
+      "condition": "B3-M3",
+      "repeat_ordinal": 2,
+      "legacy_binding": "qualification/pilot-v4-slots-nineteen-twentyone.v1/binding.json",
+      "world_path": "logs/inspection-eight-condition-dev-flights.v4/dev-L3-01-B3-M3-2/attempt-00/flight/world.json",
+      "world_sha256": "4854029f14190ee6e42d983516d15ae9605f888f0ccc9233f90f46f9db4cc18c",
+      "report_tool_audit_entries_count": 12,
+      "accepted_unique_report_ids_count": 7,
+      "accepted_report_ids": [
+        "report-1",
+        "report-2",
+        "report-3",
+        "report-4",
+        "report-5",
+        "report-6",
+        "report-7"
+      ],
+      "last_report_submission_sim_time": 561.3,
+      "last_progress_sim_time": 600.0,
+      "last_progress_report_slots_used": 7
+    }
+  ],
+  "validation": {
+    "all21_world_bytes_match_existing_bindings": true,
+    "all21_final_progress_unique_counts_match": true,
+    "all_report_submissions_within_original_600s": true
+  },
+  "new_effects": [],
+  "limitations": "No new score computation, physical run or statistical comparison; original frozen scorer and time/provenance validators remain authoritative."
+}

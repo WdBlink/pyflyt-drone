@@ -1,0 +1,21 @@
+# G4 开发继续点 v32
+
+G4仍needs_work。v4开发pilot现15/108个有效callback、0完整root；仍无实际main/holdout namespace、seed/order、dataset、主分析锁或论文结果。原19义务、RA-L、budget={}、600s/144000步、100ms门、两attempt上限、B1原选择、17源grader与global6不变；旧失败与未启动分母保留。
+
+新增order12/13/14分别为同dev-L1-01的B1/repeat0、B4-M2/repeat0、B3-M3/repeat2；均仅attempt00、completed/return0、600s/144000步、0超100ms、physics_runtime.errors=[]。maxlag为0.009932540997397155、0.012547708000056446、0.01463920800233609s，P95为0.002707666000105746、0.003727791330788932、0.004379666333761634s。新增模型资源25calls164407tokens与19calls141919tokens已known；native实际status总806calls5111469tokens，reserved0、unknown/unresolved=[]。cost/host/Codex/capital/energy未计量，不写0费用。
+
+UTC2026-11-06T19:58:05.315922Z已在order15/B4-M2预约/spawn前确认barrier，同一exec4162等候现有checkpoint.request。集中测试、source重建与独立probe均在此后进行；104生产source/61deps/10inputs未改，新代码仍隔离未安装。三槽计划、terminal/run/world/private与settlement SHA及当时stdout/pause/native-status immutable副本见 `qualification/pilot-v4-slots-thirteen-fifteen.v1/binding.json`（47548a64b4495a9d9e05ad24d1236001f6f3925d398ba97355bd30f6189c7903）。十五槽仍未完成该root全部18槽，也不是正式方法比较；普通clock摘要不是完整72000-phase向量。
+
+新增response/resource reader与main/secondary两入口接线，尚未安装或用于真实formal数据。它复用fresh measure返回的causal_request_joins和原闭合文件快照，按decision/submitted/admitted-call身份关联原actor与service响应；不重造原receipt/native/actor验证器，不产生reserve/settle/model/flight effects。valid-flight与全部known attempts用量分列，保留基础设施retry成本但不增repeat/root。经典calls/tokens为0是模型调用事实，money/energy/capital仍None/显式未计量。完整原repeat先在root/method内平均，无额外p或请求级推断。
+
+计时按实际源码分列：service generation+journaling区间、client submit→poll、实际injected wait、三份before-request/before-wait/after-response sim进度。原dispatch_age_sim使用response处理前快照减源sim时间，producer随后复用快照入队，可能早于解码/实际enqueue；原dispatch_age_wall是roundtrip+consume两区间和，不含未采样poll→consume gap，也不是源公开信息的wall年龄。输出与前瞻契约明确此范围，不冒称exact入队/tool接受/job采用。not_started生成时长为None，final/declined的实际wait可为0；deadline后已知模型用量保留，不回改600s质量。
+
+逐episode明细进入main新response ZIP或secondary原diagnostic ZIP；index逐成员绑定，subject显式绑定root usage摘要，原SDK design/raw/value/evidence和原score/world不改。读入使用原SHA与同一buffer，发布前沿用原完整文件/递归目录快照复核。新模块已加入候选REQUIRED_SOURCES，原数学模块、grader与event v5主体未改。
+
+首轮48focused70.77s通过仍遗漏多response。两名独立审查者分别用实际临时IO fixture重现同一阻断：reader将原before snapshot dict覆写为浮点sim进度，第二generated响应在129→19读取时TypeError；2generated和not_started→generated均可触发。原v1源码、输入、trace与request-changes报告保留（wiring report c012a12f23416cb1657a29e1cc1ba8e9e6033512a93b804e7c609c70dfb12587，semantics report c793b8c675d703770573955a2b0c23a770c17bff62f32874fc2398455570b755）。旧48绿灯不能覆盖此缺陷；这些都是软件fixture，不是新flight或真实模型资源。
+
+v2仅改三个局部进度变量名，使before始终保留原snapshot dict，并补两条多response回归。实际全候选522 passed137.58s/exit0、compileall exit0。source/测试重建映射为44source/27tests；七成员freeze SHA8441e871ceb1c2b95602eaa45d1b430a6b0bcb5dceeec03dbb360374c13356e0，整体重建及实际日志/退出证据在 `planning/formal-admission-candidate.v3/response-resource-integration.v1/binding.json`（6c7456781f6dc985b570b5d5d463968ec8fe320b2a8f9a8d16d6fff1c826993d）。该快照制作时最后限定repair reviews尚未由root观测为冻结完成；其后结论由对应报告/binding及本记录另绑。
+
+独立wiring复验以原2call输入仅做PROJECT路径迁移后递归精确复放，正确返回2calls204tokens/2responses，declined→generated、retry/完整repeat与原SHA/unknown/kind/token/缺输入等拒绝边界保留；binding `review/evidence/response-resource-wiring-v2/binding.json` SHA4d322714695e89f66affb4c280511f20e482d2d55159aae1763f386316cdde8c。独立语义复验同样复放自己的原两输入，正确保留call ordinal/原service SHA/None时长与进度，12项必要检查通过，binding `review/evidence/response-resource-semantics-v2/binding.json` SHA09c4608c60fd1ed6720994405dc62ecbd205f8df71e90c4f3cd53f5fbaddaa10；它不以author522代替反例。两独立literal fixture的token数可不同，均不是实际模型资源；未扩为fullSDK/wholegraph/G4/human认证。实际生产四个计时块与原读取范围的源码比对及未采样gap解释按未改v1明确范围沿用。
+
+native仍experiment（16条限定文献已接受）。reader接线的软件范围完成不代表F4/F5实际数据或G4整体完成；所有formal图仍未安装，完整108开发槽、actual clean/20s-delay集成、最终source/model/prompt/generator/split/retry/hardware冻结、容量与完整图预检以及独立G4决定仍待。所有检查/其他R写者结束并记录本轮owner证据后，立即恢复同一pilot order15；G4通过后才进入正式实验、图表与论文写作。仿真/待人类复核、小样本/真实root独立性和未计量总成本边界继续保留。

@@ -1,0 +1,1245 @@
+{
+  "limits": "PDF text captions/page numbers and panel labels are heuristic, not semantic ground truth.",
+  "papers": {
+    "S01": {
+      "figures": [
+        {
+          "caption": "Fig. 1: Salient features of the Aerial Gym Simulator. exteroception-driven autonomous (e.g., depth cameras-based) navigation is concerned. Accordingly, the field of aerial robotics shall greatly benefit",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-F1",
+          "limitations": "",
+          "number": 1,
+          "page": 1,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 2: Core components for the Aerial Gym Simulator include the physics engine (Isaac Gym), Warp and Isaac Gym-based rendering solutions, robot control suite and tools for environment generation and randomization.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-F2",
+          "limitations": "",
+          "number": 2,
+          "page": 3,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 3: Various airframes provided with the Aerial Gym Simulator. Rigid quad- (a) and octa-rotors (b and c), alongside a compliant robot Morphy (d) based on [28] and reconfigurable robot (e) inspired by [5].",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-F3",
+          "limitations": "",
+          "number": 3,
+          "page": 3,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "a",
+              "limitations": "",
+              "question": ""
+            },
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "d",
+              "limitations": "",
+              "question": ""
+            },
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "e",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 4: Sensor measurements using the proposed rendering framework. Fig. 4a shows depth, segmentation, surface-normal and face-index images captured by a simulated camera sensor. Fig. 4b shows the data captured using a standard 3-D LiDAR and a hemispherical dome LiDAR sensor. ameas,t = atrue,t + ba,t + na ;",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-F4",
+          "limitations": "",
+          "number": 4,
+          "page": 5,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "b",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 5: Real-world testing of position-setpoint tracking policies with velocity (left) and acceleration (right) commands.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-F5",
+          "limitations": "",
+          "number": 5,
+          "page": 7,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "s",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 6: Real-world deployment of the depth-image based, map-free navigation policy in a cluttered corridor. The policy provides commands to navigate the environment safely despite sensor noise.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-F6",
+          "limitations": "",
+          "number": 6,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 7: Mean and standard deviation (shaded) of state observations and commanded actions across motor-control policies trained with 5 different seeds. Experiments with identical setpoint sequences are evaluated in both simulation and the real-world.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-F7",
+          "limitations": "",
+          "number": 7,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "tables": [
+        {
+          "caption": "TABLE I: Simulation Throughput (samples per second (SPS) & frames per second (FPS)) and Feature Comparison Instances / Features gym-pybullet-drones [20] L2F [33]\u2217",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-T1",
+          "limitations": "",
+          "number": 1,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE II: Rendering Throughput Comparison",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S01-T2",
+          "limitations": "",
+          "number": 2,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "visual_read": {
+        "method": "rendered_pdf",
+        "notes": "",
+        "pages": []
+      }
+    },
+    "S02": {
+      "figures": [
+        {
+          "caption": "Fig. 1: LiP-LLM generates a dependency graph from a skill list and allocates the actions to multiple robots using linear programming. In the skill list generation phase, it creates a skill list from a predefined skill set to accomplish the given instructions. Next, it analyzes the skills in the skill list for precedence dependencies and generates a dependency graph. Finally, it allocates the tasks to each robot using linear programming and executes them.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S02-F1",
+          "limitations": "",
+          "number": 1,
+          "page": 2,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 2: Experiment environments : (a)Environment A includes two arm robots. (b)Environment B includes two arm robots and one mobile robot. (c)Environment C includes three arm robots (two in the living room and one in the kitchen) and two mobile robots.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S02-F2",
+          "limitations": "",
+          "number": 2,
+          "page": 5,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "a",
+              "limitations": "",
+              "question": ""
+            },
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "b",
+              "limitations": "",
+              "question": ""
+            },
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "c",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "tables": [
+        {
+          "caption": "TABLE I. L ANGUAGE I NSTRUCTION \u2019G ROUP NAME \u2019 REPRESENTS THE INSTRUCTION GROUP. \u2019D ETAIL\u2019 PROVIDES DETAILS ABOUT EACH INSTRUCTION GROUP. \u2019E XAMPLE \u2019 SHOWS EXAMPLE OF THE INSTRUCTIONS . \u2019T RIAL\u2019 IS THE NUMBER OF INSTRUCTIONS IN EACH GROUP.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S02-T1",
+          "limitations": "",
+          "number": 1,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE II.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S02-T2",
+          "limitations": "",
+          "number": 2,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE III.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S02-T3",
+          "limitations": "",
+          "number": 3,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE IV.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S02-T4",
+          "limitations": "",
+          "number": 4,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE V.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S02-T5",
+          "limitations": "",
+          "number": 5,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "visual_read": {
+        "method": "rendered_pdf",
+        "notes": "",
+        "pages": []
+      }
+    },
+    "S03": {
+      "figures": [
+        {
+          "caption": "Fig. 1: A sequence of images, arranged from left to right and top to bottom, depicts the task \u201cFirst, put a set of keychains on the armchair. Retrieve a pencil and put it on the side table. Move the phone and the bat to the bed in any order\u201d, objects and their trajectories are marked with different colors",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-F1",
+          "limitations": "",
+          "number": 1,
+          "page": 1,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 2: Overview of the framework N L 2H LTL 2P LAN. The non-leaf nodes in the Hierarchical Task Tree (see Section IV-A), the language descriptions of subtasks, and the flat specifications are color-coded to indicate one-to-one correspondence. Summary snippets of the prompts are provided, with more information accessible on the project page nl2hltl2plan.github.io.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-F2",
+          "limitations": "",
+          "number": 2,
+          "page": 2,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 3: Comparison of pipelines from natural language to plans between S MART-L LM and N L 2H LTL 2P LAN.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-F3",
+          "limitations": "",
+          "number": 3,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 4: Comparative snapshots between N L 2H LTL 2P LAN and an LLM for task 6. N L 2H LTL 2P LAN generates an optimal trajectory, whereas the LLM follows the sequence in which the fruits are mentioned in the instructions.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-F4",
+          "limitations": "",
+          "number": 4,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 5: Four robot arms in straight line or square configurations, where symbols E, F and G represent source locations and H, I and J denote target locations.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-F5",
+          "limitations": "",
+          "number": 5,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 6: Snapshots depict four arms performing real-world tasks of picking and placing objects via handover. The instruction given is, \u201cPlease move the blue, green, and multi-colored blocks to the two opposite boxes, place the colored ones after the green ones.\u201d Target areas are colored in magenta. The",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-F6",
+          "limitations": "",
+          "number": 6,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "tables": [
+        {
+          "caption": "TABLE I: Performance comparison. The success rate column first presents the overall success rate, with the success rates for conversion and planning in parentheses.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-T1",
+          "limitations": "",
+          "number": 1,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE II: Statistical results from tabletop experiments. Success rate (%)",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-T2",
+          "limitations": "",
+          "number": 2,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE III: Statistical results for multi-robot handover. The first five tasks involve scenarios where four arms are arranged in a square formation, while the last three tasks involve scenarios where the four arms are aligned in a straight line.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-T3",
+          "limitations": "",
+          "number": 3,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE IV: Statistics of failure cases. The results derive from scenarios in Sections V-A and V-C, encompassing 208 task descriptions altogether. The rate is determined across the total instances in the HTT. An HTT comprising n non-leaf nodes and m leaf nodes accounts for m instances in action",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S03-T4",
+          "limitations": "",
+          "number": 4,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "visual_read": {
+        "method": "rendered_pdf",
+        "notes": "",
+        "pages": []
+      }
+    },
+    "S04": {
+      "figures": [
+        {
+          "caption": "Fig. 1. (a) A simulation environment in SMART. (b) The original 2-D grid map from the MovingAI benchmark. (c, d) Robot models used in the environment. (e) A 3D view of the environment.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S04-F1",
+          "limitations": "",
+          "number": 1,
+          "page": 1,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "e",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 2. (a) MAPF problem. (b) Associated MAPF plan. (c) ADG from the MAPF plan. Green ovals are actions, with the first element as the reference time from the plan, the second as the action type (e.g., rotation or forward movement), and the last two as start and goal locations. Horizontal edges are",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S04-F2",
+          "limitations": "",
+          "number": 2,
+          "page": 2,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "c",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 3. System overview of SMART.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S04-F3",
+          "limitations": "",
+          "number": 3,
+          "page": 4,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 4. (a) Cycle in the ADG causing all robots to be stalled. (b) Adding safe stops between vertices to make the ADG acyclic. Robot diameter must be at most half the cell size to prevent collisions at safe stops between vertices.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S04-F4",
+          "limitations": "",
+          "number": 4,
+          "page": 4,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "b",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 5. The SMART web interface visualizing a multi-robot simulation on a grid map. In the viewport, users interact with individual robots to inspect paths and inter-robot constraints. On the side panel, users can configure the environment, robot kinematic limits, control playback, and see execution",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S04-F5",
+          "limitations": "",
+          "number": 5,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 6. Simulation environments. (a) empty (b) maze (c) random (d) game (e) warehouse (f) sortation-center.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S04-F6",
+          "limitations": "",
+          "number": 6,
+          "page": 6,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "e",
+              "limitations": "",
+              "question": ""
+            },
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "f",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 7. Simulation speed in all environments.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S04-F7",
+          "limitations": "",
+          "number": 7,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 8. (a) Experimental setup in Isaac Sim. (b) Experimental setup with real robots.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S04-F8",
+          "limitations": "",
+          "number": 8,
+          "page": 7,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "b",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "tables": [],
+      "visual_read": {
+        "method": "rendered_pdf",
+        "notes": "",
+        "pages": []
+      }
+    },
+    "S05": {
+      "figures": [
+        {
+          "caption": "Fig. 1: Our approach was implemented on Ryze Tello drones in a real-world urban monitoring scenario. We use Aruco tags as the targets to be discovered. Our approach successfully plans collision-free paths online for maximizing the number",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-F1",
+          "limitations": "",
+          "number": 1,
+          "page": 1,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 2: Overview of our deep reinforcement learning approach for the MRIPP problem. At each time-step, our approach samples collision-free candidate actions in the robot\u2019s local region. Our coordination graph associates each candidate action with a utility value, the uncertainty of the utility value, and the exploration features modeling the regions visited by other robots. Our policy network relies on these features to output the robot\u2019s state value and the next action to execute, leading",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-F2",
+          "limitations": "",
+          "number": 2,
+          "page": 3,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 3: Comparison of our approach with other baselines in an urban environment. Our performance metric is the percentage of targets discovered during the episode. The solid lines represent the mean values across 250 trials, while",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-F3",
+          "limitations": "",
+          "number": 3,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 4: Our approach outperforms other baselines in terms of percentage discovered targets in a 3\u00d7, 8\u00d7, and 16\u00d7 larger environments. The x-axis indicates the number of robots in the multi-robot system during the test. The solid lines",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-F4",
+          "limitations": "",
+          "number": 4,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 5: Our approach implemented in an urban simulation environment. We place 3 UAVs and 161 targets in the environment and trace each UAV\u2019s path with colored tracelines. We compare the performance of our approach with a random planner that reflects the performance lower bound. We do not implement other baselines considered in Section VB as modifying these approaches for avoiding inter-robot",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-F5",
+          "limitations": "",
+          "number": 5,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "tables": [
+        {
+          "caption": "TABLE I: Results of our approach compared with other learning and non-learning baselines in an urban monitoring scenario.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-T1",
+          "limitations": "",
+          "number": 1,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE II: Ablation study for modeling of explored regions.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-T2",
+          "limitations": "",
+          "number": 2,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE III: Ablation study for reward structure.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-T3",
+          "limitations": "",
+          "number": 3,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE IV: Comparison of our deep reinforcement learningbased approach against baselines in an urban environment.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S05-T4",
+          "limitations": "",
+          "number": 4,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "visual_read": {
+        "method": "rendered_pdf",
+        "notes": "",
+        "pages": []
+      }
+    },
+    "S06": {
+      "figures": [
+        {
+          "caption": "Fig. 1. Cooperative search and rescue in various environments. Vectors represent robots\u2019 abilities and rescue tasks\u2019 requirements, with each element indicating possession of a unique skill from relaying, sensing, bandaging, or obstacle removal, respectively. Schedules of robots are shown as arrows.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S06-F1",
+          "limitations": "",
+          "number": 1,
+          "page": 1,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 2. Network structure used in this work. It follows an encoder-decoder structure where the status of agents and tasks such as trait vectors and trait requirements are \ufb01rst processed by a group of agent encoder, task encoder and cross encoder to build context and generate glimpses of the whole system. These features are then used by the decoder to output a policy (i.e., a probability distribution over all tasks).",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S06-F2",
+          "limitations": "",
+          "number": 2,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 3. Makespan of the current solution throughout CTAS-D\u2019s optimization process, compared to our \ufb01nal solutions, in MA-AT scenarios with 25 agents (5 species) and 20 tasks (left) and 30 tasks (right). Our approach quickly yields high-performance solutions (see legend), which remain drastically better than",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S06-F3",
+          "limitations": "",
+          "number": 3,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 4. Aerial robotic validation on a cooperative search mission, where agents of different species (shown as \ufb02ying at different altitudes) dynamically form/disband coalitions to cooperatively search speci\ufb01c locations (tasks).",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S06-F4",
+          "limitations": "",
+          "number": 4,
+          "page": 8,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "tables": [],
+      "visual_read": {
+        "method": "rendered_pdf",
+        "notes": "",
+        "pages": []
+      }
+    },
+    "S07": {
+      "figures": [
+        {
+          "caption": "Fig. 1: Setup of multi-UAV pursuit-evasion. network that integrates predictive information about the evader\u2019s movements into the RL policy inputs, improving the ability capture, distinguishing this from search strategies where the to cooperatively capture the evader with partial observation. target is passive [28]. Traditional research in this area can be",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-F1",
+          "limitations": "",
+          "number": 1,
+          "page": 2,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 2: Pipeline of our method. We begin by calibrating the parameters of the quadrotor dynamics model through system identification. Next, we introduce an Adaptive Environment Generator to automatically generate tasks for policy training and employ an Evader Prediction-Enhanced Network for cooperative capture under partial observations. Finally, with two-stage reward refinement, the learned policy is directly transferred to real quadrotors in a zero-shot manner.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-F2",
+          "limitations": "",
+          "number": 2,
+          "page": 3,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 3: Attention-based observation encoder.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-F3",
+          "limitations": "",
+          "number": 3,
+          "page": 4,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 4: Design of the Adaptive Environment Generator.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-F4",
+          "limitations": "",
+          "number": 4,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 5: Illustration of four test scenarios. the first-stage checkpoint. This ensures high task success while improving action smoothness, with the smoothness reward coefficient set to 2.0.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-F5",
+          "limitations": "",
+          "number": 5,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 6: Results of all methods in a obstacle-free scenario. Fig. 6, baselines exhibit a sharp decline in capture rate as the capture radius decreases, underscoring the task\u2019s difficulty. A \u2022 APF [13]: APF guides pursuers to a target position by",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-F6",
+          "limitations": "",
+          "number": 6,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 7: Demonstration of the pursuit strategies.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-F7",
+          "limitations": "",
+          "number": 7,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 8: Ablation studies. (a) Performance of OPEN and baselines on training tasks. (b) Policy generalization across evader speeds in the Passage scenario.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-F8",
+          "limitations": "",
+          "number": 8,
+          "page": 7,
+          "panels": [
+            {
+              "claim": "",
+              "design_takeaway": "",
+              "evidence": "",
+              "label": "b",
+              "limitations": "",
+              "question": ""
+            }
+          ],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "tables": [
+        {
+          "caption": "TABLE I: Results of all methods in test scenarios. Our approach significantly outperforms all baselines in test scenarios. 1.0",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-T1",
+          "limitations": "",
+          "number": 1,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE II: Prediction errors of our method in four test scenarios. Network (EPN) and Adaptive Environment Generator (AEG) modules. The variant \u201cMAPPO + EPN\u201d incorporates the",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-T2",
+          "limitations": "",
+          "number": 2,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE III: Comparison of OPEN and variants in OOD scenarios.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-T3",
+          "limitations": "",
+          "number": 3,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE IV: Capture steps of all methods in four test scenarios. \"/\" notes that the One-stage fails to generate effective pursuit strategies in the simulation and we do not conduct experiments in the real-world.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S07-T4",
+          "limitations": "",
+          "number": 4,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "visual_read": {
+        "method": "rendered_pdf",
+        "notes": "",
+        "pages": []
+      }
+    },
+    "S08": {
+      "figures": [
+        {
+          "caption": "Fig. 1: Our drone flight VLA model architecture.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-F1",
+          "limitations": "",
+          "number": 1,
+          "page": 1,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 2: Example trajectories of untrained long horizon tasks. The instructions are \u201cGO THROUGH gate then STOP over CART\u201d (left) and \u201cFLY past the RIGHT side of the gate then STOP over MONITOR\u201d (right).",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-F2",
+          "limitations": "",
+          "number": 2,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 3: Comparison of imperfect (left) and high quality (right) 3DGS maps\u2019 rendering effect.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-F3",
+          "limitations": "",
+          "number": 3,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 4: Demonstration of multi-environment adaptation in real-world experiments using video frame overlay visualization. The top row shows the drone flying to the left of, through, above, and to the right of the gate in the middle-gate environment. The bottom row shows the drone executing the same directional tasks in the left-gate environment. Red arrowed curves illustrate the approximate flight trajectories. The learned policy demonstrates robust adaptation to varying environments, adapting to",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-F4",
+          "limitations": "",
+          "number": 4,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 5: Experts\u2019 usage intensity when executing the same task (\u201cGO THROUGH gate\u201d) at different surrounding environments (top-left gate, bottom-middle gate).",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-F5",
+          "limitations": "",
+          "number": 5,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 6: Task-switching with instruction change at step 100. Left: drone flying past the gate. Right: cosine similarity between text and visual embeddings, showing VLM regrounding.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-F6",
+          "limitations": "",
+          "number": 6,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "Fig. 7: Runtime profiling of real-time inference on NVIDIA Jetson Orin Nano.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-F7",
+          "limitations": "",
+          "number": 7,
+          "page": 8,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "tables": [
+        {
+          "caption": "TABLE I: Reward terms and weights. Early termination occurs if (i) height > 3m, (ii) linear velocity > 20 m/s, or (iii) the drone is out of bounds by > 3m (xo.b. , yo.b. \u2265 3). Here, q0 is the initial quaternion, htarget the target/hover height, y\u0302yaw the",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-T1",
+          "limitations": "",
+          "number": 1,
+          "page": 4,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE II: Simulation results of multi task generalization experiment. For 8 trained tasks and 4 untrained tasks, the evaluation is conducted on 6 trials for each task, with the average rewards and success rates (SR) reported. \u201cProposed,",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-T2",
+          "limitations": "",
+          "number": 2,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE III: Real hardware experiment results of multi-task generalization experiment. For 8 trained tasks and 4 untrained tasks, the evaluation is conducted on 3 trials for each task, with the success rates (SR) reported. \u201cProposed, LR\u201d denotes",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-T3",
+          "limitations": "",
+          "number": 3,
+          "page": 5,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE IV: Simulation results of the multi-environment adaptation experiment are presented. For each of the 4 tasks in the 2 different surrounding environments, evaluation is conducted over 6 trials per task. The reported metrics include the average evaluation rewards and success rates.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-T4",
+          "limitations": "",
+          "number": 4,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE V: Real hardware experiment results of the multienvironment adaptation experiment. For each of the 4 tasks across 2 different surrounding environments, evaluation is performed over 3 trials per task, with the success rates reported.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-T5",
+          "limitations": "",
+          "number": 5,
+          "page": 6,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE VI: MoE scalability experiment results in both simulation and real hardware. Each MoE policy network uses a different number of experts (2, 4, or 8). Simulation protocols follow Table IV, while real-robot protocols follow Table V.",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-T6",
+          "limitations": "",
+          "number": 6,
+          "page": 7,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        },
+        {
+          "caption": "TABLE VII: High level natural language instructions table for drone flight VLA tasks in Section III-A. Stage #1",
+          "claim": "",
+          "design_takeaway": "",
+          "evidence": "",
+          "id": "S08-T7",
+          "limitations": "",
+          "number": 7,
+          "page": 8,
+          "panels": [],
+          "placement": "",
+          "question": "",
+          "type": ""
+        }
+      ],
+      "visual_read": {
+        "method": "rendered_pdf",
+        "notes": "",
+        "pages": []
+      }
+    }
+  },
+  "status": "requires_actual_rendered_page_reading_and_semantic_completion",
+  "version": 1
+}

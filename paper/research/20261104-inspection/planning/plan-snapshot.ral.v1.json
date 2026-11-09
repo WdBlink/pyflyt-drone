@@ -1,0 +1,147 @@
+{
+  "plan_path": "paper/research/20261104-inspection/planning/figure-table-plan.ral.v1.json",
+  "sha256": "553c47c76cd9d8a9c1229db7f63a582295ab1e261b5a0f9572af33fc57aa0930",
+  "captured_at": "2026-11-05T18:39:58+00:00",
+  "items": [
+    {
+      "id": "F1",
+      "kind": "figure",
+      "type": "method_overview",
+      "title": "权限与持续执行架构",
+      "question": "哪些信息、控制和裁判由各层掌握？",
+      "claim": "设计命题：Actor只使用合法因果信息，共享低层隔离任务编排。",
+      "data": "版本化工具/权限协议与合格控制证据",
+      "section": "Benchmark",
+      "priority": "must",
+      "source_plan_id": "Fig. 1"
+    },
+    {
+      "id": "F2",
+      "kind": "figure",
+      "type": "dataset_example",
+      "title": "参考episode时间线",
+      "question": "真实任务变化怎样经过观测、job和报告形成后果？",
+      "claim": "待参考episode验证：时戳与job状态构成完整因果链。",
+      "data": "TODO: 合格非LLM参考episode原始trace，示意与实测分标",
+      "section": "Benchmark",
+      "priority": "must",
+      "source_plan_id": "Fig. 2"
+    },
+    {
+      "id": "F3",
+      "kind": "figure",
+      "type": "quantitative_results",
+      "title": "主质量与安全分量",
+      "question": "ID/OOD各等级下方法怎样权衡交付与安全？",
+      "claim": "待检验：完整分母下的Y/Q与C/S/D/H/E存在可估计差异。",
+      "data": "TODO: 八配置完整root配对原始结果、区间及分量",
+      "section": "Results",
+      "priority": "must",
+      "source_plan_id": "Fig. 3"
+    },
+    {
+      "id": "F4",
+      "kind": "figure",
+      "type": "analysis_plot",
+      "title": "事件与交接",
+      "question": "事件改派何时真实生效，交付损失如何变化？",
+      "claim": "待检验H1/H2：同模型编排、确认与记忆影响事件损失。",
+      "data": "TODO: 事件兄弟trace、统一需求日历、删失标记",
+      "section": "Results",
+      "priority": "must",
+      "source_plan_id": "Fig. 4"
+    },
+    {
+      "id": "F5",
+      "kind": "figure",
+      "type": "analysis_plot",
+      "title": "时延—质量—成本",
+      "question": "实际与注入时延分别如何改变及时交付？",
+      "claim": "待检验H3：持续飞行下推理/链路等待影响有效动态格。",
+      "data": "TODO: 实际延迟/费用receipt与受控注入对照",
+      "section": "Results",
+      "priority": "must",
+      "source_plan_id": "Fig. 5"
+    },
+    {
+      "id": "F6",
+      "kind": "figure",
+      "type": "failure_case",
+      "title": "代表失败因果链",
+      "question": "哪些合法包、job行为导致任务损失？",
+      "claim": "待trace验证：失败原因可与观测、执行和裁判后果对应。",
+      "data": "TODO: 两类预声明选择规则下的实际失败trace",
+      "section": "Results",
+      "priority": "must",
+      "source_plan_id": "Fig. 6"
+    },
+    {
+      "id": "T1",
+      "kind": "table",
+      "type": "comparison_related_work",
+      "title": "机制近邻矩阵",
+      "question": "与既有UAV任务和持续执行评测差别在哪？",
+      "claim": "有据机制差别与未知格决定贡献边界。",
+      "data": "主文/代码机制定位，包含SMART与GRaD-Nav++边界",
+      "section": "Related Work",
+      "priority": "must",
+      "source_plan_id": "Table 1"
+    },
+    {
+      "id": "T2",
+      "kind": "table",
+      "type": "dataset_statistics",
+      "title": "生成器与资格",
+      "question": "哪些参数和控制/感知/时间条件已被冻结？",
+      "claim": "待资格证据：仅合格包线与dev冻结参数进入test。",
+      "data": "TODO: G1–G4资格记录、split manifest与阈值版本",
+      "section": "Benchmark",
+      "priority": "must",
+      "source_plan_id": "Table 2"
+    },
+    {
+      "id": "T3",
+      "kind": "table",
+      "type": "main_results",
+      "title": "主基线与完整结果",
+      "question": "强经典、统一ReAct和同模型编排的完整成绩是什么？",
+      "claim": "待检验：不预设LLM优胜，C/S/D/Q/H/E/Y/SR及成本同时可见。",
+      "data": "TODO: 完整root×repeat×condition分母、ID/OOD和等级分层",
+      "section": "Results",
+      "priority": "must",
+      "source_plan_id": "Table 3"
+    },
+    {
+      "id": "T4",
+      "kind": "table",
+      "type": "ablation",
+      "title": "消融与失败类型",
+      "question": "移除单一机制会怎样，失败是否改变结论？",
+      "claim": "待检验：事件、去重记忆、递进确认分别解释机制差异。",
+      "data": "TODO: 预选L3 roots三项消融与失败归因",
+      "section": "Results",
+      "priority": "must",
+      "source_plan_id": "Table 4"
+    }
+  ],
+  "pending_visuals": [],
+  "original_promise_set": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+  ],
+  "plan_change_log": [
+    {
+      "date": "2026-11-05",
+      "change": "用户已选择RA-L；保留原6图4表的科学义务，按8页总上限组织；不新增宣传性teaser或没有结果的图。",
+      "reason": "官方规则和实际阅读约束；真实可读排版仍须在写稿时验证。"
+    }
+  ]
+}

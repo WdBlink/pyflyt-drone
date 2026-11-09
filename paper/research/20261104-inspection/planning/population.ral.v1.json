@@ -1,0 +1,39 @@
+{
+  "schema": "inspection-prospective-population-v1",
+  "role": "frozen prospective distributions; no test draws or empirical feasibility claim",
+  "unit": "independent joint draw of ROI/object layout/motion/event calendar/noise streams; shared simulator and base assets are fixed, not independent terrains or real road graphs",
+  "rng": {
+    "algorithm": "NumPy1.26.4 PCG64 with SeedSequence",
+    "master": "fresh128bit secrets for each dev-extension/main/holdout namespace, persisted before generation; roots spawn independent sequences; geometry/entity/event/wind/sensor separate child streams",
+    "lineage": "no actual root or entity configuration is derived by perturbing an actual dev/main/holdout instance; event siblings and intervention repeats retain original lineage and sensor noise seed",
+    "collision_guard": "all root semantic digests and private128bit root seeds unique across namespaces; duplicates cause a finite pre-score generation error, never automatic new policy run"
+  },
+  "ID": {
+    "roi": "reference9vertex template envs/inspection/scenario.py ROI; sx,sy independent U[.93,.99], rotation U[-.025,.025]rad, per-vertex x/y jitter U[-4,4]m; reject only by fixed geometric predicates",
+    "static_targets_per_class": "independent discrete uniform {1,2} for each of3 target classes",
+    "static_origins": "x U[-240,240]m; y uniformly chosen from{-300,-100,100,300} plusU[-45,45]m; every static/static distance>=45m",
+    "normal_count": "discrete uniform{4,5,6,7}; each coordinate U[-330,330]m, same static separation",
+    "dynamic_count": "L1 zero; L2/L3 discrete uniform{2,3}, distinct selected survey stripe indices",
+    "dynamic_motion": "origin xU[-110,110]m and stripe y±15m; kth appearance discrete uniform integers110+55k..134+55k; speedU[1.1,1.6]m/s; headingU[-.12,.12]rad; radiusU[60,85]m; bend0 in analytic CaseEntity.position",
+    "events_L3": "priority integer160..205s; distinct random link/camera/retire drones; link startinteger200..245 durationinteger20..35s; camera startinteger290..320 durationinteger30..45s; retirementinteger350..385s; otherlevels no events"
+  },
+  "OOD": {
+    "roi": "new radial family,9 ordered angles2*pi*k/9 + independentlyU[-.03,.03]rad + commonU[-.15,.15]rad; independent radiusU[385,398]m; centered origin; area>=400000m2 and coordinatesabs<=400m; no affine transformation of an actual root",
+    "static_targets_and_normals": "same count distributions; target origins independent uniform[-280,280]^2m, normal origins uniform[-330,330]^2m; polygon/45m guards; no ID stripe distribution",
+    "dynamic_count": "same asID; appearance windows same",
+    "dynamic_motion": "closed curved trajectories: speedU[1.1,1.6], radiusU[60,85], headingU[-pi,pi], bend1; draw circle centeruniform[-200,200]^2 and set origin=center-rotation(heading)*(0,radius); same analytic formula and full600s containment guards",
+    "events_L3": "priority integer160..205s; distinct random link/camera/retire drones; link startinteger280..300 durationinteger30..40s; camera startinteger285..305 durationinteger30..45s; retirementinteger350..385s, so overlapping health/link regime is possible; L2 noevents",
+    "shift_scope": "new geometry and motion family plus changed event overlap; same sensor noise, grading thresholds, 4aircraft and qualified wind envelope; no claim about real map or terrain OOD"
+  },
+  "shared": {
+    "wind": "angleU[-pi,pi]rad, magnitudeU[0,2]m/s, fixed perroot",
+    "report_budget": 10,
+    "physics": "same qualified core240Hz/120Hz,17m/s profile and actual hard constraints",
+    "sensor": "same qualified mission/protocol immutable source closure; no call-count-dependent noise, shared root/time/sensor random channels",
+    "trajectory_guard": "complete motion from appearance through600: polygon containment and building2m margin, groundproxy3m and report-identity45m pair separation certified by analytic speed bound on a601sample grid; pair speed bound uses |speed|*max(1,abs(bend)); all static/static>=45m; no policy outcomes in acceptance",
+    "capacity_guard": "with fixedS>=.6 andD>=.5 needed perfect static+dynamic reports<=10; necessary bound only, no SRsuccess guarantee",
+    "draw_limit": "at most1000 whole-root geometric candidates and1000 inner placements perentity; every rejection reason/candidate index retained; exhaustion blocks the namespace, no silent counts reduction/replacement based on method result",
+    "population": "the prospective distribution is the above joint draws conditional only on listed geometric/capacity predicates, with finite exhaustion failure; not an unconstrained geographical population"
+  },
+  "development_validation": "BeforeG4 implement this exact generator and test ID and OOD families on new development-only namespaces (no actual main/holdout seeds/instances). Currentdev-cases.v2 are retained historicalIDdevelopment and are not relabeled as identity45m-qualified. Any failing feasibility or ambiguity guard blocksG4; do not tune ranges on main results or silently relax45m. Changing these distributions requires owner-governed explicit design revision, not a G4manifest substitution."
+}

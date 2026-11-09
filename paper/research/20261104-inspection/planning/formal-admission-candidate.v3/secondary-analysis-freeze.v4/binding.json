@@ -1,0 +1,49 @@
+{
+  "role": "Event adoption audit uniqueness, camera grid and native identity repairs; uninstalled subject",
+  "at": "2026-11-06T19:13:34.100235+00:00",
+  "baseline": {
+    "path": "secondary-analysis-freeze.v3/binding.json",
+    "sha256": "0d1fadf64cd4a02d6fc7c0d80ebbca015fbd7924646aa13a9cecf096f16e934a"
+  },
+  "members": {
+    "source/eval/analyze_inspection_formal_secondary.py": {
+      "sha256": "3756da21c9d338d415dcff4034121e81c736a6dc3966d83e4d5661d6ddde54d6",
+      "bytes": 23386
+    },
+    "source/eval/inspection_event_endpoints.py": {
+      "sha256": "ea5e207c720060c195ab603cc7dec9049b61e2058eb0b2a43366e4c377e0a949",
+      "bytes": 31248
+    },
+    "source/eval/inspection_formal_admission.py": {
+      "sha256": "508026b4d3ac69f5bd7de8cfc7e53f3343dca88e64a4cfc79c00335104f37c20",
+      "bytes": 18806
+    },
+    "source/eval/inspection_intervention_statistics.py": {
+      "sha256": "b26803c5ed4ee82927703660b8b63c949963f8aa6f60503a820487905bc5b3ce",
+      "bytes": 7490
+    },
+    "tests/test_formal_secondary_analysis.py": {
+      "sha256": "bc31fec84d014b733b89c16e12171dbbf93339f62120b4fed54bd0192c75f68c",
+      "bytes": 14658
+    },
+    "tests/test_event_endpoints.py": {
+      "sha256": "d321f1d65e0d7f7b44dd9bc669ca8e788febd9fd0f8fc41c2308ccdc820e02e8",
+      "bytes": 10878
+    },
+    "tests/test_formal_event_endpoints.py": {
+      "sha256": "4a05d4b3374b20a682050f035d086761c4cae9f75fe749fc8a9ea95fb130fd99",
+      "bytes": 16961
+    },
+    "tests/test_intervention_statistics.py": {
+      "sha256": "278f5feba0b660b5ccf4a83b7e2f49292f30231077ab3c3b5b6c9ca9ec076395",
+      "bytes": 4593
+    }
+  },
+  "protocol": {
+    "path": "planning/secondary-analysis-consumer.v4.md",
+    "sha256": "f4be91e78f692698fda07373e7e6d0a693d2dd17f2b0f80c3d57d1f91830aa72"
+  },
+  "scope": "Same locked main comparator216/36 slots, exact complete SDK/physical closed bytes, descriptive scalar/common-calendar plus dual-path adoption and original-window information/recovery records. ZIP metadata/detail layout and explicit NA/censor/trace-gap. Required-source additions; pure numeric body unchanged.",
+  "pending": "All new connector/event tests and independent implementation review; response/resource diagnostics not yet wired. No G4/formal admission or actual namespace/seed/order/data effects.",
+  "verification": "v3 whole490passed132.95s but independent frozenv1 probes found duplicatecommit, off2Hz local frame andFalse==0 identity P2. v4 explicitly checks global commit serial uniqueness, exact2Hz local sample grid, nativeinteger drone/version/card/handoff identities and same-type copied scalar params/time; adds retained counterexamples plus handoff schema controls. Source consumer/REQ/purestats unchanged. Final tests and independent repair review pending."
+}

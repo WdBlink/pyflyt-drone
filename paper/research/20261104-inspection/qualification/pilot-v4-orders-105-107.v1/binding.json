@@ -1,0 +1,818 @@
+{
+  "role": "actual original v4 development batch; no new statistical replication or formal qualification",
+  "previous_pause": {
+    "role": "between episodes; no request or flight started for this slot",
+    "order_index": 105,
+    "case_id": "dev-L2-01",
+    "condition": "B4-M2",
+    "at": "2026-11-07T16:19:19.643903+00:00"
+  },
+  "exit_receipt": {
+    "role": "actual unified exec supervisor exit",
+    "session_id": 46816,
+    "exit_code": 0,
+    "chunk_id": "c4a37b",
+    "observed_at_utc": "2026-11-07 16:52:39 UTC"
+  },
+  "completed_callbacks": 108,
+  "denominator": 108,
+  "slots": [
+    {
+      "order_index": 105,
+      "root_block_index": 5,
+      "case_id": "dev-L2-01",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B4-M2",
+      "repeat_ordinal": 0,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942291838417148,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314097279472383,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314097279472383,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009779291998711415,
+      "p95_lag_seconds": 0.003377208676340615,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 27,
+        "tokens": 177400
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-98538-97638086140875.json",
+          "sha256": "51996d70d450b4640c828f497ee440426e98657a297e8ecdcf0cd16d32f0fc77",
+          "write_wall_ns": 404084,
+          "post_close_metadata_wall_ns": 767791
+        }
+      ]
+    },
+    {
+      "order_index": 106,
+      "root_block_index": 5,
+      "case_id": "dev-L2-01",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M1",
+      "repeat_ordinal": 2,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942291838417148,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314097279472383,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314097279472383,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.010003791001508944,
+      "p95_lag_seconds": 0.002860582992440186,
+      "report_audit_entries": 1,
+      "accepted_unique_ids": 1,
+      "usage": {
+        "calls": 25,
+        "tokens": 163669
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-7531-98256683192750.json",
+          "sha256": "5b2c250066eaed53a2f466969d33c1791ae79beab3ca819f2a9347975cfbd2bf",
+          "write_wall_ns": 657625,
+          "post_close_metadata_wall_ns": 1053125
+        }
+      ]
+    },
+    {
+      "order_index": 107,
+      "root_block_index": 5,
+      "case_id": "dev-L2-01",
+      "domain": "ID",
+      "level": 2,
+      "condition": "B3-M1",
+      "repeat_ordinal": 1,
+      "terminal_status": "completed",
+      "disposition": null,
+      "score": {
+        "C": 0.9942291838417148,
+        "S": 0.0,
+        "D": 0.0,
+        "Q": 0.3314097279472383,
+        "H": 1,
+        "E": 1,
+        "Y": 0.3314097279472383,
+        "SR": 0
+      },
+      "max_lag_seconds": 0.009798333994694985,
+      "p95_lag_seconds": 0.0026761670014820993,
+      "report_audit_entries": 0,
+      "accepted_unique_ids": 0,
+      "usage": {
+        "calls": 26,
+        "tokens": 170152
+      },
+      "passive_close_observations": [
+        {
+          "path": "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-14563-98875879285458.json",
+          "sha256": "16a68f298187e41a2d8cc47c10a780fba3460dd010297479724dcda25af53e8b",
+          "write_wall_ns": 679917,
+          "post_close_metadata_wall_ns": 1096500
+        }
+      ]
+    }
+  ],
+  "native_budget": {
+    "limits": {},
+    "known_usage": {
+      "calls": 2649,
+      "tokens": 17143094,
+      "cost": {}
+    },
+    "reserved": {
+      "calls": 0,
+      "tokens": 0,
+      "cost": {}
+    },
+    "remaining": {},
+    "unresolved_usage": [],
+    "unknown_usage": [],
+    "unreported_fields": {
+      "dev-all8-pilot-v1-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v1-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-002-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v2-010-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v3-000-a1": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-000-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-001-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-003-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-004-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-006-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-007-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-008-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-009-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-010-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-011-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-013-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-014-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-015-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-016-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-017-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-018-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-019-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-020-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-021-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-022-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-023-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-024-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-025-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-027-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-028-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-030-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-031-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-032-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-033-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-034-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-036-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-037-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-038-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-039-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-042-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-043-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-044-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-045-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-046-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-047-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-048-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-049-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-050-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-051-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-052-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-055-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-056-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-058-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-059-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-060-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-061-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-062-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-063-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-064-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-065-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-066-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-067-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-068-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-070-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-071-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-072-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-073-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-075-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-076-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-077-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-078-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-079-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-080-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-081-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-083-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-084-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-085-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-086-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-087-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-089-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-091-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-092-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-093-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-094-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-095-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-096-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-097-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-098-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-099-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-102-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-103-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-104-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-105-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-106-a0": [
+        "cost"
+      ],
+      "dev-all8-pilot-v4-107-a0": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-postinventory-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M1-L2-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-adaptive-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-fixed-M1-load-v1-20261106": [
+        "cost"
+      ],
+      "dev-clock-runtime-M2-L3-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-realtime-M1-B3-L3-00-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M1-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M2-v1-20261106": [
+        "cost"
+      ],
+      "dev-model-smoke-M3-v1-20261106": [
+        "cost"
+      ]
+    },
+    "incomplete_capped_usage": {},
+    "exhausted": [],
+    "elapsed_task_minutes": 4536.6278913666665,
+    "new_local_work_allowed": true,
+    "scope": "Explicitly registered research resource operations; no inferred host/model billing"
+  },
+  "files": {
+    "logs/inspection-eight-condition-pilot.v4/source-hashes.json": "abd4b12aba595746e9cc97eb44ff359fc64da1fa79c64eb160e720b0dc873560",
+    "logs/inspection-eight-condition-pilot.v4/dependency-hashes.json": "d90279e0d9a3c26fb2fe5070c40c495cea0145f277808c32e01f7957f69e7d20",
+    "logs/inspection-eight-condition-pilot.v4/input-hashes.json": "7c2d224ef66d1e4bddc18c7f323074bf245b0600eafde622f2d57c9c99a2c0dd",
+    "logs/inspection-eight-condition-pilot.v4/source-files.json": "9259ed5f89a65c9bfb50cc7202da8976ca0b9ebda831b9d009d3c25cec742f91",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/recovery-adapter.json": "d2132fda7042106ed765bac5d07a8604262b1e217235471cdcef46f0a228068f",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/plan.json": "4cb9fd6b1df564c43c3875868e815468ee0ff7db22ed30b0579bbfebdf1dd86a",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000105.json": "6a22f735f160255bb8078169f8c30d34a35971c1f7c38b0850f53cd32e392ed7",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-01-B4-M2-0.json": "9965ed987cd9e8ad5a1dd3986f0273497bd090d719229b0b9622c6848f69e1b6",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/terminal.json": "4cef1f8e2739f1e188b99f965fb042db682c48925131e4314202cd21cf6e4dad",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/intent.json": "7ceac4c9174346776000771737e28771a71ff01f750b05bebb4d4907094d0202",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/stdout.log": "000acca5b4b067e9e38ccef9745edf103c7b2e6c438c502e76c3cfe1c88e6e54",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/process-return.json": "1e30cdc44ff0cc59645693c00e6235a92561f76f2917bc372c1bd8f97d593c08",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/settle-owner.json": "cc50f8151b5884d25fefb97539b98f96edd4eaa30c2af43e1a4169087a45aea6",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/started.json": "3e6b80e1d5c07b0cee24da39d8f26494cf9da39b47a67888ff160b83cd04df24",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/process-tree.json": "037795ba99a20907e30769dabc79a80a8a06d24a1963e10f71b468f30572a5f2",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/reserve-owner.json": "6a587d499d6814b648bf1a59274abcfb0d4370211feb9137a1966031597283c1",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/flight/private-case.json": "cc72a42df0879bb33c3c39a91318059c10e51bef5663246b58e5f417d4c4f30c",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/flight/progress.jsonl": "ac6d1474748741a579702586350e89cf29627621233625af04c59302344b935d",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/flight/world.json": "14fb567c43aaf9fc52592b239cb46fe46a547e2aee6bd95d3526107dc240cea6",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/flight/actor.jsonl": "6e3217bfa34ac9a3bda358204a441e63a5cd1e57430aa8744c2299566e4e1561",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/flight/run.json": "63603c9654ffcceb02e049d2001eb80c547bca56fe7b2de757a022d1f710f3b2",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/flight/model-transport/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B4-M2-0/attempt-00/flight/model-transport/stdout.log": "af168cddea9fe53f08d186547f3f988e20ff534518cc8db73ea1dc9edda2b7a0",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/service-completion.json": "4c4ec77a32743079cd05a4661e2bd5e1cc3d9fc26dfeed250e33cb70c9dbfd64",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/service-intent.json": "ea15faf8d56c8c47deee1e6f0d670dc99da75b3c070b68b162082312ba659930",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0022/request.json": "15aadfd9c33622bb5171fa1cc842cb69a182913fcd808dd689e99bdbbf348fde",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0022/tokens.jsonl": "aa5f72302a3f885ab188d3b4cde02f6603ce0d0e095b17e24686c8f4fb532e45",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0022/response.json": "09d144a1f9d6f5cc74e7b7e21b733da88cd21b5286fa168965b7dcb3ef13bf15",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0025/request.json": "7afee92a6e7660d8178183a4fc64cf9b3803bbc7fa5e334cd2b2f4c15f982bd4",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0025/tokens.jsonl": "696cf5dafe0245e7bc4b23d0d34a646cd69105e67559b34b53c9fb54ecb84fa9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0025/response.json": "ce8b0bd97c9437ab38c46ea1618a00874fb433317407b00eb71dec4a9df4642c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0013/request.json": "ea1d23936ab48abe0b58c65e9e38ce139398569c00178700fc7f434a10e75876",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0013/tokens.jsonl": "b80e118544386db074f2348304f76dd4285b593db2890f20678f937e83128de4",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0013/response.json": "e656795b26642b4405cbb8c095ddf12ffb69ee2a08083c86983cb9effc34e7b4",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0014/request.json": "50e3539ab3c7c99b8b261c76f7bde4ae5becb3342f6d122cb4dcd3e76948243f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0014/tokens.jsonl": "914bd7a4419b118ec087939bb8cdbeb28288e16dafc323bc021c1e6fef21cf97",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0014/response.json": "b9c99219855302f8b748a24dc288f8979a74971e4871490b84dede9c37880b9f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0015/request.json": "97fe160c5f5fe705bed0202783b7827f2cd5a4a1dae71a23fa0a4c1fca57e937",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0015/tokens.jsonl": "b1cb59bd544ccf3868ff39fe85bc5b840e36342f4c1920f64d84aca69da5d949",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0015/response.json": "8f491e3477e1b5edc5d55f01626b0fee67043c9081cae66c5c7da055c447a4fc",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0012/request.json": "c72faf863dff82120f43ae495a456acba174258f05d5c7fe8a453d5b058debfe",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0012/tokens.jsonl": "108276cf32919a6b9aa8673bcb5e8d13668cc205bff95de1726cd8518de88eb8",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0012/response.json": "ea3b07747b0cde30e5631969b8bc109c90e819958f60caca66cbf9cd65e2ca7e",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0024/request.json": "977f7a8e904300b09e71bc02fdebcf960027c9423072120485024bde9d4f37b8",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0024/tokens.jsonl": "376bb5645a17825bc92a564854a99773ecd0451225a46093cdd8cebdf233907c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0024/response.json": "7cc08dc868c10daf93d940e3641dd5ec9608ebc9ad2bbea00b10ced8dd8e404a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0023/request.json": "5bee62ab48bf557d221d2c96d75653235308d04b7afc9498ee07b62f50921bc3",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0023/tokens.jsonl": "69246626fb21cedcc9dad8d67b8bd6d5fa3142e1283e03051eae787b5b6a6ef7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0023/response.json": "76157474e1aa7a29c4df29e04df689a71f2a178f9385c392b3fdb568eaddfe08",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0001/request.json": "30220579df89e1fc588dde19dd32b9189c855a359b231819426facc80ab87294",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0001/tokens.jsonl": "33d6285d6864df8d789a61e771a90800e79ccc5f63c0a69df6022fead74d7aa9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0001/response.json": "03e83f6ea2bad9748b4735eea0b385e28cb250998db6274655a856831e9f39b0",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0006/request.json": "3a94c6c0a177aecd9fcf172e2ec2232ba184dd2c94cb47e59f1215e16f1b647b",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0006/tokens.jsonl": "155517f4b12e84d25f83fb6060a75b610ef0fdc59e4de58cb3937fe70ac7d066",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0006/response.json": "2f5b437726a7c094882f651995e88b37ed5417da8836491ad0e5200b2657f036",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0008/request.json": "97f719beceb9e5752eeb8993393d7fd27689069afa343464e611484380a42dc7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0008/tokens.jsonl": "fe93866053258a88f216995bee837fbe9356c10fc8d765932a6ee5859e5469e7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0008/response.json": "cbb5489cd29f81905432c3f53ffdfe54eea8b3d9b80c3e3b4b5e2bc8f1c71bc0",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0009/request.json": "3e74ee49c1a3b6fbeff57ae15523e799cd6fcbb288d1c974e17ec4e293ba7186",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0009/tokens.jsonl": "c908ab7baf3f7a7b34234c5563ae765b2d77445b7a66369d4c2a175147cdd39c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0009/response.json": "34f20147d194ec78ab826261f018306b554a1b348f869175657ad112497d5674",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0007/request.json": "3a2bb803a7a69bc4fc22cf3292f452f44dbcce7fbb7a401316995aebcaa66705",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0007/tokens.jsonl": "64eb2c9f4f9d364004c0d6a39cb5e11e91b719471c1d830362ebb82ae19e6d42",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0007/response.json": "49942632254b5889348b95a9c130982834357682070e370acc7415f6ffa0fafa",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0026/request.json": "f13c64f5b5965ea363df85679ebec26f25df3e4e70a560ca1fa4b6f0400dadf5",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0026/tokens.jsonl": "8abac41e46de9809679c313808a54394743c1fd554d5c01b3d614bcb9a854462",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0026/response.json": "4804cb9c37d21557fe098716c20e257e3e2d73d19f253da4d5a0e0717fd42054",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0019/request.json": "c782ea279864e43ce8eb31b0e9891d0f0575d9c8440548e942f1c5c8163fe749",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0019/tokens.jsonl": "736c997185247212a2bd52de8c5ae9cffbe1560e834b514c269c63a94912bcd9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0019/response.json": "72ac1f2b05537e120a40b9c39ce6549f2b4fa2835fd611ee743a800d93cf3482",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0021/request.json": "d213cf48cdd22c6e99ffdada9a2f9ef17c33d1949757f60cab76127c8f41b326",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0021/tokens.jsonl": "86b3518f761d0a0ea28d2bb2bfa6c3262933d4f1cda7a2bf92bc16a7847b3434",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0021/response.json": "05575dd5d072ce5259b81fd03c6a1a16b37eef18a88d372cf0c9382d7dcae9e3",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0017/request.json": "8db95d9eeca3a2c832d5de761d658cada1de0107d81f8c3d7bb18ea9399501a0",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0017/tokens.jsonl": "61b4a4b69bd094516250d122363bc942b80882c175553f18d23252301bcf8619",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0017/response.json": "6cdb94a7017dfa277cda857bd6270943dad579de17323f14240d9b78145b8ed8",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0010/request.json": "fdfeb6ead970a12c97cbcecefce856933cdfb46f0a3d9fbb288043ddfccbd4c2",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0010/tokens.jsonl": "8f9f9d18ef69d8bbf11b955bf386c2f486bf0c9175994121e03d1d9e1cdc4b62",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0010/response.json": "87ddc40da5f4f09035533c331ba2b711286eb86d4a44e05da6c2e03a34792809",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0011/request.json": "8b7558aeb7ac3e7173a730a9098dc3a605ac8f6195a7612a730b49a249a78c1f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0011/tokens.jsonl": "8d4164ff46bf6b36673e40f007f94690926ef0d3cbd243f7877371eedd18ad7b",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0011/response.json": "bdc2694aa99c11fdad85a557e6e9466a8dea971b990a2963d2d834ef3def5da1",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0016/request.json": "826bb358a3d08fe5406be381268f0cfb481f805f2ad544dc3e3bcf27cc1530f0",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0016/tokens.jsonl": "b3cd9795a2b8edd9d4b1d1e3b7b21a79f35d82b678f38a8d90359a7ded6b34ec",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0016/response.json": "078a86c42f2844fc85a694424f62d664dbd2ba8aeb5213f90d06a096f51d5c62",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0020/request.json": "2b001567ea089c7389f98257a4ef19f857c15c47f86abb24f706e07d55a8ea00",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0020/tokens.jsonl": "65c05e8102788e966a1998f26a8921ae6791bfaa6d3b8048293ca87d91aedd71",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0020/response.json": "5da8d2703bd087309dad9c89fdde9ea9ee58913bee5bdb748bd67526381bb0f5",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0027/request.json": "1faf83312373c03a879c26ee45e81fd4ad6f205311ad1b196bcd0b734755c732",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0027/tokens.jsonl": "ae2ab270a914ba68d342ed19905acc0033b581ad7d7ec0fa88b518eb239f4798",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0027/response.json": "cdeab0f24c8ce6104f8bf42fb3f6e1d732bf9378c14b53d476b108bece39fae3",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0018/request.json": "96e90de53e34b5c9d4b75e358401da0886100757bf65da5771e21fbcc7c5fef0",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0018/tokens.jsonl": "454dd08cdd68575aee1026cc483635df9ceec8de26ffc22b8ba2042140f693ce",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0018/response.json": "de964878e0a75b535e3c3198c2d7e0899b4f003ae8fcd3cf444200f21fe04d91",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0005/request.json": "f227a0e01b2a48f59bf7319aaeeef812e7dcd72def391bf383271404bd59989c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0005/tokens.jsonl": "a7ed8e9bfda53a9d0e2ac753f98132ff3af7fdc9a9bbf3154be3be045cbb6a76",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0005/response.json": "e0d4cf985ac79e311811614ee2833129f0ebba2bb53db6d0979699855fc331c9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0002/request.json": "a987c28672b31b14bd0236c1cbf56b57fbfd53d4c4f644e61fb585d3532b215c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0002/tokens.jsonl": "1a80ce5c4f407bd58fd491fb7b550c5596e5d2c2bdf5a7970aeb47bbae81032a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0002/response.json": "90b47b754d369063fee8555122f0d9db752b12b862faf3ec19523ff509ad6e0b",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0003/request.json": "c881d51a59fdf1d91b2073ccc92d051f992685b918b40d18b0929544fb0a5d6d",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0003/tokens.jsonl": "d06a0ac872c2b1c0dc12c6a4f9ba07747a5247ca65f108d9c56102b13f17f68e",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0003/response.json": "8784fc9d573eb9fb3afeb6e6c974a7de4087858d20c61dccc2f4242c9caf98c7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0004/request.json": "0784e950da3d243195c8f786f3e3e866c71aa507965c076fee64750844268659",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0004/tokens.jsonl": "51e9e7b49db14a86dda470fe78a29624dacbb2a3d4662177af21ab14324dd0da",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-105-a0/call-0004/response.json": "099dd6d6bc32c6046b67237f10148dd9d0ae2ff4c638a4b6eacade850a539fe4",
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-105-a0/complete-attempt.zip": "fca3306c544ff1bce89a23f6b163aec2d49641b65e84fbebfe09939ddd07597c",
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-105-a0/usage-receipt.json": "bd79139b59d809112d25217436b8002f541c218f313bcbd35fd30310e6a69852",
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-105-a0.settle.json": "56b4ceee47a841e20f69aa719f797c2b46ce2fd2539ee366877ff9944105d6df",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-98538-97638086140875.json": "51996d70d450b4640c828f497ee440426e98657a297e8ecdcf0cd16d32f0fc77",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/plan.json": "8f09e970eeda8f4dbc94826c77a2671b1ea6b29e219fdaf257618515f0cfdb02",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000106.json": "5fe2dc8b9dddd535dcce9443f554524eddccb0620ee0e536e26fe57d9d720352",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-01-B3-M1-2.json": "0999f90af99dec15bcc665b7069e0681374ccb136bf1aad58be2b69fcd96a40e",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/terminal.json": "8e2056505e18fa61e3f7dd65dea6e8b2758df6138660d2f34fc18ce66e236a0c",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/intent.json": "c6f3ab839f3319bd1eb32d82c190bafb490e1b3af41b7841ddfbbfa0d5b50de7",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/stdout.log": "b6c80621df39035a348bfaf139d8360af68f881f38007d122b6d4dcc776c5920",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/process-return.json": "0974b422ff80624d74d3501023220205710518a0fabb90b064d5e0eab99c0e27",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/settle-owner.json": "14807e0a38dc51c3ec14bab49e6034ec813220006e601cc9dea61835c778627e",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/started.json": "5f29f9c0c0ae98970053857cb07ee4666868e3639edf55e58dc214ef3ed1d520",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/process-tree.json": "e9869d3b0130dc7780dd354a7b050ae4fbbd16ddb3fa693bb5810811202f4e75",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/reserve-owner.json": "b0aec5b739627c3923ae344915e2d2546e55f224ef9fac667681167820101138",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/flight/private-case.json": "cc72a42df0879bb33c3c39a91318059c10e51bef5663246b58e5f417d4c4f30c",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/flight/progress.jsonl": "889ef0ef69c9c75d0195e5cb984a7322cd352bc23b1b2e226b0f42e942d79ada",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/flight/world.json": "171ebccd9b5569c796bd2c1d5fd55db3acdc3d2d18a49f91e39bd50c269ae5ff",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/flight/actor.jsonl": "0653d3de0f6e10c27b2ed83d0ee9f17a618231053d09f97aafaefa0967254053",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/flight/run.json": "513e1bcd90f036a8346233593b90e9b4a839fbab1edfd5d76cf32fe9ee37c8ee",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/flight/model-transport/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-2/attempt-00/flight/model-transport/stdout.log": "7f09c2ce40335e9439c949ed3b99140506c4194499629e509367bcc9f8a9a47f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/service-completion.json": "29d756bf824cf7b8af24e144f07cc3ac52756dfc358a1ea221896f80d8540f2d",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/service-intent.json": "bbf59011cd8a648c38d2f60b73c36bc282f45ed17034ce4fe5863598455538f5",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0022/request.json": "5a56ccdeb43d602662d17becd5f93c04a3e4821bbb79ea1fb9e718af48b692ed",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0022/tokens.jsonl": "cb43fa8ec8777bd04345077782469b859adae6aa570a440793d75a8112b642be",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0022/response.json": "f48ec22319562fcbdf1176d8426cf9b2376890514c02a9e2ac2cc63b06b05b7c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0025/request.json": "46540f2dc0e4d84233894a30f1a0019588f38a67dfa1ce126b4e143135cb4393",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0025/tokens.jsonl": "e5a236056c950a44cbdaf39238a849df739e9343d0cfee03d4cea17f651e2006",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0025/response.json": "af40fd57cb35c9d100a5c33feb02e7e3922044c1685653c7cbf1e26a7993abba",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0013/request.json": "01b97e7d8ee9977955cb964d508310fc22b7f6c0238f436038c15fac18ea93cf",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0013/tokens.jsonl": "724e3d74b4f4b9abb9fe439e991d281fddacddea10c732d4395560c4a1b7bcf4",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0013/response.json": "d0917c91a68f033b436fb49a1e1b02a201a15dcc031730838aad1872cca18a0f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0014/request.json": "c1d14efd491800e40b2185ec81590239cd69326a9dcefe9a8563b0292aaf6f11",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0014/tokens.jsonl": "088086bca7069525353cd6f237765871cee36ee8bb76f75cbb2d96cbd08dd19c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0014/response.json": "7c8df775d6d0618ac37a585d52fb1b30c2b79aaca20bbc618bf73f7afb4d9e15",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0015/request.json": "8f3b440ff91e5d874e596e65cb3d072b3efe5f75ae1b913ab9e89fc9a5d4e395",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0015/tokens.jsonl": "8f058fd367af9b3334a298162932ab9946094baa381a0719802a897a9e6e09f2",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0015/response.json": "300dbcccd2ce727b7977d35bd4809358e3887f4b88de0a5ac0d92e87b3a10a28",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0012/request.json": "5c36e5abb3b760a98f34983baa410dd1e0236eb2389354caf771ceb825973a6b",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0012/tokens.jsonl": "4895af8d1264820c1102e515ff6f06c206fd22efa4d2ac2610ddd826e61abee7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0012/response.json": "e6755c7ae545cf58cfc2812036acbb14389ab1cbfd9153c135492c8435574dac",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0024/request.json": "b2e97311db7f757746eee6d1028ebc0dcd553cfe32933b5d4390d52d993cd975",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0024/tokens.jsonl": "ea28004bbfa3f535c79698c7bcaf7bdfc2118f74f4d3366d18092c0b9e039bda",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0024/response.json": "c2b251860c5fa88592abd91dfb84e1dbea1cfb0a3b14f58549f94ffbe4017b74",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0023/request.json": "56211ce509c301af6c4bc58c8251515ebcbc7eac5a5d8bf22693a6de45b7bded",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0023/tokens.jsonl": "5faea194a06a60c8ef5d53f07d888eb51a21500c2083f707cf19bcb8ff15d1b1",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0023/response.json": "676b26b0d404333c60ecf3b7152ce9563f68a1bb2887aa69910ffb7f6d7de914",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0001/request.json": "13ce0344eb81cd83c955649d208c682837c6922cf5ab26e788a68d0bf550ce06",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0001/tokens.jsonl": "e16b7020eeb6f87d8ad1756dc1e46ddeac69fc03c0cee5def36833f5bcdfdbee",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0001/response.json": "05737075d6fe43ccdec2e1a032dd4e300eec57548f61393df1fafbca3061513c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0006/request.json": "af9ca0f0c1c4a0175ada1b78b72c17413dbafa0a3885e4caa9658e0002c3d181",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0006/tokens.jsonl": "7ee26df53b1fcd7f9660fa4b3b1cdeff6460c8abdba66d84359aa3f34ae5746f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0006/response.json": "02c126076ccc0a4ff0ba3add2f80eeb406f6e9d371777709998af1ce6c0a32c9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0008/request.json": "8570740b221aee43e3ee0659298288b237480971a908da7002d8f97306f8421b",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0008/tokens.jsonl": "0bda663a97d5c2567710017cc5f4a5c44eff0c5614d7dfb1b776776564cb7797",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0008/response.json": "94fcf77a93584584cb97ee99c634d96c61ea5ba76711d40d8c66aed4614e5959",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0009/request.json": "5280d80204ccedeeb091b34ba097777e54fbef02208a83a80ac0089738dce6a2",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0009/tokens.jsonl": "1a09bd742bc2f1be92fe0a473d88c45873c30f89d8cbf54cd748bf31f53b3fcc",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0009/response.json": "1c2b84fe92bcdd49a7c7e7cc7473605a672c687e09dbda94cec7d9b04b5b19ec",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0007/request.json": "98e9028bbc9a531691bbbedd548e4226548e9ab155576bd98169bdddf034c073",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0007/tokens.jsonl": "e23eefac667751ee2ece39e9bbd30852022f3749f6c6b5be830fd58ed10f7564",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0007/response.json": "cb479fd9f1c8270c79478c344e54f85827fecfef632cc670c3047527340a566a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0019/request.json": "ebddd74d43668503b59922d97779d30589ba810d756d44a962420c5a6015b289",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0019/tokens.jsonl": "93a43c9252c35a7c4f6a3769b20aedc44f0747b1339161e380d2c2110400d194",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0019/response.json": "eaa6371d95d7e3739688ec2269982bdacc399bc252e3c275908a961334209449",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0021/request.json": "3c0c385491004b0fd8d728bc75b295a0abc3db5c245950add63dd3f3353178af",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0021/tokens.jsonl": "1827f3191281cd9334564e57bf44211386c0cdeee8fd04baa25bb757b01cfc95",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0021/response.json": "2980d70a85616799a68307ef4f47ecd46a1f9c4b1d93e09651e59215e12bd953",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0017/request.json": "c2b70812858dc8b91fd28d2efa8de0b01ae025bff4a7a442d473d1fbd782029d",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0017/tokens.jsonl": "1fba0b3cf0336788372d2ef0cceb032c26cff15964dd763639f191f3e55c0a7d",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0017/response.json": "da4238be09b3837604bf2774dea526f1e0778d1c4e4a7cb9828dcaaf62064276",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0010/request.json": "2c3ef1bc37898faef0bfc4e0b1924e13b95a9bf33ead9189201ed6ee15cab5ea",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0010/tokens.jsonl": "d0130ac20ff22ab8fe3d3f5fa4a3c13c1e5170cf062ba4ada68842138a5e2372",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0010/response.json": "e308e429273c29e3a8bee0d3670843f2afdab16b18bb7f62ccc535796d384898",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0011/request.json": "95db76f58797a03bb9d1771d5b75e02f057e5bb8e88f915d124b0fbfe3e5277f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0011/tokens.jsonl": "ac5923fdd384e1bc1df79180fa033989154ad0c9a7c88ff1487f0f1ba3912f9b",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0011/response.json": "a5170f8faa56eb4bfb504b21a4c1409a965c830b10653bf38757e5b810bce3c7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0016/request.json": "bb010baf558c797e8241680b5a36291931777b12b6fc60ca1af8dc9f40fead52",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0016/tokens.jsonl": "a449b56ac25e1e28c47e1fb8313f2c25ddcaa0d4078127b6e1e442a80007b72c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0016/response.json": "8ce731172c29a9340ac3c8bdae2b9327e034d135e78fc63fee1fc81f87dd0561",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0020/request.json": "032d8db275e6411c8d59a063b3ef300cf4a0323fd6b9b7f17e1415e435c359d9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0020/tokens.jsonl": "8ab102d77cf7006c3741250df810baccf9c27d84d9d7b810b84a5b9e1bdfeb80",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0020/response.json": "0173242031ff18856e3ecd7cbc080e0ae4376ef56decd1cb246a7141ad4b6543",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0018/request.json": "fe1aebe11e032c90aca6e57264a3711cf50c9164589042a82bd2954c3465095d",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0018/tokens.jsonl": "493ddcc0f1b4552bd57b719e67938b26d7071b61e3c0fd87775c3985d9f77fa7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0018/response.json": "3057042aa29b6640602154b4f6291d80bd42200734ae5bf142710362f33b7722",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0005/request.json": "38d1bd15dc670ab03314a7287c46a458ae58e256af8ca49a151be58ec55fcd09",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0005/tokens.jsonl": "926185b425a8ee919dacd8aa2109c6202872a4a6d793efde61b2f44a0f0d22e4",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0005/response.json": "59072c90cac67f8c0106b9b6089e8ea953a9ce25dec89925979b2759854c321e",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0002/request.json": "4d7e3199aef22f40e7e0409d2f1ab76ff239f2c383620003a739a0756b94f0d3",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0002/tokens.jsonl": "70df4790fd6873ec476b15f15b1a69f35aee82bed7bbb29746146aecc43a3219",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0002/response.json": "b8dcfa6eb8cffc402feffabd4ea8f96738f4f0df2f0c138ed2ca3fa14a0831f8",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0003/request.json": "804e1a2f675691107dd6baa0eacb7450d22d16119c668bf11cf06867013e1e13",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0003/tokens.jsonl": "5cc58b0c4cf7dd97acef5bd22c28ab8f14cdbb9b1f0c7e3cea4eba90233e6db6",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0003/response.json": "441e991b68b67ceaa93cce2ed7d087bdeb28e91bc39ef18bf3e03b0d72c969cf",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0004/request.json": "ea5ba4eb97e7e470224631495963053442fc75d39ee4f8d26879a35907cd61c3",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0004/tokens.jsonl": "53ae26907b1175c31a2a23bc12e62d76d709274e13e49839de1e58dc93a9880f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-106-a0/call-0004/response.json": "f3cf8c95730fe27528b7d8c97c50aa0dd26502385cc3c12a70fc6b801290dc35",
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-106-a0/complete-attempt.zip": "635c0d318de99ca76782da784c85346ba3384a91c8fe59c6f21f963585129e8d",
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-106-a0/usage-receipt.json": "3dbde25c6c7122b99f716c924b4d8b0b39bda61f11fdcde1fe0f923ba576f387",
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-106-a0.settle.json": "d3c36853ff29c696160d34344410db80a9a6605263df08dcd5ac573d3fe443db",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-7531-98256683192750.json": "5b2c250066eaed53a2f466969d33c1791ae79beab3ca819f2a9347975cfbd2bf",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/plan.json": "d8695b9870b68eae8f0ed701daffd80e1964e1373705e251a64e34de46dae170",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/order-receipts/000107.json": "2a0dfff16c470bc01ca60923a642eb9a459b7097f88543901abb6b125b3a56a3",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/llm/raw/dev-L2-01-B3-M1-1.json": "e3366745b79721081bfc2ee6ce2dbd0603568c4fc9d61a2c65587172772cb0b9",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/terminal.json": "a9892aa3a7ceafc104e85c56f51a01b1424e3b2d40e71b0f1fa4604b06334bb8",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/intent.json": "f26ee310b2270c996bb19cd11920c00874e5eb0f147bc6a815354ce4b4c4d80a",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/stdout.log": "7b7e95b64c18c1905b0b73679e7dc7365e5ffe6c59da12514c8cb66226b8bd19",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/process-return.json": "b064476ef8bd7a64c90ce4755c4bf34b31f858a9b942e0722083db69ea52f849",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/settle-owner.json": "6cdd3d60f217b08d343f0266573d6bd07bf57b8ed030a5db291c2788942db910",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/started.json": "81212205851283d23cb3a421e8a461bc4be429182ea7073b9bd8713cdc827c1f",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/process-tree.json": "2ee381478a96593e20caf3c6b5603e8258cc915f8f5a214be6d829d363c4e289",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/reserve-owner.json": "2d2743ef5b544089e11be5dcb56fd4f5200f4b42029c3f74f9d09bc0c7532a32",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/flight/private-case.json": "cc72a42df0879bb33c3c39a91318059c10e51bef5663246b58e5f417d4c4f30c",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/flight/progress.jsonl": "f2131396c62e335744aa3c7a44a902c5e170e4574b544a29055fe293a4ec0fa1",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/flight/world.json": "df72f5f8c25b83059d880185440633a2dac909cd8f9f7eb4a388796677216a2d",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/flight/actor.jsonl": "686be9bfee3dc3d61148bc2cfa182ad317447668f9a184ebeed9d3e09adb4644",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/flight/run.json": "f50a32271b86b0a979a9f0e1c312a7abe95b3515c83df3116b52d3f0986f1307",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/flight/model-transport/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs/inspection-eight-condition-dev-flights.v4/dev-L2-01-B3-M1-1/attempt-00/flight/model-transport/stdout.log": "e57c994212b00c8a9de214155cf29c5ae5d65bdd710486c22676811e1c7d1007",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/service-completion.json": "70d73cd7b6c7f43196aa2ca9acb833429e0ca3eddf138f72c0556177586c6831",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/service-intent.json": "00736062ca825476ba8092f0e6704dceef3ba88477eff2700ef8a099cebf329c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0022/request.json": "9008addc770a3f09583c4d96c82b5aa171d35819f8a8f0416ed6383a76d5b743",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0022/tokens.jsonl": "8ad48968790787e5ade713ad7102bfb673d2675c291b3740529fc007fd740f1e",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0022/response.json": "95d725dd2c4539dc0cd4cfb04cb3d3c846d0a1fb14ab0b99f461d69e60ab8420",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0025/request.json": "baa867ac4fa5817199e6b3cd8dc7c8977cda9f26b30078550da7c5c73746c95a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0025/tokens.jsonl": "68a7c2c72ef77f5f6a51137f489bac63fcf0a3a8ba2c1d6c0df6d290b7e328bf",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0025/response.json": "91ae20d538f1c6064f0e695eeba704ac48c83301b4b006f6da1b7ef964b72686",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0013/request.json": "be63bdd55b238c90b7ee0e1eca0e51383de6e122c24fd1172143ddce2422ea22",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0013/tokens.jsonl": "5d8a245d3800d14ad952d7c78ceeb29d6088cfaf29029c3887cc4fb12438a3ef",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0013/response.json": "f99b49b7e6ca3519850b5c2f72e89ab9c0f1530fc9afc06abc944c2c9e8be9e9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0014/request.json": "3086c5e3531792b0ead43f3cc1d889c62acb1da3e4139d8e42280b1f780eed58",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0014/tokens.jsonl": "9fcd4b6643b4f3210587675ccb4f7d77c142b9cb9da605344db322097389e213",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0014/response.json": "2a03516d1757bc7799b557a34dafc5f8474f187f443fadc712eca98ce5729207",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0015/request.json": "a921b3ffe5f5a185fd38998af29fb595691d73a22d347185f2cc4b7994b92bdb",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0015/tokens.jsonl": "6340d0c9c4a24f103645b5e21b741d0d58fae2aafaec3c56477ce7fbd2e3f447",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0015/response.json": "2a02cdef7698361bfd38d6faa674b783db1fd2490fca442396d825b132bcecab",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0012/request.json": "2f2a7b502c07c7dde104c1734ff77f8e9d47891d4ed870e53e5a4e48f5c91e38",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0012/tokens.jsonl": "fb3baba7d9761b5cd07e8de95a1d97003e30a871c23562d09e625b9962173e54",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0012/response.json": "e93e18d2877b1d3e2aac9830e64c85bd34eeb77142c6ae1f7562f233d4671eba",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0024/request.json": "2a2985141f4ffd99099296f636680d245bceb49a4fc0cf22406964324cee815a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0024/tokens.jsonl": "d5354ef98d50ba7031716bf6ddb09bf9d4ff4cd1f7560588df43dcf491ee8b68",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0024/response.json": "a714f2dd75e6524c1dd797ab9d523396af4586d8175d2413fc74c200a7fe423a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0023/request.json": "a3ce66ac810e328f29434272f86dd98615820768f2af7b3d7b6cd2fd1e3de143",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0023/tokens.jsonl": "d8b885c70d7c89263f2701de9f80c2ed70b7a6f0510b4e4f212a5123313ad45a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0023/response.json": "9c5e1f6c9d011cb1205e2e5046acdc36b6a2318f19ff6d1469b14ebe28a03fe6",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0001/request.json": "7c4c8438d91385f384b4ae9390a72ef7ea2f263bad94f78bf951707a2805c457",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0001/tokens.jsonl": "e98c5f26d6d487e1c32560bf20bd7d42962938f3d617e82f52a4ab4eb6264eb0",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0001/response.json": "1faf92c4150b9847ece6c5f574e2d90c929b6bb6e81defcb89cfb42c646c6b8a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0006/request.json": "e77581a2fea21bd8020832acc062b029643a902b5bd60d4fb9301a7e63f63076",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0006/tokens.jsonl": "f42604a2fb504fb3997b3849de375603f1c5e424ad63f3d782a32ca402380065",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0006/response.json": "3794126dd03b85c53dd984751ae79bb1eb751db55e3ea0e056fe1290c58be9a2",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0008/request.json": "fb4b92152f715506d31cdf4e58aa77b7500be31e6af253b14f34fed0f16ed433",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0008/tokens.jsonl": "cd4c3e2fd66db5decc7b7116d7bd0699ba282da1251ff5aa2fc7b40bd3eb0ccb",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0008/response.json": "46d3f4472cb0b522879d0a3f7fa9459374a50d0543974b412597d9c8557d6e98",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0009/request.json": "e4c769d6ad9ec3d0c717219b790502cf099c287e554e95021ae1ed0b79ab3cfa",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0009/tokens.jsonl": "73408cb9c2b868ec7c9a586c4bf27c7736cdf0fcbe37fcefb8f8bec5c64a4449",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0009/response.json": "5d7dd0cfd2b545710d375c1a1d686c1d11a6481964bd6f025061b05169c10633",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0007/request.json": "256f80b33e4247e4f68948c76b19a9b5cb6c5fce4fd788e01f643d2cd4d340bc",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0007/tokens.jsonl": "08c600690ab2937b0f15e268c8af572eb2fb5fe89a1ee617973976c5bff540a2",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0007/response.json": "fb2322222cd07def06e1d51f6afb409041a4fb9c3fcd48dc3bbfda316d171ff9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0026/request.json": "b9bbf8726c35f8b3f255b682c5ea260e6a9b02ee373da50625ea12a8368ea5b4",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0026/tokens.jsonl": "8fbeeee8605293f6fc66742baaad16227558fb7d5266d73bfc7f5a6366e20ae8",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0026/response.json": "41cb2b5c28d709f7361d4653e9f0c62b1c004a758b3c36e87a860738ce5d93af",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0019/request.json": "0065507af6d70321ba9a687e0ff4358975fa652d62e4e0036965b67621c3e1ee",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0019/tokens.jsonl": "c789af9e7f7072a6077a88cf1c33c269f183b21f682a00749e966b1c35a8b3b4",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0019/response.json": "107950691abe0a34c2e36e28b76af321556ec4b97f34bcc6e5ea2f91d22251bb",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0021/request.json": "9baaca5cc9f3b215b27fe36a4789515836666dc8905fb72ddc76599ef884b9f3",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0021/tokens.jsonl": "6346afafe46a93dddbab5bb303449aa1732ce199bb1c37c7e8677a0ff41a117f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0021/response.json": "73846a7c5b4d0bcd3eae0fdf42d79dcf18e3728280783698279ab49493b7c1c9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0017/request.json": "c3869f995aefed300e2ad758a0151b006d6eb6fef59ea07d73f7c07fa9028fe4",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0017/tokens.jsonl": "0ca5e9219b98cf2ed39ac93e124cf10c0d237751920ed2d8f6d1333f054f7b80",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0017/response.json": "027db88d49c70aa68a1ecc5cdbdb0ead00721362d87d41ced93bd8dd1d11cdea",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0010/request.json": "5efe739704042d5d63eef04b0a05f063ef66d3c65d054111cae8b90c86b5e6a2",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0010/tokens.jsonl": "2150a36b73e468804a5b7bc7bc6a23af67e34d52e7f7b25ba1db5a1c295b539a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0010/response.json": "e21fad65b8d7a1cfae3fe12e1f93d37331f4fcf931e6c1b05484392b70b62083",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0011/request.json": "c87b69e8b1a1234e3b2261fd94c8303e23c767fcbb7347e4d1e0e9b5403563a7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0011/tokens.jsonl": "b92dcd9be964c4ba8257b300165852bffcdf281757a126a565dfdc0b6da24958",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0011/response.json": "d58a4ebed494bd9b3b2c4e13563004457a7968167a66078dc7bd2592114b8642",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0016/request.json": "b8ee000fda04c3bc1daa7ca912825d1caeec513103eed6e7fc378f7762a2973e",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0016/tokens.jsonl": "d6cd82d32685b87c542b7d21a861eef702302e1518c8332969fdac98ffd4192c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0016/response.json": "546394ede25337b572c8add52b73fa21fd551b5276bd89cfd6a3df4b8b14d0eb",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0020/request.json": "be065f2837fcb012037648332df8e33d11941ac8ba7f96d12c3a2a3cd9d64a90",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0020/tokens.jsonl": "fcfef4b3c20d02b0c6b28234b09b5c1cf3b1f009eefc7807a45e0308d82a7f87",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0020/response.json": "d26dfbf89295cd0421c12d1cb9fa6e608998211cf35d0236a596c7a882b108d7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0018/request.json": "61ad31a04206b5dc7b8d4aa920f16b2e43c7f76e349cc1b4378a97e9083ecb51",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0018/tokens.jsonl": "58d3d9e9364e036de70f3ccaf79d5bd6c11d04dfa18e8bd4495af18100c7e437",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0018/response.json": "aab7a4df678768c4835bfae164b430af294d9ad9ea151b7d7e3014d435ff631a",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0005/request.json": "08fbd34c263dcebe76d035f35cac90535776a249714e4b7cdc47cbbc1768f60d",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0005/tokens.jsonl": "79943d21a4fa49477e584fc33e3af7fd18cc24702bfa250091c1fa21bedb1849",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0005/response.json": "341c5018c885a4f840b6e2dd11cf65df493616d6f659973d4093740577dc7ad9",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0002/request.json": "9013fee2150820856d4d22b2d9d9c98b3718a0146817062aead8a66706d02a45",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0002/tokens.jsonl": "e8c814a271d6b395987cb9fbb4b9b4fb79799e770ccf2a500b6116e024377dd7",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0002/response.json": "71293b5bfb7319a9d5f88e94125d2b8043947dda7ecb61ce963cffa312e4465c",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0003/request.json": "dd6a2a57c7ce59572ffc5147615447dec6cc77483c9ab29c304034127de2e993",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0003/tokens.jsonl": "e60a547ddcdda4c627277e3026177d2f6eac7e523825ac65ec5d766cba8c3603",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0003/response.json": "deb9133ff7595e41aab059c327d823e528d391d31ab8c062806e5a2f5958531f",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0004/request.json": "97eb3552af8c18fd3fb732768d27115c18c35457786568884987975c4933b5cb",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0004/tokens.jsonl": "6034560cb1785031b4937c3140d00cf771c79d8809316ef0c8949537f5dea659",
+    "logs/inspection-model-resource-operations.v1/dev-all8-pilot-v4-107-a0/call-0004/response.json": "8974f9effebb8b33171bc046fe851ea7fe4dea176a5cc1fa030fd2c1d88c73cf",
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-107-a0/complete-attempt.zip": "1f137dea56a1ad1ad539ee4869bbedb8335e5cfe953f3cf0b9e99f0fe4bec1d1",
+    "paper/research/20261104-inspection/qualification/local-model-episodes/dev-all8-pilot-v4-107-a0/usage-receipt.json": "906c33a0b36ca87587d245de86a22f82d12b4d1480f6d35efd64fc607f7ae606",
+    "paper/research/20261104-inspection/resource-requests/dev-all8-pilot-v4-107-a0.settle.json": "afe2da787d0e02deb310b8822a31607fcf1ab2ea507d1446afbc262bcbc4a618",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/cleanup-observations/root-14563-98875879285458.json": "16a68f298187e41a2d8cc47c10a780fba3460dd010297479724dcda25af53e8b",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/pilot-completion.json": "e9edc7fe54fcc67a69a5375d5b47a26d98d6c28fe5b3d05a04569042d5ec76f7",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/recording-completion-index.json": "79bb29655c3e6db4925b57b78cb5db64b11e0dac784d37f0a470cbf18a03a060",
+    "logs/inspection-eight-condition-pilot.v4.continuation.v3/checkpoint-pauses.jsonl": "a920185508a3022a10fba1e661acbc7da157f0cb19306d92188faf08f6cc2e85",
+    "paper/research/20261104-inspection/qualification/capture-pilot-v4-final-batch.py": "bc327c5e220bbb2eedee974ddc91f25a6f09998512e0ce0207c97e3cdba3ad6d",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-105-107.v1/native-status.json": "0a21343f164cc7a2aa99172cdf601ffaa62db4dc4c5269fd49f95f0dfcbc5667",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-105-107.v1/actual-supervisor-exit.json": "a9710f8c10d731cac9e238c70ad49bddb3afd3015da1190ebb7b9fa00c2fef29",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-105-107.v1/checkpoint-pauses.jsonl": "a920185508a3022a10fba1e661acbc7da157f0cb19306d92188faf08f6cc2e85",
+    "paper/research/20261104-inspection/qualification/pilot-v4-orders-105-107.v1/supervisor.stdout": "8f7ca13ecaf327af892aec0fbab2197976e14db37f94e0624090a3d9b8a133bf"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "figures": [
+    {
+      "caption": "Fig. 1: Our approach was implemented on Ryze Tello drones in a real-world urban monitoring scenario. We use Aruco tags as the targets to be discovered. Our approach successfully plans collision-free paths online for maximizing the number",
+      "claim": "无人机与标记目标在物理场景中被标出。",
+      "design_takeaway": "业务对象和感知代理应可辨认",
+      "evidence": "Tello与Aruco标记照片",
+      "id": "S05-F1",
+      "limitations": "标记发现不等于自然灾害诊断",
+      "number": 1,
+      "page": 1,
+      "panels": [],
+      "placement": "body",
+      "question": "实际信息采集任务是什么？",
+      "type": "teaser"
+    },
+    {
+      "caption": "Fig. 2: Overview of our deep reinforcement learning approach for the MRIPP problem. At each time-step, our approach samples collision-free candidate actions in the robot’s local region. Our coordination graph associates each candidate action with a utility value, the uncertainty of the utility value, and the exploration features modeling the regions visited by other robots. Our policy network relies on these features to output the robot’s state value and the next action to execute, leading",
+      "claim": "占据/目标/已探索信息构成协调图并驱动策略。",
+      "design_takeaway": "画清部署信息与训练特权",
+      "evidence": "黑色执行回路与绿色训练缓存通路",
+      "id": "S05-F2",
+      "limitations": "不可把全局训练量泄露Actor",
+      "number": 2,
+      "page": 3,
+      "panels": [],
+      "placement": "body",
+      "question": "采集、协调和策略训练如何闭合？",
+      "type": "method_overview"
+    },
+    {
+      "caption": "Fig. 3: Comparison of our approach with other baselines in an urban environment. Our performance metric is the percentage of targets discovered during the episode. The solid lines represent the mean values across 250 trials, while",
+      "claim": "曲线同时比较多个策略和通信条件。",
+      "design_takeaway": "展示资源—收益整条轨迹",
+      "evidence": "预算横轴、发现比例及均值/SD带",
+      "id": "S05-F3",
+      "limitations": "250次含重复，不可直接当250独立地图",
+      "number": 3,
+      "page": 6,
+      "panels": [],
+      "placement": "body",
+      "question": "给定资源预算下发现收益如何变化？",
+      "type": "quantitative_results"
+    },
+    {
+      "caption": "Fig. 4: Our approach outperforms other baselines in terms of percentage discovered targets in a 3×, 8×, and 16× larger environments. The x-axis indicates the number of robots in the multi-robot system during the test. The solid lines",
+      "claim": "最大环境中CAtNIPP超过本文方法；图注概括过强。",
+      "design_takeaway": "结论须服从实际曲线，保留逆转",
+      "evidence": "3×/8×/16×三子图与机器人数量",
+      "id": "S05-F4",
+      "limitations": "不同通信设定影响可比性；不照抄图注胜负",
+      "number": 4,
+      "page": 7,
+      "panels": [
+        {
+          "label": "3x",
+          "question": "三倍场景的机器人规模曲线揭示什么？",
+          "claim": "三倍场景中本方法曲线高于所列对照。",
+          "evidence": "实际查看PDF第7页：三倍场景的机器人规模曲线。",
+          "design_takeaway": "结论须服从实际曲线，保留逆转",
+          "limitations": "不同通信设定影响可比性；不照抄图注胜负"
+        },
+        {
+          "label": "8x",
+          "question": "八倍场景的机器人规模曲线揭示什么？",
+          "claim": "八倍场景中本方法与CAtNIPP差距较小。",
+          "evidence": "实际查看PDF第7页：八倍场景的机器人规模曲线。",
+          "design_takeaway": "结论须服从实际曲线，保留逆转",
+          "limitations": "不同通信设定影响可比性；不照抄图注胜负"
+        },
+        {
+          "label": "16x",
+          "question": "十六倍场景中CAtNIPP领先揭示什么？",
+          "claim": "十六倍场景中CAtNIPP曲线高于本方法，限制图注的泛化表述。",
+          "evidence": "实际查看PDF第7页：十六倍场景中CAtNIPP领先。",
+          "design_takeaway": "结论须服从实际曲线，保留逆转",
+          "limitations": "不同通信设定影响可比性；不照抄图注胜负"
+        }
+      ],
+      "placement": "body",
+      "question": "规模外推是否始终优于基线？",
+      "type": "quantitative_results",
+      "panel_measurement_note": "已按实际渲染页逐块检查并补齐面板；文字提取器漏字母、将单位(s)误当标签或未识别无字母子图。这里使用可定位的实际字母/行列/时间/坐标量名称，保留原机械测量供对照。"
+    },
+    {
+      "caption": "Fig. 5: Our approach implemented in an urban simulation environment. We place 3 UAVs and 161 targets in the environment and trace each UAV’s path with colored tracelines. We compare the performance of our approach with a random planner that reflects the performance lower bound. We do not implement other baselines considered in Section VB as modifying these approaches for avoiding inter-robot",
+      "claim": "三机轨迹覆盖城市模型的不同部分。",
+      "design_takeaway": "典型轨迹解释主指标",
+      "evidence": "彩色航迹与城市对象",
+      "id": "S05-F5",
+      "limitations": "单条轨迹不证明安全/泛化",
+      "number": 5,
+      "page": 7,
+      "panels": [],
+      "placement": "body",
+      "question": "任务路径的空间结果是什么？",
+      "type": "qualitative_comparison"
+    }
+  ],
+  "tables": [
+    {
+      "caption": "TABLE I: Results of our approach compared with other learning and non-learning baselines in an urban monitoring scenario.",
+      "claim": "多种学习/经典方法给出不同收益与时间。",
+      "design_takeaway": "强经典与简单策略都保留",
+      "evidence": "发现比例±波动及Time(s)",
+      "id": "S05-T1",
+      "limitations": "此对比设置暂忽略机间碰撞；不能支持本研究安全结论",
+      "number": 1,
+      "page": 6,
+      "panels": [],
+      "placement": "body",
+      "question": "发现比例与规划时间如何权衡？",
+      "type": "main_results"
+    },
+    {
+      "caption": "TABLE II: Ablation study for modeling of explored regions.",
+      "claim": "含/不含记忆的发现比例有差异。",
+      "design_takeaway": "记忆消融保持其他条件一致",
+      "evidence": "两行相同任务指标",
+      "id": "S05-T2",
+      "limitations": "文中普通t检验不能移植为root配对分析",
+      "number": 2,
+      "page": 6,
+      "panels": [],
+      "placement": "body",
+      "question": "已探索区域记忆是否有作用？",
+      "type": "ablation"
+    },
+    {
+      "caption": "TABLE III: Ablation study for reward structure.",
+      "claim": "是否使用奖励改变采集收益。",
+      "design_takeaway": "区分机制与模型更换",
+      "evidence": "两行通信奖励消融",
+      "id": "S05-T3",
+      "limitations": "同一环境重复不创造独立root",
+      "number": 3,
+      "page": 7,
+      "panels": [],
+      "placement": "body",
+      "question": "通信奖励是否有作用？",
+      "type": "ablation"
+    },
+    {
+      "caption": "TABLE IV: Comparison of our deep reinforcement learningbased approach against baselines in an urban environment.",
+      "claim": "模拟城市场景中与随机下界比较。",
+      "design_takeaway": "平台可行性参照与强主比较应区分",
+      "evidence": "本方法与随机策略两行",
+      "id": "S05-T4",
+      "limitations": "弱下界不能替代本研究B1/B2",
+      "number": 4,
+      "page": 7,
+      "panels": [],
+      "placement": "body",
+      "question": "带物理场景的参考收益是多少？",
+      "type": "main_results"
+    }
+  ],
+  "visual_read": {
+    "pages": [
+      1,
+      3,
+      6,
+      7
+    ],
+    "method": "rendered_pdf",
+    "notes": "Codex primary于2026-11-05实际查看120dpi渲染页。每个测得视觉均有独立判断；未识别表格另列manual-visuals。公开PDF版本与最终出版版差异另见sample-version-audit。"
+  }
+}

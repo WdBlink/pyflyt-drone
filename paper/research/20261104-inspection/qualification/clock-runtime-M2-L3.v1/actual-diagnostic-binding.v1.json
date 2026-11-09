@@ -1,0 +1,103 @@
+{
+  "role": "actual runtime candidate single-load evidence, not fullpilot/G4 qualification",
+  "archive": {
+    "path": "qualification/clock-runtime-M2-L3.v1/complete-diagnostic-and-model-operation.zip",
+    "sha256": "75629ca2b694f8a763ea46fc3d330420c7cfcbf253e86746e27d7c39e5bf520b",
+    "bytes": 26674021,
+    "members": 106
+  },
+  "envelope_sha256": "2bd692ec6c74ad2fd6fd58e90c426d25dbca60b75a84c826e27d91c21ba14149",
+  "usage_receipt_sha256": "f173e6db7a3eaabb9b23ea211781bcd04ab5af57348e4357edf6b0186022aa5d",
+  "phase_recount_sha256": "cb182ddd113ccb6b112b35c60c15553649718664b539d7b5d61e4cf2f798f556",
+  "usage": {
+    "calls": 30,
+    "tokens": 165378
+  },
+  "source_count": 109,
+  "runtime_policy": {
+    "schema": "inspection-physics-runtime-window-v1",
+    "errors": [],
+    "scope": "current physics main thread only; GC deferral covers its process, not model/coordinator processes",
+    "requested_ns": {
+      "period": 8333333,
+      "computation": 4000000,
+      "constraint": 8000000
+    },
+    "soft_realtime_not_a_guarantee": true,
+    "before": {
+      "values": [
+        1
+      ],
+      "default": false
+    },
+    "prior_rt": {
+      "values": [
+        0,
+        120000,
+        240000,
+        1
+      ],
+      "default": true
+    },
+    "mach_timebase": {
+      "numer": 125,
+      "denom": 3
+    },
+    "requested_ticks": [
+      200000,
+      96000,
+      192000,
+      1
+    ],
+    "gc_enabled_before": true,
+    "gc_threshold_before": [
+      700,
+      10,
+      10
+    ],
+    "pre_epoch_collected": 32,
+    "active_start": {
+      "values": [
+        200000,
+        96000,
+        192000,
+        1
+      ],
+      "default": false
+    },
+    "gc_enabled_at_epoch": false,
+    "window_wall_seconds": 600.003532958,
+    "active_end": {
+      "values": [
+        200000,
+        96000,
+        192000,
+        1
+      ],
+      "default": false
+    },
+    "restored": {
+      "values": [
+        1
+      ],
+      "default": false
+    },
+    "rt_after_restore": {
+      "values": [
+        0,
+        120000,
+        240000,
+        1
+      ],
+      "default": true
+    },
+    "post_loop_collected": 14,
+    "gc_enabled_after": true
+  },
+  "single_load_clock": {
+    "maxlag": 0.008292792000247573,
+    "p95": 0.003075666333472782,
+    "over_0p1": 0
+  },
+  "limits": "Candidate combines GC deferral and Mach scheduling; not a strict isolated causal A/B or guarantee for other roots/conditions. Production still unchanged."
+}

@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "url": "https://www.cs.rpi.edu/academics/courses/spring06/random/hoefding.pdf",
+      "path": "literature/primary/hoeffding-1963-original-scan.pdf",
+      "kind": "pdf",
+      "max_bytes": 16000000
+    },
+    {
+      "url": "https://api.crossref.org/works/10.1080/01621459.1963.10500830",
+      "path": "literature/primary/hoeffding-1963-crossref.json",
+      "kind": "json",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://api.crossref.org/works/10.2307/4615733",
+      "path": "literature/primary/holm-1979-crossref.json",
+      "kind": "json",
+      "max_bytes": 2000000
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/toc/10.1111/(ISSN)1467-9469.50thanniversary",
+      "path": "literature/primary/holm-wiley-anniversary.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    },
+    {
+      "url": "https://www.jstor.org/stable/i412579",
+      "path": "literature/primary/holm-1979-journal-issue.html",
+      "kind": "html",
+      "max_bytes": 5000000
+    }
+  ]
+}
